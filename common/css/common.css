@@ -1,0 +1,421 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/earlyaccess/notosanskr.css');
+
+body {
+	background-color: #fff;
+	color: #000;
+	font-size: 14px;
+	line-height: 150%;
+	-webkit-text-size-adjust: none;
+	word-wrap: break-word;
+	word-break: keep-all;
+	font-family: 'Noto Sans KR', sans-serif, Dotum, "돋움", Gulim, "굴림", Helvetica, Apple-Gothic;
+	-webkit-text-size-adjust: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+p,
+blockquote,
+pre,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+caption,
+th,
+td,
+form,
+fieldset,
+legend,
+hr,
+select,
+input,
+textarea {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+table {
+	margin: 0;
+	padding: 0;
+	border-spacing: 0;
+	border: 0;
+	_border-collapse: collapse;
+	width: 100%;
+}
+
+*+html table {
+	border-collapse: collapse;
+}
+
+img,
+fieldset,
+abbr,
+acronym {
+	border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+em {
+	font-style: normal;
+}
+
+input,
+button,
+textarea {
+	padding: 0;
+	color: #000;
+	font-family: 'Noto Sans KR', sans-serif, Dotum, "돋움", Gulim, "굴림", Helvetica, Apple-Gothic;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+table,
+table th,
+table td {
+	border: 0;
+}
+
+hr {
+	display: none
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+img {
+	vertical-align: middle;
+}
+
+body {
+	background-color: #fff;
+}
+
+caption,
+legend {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	font-size: 0;
+}
+
+.hidden {
+	display: none
+}
+
+.gLeft {
+	float: left;
+}
+
+.gRight {
+	float: right;
+}
+
+.ic {
+	vertical-align: -3px;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+::-webkit-input-placeholder {
+	color: #000;
+}
+
+/* Chrome/Opera/Safari */
+::-moz-placeholder {
+	color: #000;
+}
+
+/* Firefox 19+ */
+:-ms-input-placeholder {
+	color: #000;
+}
+
+/* IE 10+ */
+:-moz-placeholder {
+	color: #000;
+}
+
+/* Firefox 18- */
+
+#skipnavigation {
+	position: relative;
+	z-index: 110;
+}
+
+#skipnavigation .skip {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#skipnavigation a {
+	display: block;
+	height: 1px;
+	width: 1px;
+	margin-bottom: -1px;
+	overflow: hidden;
+	text-align: center;
+	color: #000;
+	white-space: nowrap;
+}
+
+#skipnavigation a:focus,
+#skipnavigation a:active {
+	height: auto;
+	width: auto;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+html,
+body {
+	position: relative;
+	background-color: #fff;
+}
+
+body.hiddenScroll {
+	overflow: hidden;
+}
+
+
+.mSky {
+	position: fixed;
+	top: 50%;
+	right: 30px;
+	transform: translateY(-50%);
+	width: 64px;
+	z-index: 1000;
+}
+
+.mSky .ls {
+	position: relative;
+	display: block;
+}
+
+.mSky .forMobile+.ls,
+.mSky .ls+.ls {
+	margin-top: 12px;
+}
+
+.mSky .ico {
+	position: relative;
+	display: block;
+	background: url(../images/ico_kakaotalk.png) 0 0 no-repeat;
+	text-indent: -9999px;
+	font-size: 0;
+	width: 64px;
+	height: 64px;
+	z-index: 1;
+}
+
+.mSky .iTop .ico {
+	background-image: url(../images/ico_top.png);
+}
+
+.mSky .iAlarm .ico {
+	background-image: url(../images/ico_allimon.png);
+}
+
+.mSky .iAlarm .ico:hover+.txt {
+	display: block;
+}
+
+.mSky .ls .txt {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 32px;
+	background-color: #5c47fd;
+	border-radius: 64px 0 0 64px;
+	color: #fff;
+	font-size: 15px;
+	padding: 0 48px 0 32px;
+	white-space: nowrap;
+	line-height: 64px;
+	height: 64px;
+}
+
+.mSky .ls.forMobile {
+	display: none;
+}
+
+.forMobile {
+	display: none;
+}
+
+/* screen resolutions lower than 768px */
+@media all and (max-width:768px) {
+
+	#footer {
+		min-width: auto;
+	}
+
+	#wrap {
+		min-width: auto;
+	}
+
+	#footer .bg,
+	#wrap .bg,
+	#wrap .bg.w1000 {
+		width: auto;
+	}
+
+	.forWeb {
+		display: none;
+	}
+
+	.forMobile {
+		display: block;
+	}
+
+	.br {
+		display: inline;
+	}
+
+	.brForMobile {
+		display: block;
+	}
+
+	span.forMobile {
+		display: inline;
+	}
+
+	.hiddenForMobile {
+		display: none;
+	}
+
+	body {
+		min-width: auto;
+	}
+
+	.mSky {
+		position: fixed;
+		top: auto;
+		bottom: 10px;
+		right: 20px;
+		transform: translateY(0);
+		width: 55px;
+	}
+
+	.mSky .ls+.forMobile,
+	.mSky .ls+.ls {
+		margin: 0 0 8px;
+	}
+
+	.mSky .ico {
+		background-image: url(../images/ico_kakaotalk_m.png);
+		background-size: auto 55px;
+		width: 55px;
+		height: 55px;
+	}
+
+	.mSky .forMobile {
+		position: relative;
+	}
+
+	.mSky .iSns .ico {
+		background-image: url(../images/ico_sns_m.png);
+		background-position: 50% 50%;
+		background-size: auto 18px;
+		background-color: #5c47fd;
+		border-radius: 50%;
+	}
+
+	.mSky .iAlarm .ico {
+		background: none;
+		text-indent: 0;
+		background-color: rgba(0, 0, 0, 0.21);
+		font-size: 12px;
+		color: #fff;
+		margin: 8px 0;
+		padding: 2px 0;
+		height: auto;
+	}
+
+	.mSky .iAlarm .ico:hover+.txt {
+		display: none;
+	}
+
+	.mSky .ls.forWeb {
+		display: none;
+	}
+
+	.lSky {
+		display: none;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 10;
+	}
+
+	.lSky a {
+		display: block;
+		background: url(../images/ico_facebook_m.png) 0 0 no-repeat;
+		background-size: auto 55px;
+		text-indent: -9999px;
+		font-size: 0;
+		margin: 0 0 10px;
+		width: 55px;
+		height: 55px;
+	}
+
+	.lSky a.twiter {
+		background-image: url(../images/ico_twitter_m.png);
+	}
+
+	.lSky a.instagram {
+		background-image: url(../images/ico_instagram_m.png);
+	}
+
+	.lSky a.youtube {
+		background-image: url(../images/ico_youtube_m.png);
+	}
+
+	.lSky a.close {
+		background-image: url(../images/ico_sns_close_m.png);
+		background-position: 50% 50%;
+		background-size: auto 14px;
+		background-color: #f45897;
+		border-radius: 50%;
+		margin-bottom: 0;
+	}
+
+}

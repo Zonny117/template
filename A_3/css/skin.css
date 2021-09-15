@@ -1,0 +1,436 @@
+@charset "utf-8";
+
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    line-height: unset;
+}
+
+/* 전체박스 */
+#wrap {
+    width: 100%;
+    height: 100%;
+    min-width: 1200px;
+    background-color: #faedc9;
+}
+
+/* 각 섹션 가운데 정렬 */
+.mMod2,
+.mMod4,
+.mMod9,
+.mMod5,
+.mMod6 {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+
+/*/////////////////////////////////////////// 메인섹션 ///////////////////////////////*/
+.mMod2 {
+    height: 100%;
+}
+
+.modbg {
+    position: fixed;
+    width: 1200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* 사진 */
+.background {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.frame {
+    position: relative;
+    z-index: 999;
+    width: 450px;
+}
+
+.play_ico {
+    position: absolute;
+    top: 70%;
+    left: 55%;
+    z-index: 999;
+}
+
+.mMod1 {
+    position: absolute;
+    top: 48%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 344px;
+    height: 341px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: url(../images/bg.png) no-repeat center/cover;
+}
+
+/* ////////////////////////////// 메인 글귀////////////////////////// */
+.mMod3 {
+    font-size: 1rem;
+}
+
+.mMod3 .txt {
+    margin-top: 30px;
+}
+
+
+.mMod7 {
+    margin: 30px 0;
+    font-size: .8rem;
+}
+
+.mMod7 a {
+    border: 1px solid rgb(70, 70, 70);
+    margin: 10px;
+    padding: 10px 10px;
+    padding-right: 60px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: url(../images/menu_button.png) no-repeat 92% center;
+}
+
+/* sns */
+.mMod11 a {
+    display: inline-block;
+    text-indent: -9999px;
+    font-size: 0px;
+    margin: 0 0 0 10px;
+    width: 46px;
+    height: 46px;
+}
+
+.mMod11 a.facebook {
+    background: url(../../common/images/ico_facebook.png);
+}
+
+.mMod11 a.twiter {
+    background: url(../../common/images/ico_twitter.png);
+}
+
+.mMod11 a.instagram {
+    background: url(../../common/images/ico_instagram.png);
+}
+
+.mMod11 a.youtube {
+    background: url(../../common/images/ico_youtube.png);
+}
+
+
+
+/* 상단 버튼 */
+.btn_top {
+    position: fixed;
+    top: 34px;
+    left: 51px;
+    background-color: #3b3a38;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.btn_top a {
+    color: #fff;
+}
+
+
+/* ////////////////////////////////// 컨텐츠////////////////////////////////////// */
+.content {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 30px 0;
+    z-index: 99;
+}
+
+
+/* 모듈4 */
+.mMod4 {
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.mMod4 li+li {
+    margin-top: 30px;
+}
+
+.mMod4 .tit {
+    font-size: 1.2rem;
+    color: #e56254;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.mMod4 .tit::before {
+    content: '●';
+    display: inline-block;
+    margin-right: 10px;
+    transform: scale(.5);
+}
+
+/* 스와이퍼 */
+.mMod9 {
+    position: relative;
+    text-align: center;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+
+.swiper-container{
+    cursor: pointer;
+}
+
+.mMod9 .swiper-container {
+    width: 100%;
+}
+
+.mMod9 .swiper-container img {
+    width: 381px;
+}
+
+.mMod9 .swiper-wrapper {
+    justify-content: center;
+}
+
+.mMod9 .swiper-button-next {
+    top: 100%;
+    background-image: url(../images/slider_next.png);
+    background-size: 100% 100%;
+    width: 15px;
+    height: 26px;
+}
+
+.mMod9 .swiper-button-prev {
+    top: 100%;
+    left: 94%;
+    background-image: url(../images/slider_prev.png);
+    background-size: 100% 100%;
+    width: 15px;
+    height: 26px;
+}
+
+.mMod9 .swiper-pagination {
+    top: 96%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mMod9 .swiper-pagination>span {
+    margin: 0 5px;
+}
+
+.mMod9 .swiper-pagination-bullet-active {
+    background: #e56254;
+}
+
+/* 지도 */
+.mMod5 {
+    position: relative;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.mMod5 .txt {
+    width: 50%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.txt>.ti {
+    line-height: 27px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.ti strong {
+    font-size: 1.2rem;
+}
+
+.tx {
+    line-height: 24px;
+    margin-top: 20px;
+}
+
+.navi {
+    position: absolute;
+    bottom: 30px;
+    color: #fff;
+    background-color: #e56254;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.navi::before {
+    content: url(../images/navigation_ico.png);
+    vertical-align: -3px;
+    margin-right: 6px;
+}
+
+.gMap {
+    width: 50%;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    outline: none;
+    border-radius: 0 10px 10px 0;
+}
+
+.mapInfo {
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 12px;
+    text-align: center;
+}
+
+/*/////////////////////////////////////////////////// 푸터 영역//////////////////////////////////////////////////////////// */
+
+footer {
+    position: relative;
+    z-index: 9999;
+    width: 100%;
+    background-color: #404040;
+    color: #fff;
+}
+
+.mMod6 {
+    position: relative;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.mMod6 .tit {
+    line-height: 27px;
+}
+
+.mMod6 .tit a {
+    font-size: 1.2rem;
+    color: #e56254;
+}
+
+.mMod6 .txt {
+    margin-top: 20px;
+    line-height: 24px;
+}
+
+.mMod10 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+.mMod10 a {
+    background-color: #e56254;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+.mMod10 a::before {
+    content: url(../images/download_ico.png);
+    display: inline-block;
+    transform: scale(.8);
+    vertical-align: -6px;
+    margin-right: 6px;
+}
+
+/* 동영상 */
+.mMod8 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999999;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.vid-exit {
+    position: absolute;
+    top: 73%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+/* 사진 레이어 */
+#jsMod9 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, .5);
+    transition: opacity .6s;
+}
+
+.modBg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modBg .swiper-container {
+    width: 800px;
+    height: 542px;
+}
+
+.modBg .swiper-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.modBg .swiper-button-next {
+    position: absolute;
+    top: -40px;
+    right: 26px;
+    background: url(../images/mag_slider_next.png) no-repeat;
+    background-size: 100% 100%;
+    transform: scale(1.5);
+    height: 27px;
+}
+
+.modBg .swiper-button-prev {
+    position: absolute;
+    top: -40px;
+    left: 695px;
+    background: url(../images/mag_slider_prev.png) no-repeat;
+    background-size: 100% 100%;
+    transform: scale(1.5);
+    height: 27px;
+}
+
+.slide-exit {
+    width: 40px;
+    position: absolute;
+    top: -11%;
+    cursor: pointer;
+}
