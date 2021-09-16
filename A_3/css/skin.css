@@ -20,7 +20,6 @@ body {
 }
 
 /* 각 섹션 가운데 정렬 */
-.mMod2,
 .mMod4,
 .mMod9,
 .mMod5,
@@ -34,6 +33,7 @@ body {
 .mMod2 {
     position: relative;
     background-color: #faedc9;
+    width: 100%;
     height: 100%;
 }
 
