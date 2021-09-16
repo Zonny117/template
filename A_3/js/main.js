@@ -33,12 +33,16 @@ $(function () {
 
 
 
-
     let winW = $(window).innerWidth();
+    let winH = $(window).innerHeight();
     // 반응형 고정 박스 가로크기
     if (winW <= 768) {
         $(".modbg").css({
             width: winW + "px"
+        })
+
+        $("html,body").css({
+            height: winH + 0.01 + "px"
         })
 
         var mMod9 = new Swiper(".mMod9 .swiper-container", {
