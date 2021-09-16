@@ -41,8 +41,8 @@ $(function () {
             width: winW + "px"
         })
 
-        $("html,body").css({
-            height: winH + 0.01 + "px"
+        $("#wrap").css({
+            height: winH + 1 + "px"
         })
 
         var mMod9 = new Swiper(".mMod9 .swiper-container", {
