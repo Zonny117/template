@@ -36,9 +36,6 @@ $(function () {
     let winW = $(window).innerWidth();
     // 반응형 고정 박스 가로크기
     if (winW <= 768) {
-        $(".modbg").css({
-            width: winW + "px"
-        })
 
         var mMod9 = new Swiper(".mMod9 .swiper-container", {
             slidesPerView: 1,

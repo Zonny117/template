@@ -38,22 +38,9 @@
 
     /* 메인 고정박스 */
     .modbg {
-        height: 100%;
+        width: 100%;
         padding: 30px;
         text-align: left;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        transform: unset;
-    }
-
-    .mobilebx {
-        position: absolute;
-        width: calc(100% - 60px);
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
 
     .background {
