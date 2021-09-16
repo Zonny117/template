@@ -1,7 +1,7 @@
 $(function () {
 
     var slides = $(".mMod9 .swiper-slide").length;
-
+    // 슬라이더 자동 줄맞춤
     if (slides >= 3) {
         $(".mMod9 .swiper-wrapper").css({
             justifyContent: "unset"
@@ -48,5 +48,37 @@ $(function () {
             opacity: "0"
         })
     })
+
+    var winW = $(window).innerWidth();
+    // 반응형 고정 박스 가로크기
+    if (winW <= 768) {
+        $(".modbg").css({
+            width: winW + "px"
+        })
+
+        var mMod9 = new Swiper(".mMod9 .swiper-container", {
+            slidesPerView: 1,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            navigation: {
+                nextEl: ".mMod9 .swiper-button-next",
+                prevEl: ".mMod9 .swiper-button-prev",
+            }
+        });
+    } else {
+        var mMod9 = new Swiper(".mMod9 .swiper-container", {
+            slidesPerView: 3,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            navigation: {
+                nextEl: ".mMod9 .swiper-button-next",
+                prevEl: ".mMod9 .swiper-button-prev",
+            }
+        });
+    }
+
+
 
 }); /////////////////////////////////
