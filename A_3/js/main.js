@@ -31,25 +31,10 @@ $(function () {
 
     }); ///////////////////////////////
 
-    var slideImg = $(".mMod9 .swiper-slide img");
 
-    slideImg.click(function () {
 
-        $("#jsMod9").css({
-            zIndex: "999999999",
-            opacity: "1"
-        });
 
-    }); ///////////////////////////////
-
-    $(".slide-exit").click(function () {
-        $("#jsMod9").css({
-            zIndex: "-1",
-            opacity: "0"
-        })
-    })
-
-    var winW = $(window).innerWidth();
+    let winW = $(window).innerWidth();
     // 반응형 고정 박스 가로크기
     if (winW <= 768) {
         $(".modbg").css({
@@ -77,6 +62,35 @@ $(function () {
                 prevEl: ".mMod9 .swiper-button-prev",
             }
         });
+    }
+
+    var slideImg = $(".mMod9 .swiper-slide img");
+
+    $(".slide-exit").click(function () {
+        $("#jsMod9").css({
+            zIndex: "-1",
+            opacity: "0"
+        })
+    })
+
+    if (winW > 768) {
+
+        slideImg.click(function () {
+
+            $("#jsMod9").css({
+                zIndex: "999999999",
+                opacity: "1"
+            });
+
+        }); ///////////////////////////////
+
+    } else {
+        $(".more").click(function () {
+            $("#jsMod9").css({
+                zIndex: "999999999",
+                opacity: "1"
+            });
+        })
     }
 
 

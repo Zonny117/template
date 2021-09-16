@@ -7,7 +7,6 @@
 
 html,
 body {
-    min-height: -webkit-fill-available;
     width: 100%;
     height: 100%;
     line-height: unset;
@@ -76,7 +75,7 @@ body {
     height: 341px;
     border-radius: 50%;
     overflow: hidden;
-    background: url(../images/bg.png) no-repeat center/cover;
+    background: url(../images/img_mod2.png) no-repeat center/cover;
 }
 
 /* ////////////////////////////// 메인 글귀////////////////////////// */
@@ -279,7 +278,7 @@ body {
 }
 
 .navi::before {
-    content: url(../images/navigation_ico.png);
+    content: url(../images/ico_mod5_2.png);
     vertical-align: -3px;
     margin-right: 6px;
 }
@@ -347,7 +346,7 @@ footer {
 }
 
 .mMod10 a::before {
-    content: url(../images/download_ico.png);
+    content: url(../images/ico_mod10.png);
     display: inline-block;
     transform: scale(.8);
     vertical-align: -6px;
