@@ -5,10 +5,17 @@
 @media only screen and (max-width:768px) {
 
     html {
+        height: 99.9%;
         font-size: 14px;
     }
 
+    html,body{
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
     #wrap {
+        height: 100vh;
         min-width: unset;
     }
 

@@ -1,35 +1,5 @@
 $(function () {
 
-    let ts, te;
-
-    $(document).on("touchstart", function (e) {
-        ts = e.originalEvent.touches[0].screenY;
-
-        // console.log(ts)
-    })
-
-    $(document).on("touchend", function (e) {
-
-        te = e.originalEvent.changedTouches[0].screenY;
-
-        // console.log(te);
-
-        let touch = ts - te;
-
-        console.log(touch)
-
-        if (touch > 0) {
-            $(".mMod2").css({
-                height: "120%"
-            })
-        } else {
-            $(".mMod2").css({
-                height: "100%"
-            })
-        }
-
-    }) /////////////////////////////////////////////////
-
     var slides = $(".mMod9 .swiper-slide").length;
     // 슬라이더 자동 줄맞춤
     if (slides >= 3) {
