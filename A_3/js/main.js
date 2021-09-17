@@ -1,3 +1,5 @@
+
+
 $(function () {
 
     var slides = $(".mMod9 .swiper-slide").length;
@@ -34,7 +36,7 @@ $(function () {
 
 
     let winW = $(window).innerWidth();
-    // 반응형 고정 박스 가로크기
+    // 슬라이더 개수 설정
     if (winW <= 768) {
 
         var mMod9 = new Swiper(".mMod9 .swiper-container", {

@@ -4,10 +4,6 @@
 
 @media only screen and (max-width:768px) {
 
-    /* html,body{
-        overflow-x: hidden;
-    } */
-
     html {
         font-size: 14px;
     }
@@ -39,6 +35,8 @@
     /* 메인 고정박스 */
     .modbg {
         width: 100%;
+        height: 100vh;
+        height: var(--vh, 1vh) * 100;
         padding: 30px;
         text-align: left;
     }
