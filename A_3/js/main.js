@@ -1,5 +1,45 @@
 $(function () {
 
+    let prot = 0;
+
+    let ts, te, touch;
+
+    let mod2 = $(".mMod2").height();
+
+    // 모바일 터치 이벤트
+    $(document).on("touchstart", function (e) {
+        ts = e.originalEvent.touches[0].screenY;
+    });
+
+    $(document).on("touchend", function (e) {
+
+        if (prot) return;
+
+        prot = 1;
+
+        setTimeout(function () {
+            prot = 0;
+        }, 500)
+
+
+        te = e.originalEvent.changedTouches[0].screenY;
+
+        touch = ts - te;
+
+        if (mod2 === $(window).innerHeight() && touch > 0) {
+            $(".mMod2").stop().animate({
+                height: 0 + "%"
+            }, 500, 'easeOutCubic')
+        } //////////////////////////
+        else if (mod2 === $(window).innerHeight() && touch < 0) {
+            $(".mMod2").stop().animate({
+                height: 100 + "%"
+            }, 500, 'easeOutCubic')
+        }
+    }); ////////////////////////////////////
+
+
+
     var slides = $(".mMod9 .swiper-slide").length;
     // 슬라이더 자동 줄맞춤
     if (slides >= 3) {
