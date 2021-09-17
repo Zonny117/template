@@ -40,6 +40,7 @@ body {
 .modbg {
     position: fixed;
     width: 1200px;
+    padding: 20px 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

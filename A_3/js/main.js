@@ -6,10 +6,18 @@ $(function () {
 
     // 모바일 터치 이벤트
     $(document).on("touchstart", function (e) {
+
+        e.stopPropagation();
+
+
         ts = e.originalEvent.touches[0].screenY;
     });
 
     $(document).on("touchend", function (e) {
+
+        e.stopPropagation();
+
+
 
         if (prot) return;
 
@@ -25,12 +33,12 @@ $(function () {
         touch = ts - te;
 
 
-        if (touch > 0) {
+        if (touch > 0 && $(window).innerHeight() > 540) {
             $(".mMod2").stop().animate({
                 height: 0 + "%"
             }, 500, 'easeOutCubic')
         } //////////////////////////
-        else if (touch < 0) {
+        else if (touch < 0 && $(window).innerHeight() > 540) {
             $(".mMod2").stop().animate({
                 height: 100 + "%"
             }, 500, 'easeOutCubic')
