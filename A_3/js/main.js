@@ -4,7 +4,7 @@ $(function () {
 
     let ts, te, touch;
 
-    let mod2 = $(".mMod2").height();
+    let cont = $(".content").offset().top;
 
     // 모바일 터치 이벤트
     $(document).on("touchstart", function (e) {
@@ -26,12 +26,12 @@ $(function () {
 
         touch = ts - te;
 
-        if (mod2 === $(window).innerHeight() && touch > 0) {
+        if (cont === $(window).innerHeight() && touch > 0) {
             $(".mMod2").stop().animate({
                 height: 0 + "%"
             }, 500, 'easeOutCubic')
         } //////////////////////////
-        else if (mod2 === $(window).innerHeight() && touch < 0) {
+        else if (cont === $(window).innerHeight() && touch < 0) {
             $(".mMod2").stop().animate({
                 height: 100 + "%"
             }, 500, 'easeOutCubic')
