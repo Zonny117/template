@@ -9,8 +9,6 @@
     }
 
     #wrap {
-        height: 100vh;
-        height: var(--vh, 1vh) * 100;
         min-width: unset;
     }
 
@@ -52,9 +50,6 @@
         transform: translateX(-50%);
     }
 
-    .mMod2 {
-        height: 100vh;
-    }
 
     .mMod1 {
         width: 54%;
