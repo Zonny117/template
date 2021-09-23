@@ -4,6 +4,9 @@ $(function () {
 
     let ts, te, touch;
 
+    let winH = $(window).innerHeight()
+
+
     // 모바일 터치 이벤트
     $(document).on("touchstart", function (e) {
 
@@ -33,12 +36,12 @@ $(function () {
         touch = ts - te;
 
 
-        if (touch > 0 && $(window).innerHeight() > 540) {
+        if (touch > 0 && winW < 768 && winH > 540) {
             $(".mMod2").stop().animate({
                 height: 0 + "%"
             }, 500, 'easeOutCubic')
         } //////////////////////////
-        else if (touch < 0 && $(window).innerHeight() > 540) {
+        else if (touch < 0 && winW < 768 && winH > 540) {
             $(".mMod2").stop().animate({
                 height: 100 + "%"
             }, 500, 'easeOutCubic')

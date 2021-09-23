@@ -275,7 +275,7 @@
     .mMod6 .tit a::before {
         position: absolute;
         transform: scale(.6);
-        left: 27px;
+        left: 3%;
         top: 4.5px;
     }
 
@@ -312,5 +312,19 @@
         top: -20px;
         left: unset;
         right: 55px;
+    }
+}
+
+@media only screen and (max-height:540px) {
+    .mMod2 {
+        overflow-Y: auto;
+    }
+
+    .modbg {
+        position: unset;
+        top: unset;
+        left: unset;
+        transform: unset;
+
     }
 }
