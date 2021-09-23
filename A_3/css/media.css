@@ -44,6 +44,16 @@
         font-size: 1rem;
     }
 
+    .btn_tel {
+        position: fixed;
+        top: 12px;
+        right: 20px;
+    }
+
+    .btn_tel img {
+        width: 55px;
+    }
+
     /* 메인 고정박스 */
     .modbg {
         width: 100%;
@@ -316,15 +326,33 @@
 }
 
 @media only screen and (max-height:540px) {
+
+
     .mMod2 {
-        overflow-Y: auto;
+        height: unset;
     }
 
     .modbg {
+        padding: 30px;
         position: unset;
         top: unset;
         left: unset;
         transform: unset;
-
     }
+
+    .content {
+        padding: 30px;
+    }
+
+    .mMod4,
+    .mMod9,
+    .mMod5,
+    .mMod6 {
+        width: 100%;
+    }
+
+    .mMod10 {
+        right: 24px;
+    }
+
 }

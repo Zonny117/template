@@ -35,23 +35,24 @@ $(function () {
 
         touch = ts - te;
 
-
-        if (touch > 0 && winW < 768 && winH > 540) {
+        // 컨텐츠 박스 슬라이드업
+        if (touch > 0 && winW <= 768 && winH > 540) {
             $(".mMod2").stop().animate({
                 height: 0 + "%"
             }, 500, 'easeOutCubic')
         } //////////////////////////
-        else if (touch < 0 && winW < 768 && winH > 540) {
+        else if (touch < 0 && winW <= 768 && winH > 540) {
             $(".mMod2").stop().animate({
                 height: 100 + "%"
             }, 500, 'easeOutCubic')
         }
+
     }); ////////////////////////////////////
 
 
 
     var slides = $(".mMod9 .swiper-slide").length;
-    // 슬라이더 자동 줄맞춤
+    // 슬라이더 중앙 정렬
     if (slides >= 3) {
         $(".mMod9 .swiper-wrapper").css({
             justifyContent: "unset"
