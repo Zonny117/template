@@ -46,18 +46,19 @@
 
     .btn_tel {
         position: fixed;
+        text-indent: -9999px;
+        font-size: 0;
+        background: url(../images/ico_tel.png) no-repeat center/cover;
+        width: 55px;
+        height: 55px;
         top: 12px;
         right: 20px;
-    }
-
-    .btn_tel img {
-        width: 55px;
     }
 
     /* 메인 고정박스 */
     .modbg {
         width: 100%;
-        padding: 0 30px;
+        padding: 30px;
         text-align: left;
     }
 
@@ -67,17 +68,15 @@
     }
 
     .frame {
-        width: 70%;
-        left: 50%;
-        transform: translateX(-50%);
+        width: 188px;
+        left: 50.2%;
     }
 
 
     .mMod1 {
-        width: 54%;
-        height: 88%;
-        top: 50%;
-        left: 48%;
+        width: 146px;
+        height: 149px;
+        left: -1%;
     }
 
     .youtubePlay {
@@ -327,17 +326,29 @@
 
 @media only screen and (max-height:540px) {
 
+    .youtubePlay{
+        display: none;
+    }
 
-    .mMod2 {
-        height: unset;
+    .frame{
+        width: 185px;
+        left: 52%;
     }
 
     .modbg {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        transform: translatex(-50%);
         padding: 30px;
-        position: unset;
-        top: unset;
-        left: unset;
-        transform: unset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .background {
+        width: unset;
+        margin-bottom: unset;
     }
 
     .content {
@@ -353,6 +364,26 @@
 
     .mMod10 {
         right: 24px;
+    }
+
+    .mMod7 a {
+        display: block;
+    }
+
+    .mMod11 {
+        display: none;
+    }
+
+    .mMod1 {
+        width: 144px;
+        height: 145px;
+        left: -2%;
+    }
+
+    .mMod3{
+        padding: 0 20px;
+        box-sizing: border-box;
+        text-align: center;
     }
 
 }

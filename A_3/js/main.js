@@ -36,12 +36,12 @@ $(function () {
         touch = ts - te;
 
         // 컨텐츠 박스 슬라이드업
-        if (touch > 0 && winW <= 768 && winH > 540) {
+        if (touch > 0 && winW <= 768) {
             $(".mMod2").stop().animate({
                 height: 0 + "%"
             }, 500, 'easeOutCubic')
         } //////////////////////////
-        else if (touch < 0 && winW <= 768 && winH > 540) {
+        else if (touch < 0 && winW <= 768) {
             $(".mMod2").stop().animate({
                 height: 100 + "%"
             }, 500, 'easeOutCubic')
@@ -66,7 +66,7 @@ $(function () {
 
 
 
-    $(".play_ico").click(function () {
+    $(".youtubePlay").click(function () {
 
         $(".mMod8").fadeIn();
 
@@ -140,6 +140,13 @@ $(function () {
         })
     }
 
+    let modbgHeight = $(".modbg").height()
+
+    if (winW > 768 && winH < 540) {
+        $(".mMod2").css({
+            height: modbgHeight + 60 + "px"
+        })
+    }
 
 
 }); /////////////////////////////////
