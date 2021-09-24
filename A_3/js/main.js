@@ -7,47 +7,47 @@ $(function () {
     let winH = $(window).innerHeight()
 
 
-    // 모바일 터치 이벤트
-    $(document).on("touchstart", function (e) {
+    // // 모바일 터치 이벤트
+    // $(document).on("touchstart", function (e) {
 
-        e.stopPropagation();
-
-
-        ts = e.originalEvent.touches[0].screenY;
-    });
-
-    $(document).on("touchend", function (e) {
-
-        e.stopPropagation();
+    //     e.stopPropagation();
 
 
+    //     ts = e.originalEvent.touches[0].screenY;
+    // });
 
-        if (prot) return;
+    // $(document).on("touchend", function (e) {
 
-        prot = 1;
-
-        setTimeout(function () {
-            prot = 0;
-        }, 500)
+    //     e.stopPropagation();
 
 
-        te = e.originalEvent.changedTouches[0].screenY;
 
-        touch = ts - te;
+    //     if (prot) return;
 
-        // 컨텐츠 박스 슬라이드업
-        if (touch > 0 && winW <= 768) {
-            $(".mMod2").stop().animate({
-                height: 0 + "%"
-            }, 500, 'easeOutCubic')
-        } //////////////////////////
-        else if (touch < 0 && winW <= 768) {
-            $(".mMod2").stop().animate({
-                height: 100 + "%"
-            }, 500, 'easeOutCubic')
-        }
+    //     prot = 1;
 
-    }); ////////////////////////////////////
+    //     setTimeout(function () {
+    //         prot = 0;
+    //     }, 500)
+
+
+    //     te = e.originalEvent.changedTouches[0].screenY;
+
+    //     touch = ts - te;
+
+    //     // 컨텐츠 박스 슬라이드업
+    //     if (touch > 0 && winW <= 768) {
+    //         $(".mMod2").stop().animate({
+    //             height: 0 + "%"
+    //         }, 500, 'easeOutCubic')
+    //     } //////////////////////////
+    //     else if (touch < 0 && winW <= 768) {
+    //         $(".mMod2").stop().animate({
+    //             height: 100 + "%"
+    //         }, 500, 'easeOutCubic')
+    //     }
+
+    // }); ////////////////////////////////////
 
 
 

@@ -71,7 +71,6 @@ body {
 .mMod1 {
     position: relative;
     margin: 0 auto;
-    background: url(../images/logo_frame.png) no-repeat;
     width: 338px;
     height: 341px;
     border-radius: 50%;
@@ -83,11 +82,11 @@ body {
     height: 100%;
 }
 
-.frame{
+.frame {
     position: absolute;
     top: 51%;
     left: 51%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 36%;
 }
 
