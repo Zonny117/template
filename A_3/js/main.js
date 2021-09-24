@@ -1,10 +1,10 @@
 $(function () {
 
-    let prot = 0;
+    // let prot = 0;
 
-    let ts, te, touch;
+    // let ts, te, touch;
 
-    let winH = $(window).innerHeight()
+    // let winH = $(window).innerHeight()
 
 
     // // 모바일 터치 이벤트
