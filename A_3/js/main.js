@@ -86,7 +86,7 @@ $(function () {
 
     let winW = $(window).innerWidth();
     // 슬라이더 개수 설정
-    if (winW <= 768) {
+    if (winW <= 850) {
 
         var mMod9 = new Swiper(".mMod9 .swiper-container", {
             slidesPerView: 1,

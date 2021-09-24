@@ -324,7 +324,11 @@
     }
 }
 
-@media only screen and (max-height:540px) {
+@media only screen and (max-height:540px) and (max-width:850px) {
+
+    #wrap{
+        min-width: unset;
+    }
 
     .youtubePlay{
         display: none;
