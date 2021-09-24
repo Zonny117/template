@@ -140,13 +140,7 @@ $(function () {
         })
     }
 
-    let modbgHeight = $(".modbg").height()
-
-    if (winW > 768 && winH < 540) {
-        $(".mMod2").css({
-            height: modbgHeight + 60 + "px"
-        })
-    }
+   
 
 
 }); /////////////////////////////////
