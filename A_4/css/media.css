@@ -145,7 +145,7 @@
         background: url(../images/menu_ico_4.png) no-repeat center/20px 25px;
     }
 
-    .link5{
+    .link5 {
         background: url(../images/menu_ico_5.png) no-repeat center/20px 25px;
     }
 
@@ -310,6 +310,10 @@
 }
 
 @media only screen and (max-height:420px) {
+    .mSky {
+        bottom: 0;
+    }
+
     .mSky .forMobile {
         display: none;
     }
