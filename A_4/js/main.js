@@ -1,4 +1,4 @@
-$(function () {
+$(window).on("load", function () {
 
 
     $(".menu ul li").click(function (e) {
