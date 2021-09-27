@@ -167,7 +167,7 @@
         width: 100%;
         padding: 30px;
         overflow-y: auto;
-        max-height: calc(100% - 40px);
+        max-height: calc(100vh - 40px);
 
         transition: .5s ease-in-out;
     }
