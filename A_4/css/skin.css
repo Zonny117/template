@@ -1,17 +1,5 @@
 @charset "utf-8";
 
-
-#preload {
-    width: 0px;
-    height: 0px;
-    display: inline;
-    background-image: url(../images/menu_ico_1_hover.png);
-    background-image: url(../images/menu_ico_2_hover.png);
-    background-image: url(../images/menu_ico_3_hover.png);
-    background-image: url(../images/menu_ico_4_hover.png);
-    background-image: url(../images/menu_ico_5_hover.png);
-}
-
 * {
     -webkit-tap-highlight-color: transparent;
 }
@@ -345,4 +333,32 @@ iframe {
 .tx {
     margin-top: 20px;
     line-height: 25px;
+}
+
+/* 호버 이미지 로드 */
+
+#preload {
+    width: 0px;
+    height: 0px;
+    display: inline;
+}
+
+#preload ul li:nth-child(1) {
+    background-image: url(../images/menu_ico_1_hover.png);
+}
+
+#preload ul li:nth-child(2) {
+    background-image: url(../images/menu_ico_2_hover.png);
+}
+
+#preload ul li:nth-child(3) {
+    background-image: url(../images/menu_ico_3_hover.png);
+}
+
+#preload ul li:nth-child(4) {
+    background-image: url(../images/menu_ico_4_hover.png);
+}
+
+#preload ul li:nth-child(5) {
+    background-image: url(../images/menu_ico_5_hover.png);
 }
