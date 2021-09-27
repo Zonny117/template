@@ -11,6 +11,12 @@ $(function () {
             case "link2":
                 $(".mMod7").toggleClass("on").siblings().removeClass("on");
                 break;
+            case "link3":
+                $(".VI_wrap").toggleClass("on").siblings().removeClass("on");
+                break;
+            case "link4":
+                $(".mMod5").toggleClass("on").siblings().removeClass("on");
+                break;
         }
 
 

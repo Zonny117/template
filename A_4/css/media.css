@@ -10,18 +10,7 @@
         min-width: unset;
     }
 
-    .hidden_wrap {
-        display: block;
-        position: fixed;
-        outline: 2px dotted red;
-        width: 100%;
-        height: calc(100% - 40px);
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        overflow: hidden;
-    }
+
 
     .background {
         height: 100%;
@@ -144,9 +133,20 @@
     }
 
 
-
-    /* 메뉴 1 - 컨텐츠 내용 */
-
+    /* 모바일 메뉴 공통 모듈 박스*/
+    .hidden_wrap {
+        display: block;
+        position: fixed;
+        outline: 2px dotted red;
+        width: 100%;
+        height: calc(100% - 40px);
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        overflow: hidden;
+        z-index: 999;
+    }
 
     .hidden_sbx {
         position: absolute;
@@ -162,6 +162,8 @@
 
         transition: .5s ease-in-out;
     }
+
+    /* 메뉴 1 - 컨텐츠 내용 */
 
     .mMod4.on {
         bottom: 0;
@@ -236,6 +238,88 @@
         transform: scale(.5) translateY(-12px);
     }
 
+    /* 메뉴 3 - 영상 및 이미지 */
+
+    .VI_wrap.on {
+        bottom: 0;
+    }
+
+    /* 영상 */
+
+    .mMod8 {
+        position: relative;
+        height: 0;
+        padding-top: 56.6%;
+        margin-top: unset;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* 이미지 */
+
+    .mMod9 img {
+        width: 100%;
+        margin-top: 20px;
+        box-sizing: border-box;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+    }
+
+
+    /* 메뉴 4 - 지도 및 주소 */
+    .mMod5.on {
+        bottom: 0;
+    }
+
+    .mMod5 .txt {
+        display: block;
+        text-align: center;
+    }
+
+    .mMod5 .txt::before {
+        display: none;
+    }
+
+    .mMod5 .txt .t {
+        font-size: 2rem;
+    }
+
+    .gMap {
+        position: relative;
+        height: 0;
+        padding-top: 90%;
+    }
+
+    .map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: unset;
+    }
+
+    .navi {
+        position: absolute;
+        width: auto;
+        border-radius: unset;
+        top: 0;
+        right: 0;
+        text-align: center;
+    }
+
+
+    .tx {
+        line-height: unset;
+    }
 
     /* 알림온 */
 
