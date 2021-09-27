@@ -1,9 +1,8 @@
 $(function () {
 
 
-    $(".menu ul li").click(function (e) {
+    $(".menu ul li").click(function () {
 
-        e.stopPropagation();
 
         let cl = $("a", this).attr("class");
 

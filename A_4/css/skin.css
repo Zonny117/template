@@ -1,6 +1,17 @@
 @charset "utf-8";
 
 
+#preload {
+    width: 0px;
+    height: 0px;
+    display: inline;
+    background-image: url(../images/menu_ico_1_hover.png);
+    background-image: url(../images/menu_ico_2_hover.png);
+    background-image: url(../images/menu_ico_3_hover.png);
+    background-image: url(../images/menu_ico_4_hover.png);
+    background-image: url(../images/menu_ico_5_hover.png);
+}
+
 * {
     -webkit-tap-highlight-color: transparent;
 }
