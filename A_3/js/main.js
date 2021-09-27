@@ -70,11 +70,15 @@ $(function () {
 
         $(".mMod8").fadeIn();
 
+        $("video").get(0).pause();
+        
     }); //////////////////////////////////
 
     $(".vid-exit").click(function () {
 
         $(".mMod8").hide();
+
+        $("video").get(0).play();
 
         // 아이프레임 정지
         $("iframe")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
