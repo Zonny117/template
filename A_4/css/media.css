@@ -3,13 +3,7 @@
 @media only screen and (max-width:850px) {
 
     html {
-        height: 99.9%;
         font-size: 9px;
-    }
-
-    body{
-        overflow-x: hidden;
-        overflow-y: auto;
     }
 
     #wrap {
@@ -63,12 +57,8 @@
         left: 20px;
     }
 
-    /* .mMod5, .mMod7, .mMod8, .mMod9, .mMod10, .mMod11{
-        display: flex;
-        height: auto;
-        overflow-y: auto;
-    } */
 
+    /* 데스트탑 미출력/////////////////////////////// */
     .mMod11 {
         display: none;
     }
@@ -76,8 +66,6 @@
     .mMod9 {
         display: none;
     }
-
-
 
     .mMod8 {
         display: none;
@@ -92,7 +80,7 @@
     }
 
 
-    /* 하단 메뉴바 */
+    /* 하단 메뉴바///////////////////////////////////////// */
     .content {
         position: fixed;
         bottom: 0;
@@ -164,14 +152,14 @@
         position: absolute;
         border-radius: 15px 15px 0 0;
         margin: unset;
-        bottom: -100%;
+        bottom: -120%;
         background-color: #fff;
         box-sizing: border-box;
         width: 100%;
         padding: 30px;
         overflow-y: auto;
 
-        max-height: 94vh;
+        max-height: calc(100vh - 60px);
 
         transition: .5s ease-in-out;
     }
