@@ -17,6 +17,9 @@ $(function () {
             case "link4":
                 $(".mMod5").toggleClass("on").siblings().removeClass("on");
                 break;
+            case "link5":
+                $(".mMod6").toggleClass("on").siblings().removeClass("on");
+                break;
         }
 
 
