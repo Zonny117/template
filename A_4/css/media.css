@@ -1,0 +1,326 @@
+@charset "utf-8";
+
+@media only screen and (max-width:850px) {
+
+    html {
+        font-size: 9px;
+    }
+
+    #wrap {
+        min-width: unset;
+    }
+
+    .hidden_wrap {
+        display: block;
+        position: fixed;
+        outline: 2px dotted red;
+        width: 100%;
+        height: calc(100% - 40px);
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        overflow: hidden;
+    }
+
+    .background {
+        height: 100%;
+    }
+
+
+    /* 로고 */
+    .mMod1 {
+        right: unset;
+        left: 20px;
+        bottom: 271px;
+        font-size: 18px;
+        padding-top: unset;
+        margin: unset;
+    }
+
+    /* 메인 타이틀 박스 */
+    .mMod2 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        background-color: unset;
+        padding: unset;
+    }
+
+
+    /* 메인 글귀  */
+    .mMod3 {
+        position: absolute;
+        width: 256px;
+        bottom: 80px;
+        left: 20px;
+    }
+
+    /* .mMod5, .mMod7, .mMod8, .mMod9, .mMod10, .mMod11{
+        display: flex;
+        height: auto;
+        overflow-y: auto;
+    } */
+
+    .mMod11 {
+        display: none;
+    }
+
+    .mMod9 {
+        display: none;
+    }
+
+
+
+    .mMod8 {
+        display: none;
+    }
+
+    .mMod5 {
+        display: none;
+    }
+
+    .mMod10 {
+        display: none;
+    }
+
+
+    /* 하단 메뉴바 */
+    .content {
+        position: fixed;
+        bottom: 0;
+        padding: unset;
+        height: 60px;
+        border-radius: 15px 15px 0 0;
+        width: 100%;
+        z-index: 99999;
+    }
+
+
+    /* 하단 메뉴 목록 */
+    .menu {
+        height: 100%;
+        display: block;
+    }
+
+    .menu ul {
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .menu ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu ul li+li {
+        border-left: 1px solid #ccc;
+    }
+
+    .menu ul li a {
+        display: inline-block;
+        vertical-align: middle;
+        width: 30px;
+        height: 30px;
+        text-indent: -9999px;
+        font-size: 0;
+    }
+
+    .link1 {
+        background: url(../images/menu_ico_1.png) no-repeat center/23px 20px;
+    }
+
+    .link2 {
+        background: url(../images/menu_ico_2.png) no-repeat center/23px 20px;
+    }
+
+    .link3 {
+        background: url(../images/menu_ico_3.png) no-repeat center/23px 20px;
+    }
+
+    .link4 {
+        background: url(../images/menu_ico_4.png) no-repeat center/20px 25px;
+    }
+
+    .link5{
+        background: url(../images/menu_ico_5.png) no-repeat center/20px 25px;
+    }
+
+
+
+    /* 메뉴 1 - 컨텐츠 내용 */
+
+
+    .hidden_sbx {
+        position: absolute;
+        border-radius: 15px 15px 0 0;
+        margin: unset;
+        bottom: -100%;
+        background-color: #fff;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 30px;
+        overflow-y: auto;
+
+        max-height: 94vh;
+
+        transition: .5s ease-in-out;
+    }
+
+    .mMod4.on {
+        bottom: 0;
+    }
+
+
+    .mMod4 .tit {
+        font-size: 2rem;
+    }
+
+    .mMod4 li {
+        padding: unset;
+    }
+
+    .mMod4 li+li {
+        border-top: 1px solid #ccc;
+        padding-top: 30px;
+        box-sizing: border-box;
+    }
+
+    .mMod4 li::before {
+        display: none;
+    }
+
+
+    /* 메뉴1 - 다운로드 */
+    .mMod10.forMobile {
+        display: block;
+    }
+
+    .mMod10 a {
+        width: 100%;
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+
+    .mMod10 a::before {
+        display: none;
+    }
+
+    .mMod10 a::after {
+        content: url(../images/ico_mod10.png);
+        vertical-align: middle;
+        float: right;
+        transform: scale(.6);
+    }
+
+
+    /* 메뉴2 - 링크 */
+
+    .mMod7.on {
+        bottom: 0%;
+    }
+
+    .mMod7 a {
+        display: block;
+        border-bottom: none;
+        border: 1px solid #000;
+        border-radius: 10px;
+        padding: 10px 20px;
+        box-sizing: border-box;
+    }
+
+    .mMod7 a+a {
+        margin: unset;
+        margin-top: 20px;
+    }
+
+    .mMod7 a::after {
+        content: url(../images/ico_mod7.png);
+        float: right;
+        transform: scale(.5) translateY(-12px);
+    }
+
+
+    /* 알림온 */
+
+    .mSky {
+        right: 20px;
+        bottom: 80px;
+        transition: opacity .5s;
+    }
+
+    .mSky.on {
+        opacity: 0;
+        z-index: 0;
+    }
+
+    .forWeb {
+        display: none;
+    }
+
+    .forMobile {
+        display: block;
+    }
+
+    .iTop {
+        display: none !important;
+    }
+
+}
+
+@media only screen and (max-width:768px) and (min-height:420px) {
+
+    /* 상단 아이콘 */
+    .btn_top,
+    .btn_tel {
+        display: block;
+        position: fixed;
+        z-index: 999;
+        top: 20px;
+    }
+
+    .btn_top a,
+    .btn_tel a {
+        vertical-align: middle;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        text-indent: -9999px;
+        font-size: 0;
+    }
+
+    .btn_top {
+        left: 20px;
+    }
+
+    .btn_top a {
+        background: url(../images/star_ico.png) no-repeat center/50px 50px;
+    }
+
+    .btn_tel {
+        left: 80px;
+    }
+
+    .btn_tel a {
+        background: url(../images/tel_ico.png) no-repeat center/50px 50px;
+    }
+}
+
+@media only screen and (max-height:420px) {
+    .mSky .forMobile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .mMod1 {
+        bottom: 300px;
+    }
+
+    .mMod3 {
+        width: 230px;
+    }
+}
