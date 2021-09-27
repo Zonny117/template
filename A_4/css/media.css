@@ -104,7 +104,9 @@
     }
 
     .menu ul li {
+        position: relative;
         width: 100%;
+        height: 50%;
         text-align: center;
     }
 
@@ -115,12 +117,13 @@
     .menu ul li a {
         display: inline-block;
         vertical-align: middle;
-        width: 30px;
-        height: 30px;
+        width: 70%;
+        height: 100%;
         text-indent: -9999px;
         font-size: 0;
     }
 
+    /* 일반 아이콘 */
     .link1 {
         background: url(../images/menu_ico_1.png) no-repeat center/23px 20px;
     }
@@ -139,6 +142,37 @@
 
     .link5 {
         background: url(../images/menu_ico_5.png) no-repeat center/20px 25px;
+    }
+
+    /* 호버 아이콘 */
+    .menu li.hover a {
+        position: absolute;
+        border-top: 3px solid #416fdb;
+        height: 90%;
+        top: -15px;
+        left: 50%;
+        padding-top: 27px;
+        transform: translateX(-50%);
+    }
+
+    li.hover .link1 {
+        background: url(../images/menu_ico_1_hover.png) no-repeat center/23px 20px;
+    }
+
+    li.hover .link2 {
+        background: url(../images/menu_ico_2_hover.png) no-repeat center/23px 20px;
+    }
+
+    li.hover .link3 {
+        background: url(../images/menu_ico_3_hover.png) no-repeat center/23px 20px;
+    }
+
+    li.hover .link4 {
+        background: url(../images/menu_ico_4_hover.png) no-repeat center/20px 25px;
+    }
+
+    li.hover .link5 {
+        background: url(../images/menu_ico_5_hover.png) no-repeat center/20px 25px;
     }
 
 
@@ -169,7 +203,7 @@
         overflow-y: auto;
         max-height: calc(100vh - 40px);
 
-        transition: .5s ease-in-out;
+        transition: bottom .5s ease-in-out;
     }
 
     /* 메뉴 1 - 컨텐츠 내용 */
@@ -224,7 +258,7 @@
     /* 메뉴2 - 링크 */
 
     .mMod7.on {
-        bottom: 0%;
+        bottom: 0;
     }
 
     .mMod7 a {

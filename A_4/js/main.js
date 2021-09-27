@@ -1,8 +1,12 @@
 $(function () {
 
-    $(".menu ul li a").click(function () {
 
-        var cl = $(this).attr("class");
+    $(".menu ul li").click(function (e) {
+
+        e.stopPropagation();
+
+        let cl = $("a", this).attr("class");
+
 
         switch (cl) {
             case "link1":
@@ -20,7 +24,8 @@ $(function () {
             case "link5":
                 $(".mMod6").toggleClass("on").siblings().removeClass("on");
                 break;
-        }
+        } /////////////////////////
+
 
 
         var tf = $(".hidden_wrap>div").is(".on");
@@ -34,8 +39,9 @@ $(function () {
         }
 
 
+        $(this).toggleClass("hover").siblings().removeClass("hover");
 
-    })
 
+    }); //////////////
 
 }); ////////////////////////
