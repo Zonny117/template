@@ -468,6 +468,11 @@
 
 @media only screen and (max-height:420px) {
 
+    .mSky {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
     .mSky .forMobile {
         display: none;
     }
