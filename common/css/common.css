@@ -223,6 +223,7 @@ body.hiddenScroll {
 	transform: translateY(-50%);
 	width: 64px;
 	z-index: 1000;
+	text-align: center;
 }
 
 .mSky .ls {
