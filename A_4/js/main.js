@@ -1,6 +1,5 @@
 $(function () {
 
-
     $(".menu ul li").click(function () {
 
 
@@ -32,14 +31,13 @@ $(function () {
         // console.log(tf)
 
         if (tf) {
-            $(".mSky").addClass("on");
+            $(".btn_tel, .btn_top, .mSky").addClass("on");
         } else {
-            $(".mSky").removeClass("on");
+            $(".btn_tel, .btn_top, .mSky").removeClass("on");
         }
 
 
         $(this).toggleClass("hover").siblings().removeClass("hover");
-
 
     }); //////////////
 

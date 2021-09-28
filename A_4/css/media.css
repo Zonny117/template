@@ -435,8 +435,15 @@
     .btn_tel {
         display: block;
         position: fixed;
-        z-index: 999;
+        z-index: 9999;
         top: 20px;
+        transition: opacity .5s;
+    }
+
+    .btn_top.on,
+    .btn_tel.on {
+        opacity: 0;
+        z-index: 0;
     }
 
     .btn_top a,
