@@ -1,6 +1,14 @@
 $(function () {
 
 
+    let naverapp = (/naver/i.test(navigator.userAgent));
+
+    if (naverapp) {
+        $(".hidden_sbx").css({
+            maxHeight: "90%"
+        })
+    }; /////////////////////
+
     $(".menu ul li").click(function () {
 
 
