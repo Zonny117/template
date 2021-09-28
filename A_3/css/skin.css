@@ -58,8 +58,8 @@ body {
 .youtubePlay {
     display: inline-block;
     position: absolute;
-    top: 64%;
-    left: 55%;
+    top: 72%;
+    left: 57%;
     background: url(../images/Youtube_play.png) no-repeat;
     text-indent: -9999px;
     font-size: 0px;
@@ -184,8 +184,10 @@ body {
 /* 모듈4 */
 .mMod4 {
     font-size: 1.5rem;
+    padding: 0 30px;
     padding-bottom: 50px;
     border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 

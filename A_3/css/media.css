@@ -78,6 +78,7 @@
     }
 
     .mMod7 {
+        font-size: unset;
         margin: unset;
         margin-top: 20px;
     }
@@ -99,6 +100,8 @@
 
     .mMod4 {
         border-bottom: none;
+        padding: unset;
+        padding-bottom: 50px;
         font-size: unset;
     }
 
@@ -378,7 +381,7 @@
         padding: 30px;
     }
 
-    .mMod3{
+    .mMod3 {
         font-size: unset;
     }
 
@@ -413,7 +416,7 @@
         text-align: center;
     }
 
-    .mSky{
+    .mSky {
         display: none;
     }
 
