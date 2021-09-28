@@ -4,26 +4,9 @@
 
 @media only screen and (max-width:768px) {
 
-    /* 앱 브라우저 주소창 높이값 자동설정 방지 /////////////////////////////////*/
-    html {
-        /* height: 99.9%; */
-        font-size: 14px;
-    }
-
-    /* 
-    html,
-    body {
-        overflow-x: hidden;
-        overflow-y: auto;
-    } */
-
     #wrap {
-        /* height: 100vh; */
         min-width: unset;
     }
-
-    /* /////////////////////////////////////////////////////// */
-
 
     .mMod2,
     .mMod4,
@@ -395,6 +378,10 @@
         padding: 30px;
     }
 
+    .mMod3{
+        font-size: unset;
+    }
+
     .mMod4,
     .mMod9,
     .mMod5,
@@ -424,6 +411,10 @@
         padding: 0 20px;
         box-sizing: border-box;
         text-align: center;
+    }
+
+    .mSky{
+        display: none;
     }
 
 }
