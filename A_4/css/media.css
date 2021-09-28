@@ -17,6 +17,7 @@
     }
 
     #wrap {
+        overflow: hidden;
         min-width: unset;
     }
 
@@ -27,6 +28,7 @@
 
     /* 로고 */
     .mMod1 {
+        position: absolute;
         right: unset;
         left: 20px;
         bottom: 271px;

@@ -33,7 +33,9 @@
                     <!-- 모듈1 이미지 공간 박스 -->
                     <h1 class="mMod1">
                         <!-- <img src="images/img_mod2.png" alt="로고"> -->
-                        <video src="video/mod2.mp4" autoplay loop muted></video>
+                        <video autoplay loop muted playsinline>
+                            <source src="video/mod2.mp4">
+                        </video>
                     </h1>
                     <img src="images/logo_frame.png" alt="로고프레임" class="frame">
                     <!-- 유튜브 재생버튼 -->
@@ -219,7 +221,7 @@
                 <div class="swiper-button-prev"></div>
                 <img src="images/vid_exit.png" alt="닫기" class="slide-exit">
                 <!-- <a href="#jsMod9" class="close">레이어 닫기</a></span> -->
-                <script> 
+                <script>
                     var lMod9 = new Swiper(".lMod9 .swiper-container", {
 
                         navigation: {
