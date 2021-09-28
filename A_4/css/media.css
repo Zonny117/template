@@ -186,6 +186,11 @@
         max-height: calc(100%);
 
         transition: bottom .5s ease-in-out;
+
+        /* firefox */
+        scrollbar-width: none;
+        /* ie,edge */
+        -ms-overflow-style: none;
     }
 
     /* 메뉴 1 - 컨텐츠 내용 */
