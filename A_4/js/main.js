@@ -1,6 +1,6 @@
 $(function () {
 
-
+    // 네이버 인앱 브라우저 높이값 설정
     let naverapp = (/naver/i.test(navigator.userAgent));
 
     if (naverapp) {
