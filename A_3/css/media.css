@@ -42,7 +42,7 @@
     /* 메인 고정박스 */
     .modbg {
         width: 100%;
-        padding: 30px;
+        padding: 0 30px;
         text-align: left;
     }
 
