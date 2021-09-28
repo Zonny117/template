@@ -44,7 +44,6 @@
 
     /* 메인 타이틀 박스 */
     .mMod2 {
-        position: relative;
         width: 100%;
         height: 100%;
         color: #fff;
@@ -52,6 +51,11 @@
         padding: unset;
     }
 
+    .modbg {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
 
     /* 메인 글귀  */
     .mMod3 {
@@ -60,29 +64,6 @@
         bottom: 80px;
         left: 20px;
     }
-
-
-    /* 데스트탑 미출력/////////////////////////////// */
-    .mMod11 {
-        display: none;
-    }
-
-    .mMod9 {
-        display: none;
-    }
-
-    .mMod8 {
-        display: none;
-    }
-
-    .mMod5 {
-        display: none;
-    }
-
-    .mMod10 {
-        display: none;
-    }
-
 
     /* 하단 메뉴바///////////////////////////////////////// */
     .content {
