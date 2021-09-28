@@ -1,4 +1,7 @@
+document.getElementsByClassName("vid").controls = false;
+
 $(function () {
+
 
     // let prot = 0;
 
@@ -71,7 +74,7 @@ $(function () {
         $(".mMod8").fadeIn();
 
         $("video").get(0).pause();
-        
+
     }); //////////////////////////////////
 
     $(".vid-exit").click(function () {
@@ -144,7 +147,7 @@ $(function () {
         })
     }
 
-   
+
 
 
 }); /////////////////////////////////

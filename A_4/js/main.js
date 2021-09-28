@@ -1,6 +1,20 @@
 document.getElementsByClassName("vid").controls = false;
 
 $(function () {
+    
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
+
+    
+    if (navigator.userAgent.indexOf('iPhone') != -1) {
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+    } else {
+        hideURLbar();
+    }
+
 
     // 네이버 인앱 브라우저 높이값 설정
     let naverapp = (/naver/i.test(navigator.userAgent));
