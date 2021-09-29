@@ -4,6 +4,10 @@
 
 @media only screen and (max-width:768px) {
 
+    .mSky{
+        top: 50%;
+    }
+
     #wrap {
         min-width: unset;
     }
@@ -26,6 +30,7 @@
         top: 12px;
         left: 25px;
         font-size: 1rem;
+        padding: 8px 17px;
     }
 
     .btn_tel {
@@ -52,15 +57,14 @@
     }
 
     .frame {
-        width: 188px;
-        left: 50.2%;
+        width: 294px;
+        left: 53.2%;
     }
 
 
     .mMod1 {
-        width: 146px;
-        height: 149px;
-        left: -1%;
+        width: 230px;
+        height: 230px;
 
         /* ios 하위요소 brad, ovf fix */
         -webkit-backface-visibility: hidden;
@@ -420,4 +424,44 @@
         display: none;
     }
 
+}
+
+/* 구 스마트폰 이미지 사이즈 */
+@media only screen and (max-height:580px) {
+    .frame {
+        width: 188px;
+        left: 52.2%;
+    }
+
+
+    .mMod1 {
+        width: 146px;
+        height: 149px;
+    }
+}
+
+/* 태블릿 이미지 사이즈 */
+@media only screen and (max-width:768px) and (min-height:1024px) {
+    .mMod1 {
+        width: 350px;
+        height: 350px;
+    }
+
+    .frame {
+        width: 445px;
+        left: 52.2%;
+        top: 50%;
+    }
+}
+
+@media only screen and (max-width:280px) {
+    .frame {
+        width: 188px;
+        left: 52.2%;
+    }
+
+    .mMod1 {
+        width: 146px;
+        height: 149px;
+    }
 }
