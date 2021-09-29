@@ -102,15 +102,17 @@ body {
     right: 60px;
 }
 
-.mMod6 .txt {
-    margin-top: 20px;
+.mMod6{
+    font-size: 14px;
 }
 
-.mMod6 strong {
-    font-size: 1.2rem;
+.mMod6 .txt {
+    margin-top: 20px;
+    line-height: 170%;
 }
 
 .mMod6 strong a {
+    font-size: 24px;
     color: #fff;
 }
 
@@ -207,21 +209,22 @@ body {
 }
 
 .mMod3 h2 {
-    font-size: 2.5rem;
-    line-height: 40px;
+    font-size: 35px;
+    line-height: 140%;
 }
 
 .mMod3 .txt {
-    font-size: 1.3rem;
+    font-size: 18px;
     margin-top: 30px;
+    line-height: 140%;
 }
 
 .mMod10 {
-    font-size: 1.2rem;
     margin-top: 30px;
 }
 
 .mMod10 a {
+    font-size: 20px;
     display: inline-block;
     color: #fff;
     border-radius: 10px;
@@ -264,7 +267,7 @@ body {
 
 .mMod4 .tit {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 18px;
 }
 
 .mMod4 li+li {
@@ -290,6 +293,9 @@ body {
 
 .mMod4 .txt {
     margin-top: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 150%;
 }
 
 
@@ -319,11 +325,12 @@ iframe {
 }
 
 .mMod5 .ti {
+    font-size: 16px;
     flex: 1;
 }
 
 .mMod5 .ti .t {
-    font-size: 1.2rem;
+    font-size: 20px;
 }
 
 .mMod5 .txt::before {
@@ -352,6 +359,7 @@ iframe {
     color: #fff;
     padding: 10px 20px;
     border-radius: 10px;
+    font-size: 16px;
 }
 
 .navi::before {
@@ -361,8 +369,9 @@ iframe {
 }
 
 .tx {
+    font-size: 16px;
     margin-top: 20px;
-    line-height: 25px;
+    line-height: 180%;
 }
 
 

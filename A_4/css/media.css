@@ -36,7 +36,7 @@
         width: unset;
     }
 
-    .mMod1 span{
+    .mMod1 span {
         position: relative;
     }
 
@@ -67,6 +67,14 @@
     /* 메인 글귀  */
     .mMod3 {
         width: 256px;
+    }
+
+    .mMod3 h2 {
+        font-size: 2.5rem;
+    }
+
+    .mMod3 .txt {
+        font-size: 1.5rem;
     }
 
     /* 하단 메뉴바///////////////////////////////////////// */
