@@ -55,11 +55,18 @@ body {
 }
 
 
+.image_box {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+}
+
 .youtubePlay {
     display: inline-block;
     position: absolute;
     top: 72%;
-    left: 57%;
+    left: 73%;
     background: url(../images/Youtube_play.png) no-repeat;
     text-indent: -9999px;
     font-size: 0px;
@@ -71,10 +78,17 @@ body {
 .mMod1 {
     position: relative;
     margin: 0 auto;
-    width: 350px;
-    height: 350px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     overflow: hidden;
+
+
+    /* ios 하위요소 brad, ovf fix */
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
 }
 
 .mMod1 img {
@@ -90,15 +104,15 @@ body {
 
 .frame {
     position: absolute;
-    top: 51%;
-    left: 51.5%;
-    transform: translate(-50%, -50%);
-    width: 37%;
+    top: -5%;
+    left: -9%;
+    width: 128%;
+    height: 111%;
 }
 
 /* ////////////////////////////// 메인 글귀////////////////////////// */
 .mMod3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .mMod3 .txt {

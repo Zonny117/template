@@ -2,9 +2,15 @@
 
 /* A_3 미디어쿼리 CSS */
 
+@media only screen and (min-width:1200px) {
+    html {
+        font-size: 1vw;
+    }
+}
+
 @media only screen and (max-width:768px) {
 
-    .mSky{
+    .mSky {
         top: 50%;
     }
 
@@ -56,21 +62,9 @@
         box-sizing: border-box;
     }
 
-    .frame {
-        width: 294px;
-        left: 53.2%;
-    }
-
-
-    .mMod1 {
+    .image_box {
         width: 230px;
         height: 230px;
-
-        /* ios 하위요소 brad, ovf fix */
-        -webkit-backface-visibility: hidden;
-        -moz-backface-visibility: hidden;
-        -webkit-transform: translate3d(0, 0, 0);
-        -moz-transform: translate3d(0, 0, 0);
     }
 
     .youtubePlay {
@@ -350,6 +344,7 @@
     }
 }
 
+/* 모바일 가로회전 */
 @media only screen and (max-height:540px) and (max-width:850px) {
 
     #wrap {
@@ -358,11 +353,6 @@
 
     .youtubePlay {
         display: none;
-    }
-
-    .frame {
-        width: 185px;
-        left: 52%;
     }
 
     .modbg {
@@ -379,6 +369,11 @@
     .background {
         width: unset;
         margin-bottom: unset;
+    }
+
+    .image_box {
+        width: unset;
+        height: unset;
     }
 
     .content {
@@ -411,7 +406,6 @@
     .mMod1 {
         width: 144px;
         height: 145px;
-        left: -2%;
     }
 
     .mMod3 {
@@ -428,40 +422,23 @@
 
 /* 구 스마트폰 이미지 사이즈 */
 @media only screen and (max-height:580px) {
-    .frame {
-        width: 188px;
-        left: 52.2%;
-    }
-
-
-    .mMod1 {
-        width: 146px;
-        height: 149px;
+    .image_box {
+        width: 160px;
+        height: 160px;
     }
 }
 
 /* 태블릿 이미지 사이즈 */
 @media only screen and (max-width:768px) and (min-height:1024px) {
-    .mMod1 {
+    .image_box {
         width: 350px;
         height: 350px;
-    }
-
-    .frame {
-        width: 445px;
-        left: 52.2%;
-        top: 50%;
     }
 }
 
 @media only screen and (max-width:280px) {
-    .frame {
-        width: 188px;
-        left: 52.2%;
-    }
-
-    .mMod1 {
-        width: 146px;
-        height: 149px;
+    .image_box{
+        width: 150px;
+        height: 150px;
     }
 }
