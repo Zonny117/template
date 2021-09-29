@@ -261,7 +261,7 @@
         width: 100%;
         box-sizing: border-box;
         padding: 14px 22px;
-        font-size: unset;
+        font-size: 16px;
         line-height: unset;
     }
 
@@ -272,7 +272,7 @@
     .mMod10 a::after {
         content: url(../images/ico_mod10.png);
         position: absolute;
-        top: 12px;
+        top: 14px;
         right: 22px;
         transform: scale(.6);
     }
@@ -388,6 +388,14 @@
         font-size: unset;
     }
 
+    .mMod3 h2 {
+        font-size: 20px;
+    }
+
+    .mMod3 .txt {
+        font-size: 16px;
+    }
+
     .mMod4,
     .mMod9,
     .mMod5,
@@ -399,7 +407,7 @@
         right: 24px;
     }
 
-    .mMod7{
+    .mMod7 {
         margin: unset;
     }
 
