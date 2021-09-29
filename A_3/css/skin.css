@@ -6,11 +6,13 @@
     -webkit-overflow-scrolling: auto;
 }
 
+
 html,
 body {
     width: 100%;
     height: 100%;
     line-height: unset;
+
 }
 
 /* 전체박스 */
@@ -112,17 +114,20 @@ body {
 }
 
 /* ////////////////////////////// 메인 글귀////////////////////////// */
-.mMod3 {
-    font-size: 1.3rem;
+.mMod3 h2 {
+    font-size: 35px;
+    line-height: 130%;
 }
 
 .mMod3 .txt {
     margin-top: 30px;
+    font-size: 18px;
+    line-height: 140%;
 }
 
 
 .mMod7 {
-    font-size: 1rem;
+    font-size: 16px;
     margin: 47px 0;
 }
 
@@ -210,7 +215,7 @@ body {
 }
 
 .mMod4 .tit {
-    font-size: 1.3rem;
+    font-size: 18px;
     color: #e56254;
     font-weight: bold;
     margin: 10px 0;
@@ -224,7 +229,9 @@ body {
 }
 
 .mMod4 .txt {
-    font-size: 1rem;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 150%;
 }
 
 /* 스와이퍼 */
@@ -293,29 +300,31 @@ body {
 }
 
 .mMod5 .txt {
-    font-size: 1rem;
     width: 50%;
     height: 500px;
     padding: 40px;
     box-sizing: border-box;
 }
 
-.txt>.ti {
-    line-height: 30px;
+.mMod5 .txt .ti {
+    font-size: 16px;
     padding-bottom: 16px;
     border-bottom: 1px solid #ccc;
 }
 
 .ti strong {
-    font-size: 1.2rem;
+    font-size: 20px;
 }
 
 .tx {
+    font-size: 16px;
+    line-height: 180%;
     margin-top: 20px;
 }
 
 .navi {
     position: absolute;
+    font-size: 16px;
     bottom: 30px;
     color: #fff;
     background-color: #e56254;
@@ -351,11 +360,14 @@ footer {
 }
 
 .mMod6 {
-    font-size: 1rem;
+    font-size: 14px;
     position: relative;
     padding: 50px 30px;
     box-sizing: border-box;
-    line-height: 30px;
+}
+
+.mMod6 span {
+    font-size: 14px;
 }
 
 .mMod6 .tit a {
@@ -364,11 +376,11 @@ footer {
 }
 
 .mMod6 .txt {
+    line-height: 170%;
     margin-top: 20px;
 }
 
 .mMod10 {
-    font-size: 1.2rem;
     position: absolute;
     top: 50%;
     right: 30px;
@@ -377,6 +389,8 @@ footer {
 
 .mMod10 a {
     background-color: #e56254;
+    font-size: 20px;
+    line-height: 60px;
     color: #fff;
     padding: 15px 30px;
     border-radius: 10px;
@@ -476,5 +490,7 @@ iframe {
 
 /* 알림온 */
 .mSky {
+    top: unset;
+    bottom: 0;
     z-index: 99999;
 }
