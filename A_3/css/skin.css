@@ -16,7 +16,9 @@ body {
 /* 전체박스 */
 #wrap {
     width: 100%;
-    height: 118%;
+    height: 100vh;
+    /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
     min-width: 1200px;
 }
 
@@ -223,7 +225,7 @@ body {
     transform: scale(.5);
 }
 
-.mMod4 .txt{
+.mMod4 .txt {
     font-size: 1rem;
 }
 
