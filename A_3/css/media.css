@@ -36,7 +36,8 @@
     .mMod6,
     .modbg,
     .content {
-        width: auto;
+        /* width: auto; */
+        width: 100%;
     }
 
     .content {
