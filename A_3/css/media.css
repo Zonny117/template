@@ -40,6 +40,10 @@
         width: 100%;
     }
 
+    .mMod2{
+        height: 100vh !important;
+    }
+
     .content {
         padding: 30px;
     }
@@ -445,11 +449,19 @@
     }
 }
 
-/* 태블릿 이미지 사이즈 */
+/* 태블릿 이미지 사이즈 및 높이값 */
 @media only screen and (max-width:768px) and (min-height:1024px) {
     .image_box {
         width: 350px;
         height: 350px;
+    }
+
+}
+
+/* 태블릿 높이값 */
+@media only screen and (max-width:1024px) and (min-height:768px) {
+    .mMod2 {
+        height: 118vh;
     }
 }
 
