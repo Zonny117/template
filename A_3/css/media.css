@@ -78,8 +78,8 @@
     }
 
     .image_box {
-        width: 230px;
-        height: 230px;
+        width: 200px;
+        height: 200px;
     }
 
     .youtubePlay {
@@ -90,11 +90,11 @@
         font-size: unset;
     }
 
-    .mMod3 h2{
+    .mMod3 h2 {
         font-size: 1.4rem;
     }
 
-    .mMod3 .txt{
+    .mMod3 .txt {
         margin-top: 20px;
     }
 
@@ -228,16 +228,12 @@
         width: 100%;
         padding: 20px;
         height: auto;
-        font-size: unset;
+        font-size: 1rem;
     }
 
     .txt>.ti {
         border-bottom: unset;
         padding-bottom: unset;
-    }
-
-    .ti strong {
-        font-size: unset;
     }
 
     .gMap {
@@ -259,6 +255,7 @@
     .tx {
         padding: 20px;
         margin-top: unset;
+        font-size: 1rem;
     }
 
     .navi {
@@ -274,6 +271,7 @@
         transform: unset;
         width: auto;
         font-size: unset;
+        margin-top: 20px;
     }
 
     .mMod10 a {
@@ -304,7 +302,7 @@
         padding: 0px 30px;
         padding-top: 30px;
         padding-bottom: 80px;
-        font-size: unset;
+        font-size: 1rem;
     }
 
     .mMod6 .tit,
