@@ -121,8 +121,9 @@ body {
 
 .mMod3 .txt {
     margin-top: 30px;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 140%;
+    font-weight: 300;
 }
 
 
@@ -215,7 +216,7 @@ body {
 }
 
 .mMod4 .tit {
-    font-size: 18px;
+    font-size: 25px;
     color: #e56254;
     font-weight: bold;
     margin: 10px 0;
@@ -301,7 +302,7 @@ body {
 
 .mMod5 .txt {
     width: 50%;
-    height: 500px;
+    height: 460px;
     padding: 40px;
     box-sizing: border-box;
 }
@@ -310,6 +311,7 @@ body {
     font-size: 16px;
     padding-bottom: 16px;
     border-bottom: 1px solid #ccc;
+    line-height: 180%;
 }
 
 .ti strong {
@@ -339,7 +341,7 @@ body {
 }
 
 .gMap {
-    width: 50%;
+    width: 75%;
 }
 
 .map {
@@ -368,6 +370,7 @@ footer {
 
 .mMod6 span {
     font-size: 14px;
+    font-weight: 300;
 }
 
 .mMod6 .tit a {
@@ -378,6 +381,7 @@ footer {
 .mMod6 .txt {
     line-height: 170%;
     margin-top: 20px;
+    font-weight: 300;
 }
 
 .mMod10 {
@@ -392,7 +396,7 @@ footer {
     font-size: 20px;
     line-height: 60px;
     color: #fff;
-    padding: 15px 30px;
+    padding: 15px 40px;
     border-radius: 10px;
 }
 
