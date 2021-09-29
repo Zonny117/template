@@ -1,7 +1,7 @@
-document.getElementsByClassName("vid").controls = false;
-
 $(function () {
 
+    document.getElementsByClassName("vid").controls = false;
+    
     // let prot = 0;
 
     // let ts, te, touch;
