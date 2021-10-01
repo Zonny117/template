@@ -498,7 +498,5 @@ iframe {
 
 /* 알림온 */
 .mSky {
-    top: unset;
-    bottom: 0;
     z-index: 99999;
 }
