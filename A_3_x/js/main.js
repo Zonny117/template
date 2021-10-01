@@ -1,58 +1,14 @@
 $(function () {
+    let vh = window.innerHeight * 0.01;
+
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
 
     document.getElementsByClassName("vid").controls = false;
 
-
-
-    // let prot = 0;
-
-    // let ts, te, touch;
-
-    // let winH = $(window).innerHeight()
-
-
-    // // 모바일 터치 이벤트
-    // $(document).on("touchstart", function (e) {
-
-    //     e.stopPropagation();
-
-
-    //     ts = e.originalEvent.touches[0].screenY;
-    // });
-
-    // $(document).on("touchend", function (e) {
-
-    //     e.stopPropagation();
-
-
-
-    //     if (prot) return;
-
-    //     prot = 1;
-
-    //     setTimeout(function () {
-    //         prot = 0;
-    //     }, 500)
-
-
-    //     te = e.originalEvent.changedTouches[0].screenY;
-
-    //     touch = ts - te;
-
-    //     // 컨텐츠 박스 슬라이드업
-    //     if (touch > 0 && winW <= 768) {
-    //         $(".mMod2").stop().animate({
-    //             height: 0 + "%"
-    //         }, 500, 'easeOutCubic')
-    //     } //////////////////////////
-    //     else if (touch < 0 && winW <= 768) {
-    //         $(".mMod2").stop().animate({
-    //             height: 100 + "%"
-    //         }, 500, 'easeOutCubic')
-    //     }
-
-    // }); ////////////////////////////////////
-
+    window.addEventListener('resize', () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
 
 
     var slides = $(".mMod9 .swiper-slide").length;

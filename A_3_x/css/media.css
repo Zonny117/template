@@ -9,6 +9,8 @@
 
     #wrap {
         min-width: unset;
+        height: 100vh;
+        height: calc(var(--vh, 100vh) * 100);
     }
 
     .mMod2,
