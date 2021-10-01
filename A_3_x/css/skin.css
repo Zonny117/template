@@ -37,7 +37,9 @@ body {
     position: relative;
     /* background-color: #faedc9; */
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 .modbg {
@@ -115,7 +117,7 @@ body {
 }
 
 /* ////////////////////////////// 메인 글귀////////////////////////// */
-.mMod3{
+.mMod3 {
     margin-top: 50px;
 }
 
@@ -293,7 +295,7 @@ body {
 }
 
 .mMod9 .swiper-pagination-bullet-active {
-    background: #e56254;
+    background: #3bc873;
 }
 
 /* 지도 */
