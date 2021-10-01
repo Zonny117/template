@@ -107,13 +107,18 @@
         font-size: unset;
     }
 
+    .mMod4 .tit{
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
     .mMod4 ul {
         padding: 0 20px;
     }
 
     .mMod4 ul li+li {
         border-top: 1px solid #ccc;
-        margin-top: 11px;
+        margin-top: 20px;
     }
 
 
