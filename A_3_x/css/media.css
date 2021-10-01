@@ -20,6 +20,7 @@
     }
 
     .content {
+        margin-top: 100vh;
         padding: 30px;
     }
 
@@ -46,9 +47,20 @@
     }
 
     /* 메인 고정박스 */
+    .mMod2{
+        position: fixed;
+        top: 0;
+        left: 0;
+        vertical-align: middle;
+    }
+
     .modbg {
         width: 100%;
-        padding: 30px 30px;
+        height: 100%;
+        top: unset;
+        left: unset;
+        transform: unset;
+        padding: 30px;
         text-align: left;
     }
 
