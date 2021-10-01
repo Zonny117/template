@@ -67,8 +67,8 @@
     }
 
     .mMod3 {
-        font-size: unset;
         margin-top: unset;
+        font-size: unset;
     }
 
     .mMod3 h2 {
@@ -108,7 +108,7 @@
         font-size: unset;
     }
 
-    .mMod4 .tit {
+    .mMod4 .tit{
         font-size: 20px;
         margin-top: 20px;
     }
