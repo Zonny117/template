@@ -1,5 +1,7 @@
 $(function () {
 
+
+
     document.getElementsByClassName("vid").controls = false;
 
     // let prot = 0;
@@ -145,8 +147,5 @@ $(function () {
             });
         })
     }
-
-
-
 
 }); /////////////////////////////////

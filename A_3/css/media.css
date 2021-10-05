@@ -3,10 +3,20 @@
 
 /* 데스트탑 폰트/이미지 사이즈 */
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:850px) {
+
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
 
     #wrap {
         min-width: unset;
+        height: auto;
+    }
+
+    .mMod2 {
+        height: auto;
     }
 
     .mMod2,
@@ -20,7 +30,12 @@
     }
 
     .content {
+        margin-top: 100vh;
         padding: 30px;
+        /* firefox */
+        scrollbar-width: none;
+        /* ie,edge */
+        -ms-overflow-style: none;
     }
 
     .btn_top {
@@ -47,9 +62,20 @@
 
     /* 메인 고정박스 */
     .modbg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow-y: scroll;
+        transform: unset;
         width: 100%;
-        padding: 30px 30px;
+        height: 100%;
+        padding: 100px 30px;
         text-align: left;
+        background-color: #faedc9;
+        /* firefox */
+        scrollbar-width: none;
+        /* ie,edge */
+        -ms-overflow-style: none;
     }
 
     .background {
@@ -58,8 +84,8 @@
     }
 
     .image_box {
-        width: 200px;
-        height: 200px;
+        width: 240px;
+        height: 240px;
     }
 
     .youtubePlay {
@@ -357,7 +383,12 @@
 /* 모바일 가로회전 */
 @media only screen and (max-height:540px) and (max-width:850px) {
 
-    #wrap {
+    .image_box {
+        width: 350px !important;
+        height: 350px !important;
+    }
+
+    /* #wrap {
         min-width: unset;
     }
 
@@ -367,7 +398,6 @@
 
     .modbg {
         width: 100%;
-        height: 100%;
         top: 0;
         transform: translatex(-50%);
         padding: 30px;
@@ -379,11 +409,6 @@
     .background {
         width: unset;
         margin-bottom: unset;
-    }
-
-    .image_box {
-        width: unset;
-        height: unset;
     }
 
     .content {
@@ -435,23 +460,28 @@
 
     .mSky {
         display: none;
-    }
+    } */
 
 }
 
 /* 구 스마트폰 이미지 사이즈 */
 @media only screen and (max-height:580px) {
     .image_box {
-        width: 160px;
-        height: 160px;
+        width: 200px;
+        height: 200px;
     }
 }
 
 /* 태블릿 이미지 사이즈 */
 @media only screen and (max-width:768px) and (min-height:1024px) {
+
+    .background {
+        margin-bottom: 60px;
+    }
+
     .image_box {
-        width: 350px;
-        height: 350px;
+        width: 400px;
+        height: 400px;
     }
 
 }
