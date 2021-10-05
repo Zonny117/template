@@ -22,6 +22,7 @@
     }
 
     .background {
+        position: absolute;
         height: 100%;
     }
 
@@ -59,9 +60,10 @@
     }
 
     .modbg {
-        bottom: 78px;
         position: absolute;
+        bottom: 78px;
         left: 20px;
+        z-index: 99;
     }
 
     /* 메인 글귀  */
@@ -79,7 +81,7 @@
 
     /* 하단 메뉴바///////////////////////////////////////// */
     .content {
-        position: fixed;
+        position: absolute;
         bottom: 0;
         padding: unset;
         height: 60px;
@@ -179,7 +181,6 @@
     .hidden_wrap {
         display: block;
         position: absolute;
-        outline: 2px dotted red;
         width: 100%;
         height: calc(100% - 40px);
         top: 0;
@@ -449,7 +450,7 @@
     .btn_top,
     .btn_tel {
         display: block;
-        position: fixed;
+        position: absolute;
         z-index: 9999;
         top: 20px;
         transition: .5s;
