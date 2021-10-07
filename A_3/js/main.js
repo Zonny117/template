@@ -1,7 +1,6 @@
 $(function () {
 
 
-    iNoBounce.enable();
 
 
     document.getElementsByClassName("vid").controls = false;

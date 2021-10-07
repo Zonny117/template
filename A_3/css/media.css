@@ -30,8 +30,6 @@
     .content {
         margin-top: 100vh;
         padding: 30px;
-        -webkit-overflow-scrolling: touch;
-
 
         /* firefox */
         scrollbar-width: none;
@@ -67,8 +65,6 @@
         top: 0;
         left: 0;
         overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
-
 
         transform: unset;
         width: 100%;
