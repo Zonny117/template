@@ -5,23 +5,12 @@
 
 @media only screen and (max-width:850px) {
 
-
-    html,
-    body {
-        position: fixed;
-        overflow: hidden;
-    }
-
     ::-webkit-scrollbar {
         display: none;
     }
 
     #wrap {
         min-width: unset;
-        width: 100vw;
-        height: 100vh;
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
     }
 
     .mMod2 {
