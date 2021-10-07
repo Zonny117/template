@@ -1,8 +1,11 @@
 $(function () {
 
 
+    iNoBounce.enable();
+
 
     document.getElementsByClassName("vid").controls = false;
+
 
     // let prot = 0;
 
