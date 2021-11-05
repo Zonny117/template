@@ -1,25 +1,31 @@
 @charset "utf-8";
 
-@media only screen and (max-width:768px) {
-    
-    #wrap{
+@media only screen and (max-width:823px) {
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+
+    #wrap {
         min-width: unset;
     }
 
-    .content{
-        display: none;
-    }
+
 
     .titlebx {
         display: block;
     }
 
-    .mMod2{
+    /* 서비스명 */
+    .mMod0 {
+        padding-top: unset;
+    }
+
+    .mMod2 {
         width: 100%;
         height: 100%;
     }
 
-    .mMod2 .modBg{
+    .mMod2 .modBg {
         width: 100%;
         height: 100%;
         left: unset;
@@ -28,7 +34,7 @@
     }
 
     /* 로고 */
-    .mMod1{
+    .mMod1 {
         border-radius: 50%;
         overflow: hidden;
         width: 80px;
@@ -38,21 +44,22 @@
     }
 
     /* sns 숨김 */
-    .mMod11>a{
+    .mMod11>a {
         display: none;
     }
 
     /* 메인 타이틀 */
-    .mMod3{
+    .mMod3 {
         position: absolute;
         bottom: 80px;
     }
 
-    .mMod3 h2{
+    .mMod3 h2 {
         font-size: 26px;
         letter-spacing: -1px;
     }
-    .mMod3 p{
+
+    .mMod3 p {
         margin-top: 20px;
         font-size: 16px;
         line-height: 120%;
@@ -61,39 +68,359 @@
 
 
     /* 전화걸기 */
-    .mMod11 .tel::after{
+    .mMod11 .forWeb {
         display: none;
     }
 
-    .mMod11{
+    .mMod11 .forMobile {
+        display: block;
+    }
+
+    .mMod11 .tel::after {
+        display: none;
+    }
+
+    .mMod11 {
         position: absolute;
         bottom: 20px;
         left: 20px;
     }
 
-    .mMod11 .tel{
+    .mMod11 .tel {
         position: relative;
         border: 1px solid #ffffff;
         background-color: unset;
-        padding: 10px 50px;
-        width: unset;
+        padding: 9px 17px;
+        text-align: right;
+        width: 121px;
+        font-size: 16px;
     }
 
-    .mMod11 .tel::before{
+    .mMod11 .tel::before {
         content: url(../images/tel_ico.png);
         position: absolute;
-        left: 20px;
-        transform: scale(.8);
+        top: 5px;
+        left: 13px;
+        transform: scale(.5);
     }
 
-    .mMod11 .tel a{
-        text-align: right !important;
-    }
 
+    /* 모바일 메뉴 슬라이드 열기 버튼 */
+    .btn_menu_slide_white {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) scale(.6);
+        bottom: 3px;
+        background-image: url(../images/btn_menu_slide_m.png);
+        background-repeat: no-repeat;
+        font-size: 0;
+        text-indent: -9999px;
+        width: 80px;
+        height: 80px;
+    }
 
 
     /* 알리몬 */
-    .mSky{
+    .mSky {
         top: unset;
+        bottom: 14px;
+    }
+
+
+
+
+    /* 컨텐츠 */
+    .content.forMobile {
+        top: 100%;
+        transform: unset;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        background-color: unset;
+        border-radius: unset;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, #000 90%);
+    }
+
+    .content.on.forMobile {
+        right: unset;
+    }
+
+    .content .forWeb {
+        display: none;
+    }
+
+
+    .content .forMobile {
+        display: block;
+    }
+
+    .module {
+        position: relative;
+        padding: unset;
+        width: 100%;
+        height: auto;
+        max-height: calc(100% - 62px);
+        overflow-y: auto;
+    }
+
+    /* 메뉴 슬라이드 버튼 */
+    .menu_slidebx {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+        line-height: 62px;
+    }
+
+
+    .btn_menu_slide_m {
+        position: unset;
+        top: unset;
+        left: unset;
+        transform: rotate(90deg);
+        display: inline-block;
+        background-image: url(../images/btn_menu_slide.png);
+        background-repeat: no-repeat;
+        width: 56px;
+        height: 56px;
+        font-size: 0;
+        text-indent: -9999px;
+    }
+
+    .btn_menu_slide.on {
+        left: unset;
+    }
+
+    /* 링크 */
+    .mMod7 {
+        background-color: #3e6dda;
+        color: #fff;
+        width: 100%;
+        margin: 15px 0;
+        padding: 5px 20px;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+
+    .mMod7 a {
+        color: #fff;
+        margin-top: unset;
+        border-radius: unset;
+        padding: unset;
+        padding: 10px 0;
+        font-size: 14px;
+        font-weight: 300;
+        border: unset;
+    }
+
+    .mMod7 a+a {
+        border-top: 1px solid #fff;
+    }
+
+    .mMod7 a::after {
+        content: url(../images/ico_mod7_02.png);
+        transform: scale(.6);
+        right: 0;
+    }
+
+    /* 동영상 */
+    .mMod8 {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 56.3%;
+    }
+
+    .mMod8 iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* 컨텐츠 내용 */
+    .mMod4 {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 10px 30px;
+    }
+
+    .mMod4 li {
+        border: unset;
+        border-radius: unset;
+        padding: 20px 0;
+    }
+
+    .mMod4 li+li {
+        margin-top: unset;
+        border-top: 1px solid #ddd;
+    }
+
+
+    /* 다운로드 */
+    .mMod10 a {
+        text-align: left;
+        padding-left: 20px;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .mMod10 a::before {
+        display: none;
+    }
+
+    .mMod10 a::after {
+        content: url(../images/ico_mod10.png);
+        position: absolute;
+        right: 20px;
+        transform: scale(.6);
+    }
+
+    /* 사진 */
+    .btn_more {
+        left: unset;
+        right: 10px;
+        width: 50px;
+    }
+
+    .swiper-pagination {
+        margin-top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 99999;
+    }
+
+    .swiper-pagination-bullet {
+        background: #fff;
+        margin: 0 5px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #3e6dda;
+        width: 12px;
+        height: 12px;
+        vertical-align: -1px;
+    }
+
+
+    /* 지도 */
+    .mMod5 {
+        margin: unset;
+        margin-top: 50px;
+        margin-bottom: 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px 0;
+    }
+
+    .mMod5 .ti {
+        margin: 15px 0;
+        align-items: center;
+    }
+
+
+    .gMap {
+        margin: 30px 0;
+        width: 100%;
+        height: 0;
+        padding-top: 90%;
+    }
+
+    .map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: unset;
+        border: none;
+        border-top: 1px solid #bdbdbd;
+        border-bottom: 1px solid #bdbdbd;
+    }
+
+    .navi.forWeb {
+        display: none;
+    }
+
+    .mMod5 .tx {
+        padding: 0 20px;
+    }
+
+    /* 연락처 */
+    .mMod6 {
+        color: #fff;
+    }
+
+    .mMod6 a {
+        display: block;
+        font-size: 18px;
+        color: #fff;
+    }
+
+    .mMod6 .tel {
+        position: relative;
+        background-color: #3e6dda;
+        border-radius: 10px;
+        text-align: center;
+        padding: 15px 0;
+        margin: 15px 0;
+    }
+
+    .mMod6 .tel::before {
+        content: url(../images/tel_ico.png);
+        position: absolute;
+        left: 30px;
+        transform: scale(.8);
+        top: 13px;
+    }
+
+    .mMod6 .save {
+        position: relative;
+        border-radius: 10px;
+        border: 1px solid #fff;
+        text-align: center;
+        padding: 15px 0;
+        margin: 15px 0;
+    }
+
+    .mMod6 .save::before {
+        content: url(../images/ico_mod6.png);
+        position: absolute;
+        left: 26px;
+        top: 12px;
+        transform: scale(.6);
+    }
+
+    .mMod6 .txt {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        text-align: center;
+
+    }
+}
+
+@media only screen and (max-height:375px) {
+    .titlebx {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .mMod1 {
+        margin-bottom: unset;
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-height:320px) {
+    .mMod3 p {
+        margin-top: unset;
     }
 }
