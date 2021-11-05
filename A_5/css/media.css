@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@media only screen and (max-width:823px) {
+@media only screen and (max-width:850px) {
     ::-webkit-scrollbar {
         width: 0;
     }
@@ -131,6 +131,7 @@
 
     /* 컨텐츠 */
     .content.forMobile {
+        display: block;
         top: 100%;
         transform: unset;
         width: 100%;
