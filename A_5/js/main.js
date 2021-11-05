@@ -15,14 +15,14 @@ $(function () {
 
 
     $(".btn_more").click(function () {
-        $("#jsMod9").css({
+        $("#jsMod9.forWeb").css({
             opacity: 1,
             zIndex: 9999
         });
     });
 
     $(".btn_close").click(function () {
-        $("#jsMod9").css({
+        $("#jsMod9.forWeb").css({
             opacity: 0,
             zIndex: -1
         });
@@ -36,7 +36,7 @@ $(function () {
 
         $(".content.forMobile").stop().animate({
             top: 0
-        }, 800, 'easeOutCubic');
+        }, 800, 'easeOutCubic').addClass("bg");
 
     }); ////////////////
 
@@ -46,13 +46,26 @@ $(function () {
 
         $(".content.forMobile").stop().animate({
             top: "100%"
-        }, 800, 'easeInOutQuart');
+        }, 800, 'easeInOutQuart').removeClass("on");
 
 
     }); ////////////
 
 
+    $(".btn_more_m").click(function () {
+        $("#jsMod9.forMobile").css({
+            opacity: 1,
+            zIndex: 99999
+        });
+    });
 
+    $(".btn_close_m").click(function () {
+        $("#jsMod9.forMobile").css({
+            opacity: 0,
+            zIndex: -1
+        });
+
+    });
 
 
 }); //////////////////////

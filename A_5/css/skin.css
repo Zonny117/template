@@ -483,7 +483,9 @@ body::before {
 .swiper-slide.swiper-slide-active {
     overflow-y: auto;
     max-height: 800px;
+
 }
+
 
 #jsMod9 .swiper-slide {
     width: 100%;
