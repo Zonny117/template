@@ -205,7 +205,7 @@
         width: 100%;
         height: auto;
         max-height: 100%;
-        overflow-y: auto;
+        overflow-y: scroll;
 
         /* firefox */
         scrollbar-width: none;
