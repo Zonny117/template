@@ -34,9 +34,27 @@ $(function () {
 
     $('.btn_menu_slide_white').click(function () {
 
-        $(".content.forMobile").stop().animate({
+        // $(".content.forMobile").stop().animate({
+        //     top: 0
+        // }, 800, 'easeOutCubic');
+        $(".content.forMobile").css({
+            zIndex: 999
+        });
+
+        $(".content.forMobile .module").stop().animate({
             top: 0
-        }, 800, 'easeOutCubic').addClass("bg");
+        }, 1000, 'easeOutQuart')
+
+        $(".contentBG").css({
+            opacity: 1
+        })
+
+        $(".menu_slidebx").stop().animate({
+            top: 0
+        }, 1000, 'easeOutQuart')
+
+        $(".mMod11 .tel").addClass("on");
+        $(".btn_menu_slide_white").addClass("on");
 
     }); ////////////////
 
@@ -44,10 +62,23 @@ $(function () {
 
         $("iframe")[1].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
 
-        $(".content.forMobile").stop().animate({
+        $(".content.forMobile .module").stop().animate({
             top: "100%"
-        }, 800, 'easeInOutQuart').removeClass("on");
+        }, 1000, 'easeOutCubic')
 
+        $(".content.forMobile").css({
+            zIndex: 0
+        });
+
+        $(".contentBG").css({
+            opacity: 0
+        })
+        $(".menu_slidebx").stop().animate({
+            top: "-10%"
+        }, 1000, 'easeOutCubic')
+
+        $(".mMod11 .tel").removeClass("on");
+        $(".btn_menu_slide_white").removeClass("on");
 
     }); ////////////
 

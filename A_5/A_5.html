@@ -159,6 +159,11 @@
                     <script>
                         var mMod9 = new Swiper(".mMod9.forWeb .swiper-container", {
                             spaceBetween: 30,
+                            autoplay: {
+                                delay: 2500,
+                                disableOnInteraction: false,
+                            },
+                            loop:true,
                             pagination: {
                                 el: ".swiper-pagination"
                             }
@@ -190,6 +195,7 @@
 
         <!-- 모바일용 컨텐츠 -->
         <div class="content on forMobile">
+            <div class="contentBG"></div>
             <div class="menu_slidebx forMobile">
                 <a href="###" class="btn_menu_slide_m">메뉴 슬라이드 버튼</a>
             </div>
@@ -247,6 +253,11 @@
                     <script>
                         var mMod9 = new Swiper(".mMod9.forMobile .swiper-container", {
                             spaceBetween: 30,
+                            autoplay: {
+                                delay: 2500,
+                                disableOnInteraction: false,
+                            },
+                            loop:true,
                             pagination: {
                                 el: ".swiper-pagination"
                             }
