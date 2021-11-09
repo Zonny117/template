@@ -74,7 +74,7 @@ $(function () {
             opacity: 0
         })
         $(".menu_slidebx").stop().animate({
-            top: "-10%"
+            top: "-22%"
         }, 1000, 'easeOutCubic')
 
         $(".mMod11 .tel").removeClass("on");
