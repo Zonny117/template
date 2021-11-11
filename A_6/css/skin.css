@@ -208,22 +208,15 @@ body {
 }
 
 .mMod10 a:hover {
-    font-weight: bold;
     border-bottom: 1px solid #000;
 }
 
-.mMod10 a:hover::after {
-    margin-left: 15px;
-}
+
 
 .mMod7 a:hover {
-    font-weight: bold;
     border-bottom: 1px solid #000;
 }
 
-.mMod7 a:hover::after {
-    margin-left: 15px;
-}
 
 
 .linetxt {
@@ -404,6 +397,15 @@ body {
     border-top: 2px solid #848499;
 }
 
+.mMod9::before{
+    content: url(../images/circle.png);
+    position: absolute;
+    top: 75px;
+    left: -30px;
+    width: 60px;
+    height: 60px;
+    z-index: 999;
+}
 
 
 .mMod9 .swiper-wrapper {
@@ -423,15 +425,6 @@ body {
     height: 372px;
 }
 
-.mMod9 .swiper-slide::before {
-    content: url(../images/circle.png);
-    position: absolute;
-    top: -30px;
-    left: -30px;
-    width: 60px;
-    height: 60px;
-    z-index: 999;
-}
 
 .imgbx {
     position: relative;
