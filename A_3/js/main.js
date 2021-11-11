@@ -1,8 +1,4 @@
 $(function () {
-    $(document).on("load",function(){
-
-        iNoBounce.enable();
-    });
 
 
 
