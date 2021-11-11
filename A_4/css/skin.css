@@ -2,7 +2,7 @@
 
 * {
     -webkit-tap-highlight-color: transparent;
-    -webkit-overflow-scrolling: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 html,
@@ -82,7 +82,7 @@ body {
 .mMod6 {
     position: fixed;
     margin-right: 60px;
-    top: 120px;
+    top: 50px;
     right: 0;
     text-align: right;
     color: #fff;
@@ -102,7 +102,7 @@ body {
     right: 60px;
 }
 
-.mMod6{
+.mMod6 {
     font-size: 14px;
 }
 
@@ -117,25 +117,40 @@ body {
 }
 
 .mMod1 {
-    position: fixed;
+    display: flex;
     color: #fff;
-    right: 0;
-    margin-right: 60px;
-    padding-top: 40px;
-    padding-bottom: 15px;
     font-weight: normal;
+    text-align: right;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.mMod1 img {
+    width: 102px;
+    height: 102px;
+}
+
+.mMod1 span {
+    margin-top: 20px;
+    padding-bottom: 10px;
     border-bottom: 2px solid #fff;
 }
 
-
 /* 좌측 박스 */
 .mMod2 {
-    position: relative;
-    padding: 30px 60px;
+    position: absolute;
+    padding: 0px 60px;
+    top: 0;
+    left: 0;
     box-sizing: border-box;
     width: 960px;
     border-radius: 0 40px 0 0;
     background-color: #fff;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
 }
 
 .content {
@@ -153,13 +168,13 @@ body {
 
 .mMod7,
 .mMod11 {
-    margin-bottom: 30px;
+    margin: 30px 0px;
 }
 
 /* //////////////////////////////상단 문구/////////////////// */
-.mMod7 {
+/* .mMod7 {
     float: left;
-}
+} */
 
 .mMod7 a {
     vertical-align: -28px;
@@ -172,10 +187,10 @@ body {
 
 
 /* //////////////////////////////sns////////////////////////////////*/
-.mMod11 {
+/* .mMod11 {
     position: relative;
     float: right;
-}
+} */
 
 .mMod11 a {
     display: inline-block;
@@ -204,19 +219,17 @@ body {
 
 /*////////////////////////////// 소개문구////////////////////////////// */
 
-.mMod3 {
-    clear: both;
-}
-
 .mMod3 h2 {
     font-size: 35px;
     line-height: 140%;
+    margin: 30px 0;
 }
 
 .mMod3 .txt {
     font-size: 18px;
     margin-top: 30px;
     line-height: 140%;
+    margin: 10px 0;
 }
 
 .mMod10 {
@@ -240,6 +253,10 @@ body {
 }
 
 /* //////////////////////스와이퍼////////////////////////////// */
+
+.mMod9.forWeb{
+    margin-top: 50px;
+}
 
 .swiper-slide {
     padding: 0 10px;
@@ -294,10 +311,12 @@ body {
 .mMod4 .txt {
     margin-top: 20px;
     font-size: 16px;
-    font-weight: 300;
     line-height: 150%;
 }
 
+.mMod1.forMobile{
+    display: none !important;
+}
 
 /*/////////////////////동영상//////////////////////////// */
 

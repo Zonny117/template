@@ -28,13 +28,25 @@
 
 
     /* 로고 */
+    .mMod1.forMobile {
+        display: block !important;
+    }
+
     .mMod1 {
+        display: unset;
         position: unset;
         font-size: 18px;
         margin: unset;
         padding-top: unset;
         border-bottom: unset;
         width: unset;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .mMod1 img {
+        width: 75px;
+        height: 75px;
     }
 
     .mMod1 span {
@@ -52,18 +64,23 @@
 
     /* 메인 타이틀 박스 */
     .mMod2 {
+        position: absolute;
+        bottom: 0;
+        top: unset;
+        left: unset;
         width: 100%;
-        height: 100%;
         color: #fff;
         background-color: unset;
         padding: unset;
     }
 
     .modbg {
-        position: absolute;
-        bottom: 78px;
-        left: 20px;
+        position: relative;
+        /* bottom: 78px; */
+        /* left: 20px; */
         z-index: 99;
+        padding: 20px;
+        box-sizing: border-box;
     }
 
     /* 메인 글귀  */
@@ -82,10 +99,9 @@
 
     /* 하단 메뉴바///////////////////////////////////////// */
     .content {
-        position: absolute;
-        bottom: 0;
+        /* position: absolute; */
+        /* bottom: 0; */
         padding: unset;
-        height: 60px;
         border-radius: 15px 15px 0 0;
         width: 100%;
         z-index: 99999;
@@ -94,7 +110,7 @@
 
     /* 하단 메뉴 목록 */
     .menu {
-        height: 100%;
+        height: 60px;
         display: block;
     }
 
