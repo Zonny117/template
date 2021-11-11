@@ -1,5 +1,12 @@
 $(function () {
 
+    $(document).on("load", function () {
+
+        iNoBounce.enable();
+
+    });
+
+
     $(".btn_menu_slide").click(function () {
 
         $(".content").toggleClass("on");

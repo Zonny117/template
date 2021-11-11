@@ -2,7 +2,6 @@
 
 * {
     -webkit-tap-highlight-color: transparent;
-    -webkit-overflow-scrolling: touch;
 }
 
 
@@ -232,6 +231,7 @@ body::before {
     box-sizing: border-box;
     overflow-y: auto;
     max-height: 100vh;
+    -webkit-overflow-scrolling: touch;
 }
 
 
