@@ -352,7 +352,8 @@ body {
     background-repeat: no-repeat;
     width: 40px;
     height: 22px;
-    top: 333px;
+    top: unset;
+    bottom: 290px;
     z-index: 999;
 }
 
@@ -361,13 +362,14 @@ body {
     background-repeat: no-repeat;
     width: 40px;
     height: 22px;
-    top: 333px;
+    top: unset;
+    bottom: 290px;
     z-index: 999;
 }
 
 .mMod4 .swiper-pagination {
-    bottom: unset;
-    top: 311px;
+    bottom: 290px;
+    top: unset;
     font-weight: 500;
     color: #595959;
 }
