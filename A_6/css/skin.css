@@ -48,6 +48,10 @@ body {
     /* outline: 1px dotted red; */
 }
 
+.top_menu{
+    display: none;
+}
+
 
 /* 로고 박스 */
 .titlebx {
@@ -241,8 +245,9 @@ body {
 
 /* 메인타이틀 */
 .mMod3 {
+    position: relative;
     width: 100%;
-    padding-bottom: 723px;
+    height: 35vw;
 }
 
 .mMod3 h2 {
@@ -519,7 +524,7 @@ footer {
     position: relative;
     top: -93px;
     right: -40px;
-    width: 850px;
+    width: 960px;
     height: 100%;
 }
 
@@ -622,6 +627,12 @@ footer {
 
 .forMobile{
     display: none;
+}
+
+@media only screen and (min-width:1980px) {
+    .gMap{
+        width: 80%;
+    }
 }
 
 @media only screen and (max-width:1200px) {

@@ -1,5 +1,7 @@
 $(function () {
 
+
+
     $(window).on('DOMMouseScroll mousewheel', function () {
 
         let scT = $("body").scrollTop();
@@ -61,13 +63,37 @@ $(function () {
             opacity: 0,
             zIndex: -9
         })
+
+        $("body").removeClass("on");
     });
 
     $(".mag").click(function () {
         $(".lMod9").css({
             opacity: 1,
-            zIndex: 9999
+            zIndex: 9999999
         })
+        $("body").addClass("on");
+
     })
 
+    $(".open").click(function () {
+        $(this).toggleClass("on");
+        $(".top_menu").toggleClass("on");
+
+        $("body").toggleClass("on");
+
+        $("iframe")[1].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+
+        let txt2 = $("a", this).text();
+
+        // console.log(txt2)
+
+        if (txt2 === "open") {
+            $("a", this).text(txt2.replace(txt2, "close"))
+        } else if (txt2 === "close") {
+            $("a", this).text(txt2.replace(txt2, "open"))
+        }
+    });
+
+   
 }); /////////////////
