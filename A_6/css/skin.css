@@ -242,7 +242,7 @@ body {
 /* 메인타이틀 */
 .mMod3 {
     width: 100%;
-    height: 723px;
+    padding-bottom: 723px;
 }
 
 .mMod3 h2 {
@@ -352,7 +352,7 @@ body {
     width: 40px;
     height: 22px;
     top: unset;
-    bottom: 290px;
+    bottom: 190px;
     z-index: 999;
 }
 
@@ -362,12 +362,12 @@ body {
     width: 40px;
     height: 22px;
     top: unset;
-    bottom: 290px;
+    bottom: 190px;
     z-index: 999;
 }
 
 .mMod4 .swiper-pagination {
-    bottom: 290px;
+    bottom: 190px;
     top: unset;
     font-weight: 500;
     color: #595959;
@@ -600,7 +600,7 @@ footer {
 }
 
 .lMod9 .swiper-slide.swiper-slide-active {
-    overflow: auto;
+    overflow-y: auto;
 }
 
 .lMod9 .swiper-slide img {
@@ -618,6 +618,10 @@ footer {
     top: 30px;
     right: 70px;
     z-index: 9999;
+}
+
+.forMobile{
+    display: none;
 }
 
 @media only screen and (max-width:1200px) {

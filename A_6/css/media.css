@@ -1,0 +1,283 @@
+@charset "utf-8";
+
+@media only screen and (max-width:768px) {
+    .forWeb {
+        display: none;
+    }
+
+    .forMobile {
+        display: block;
+    }
+
+    #wrap {
+        min-width: unset;
+        margin-right: unset;
+    }
+
+    .lbx {
+        display: none;
+    }
+
+    .titlebx {
+        position: absolute;
+    }
+
+
+    .rbx {
+        margin-left: unset;
+        margin-right: unset;
+        width: 100%;
+        padding-left: 10%;
+        box-sizing: border-box;
+    }
+
+    .main_section_txt {
+        left: -35px;
+    }
+
+    .mMod3 {
+        padding-bottom: 468px;
+    }
+
+    .mMod3 h2 {
+        font-size: 38px;
+    }
+
+    .mMod3 .txt {
+        font-size: 16px;
+    }
+
+    .mMod3::after {
+        bottom: unset;
+        right: unset;
+        display: inline-block;
+        transform: scale(.6);
+        margin-top: 80px;
+    }
+
+    .mMod2 {
+        width: 100%;
+    }
+
+    .mMod2::before{
+        transform: scale(.7);
+    }
+
+    .background {
+        max-width: 100%;
+        max-height: unset;
+    }
+
+    .background img {
+        object-fit: cover;
+    }
+
+
+    .mMod4 .tit {
+        font-size: 20px;
+        width: 90%;
+    }
+
+    .mMod4 .txt {
+        width: 90%;
+    }
+
+
+    .mMod4 .swiper-button-prev {
+        left: 0;
+        opacity: .4;
+
+    }
+
+    .mMod4 .swiper-pagination {
+        left: -38px;
+    }
+
+    .mMod4 .swiper-button-next {
+        right: 67px;
+        opacity: .4;
+
+    }
+
+
+
+    .mMod9::before{
+        transform: scale(.7);
+    }
+
+    .mMod9 .swiper-wrapper {
+        width: 90%;
+    }
+
+    .mMod9 .swiper-slide {
+        width: 100% !important;
+    }
+
+
+
+    .mMod9 .swiper-button-next {
+        background: url(../images/btn_slide_next.png);
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 22px;
+        top: unset;
+        right: 67px;
+        bottom: 190px;
+        z-index: 999;
+        opacity: 0.4;
+    }
+
+    .mMod9 .swiper-button-prev {
+        background: url(../images/btn_slide_prev.png);
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 22px;
+        top: unset;
+        left: 0;
+        bottom: 190px;
+        z-index: 999;
+        opacity: 0.4;
+    }
+
+    .mMod9 .swiper-pagination {
+        bottom: 190px;
+        top: unset;
+        left: -38px;
+        font-weight: 500;
+        color: #595959;
+    }
+
+    .mMod9 .swiper-pagination-current::before {
+        content: '0';
+    }
+
+    .mMod9 .swiper-pagination-current {
+        color: #000;
+    }
+
+    .mMod9 .swiper-pagination-total {
+        opacity: .6;
+    }
+
+    .mMod9 .swiper-pagination-total::before {
+        content: '0';
+    }
+
+    .modBg {
+        width: 100%;
+        height: 100%;
+        top: unset;
+        left: unset;
+        transform: unset;
+    }
+
+    .lMod9 .swiper-slide {
+        width: 100% !important;
+        line-height: 100vh;
+        max-height: 100vh;
+    }
+
+
+    .btn_close {
+        right: 20px;
+    }
+
+    .youtube_section_txt {
+        left: -47px;
+    }
+
+    .mMod8 {
+        width: 100%;
+    }
+
+    .mMod8::before{
+        transform: scale(.7);
+    }
+
+    .ratiobx.forMobile {
+        width: 90%;
+        position: relative;
+        box-sizing: border-box;
+        padding-top: 56.6%;
+    }
+
+    .mMod8 iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .mMod5 {
+        position: unset;
+        height: 100%;
+        padding-left: unset;
+        flex-direction: column;
+        align-items: unset;
+        justify-content: unset;
+        background-color: unset;
+    }
+
+    footer {
+        height: auto;
+        background: linear-gradient(to bottom, #fff 10%, #000 0);
+        padding-left: 10%;
+        padding-bottom: 25%;
+    }
+
+    .gMap {
+        position: relative;
+        top: 0px;
+        right: unset;
+        width: 90%;
+        height: 0;
+        padding-top: 90.6%;
+    }
+
+    .gMap::before {
+        content: url(../images/circle.png);
+        position: absolute;
+        top: -27px;
+        left: -30px;
+        transform: scale(.7);
+        z-index: 999;
+    }
+
+    .map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .sbx {
+        width: 80%;
+        margin-top: 40px;
+        box-sizing: border-box;
+    }
+
+    .mMod5 .ti span {
+        display: block;
+        margin-bottom: 37px;
+        font-size: 16px;
+    }
+
+    .mMod5 .ti {
+        margin-bottom: 30px;
+    }
+
+    .mMod5 .ti .t {
+        display: block;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .mMod5 .txt {
+        font-size: 16px;
+        line-height: 150%;
+    }
+}
