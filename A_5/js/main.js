@@ -1,11 +1,8 @@
 $(function () {
 
-    $(document).on("load", function () {
-
-        iNoBounce.enable();
-
+    $(document).on("load",function(){
+        iNoBounce.enable()
     });
-
 
     $(".btn_menu_slide").click(function () {
 
@@ -44,9 +41,9 @@ $(function () {
         // $(".content.forMobile").stop().animate({
         //     top: 0
         // }, 800, 'easeOutCubic');
-        $(".content.forMobile").css({
-            zIndex: 999
-        });
+        // $(".content.forMobile").css({
+        //     zIndex: 999
+        // });
 
         $(".content.forMobile .module").stop().animate({
             top: 0
