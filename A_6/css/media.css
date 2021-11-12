@@ -19,6 +19,7 @@
     }
 
     .titlebx {
+        display: flex;
         position: absolute;
     }
 
