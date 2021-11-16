@@ -2,18 +2,17 @@ $(function () {
 
 
 
-    $(window).on('DOMMouseScroll mousewheel', function () {
+    $(window).on('DOMMouseScroll mousewheel keydown keyup', function () {
 
         let scT = $("body").scrollTop();
 
         let footer = $(".mMod5").offset().top;
-
+        let mod3 = $(".mMod3").height();
 
         let value = scT - footer;
-
         // console.log(scT + "body")
         // console.log(value + "차이")
-        // console.log(footer + "하단")
+        // console.log(mod3 + "하단")
 
         // let prot = 0;
 
@@ -28,10 +27,20 @@ $(function () {
         // }, 800);
 
 
-        if (scT - value <= 994) {
+        if (scT - value <= 694) {
             $(".mMod6").addClass("on");
+            $(".lbx .mMod3 .txt").addClass("on");
         } else {
             $(".mMod6").removeClass("on");
+            $(".lbx .mMod3 .txt").removeClass("on");
+        }
+
+        if(scT >= mod3){
+            $(".lbx .mMod3").addClass("on");
+        }
+
+        else{
+            $(".lbx .mMod3").removeClass("on");
         }
     }); ////////////////////
 

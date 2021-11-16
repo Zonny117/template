@@ -29,6 +29,7 @@ body {
 }
 
 .lbx {
+    position: relative;
     float: left;
     /* display: flex; */
     width: 300px;
@@ -48,7 +49,7 @@ body {
     /* outline: 1px dotted red; */
 }
 
-.top_menu{
+.top_menu {
     display: none;
 }
 
@@ -65,6 +66,37 @@ body {
 .mMod0 {
     margin-left: 16px;
     font-weight: bold;
+}
+
+/* 왼쪽 박스 모듈 3 */
+.lbx .mMod3 {
+    display: none;
+    position: fixed;
+    width: auto;
+    top: 40%;
+}
+
+
+.lbx .mMod3.on {
+    display: block;
+}
+
+.lbx .mMod3::after {
+    display: none;
+}
+
+.lbx .mMod3 h2 {
+    font-size: 30px;
+    text-shadow: -1px -1px #fff, 1px -1px #fff, -1px 1px #fff, 1px 1px #fff;
+}
+
+.lbx .mMod3 .txt {
+    font-size: 14px;
+}
+
+
+.lbx .mMod3 .txt.on{
+    color: #fff;
 }
 
 /* 모듈6 연락처 */
@@ -178,6 +210,19 @@ body {
 }
 
 
+.mMod11 a {
+    color: #fff;
+    display: inline-block;
+    margin-top: 20px;
+    border-bottom: 1px solid #fff;
+}
+
+.mMod11 a::after {
+    content: url(../images/arrow_white.png);
+    margin-left: 10px;
+}
+
+
 
 /* 모듈 7 - 링크  */
 .gnb {
@@ -259,6 +304,7 @@ body {
     margin-top: 20px;
     font-size: 18px;
     font-weight: 300;
+    line-height: 150%;
 }
 
 .mMod3::after {
@@ -402,7 +448,7 @@ body {
     border-top: 2px solid #848499;
 }
 
-.mMod9::before{
+.mMod9::before {
     content: url(../images/circle.png);
     position: absolute;
     top: 75px;
@@ -625,12 +671,12 @@ footer {
     z-index: 9999;
 }
 
-.forMobile{
+.forMobile {
     display: none;
 }
 
 @media only screen and (min-width:1980px) {
-    .gMap{
+    .gMap {
         width: 80%;
     }
 }
@@ -645,12 +691,12 @@ footer {
         width: 900px;
     }
 
-    .mMod9 .swiper-slide{
+    .mMod9 .swiper-slide {
         height: 231px;
     }
 
     .imgbx {
         height: 181px;
     }
-    
+
 }

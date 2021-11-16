@@ -1,0 +1,569 @@
+@charset "utf-8";
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+    min-width: 1200px;
+}
+
+
+/* 모듈 6/11 연락처 및 sns */
+.mMod6 {
+    position: absolute;
+    display: none;
+    right: 20px;
+    top: 70px;
+    width: 400px;
+    height: 460px;
+    color: #fff;
+    z-index: 9999;
+    background-color: #0f0f0f;
+    border: 1px solid #7e7e7e;
+    padding: 50px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 8px 5px rgba(20, 20, 20, 0.397);
+}
+
+.mMod6.on {
+    display: block;
+}
+
+.mMod6 a {
+    color: #fff;
+}
+
+.mMod6 .tel {
+    display: inline-block;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.mMod6 .txt {
+    font-weight: 100;
+    line-height: 150%;
+    margin-bottom: 40px;
+}
+
+.tel2,
+.save {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.795) !important;
+}
+
+.save {
+    margin-left: 45px;
+}
+
+.tel2::after {
+    content: url(../images/arrow_white.png);
+    margin-left: 15px;
+}
+
+.save::after {
+    content: url(../images/arrow_white_down.png);
+    margin-left: 15px;
+}
+
+
+.mMod6 .tit2 {
+    margin-bottom: 40px;
+}
+
+.mMod11 {
+    display: flex;
+    position: absolute;
+    bottom: 11%;
+}
+
+.mMod11 a {
+    display: inline-block;
+    font-size: 0;
+    text-indent: -9999px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 40%;
+}
+
+.mMod11 a+a {
+    margin-left: 10px;
+}
+
+.instagram {
+    background-image: url(../images/instagram.png);
+}
+
+.facebook {
+    background-image: url(../images/facebook.png);
+    background-size: 20% !important;
+}
+
+.twiter {
+    background-image: url(../images/twitter.png);
+}
+
+.youtube {
+    background-image: url(../images/youtube.png);
+}
+
+/* 모듈2 -배경사진 */
+.mMod2 {
+    width: 100%;
+    height: 100%;
+}
+
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/background.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.404);
+}
+
+/* 서비스명/로고 박스 */
+
+.titlebx {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.titlebx span {
+    margin-left: 20px;
+    color: #fff;
+    font-size: 20px;
+}
+
+
+.modBg {
+    display: flex;
+    position: relative;
+    width: 1200px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* 모듈3 - 메인 내용 */
+
+.mMod3 {
+    /* margin-left: 400px; */
+    box-sizing: border-box;
+    flex-basis: 550px;
+}
+
+.mMod3 h2 {
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.mMod3 .txt {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+
+
+/* 모듈7 링크 */
+.mMod7 {
+    /* margin-right: 400px; */
+    padding: 0 40px;
+    width: 580px;
+    height: 320px;
+    box-sizing: border-box;
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.123);
+    border-radius: 35px;
+}
+
+.mMod7 .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.mMod7 .swiper-slide {
+    position: relative;
+    width: 100% !important;
+}
+
+.mMod7 .swiper-container::before {
+    content: url(../images/ico_mod7.png);
+    position: absolute;
+    top: 40px;
+}
+
+.mMod7 .swiper-slide a {
+    position: relative;
+    bottom: -65%;
+    display: inline-block;
+    width: 100%;
+    font-size: 30px;
+    line-height: 120%;
+    font-weight: bold;
+    color: #fff;
+}
+
+.mMod7 .swiper-button-next {
+    background: url(../images/btn_slider_next.png);
+    top: 19%;
+    width: 46px;
+    height: 46px;
+}
+
+.mMod7 .swiper-button-prev {
+    background: url(../images/btn_slider_prev.png);
+    top: 19%;
+    left: auto;
+    right: 75px;
+    width: 46px;
+    height: 46px;
+}
+
+.btn_dot {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    font-size: 0;
+    text-indent: -9999px;
+    background-image: url(../images/btn_dot.png);
+    width: 8px;
+    height: 36px;
+    z-index: 999;
+}
+
+.scrollDown {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+    font-size: 0;
+    text-indent: -9999px;
+    background-image: url(../images/btn_scroll_down.png);
+    width: 88px;
+    height: 71px;
+    z-index: 999;
+    opacity: .4;
+    cursor: auto;
+}
+
+.content {
+    width: 100%;
+    backdrop-filter: blur(15px);
+    box-sizing: border-box;
+    padding-bottom: 200px;
+    background-image: linear-gradient(to bottom, transparent 50%, #000 100%);
+}
+
+/* 모듈 4 - 서브 내용 */
+.mMod4 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    backdrop-filter: blur(15px);
+}
+
+.mMod4 .swiper-container {
+    width: 1200px;
+    height: 567px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.swiper-slide{
+    cursor: grab;
+}
+
+.mMod4 .swiper-slide {
+    margin-top: 100px;
+    width: 100% !important;
+}
+
+.mMod4 .tit {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.mMod4 .txt {
+    margin-top: 50px;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.swiper-scrollbar-drag {
+    background-color: #fff;
+}
+
+
+
+.swiper-scrollbar {
+    top: 42px;
+    left: 0 !important;
+    width: 100% !important;
+    background-color: #777979;
+}
+
+.mMod4 .swiper-pagination {
+    top: 105px;
+    bottom: auto;
+}
+
+.mMod4 .swiper-button-next {
+    background: url(../images/btn_slider_next_02.png);
+    top: 105px;
+    width: 64px;
+    height: 46px;
+    right: 0;
+    z-index: 999;
+}
+
+.mMod4 .swiper-button-prev {
+    background: url(../images/btn_slider_prev_02.png);
+    top: 105px;
+    width: 64px;
+    left: 0;
+    height: 46px;
+    z-index: 999;
+}
+
+.txtbx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.linetxt {
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sub_section_txt {
+    top: 0px;
+    left: 0px;
+}
+
+
+/* 모듈 9 - 사진 */
+.mMod9 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    margin-bottom: 100px;
+}
+
+.mMod9 .swiper-container {
+    position: absolute;
+    width: 1200px;
+    height: 885px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: unset;
+}
+
+.mMod9 .swiper-slide {
+    margin-top: 100px;
+    width: 100% !important;
+    height: 650px;
+}
+
+.mMod9 .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.pic_section_txt {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.mMod9 .swiper-pagination {
+    bottom: 10px;
+}
+
+.mMod9 .swiper-button-next {
+    background: url(../images/btn_slider_next_02.png);
+    width: 64px;
+    height: 46px;
+    bottom: 0px;
+    top: auto;
+    z-index: 999;
+}
+
+.mMod9 .swiper-button-prev {
+    background: url(../images/btn_slider_prev_02.png);
+    width: 64px;
+    left: 0;
+    height: 46px;
+    bottom: 0px;
+    top: auto;
+    z-index: 999;
+}
+
+.mag {
+    position: absolute;
+    bottom: 90px;
+    color: rgba(255, 255, 255, 0.726);
+    font-size: 18px;
+    z-index: 999;
+}
+
+.mag::after {
+    content: '＋';
+    margin-left: 15px;
+}
+
+/* 모듈 8 - 동영상 */
+
+.mMod8 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    margin-bottom: 100px;
+}
+
+.iframebx {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    height: 620px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.youtube_section_txt {
+    position: absolute;
+    top: -40px;
+    left: 0px;
+}
+
+/* 모듈 5 -지도 */
+
+.mMod5 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.pbx {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+}
+
+.gMap {
+    width: 100%;
+    height: 680px;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.mMod5 .ti {
+    position: relative;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.mMod5 .t {
+    border-right: 2px solid #3f3f3f;
+    font-size: 30px;
+    padding-right: 40px;
+}
+
+.mMod5 .ti a {
+    position: absolute;
+    right: 0;
+    color: #fff;
+    bottom: 0;
+    font-size: 16px;
+}
+
+.mMod5 .ti a::after {
+    content: url(../images/arrow_white.png);
+    margin-left: 10px;
+}
+
+.mMod5 .ti span {
+    margin-left: 40px;
+    font-weight: 200;
+}
+
+.mMod5 .txt {
+    margin-top: 60px;
+    font-weight: 200;
+}
+
+.map_section_txt {
+    top: -40px;
+    left: 0;
+}
+
+/* 알리몬 */
+
+.mSky {
+    top: auto;
+    bottom: 0;
+}
