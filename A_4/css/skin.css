@@ -2,7 +2,7 @@
 
 * {
     -webkit-tap-highlight-color: transparent;
-    -webkit-overflow-scrolling: auto;
+    
 }
 
 html,
@@ -152,6 +152,7 @@ body {
     width: 960px;
     border-radius: 0 40px 0 0;
     background-color: #fff;
+    -webkit-overflow-scrolling: touch;
 }
 
 .flex{
