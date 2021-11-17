@@ -239,7 +239,7 @@ body {
 }
 
 .mMod10 {
-    margin-top: 30px;
+    margin: 30px 0;
 }
 
 .mMod10 a {
@@ -261,7 +261,7 @@ body {
 /* //////////////////////스와이퍼////////////////////////////// */
 
 .mMod9.forWeb{
-    margin-top: 50px;
+    margin: 50px 0;
 }
 
 .swiper-slide {
@@ -285,7 +285,7 @@ body {
 /*//////////////컨텐츠 내용////////////////////////////  */
 
 .mMod4 {
-    margin-top: 50px;
+    margin: 50px 0;
 }
 
 .mMod4 .tit {
@@ -327,7 +327,7 @@ body {
 /*/////////////////////동영상//////////////////////////// */
 
 .mMod8 {
-    margin-top: 50px;
+    margin: 50px 0;
 }
 
 iframe {

@@ -235,7 +235,7 @@
     }
 
     .mMod4{
-        margin-top: unset;
+        margin: unset;
     }
 
     .mMod4 .tit {
@@ -323,7 +323,7 @@
         width: 100%;
         height: 0;
         padding-top: 56.6%;
-        margin-top: unset;
+        margin: unset;
     }
 
     iframe {
