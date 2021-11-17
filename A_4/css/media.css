@@ -230,10 +230,13 @@
 
     /* 메뉴 1 - 컨텐츠 내용 */
 
-    .mMod4.on {
+    .sub.on {
         bottom: 0;
     }
 
+    .mMod4{
+        margin-top: unset;
+    }
 
     .mMod4 .tit {
         font-size: 2rem;

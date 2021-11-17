@@ -19,7 +19,7 @@ $(function () {
 
         switch (cl) {
             case "link1":
-                $(".mMod4").toggleClass("on").siblings().removeClass("on");
+                $(".sub").toggleClass("on").siblings().removeClass("on");
                 break;
             case "link2":
                 $(".mMod7").toggleClass("on").siblings().removeClass("on");

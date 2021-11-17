@@ -29,10 +29,9 @@ body {
 
 
 
-
 /* 배경 */
 .background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -86,7 +85,7 @@ body {
 }
 
 /* 우측 문구 */
-.mMod6 {
+.titlebx {
     position: fixed;
     margin-right: 60px;
     top: 50px;
