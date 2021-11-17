@@ -134,6 +134,7 @@ body {
 .mMod1 img {
     width: 102px;
     height: 102px;
+    border-radius: 50%;
 }
 
 .mMod1 span {
