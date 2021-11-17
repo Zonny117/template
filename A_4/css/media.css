@@ -1,0 +1,528 @@
+@charset "utf-8";
+
+@media only screen and (max-width:1300px) {
+    .mMod6.forWeb {
+        width: 192px;
+    }
+}
+
+@media only screen and (max-width:850px) {
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    html {
+        font-size: 9px;
+    }
+
+    #wrap {
+        overflow: hidden;
+        min-width: unset;
+    }
+
+    .background {
+        position: absolute;
+        height: 100%;
+    }
+
+
+    /* 로고 */
+    .mMod1.forMobile {
+        display: block !important;
+    }
+
+    .mMod1 {
+        display: unset;
+        position: unset;
+        font-size: 18px;
+        margin: unset;
+        padding-top: unset;
+        border-bottom: unset;
+        width: unset;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .mMod1 img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .mMod1 span {
+        position: relative;
+    }
+
+    .mMod1 span::after {
+        content: '';
+        position: absolute;
+        display: block;
+        padding-top: 10px;
+        border-bottom: 1px solid #fff;
+        width: 100%;
+    }
+
+    /* 메인 타이틀 박스 */
+    .lbx {
+        position: absolute;
+        bottom: 0;
+        top: unset;
+        left: unset;
+        width: 100%;
+        color: #fff;
+        background-color: unset;
+        padding: unset;
+    }
+
+    .modbg {
+        position: relative;
+        /* bottom: 78px; */
+        /* left: 20px; */
+        z-index: 99;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* 메인 글귀  */
+    .mMod3 {
+        width: 256px;
+        color: #fff;
+    }
+
+    .mMod3 h2 {
+        font-size: 2.5rem;
+    }
+
+    .mMod3 .txt {
+        font-size: 1.5rem;
+    }
+
+    /* 하단 메뉴바///////////////////////////////////////// */
+    .content {
+        /* position: absolute; */
+        /* bottom: 0; */
+        padding: unset;
+        border-radius: 15px 15px 0 0;
+        width: 100%;
+        z-index: 99999;
+    }
+
+
+    /* 하단 메뉴 목록 */
+    .menu {
+        height: 60px;
+        display: block;
+    }
+
+    .menu ul {
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .menu ul li {
+        position: relative;
+        width: 100%;
+        height: 50%;
+        text-align: center;
+    }
+
+    .menu ul li+li {
+        border-left: 1px solid #ccc;
+    }
+
+    .menu ul li a {
+        display: inline-block;
+        vertical-align: middle;
+        width: 70%;
+        height: 100%;
+        text-indent: -9999px;
+        font-size: 0;
+    }
+
+    /* 일반 아이콘 */
+    .link1 {
+        background: url(../images/menu_ico_1.png) no-repeat center/23px 20px;
+    }
+
+    .link2 {
+        background: url(../images/menu_ico_2.png) no-repeat center/23px 20px;
+    }
+
+    .link3 {
+        background: url(../images/menu_ico_3.png) no-repeat center/23px 20px;
+    }
+
+    .link4 {
+        background: url(../images/menu_ico_4.png) no-repeat center/20px 25px;
+    }
+
+    .link5 {
+        background: url(../images/menu_ico_5.png) no-repeat center/20px 25px;
+    }
+
+    /* 호버 아이콘 */
+    .menu li.hover a {
+        position: absolute;
+        border-top: 3px solid #416fdb;
+        height: 90%;
+        top: -15px;
+        left: 50%;
+        padding-top: 27px;
+        transform: translateX(-50%);
+    }
+
+    li.hover .link1 {
+        background: url(../images/menu_ico_1_hover.png) no-repeat center/23px 20px;
+    }
+
+    li.hover .link2 {
+        background: url(../images/menu_ico_2_hover.png) no-repeat center/23px 20px;
+    }
+
+    li.hover .link3 {
+        background: url(../images/menu_ico_3_hover.png) no-repeat center/23px 20px;
+    }
+
+    li.hover .link4 {
+        background: url(../images/menu_ico_4_hover.png) no-repeat center/20px 25px;
+    }
+
+    li.hover .link5 {
+        background: url(../images/menu_ico_5_hover.png) no-repeat center/20px 25px;
+    }
+
+
+    /* 모바일 메뉴 공통 모듈 박스*/
+    .hidden_wrap {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: calc(100% - 40px);
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        overflow: hidden;
+        z-index: 999;
+    }
+
+    .hidden_sbx {
+        position: absolute;
+        border-radius: 15px 15px 0 0;
+        margin: unset;
+        bottom: -120%;
+        background-color: #fff;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 30px;
+        overflow-y: auto;
+        max-height: calc(100%);
+
+        transition: bottom .5s ease-in-out;
+
+        /* firefox */
+        scrollbar-width: none;
+        /* ie,edge */
+        -ms-overflow-style: none;
+    }
+
+    /* 메뉴 1 - 컨텐츠 내용 */
+
+    .mMod4.on {
+        bottom: 0;
+    }
+
+
+    .mMod4 .tit {
+        font-size: 2rem;
+    }
+
+    .mMod4 li {
+        padding: unset;
+    }
+
+    .mMod4 li+li {
+        border-top: 1px solid #ccc;
+        padding-top: 30px;
+        box-sizing: border-box;
+    }
+
+    .mMod4 li::before {
+        display: none;
+    }
+
+
+    /* 메뉴1 - 다운로드 */
+    .mMod10.forMobile {
+        display: block;
+    }
+
+    .mMod10 a {
+        width: 100%;
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+
+    .mMod10 a::before {
+        display: none;
+    }
+
+    .mMod10 a::after {
+        content: url(../images/ico_mod10.png);
+        vertical-align: middle;
+        float: right;
+        transform: scale(.6);
+    }
+
+
+    /* 메뉴2 - 링크 */
+
+    .mMod7 {
+        float: none;
+    }
+
+    .mMod7.on {
+        bottom: 0;
+    }
+
+    .mMod7 a {
+        display: block;
+        border-bottom: none;
+        border: 1px solid #000;
+        border-radius: 10px;
+        padding: 10px 20px;
+        box-sizing: border-box;
+    }
+
+    .mMod7 a+a {
+        margin: unset;
+        margin-top: 20px;
+    }
+
+    .mMod7 a::after {
+        content: url(../images/ico_mod7.png);
+        float: right;
+        transform: scale(.5) translateY(-12px);
+    }
+
+    /* 메뉴 3 - 영상 및 이미지 */
+
+    .VI_wrap.on {
+        bottom: 0;
+    }
+
+    /* 영상 */
+
+    .mMod8 {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 56.6%;
+        margin-top: unset;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* 이미지 */
+    .mMod9 {
+        width: 100%;
+    }
+
+    .mMod9 img {
+        width: 100%;
+        margin-top: 20px;
+        box-sizing: border-box;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+    }
+
+
+    /* 메뉴 4 - 지도 및 주소 */
+    .mMod5.on {
+        bottom: 0;
+    }
+
+    .mMod5 .txt {
+        display: block;
+        text-align: center;
+    }
+
+    .mMod5 .txt::before {
+        display: none;
+    }
+
+    .mMod5 .txt .t {
+        font-size: 2rem;
+    }
+
+    .gMap {
+        position: relative;
+        height: 0;
+        padding-top: 90%;
+    }
+
+    .map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: unset;
+    }
+
+    .navi {
+        position: absolute;
+        width: auto;
+        border-radius: unset;
+        top: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .tx {
+        line-height: unset;
+    }
+
+    /* 메뉴 5 - 연락처 */
+    .mMod6 {
+        color: #000;
+        text-align: center;
+        top: unset;
+        right: unset;
+        font-size: 15px;
+    }
+
+    .mMod6.on {
+        bottom: 0;
+    }
+
+    .mMod6 .tit {
+        margin-top: unset;
+    }
+
+    .mMod6 .tit span {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .mMod6 .tit strong {
+        font-size: 2rem;
+        width: 80%;
+        margin: 0 auto;
+        background-color: #3e6dda;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 20px;
+        margin-top: 10px;
+    }
+
+    .mMod6 strong a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        font-size: unset;
+    }
+
+    /* 알림온 */
+
+    .mSky {
+        right: 20px;
+        bottom: 80px;
+        transition: opacity .5s;
+    }
+
+    .mSky.on {
+        opacity: 0;
+        z-index: 0;
+    }
+
+    .forWeb {
+        display: none;
+    }
+
+    .forMobile {
+        display: block;
+    }
+
+    .iTop {
+        display: none !important;
+    }
+
+}
+
+@media only screen and (max-width:768px) and (min-height:420px) {
+
+    /* 상단 아이콘 */
+    .btn_top,
+    .btn_tel {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        top: 20px;
+        transition: .5s;
+    }
+
+    .btn_top.on,
+    .btn_tel.on {
+        opacity: 0;
+        z-index: 0;
+    }
+
+    .btn_top a,
+    .btn_tel a {
+        vertical-align: middle;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        text-indent: -9999px;
+        font-size: 0;
+    }
+
+    .btn_top {
+        left: 20px;
+    }
+
+    .btn_top a {
+        background: url(../images/star_ico.png) no-repeat center/50px 50px;
+    }
+
+    .btn_tel {
+        left: 80px;
+    }
+
+    .btn_tel a {
+        background: url(../images/tel_ico.png) no-repeat center/50px 50px;
+    }
+}
+
+@media only screen and (max-height:420px) {
+
+    .mSky {
+        top: 50%;
+        bottom: unset;
+    }
+
+    .mSky .forMobile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .mMod1 {
+        bottom: 300px;
+    }
+
+    .mMod3 {
+        width: 230px;
+    }
+}

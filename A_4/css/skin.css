@@ -1,0 +1,431 @@
+@charset "utf-8";
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    line-height: unset;
+}
+
+#wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 1200px;
+}
+
+.hidden_wrap {
+    display: none;
+}
+
+
+
+
+/* 배경 */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* background: url(../images/img_mod2.png) no-repeat fixed center/cover; */
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* z-index: 99; */
+    background-color: rgba(0, 0, 0, 0.274);
+}
+/* 
+.background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+
+
+/* 상단 아이콘 */
+.btn_tel,
+.btn_top {
+    display: none;
+}
+
+/* 우측 문구 */
+.mMod6 {
+    position: fixed;
+    margin-right: 60px;
+    top: 50px;
+    right: 0;
+    text-align: right;
+    color: #fff;
+    width: 300px;
+}
+
+.mMod6 .tit {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 알림온 */
+.mSky {
+    top: unset;
+    bottom: 0;
+    right: 60px;
+}
+
+.mMod6 {
+    font-size: 14px;
+}
+
+.mMod6 .txt {
+    margin-top: 20px;
+    line-height: 170%;
+}
+
+.mMod6 strong a {
+    font-size: 24px;
+    color: #fff;
+}
+
+.mMod1 {
+    display: flex;
+    color: #fff;
+    font-weight: normal;
+    text-align: right;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.mMod1 img {
+    width: 102px;
+    height: 102px;
+}
+
+.mMod1 span {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #fff;
+}
+
+/* 좌측 박스 */
+.lbx {
+    position: absolute;
+    padding: 0px 60px;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 960px;
+    border-radius: 0 40px 0 0;
+    background-color: #fff;
+    -webkit-overflow-scrolling: touch;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    width: 960px;
+    background-color: #fff;
+    position: relative;
+    padding: 30px 60px;
+    box-sizing: border-box;
+}
+
+
+.menu {
+    display: none;
+}
+
+.mMod7,
+.mMod11 {
+    margin: 30px 0px;
+}
+
+/* //////////////////////////////상단 문구/////////////////// */
+/* .mMod7 {
+    float: left;
+} */
+
+.mMod7 a {
+    vertical-align: -28px;
+    border-bottom: 1px solid #000;
+}
+
+.mMod7 a+a {
+    margin-left: 30px;
+}
+
+
+/* //////////////////////////////sns////////////////////////////////*/
+/* .mMod11 {
+    position: relative;
+    float: right;
+} */
+
+.mMod11 a {
+    display: inline-block;
+    text-indent: -9999px;
+    font-size: 0px;
+    margin: 0 0 0 10px;
+    width: 46px;
+    height: 46px;
+}
+
+.mMod11 a.facebook {
+    background: url(../../common/images/ico_facebook.png);
+}
+
+.mMod11 a.twiter {
+    background: url(../../common/images/ico_twitter.png);
+}
+
+.mMod11 a.instagram {
+    background: url(../../common/images/ico_instagram.png);
+}
+
+.mMod11 a.youtube {
+    background: url(../../common/images/ico_youtube.png);
+}
+
+/*////////////////////////////// 소개문구////////////////////////////// */
+
+.mMod3 h2 {
+    font-size: 35px;
+    line-height: 140%;
+    margin: 30px 0;
+}
+
+.mMod3 .txt {
+    font-size: 18px;
+    margin-top: 30px;
+    line-height: 140%;
+    margin: 10px 0;
+}
+
+.mMod10 {
+    margin-top: 30px;
+}
+
+.mMod10 a {
+    font-size: 20px;
+    display: inline-block;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #3e6dda;
+    padding: 12px 40px;
+    box-sizing: border-box;
+}
+
+.mMod10 a::before {
+    content: url(../images/ico_mod10.png);
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+/* //////////////////////스와이퍼////////////////////////////// */
+
+.mMod9.forWeb{
+    margin-top: 50px;
+}
+
+.swiper-slide {
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.swiper-slide img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+    background: url(../images/slider_next.png) no-repeat center/cover;
+    transform: translateY(-50%) scale(2.1);
+    margin-top: unset;
+    height: 20px;
+}
+
+/*//////////////컨텐츠 내용////////////////////////////  */
+
+.mMod4 {
+    margin-top: 50px;
+}
+
+.mMod4 .tit {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.mMod4 li+li {
+    margin-top: 30px;
+}
+
+.mMod4 li {
+    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+    padding-left: 50px;
+}
+
+.mMod4 li::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 0;
+    width: 6px;
+    height: calc(100% - 25px);
+    background-color: #000;
+}
+
+.mMod4 .txt {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.mMod1.forMobile{
+    display: none !important;
+}
+
+/*/////////////////////동영상//////////////////////////// */
+
+.mMod8 {
+    margin-top: 50px;
+}
+
+iframe {
+    border-radius: 20px;
+    width: 100%;
+    height: 473px;
+}
+
+
+/* /////////////////////지도////////////////////////////////////// */
+
+.mMod5 {
+    margin: 50px 0;
+}
+
+.mMod5 .txt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mMod5 .ti {
+    font-size: 16px;
+    flex: 1;
+}
+
+.mMod5 .ti .t {
+    font-size: 20px;
+}
+
+.mMod5 .txt::before {
+    content: url(../images/ico_mod5.png);
+    transform: scale(.8);
+    width: 70px;
+}
+
+.gMap {
+    margin-top: 20px;
+    width: 100%;
+    height: 500px;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #222;
+    outline: none;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.navi {
+    background-color: #3e6dda;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.navi::before {
+    content: url(../images/ico_mod5_2.png);
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.tx {
+    font-size: 16px;
+    margin-top: 20px;
+    line-height: 180%;
+}
+
+
+
+/* 호버 이미지 로드 */
+
+#preload {
+    width: 0px;
+    height: 0px;
+    display: inline;
+}
+
+#preload ul li:nth-child(1) {
+    background-image: url(../images/menu_ico_1_hover.png);
+}
+
+#preload ul li:nth-child(2) {
+    background-image: url(../images/menu_ico_2_hover.png);
+}
+
+#preload ul li:nth-child(3) {
+    background-image: url(../images/menu_ico_3_hover.png);
+}
+
+#preload ul li:nth-child(4) {
+    background-image: url(../images/menu_ico_4_hover.png);
+}
+
+#preload ul li:nth-child(5) {
+    background-image: url(../images/menu_ico_5_hover.png);
+}
