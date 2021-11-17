@@ -131,34 +131,36 @@ body::before {
 
 
 /* 모듈 11 - 연락처 및 sns*/
-.mMod11 {
+.flex {
     display: flex;
     position: absolute;
     bottom: 70px;
     left: 70px;
     text-align: center;
+    align-items: flex-end;
 }
 
-.mMod11 .tel {
+.mMod6.forWeb {
     position: relative;
     color: #fff;
     background-color: #3e6dda;
     border-radius: 50px;
-    font-size: 20px;
+    font-size: 18px;
     width: 250px;
+    height: 45px;
     text-align: left;
-    padding: 10px 20px;
+    padding: 9px 20px;
     box-sizing: border-box;
 }
 
 
 
 
-.mMod11 .tel a {
+.mMod6.forWeb a {
     color: #fff;
 }
 
-.mMod11 .tel::after {
+.mMod6.forWeb a::after {
     content: '+';
     position: absolute;
     right: 20px;

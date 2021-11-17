@@ -57,7 +57,7 @@ $(function () {
             top: 0
         }, 1000, 'easeOutQuart')
 
-        $(".mMod11 .tel").addClass("on");
+        $(".connectbx").addClass("on");
         $(".btn_menu_slide_white").addClass("on");
 
     }); ////////////////
@@ -81,7 +81,7 @@ $(function () {
             top: "-22%"
         }, 1000, 'easeOutCubic')
 
-        $(".mMod11 .tel").removeClass("on");
+        $(".connectbx").removeClass("on");
         $(".btn_menu_slide_white").removeClass("on");
 
     }); ////////////
