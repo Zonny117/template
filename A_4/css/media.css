@@ -219,7 +219,6 @@
         padding: 30px;
         overflow-y: auto;
         max-height: calc(100%);
-        -webkit-overflow-scrolling: touch;
 
         transition: bottom .5s ease-in-out;
 
