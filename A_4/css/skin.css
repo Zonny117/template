@@ -2,7 +2,7 @@
 
 * {
     -webkit-tap-highlight-color: transparent;
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: auto;
 }
 
 html,
@@ -27,13 +27,19 @@ body {
 }
 
 
+
+
 /* 배경 */
 .background {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     /* background: url(../images/img_mod2.png) no-repeat fixed center/cover; */
 }
 
@@ -44,10 +50,10 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 99;
+    /* z-index: 99; */
     background-color: rgba(0, 0, 0, 0.274);
 }
-
+/* 
 .background img {
     position: absolute;
     top: 0;
@@ -68,7 +74,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+} */
 
 
 
@@ -137,7 +143,7 @@ body {
 }
 
 /* 좌측 박스 */
-.mMod2 {
+.lbx {
     position: absolute;
     padding: 0px 60px;
     top: 0;
