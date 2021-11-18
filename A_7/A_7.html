@@ -10,11 +10,13 @@
 
     <link rel="stylesheet" href="../common/css/common.css" type="text/css">
     <link rel="stylesheet" href="../common/plugins/swiper/swiper.min.css" type="text/css">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/skin.css" type="text/css">
+    <link rel="stylesheet" href="css/media.css" type="text/css">
 
     <script src="../common/js/jquery-1.11.3.min.js"></script>
     <script src="../common/js/jquery-ui.js"></script>
     <script src="../common/plugins/swiper/swiper.min.js"></script>
+    <script src="../common/js/common.js"></script>
     <script src="js/main.js"></script>
 
     <title>BMW 강남점</title>
@@ -22,37 +24,48 @@
 
 <body>
     <div id="wrap">
-        <a href="###" class="btn_dot">dot</a>
-        <a href="###" class="scrollDown">스크롤 다운</a>
-        <div class="mMod6 .forWeb">
-            <div class="tit">
-                <strong><a href="tel:010-1587-2587" class="tel">010-1587-2587</a></strong> <br>
-            </div>
-            <div class="txt">
-                언제든 연락주시면 <br> 
-                자세한 상담을 해드리겠습니다.<br>
-                내선 : 02-1548-8972<br>
-                FAX : 02-1548-8972
-            </div>
-            <div class="tit tit2">
-                <strong><a href="tel:010-1587-2587" class="tel2">전화 걸기</a></strong> 
-                <strong><a href="###" class="save">번호 저장</a></strong>
-            </div>
-            <div class="mMod11">
-                <a href="###" class="facebook">FACEBOOK</a> 
-                <a href="###" class="twiter">TWITTER</a> 
-                <a href="###" class="instagram">INSTAGRAM</a> 
-                <a href="###" class="youtube">YOUTUBE</a>
+        <div class="titlebx">
+            <h1 class="mMod1">
+                <img src="images/ico_mod1.png" alt="메인로고">
+            </h1>
+            <span class="mMod0">BMW 강남점</span>
+            <a href="###" class="btn_dot">dot</a>
+            <div class="topmenu .forWeb">
+                <div class="mMod6">
+                    <div class="tit">
+                        <strong><a href="tel:010-1587-2587" class="tel">010-1587-2587</a></strong> <br>
+                        <div class="txt">
+                            언제든 연락주시면 <br>
+                            자세한 상담을 해드리겠습니다.<br>
+                            내선 : 02-1548-8972<br>
+                            FAX : 02-1548-8972
+                        </div>
+                        <strong><a href="tel:010-1587-2587" class="tel2">전화 걸기</a></strong>
+                        <strong><a href="###" class="save">번호 저장</a></strong>
+                    </div>
+                    <!-- <div class="txt">
+                        언제든 연락주시면 <br>
+                        자세한 상담을 해드리겠습니다.<br>
+                        내선 : 02-1548-8972<br>
+                        FAX : 02-1548-8972
+                    </div> -->
+                    <!-- <div class="tit">
+                        <strong><a href="tel:010-1587-2587" class="tel2">전화 걸기</a></strong>
+                        <strong><a href="###" class="save">번호 저장</a></strong>
+                    </div> -->
+                </div>
+                <div class="mMod11 forWeb">
+                    <a href="###" class="facebook">FACEBOOK</a>
+                    <a href="###" class="twiter">TWITTER</a>
+                    <a href="###" class="instagram">INSTAGRAM</a>
+                    <a href="###" class="youtube">YOUTUBE</a>
+                </div>
             </div>
         </div>
+        
         <div class="mMod2">
+            <a href="###" class="scrollDown">스크롤 다운</a>
             <div class="background">
-            </div>
-            <div class="titlebx">
-                <h1 class="mMod1">
-                    <img src="images/ico_mod1.png" alt="메인로고">
-                </h1>
-                <span class="mMod0">BMW 강남점</span>
             </div>
 
             <div class="modBg">
@@ -71,7 +84,11 @@
                                 <a href="###">BMW 코리아 <br> 홈페이지</a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="###">아우디 정식 홈페이지</a>
+                                <a href="###">BMW 정식 홈페이지</a>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="###">BMW R8</a>
 
                             </div>
                         </div>
@@ -80,7 +97,8 @@
                     </div>
                     <script>
                         var mMod9 = new Swiper(".mMod7 .swiper-container", {
-                            slidesPerView: 1,
+                            slidesPerView: "auto",
+                            spaceBetween: 15,
                             pagination: {
                                 el: ".swiper-pagination",
                             },
@@ -91,10 +109,11 @@
                         });
                     </script>
                 </div>
+
             </div>
         </div>
         <div class="content">
-            <div class="mMod4 forWeb">
+            <div class="mMod4">
                 <div class="swiper-container">
                     <span class="sub_section_txt linetxt">COPY</span>
                     <div class="swiper-wrapper">
@@ -138,8 +157,8 @@
                 </div>
                 <script>
                     $(function () {
-                        var mMod4 = new Swiper(".mMod4.forWeb .swiper-container", {
-                            // autoHeight: true,
+                        var mMod4 = new Swiper(".mMod4 .swiper-container", {
+                            autoHeight: true,
                             slidesPerView: 1,
                             scrollbar: {
                                 el: ".swiper-scrollbar",
@@ -156,7 +175,7 @@
                     }); ///////////////////
                 </script>
             </div>
-            <div class="mMod9 forWeb">
+            <div class="mMod9">
                 <div class="swiper-container">
                     <span class="pic_section_txt linetxt">PIC</span>
                     <div class="swiper-wrapper">
@@ -171,25 +190,39 @@
                     <div class="swiper-pagination"></div>
                 </div>
                 <script>
-                    var mMod9 = new Swiper(".mMod9.forWeb .swiper-container", {
-                        spaceBetween: 30,
-                        slidesPerView: 1,
-                        scrollbar: {
-                            el: ".swiper-scrollbar",
-                        },
-                        pagination: {
-                            el: ".swiper-pagination",
-                            type: "fraction",
-                        },
-                        navigation: {
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev",
-                        }
+                    $(function () {
+
+                        let width = $(window).innerWidth();
+
+                        // console.log(width)
+
+                        if (width > 1024) {
+                            width = 30
+
+                        } else(
+                            width = 15
+                        )
+
+                        var mMod9 = new Swiper(".mMod9 .swiper-container", {
+                            spaceBetween: width,
+                            slidesPerView: "auto",
+                            scrollbar: {
+                                el: ".swiper-scrollbar",
+                            },
+                            pagination: {
+                                el: ".swiper-pagination",
+                                type: "fraction",
+                            },
+                            navigation: {
+                                nextEl: ".swiper-button-next",
+                                prevEl: ".swiper-button-prev",
+                            }
+                        });
                     });
                 </script>
             </div>
 
-            <div class="mMod8 forWeb">
+            <div class="mMod8">
                 <div class="iframebx">
                     <span class="youtube_section_txt linetxt">YOUTUBE</span>
                     <iframe src="https://www.youtube.com/embed/SAlYydpQiA0?enablejsapi=1&version=3&playerapiid=ytplayer"
@@ -222,6 +255,64 @@
                     </div>
                 </div>
             </div>
+            <footer>
+                <div class="flex">
+                    <div class="mMod10">
+                        <span class="attach_section_txt linetxt">ATTACHMENT FILE</span>
+                        <div class="sbx">
+                            <a href="###"><span>회사소개서 다운</span></a>
+                        </div>
+                    </div>
+                    <div class="mMod7">
+                        <span class="link_section_txt linetxt">LINK</span>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="###">BMW 코리아 <br> 홈페이지</a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="###">BMW 정식 홈페이지</a>
+    
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="###">BMW R8</a>
+    
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <script>
+                            $(function () {
+                                let width = $(window).innerWidth();
+
+                                // console.log(width)
+
+                                // if (width > 1024) {
+                                //     width = 30
+
+                                // } else(
+                                //     width = 0
+                                // )
+
+                                var mMod9 = new Swiper(".flex .mMod7 .swiper-container", {
+                                    slidesPerView: 1,
+                                    // spaceBetween: 30,
+                                    pagination: {
+                                        el: ".swiper-pagination",
+                                    },
+                                    navigation: {
+                                        nextEl: ".flex .mMod7 .swiper-button-next",
+                                        prevEl: ".flex .mMod7 .swiper-button-prev",
+                                    },
+                                });
+
+                            });
+                        </script>
+                    </div>
+                </div>
+            </footer>
         </div>
         <div class="mSky">
             <span class="ls iTop forWeb"><a href="#wrap" class="ico">페이지 상단으로</a></span>

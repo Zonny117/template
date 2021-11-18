@@ -1,12 +1,27 @@
-$(function(){
+$(function () {
 
 
-$(".btn_dot").click(function(){
+    $(".btn_dot").click(function () {
 
-    $(".mMod6").toggleClass("on");
-
-
-});
+        $(".topmenu").toggleClass("on");
 
 
-});////////////////
+    });
+
+    $(document).on("DOMMouseScroll mousewheel", function(){
+
+        let scT = $(window).scrollTop();
+
+        let wrap = $("#wrap").height();
+        // console.log(scT)
+
+        if(scT >= wrap){
+            $(".titlebx").addClass("on")
+        }
+        else(
+            $(".titlebx").removeClass("on")
+        )
+    });
+
+
+}); ////////////////
