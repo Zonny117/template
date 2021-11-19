@@ -9,7 +9,7 @@
 
 
 @media only screen and (max-width:1024px) {
-    body{
+    body {
         -webkit-overflow-scrolling: touch;
     }
 
@@ -416,7 +416,30 @@
     .flex .swiper-pagination-bullet-active {
         background-color: #ffffff;
     }
+
+    .lMod9 .swiper-container {
+        width: 100%;
+        height: 100vh;
+        left: auto;
+        transform: translateY(-50%);
+    }
+
+    .lMod9 .swiper-slide.swiper-slide-active {
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+
+    .lMod9 .swiper-slide {
+        line-height: 100vh;
+    }
+
+    .lMod9 .swiper-slide img {
+        border-radius: unset;
+    }
 }
+
+
+
 
 
 /* 모바일 가로모드 */

@@ -5,7 +5,7 @@ $(function () {
 
 
 
-    $(document).mouseup(function (e) {
+    $(document).on("mouseup touchstart touchend", function (e) {
 
         if ($(".topmenu").has(e.target).length === 0) {
             $(".topmenu").removeClass("on");
@@ -52,4 +52,23 @@ $(function () {
 
     }); ///////////////
 
+
+
+    $(".mag").click(function () {
+
+        $(".lMod9").addClass("on");
+
+        $("body").css({
+            overflowY: "hidden"
+        });
+    });
+
+    $(".btn_close").click(function () {
+        $(".lMod9").removeClass("on");
+
+        $("body").css({
+            overflowY: "auto"
+        });
+
+    });
 }); ////////////////
