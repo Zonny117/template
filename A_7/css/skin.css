@@ -28,6 +28,7 @@ body {
 }
 
 
+
 /* 모듈 6/11 연락처 및 sns */
 .topmenu {
     position: absolute;
@@ -141,7 +142,7 @@ body {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-image: url(../images/background.png);
+    
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -174,6 +175,7 @@ body {
 
 .titlebx.on{
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     background-color: rgba(252, 252, 252, 0.16);
 }
 
@@ -181,6 +183,13 @@ body {
     margin-left: 20px;
     color: #fff;
     font-size: 20px;
+}
+
+.mMod1 img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 
@@ -224,6 +233,7 @@ body {
     height: 320px;
     box-sizing: border-box;
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.11);
     border-radius: 35px;
     transition: background-color .6s;
@@ -309,6 +319,7 @@ body {
 .content {
     width: 100%;
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(10px);
     box-sizing: border-box;
     padding-bottom: 200px;
     background-image: linear-gradient(to bottom, transparent 50%, #000 100%);
@@ -321,6 +332,7 @@ body {
     height: 100vh;
     color: #fff;
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .mMod4 .swiper-container {
@@ -335,7 +347,7 @@ body {
 
 
 .mMod4 .swiper-slide {
-    margin-top: 100px;
+    margin-top: 375px;
     width: 100% !important;
 }
 
@@ -601,6 +613,7 @@ iframe {
     width: 100%;
     height: 320px;
     backdrop-filter: unset;
+    -webkit-backdrop-filter: unset;
     background-color: unset;
     border: 1px solid #fff;
     border-radius: 35px;
@@ -627,6 +640,10 @@ iframe {
 
 .flex .mMod7 .swiper-container::before{
     right: 0;
+}
+
+.flex .mMod7 .swiper-pagination{
+    display: none;
 }
 
 
