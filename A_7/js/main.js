@@ -20,7 +20,7 @@ $(function () {
     }
 
     // 사진 확대
-    $(".mag").click(function () {
+    $(".mag.forWeb").click(function () {
 
         // 레이어 팝업시 바디 스크롤 이벤트 막기
         $("html,body").on('mousewheel DOMMouseScroll', function (e) {
@@ -31,12 +31,20 @@ $(function () {
 
         $(".lMod9").addClass("on");
 
+    });
+
+    $(".mag.forMobile").click(function () {
+
+        $(".lMod9").addClass("on");
+        
+        $("#wrap").css({
+            overflowY: "hidden"
+        });
 
     });
 
     $(".btn_close.forWeb").click(function () {
         $(".lMod9").removeClass("on");
-
         // 레이어 팝업 닫은 후 바디 스크롤 이벤트 허용
         $("html,body").off("mousewheel DOMMouseScroll");
     });
@@ -45,6 +53,10 @@ $(function () {
 
         $(".lMod9").removeClass("on");
 
+
+        $("#wrap").css({
+            overflowY: "auto"
+        });
     });
 
 
