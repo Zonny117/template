@@ -36,7 +36,7 @@ $(function () {
     $(".mag.forMobile").click(function () {
 
         $(".lMod9").addClass("on");
-        
+
         $("#wrap").css({
             overflowY: "hidden"
         });
@@ -152,23 +152,30 @@ $(function () {
 
 
     // 상단 메뉴 블러 모바일
-    $("html, body").on("touchmove touchstart touchend", function () {
+    let ts, te;
 
-        let touch = $("#wrap").scrollTop();
-
-        let mod2 = $(".mMod2").height();
-
-        //    console.log(touch);
-
-        if (touch >= mod2) {
-            $(".titlebx").addClass("on")
-        } else(
-            $(".titlebx").removeClass("on")
-        )
+    $(document).on("touchstart", function (e) {
 
 
-    }); ///////////////
+        ts = e.originalEvent.touches[0].screenY;
 
+    });
+
+    $(document).on("touchend", function (e) {
+
+        te = e.originalEvent.changedTouches[0].screenY;
+
+        let touch = ts - te;
+
+        // console.log(touch)
+
+
+        if (touch > 30) {
+            $(".titlebx").addClass("on");
+        } else {
+            $(".titlebx").removeClass("on");
+        }
+    });
 
 
 }); ////////////////
