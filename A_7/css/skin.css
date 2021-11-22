@@ -4,10 +4,6 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-::-webkit-scrollbar {
-    width: 0px;
-}
-
 body,
 html {
     width: 100%;
@@ -15,8 +11,7 @@ html {
 }
 
 body {
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -25,6 +20,20 @@ body {
     width: 100%;
     height: 100%;
     min-width: 1200px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a6a7a7;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #4d5050;
+    border-radius: 5px;
 }
 
 
@@ -321,7 +330,6 @@ body {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(10px);
     box-sizing: border-box;
-    padding-bottom: 200px;
     background-image: linear-gradient(to bottom, transparent 50%, #000 100%);
 }
 
@@ -344,12 +352,25 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.mMod4 .swiper-wrapper {
+    margin-top: 205px;
+}
+
 
 
 .mMod4 .swiper-slide {
-    margin-top: 375px;
+    /* margin-top: 375px; */
     width: 100% !important;
+    max-height: 360px;
+    height: 360px;
+
 }
+
+.mMod4 .swiper-slide.swiper-slide-active {
+    max-height: 360px;
+    overflow-y: auto;
+}
+
 
 .mMod4 .tit {
     font-size: 30px;
@@ -399,9 +420,9 @@ body {
 }
 
 .txtbx {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); */
 }
 
 .linetxt {
@@ -422,23 +443,24 @@ body {
     width: 100%;
     height: 100vh;
     color: #fff;
-    margin-bottom: 100px;
 }
 
 .mMod9 .swiper-container {
     position: absolute;
     width: 1200px;
-    height: 885px;
+    height: 655px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: unset;
 }
 
+
+
 .mMod9 .swiper-slide {
     margin-top: 100px;
     width: 100% !important;
-    height: 650px;
+    height: 540px;
 }
 
 .mMod9 .swiper-slide img {
@@ -455,14 +477,14 @@ body {
 }
 
 .mMod9 .swiper-pagination {
-    bottom: 10px;
+    bottom: -100px;
 }
 
 .mMod9 .swiper-button-next {
     background: url(../images/btn_slider_next_02.png);
     width: 64px;
     height: 46px;
-    bottom: 0px;
+    bottom: -110px;
     top: auto;
     z-index: 999;
 }
@@ -472,14 +494,14 @@ body {
     width: 64px;
     left: 0;
     height: 46px;
-    bottom: 0px;
+    bottom: -110px;
     top: auto;
     z-index: 999;
 }
 
 .mag {
     position: absolute;
-    bottom: 90px;
+    bottom: -30px;
     color: rgba(255, 255, 255, 0.726);
     font-size: 18px;
     z-index: 999;
@@ -497,7 +519,6 @@ body {
     width: 100%;
     height: 100vh;
     color: #fff;
-    margin-bottom: 100px;
 }
 
 .iframebx {
@@ -532,10 +553,12 @@ iframe {
     height: 100vh;
     color: #fff;
     box-sizing: border-box;
-    margin-bottom: 190px;
 }
 
 .pbx {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -544,8 +567,8 @@ iframe {
 }
 
 .gMap {
-    width: 100%;
-    height: 680px;
+    width: 50%;
+    height: 580px;
 }
 
 .map {
@@ -555,24 +578,27 @@ iframe {
     border-radius: 20px;
 }
 
+.txtbx2 {
+    width: 40%;
+    margin-left: 40px;
+}
+
 .mMod5 .ti {
-    position: relative;
-    margin-top: 50px;
     overflow: hidden;
 }
 
 .mMod5 .t {
     border-right: 2px solid #3f3f3f;
     font-size: 30px;
-    padding-right: 40px;
+    padding-right: 10px;
 }
 
 .mMod5 .ti a {
     position: absolute;
-    right: 0;
+    top: 22px;
+    right: 42px;
     color: #fff;
-    bottom: 0;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .mMod5 .ti a::after {
@@ -581,13 +607,15 @@ iframe {
 }
 
 .mMod5 .ti span {
-    margin-left: 40px;
+    margin-left: 15px;
     font-weight: 200;
 }
 
 .mMod5 .txt {
-    margin-top: 60px;
+    margin-top: 30px;
     font-weight: 200;
+    font-size: 16px;
+    margin-bottom: 30px;
 }
 
 .map_section_txt {
@@ -604,11 +632,22 @@ iframe {
 
 
 /* 하단 */
+footer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
 .flex {
     display: flex;
     width: 1200px;
     justify-content: space-between;
     margin: 0 auto;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .flex .mMod7 {
@@ -721,7 +760,7 @@ iframe {
     height: 800px;
 }
 
-.lMod9 .swiper-slide.swiper-slide-active{
+.lMod9 .swiper-slide.swiper-slide-active {
     max-height: 800px;
     overflow-y: auto;
 }
@@ -744,4 +783,8 @@ iframe {
     z-index: 99999;
     left: 84%;
     top: 25px;
+}
+
+.btn_close.forMobile{
+    display: none !important;
 }
