@@ -28,7 +28,6 @@
     }
 
     .content {
-        margin-top: 100vh;
         padding: 30px;
 
         /* firefox */
@@ -61,10 +60,9 @@
 
     /* 메인 고정박스 */
     .modbg {
-        position: fixed;
+        position: unset;
         top: 0;
         left: 0;
-        overflow-y: scroll;
 
         transform: unset;
         width: 100%;
@@ -314,9 +312,8 @@
         text-align: center;
         color: #fff;
         padding: unset;
-        padding: 0px 30px;
         padding-top: 30px;
-        padding-bottom: 80px;
+       
         font-size: 1rem;
     }
 
@@ -377,6 +374,11 @@
         top: -20px;
         left: unset;
         right: 55px;
+    }
+    footer{
+        padding: 0 30px;
+        box-sizing: border-box;
+        padding-bottom: 80px;
     }
 }
 

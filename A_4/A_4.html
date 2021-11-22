@@ -86,7 +86,7 @@
                 <!-- 메인문구 -->
                 <div class="maintitle">
                     <h1 class="mMod1 forMobile">
-                        <img src="images/img_mod2.png" alt="">
+                        <!-- <img src="images/img_mod2.png" alt=""> -->
                         <span class="txt">아우디 강남점</span>
                     </h1>
                     <div class="mMod3">
@@ -115,13 +115,22 @@
                     <div class="swiper-button-next"></div>
                 </div>
                 <script>
-                    var mMod9 = new Swiper(".mMod9 .swiper-container", {
-                        slidesPerView: 3,
-                        navigation: {
-                            nextEl: ".mMod9 .swiper-button-next"
-                        },
+                    $(function () {
 
-                        loop: true
+                        let sldnum = $(".mMod9.forWeb .swiper-slide").length;
+
+
+                        // console.log(sldnum);
+
+                        var mMod9 = new Swiper(".mMod9 .swiper-container", {
+                            slidesPerView: sldnum,
+                            navigation: {
+                                nextEl: ".mMod9 .swiper-button-next"
+                            },
+
+                            loop: true
+                        });
+
                     });
                 </script>
             </div>

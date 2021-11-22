@@ -30,9 +30,11 @@ $(function () {
         if (scT - value <= 694) {
             $(".mMod6").addClass("on");
             $(".lbx .mMod3 .txt").addClass("on");
+            $(".mMod11.forWeb").addClass("on");
         } else {
             $(".mMod6").removeClass("on");
             $(".lbx .mMod3 .txt").removeClass("on");
+            $(".mMod11.forWeb").removeClass("on");
         }
 
         if(scT >= mod3){

@@ -159,6 +159,19 @@
     }
 
 
+    .mMod10 a{
+        color: #fff;
+    }
+
+    .mMod10.forMobile a::after{
+        content: url(../images/arrow_white_reverse.png);
+        margin-left: 10px;
+    }
+
+    .mMod10.forMobile a{
+        border-bottom: 1px solid #fff;
+    }
+
     .forWeb {
         display: none;
     }
@@ -176,6 +189,10 @@
         position: absolute;
     }
 
+
+    .gnb{
+        justify-content: unset;
+    }
 
     .rbx {
         margin-left: unset;
