@@ -330,7 +330,7 @@ body {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(10px);
     box-sizing: border-box;
-    background-image: linear-gradient(to bottom, transparent 50%, #000 100%);
+    background-image: linear-gradient(to bottom, transparent 20%, #000 100%);
 }
 
 /* 모듈 4 - 서브 내용 */
@@ -417,12 +417,6 @@ body {
     left: 0;
     height: 46px;
     z-index: 999;
-}
-
-.txtbx {
-    /* position: absolute;
-    top: 50%;
-    transform: translateY(-50%); */
 }
 
 .linetxt {
