@@ -29,8 +29,6 @@ $(function () {
             return false;
         });
 
-
-
         $(".lMod9").addClass("on");
 
 
