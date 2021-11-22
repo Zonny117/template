@@ -529,8 +529,7 @@ iframe {
     height: 100%;
     border-radius: 20px;
 
-    /* ios mask */
-    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    
 }
 
 .youtube_section_txt {

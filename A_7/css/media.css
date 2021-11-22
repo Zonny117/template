@@ -234,7 +234,7 @@
     }
 
 
-    
+
 
 
 
@@ -308,6 +308,8 @@
         left: 0;
         right: 0;
         bottom: 0;
+        /* ios mask */
+        -webkit-mask-image: -webkit-radial-gradient(white, black);
     }
 
     .mMod5 {
@@ -516,7 +518,7 @@
         border-radius: unset;
     }
 
-    .lMod9::before{
+    .lMod9::before {
         background-color: rgba(0, 0, 0, 0.808);
     }
 }
