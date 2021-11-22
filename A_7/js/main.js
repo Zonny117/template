@@ -167,12 +167,12 @@ $(function () {
 
         let touch = ts - te;
 
-        // console.log(touch)
+        console.log(touch)
 
 
         if (touch > 30) {
             $(".titlebx").addClass("on");
-        } else {
+        } else if (touch < -30) {
             $(".titlebx").removeClass("on");
         }
     });
