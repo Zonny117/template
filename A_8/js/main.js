@@ -132,5 +132,20 @@ $(function () {
 
     });
 
+    let first = $(".content").find("div").first();
+
+    let maintitle = $(".maintitle").height() - 81;
+
+
+
+    // console.log(maintitle)
+
+    if ($(window).innerWidth() <= 768) {
+
+        first.css({
+            paddingTop: maintitle +50
+        })
+
+    }
 
 });

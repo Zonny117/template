@@ -1,0 +1,310 @@
+@charset "utf-8";
+
+@media only screen and (max-width:1024px) {
+
+    .forWeb {
+        display: none;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    #wrap {
+        min-width: unset;
+    }
+
+    .gnb {
+        height: 50px;
+    }
+
+    .mMod1 {
+        width: 30px;
+        height: 30px;
+    }
+
+    .open {
+        font-size: 16px;
+    }
+
+    .open::after {
+        width: 17px;
+        height: 9px;
+    }
+
+    .mMod2 {
+        height: 100%;
+    }
+
+    .scrollDown {
+        display: none;
+    }
+
+    .background {
+        background-size: 250%;
+        background-position: center top;
+    }
+
+    .maintitle {
+        width: 88%;
+        left: 50%;
+        top: calc(100% - 80px);
+        bottom: auto;
+        transform: translateX(-50%);
+        background-image: linear-gradient(to bottom, #fbfaf6 80%, #f5f2eb 100%);
+        z-index: 999;
+    }
+
+    .mMod0 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .mMod3 {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    .mMod3 h2 {
+        font-size: 25px;
+    }
+
+    .mMod3 .txt {
+        font-size: 14px;
+    }
+
+
+
+    .mMod4 {
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 0 25px;
+        padding-bottom: 120px;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mMod4 .txt {
+        font-size: 14px;
+    }
+
+    .mMod4 .btnbx {
+        width: 100%;
+    }
+
+    .btnsbx {
+        position: unset;
+        width: 100%;
+        top: auto;
+        left: auto;
+        transform: none;
+    }
+
+    .mMod4 .swiper-container {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .mMod4 .swiper-slide {
+        padding: unset;
+    }
+
+
+    .swiper-scrollbar {
+        width: 90%;
+    }
+
+
+    .mMod9 {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: auto;
+        padding: 0 25px;
+        padding-top: 50px;
+        padding-bottom: 120px;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mMod9 .btnbx {
+        width: 100%;
+    }
+
+    .mMod9 .swiper-container {
+        width: 100%;
+        margin-top: 50px;
+        height: 0px;
+        padding-top: 91.5%;
+    }
+
+    .mMod9 .swiper-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .mag {
+        width: 55%;
+        height: 50px;
+        line-height: 50px;
+        left: 15px;
+        bottom: 134px;
+    }
+
+    .mag::after {
+        font-size: 20px;
+    }
+
+    .mMod8 {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 25px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        box-sizing: border-box;
+    }
+
+    .youtube_section_txt {
+        position: static;
+        top: unset;
+        left: unset;
+        transform: none;
+    }
+
+    .iframebx {
+        position: relative;
+        top: unset;
+        left: unset;
+        transform: none;
+        width: 100%;
+        padding-top: 56.66%;
+    }
+
+    .mMod5 {
+        height: auto;
+        padding: 0 25px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        box-sizing: border-box;
+    }
+
+    .pbx {
+        height: auto;
+        padding: unset;
+        flex-direction: column;
+    }
+
+    .gMap {
+        position: relative;
+        width: 100%;
+        height: 0px;
+        padding-top: 86.66%;
+        margin-bottom: 30px;
+    }
+
+    .map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .txtbx {
+        width: 100%;
+        padding: unset;
+    }
+
+    .map_section_txt {
+        margin-bottom: 30px;
+    }
+
+    .mMod5 .ti span {
+        margin-bottom: 30px;
+        font-size: 14px;
+    }
+
+    .mMod5 .t {
+        font-size: 25px;
+    }
+
+    .mMod5 .txt{
+        font-size: 14px;
+    }
+
+    .navi {
+        width: 100%;
+        min-width: unset;
+        height: 50px;
+        line-height: 50px; 
+        font-size: 14px;
+    }
+
+    .flex {
+        display: flex;
+        height: auto;
+        padding: 0 25px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        align-items: center;
+        flex-direction: column;
+    }
+    .flex .mMod0{
+        width: 100%;
+        font-size: 25px;
+        margin-bottom: 50px;
+        padding-bottom: 50px;
+    }
+
+    .flex .mMod0::after{
+        border-right: none;
+        border-bottom: 1px solid #fff;
+        width: 100%;
+        top: unset;
+        right: unset;
+        height: auto;
+        bottom: 0;
+        left: 0;
+    }
+    .flex .rbx{
+        width: 100%;
+        padding-left: unset;
+    }
+    .flex .contact_section_txt{
+        margin-bottom: 30px;
+    }
+
+    .tel, .save{
+        width: 90%;
+        min-width: unset;
+        padding-left: 10%;
+    }
+
+    .mMod11 a{
+        width: 50px;
+        height: 50px;
+    }
+
+    .mMod11 a+a{
+        margin-left: 10px;
+    }
+
+    .sns_section_txt{
+        margin-bottom: 30px;
+    }
+}
