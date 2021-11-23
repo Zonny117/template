@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="../common/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../common/plugins/swiper/swiper.min.css" type="text/css">
+    <link rel="stylesheet" href="css/skin.css" type="text/css">
+
+    <script src="../common/js/jquery-1.11.3.min.js"></script>
+    <script src="../common/js/jquery-ui.js"></script>
+    <script src="../common/js/common.js"></script>
+    <script src="../common/plugins/swiper/swiper.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+    <title>플로리스트 최정화</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="gnb">
+            <h1 class="mMod1">
+                <img src="images/ico_mod1.png" alt="로고">
+            </h1>
+            <a href="###" class="open">open</a>
+        </div>
+
+        <div class="openMenu">
+            <div class="openTitle">
+                <div class="mMod0">
+                    <span>blossom</span>
+                </div>
+                <div class="mMod3">
+                    <h2>플로리스트, <br> 최정화입니다.</h2>
+                    <p class="txt">
+                        안녕하세요. 꽃하는 사람, 최정화입니다.
+                    </p>
+                </div>
+            </div>
+            <div class="openRbx">
+                <div class="mMod6">
+                    <span class="contact_section_txt linetxt">contact</span>
+                    <div class="tit">
+                        <strong><a href="tel:010-1587-2587" class="tel">010-1587-2587</a></strong> <br>
+                        <strong><a href="###" class="save">번호 저장</a></strong>
+                        <strong><a href="###" class="mail">blossom_1001@google.com</a></strong>
+                    </div>
+                </div>
+                <div class="mMod7">
+                    <span class="link_section_txt linetxt">link</span>
+                    <a href="###">포트폴리오</a>
+                    <a href="###">예약/신청하기</a>
+                    <a href="###">수업 신청하기</a>
+                </div>
+                <div class="mMod10">
+                    <span class="attach_section_txt linetxt">attached file</span>
+                    <a href="###"><span>이력서</span></a></div>
+            </div>
+        </div>
+
+        <div class="mMod2 page">
+            <a href="###" class="scrollDown">스크롤 다운</a>
+            <div class="background" style="background-image: url(../A_8/images/background.png);">
+                <div class="maintitle">
+                    <div class="mMod0">
+                        <span>blossom</span>
+                    </div>
+                    <div class="mMod3">
+                        <h2>플로리스트, <br> 최정화입니다.</h2>
+                        <p class="txt">
+                            안녕하세요. 꽃하는 사람, 최정화입니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="mMod4 page">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="tit">플로리스트, 최정화입니다.</div>
+                            <div class="txt">
+                                죽는 날까지 하늘을 우러러 <br>
+                                한 점 부끄럼이 없기를, <br> <br>
+                                잎새에 이는 바람에도 <br>
+                                나는 괴로워했다. <br> <br>
+                                별을 노래하는 마음으로 <br>
+                                모든 죽어가는 것을 사랑해야지 <br>
+                                그리고 나한테 주어진 길을 <br>
+                                걸어가야겠다. <br> <br>
+                                오늘 밤에도 별이 바람에 스치운다. <br> <br>
+                                [출처] 윤동주 서시 [하늘과 바람과 별과 시] [애송시]
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="tit">플로리스트</div>
+                            <div class="txt">
+                                꽃을 보기 좋게 배열하는 일을 한다. 흔히 꽃으로 작품을 만드는 것만 생각하는데, <br>
+                                콘셉트와 분위기를 정하고 이에 맞는 꽃을 구입, 생화 관리, 작품을 <br>
+                                만들어 예쁘게 포장하는 것 등 다양한 업무를 포함한다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-scrollbar"></div>
+                <div class="btnbx">
+                    <div class="btnsbx">
+                        <span class="sub_section_txt linetxt">sub</span>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+                <script>
+                    var mMod4 = new Swiper(".mMod4 .swiper-container", {
+                        slidesPerView: 1,
+                        scrollbar: {
+                            el: ".mMod4 .swiper-scrollbar",
+                        },
+                        pagination: {
+                            el: ".mMod4 .swiper-pagination",
+                            type: "custom",
+                            renderCustom: function (swiper, current, total) {
+                                return '<span class="current">' + '0' + current + '</span>' +
+                                    '<img src="images/fractionbar.png" class="fractionbar" alt="프랙션바">' +
+                                    '<span class="total">' + '0' + total + '</span>';
+                            }
+                        },
+                        navigation: {
+                            nextEl: ".mMod4 .swiper-button-next",
+                            prevEl: ".mMod4 .swiper-button-prev",
+                        }
+                    });
+                </script>
+            </div>
+
+            <div class="mMod9 page">
+                <div class="btnbx">
+                    <div class="btnsbx">
+                        <span class="pic_section_txt linetxt">picture</span>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+                <a href="###" class="mag">크게 보기</a>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/xmod01.png" alt="플로리스트"></div>
+                        <div class="swiper-slide"><img src="images/xmod02.jpg" alt="플로리스트"></div>
+                        <div class="swiper-slide"><img src="images/xmod03.jpg" alt="플로리스트"></div>
+                    </div>
+                </div>
+                <div class="swiper-scrollbar"></div>
+
+                <script>
+                    var mMod9 = new Swiper(".mMod9 .swiper-container", {
+                        slidesPerView: 1,
+                        scrollbar: {
+                            el: ".mMod9 .swiper-scrollbar",
+                        },
+                        pagination: {
+                            el: ".mMod9 .swiper-pagination",
+                            type: "custom",
+                            renderCustom: function (swiper, current, total) {
+                                return '<span class="current">' + '0' + current + '</span>' +
+                                    '<img src="images/fractionbar.png" class="fractionbar" alt="프랙션바">' +
+                                    '<span class="total">' + '0' + total + '</span>';
+                            }
+                        },
+                        navigation: {
+                            nextEl: ".mMod9 .swiper-button-next",
+                            prevEl: ".mMod9 .swiper-button-prev",
+                        }
+                    });
+                </script>
+            </div>
+
+            <div class="mMod8 page">
+                <span class="youtube_section_txt linetxt">youtube</span>
+                <div class="iframebx">
+                    <iframe src="https://www.youtube.com/embed/mgcZMX4rjlI?enablejsapi=1&version=3&playerapiid=ytplayer"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="mMod5 page">
+
+                <div class="pbx">
+                    <div class="gMap">
+                        <div class="map" style="background-image:url(images/img_mod5.png);"></div>
+                    </div>
+                    <div class="txtbx">
+                        <span class="map_section_txt linetxt">map</span>
+                        <div class="ti">
+                            <strong class="t">blossom</strong>
+                            <span>서울 성동구 성수동 234-45</span>
+                        </div>
+                        <div class="txt">
+                            <div class="tx">
+                                &lt;대중교통이용시&gt;<br>
+                                시청역(1호선/2호선)에서 하차, 6번 출구에서 도보 1-2분 거리 <br>
+                                &lt;자가이용시&gt;<br>
+                                시청역(1호선/2호선)에서 하차, 6번 출구에서 도보 1-2분 거리
+                            </div>
+                        </div>
+                        <a href="###" class="navi">네비게이션연결</a>
+                    </div>
+                </div>
+            </div>
+            <footer class="flex page">
+                <div class="mMod0">
+                    <span>blossom</span>
+                </div>
+                <div class="rbx">
+                    <div class="mMod6">
+                        <span class="contact_section_txt linetxt">contact</span>
+                        <div class="tit">
+                            <strong><a href="tel:010-1587-2587" class="tel">010-1587-2587</a></strong> <br>
+                            <strong><a href="###" class="save">번호 저장</a></strong>
+                            <strong><a href="###" class="mail">blossom_1001@google.com</a></strong>
+                        </div>
+                    </div>
+                    <div class="mMod11 forWeb">
+                        <span class="sns_section_txt linetxt">sns</span>
+                        <a href="###" class="facebook">FACEBOOK</a>
+                        <a href="###" class="twiter">TWITTER</a>
+                        <a href="###" class="instagram">INSTAGRAM</a>
+                        <a href="###" class="youtube">YOUTUBE</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div class="mSky">
+            <span class="ls iTop forWeb"><a href="###" class="ico">페이지 상단으로</a></span>
+            <div class="forMobile">
+                <span class="ls iSns"><a href="#jsSky" class="ico jsBtnShow1">Sns 레이어열기</a></span>
+                <div id="jsSky" class="lSky">
+                    <a href="###" class="youtube">youtube</a>
+                    <a href="###" class="instagram">instagram</a>
+                    <a href="###" class="twiter">twiter</a>
+                    <a href="###" class="facebook">facebook</a>
+                    <a href="#jsSky" class="close jsBtnClose1">Sns 레이어닫기</a>
+                </div>
+            </div>
+            <span class="ls iKakao"><a href="###" class="ico">카카오톡</a></span>
+            <span class="ls iAlarm">
+                <a href="###" class="ico">알림온</a>
+                <span class="txt">알림온 초대공유플랫폼으로 제작된 사이트입니다</span>
+            </span>
+        </div>
+        <div id="jsMod9" class="lMod9">
+            <a href="###" class="btn_close forWeb">레이어 닫기</a>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/xmod01.png" alt="플로리스트"></div>
+                    <div class="swiper-slide"><img src="images/xmod02.jpg" alt="플로리스트"></div>
+                    <div class="swiper-slide"><img src="images/xmod03.jpg" alt="플로리스트"></div>
+                </div>
+            </div>
+            <script>
+                var lMod9 = new Swiper(".lMod9 .swiper-container", {
+                    slidesPerView: 1,
+                    spaceBetween: 30
+                });
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
