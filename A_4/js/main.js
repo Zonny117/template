@@ -1,5 +1,5 @@
 $(function () {
-    
+
     document.getElementsByClassName("vid").controls = false;
 
     // 네이버 인앱 브라우저 높이값 설정
@@ -10,6 +10,36 @@ $(function () {
             maxHeight: "90%"
         })
     }; /////////////////////
+
+
+
+    let menu = [
+        $(".sub .mMod4, .sub .mMod10").length,
+        $(".mMod7.forMobile").length,
+        $(".mMod8.forMobile, .mMod9.forMobile").length,
+        $(".mMod5.forMobile").length,
+        $(".mMod6.forMobile").length
+    ]
+
+    for (i = 0; i <= 4; i++) {
+
+
+
+        // console.log(menu[i])
+
+        if (menu[i] === 0) {
+
+
+
+            $(".link" + (i + 1) + "_li").css({
+                display: "none"
+            });
+
+        }
+        // console.log(".link" + (i + 1) + "_li")
+    }
+
+
 
     $(".menu ul li").click(function () {
 
