@@ -84,16 +84,26 @@ $(function () {
 
         }
 
-
+        if ($(window).innerWidth() <= 1366) {
+            $("html, body, #wrap").css({
+                overflowY: "hidden"
+            });
+        }
 
         $(".openMenu").toggleClass("on");
         $("body").toggleClass("on");
         $(".gnb").toggleClass("on");
     }); //////////////
 
-    
 
 
+    $(".openMenu .gnb").click(function () {
+
+        $("html, body, #wrap").css({
+            overflowY: "auto"
+        });
+        
+    });//////////////////////
 
 
 
@@ -105,7 +115,7 @@ $(function () {
 
         // 반응형 전환시 페이지 넘버 초기화
         if ($(window).innerWidth() <= 1366) {
-           pnum=0;
+            pnum = 0;
         }
 
 
