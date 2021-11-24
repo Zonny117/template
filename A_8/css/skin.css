@@ -3,6 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 
 
+.btnbx.forWeb, .mag.forWeb, .map_section_txt.forWeb, .btn_close.forWeb {
+    display: block !important;
+}
+
+.btnbx.forMobile, .mag.forMobile, .map_section_txt.forMobile, .btn_close.forMobile {
+    display: none !important;
+}
+
 html,
 body {
     width: 100%;
@@ -746,12 +754,13 @@ iframe {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: -1;
     min-width: 1200px;
+    display: none;
 }
 
 .lMod9.on {
     z-index: 999999;
+    display: block;
 }
 
 .lMod9::before {

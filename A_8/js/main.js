@@ -28,7 +28,7 @@ $(function () {
     } ////////////////////
 
 
-    $(".mag").click(function () {
+    $(".mag.forWeb").click(function () {
         $(".lMod9").addClass("on");
         $("html,body").on('mousewheel DOMMouseScroll', function (e) {
             e.preventDefault();
@@ -37,9 +37,24 @@ $(function () {
         });
     });
 
-    $(".btn_close").click(function () {
+    $(".btn_close.forWeb").click(function () {
         $(".lMod9").removeClass("on");
         $("html,body").off("mousewheel DOMMouseScroll");
+    })
+    $(".mag.forMobile").click(function () {
+        $(".lMod9").addClass("on");
+
+        $("html, body").css({
+            overflowY: "hidden"
+        });
+    });
+
+    $(".btn_close.forMobile").click(function () {
+        $(".lMod9").removeClass("on");
+
+        $("html, body").css({
+            overflowY: "auto"
+        });
     })
 
     $(".open").click(function () {
@@ -66,18 +81,19 @@ $(function () {
 
         $(".openMenu").toggleClass("on");
 
-
+        $("body").toggleClass("on");
 
 
     }); //////////////
 
 
 
+ 
+
 
     let prot = 0;
     let pnum = 0;
     let page = $(".page").length;
-
 
     $(document).on("DOMMouseScroll mousewheel", function (e) {
 
@@ -132,6 +148,9 @@ $(function () {
 
     });
 
+
+
+
     let first = $(".content").find("div").first();
 
     let maintitle = $(".maintitle").height() - 81;
@@ -140,12 +159,14 @@ $(function () {
 
     // console.log(maintitle)
 
-    if ($(window).innerWidth() <= 768) {
+    if ($(window).innerWidth() <= 1366) {
 
         first.css({
-            paddingTop: maintitle +50
+            paddingTop: maintitle + 50
         })
 
     }
+
+
 
 });
