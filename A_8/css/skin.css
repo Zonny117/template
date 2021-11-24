@@ -23,6 +23,7 @@ body {
     height: 100%;
     background-color: #f2eee3;
     font-family: 'Lora', 'Nanum Myeongjo', serif;
+    cursor: url(../images/cursor.cur), auto;
 }
 
 
