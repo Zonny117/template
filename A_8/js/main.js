@@ -40,19 +40,21 @@ $(function () {
     $(".btn_close.forWeb").click(function () {
         $(".lMod9").removeClass("on");
         $("html,body").off("mousewheel DOMMouseScroll");
-    })
+    });
+
+
     $(".mag.forMobile").click(function () {
         $(".lMod9").addClass("on");
-
-        $("html, body").css({
+        $("body").addClass("on");
+        $("html, body, #wrap").css({
             overflowY: "hidden"
         });
     });
 
     $(".btn_close.forMobile").click(function () {
         $(".lMod9").removeClass("on");
-
-        $("html, body").css({
+        $("body").removeClass("on");
+        $("html, body, #wrap").css({
             overflowY: "auto"
         });
     })
@@ -60,11 +62,12 @@ $(function () {
     $(".open").click(function () {
 
 
-        if($(window).innerWidth()>1366){
+        if ($(window).innerWidth() > 1366) {
+
             // 공백 주의
             let txt = $(this).text();
             // console.log(txt)
-    
+
             if (txt === "open") {
                 $(this).text(txt.replace(txt, "close"))
                 $(this).addClass("on")
@@ -88,9 +91,10 @@ $(function () {
         $(".gnb").toggleClass("on");
     }); //////////////
 
+    
 
 
- 
+
 
 
     let prot = 0;
@@ -99,6 +103,10 @@ $(function () {
 
     $(document).on("DOMMouseScroll mousewheel", function (e) {
 
+        // 반응형 전환시 페이지 넘버 초기화
+        if ($(window).innerWidth() <= 1366) {
+           pnum=0;
+        }
 
 
         if (prot) return;

@@ -71,7 +71,10 @@ $(function () {
 
     $(document).on("mousewheel DOMMouseScroll", function (e) {
 
-
+        // 반응형 전환시 페이지 넘버 초기화
+        if ($(window).innerWidth() <= 1366) {
+            pnum = 0;
+        }
 
         if (prot) return;
         prot = 1;
