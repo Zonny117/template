@@ -3,11 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 
 
-.btnbx.forWeb, .mag.forWeb, .map_section_txt.forWeb, .btn_close.forWeb {
+.btnbx.forWeb,
+.mag.forWeb,
+.map_section_txt.forWeb,
+.btn_close.forWeb {
     display: block !important;
 }
 
-.btnbx.forMobile, .mag.forMobile, .map_section_txt.forMobile, .btn_close.forMobile {
+.btnbx.forMobile,
+.mag.forMobile,
+.map_section_txt.forMobile,
+.btn_close.forMobile {
     display: none !important;
 }
 
@@ -58,6 +64,10 @@ body {
     z-index: 999999;
 }
 
+.openMenu .gnb {
+    display: none;
+}
+
 .mMod1 {
     width: 50px;
     height: 50px;
@@ -87,6 +97,11 @@ body {
 }
 
 .open.on::after {
+    content: '';
+    background-image: url(../images/btn_close.png);
+}
+
+.openMenu .open::after {
     content: '';
     background-image: url(../images/btn_close.png);
 }

@@ -60,30 +60,32 @@ $(function () {
     $(".open").click(function () {
 
 
-        // 공백 주의
-        let txt = $(this).text();
-        // console.log(txt)
+        if($(window).innerWidth()>1366){
+            // 공백 주의
+            let txt = $(this).text();
+            // console.log(txt)
+    
+            if (txt === "open") {
+                $(this).text(txt.replace(txt, "close"))
+                $(this).addClass("on")
+                $("html,body").on('mousewheel DOMMouseScroll', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                });
+            } else if (txt === "close") {
+                $(this).text(txt.replace(txt, "open"))
+                $(this).removeClass("on")
+                $("html,body").off("mousewheel DOMMouseScroll");
+            }
 
-        if (txt === "open") {
-            $(this).text(txt.replace(txt, "close"))
-            $(this).addClass("on")
-            $("html,body").on('mousewheel DOMMouseScroll', function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
-            });
-        } else if (txt === "close") {
-            $(this).text(txt.replace(txt, "open"))
-            $(this).removeClass("on")
-            $("html,body").off("mousewheel DOMMouseScroll");
         }
 
 
+
         $(".openMenu").toggleClass("on");
-
         $("body").toggleClass("on");
-
-
+        $(".gnb").toggleClass("on");
     }); //////////////
 
 
