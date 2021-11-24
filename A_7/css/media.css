@@ -319,7 +319,7 @@
         right: 0;
         bottom: 0;
         /* ios mask */
-        -webkit-mask-image: -webkit-radial-gradient(white, black);
+        /* -webkit-mask-image: -webkit-radial-gradient(white, black); */
     }
 
     .mMod5 {
@@ -575,7 +575,4 @@ iframe {
         height: calc(100vh + 160px);
     }
 
-    .mMod9 .swiper-slide {
-        max-height: 300px;
-    }
 }
