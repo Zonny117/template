@@ -303,9 +303,21 @@
     .navi {
         width: 100%;
         min-width: unset;
-        height: 50px;
-        line-height: 50px;
+        height: 66px;
+        line-height: 66px;
         font-size: 14px;
+        padding-left: 5%;
+
+    }
+
+    .navi::before {
+        content: url(../images/ico_mod5.png);
+        margin-right: 20px;
+        vertical-align: middle;
+    }
+
+    .navi::after {
+        display: none;
     }
 
     .flex {
@@ -464,9 +476,26 @@
         font-size: 14px;
     }
 
-    .tel::after,
-    .save::after {
+    footer .tel::after,
+    footer .save::after {
+        display: none;
+    }
+
+    .openMenu .tel::after,
+    .openMenu .save::after {
         right: 5%;
+    }
+
+    footer .tel::before {
+        content: url(../images/white_arrow.png);
+        margin-right: 20px;
+        vertical-align: middle;
+    }
+
+    footer .save::before {
+        content: url(../images/save.png);
+        margin-right: 20px;
+        vertical-align: middle;
     }
 
     .mMod7 a {
@@ -484,13 +513,17 @@
         color: #000;
     }
 
-    .mMod7 a::after {
+    footer .mMod7 a::after,
+    footer .mMod10 a::after {
+        display: none;
         right: 5%;
     }
 
-    .mMod10 a::after {
+    .openMenu .mMod7 a::after,
+    .openMenu .mMod10 a::after {
         right: 5%;
     }
+
 
     .mMod7 a:first-of-type::after {
         content: url(../images/arrow_right_black.png);
@@ -505,6 +538,11 @@
         margin-right: 15px;
         background-repeat: no-repeat;
         background-size: 100%;
+    }
+
+
+    .mMod11 {
+        display: none;
     }
 
 
