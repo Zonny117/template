@@ -1,6 +1,16 @@
 @charset "utf-8";
 
-@media only screen and (max-width:768px) {
+@import url(../css/msky.css);
+
+@media only screen and (max-width:850px) {
+    .forWeb{
+        display: none;
+    }
+
+    .forMobile{
+        display: block;
+    }
+
     ::-webkit-scrollbar {
         width: 0;
     }
