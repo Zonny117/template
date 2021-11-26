@@ -1,0 +1,939 @@
+@charset "utf-8";
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2b2b2c93;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+@font-face {
+    font-family: 's300';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 's600';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: "s600";
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+}
+
+
+.txt {
+    font-family: "s300";
+    line-height: 170%;
+}
+
+/* 모듈 2 /////////////////////////////////////////// */
+
+.mMod2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+
+
+.background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 30%;
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.199);
+}
+
+.modBg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    height: 100%;
+}
+
+.mMod1 {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.mMod1 img {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.maintitle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.mMod0 {
+    color: #01f8a7;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.mMod3 h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+    line-height: 140%;
+}
+
+.mMod3 .txt {
+    font-size: 16px;
+    font-weight: normal;
+
+    margin-bottom: 50px;
+}
+
+.mMod6 .tit {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.mMod6 .telbx {
+    display: inline-block;
+    width: 320px;
+    height: 80px;
+    line-height: 80px;
+    background-color: #00f0a0;
+    border-radius: 10px;
+    text-align: right;
+    padding: 0 30px;
+    box-sizing: border-box;
+    margin-right: 15px;
+}
+
+.mMod6 .tel {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+}
+
+.mMod6 .tel::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background-image: url(../images/ico_mod6.png);
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+.mMod6 .savebx {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    background-color: #000;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.mMod6 .save {
+    font-size: 0;
+    text-indent: -9999px;
+    background-image: url(../images/ico_save01.png);
+    display: inline-block;
+    width: 20px;
+    height: 27px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    vertical-align: middle;
+}
+
+.mMod6 .txt {
+    font-size: 16px;
+}
+
+.scrollDown {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 130px;
+    z-index: 999;
+    font-size: 0;
+    text-indent: -9999px;
+    background-image: url(../images/scrolldown.svg);
+    width: 30px;
+    height: 30px;
+}
+
+.scrollDown::before {
+    content: '';
+    background-image: url(../images/scrolldown.png);
+    width: 57px;
+    height: 12px;
+    display: inline-block;
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* gnb///////////////////////////////////// */
+
+.gnb {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #212121;
+    z-index: 9999;
+}
+
+.sbx {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sbx .link {
+    position: relative;
+    width: 285px;
+    height: 80px;
+    line-height: 80px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    background-color: #2d2e30;
+    border-radius: 10px;
+}
+
+.sbx .link>a {
+    position: relative;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.sbx .link:hover {
+    background-color: #00f0a0;
+}
+
+.sbx .link:hover>a {
+    color: #000;
+}
+
+.link>a::after {
+    content: '';
+    background: url(../images/arrow.svg);
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.link:hover>a::after {
+    background: url(../images/arrow_hover.svg);
+}
+
+.link4>a::after {
+    background: url(../images/ico_mod10.svg);
+}
+
+.link4:hover>a::after {
+    background: url(../images/ico_mod10_hover.svg);
+}
+
+
+.content {
+    width: 100%;
+    height: 100%;
+}
+
+/* 모듈 8 //////////////////////////////////////////////////////////////////// */
+
+.mMod8 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.vid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.iframebx {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    height: 670px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* 모듈 4 //////////////////////////////////////////////////////////////////// */
+
+.mMod4 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    color: #fff;
+}
+
+.mMod4 .tit {
+    line-height: 140%;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+.mMod4 .txt {
+    padding-right: 50px;
+    box-sizing: border-box;
+    text-align: justify;
+    font-size: 16px;
+}
+
+.pbx {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+}
+
+.mMod4 .swiper-container {
+    background-color: #212121;
+    border-radius: 0 0 10px 10px;
+    padding: 80px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 550px;
+
+}
+
+.top {
+    position: relative;
+    background-color: #424347;
+    width: 100%;
+    height: 70px;
+    border-radius: 10px 10px 0 0;
+}
+
+.top::before {
+    content: '';
+    background-image: url(../images/ico_mod4.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 30px;
+    height: 26px;
+    background-size: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mMod4 .swiper-slide {
+    overflow-y: auto;
+}
+
+.swiper-button-next {
+    background-image: url(../images/btn_slide_next.png);
+    width: 8px;
+    height: 13px;
+    background-size: 100%;
+}
+
+.swiper-button-next::before {
+    content: '다음으로';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+}
+
+.swiper-button-prev {
+    background-image: url(../images/btn_slide_prev.png);
+    width: 8px;
+    height: 13px;
+    background-size: 100%;
+}
+
+.swiper-button-prev::after {
+    content: '이전으로';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+}
+
+.btnbx {
+    position: relative;
+    top: 50px;
+    width: 340px;
+    margin: 0 auto;
+}
+
+.swiper-pagination {
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.swiper-pagination-bullet {
+    background-color: #808080;
+    margin: 10px;
+}
+
+
+.swiper-pagination-bullet-active {
+    width: 32px;
+    border-radius: 15%;
+    background-color: #01f8a7;
+    transition: width .6s;
+}
+
+
+/* 모듈 9 ///////////////////////////////// */
+.mMod9 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+}
+
+.mMod9 .swiper-container {
+    width: 100%;
+    height: 620px;
+    overflow: visible;
+}
+
+.mMod9 .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.mag {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    color: #01f8a7;
+    font-size: 16px;
+}
+
+.mag::before {
+    content: '';
+    background-image: url(../images/mag.png);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: -5px;
+    margin-right: 10px;
+}
+
+/* 모듈5 ///////////////////////////////////////////// */
+.mMod5 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+
+.flex {
+    display: flex;
+    background-color: #212121;
+    height: 550px;
+    align-items: center;
+}
+
+.gMap {
+    width: 50%;
+    height: 100%;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+}
+
+.txtbx {
+    width: 50%;
+    color: #fff;
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+
+.navibx {
+    width: 100%;
+    height: auto;
+    line-height: 80px;
+    background-color: #2d2e30;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+
+.mMod5 .t {
+    display: block;
+    color: #01f8a7;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.mMod5 .txt {
+    margin-top: 10px;
+}
+
+.mMod5 .ti span {
+    font-size: 16px;
+}
+
+.navibx {
+    margin-top: 40px;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.navi {
+    display: block;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+}
+
+.navi::after {
+    content: '';
+    background-image: url(../images/arrow.svg);
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navibx:hover {
+    background-color: #01f8a7;
+}
+
+.navibx:hover .navi {
+    color: #000;
+}
+
+.navibx:hover .navi::after {
+    background-image: url(../images/arrow_hover.svg);
+}
+
+.mMod5 .top::before {
+    background-image: url(../images/ico_mod5.svg);
+    width: 23px;
+    height: 26px;
+}
+
+
+
+
+/* 히든박스 ////////////////////////////////// */
+body .hiddenbx {
+    display: none;
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    width: 100%;
+    background-color: #424347;
+    border-radius: 10px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+.hiddenbx::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: 100%;
+    height: 20px;
+    /* outline: 2px dotted red; */
+}
+
+
+/* 모듈 6  */
+.mMod6.hiddenbx .tit {
+    flex-direction: column;
+    margin-bottom: auto;
+}
+
+.mMod6.hiddenbx .tit:first-child {
+    display: block;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+
+.mMod6.hiddenbx .tit:first-child a::before {
+    display: none;
+}
+
+.mMod6.hiddenbx .tit:first-child .tel {
+    display: inline;
+    font-size: 26px;
+    color: #fff;
+}
+
+.mMod6.hiddenbx .txt {
+    word-break: normal;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.mMod6.hiddenbx .telbx {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #212121;
+}
+
+.mMod6.hiddenbx .telbx:hover {
+    background-color: #01f8a7;
+}
+
+.mMod6.hiddenbx .telbx:hover .tel {
+    color: #000;
+}
+
+.mMod6.hiddenbx .telbx:hover .tel::before {
+    background-image: url(../images/ico_mod6_02_hover.png);
+}
+
+.mMod6.hiddenbx .telbx .tel {
+    color: #01f8a7;
+    font-size: 16px;
+}
+
+.mMod6.hiddenbx .telbx .tel::before {
+    background-image: url(../images/ico_mod6_02.png);
+    width: 16px;
+    height: 16px;
+    background-size: 100%;
+}
+
+
+.mMod6.hiddenbx .savebx {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: right;
+    padding: 0 30px;
+    background-color: #212121;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.mMod6.hiddenbx .savebx:hover {
+    background-color: #01f8a7;
+}
+
+.mMod6.hiddenbx .savebx:hover .save {
+    color: #000;
+}
+
+.mMod6.hiddenbx .savebx:hover .save::before {
+    background-image: url(../images/ico_save02_hover.png);
+}
+
+
+.mMod6.hiddenbx .save {
+    font-size: 16px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-indent: 0;
+    color: #01f8a7;
+    background-image: none;
+}
+
+.mMod6.hiddenbx .save::before {
+    content: '';
+    background-image: url(../images/ico_save02.png);
+    width: 13px;
+    height: 18px;
+    display: inline-block;
+    background-size: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* 모듈 11 ////////////////////////////////////////////////// */
+.mMod11 {
+    display: flex;
+    flex-direction: column;
+}
+
+.mMod11 a {
+    position: relative;
+    width: 100%;
+    background-color: #212121;
+    color: #fff;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 10px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.mMod11 a+a {
+    margin-top: 10px;
+}
+
+.mMod11 a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30px;
+    width: 18px;
+    height: 18px;
+}
+
+.mMod11 a:hover {
+    color: #000;
+    background-color: #01f8a7;
+}
+
+a.facebook::before {
+    background-image: url(../images/facebook.svg);
+}
+
+a.instagram::before {
+    background-image: url(../images/instagram.svg);
+}
+
+a.twiter::before {
+    background-image: url(../images/twitter.svg);
+}
+
+a.youtube::before {
+    background-image: url(../images/youtube.svg);
+}
+
+
+
+.mMod11 a.facebook:hover::before {
+    background-image: url(../images/facebook_hover.svg);
+}
+
+.mMod11 a.instagram:hover::before {
+    background-image: url(../images/instagram_hover.svg);
+}
+
+.mMod11 a.twiter:hover::before {
+    background-image: url(../images/twitter_hover.svg);
+}
+
+.mMod11 a.youtube:hover::before {
+    background-image: url(../images/youtube_hover.svg);
+}
+
+
+/* 모듈 7 */
+.mMod7 {
+    display: flex;
+    flex-direction: column;
+}
+
+.mMod7 a {
+    position: relative;
+    color: #fff;
+    width: 100%;
+    background-color: #212121;
+    border-radius: 10px;
+    line-height: 120%;
+    height: auto;
+    padding: 22px 30px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.mMod7 a:hover {
+    background-color: #01f8a7;
+    color: #000;
+}
+
+.mMod7 a:hover::after {
+    background-image: url(../images/arrow_hover.svg);
+}
+
+.mMod7 a+a {
+    margin-top: 10px;
+}
+
+.mMod7 a::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    content: '';
+    background-image: url(../images/arrow.svg);
+    width: 18px;
+    height: 18px;
+}
+
+/* 메뉴호버 */
+
+.link1:hover .mMod6 {
+    display: block;
+}
+
+.link2:hover .mMod11 {
+    display: flex;
+}
+
+.link3:hover .mMod7 {
+    display: flex;
+}
+
+
+/* 사진 레이어 */
+
+.lMod9 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    display: none;
+}
+
+.lMod9::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+}
+
+.lMod9 .swiper-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1200px;
+    height: 700px;
+    transform: translate(-50%, -50%);
+}
+
+.lMod9 .swiper-container img {
+    width: 100%;
+}
+
+.lMod9 .swiper-slide {
+    max-height: 100%;
+    overflow-y: auto;
+    line-height: 700px;
+}
+
+.btn_close{
+    position: absolute;
+    width: 60px;
+    top: 30px;
+    right: 30px;
+    color: #01f8a7;
+    font-size: 16px;
+    text-align: right;
+}
+
+.btn_close::before{
+    content: '';
+    background-image: url(../images/btn_close.png);
+    position: absolute;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+}
