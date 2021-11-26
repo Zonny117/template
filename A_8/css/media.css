@@ -56,7 +56,7 @@
     }
 
     .gnb {
-        height: 50px;
+        height: 70px;
         position: sticky;
         position: -webkit-sticky;
         top: 0;
@@ -74,8 +74,8 @@
 
 
     .mMod1 {
-        width: 30px;
-        height: 30px;
+        width: 50px;
+        height: 50px;
     }
 
     .open {
@@ -636,6 +636,17 @@
         margin-bottom: 0;
     }
 }
+@media only screen and (max-width:812px) {
+    .gnb{
+        height: 50px;
+    }
+
+    .mMod1{
+        width: 30px;
+        height: 30px;
+    }
+}
+
 
 @media only screen and (max-width:280px) {
     .mMod11 a {
