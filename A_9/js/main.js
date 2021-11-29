@@ -3,11 +3,11 @@ $(function () {
     // 아이폰 화면 조정
     let iphone = (/iPhone/i.test(navigator.userAgent));
 
-    if (iphone) {
-        $(".mMod2").css({
-            height: "90vh"
-        });
-    }
+    // if (iphone) {
+    //     $(".mMod2").css({
+    //         height: "90vh"
+    //     });
+    // }
 
     $(".mag.forWeb").click(function () {
 
@@ -32,6 +32,8 @@ $(function () {
         });
 
         $("body").addClass("on");
+
+        $(".mSky").addClass("on");
     });
 
     $(".btn_close.forWeb").click(function () {
@@ -51,24 +53,34 @@ $(function () {
             overflowY: "auto"
         });
         $("body").removeClass("on");
+        $(".mSky").removeClass("on");
     });
 
     $(".gnb.forMobile").click(function () {
 
+        // $("body").toggleClass("on");
+
+        $(".mSky").toggleClass("on");
+
         $(".hiddenMobile").toggleClass("on");
 
 
-        // 공백 주의
         let txt = $("a", this).text();
         // console.log(txt)
 
         if (txt === "열기") {
             $("a", this).text(txt.replace(txt, "닫기"));
             $(this).addClass("on");
+            $("html, body, #wrap").css({
+                overflowY: "hidden"
+            });
 
         } else if (txt === "닫기") {
             $("a", this).text(txt.replace(txt, "열기"));
             $(this).removeClass("on");
+            $("html, body, #wrap").css({
+                overflowY: "auto"
+            });
         }
 
     }); /////////

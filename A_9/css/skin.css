@@ -453,7 +453,7 @@ iframe {
 
 .swiper-pagination-bullet-active {
     width: 32px;
-    border-radius: 15%;
+    border-radius: 25%;
     background-color: #01f8a7;
     transition: width .6s;
 }
@@ -784,14 +784,6 @@ a.youtube::before {
     text-align: left;
 }
 
-.mMod7 a:hover {
-    background-color: #01f8a7;
-    color: #000;
-}
-
-.mMod7 a:hover::after {
-    background-image: url(../images/arrow_hover.svg);
-}
 
 .mMod7 a+a {
     margin-top: 10px;
@@ -872,9 +864,19 @@ a.youtube::before {
 
 /* pc에서만 호버 */
 @media only screen and (min-width:1367px) {
+
+    .mMod7 a:hover {
+        background-color: #01f8a7;
+        color: #000;
+    }
+
+    .mMod7 a:hover::after {
+        background-image: url(../images/arrow_hover.svg);
+    }
+
     .sbx .link:hover {
         background-color: #00f0a0;
-        }
+    }
 
     .sbx .link:hover>a {
         color: #000;
@@ -958,11 +960,11 @@ a.youtube::before {
     }
 }
 
-.mSky{
+.mSky {
     top: auto;
     bottom: 30px;
 }
 
-.hiddenMobile{
+.hiddenMobile {
     display: none !important;
 }
