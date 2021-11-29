@@ -270,13 +270,7 @@ body {
     height: 100%;
 }
 
-.sbx .link:hover {
-    background-color: #00f0a0;
-}
 
-.sbx .link:hover>a {
-    color: #000;
-}
 
 .link>a::after {
     content: '';
@@ -291,17 +285,13 @@ body {
     transform: translateY(-50%);
 }
 
-.link:hover>a::after {
-    background: url(../images/arrow_hover.svg);
-}
+
 
 .link4>a::after {
     background: url(../images/ico_mod10.svg);
 }
 
-.link4:hover>a::after {
-    background: url(../images/ico_mod10_hover.svg);
-}
+
 
 
 .content {
@@ -593,17 +583,7 @@ iframe {
     transform: translateY(-50%);
 }
 
-.navibx:hover {
-    background-color: #01f8a7;
-}
 
-.navibx:hover .navi {
-    color: #000;
-}
-
-.navibx:hover .navi::after {
-    background-image: url(../images/arrow_hover.svg);
-}
 
 .mMod5 .top::before {
     background-image: url(../images/ico_mod5.svg);
@@ -674,17 +654,7 @@ body .hiddenbx {
     background-color: #212121;
 }
 
-.mMod6.hiddenbx .telbx:hover {
-    background-color: #01f8a7;
-}
 
-.mMod6.hiddenbx .telbx:hover .tel {
-    color: #000;
-}
-
-.mMod6.hiddenbx .telbx:hover .tel::before {
-    background-image: url(../images/ico_mod6_02_hover.png);
-}
 
 .mMod6.hiddenbx .telbx .tel {
     color: #01f8a7;
@@ -710,17 +680,7 @@ body .hiddenbx {
     margin-top: 10px;
 }
 
-.mMod6.hiddenbx .savebx:hover {
-    background-color: #01f8a7;
-}
 
-.mMod6.hiddenbx .savebx:hover .save {
-    color: #000;
-}
-
-.mMod6.hiddenbx .savebx:hover .save::before {
-    background-image: url(../images/ico_save02_hover.png);
-}
 
 
 .mMod6.hiddenbx .save {
@@ -780,10 +740,7 @@ body .hiddenbx {
     height: 18px;
 }
 
-.mMod11 a:hover {
-    color: #000;
-    background-color: #01f8a7;
-}
+
 
 a.facebook::before {
     background-image: url(../images/facebook.svg);
@@ -803,21 +760,7 @@ a.youtube::before {
 
 
 
-.mMod11 a.facebook:hover::before {
-    background-image: url(../images/facebook_hover.svg);
-}
 
-.mMod11 a.instagram:hover::before {
-    background-image: url(../images/instagram_hover.svg);
-}
-
-.mMod11 a.twiter:hover::before {
-    background-image: url(../images/twitter_hover.svg);
-}
-
-.mMod11 a.youtube:hover::before {
-    background-image: url(../images/youtube_hover.svg);
-}
 
 
 /* 모듈 7 */
@@ -863,19 +806,6 @@ a.youtube::before {
     height: 18px;
 }
 
-/* 메뉴호버 */
-
-.link1:hover .mMod6 {
-    display: block;
-}
-
-.link2:hover .mMod11 {
-    display: flex;
-}
-
-.link3:hover .mMod7 {
-    display: flex;
-}
 
 
 /* 사진 레이어 */
@@ -919,7 +849,7 @@ a.youtube::before {
     line-height: 800px;
 }
 
-.btn_close{
+.btn_close {
     position: absolute;
     width: 60px;
     top: 30px;
@@ -929,11 +859,99 @@ a.youtube::before {
     text-align: right;
 }
 
-.btn_close::before{
+.btn_close::before {
     content: '';
     background-image: url(../images/btn_close.png);
     position: absolute;
     left: 0px;
     width: 20px;
     height: 20px;
+}
+
+/* pc에서만 호버 */
+@media (hover:hover) {
+    .sbx .link:hover {
+        background-color: #00f0a0;
+    }
+
+    .sbx .link:hover>a {
+        color: #000;
+    }
+
+    .link:hover>a::after {
+        background: url(../images/arrow_hover.svg);
+    }
+
+    .link4:hover>a::after {
+        background: url(../images/ico_mod10_hover.svg);
+    }
+
+    .navibx:hover {
+        background-color: #01f8a7;
+    }
+
+    .navibx:hover .navi {
+        color: #000;
+    }
+
+    .navibx:hover .navi::after {
+        background-image: url(../images/arrow_hover.svg);
+    }
+
+    .mMod6.hiddenbx .telbx:hover {
+        background-color: #01f8a7;
+    }
+
+    .mMod6.hiddenbx .telbx:hover .tel {
+        color: #000;
+    }
+
+    .mMod6.hiddenbx .telbx:hover .tel::before {
+        background-image: url(../images/ico_mod6_02_hover.png);
+    }
+
+    .mMod6.hiddenbx .savebx:hover {
+        background-color: #01f8a7;
+    }
+
+    .mMod6.hiddenbx .savebx:hover .save {
+        color: #000;
+    }
+
+    .mMod6.hiddenbx .savebx:hover .save::before {
+        background-image: url(../images/ico_save02_hover.png);
+    }
+
+    .mMod11 a:hover {
+        color: #000;
+        background-color: #01f8a7;
+    }
+
+    .mMod11 a.facebook:hover::before {
+        background-image: url(../images/facebook_hover.svg);
+    }
+
+    .mMod11 a.instagram:hover::before {
+        background-image: url(../images/instagram_hover.svg);
+    }
+
+    .mMod11 a.twiter:hover::before {
+        background-image: url(../images/twitter_hover.svg);
+    }
+
+    .mMod11 a.youtube:hover::before {
+        background-image: url(../images/youtube_hover.svg);
+    }
+
+    .link1:hover .mMod6 {
+        display: block;
+    }
+
+    .link2:hover .mMod11 {
+        display: flex;
+    }
+
+    .link3:hover .mMod7 {
+        display: flex;
+    }
 }
