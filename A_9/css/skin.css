@@ -869,10 +869,10 @@ a.youtube::before {
 }
 
 /* pc에서만 호버 */
-@media (hover: hover) {
+@media only screen and (min-width:1367px) {
     .sbx .link:hover {
         background-color: #00f0a0;
-    }
+        }
 
     .sbx .link:hover>a {
         color: #000;

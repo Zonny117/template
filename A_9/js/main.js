@@ -1,5 +1,13 @@
 $(function () {
 
+    let iphone = (/iPhone/i.test(navigator.userAgent));
+
+    if(iphone){
+        $(".mMod2").css({
+            height:"90vh"
+        });
+    }
+
     $(".mag.forWeb").click(function () {
 
         $(".lMod9").css({
@@ -12,12 +20,36 @@ $(function () {
         });
     });
 
-    $(".btn_close").click(function () {
+    $(".mag.forMobile").click(function () {
+
+        $(".lMod9").css({
+            display: "block"
+        });
+
+        $("html, body, #wrap").css({
+            overflowY: "hidden"
+        });
+
+        $("body").addClass("on");
+    });
+
+    $(".btn_close.forWeb").click(function () {
 
         $(".lMod9").css({
             display: "none"
         });
         $("html,body").off("mousewheel DOMMouseScroll");
+    });
+
+    $(".btn_close.forMobile").click(function () {
+
+        $(".lMod9").css({
+            display: "none"
+        });
+        $("html, body, #wrap").css({
+            overflowY: "auto"
+        });
+        $("body").removeClass("on");
     });
 
     let prot = 0;
