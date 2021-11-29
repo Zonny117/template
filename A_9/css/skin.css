@@ -869,7 +869,7 @@ a.youtube::before {
 }
 
 /* pc에서만 호버 */
-@media (hover:hover) {
+@media (hover: hover) {
     .sbx .link:hover {
         background-color: #00f0a0;
     }

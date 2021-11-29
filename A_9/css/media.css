@@ -221,6 +221,9 @@
         width: 100%;
         padding: 30px 20px;
     }
+
+    
+
 }
 
 @media (orientation: landscape) and (max-height:450px) {
@@ -234,3 +237,4 @@
         height: 180vh;
     }
 }
+
