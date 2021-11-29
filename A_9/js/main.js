@@ -1,13 +1,22 @@
 $(function () {
 
-    // 아이폰 화면 조정
-    let iphone = (/iPhone/i.test(navigator.userAgent));
+    let menu = [
+        $(".mMod6.hiddenbx").length,
+        $(".mMod11.hiddenbx").length,
+        $(".mMod7.hiddenbx").length
+    ]
 
-    // if (iphone) {
-    //     $(".mMod2").css({
-    //         height: "90vh"
-    //     });
-    // }
+    for (i = 0; i <= 2; i++) {
+        // console.log(menu[i])
+
+        if (menu[i] === 0) {
+
+            $(".link" + (i + 1)).css({
+                display: "none"
+            })
+        }
+    }
+
 
     $(".mag.forWeb").click(function () {
 
