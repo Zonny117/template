@@ -1,6 +1,9 @@
 @charset "utf-8";
 
 @media only screen and (max-width:1366px) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
 
     ::-webkit-scrollbar {
         width: 0px;
@@ -222,19 +225,18 @@
         padding: 30px 20px;
     }
 
-    
+
 
 }
 
 @media (orientation: landscape) and (max-height:450px) {
-    .mMod2{
+    .mMod2 {
         height: 150vh;
     }
 }
 
 @media (orientation: landscape) and (max-height:320px) {
-    .mMod2{
+    .mMod2 {
         height: 180vh;
     }
 }
-
