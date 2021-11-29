@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -40,6 +41,7 @@ body {
 
 body {
     font-family: "s600";
+    background-color: #000;
 }
 
 #wrap {
@@ -954,4 +956,13 @@ a.youtube::before {
     .link3:hover .mMod7 {
         display: flex;
     }
+}
+
+.mSky{
+    top: auto;
+    bottom: 30px;
+}
+
+.hiddenMobile{
+    display: none !important;
 }

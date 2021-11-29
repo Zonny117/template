@@ -1,10 +1,11 @@
 $(function () {
 
+    // 아이폰 화면 조정
     let iphone = (/iPhone/i.test(navigator.userAgent));
 
-    if(iphone){
+    if (iphone) {
         $(".mMod2").css({
-            height:"90vh"
+            height: "90vh"
         });
     }
 
@@ -51,6 +52,28 @@ $(function () {
         });
         $("body").removeClass("on");
     });
+
+    $(".gnb.forMobile").click(function () {
+
+        $(".hiddenMobile").toggleClass("on");
+
+
+        // 공백 주의
+        let txt = $("a", this).text();
+        // console.log(txt)
+
+        if (txt === "열기") {
+            $("a", this).text(txt.replace(txt, "닫기"));
+            $(this).addClass("on");
+
+        } else if (txt === "닫기") {
+            $("a", this).text(txt.replace(txt, "열기"));
+            $(this).removeClass("on");
+        }
+
+    }); /////////
+
+
 
     let prot = 0;
     let pnum = 0;
