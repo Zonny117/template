@@ -17,6 +17,16 @@ $(function () {
         }
     }
 
+    let link = $(".link").length;
+
+    // console.log(link)
+
+    if (link === 1) {
+        $(".ml").css({
+            marginLeft: 0
+        });
+    };
+
 
     $(".mag.forWeb").click(function () {
 
