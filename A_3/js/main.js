@@ -1,60 +1,24 @@
 $(function () {
 
+    let mod8 = $(".mMod8").length;
+
+    if (mod8 === 0) {
+
+        $(".youtubePlay").css({
+            display: "none"
+        })
+    }
+
+    let content = $(".mMod4, .mMod8, .mMod9, .mMod5, .mMod10").length;
+
+    if (content === 0) {
+        $(".content").css({
+            display: "none"
+        })
+    }
 
 
     document.getElementsByClassName("vid").controls = false;
-
-
-    // let prot = 0;
-
-    // let ts, te, touch;
-
-    // let winH = $(window).innerHeight()
-
-
-    // // 모바일 터치 이벤트
-    // $(document).on("touchstart", function (e) {
-
-    //     e.stopPropagation();
-
-
-    //     ts = e.originalEvent.touches[0].screenY;
-    // });
-
-    // $(document).on("touchend", function (e) {
-
-    //     e.stopPropagation();
-
-
-
-    //     if (prot) return;
-
-    //     prot = 1;
-
-    //     setTimeout(function () {
-    //         prot = 0;
-    //     }, 500)
-
-
-    //     te = e.originalEvent.changedTouches[0].screenY;
-
-    //     touch = ts - te;
-
-    //     // 컨텐츠 박스 슬라이드업
-    //     if (touch > 0 && winW <= 768) {
-    //         $(".mMod2").stop().animate({
-    //             height: 0 + "%"
-    //         }, 500, 'easeOutCubic')
-    //     } //////////////////////////
-    //     else if (touch < 0 && winW <= 768) {
-    //         $(".mMod2").stop().animate({
-    //             height: 100 + "%"
-    //         }, 500, 'easeOutCubic')
-    //     }
-
-    // }); ////////////////////////////////////
-
-
 
     var slides = $(".mMod9 .swiper-slide").length;
     // 슬라이더 중앙 정렬
@@ -99,6 +63,7 @@ $(function () {
 
         var mMod9 = new Swiper(".mMod9 .swiper-container", {
             slidesPerView: 1,
+            spaceBetween: 30,
             pagination: {
                 el: ".swiper-pagination",
             },
@@ -109,7 +74,9 @@ $(function () {
         });
     } else {
         var mMod9 = new Swiper(".mMod9 .swiper-container", {
+            loop:"true",
             slidesPerView: 3,
+            spaceBetween: 30,
             pagination: {
                 el: ".swiper-pagination",
             },
@@ -127,6 +94,10 @@ $(function () {
             zIndex: "-1",
             opacity: "0"
         })
+
+        $("body").css({
+            overflowY: "auto"
+        })
     })
 
     if (winW > 768) {
@@ -138,6 +109,10 @@ $(function () {
                 opacity: "1"
             });
 
+            $("body").css({
+                overflowY: "hidden"
+            })
+
         }); ///////////////////////////////
 
     } else {
@@ -146,6 +121,9 @@ $(function () {
                 zIndex: "999999999",
                 opacity: "1"
             });
+            $("body").css({
+                overflowY: "hidden"
+            })
         })
     }
 

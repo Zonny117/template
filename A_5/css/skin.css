@@ -105,6 +105,13 @@ body::before {
     margin-right: 40px;
 }
 
+.mMod1 img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 0 0 10px 10px;
+}
+
 /* 모듈 0 - 서비스명 */
 .mMod0 {
     padding-top: 40px;
@@ -311,14 +318,15 @@ body::before {
     word-break: normal;
 }
 
-.mMod4 li {
+.mMod4 .swiper-slide {
     text-align: left;
     padding: 20px 30px;
+    box-sizing: border-box;
     border: 1px solid #bdbdbd;
     border-radius: 10px;
 }
 
-.mMod4 li+li {
+.mMod4 .swiper-slide+.swiper-slide {
     margin-top: 10px;
 }
 

@@ -1,6 +1,6 @@
 $(function () {
 
-    $(document).on("load",function(){
+    $(document).on("load", function () {
         iNoBounce.enable()
     });
 
@@ -14,7 +14,9 @@ $(function () {
 
     // 아이프레임 일시정지
     $(".btn_menu_slide.on").click(function () {
-        $("iframe")[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+        if ($(".mMod8.forWeb").length === 1) {
+            $(".mMod8.forWeb iframe")[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+        }
     });
 
 
@@ -64,7 +66,11 @@ $(function () {
 
     $(".btn_menu_slide_m").click(function () {
 
-        $("iframe")[1].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+
+        if ($(".mMod8.forMoblie").length === 1) {
+            $(".mMod8.forMoblie iframe")[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+        }
+
 
         $(".content.forMobile .module").stop().animate({
             top: "100%"
@@ -78,7 +84,7 @@ $(function () {
             opacity: 0
         })
         $(".menu_slidebx").stop().animate({
-            top: "-22%"
+            top: "-30%"
         }, 1000, 'easeOutCubic')
 
         $(".connectbx").removeClass("on");

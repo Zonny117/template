@@ -1,6 +1,15 @@
 @charset "utf-8";
 
 @media only screen and (max-width:1366px) {
+
+    .mMod3 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+
     .mMod6.forWeb {
         width: 192px;
     }
@@ -118,39 +127,23 @@
 
 
     /* 로고 */
-    .mMod1.forMobile {
-        display: flex !important;
-        align-items: flex-start;
-    }
 
     .mMod1 {
-        display: unset;
+        width: 60px;
+        height: 60px;
+        display: block !important;
         position: unset;
         font-size: 18px;
         margin: unset;
         padding-top: unset;
         border-bottom: unset;
-        width: unset;
         margin-bottom: 20px;
         text-align: left;
     }
 
-    .mMod1 img {
-        width: 75px;
-        height: 75px;
-    }
-
-    .mMod1 span {
+    .mMod0 {
         position: relative;
-    }
-
-    .mMod1 span::after {
-        content: '';
-        position: absolute;
-        display: block;
-        padding-top: 10px;
-        border-bottom: 1px solid #fff;
-        width: 100%;
+        font-size: 18px;
     }
 
     /* 메인 타이틀 박스 */
@@ -302,7 +295,8 @@
 
     .hidden_sbx {
         position: absolute;
-        border-radius: 15px 15px 0 0;
+        border-radius: 15px 15px 0 0 !important;
+        -moz-border-radius: 15px 15px 0 0 !important;
         margin: unset;
         bottom: -120%;
         background-color: #fff;
@@ -334,17 +328,17 @@
         font-size: 2rem;
     }
 
-    .mMod4 li {
+    .mMod4 .swiper-slide {
         padding: unset;
     }
 
-    .mMod4 li+li {
+    .mMod4 .swiper-slide+.swiper-slide {
         border-top: 1px solid #ccc;
         padding-top: 30px;
         box-sizing: border-box;
     }
 
-    .mMod4 li::before {
+    .mMod4 .swiper-slide::before {
         display: none;
     }
 

@@ -19,6 +19,56 @@ $(function () {
         $(".flex").removeClass("page");
     }
 
+    if (child === 1) {
+        $("footer .mMod7").css({
+            marginLeft: 1
+        })
+    }
+
+
+
+
+    $(".mMod4 .swiper-slide").on('mousemove', function () {
+
+
+        let tit = $(".tit", this).outerHeight(true);
+        let txt = $(".txt", this).outerHeight(true);
+
+        let height = tit + txt
+
+        // console.log(height);
+
+        if (height >= 360) {
+            $("html,body").on('mousewheel DOMMouseScroll', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            });
+        } else {
+
+            $("html,body").off("mousewheel DOMMouseScroll");
+
+        }
+
+    });
+
+
+    $(".mMod4 .swiper-slide").on('mouseleave', function () {
+
+        $("html,body").off("mousewheel DOMMouseScroll");
+    })
+
+
+
+
+
+
+
+
+
+
+
+
     // 사진 확대
     $(".mag.forWeb").click(function () {
 
@@ -108,6 +158,13 @@ $(function () {
                 pnum = 0;
             }
         }
+
+
+
+
+
+
+
         // console.log(page + "페이지")
         // console.log(pnum + "페이지 넘버");
 
@@ -170,7 +227,7 @@ $(function () {
 
         let touch = ts - te;
 
-        console.log(touch)
+        // console.log(touch)
 
 
         if (touch > 30) {

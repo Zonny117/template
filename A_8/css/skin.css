@@ -73,11 +73,14 @@ body {
     height: 50px;
     border-radius: 50%;
     overflow: hidden;
+    border: 2px solid #e5854f;
+    background-color: #e5854f;
 }
 
 .mMod1 img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .open {
@@ -127,6 +130,7 @@ body {
 
 .openTitle {
     width: 50%;
+    height: 100%;
     text-align: center;
     position: relative;
 }
@@ -135,9 +139,17 @@ body {
     content: '';
     border-right: 1px solid #000;
     position: absolute;
-    top: -225px;
+    top: 50%;
+    transform: translateY(-50%);
     right: 0;
-    height: 780px;
+    height: 90%;
+}
+
+.lbx {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .openTitle .mMod3 {
@@ -264,12 +276,15 @@ body {
     font-size: 0;
     text-indent: -9999px;
     background-image: url(../images/scrolldown.png);
-    width: 60px;
+    width: 45px;
     height: 100px;
-    bottom: 40px;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
+
 
 .background {
     width: 100%;
@@ -282,7 +297,7 @@ body {
 /* 모듈 0, 3 박스 */
 .maintitle {
     position: absolute;
-    width: 560px;
+    width: 32%;
     padding: 0 40px;
     box-sizing: border-box;
     background-image: linear-gradient(145deg, #fbfaf6 20%, #f5f2eb83 100%);
@@ -342,12 +357,13 @@ body {
     height: 100%;
     padding: 160px 20px;
     box-sizing: border-box;
+    align-items: center;
 }
 
 .mMod4 .swiper-container {
     width: 50%;
-    height: 100%;
     margin: 0;
+    height: 400px;
 }
 
 .mMod4 .swiper-wrapper {
@@ -361,8 +377,8 @@ body {
     max-height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    padding: 100px 0;
-    padding-left: 30%;
+    padding-left: 300px;
+    padding-right: 100px;
     box-sizing: border-box;
 }
 
@@ -436,11 +452,7 @@ body {
     width: 98%;
     bottom: 40px;
     height: 4px;
-    border-radius: 0px;
-}
-
-.swiper-scrollbar-drag{
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .fractionbar {
@@ -651,6 +663,7 @@ iframe {
     position: relative;
     color: #fff;
     width: 50%;
+    line-height: 120%;
     text-align: center;
     font-size: 30px;
     margin: unset;

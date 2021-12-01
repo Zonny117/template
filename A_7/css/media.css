@@ -9,6 +9,14 @@
 
 
 @media only screen and (max-width:1366px) {
+
+    html,
+    body,
+    #wrap {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
     .mSky {
         top: auto;
         bottom: 30px;
@@ -455,6 +463,10 @@
         border-right: none;
     }
 
+    .mMod5 .ti {
+        flex-direction: column;
+    }
+
     .mMod5 .ti span {
         display: block;
         margin-left: unset;
@@ -533,6 +545,7 @@
         border-radius: 10px;
         box-sizing: border-box;
         height: 100%;
+        width: 100%;
     }
 
     .mMod10 a {
@@ -563,11 +576,11 @@
 
     .attach_section_txt {
         left: 5px;
-        font-size: 2vw;
+        font-size: 14px;
     }
 
     .link_section_txt {
-        font-size: 2vw;
+        font-size: 14px;
         left: 5px;
     }
 
@@ -653,8 +666,21 @@ iframe {
         width: 120px;
         height: 120px;
     }
+
+    .attach_section_txt,
+    .link_section_txt {
+        font-size: 12px;
+    }
 }
 
+
+@media only screen and (max-width:280px) {
+
+    .attach_section_txt,
+    .link_section_txt {
+        font-size: 10px;
+    }
+}
 
 
 /* 모바일 가로모드 */

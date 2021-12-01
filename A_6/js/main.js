@@ -2,12 +2,21 @@ $(function () {
 
 
 
+    let mod5 = $(".mMod5").length;
+
+    if (mod5 === 0) {
+        $("footer").css({
+            display: "none"
+        })
+    }
+
+
     $(window).on('DOMMouseScroll mousewheel keydown keyup', function () {
 
         let scT = $("body").scrollTop();
 
         let footer = $(".mMod5").offset().top;
-        let mod3 = $(".mMod3").height();
+        // let mod3 = $(".mMod3").height();
 
         let value = scT - footer;
         // console.log(scT + "body")
@@ -37,13 +46,6 @@ $(function () {
             $(".mMod11.forWeb").removeClass("on");
         }
 
-        if(scT >= mod3){
-            $(".lbx .mMod3").addClass("on");
-        }
-
-        else{
-            $(".lbx .mMod3").removeClass("on");
-        }
     }); ////////////////////
 
 
@@ -106,5 +108,5 @@ $(function () {
         }
     });
 
-   
+
 }); /////////////////

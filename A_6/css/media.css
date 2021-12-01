@@ -194,6 +194,7 @@
         padding: unset;
         height: unset;
         margin-bottom: 43px;
+        width: 85%;
     }
 
     .top_menu .mMod3::after {
@@ -275,6 +276,7 @@
     .titlebx {
         display: flex;
         position: absolute;
+        top: 20px;
     }
 
 
@@ -301,7 +303,8 @@
     }
 
     .mMod3 {
-        padding-bottom: 50vh;
+        padding-bottom: 28vh;
+        height: auto;
     }
 
     .mMod3 h2 {

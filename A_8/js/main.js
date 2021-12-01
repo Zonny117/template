@@ -6,6 +6,14 @@ $(function () {
     let openchild = $(".openTitle .mMod0, .openTitle .mMod3").length;
     let rbx = $(".rbx .mMod6, .rbx .mMod11").length;
 
+    let mod1 = $(".gnb .mMod1").length;
+
+    if (mod1 === 0) {
+        $(".gnb").css({
+            justifyContent: "flex-end"
+        })
+    }
+
     // console.log(child)
 
     if (child === 0) {
@@ -26,6 +34,38 @@ $(function () {
             display: "none"
         });
     } ////////////////////
+
+
+    $(".mMod4 .swiper-slide").on('mousemove', function () {
+
+
+        let tit = $(".tit", this).outerHeight(true);
+        let txt = $(".txt", this).outerHeight(true);
+
+        let height = tit + txt
+
+        // console.log(height);
+
+        if (height >= 400) {
+            $("html,body").on('mousewheel DOMMouseScroll', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            });
+        } else {
+
+            $("html,body").off("mousewheel DOMMouseScroll");
+
+        }
+
+    });
+
+
+    $(".mMod4 .swiper-slide").on('mouseleave', function () {
+
+        $("html,body").off("mousewheel DOMMouseScroll");
+    })
+
 
 
     $(".mag.forWeb").click(function () {
@@ -102,8 +142,8 @@ $(function () {
         $("html, body, #wrap").css({
             overflowY: "auto"
         });
-        
-    });//////////////////////
+
+    }); //////////////////////
 
 
 

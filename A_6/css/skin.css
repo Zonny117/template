@@ -57,7 +57,8 @@ body {
 /* 로고 박스 */
 .titlebx {
     position: fixed;
-    top: 30px;
+    top: 10px;
+    max-height: 80px;
     display: flex;
     align-items: center;
     z-index: 9999;
@@ -66,6 +67,16 @@ body {
 .mMod0 {
     margin-left: 16px;
     font-weight: bold;
+}
+
+.mMod1 {
+    width: 80px;
+    height: auto;
+}
+
+.mMod1 img {
+    width: 100%;
+    object-fit: cover;
 }
 
 /* 왼쪽 박스 모듈 3 */
@@ -298,6 +309,7 @@ body {
 .mMod10.forWeb {
     width: 10%;
     margin-left: 40px;
+    white-space: nowrap;
 }
 
 .mMod10.forWeb a::after {
@@ -341,7 +353,7 @@ body {
 .mMod3 {
     position: relative;
     width: 100%;
-    height: 35vw;
+    padding-bottom: 10vw;
 }
 
 .mMod3 h2 {
@@ -426,6 +438,7 @@ body {
 .mMod4 .tit {
     font-weight: bold;
     font-size: 30px;
+    line-height: 120%;
 }
 
 .mMod4 .txt {

@@ -11,13 +11,13 @@ body {
     width: 100%;
     height: 100%;
     line-height: unset;
-   
+
 }
 
 /* 전체박스 */
 #wrap {
     width: 100%;
-    height: 118%;
+    height: 100%;
     min-width: 1200px;
     background-color: #faedc9
 }
@@ -115,8 +115,13 @@ body {
 }
 
 /* ////////////////////////////// 메인 글귀////////////////////////// */
-.mMod3{
+.mMod3 {
     margin-top: 50px;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .mMod3 h2 {
@@ -216,7 +221,7 @@ body {
 }
 
 
-.mMod4 li+li {
+.mMod4 .swiper-slide+.swiper-slide {
     margin-top: 30px;
 }
 
@@ -255,10 +260,13 @@ body {
 
 .mMod9 .swiper-container {
     width: 100%;
+    height: 400px;
 }
 
 .mMod9 .swiper-container img {
-    width: 381px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .mMod9 .swiper-wrapper {
@@ -392,7 +400,7 @@ footer {
 .mMod10 {
     position: absolute;
     top: 50%;
-    left:69%;
+    left: 69%;
     transform: translateY(-50%);
 }
 
@@ -461,19 +469,28 @@ iframe {
 }
 
 .modBg .swiper-container {
-    width: 800px;
-    height: 542px;
+    width: 1200px;
+    height: 700px;
 }
 
 .modBg .swiper-container img {
     width: 100%;
-    height: 100%;
+}
+
+.modBg .swiper-slide {
+    height: 700px;
+    line-height: 700px;
+}
+
+.modBg .swiper-slide.swiper-slide-active {
+    max-height: 700px;
+    overflow-y: auto;
 }
 
 .modBg .swiper-button-next {
     position: absolute;
-    top: -40px;
-    right: 26px;
+    top: -19px;
+    right: 7px;
     background: url(../images/mag_slider_next.png) no-repeat;
     background-size: 100% 100%;
     transform: scale(1.5);
@@ -482,8 +499,8 @@ iframe {
 
 .modBg .swiper-button-prev {
     position: absolute;
-    top: -40px;
-    left: 695px;
+    top: -19px;
+    left: 1116px;
     background: url(../images/mag_slider_prev.png) no-repeat;
     background-size: 100% 100%;
     transform: scale(1.5);
@@ -493,7 +510,7 @@ iframe {
 .slide-exit {
     width: 40px;
     position: absolute;
-    top: -11%;
+    top: -43px;
     cursor: pointer;
 }
 
