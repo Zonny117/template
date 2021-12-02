@@ -365,8 +365,14 @@
         margin-bottom: 20px;
     }
 
+    .mMod6 .telbx{
+        width: 100%;
+        margin-right: 0;
+    }
+
     .hiddenMobile .mMod6 .telbx {
-        width: 50%;
+        width: 100%;
+        margin-right: 0;
         background-color: #424347;
     }
 

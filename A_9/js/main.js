@@ -27,6 +27,36 @@ $(function () {
         });
     };
 
+    $(".mMod4 .swiper-slide").on('mousemove', function () {
+
+
+        let tit = $(".tit", this).outerHeight(true);
+        let txt = $(".txt", this).outerHeight(true);
+
+        let height = tit + txt
+
+        // console.log(height);
+
+        if (height >= 390) {
+            $("html,body").on('mousewheel DOMMouseScroll', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            });
+        } else {
+
+            $("html,body").off("mousewheel DOMMouseScroll");
+
+        }
+
+    });
+
+
+    $(".mMod4 .swiper-slide").on('mouseleave', function () {
+
+        $("html,body").off("mousewheel DOMMouseScroll");
+    })
+
 
     $(".mag.forWeb").click(function () {
 
