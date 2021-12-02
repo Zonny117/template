@@ -427,6 +427,10 @@
         width: 100%;
     }
 
+    .mMod9 .swiper-slide{
+        padding: 0;
+    }
+
     .mMod9 img {
         width: 100%;
         margin-top: 20px;
