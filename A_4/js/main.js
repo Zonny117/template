@@ -73,9 +73,9 @@ $(function () {
         // console.log(tf)
 
         if (tf) {
-            $(".btn_tel, .btn_top, .mSky").addClass("on");
+            $(".btn_tel, .mSky").addClass("on");
         } else {
-            $(".btn_tel, .btn_top, .mSky").removeClass("on");
+            $(".btn_tel, .mSky").removeClass("on");
         }
 
 

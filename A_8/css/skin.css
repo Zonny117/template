@@ -49,6 +49,16 @@ body {
     background: #e7e4d9;
 }
 
+/* 수정 */
+.mMod6 .txt{
+    margin-top: 20px;
+    color: #fff;
+}
+.openRbx .mMod6 .txt{
+    margin-top: 10px;
+    color: #000;
+}
+
 
 /* 상단 메뉴 */
 .gnb {
