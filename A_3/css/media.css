@@ -5,8 +5,13 @@
 
 @media only screen and (max-width:1366px) {
 
+    .forWeb{
+        display: none;
+    }
 
-
+    .forMobile{
+        display: block;
+    }
 
     .mSky {
         top: auto;
@@ -53,6 +58,10 @@
         padding: 2px 0;
         height: auto;
         text-align: center;
+    }
+
+    .mMod2{
+        height: 100%;
     }
 
     .lSky {
@@ -103,10 +112,6 @@
         min-width: unset;
     }
 
-    .mMod2 {
-        height: auto;
-    }
-
     .mMod2,
     .mMod4,
     .mMod9,
@@ -116,6 +121,7 @@
     .content {
         width: auto;
     }
+
 
     .content {
         padding: 30px;
@@ -181,8 +187,13 @@
     }
 
     .mMod3 {
+        display: unset;
         font-size: unset;
         margin-top: unset;
+        -webkit-line-clamp: unset;
+        -webkit-box-orient: unset;
+        overflow: visible;
+        text-overflow: unset;
     }
 
     .mMod3 h2 {
@@ -498,6 +509,10 @@
 /* 모바일 가로회전 */
 @media only screen and (max-height:540px) and (max-width:850px) {
 
+    .mMod2{
+        height: auto;
+    }
+
     .image_box {
         width: 350px !important;
         height: 350px !important;
@@ -589,6 +604,10 @@
 
 
 @media only screen and (max-width:850px) {
+    .mMod2{
+        height: auto;
+    }
+
     .mMod1 {
         position: absolute;
         top: 50%;

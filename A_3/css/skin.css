@@ -1,6 +1,14 @@
 @charset "utf-8";
 
 
+.forWeb{
+    display: block;
+}
+
+.forMobile{
+    display: none;
+}
+
 * {
     -webkit-tap-highlight-color: transparent;
 }

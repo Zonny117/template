@@ -11,6 +11,14 @@ $(function () {
     }
 
 
+    let mag = $(".mMod9 .swiper-slide>img").length;
+
+    console.log(mag)
+
+    if (mag >= 1) {
+        $(".mMod9 .swiper-slide img").after('<a href="###" class="mag">크게 보기</a>');
+    } //////////////////
+
     $(window).on('DOMMouseScroll mousewheel keydown keyup', function () {
 
         let scT = $("body").scrollTop();

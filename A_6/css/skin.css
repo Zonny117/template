@@ -433,12 +433,15 @@ body {
     position: relative;
     border-top: 2px solid #848499;
     box-sizing: border-box;
+    text-align: justify;
 }
 
 .mMod4 .tit {
     font-weight: bold;
     font-size: 30px;
     line-height: 120%;
+    padding-right: 300px;
+    box-sizing: border-box;
 }
 
 .mMod4 .txt {
@@ -446,6 +449,8 @@ body {
     font-size: 16px;
     font-weight: 300;
     line-height: 150%;
+    padding-right: 300px;
+    box-sizing: border-box;
 }
 
 .mMod4 .swiper-container {

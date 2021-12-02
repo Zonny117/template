@@ -89,7 +89,9 @@
 	}
 
 
-
+    *{
+        -webkit-tap-highlight-color: transparent;
+    }
     
     body {
         -webkit-overflow-scrolling: touch;
@@ -308,6 +310,7 @@
     }
 
     .mMod3 h2 {
+        width: 68%;
         font-size: 38px;
     }
 
@@ -341,13 +344,19 @@
     }
 
 
+    .mMod4{
+        text-align: left;
+    }
+
     .mMod4 .tit {
         font-size: 20px;
         width: 90%;
+        padding: unset;
     }
 
     .mMod4 .txt {
         width: 90%;
+        padding: unset;
     }
 
 
