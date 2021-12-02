@@ -1,5 +1,6 @@
 $(function () {
 
+
     document.getElementsByClassName("vid").controls = false;
 
     // 네이버 인앱 브라우저 높이값 설정
