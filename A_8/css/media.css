@@ -165,6 +165,7 @@
 
     .mMod4 .swiper-slide {
         padding: unset;
+        max-height: unset;
     }
 
 
