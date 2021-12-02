@@ -1,14 +1,14 @@
 @charset "utf-8";
 
 @media only screen and (max-width:1366px) {
-
-    .mMod3 {
+    .mMod3 .txt{
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 5;
+        -webkit-line-clamp: 7;
         -webkit-box-orient: vertical;
     }
+
 
     .mMod6.forWeb {
         width: 192px;
