@@ -195,11 +195,23 @@ body {
     font-size: 20px;
 }
 
-.mMod1 img {
+
+
+.mMod1 {
+    position: relative;
     width: 60px;
     height: 60px;
     border-radius: 50%;
     overflow: hidden;
+    background-color: #fff;
+}
+
+.mMod1 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
 }
 
 

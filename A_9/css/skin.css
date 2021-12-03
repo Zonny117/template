@@ -106,9 +106,10 @@ body {
 
 .mMod1 img {
     position: absolute;
-    width: 100%;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
 }
 
 
@@ -128,7 +129,7 @@ body {
     margin-bottom: 30px;
 }
 
-.mMod3{
+.mMod3 {
     display: -webkit-box;
     -webkit-line-clamp: 5;
     text-overflow: ellipsis;
@@ -270,10 +271,10 @@ body {
     box-sizing: border-box;
     background-color: #2d2e30;
     border-radius: 10px;
-    
+
 }
 
-.ml{
+.ml {
     margin-left: 20px;
 }
 

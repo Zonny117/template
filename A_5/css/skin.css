@@ -96,6 +96,7 @@ body::before {
 
 /* 모듈 1 -로고 */
 .mMod1 {
+    position: relative;
     width: 150px;
     height: 80px;
     background-color: #fff;
@@ -103,13 +104,15 @@ body::before {
     line-height: 70px;
     border-radius: 0 0 10px 10px;
     margin-right: 40px;
+    overflow: hidden;
 }
 
 .mMod1 img{
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
-    border-radius: 0 0 10px 10px;
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    max-width: 70%;
 }
 
 /* 모듈 0 - 서비스명 */

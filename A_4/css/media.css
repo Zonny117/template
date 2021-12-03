@@ -132,7 +132,7 @@
         width: 60px;
         height: 60px;
         display: block !important;
-        position: unset;
+        position: relative;
         font-size: 18px;
         margin: unset;
         padding-top: unset;
