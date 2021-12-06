@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+/* 하이 팩토리 sns 공통모듈 fix */
+
+@media only screen and (max-width:812px) {
+    .mSky {
+        top: auto;
+        bottom: 30px;
+        transform: none;
+    }
+
+    .mSky .ls+.forMobile,
+    .mSky .ls+.ls {
+        margin: 0 0 8px;
+    }
+
+    .mSky .forWeb {
+        display: none;
+    }
+
+    .mSky .forMobile {
+        display: block;
+        position: relative;
+    }
+
+    .mSky .ico {
+        background-image: url(../../common/images/ico_kakaotalk_m.png);
+        background-size: auto 55px;
+        width: 55px;
+        height: 55px;
+    }
+
+    .mSky .iSns .ico {
+        background-image: url(../../common/images/ico_sns_m.png);
+        background-position: 50% 50%;
+        background-size: auto 18px;
+        background-color: #5c47fd;
+        border-radius: 50%;
+    }
+
+    .mSky .iAlarm .ico {
+        background: none;
+        text-indent: 0;
+        background-color: rgba(0, 0, 0, 0.21);
+        font-size: 12px;
+        color: #fff;
+        margin: 8px 0;
+        padding: 2px 0;
+        height: auto;
+        text-align: center;
+    }
+
+    .lSky {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+    .lSky a {
+        display: block;
+        background: url(../../common/images/ico_facebook_m.png) 0 0 no-repeat;
+        background-size: auto 55px;
+        text-indent: -9999px;
+        font-size: 0;
+        margin: 0 0 10px;
+        width: 55px;
+        height: 55px;
+    }
+
+    .lSky a.twiter {
+        background-image: url(../../common/images/ico_twitter_m.png);
+    }
+
+    .lSky a.instagram {
+        background-image: url(../../common/images/ico_instagram_m.png);
+    }
+
+    .lSky a.youtube {
+        background-image: url(../../common/images/ico_youtube_m.png);
+    }
+
+    .lSky a.close {
+        background-image: url(../../common/images/ico_sns_close_m.png);
+        background-position: 50% 50%;
+        background-size: auto 14px;
+        background-color: #f45897;
+        border-radius: 50%;
+        margin-bottom: 0;
+    }
+}
