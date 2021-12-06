@@ -82,6 +82,7 @@ body.on {
     width: 44px;
     height: 8px;
     background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 
