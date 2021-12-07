@@ -19,6 +19,7 @@
     #wrap {
         overflow-x: hidden;
         overflow-y: auto;
+        height: 100%;
     }
 
     #wrap.on{
@@ -31,11 +32,6 @@
 
     body{
         -webkit-overflow-scrolling: touch;
-    }
-
-
-    .background{
-        background-attachment: scroll;
     }
 
     ::-webkit-scrollbar {
