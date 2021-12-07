@@ -38,6 +38,10 @@ $(function () {
         $(".topmenu").toggleClass("on");
 
         $("body").toggleClass("on");
+
+        $("#wrap").toggleClass("on");
+
+        $(".gnb").toggleClass("on");
     });
 
 

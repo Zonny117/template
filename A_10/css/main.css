@@ -28,7 +28,6 @@ body {
 
 body.on {
     overflow: hidden;
-    -webkit-overflow-scrolling: auto;
 }
 
 #wrap {
@@ -51,6 +50,7 @@ body.on {
     justify-content: space-between;
     align-items: center;
 }
+
 
 
 .mMod1 {

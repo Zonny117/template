@@ -21,6 +21,14 @@
         overflow-y: auto;
     }
 
+    #wrap.on{
+        overflow: hidden;
+    }
+
+    .gnb.on{
+        position: fixed;
+    }
+
     body{
         -webkit-overflow-scrolling: touch;
     }
