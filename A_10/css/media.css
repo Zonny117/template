@@ -19,24 +19,21 @@
     #wrap {
         overflow-x: hidden;
         overflow-y: auto;
-        height: 100%;
     }
 
-    #wrap.on{
+    #wrap.on {
         overflow: hidden;
     }
 
-    .gnb1.on{
-        display: none;
-    }
 
-    .gnb2.on{
-        display: flex;
-        position: fixed;
-    }
 
-    body{
+    body {
         -webkit-overflow-scrolling: touch;
+    }
+
+    body.on {
+        -webkit-overflow-scrolling: auto;
+
     }
 
     ::-webkit-scrollbar {
@@ -49,6 +46,24 @@
         top: 0;
         padding: 10px;
         height: 50px;
+    }
+
+    .gnb1.on {
+        display: none;
+    }
+
+    .gnb2.on {
+        display: flex;
+        position: fixed;
+    }
+
+    .gnb.sticky {
+        position: sticky;
+        position: -webkit-sticky;
+    }
+
+    .gnb.absolute{
+        position: absolute;
     }
 
     .mMod1 {
@@ -110,6 +125,11 @@
     .topsbx a+a {
         margin: 0;
         margin-top: 10px;
+    }
+
+    .mMod2 {
+        position: relative;
+        width: 100%;
     }
 
     .mMod10 a {

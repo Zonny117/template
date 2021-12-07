@@ -86,5 +86,19 @@ $(function () {
     }
 
 
+    $("html,body").on("touchstart touchend touchmove", function () {
+
+
+        let offset = $(".content").offset().top;
+        console.log(offset)
+
+        if (offset < 0) {
+            $(".gnb").addClass("sticky").removeClass("absolute");
+        } else if (offset >= 0) {
+            $(".gnb").addClass("absolute").removeClass("sticky");
+        }
+
+    })
+
 
 })
