@@ -1,12 +1,14 @@
 $(function () {
 
+
+    // 모듈 제어
     let mod4 = $(".mMod4 .tit, .mMod4 .txt").length;
     let mod7 = $(".mMod7 a").length;
     let mod10 = $(".mMod10 a").length;
     let mod6 = $(".mMod6").length;
-    let content = $(".mMod3, .mMod8, .mMod9, .mMod4.forWeb").length;
-
-    // console.log(mod4)
+    let content = $(".mMod3, .mMod8, .mMod9, .mMod4").length;
+    let footer = $(".mMod5, .mMod11").length;
+    let address = $(".mMod5").length;
 
     if (mod4 >= 2) {
         $(".mMod4.forWeb .swiper-slide").wrapInner('<div class="txtbx"></div>');
@@ -39,6 +41,24 @@ $(function () {
             height: "100vh"
         })
     }
+
+    if (footer === 0) {
+        $("footer").css({
+            display: "none"
+        })
+    }
+
+    if (address === 0) {
+        $(".address").css({
+            display: "none"
+        })
+
+        $(".flex").css({
+            justifyContent: "flex-end"
+        })
+    }
+
+    ///////////////////////////////////////////
 
     $(".contact").click(function () {
 
