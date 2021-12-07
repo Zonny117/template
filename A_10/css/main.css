@@ -28,6 +28,7 @@ body {
 
 body.on {
     overflow: hidden;
+    -webkit-overflow-scrolling: auto;
 }
 
 #wrap {
