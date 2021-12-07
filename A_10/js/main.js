@@ -129,7 +129,7 @@ $(function () {
         });
     }
 
-    // let iOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    let iOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
     let naver = /naver/i.test(navigator.userAgent);
 
 

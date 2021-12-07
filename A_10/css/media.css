@@ -14,14 +14,8 @@
         -webkit-tap-highlight-color: transparent;
     }
 
-    html,
-    body {
-        overflow-x: hidden;
-        overflow-y: auto;
-    }
-
     #wrap {
-        overflow-y: auto;
+        position: relative;
         -webkit-overflow-scrolling: touch;
     }
 
@@ -69,6 +63,10 @@
 
     .background{
         height: 50%;
+    }
+
+    .mMod2{
+        height: calc(100% - 50px);
     }
 
     .mMod1 {
