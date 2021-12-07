@@ -66,4 +66,18 @@ $(function () {
 
 
     });
+
+    let winw = $(window).innerWidth();
+
+    if (winw <= 850) {
+        $(".mMod9 .swiper-slide").click(function () {
+
+            $(".lMod9").css({
+                display: "block"
+            });
+
+
+        });
+    }
+
 })
