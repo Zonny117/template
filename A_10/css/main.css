@@ -92,7 +92,7 @@ body.on {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url(../images/topmenu_bg.png) no-repeat fixed center/cover;
+    background: #000 url(../images/topmenu_bg.png) no-repeat fixed center/cover;
     z-index: 9999;
     justify-content: center;
     align-items: center;
@@ -101,8 +101,19 @@ body.on {
 }
 
 .topmenu.on {
-    display: flex;
+    display: block;
 }
+
+.topsbx {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 80%;
+    overflow-y: auto;
+    width: 1215px;
+}
+
 
 .topmenu a {
     position: relative;
@@ -121,12 +132,13 @@ body.on {
     vertical-align: middle;
 }
 
-.topmenu a+a {
-    margin-left: 20px;
+.topmenu a {
+    margin: 10px;
 }
 
-.mMod10 a {
-    margin-left: 20px;
+.mMod7,
+.mMod10 {
+    display: inline-block;
 }
 
 .topmenu a::after {
@@ -646,29 +658,29 @@ footer {
     z-index: 99999;
 }
 
-.lMod9 .swiper-container{
+.lMod9 .swiper-container {
     max-width: 1180px;
     height: 850px;
     margin-top: 50px;
 }
 
-.lMod9 .swiper-slide{
+.lMod9 .swiper-slide {
     max-height: 100%;
     overflow-y: auto;
 }
 
-.lMod9 img{
+.lMod9 img {
     width: 100%;
 }
 
-.lMod9 .btn_close{
+.lMod9 .btn_close {
     top: 50px;
     left: 83%;
     transform: translateX(-50%);
     z-index: 9999;
 }
 
-.mSky{
+.mSky {
     top: auto;
     transform: none;
     bottom: 110px;

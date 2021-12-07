@@ -11,7 +11,7 @@ $(function () {
 
     if (mod7 === 0) {
         $(".mMod10 a").css({
-            marginLeft: 0
+            margin: 0
         })
     }
 
