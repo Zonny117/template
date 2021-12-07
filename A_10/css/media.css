@@ -26,7 +26,12 @@
         overflow: hidden;
     }
 
-    .gnb.on{
+    .gnb1.on{
+        display: none;
+    }
+
+    .gnb2.on{
+        display: flex;
         position: fixed;
     }
 
@@ -77,7 +82,7 @@
         max-height: unset;
     }
 
-    .topmenu a {
+    .topsbx a {
         width: 100%;
         height: auto;
         padding: 20px;
@@ -87,7 +92,7 @@
     }
 
 
-    .topmenu a::after {
+    .topsbx a::after {
         border: none;
         top: 50%;
         right: 0;
@@ -102,7 +107,7 @@
         background-size: 16px 20px;
     }
 
-    .topmenu a+a {
+    .topsbx a+a {
         margin: 0;
         margin-top: 10px;
     }

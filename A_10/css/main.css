@@ -51,7 +51,9 @@ body.on {
     align-items: center;
 }
 
-
+.gnb2{
+    display: none;
+}
 
 .mMod1 {
     position: relative;
@@ -116,7 +118,7 @@ body.on {
 }
 
 
-.topmenu a {
+.topsbx a {
     position: relative;
     padding: 30px;
     box-sizing: border-box;
@@ -133,7 +135,7 @@ body.on {
     vertical-align: middle;
 }
 
-.topmenu a {
+.topsbx a {
     margin: 10px;
 }
 
@@ -142,7 +144,7 @@ body.on {
     display: inline-block;
 }
 
-.topmenu a::after {
+.topsbx a::after {
     content: '';
     position: absolute;
     right: 19px;

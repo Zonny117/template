@@ -41,7 +41,8 @@ $(function () {
 
         $("#wrap").toggleClass("on");
 
-        $(".gnb").toggleClass("on");
+        $(".gnb1").toggleClass("on");
+        $(".gnb2").toggleClass("on");
     });
 
 
