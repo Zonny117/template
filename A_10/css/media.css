@@ -347,6 +347,7 @@
 
     .ti .t {
         font-size: 20px;
+        margin-bottom: 20px;
     }
 
     .ti span {
@@ -355,6 +356,7 @@
 
     .tx {
         font-size: 15px;
+        margin-top: 12px;
     }
 
 
