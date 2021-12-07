@@ -2,6 +2,9 @@ $(function () {
 
     let mod4 = $(".mMod4 .tit, .mMod4 .txt").length;
     let mod7 = $(".mMod7 a").length;
+    let mod10 = $(".mMod10 a").length;
+    let mod6 = $(".mMod6").length;
+    let content = $(".mMod3, .mMod8, .mMod9, .mMod4.forWeb").length;
 
     // console.log(mod4)
 
@@ -15,6 +18,27 @@ $(function () {
         })
     }
 
+    if (mod7 === 0 && mod10 === 0) {
+        $(".topmenu").css({
+            display: "none"
+        })
+
+        $(".btn_dot").css({
+            display: "none"
+        })
+    }
+
+    if (mod6 === 0) {
+        $(".contact").css({
+            display: "none"
+        })
+    }
+
+    if (content === 0) {
+        $(".content").css({
+            height: "100vh"
+        })
+    }
 
     $(".contact").click(function () {
 
@@ -48,7 +72,7 @@ $(function () {
 
     $(".address").click(function () {
 
-        $(".mMod5").toggleClass("on");
+        $(".mMod5.forWeb").toggleClass("on");
 
     });
 
@@ -85,20 +109,35 @@ $(function () {
         });
     }
 
+    let iOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    let naver = /naver/i.test(navigator.userAgent);
 
-    $("html,body").on("touchstart touchend touchmove", function () {
 
+    // iOS에서만 작동
+    if (iOS) {
 
-        let offset = $(".content").offset().top;
-        console.log(offset)
+        $("html,body").on("touchmove", function () {
 
-        if (offset < 0) {
-            $(".gnb").addClass("sticky").removeClass("absolute");
-        } else if (offset >= 0) {
-            $(".gnb").addClass("absolute").removeClass("sticky");
-        }
+            let offset = $(".content").offset().top;
+            // console.log(offset)
 
-    })
+            if (offset < 0) {
+                $(".gnb").removeClass("sticky");
+            }
+            ///// 0에만 반응시켜서 상단 메뉴만 안떨어지게 방지
+            else if (offset === 0) {
+                $(".gnb").addClass("sticky");
+            }
 
+        })
+    }
+
+    // naver 주소창 fix
+    if (naver && winw <= 850) {
+        $("html, body").css({
+            overflowX: "unset",
+            overflowY: "unset"
+        })
+    }
 
 })

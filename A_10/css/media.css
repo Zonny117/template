@@ -15,16 +15,29 @@
     }
 
     html,
-    body,
-    #wrap {
+    body {
         overflow-x: hidden;
         overflow-y: auto;
     }
 
-    #wrap.on {
-        overflow: hidden;
+    #wrap {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
+    #wrap.on {
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: auto;
+    }
+
+    .mMod2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
 
 
     body {
@@ -41,8 +54,8 @@
     }
 
     .gnb {
-        position: sticky;
-        position: -webkit-sticky;
+        position: fixed;
+        /* position: -webkit-sticky; */
         top: 0;
         padding: 10px;
         height: 50px;
@@ -54,7 +67,7 @@
 
     .gnb2.on {
         display: flex;
-        position: fixed;
+        position: fixed !important;
     }
 
     .gnb.sticky {
@@ -62,9 +75,6 @@
         position: -webkit-sticky;
     }
 
-    .gnb.absolute{
-        position: absolute;
-    }
 
     .mMod1 {
         width: 36px;
@@ -91,10 +101,12 @@
     }
 
     .topsbx {
-        position: unset;
-        transform: none;
+        left: unset;
+        transform: translateY(-50%);
         width: 100%;
-        max-height: unset;
+        padding-top: 50px;
+        max-height: 90vh;
+        box-sizing: border-box;
     }
 
     .topsbx a {
@@ -227,6 +239,7 @@
     .mMod9 {
         height: 0;
         padding-top: 100%;
+        margin-top: 10px;
     }
 
     .mMod9 .swiper-container {
@@ -250,6 +263,7 @@
 
     .mMod4 {
         height: auto;
+        margin-top: 73px;
     }
 
     .mMod4 .swiper-container {
