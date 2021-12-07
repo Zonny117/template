@@ -181,7 +181,7 @@ body.on {
     background-color: #000;
     border-radius: 50%;
     left: 60px;
-    bottom: 110px;
+    bottom: 60px;
     z-index: 999;
     color: #fff;
     text-align: center;
@@ -189,6 +189,7 @@ body.on {
     font-weight: 600;
     line-height: 110px;
     border: 1px solid #fff;
+    z-index: 9991;
 }
 
 .contact.on {
