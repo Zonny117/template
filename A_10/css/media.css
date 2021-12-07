@@ -30,15 +30,6 @@
         -webkit-overflow-scrolling: auto;
     }
 
-    .mMod2 {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-    }
-
 
     body {
         -webkit-overflow-scrolling: touch;
@@ -54,8 +45,8 @@
     }
 
     .gnb {
-        position: fixed;
-        /* position: -webkit-sticky; */
+        position: sticky;
+        position: -webkit-sticky;
         top: 0;
         padding: 10px;
         height: 50px;
@@ -69,12 +60,16 @@
         display: flex;
         position: fixed !important;
     }
-
+/* 
     .gnb.sticky {
         position: sticky;
         position: -webkit-sticky;
-    }
+    } */
 
+
+    .background{
+        height: 50%;
+    }
 
     .mMod1 {
         width: 36px;
@@ -137,11 +132,6 @@
     .topsbx a+a {
         margin: 0;
         margin-top: 10px;
-    }
-
-    .mMod2 {
-        position: relative;
-        width: 100%;
     }
 
     .mMod10 a {

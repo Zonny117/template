@@ -129,28 +129,28 @@ $(function () {
         });
     }
 
-    let iOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    // let iOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
     let naver = /naver/i.test(navigator.userAgent);
 
 
     // iOS에서만 작동
-    if (iOS) {
+    // if (iOS) {
 
-        $("html,body").on("touchmove", function () {
+    //     $("html,body").on("touchmove", function () {
 
-            let offset = $(".content").offset().top;
-            // console.log(offset)
+    //         let offset = $(".content").offset().top;
+    //         // console.log(offset)
 
-            if (offset < 0) {
-                $(".gnb").removeClass("sticky");
-            }
-            ///// 0에만 반응시켜서 상단 메뉴만 안떨어지게 방지
-            else if (offset === 0) {
-                $(".gnb").addClass("sticky");
-            }
+    //         if (offset < 0) {
+    //             $(".gnb").removeClass("sticky");
+    //         }
+    //         ///// 0에만 반응시켜서 상단 메뉴만 안떨어지게 방지
+    //         else if (offset === 0) {
+    //             $(".gnb").addClass("sticky");
+    //         }
 
-        })
-    }
+    //     })
+    // }
 
     // naver 주소창 fix
     if (naver && winw <= 850) {

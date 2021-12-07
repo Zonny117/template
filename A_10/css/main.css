@@ -19,7 +19,6 @@
 html,
 body {
     width: 100%;
-    height: 100%;
 }
 
 body {
@@ -80,6 +79,7 @@ body.on {
     font-size: 20px;
     font-weight: 600;
 }
+
 
 .btn_dot {
     font-size: 0;
@@ -261,15 +261,19 @@ body.on {
 
 
 .mMod2 {
+    position: absolute;
     width: 100%;
+    height: 100%;
+    background-image: url(../images/topmenu_bg.png);
+    background-size: 100%;
+    background-color: #000;
 }
 
 .background {
-    position: fixed;
+    position: absolute;
     width: 100%;
-    height: 100%;
+    height: 80%;
     background-repeat: no-repeat;
-    background: fixed;
     background-size: cover;
     background-position: center;
 }
