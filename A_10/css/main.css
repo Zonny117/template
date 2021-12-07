@@ -668,3 +668,8 @@ footer {
     z-index: 9999;
 }
 
+.mSky{
+    top: auto;
+    transform: none;
+    bottom: 110px;
+}
