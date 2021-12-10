@@ -76,7 +76,10 @@ $(function () {
 
     });
 
+
     $(".btn_dot").click(function () {
+
+
 
 
         $(".topmenu").toggleClass("on");
@@ -87,7 +90,13 @@ $(function () {
 
         $(".gnb1").toggleClass("on");
         $(".gnb2").toggleClass("on");
+
+
     });
+
+
+
+
 
 
     $(".address").click(function () {
@@ -129,6 +138,9 @@ $(function () {
         });
     }
 
+
+
+
     let iOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
     let naver = /naver/i.test(navigator.userAgent);
 
@@ -159,5 +171,28 @@ $(function () {
             overflowY: "unset"
         })
     }
+
+    if (iOS && winw <= 850) {
+        
+        $(".dot_web").click(function () {
+
+            $("#wrap").css({
+                top: -$(window).scrollTop()
+            });
+
+        });
+
+
+        var reset_sct = Math.abs($("#wrap").css("top").split("px")[0])
+
+
+        $(".dot_mobile").click(function () {
+
+            $(window).scrollTop(reset_sct)
+
+        });
+    }
+
+
 
 })

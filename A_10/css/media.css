@@ -20,7 +20,8 @@
     }
 
     #wrap.on {
-        overflow-y: hidden;
+        position: fixed;
+        overflow: hidden;
         -webkit-overflow-scrolling: auto;
     }
 
@@ -31,7 +32,7 @@
 
     body.on {
         -webkit-overflow-scrolling: auto;
-
+        overflow: hidden;
     }
 
     ::-webkit-scrollbar {
