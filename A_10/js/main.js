@@ -97,8 +97,6 @@ $(function () {
 
 
 
-
-
     $(".address").click(function () {
 
         $(".mMod5.forWeb").toggleClass("on");
@@ -141,7 +139,7 @@ $(function () {
 
 
 
-    // let iOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    let iOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
     let naver = /naver/i.test(navigator.userAgent);
 
 
@@ -172,5 +170,24 @@ $(function () {
         })
     }
 
+
+    if (iOS && winw <= 850) {
+
+        $(".dot_web").click(function () {
+            $("#wrap").css({
+                position: "fixed"
+            }).on("touchmove", function (e) {
+                e.preventDefault();
+            })
+
+        });
+
+        $(".dot_mobile").click(function () {
+            $("#wrap").css({
+                position: "relative"
+            }).off("touchmove")
+        })
+
+    }
 
 })
