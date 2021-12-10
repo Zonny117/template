@@ -3,24 +3,29 @@ $(function () {
 
     // 모듈 제어
     let mod4 = $(".mMod4 .tit, .mMod4 .txt").length;
-    let mod7 = $(".mMod7 a").length;
-    let mod10 = $(".mMod10 a").length;
-    let mod6 = $(".mMod6").length;
-    let content = $(".mMod3, .mMod8, .mMod9, .mMod4").length;
-    let footer = $(".mMod5, .mMod11").length;
-    let address = $(".mMod5").length;
+    let mod7 = $(".mMod7").css("display");
+    let mod10 = $(".mMod10").css("display");
+    let content = $(".dn").filter(function () {
+        return $(this).css("display") === "none"
+    });
+
+    // console.log(content.length)
+
+    let footer = $(".fdn").filter(function () {
+        return $(this).css("display") === "none"
+    })
 
     if (mod4 >= 2) {
         $(".mMod4.forWeb .swiper-slide").wrapInner('<div class="txtbx"></div>');
     }
 
-    if (mod7 === 0) {
+    if (mod7 === "none") {
         $(".mMod10 a").css({
             margin: 0
         })
     }
 
-    if (mod7 === 0 && mod10 === 0) {
+    if (mod7 === "none" && mod10 === "none") {
         $(".topmenu").css({
             display: "none"
         })
@@ -30,28 +35,20 @@ $(function () {
         })
     }
 
-    if (mod6 === 0) {
-        $(".contact").css({
-            display: "none"
-        })
-    }
-
-    if (content === 0) {
+    if (content.length >= 5) {
         $(".content").css({
             height: "100vh"
         })
     }
 
-    if (footer === 0) {
+    if (footer.length === 3) {
         $("footer").css({
             display: "none"
         })
     }
 
-    if (address === 0) {
-        $(".address").css({
-            display: "none"
-        })
+
+    if ($(".address").css("display") === "none") {
 
         $(".flex").css({
             justifyContent: "flex-end"
@@ -84,7 +81,6 @@ $(function () {
 
         $(".topmenu").toggleClass("on");
 
-        $("html").toggleClass("on");
 
         $("body").toggleClass("on");
 
@@ -141,8 +137,8 @@ $(function () {
 
 
 
-    // let iOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
     let naver = /naver/i.test(navigator.userAgent);
+    let iOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
 
     // iOS에서만 작동
@@ -164,12 +160,45 @@ $(function () {
     //     })
     // }
 
-    // naver 주소창 fix
+
+    // naver app 주소창 fix
     if (naver && winw <= 850) {
         $("html, body").css({
             overflowX: "unset",
             overflowY: "unset"
         })
     }
+
+
+    // iOS 모달 레이어 팝업시 바디 스크롤 막기
+    const body = document.querySelector('body');
+    let ios_scroll = 0;
+
+    function enable() {
+        ios_scroll = window.pageYOffset;
+        body.style.overflow = 'hidden';
+        body.style.position = 'fixed';
+        body.style.top = `-${ios_scroll}px`;
+        body.style.width = '100%';
+    }
+
+    function disable() {
+        body.style.removeProperty('overflow');
+        body.style.removeProperty('position');
+        body.style.removeProperty('top');
+        body.style.removeProperty('width');
+        window.scrollTo(0, ios_scroll);
+    }
+
+    if (iOS) {
+        $(".dot_web, .mMod9 .swiper-slide").click(function () {
+            enable();
+        });
+
+        $(".dot_mobile, .lMod9 .btn_close").click(function () {
+            disable();
+        });
+    }
+
 
 })
