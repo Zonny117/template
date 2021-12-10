@@ -32,7 +32,7 @@
         -webkit-overflow-scrolling: touch;
     }
 
-    html.on{
+    html.on {
         width: 100%;
         height: 100%;
         overflow-x: hidden;
@@ -45,7 +45,6 @@
         overflow-x: hidden;
         overflow-y: hidden;
         -webkit-overflow-scrolling: auto;
-        overflow: hidden;
     }
 
     ::-webkit-scrollbar {
@@ -68,18 +67,19 @@
         display: flex;
         position: fixed !important;
     }
-/* 
+
+    /* 
     .gnb.sticky {
         position: sticky;
         position: -webkit-sticky;
     } */
 
 
-    .background{
+    .background {
         height: 50%;
     }
 
-    .mMod2{
+    .mMod2 {
         height: calc(100% - 50px);
     }
 
@@ -208,7 +208,7 @@
         box-sizing: border-box;
     }
 
-    .mMod3{
+    .mMod3 {
         margin-bottom: 99px;
     }
 
