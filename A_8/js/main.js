@@ -14,7 +14,7 @@ $(function () {
         })
     }
 
-    // console.log(child)
+    console.log(child)
 
     if (child === 0) {
 

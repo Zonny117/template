@@ -427,6 +427,12 @@
         padding: 20px 0;
     }
 
+    .mMod5 .t {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
     .mMod5 .ti {
         margin: 15px 0;
         align-items: center;

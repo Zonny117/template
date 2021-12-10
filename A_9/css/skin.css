@@ -274,7 +274,7 @@ body {
 
 }
 
-.ml {
+.ml+.ml {
     margin-left: 20px;
 }
 
