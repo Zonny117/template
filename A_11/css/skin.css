@@ -109,6 +109,9 @@ body.on {
     transform: rotate(180deg);
 }
 
+.contact2 {
+    display: none;
+}
 
 .topmenu {
     position: fixed;
@@ -404,14 +407,26 @@ body.on {
     color: #000;
 }
 
-.mMod8 {
+.mMod8{
     position: relative;
-    width: 684px;
+    width: 60%;
+    margin-right: 40px;
+}
+
+.mMod8 .iframebx {
+    position: relative;
+    width: 100%;
     height: 456px;
+    border-radius: 10px;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
 }
 
 .mMod8 iframe {
-    border-radius: 10px;
+
     width: 100%;
     height: 100%;
 
@@ -422,7 +437,7 @@ body.on {
 
 .mMod9 {
     position: relative;
-    width: 456px;
+    width: 40%;
     height: 456px;
 }
 

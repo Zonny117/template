@@ -18,12 +18,47 @@ $(function () {
         $(".gnb").removeClass("on");
     }
 
+
+
+    $(document).on("touchmove", function(){
+        
+        let sct = $(this).scrollTop();
+
+        let flex_top = $(".flex").offset().top
+        let mod4_top = $(".mMod4.forMobile").offset().top
+        let foot_top = $("footer").offset().top
+
+
+
+        // console.log(sct)
+
+        let topmenu = $(".topmenu").is(".top");
+
+        // console.log(topmenu)
+
+        if (topmenu) return;
+        
+        if(sct >= flex_top || sct >= foot_top){
+            $(".gnb").addClass("on")
+        }
+        else{
+            $(".gnb").removeClass("on");
+        }
+
+        if (sct >= mod4_top) {
+            $(".gnb").removeClass("on");
+        }
+
+    })
+
+
+
     $(window).on("DOMMouseScroll mousewheel", function () {
 
         let sct = $(this).scrollTop();
 
         let flex_top = $(".flex").offset().top
-        let mod4_top = $(".mMod4").offset().top
+        let mod4_top = $(".mMod4.forWeb").offset().top
         let foot_top = $("footer").offset().top
 
         // console.log(sct + "스크롤")
@@ -54,8 +89,32 @@ $(function () {
         $(".topmenu").toggleClass("on");
         $("body").toggleClass("on");
         $(".gnb").toggleClass("top");
-        $(this).toggleClass("on");
+        $(".contact").toggleClass("on");
+
     });
+
+    $(".contact1").click(function(){
+
+        $(this).css({
+            display:"none"
+        });
+        
+        $(".contact2").css({
+            display:"block"
+        });
+
+    })
+    $(".contact2").click(function(){
+
+        $(this).css({
+            display:"none"
+        })
+
+        $(".contact1").css({
+            display:"block"
+        });
+
+    })
 
 
     $(".top_btnbx>a").click(function () {
@@ -95,5 +154,39 @@ $(function () {
             $(".lMod9").addClass("on");
             $("body").addClass("on");
         });
+    }
+
+
+    let iOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+
+    const body = document.querySelector('body');
+    let ios_scroll = 0;
+
+    function enable() {
+        ios_scroll = window.pageYOffset;
+        body.style.overflow = 'hidden';
+        body.style.position = 'fixed';
+        body.style.top = `-${ios_scroll}px`;
+        body.style.width = '100%';
+    }
+
+    function disable() {
+        body.style.removeProperty('overflow');
+        body.style.removeProperty('position');
+        body.style.removeProperty('top');
+        body.style.removeProperty('width');
+        window.scrollTo(0, ios_scroll);
+    }
+
+    if (iOS) {
+        $(".mMod9 img, .contact1").click(function () {
+            enable();
+        })
+
+        $(".btn_close, .contact2").click(function () {
+            disable();
+        })
+
     }
 })

@@ -2,24 +2,23 @@
 
 @media only screen and (max-width:850px) {
 
-    ::-webkit-scrollbar{
+    ::-webkit-scrollbar {
         width: 0;
     }
 
-    *{
+    * {
         -webkit-tap-highlight-color: transparent;
     }
 
-    .forWeb{
+    .forWeb {
         display: none;
     }
 
-    .forMobile{
+    .forMobile {
         display: block;
     }
 
     .gnb {
-        position: sticky;
         padding-left: 14px;
     }
 
@@ -36,91 +35,101 @@
         width: 101px;
         height: 40px;
         line-height: 40px;
+        right: 14px;
     }
 
 
-    .topmenu{
+    .topmenu {
         padding: 0 24px;
     }
 
-    .top_pbx{
+    .top_pbx {
         width: 100%;
         height: 100%;
         margin-top: 0;
     }
 
-    .top_btnbx{
+    .top_btnbx {
         position: absolute;
         top: 100px;
         width: 100%;
         font-size: 16px;
     }
 
-    .btn_contact, .btn_address{
+    .btn_contact,
+    .btn_address {
         padding-bottom: 10px;
     }
 
-    .mMod6{
+    .mMod6 {
         margin-top: 0;
-        top: 350px;
+        top: 310px;
         width: 100%;
-        padding-bottom: 60px;
+        padding-bottom: 100px;
     }
 
-    .mMod6 .tit{
+    .mMod6 .tit {
         font-size: 30px;
     }
 
-    .mMod6 .txt{
+    .mMod6 .txt {
         font-size: 15px;
     }
 
-    .mMod6 .btn_tel{
+    .mMod6 .btn_tel {
         margin-top: 200px;
         height: 52px;
         line-height: 52px;
         width: 100%;
     }
 
-    .mMod5{
+    .mMod5 {
         margin: 0;
         width: 100%;
-        top: 180px;
-        padding-bottom: 60px;
+        top: 156px;
+        padding-bottom: 100px;
     }
 
-    .mMod5 .t{
+    .mMod5 .t {
         font-size: 20px;
         margin-bottom: 15px;
     }
 
-    .mMod5 .ti{
+    .mMod5 .ti {
         font-size: 20px;
     }
 
-    .mMod5 .tx{
+    .mMod5 .tx {
         font-size: 14px;
     }
 
-    .gMap{
+    .gMap {
         width: 100%;
         height: 0;
         margin-bottom: 23px;
         padding-top: 90%;
     }
 
-    .map{
+    .map {
         position: absolute;
         top: 0;
         left: 0;
     }
 
-    .navi{
+    .navi {
         height: 52px;
         line-height: 52px;
         width: 100%;
     }
 
+
+    .mMod2 {
+        position: fixed;
+    }
+
+    .background {
+        background-attachment: unset;
+    }
 
     .maintitle_bx .btn_tel {
         width: 217px;
@@ -140,7 +149,7 @@
         max-width: unset;
         width: 100%;
         padding: 0 24px;
-        padding-top: 189px;
+        padding-top: 258px;
         margin-bottom: 257px;
     }
 
@@ -179,7 +188,12 @@
         font-size: 16px;
     }
 
-    .mMod8 {
+    .mMod8{
+        margin-right: 0;
+    }
+
+    .mMod8 .iframebx {
+        width: 100%;
         margin-bottom: 67px;
         height: 0;
         padding-top: 56.66%;
@@ -226,41 +240,42 @@
         margin: 0;
     }
 
-    .mMod4 .swiper-container{
+    .mMod4 .swiper-container {
         height: auto;
     }
 
-    .mMod4 .tit{
+    .mMod4 .tit {
         font-size: 20px;
     }
 
-    .mMod4 .txt{
+    .mMod4 .txt {
         font-size: 14px;
     }
 
-    .txtbx{
+    .txtbx {
         position: static;
         transform: none;
     }
 
-    footer{
+    footer {
         padding: 0 24px;
         padding-top: 61px;
         padding-bottom: 78px;
     }
 
-    .pbx2{
+    .pbx2 {
         flex-direction: column;
         align-items: center;
     }
 
-    .mMod7{
+    .mMod7 {
         width: 100%;
         margin-right: 0;
         text-align: center;
         margin-bottom: 30px;
     }
-    .mMod10{
+
+    .mMod10 {
         display: block;
         position: static;
         width: 100%;
@@ -268,19 +283,19 @@
         line-height: 52px;
     }
 
-    .lMod9 .swiper-container{
+    .lMod9 .swiper-container {
         width: 100%;
         height: 100vh;
         line-height: 100vh;
     }
 
-    .btn_close{
+    .btn_close {
         z-index: 99999999;
         width: 34px;
         height: 34px;
     }
 
-    .lMod9 img{
+    .lMod9 img {
         border-radius: 0px;
     }
 }
