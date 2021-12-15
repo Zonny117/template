@@ -1,87 +1,140 @@
 $(function () {
 
-    let main = $(".maintitle_bx").css("display")
 
-    let flex = $(".flex").css("display")
+    // 모듈 제어
+    let mod6 = $(".mMod6").css("display")
+    let mod5 = $(".mMod5").css("display")
 
-    let mod4 = $(".mMod4 .tit, .mMod4 .txt").length;
 
-    if (mod4 >= 2) {
-        $(".mMod4 .swiper-slide").wrapInner('<div class="txtbx"></div>');
+    if (mod5 === "none" && mod6 === "none") {
+        $(".topmenu, .contact").css({
+            display: "none"
+        })
     }
 
-    if (main === "none") {
+    let mod3 = $(".mMod3").css("display")
+    let tel = $(".maintitle_bx .btn_tel").css("display")
+
+
+    if (mod3 === "none" && tel === "none") {
+        $(".main").css({
+            display: "none"
+        })
         $(".gnb").addClass("on");
     }
 
-    if (main === "none" && flex === "none") {
-        $(".gnb").removeClass("on");
+
+    let flex = $(".flex .dn").filter(function () {
+        return $(this).css("display") === "none"
+    })
+
+    if (flex.length === 2) {
+        $(".flex").css({
+            display: "none"
+        })
     }
 
 
-    // 스크롤 값 실시간으로 받아오려면 scroll 이벤트 사용
+    let foot = $("footer .dn").filter(function () {
+        return $(this).css("display") === "none"
+    })
+
+    if (foot.length === 3) {
+        $("footer").css({
+            display: "none"
+        })
+    }
 
 
-    $(document).on("scroll touchmove touchstart touchend", function(){
-        
+
+
+
+
+
+    let winw = $(window).innerWidth();
+
+
+
+
+
+    if (winw <= 850) {
+        let ts, te;
+
+
+        $(document).on("touchstart", function (e) {
+            ts = e.originalEvent.touches[0].screenY;
+
+            // console.log(ts)
+        })
+
+        $(document).on("touchmove touchend", function (e) {
+
+
+            let topmenu = $(".gnb").hasClass("top");
+
+            // console.log(topmenu)
+
+            if (topmenu) return;
+
+            te = e.originalEvent.changedTouches[0].screenY;
+
+            let touch = ts - te;
+
+            // console.log(touch)
+
+            
+            // 스크롤 값 실시간으로 받아오려면 scroll 이벤트 사용
+            $(document).on("scroll", function () {
+
+                let sct = $(this).scrollTop();
+
+                console.log(sct)
+
+                if (touch > 0) {
+                    $(".gnb").addClass("on")
+                } else if (touch < 0 && sct === 0 && mod3 != "none" && tel != "none") {
+                    $(".gnb").removeClass("on")
+                }
+            })
+
+
+        })
+    }
+
+
+
+
+
+    $(window).on("DOMMouseScroll mousewheel", function (e) {
+
+
+        e = window.event || e;
+
+        let E = e.detail ? e.detail : e.wheelDelta;
+
+        // console.log(E)
+
+        if (/Firefox/i.test(navigator.userAgent)) {
+            E = -E;
+        }
+
+
         let sct = $(this).scrollTop();
-
-        let flex_top = $(".flex").offset().top
-        let mod4_top = $(".mMod4.forMobile").offset().top
-        let foot_top = $("footer").offset().top
-
-
 
         // console.log(sct)
 
-        let topmenu = $(".topmenu").is(".top");
+        let topmenu = $(".gnb").hasClass("top");
 
         // console.log(topmenu)
 
         if (topmenu) return;
-        
-        if(sct >= flex_top || sct >= foot_top){
+
+
+        if (E < 0) {
             $(".gnb").addClass("on")
+        } else if (E > 0 && sct === 0 && mod3 != "none" && tel != "none") {
+            $(".gnb").removeClass("on")
         }
-        else{
-            $(".gnb").removeClass("on");
-        }
-
-        if (sct >= mod4_top) {
-            $(".gnb").removeClass("on");
-        }
-
-    })
-
-
-
-    $(window).on("DOMMouseScroll mousewheel", function () {
-
-        let sct = $(this).scrollTop();
-
-        let flex_top = $(".flex").offset().top
-        let mod4_top = $(".mMod4.forWeb").offset().top
-        let foot_top = $("footer").offset().top
-
-        // console.log(sct + "스크롤")
-        // console.log(flex_top)
-
-        let topmenu = $(".topmenu").is(".top");
-
-        // console.log(topmenu)
-
-        if (topmenu) return;
-
-        if (sct >= flex_top || sct >= foot_top) {
-            $(".gnb").addClass("on");
-        } else {
-            $(".gnb").removeClass("on");
-        }
-
-        if (sct >= mod4_top) {
-            $(".gnb").removeClass("on");
-        }
-
 
     });
 
@@ -95,25 +148,25 @@ $(function () {
 
     });
 
-    $(".contact1").click(function(){
+    $(".contact1").click(function () {
 
         $(this).css({
-            display:"none"
+            display: "none"
         });
-        
+
         $(".contact2").css({
-            display:"block"
+            display: "block"
         });
 
     })
-    $(".contact2").click(function(){
+    $(".contact2").click(function () {
 
         $(this).css({
-            display:"none"
+            display: "none"
         })
 
         $(".contact1").css({
-            display:"block"
+            display: "block"
         });
 
     })
@@ -148,7 +201,6 @@ $(function () {
         $("body").removeClass("on");
     })
 
-    let winw = $(window).innerWidth();
 
     if (winw <= 850) {
         $(".mMod9 img").click(function () {

@@ -539,7 +539,7 @@ body.on {
     max-width: 1200px;
     padding: 0 20px;
     height: 672px;
-    padding-top: 70px;
+    padding-top: 30px;
     box-sizing: border-box;
 }
 
@@ -740,3 +740,6 @@ footer {
     z-index: 99999999;
 }
 
+
+
+/* //////////////////////////////////// */
