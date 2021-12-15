@@ -55,7 +55,7 @@ $(function () {
 
 
 
-    $(window).on("scroll DOMMouseScroll mousewheel", function () {
+    $(window).on("DOMMouseScroll mousewheel", function () {
 
         let sct = $(this).scrollTop();
 
