@@ -45,8 +45,23 @@
         height: calc(100% - 60px);
     }
 
+    .btn_tel {
+        position: absolute;
+        right: 20px;
+        font-size: 0px;
+        text-indent: -9999;
+        background-image: url(../images/ico_mod6.png);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #00f0a1;
+        background-position: center;
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+    }
+
     .modBg {
-        padding: 50px 0;
+        padding: 20px;
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -58,7 +73,7 @@
         transform: none;
         box-sizing: border-box;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .mMod1 {
@@ -293,7 +308,7 @@
         bottom: 0;
     }
 
-    .gnb.on a::after{
+    .gnb.on a::after {
         background-image: url(../images/btn_close.png);
     }
 
@@ -331,11 +346,11 @@
     }
 
 
-    .hiddenMobile.on{
+    .hiddenMobile.on {
         display: block !important;
     }
 
-    .hiddenMobile .mMod1{
+    .hiddenMobile .mMod1 {
         margin: 0 auto;
         margin-bottom: 50px;
     }
@@ -350,7 +365,7 @@
         display: block;
     }
 
-    .hiddenMobile .mMod6 .tit:first-of-type .tel::before{
+    .hiddenMobile .mMod6 .tit:first-of-type .tel::before {
         display: none;
     }
 
@@ -365,7 +380,7 @@
         margin-bottom: 20px;
     }
 
-    .mMod6 .telbx{
+    .mMod6 .telbx {
         width: 100%;
         margin-right: 0;
     }
@@ -459,58 +474,59 @@
         transform: translateY(-50%);
     }
 
-    .mSky.on{
+    .mSky.on {
         display: none;
     }
 }
 
 @media only screen and (max-width:320px) {
 
-    .modBg{
+    .modBg {
         padding: 30px 0;
     }
 
-    .mMod0{
+    .mMod0 {
         margin-bottom: 10px;
     }
 
-    .mMod3 h2{
+    .mMod3 h2 {
         font-size: 20px;
     }
 
-    .mMod3 .txt{
+    .mMod3 .txt {
         margin-bottom: 15px;
     }
 
-    .modBg .mMod6 .telbx{
+    .modBg .mMod6 .telbx {
         height: 45px;
         line-height: 45px;
 
     }
-    .modBg .mMod6 .savebx{
+
+    .modBg .mMod6 .savebx {
         height: 45px;
         line-height: 45px;
     }
 
-    .modBg .mMod6 .tel{
+    .modBg .mMod6 .tel {
         font-size: 16px;
     }
 
-    .modBg .mMod6 .tel::before{
+    .modBg .mMod6 .tel::before {
         background-position: unset;
         background-size: 100%;
         width: 15px;
         height: 15px;
     }
 
-    .modBg .mMod6 .save{
+    .modBg .mMod6 .save {
         width: 15px;
         height: 24px;
         background-position: unset;
         background-size: 100%;
     }
 
-    .modBg .mMod6 .tit{
+    .modBg .mMod6 .tit {
         margin-bottom: 15px;
     }
 }
@@ -529,7 +545,7 @@
 }
 
 @media only screen and (max-width:280px) {
-    .modBg .mMod6 .tel{
+    .modBg .mMod6 .tel {
         font-size: 14px;
     }
 }

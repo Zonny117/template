@@ -98,8 +98,8 @@ body {
     top: 50px;
     right: 0;
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     background-color: #fff;
     overflow: hidden;
 }
@@ -265,8 +265,8 @@ body {
 .sbx .link {
     position: relative;
     width: 285px;
-    height: 65px;
-    line-height: 65px;
+    height: 60px;
+    line-height: 60px;
     padding: 0 30px;
     box-sizing: border-box;
     background-color: #2d2e30;
@@ -395,7 +395,7 @@ iframe {
     position: relative;
     background-color: #424347;
     width: 100%;
-    height: 70px;
+    height: 50px;
     border-radius: 10px 10px 0 0;
 }
 
