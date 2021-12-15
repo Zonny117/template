@@ -20,7 +20,7 @@ $(function () {
 
 
 
-    $(document).on("touchmove touchstart touchend", function(){
+    $(document).on("scroll touchmove touchstart touchend", function(){
         
         let sct = $(this).scrollTop();
 
