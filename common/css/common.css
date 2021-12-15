@@ -223,7 +223,6 @@ body.hiddenScroll {
 	transform: translateY(-50%);
 	width: 64px;
 	z-index: 1000;
-	text-align: center;
 }
 
 .mSky .ls {
@@ -334,6 +333,7 @@ body.hiddenScroll {
 		right: 20px;
 		transform: translateY(0);
 		width: 55px;
+		text-align: center;
 	}
 
 	.mSky .ls+.forMobile,
@@ -365,6 +365,7 @@ body.hiddenScroll {
 		text-indent: 0;
 		background-color: rgba(0, 0, 0, 0.21);
 		font-size: 12px;
+		letter-spacing: -1px;
 		color: #fff;
 		margin: 8px 0;
 		padding: 2px 0;
@@ -398,7 +399,7 @@ body.hiddenScroll {
 		height: 55px;
 	}
 
-	.lSky a.twiter {
+	.lSky a.twitter {
 		background-image: url(../images/ico_twitter_m.png);
 	}
 
