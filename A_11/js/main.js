@@ -167,6 +167,9 @@ $(function () {
         ios_scroll = window.pageYOffset;
         body.style.overflow = 'hidden';
         body.style.position = 'fixed';
+
+        // 탬플릿 리터럴은 백틱을 이용한 ES6 부터 도입된 ``(백틱)을 이용한 문자열 표기법
+        // ${}는 문자열 안에 변수을 삽입할 수 있게 한다. 이후 변수는 문자열로 자동 변환된다.
         body.style.top = `-${ios_scroll}px`;
         body.style.width = '100%';
     }
