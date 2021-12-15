@@ -135,7 +135,7 @@
         width: 217px;
         height: 52px;
         line-height: 52px;
-        margin-bottom: 80px;
+        margin-bottom: 60px;
     }
 
     .maintitle_bx .btn_tel a {
@@ -150,7 +150,7 @@
         max-width: unset;
         width: 100%;
         padding: 0 24px;
-        padding-top: 258px;
+        padding-top: 60%;
     }
 
     .mMod3 {
@@ -188,7 +188,7 @@
         font-size: 16px;
     }
 
-    .mMod8{
+    .mMod8 {
         margin-right: 0;
     }
 
@@ -297,5 +297,20 @@
 
     .lMod9 img {
         border-radius: 0px;
+    }
+}
+
+@media (orientation: landscape) and (max-height:414px) {
+    .maintitle_bx {
+        padding-top: 15%;
+    }
+}
+
+
+/* Galaxy Fold folded */
+@media only screen and (max-width:280px) {
+    .contact {
+        font-size: 10px;
+        width: 84px;
     }
 }
