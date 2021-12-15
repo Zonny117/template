@@ -311,6 +311,13 @@ body.on {
     width: 100%;
 }
 
+.main{
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
+
 .maintitle_bx {
     position: relative;
     max-width: 1200px;
@@ -318,7 +325,6 @@ body.on {
     margin: 0 auto;
     padding-top: 288px;
     box-sizing: border-box;
-    margin-bottom: 245px;
 }
 
 .mMod3 {
@@ -370,7 +376,7 @@ body.on {
 
 .scrollDown {
     position: absolute;
-    bottom: -200px;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 0px;
