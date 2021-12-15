@@ -82,13 +82,13 @@ $(function () {
 
             // console.log(touch)
 
-            
+
             // 스크롤 값 실시간으로 받아오려면 scroll 이벤트 사용
             $(document).on("scroll", function () {
 
                 let sct = $(this).scrollTop();
 
-                console.log(sct)
+                // console.log(sct)
 
                 if (touch > 0) {
                     $(".gnb").addClass("on")

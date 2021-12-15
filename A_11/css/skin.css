@@ -554,27 +554,24 @@ body.on {
     margin-top: 41px;
 }
 
-.txtbx {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+.mMod4 .swiper-slide {
     max-height: 100%;
     overflow-y: auto;
     padding-right: 20px;
     box-sizing: border-box;
 }
 
-.txtbx::-webkit-scrollbar {
+.swiper-slide::-webkit-scrollbar {
     width: 5px;
     background-color: transparent;
 }
 
-.txtbx::-webkit-scrollbar-thumb {
+.swiper-slide::-webkit-scrollbar-thumb {
     background-color: #fff;
     border-radius: 8px;
 }
 
-.txtbx::-webkit-scrollbar-track {
+.swiper-slide::-webkit-scrollbar-track {
     background-color: #8a8a8a71;
     border-radius: 8px;
 }

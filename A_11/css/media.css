@@ -254,9 +254,10 @@
         margin-top: 31px;
     }
 
-    .txtbx {
-        position: static;
-        transform: none;
+    .mMod4 .swiper-slide{
+        max-height: unset;
+        padding: 0;
+        overflow: unset;
     }
 
     footer {
