@@ -19,6 +19,8 @@ $(function () {
     }
 
 
+    // 스크롤 값 실시간으로 받아오려면 scroll 이벤트 사용
+
 
     $(document).on("scroll touchmove touchstart touchend", function(){
         
@@ -53,7 +55,7 @@ $(function () {
 
 
 
-    $(window).on("DOMMouseScroll mousewheel", function () {
+    $(window).on("scroll DOMMouseScroll mousewheel", function () {
 
         let sct = $(this).scrollTop();
 
