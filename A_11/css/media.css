@@ -290,7 +290,6 @@
     }
 
     .btn_close {
-        z-index: 99999999;
         width: 34px;
         height: 34px;
     }

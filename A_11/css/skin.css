@@ -737,4 +737,5 @@ footer {
     background-image: url(../images/btn_close.svg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    z-index: 99999999;
 }
