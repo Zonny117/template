@@ -92,7 +92,7 @@ $(function () {
 
                 if (touch > 0) {
                     $(".gnb").addClass("on")
-                } else if (touch < 0 && sct === 0 && mod3 != "none" && tel != "none") {
+                } else if (touch < 0 && sct <= 300 && mod3 != "none" && tel != "none") {
                     $(".gnb").removeClass("on")
                 }
             })
@@ -132,7 +132,7 @@ $(function () {
 
         if (E < 0) {
             $(".gnb").addClass("on")
-        } else if (E > 0 && sct === 0 && mod3 != "none" && tel != "none") {
+        } else if (E > 0 && sct <= 300 && mod3 != "none" && tel != "none") {
             $(".gnb").removeClass("on")
         }
 
