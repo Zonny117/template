@@ -23,7 +23,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -32,8 +32,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: #4d5050;
-    border-radius: 5px;
+    background: transparent;
 }
 
 
@@ -87,8 +86,12 @@ body {
 }
 
 .tel2::after {
-    content: url(../images/arrow_white.png);
-    margin-left: 15px;
+    content: url(../images/arrow_white.svg);
+    margin-left: 10px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    vertical-align: 3px;
 }
 
 .save::after {
@@ -101,45 +104,7 @@ body {
     margin-bottom: 40px;
 }
 
-.mMod11 {
-    display: flex;
-    margin-top: 76px;
-}
 
-.mMod11 a {
-    display: inline-block;
-    font-size: 0;
-    text-indent: -9999px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 1px solid #ccc;
-
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 40%;
-}
-
-.mMod11 a+a {
-    margin-left: 10px;
-}
-
-.mMod11 .instagram {
-    background-image: url(../images/instagram.png);
-}
-
-.mMod11 .facebook {
-    background-image: url(../images/facebook.png);
-    background-size: 20% !important;
-}
-
-.mMod11 .twiter {
-    background-image: url(../images/twitter.png);
-}
-
-.mMod11 .youtube {
-    background-image: url(../images/youtube.png);
-}
 
 /* 모듈2 -배경사진 */
 .mMod2 {
@@ -183,24 +148,25 @@ body {
     transition: .6s;
 }
 
+/* 
 .titlebx.on {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     background-color: rgba(252, 252, 252, 0.16);
-}
+} */
 
 .titlebx span {
     margin-left: 20px;
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 
 
 .mMod1 {
     position: relative;
-    width: 60px;
-    height: 60px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     overflow: hidden;
     background-color: #fff;
@@ -218,7 +184,7 @@ body {
 .modBg {
     display: flex;
     position: relative;
-    width: 1200px;
+    width: 1080px;
     top: 50%;
     transform: translateY(-50%);
     color: #fff;
@@ -248,11 +214,12 @@ body {
 
 
 /* 모듈7 링크 */
-.mMod7 {
+.modBg .mMod6 {
+    position: relative;
     /* margin-right: 400px; */
     padding: 0 40px;
-    width: 580px;
-    height: 320px;
+    width: 500px;
+    height: 300px;
     box-sizing: border-box;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(10px);
@@ -261,54 +228,47 @@ body {
     transition: background-color .6s;
 }
 
-.mMod7:hover {
+.modBg .mMod6:hover {
     background-color: rgba(255, 255, 255, 0.301);
 
 }
 
-.mMod7 .swiper-container {
-    width: 100%;
-    height: 100%;
+.modBg .mMod6 .tel {
+    position: absolute;
+    bottom: 0;
+    font-size: 32px;
+    font-weight: 600;
 }
 
-.mMod7 .swiper-slide {
-    position: relative;
-    width: 100% !important;
+.modBg .mMod6 .tel::before {
+    content: 'NUM';
+    position: absolute;
+    top: -40px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.247);
+    font-weight: 400;
 }
 
-.mMod7 .swiper-container::before {
-    content: url(../images/ico_mod7.png);
+.btn_tel {
+    font-size: 18px;
     position: absolute;
     top: 40px;
-    height: auto;
+    right: 40px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5) !important;
 }
 
-
-.mMod7 .swiper-slide a {
-    position: absolute;
-    bottom: 40px;
+.btn_tel::after {
+    content: '';
+    background-image: url(../images/arrow_white.svg);
     display: inline-block;
-    width: 100%;
-    font-size: 30px;
-    line-height: 120%;
-    font-weight: bold;
-    color: #fff;
-}
-
-.mMod7 .swiper-button-next {
-    background: url(../images/btn_slider_next.png);
-    top: 19%;
-    width: 46px;
-    height: 46px;
-}
-
-.mMod7 .swiper-button-prev {
-    background: url(../images/btn_slider_prev.png);
-    top: 19%;
-    left: auto;
-    right: 75px;
-    width: 46px;
-    height: 46px;
+    width: 10px;
+    height: 10px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    vertical-align: 5px;
+    margin-left: 10px;
+    opacity: .5;
 }
 
 .btn_dot {
@@ -318,9 +278,14 @@ body {
     font-size: 0;
     text-indent: -9999px;
     background-image: url(../images/btn_dot.png);
-    width: 8px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: 5px 25px;
+    background-repeat: no-repeat;
     z-index: 999;
+    background-color: rgba(255, 255, 255, 0.164);
 }
 
 .scrollDown {
@@ -354,38 +319,33 @@ body {
     color: #fff;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(10px);
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+
+.swiper-container-horizontal>.swiper-scrollbar {
+    height: 3px;
 }
 
 .mMod4 .swiper-container {
-    width: 1200px;
-    height: 567px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 1080px;
+    height: 700px;
+    margin: 0 auto;
 }
 
 .mMod4 .swiper-wrapper {
-    margin-top: 205px;
+    margin-top: 152px;
 }
 
 
 
 .mMod4 .swiper-slide {
     /* margin-top: 375px; */
-    width: 100% !important;
-    max-height: 360px;
-    height: 360px;
+    max-height: 77%;
     padding-top: 5px;
     box-sizing: border-box;
-
-}
-
-.mMod4 .swiper-slide.swiper-slide-active {
-    max-height: 360px;
     overflow-y: auto;
 }
-
 
 .mMod4 .tit {
     font-size: 30px;
@@ -419,21 +379,23 @@ body {
 }
 
 .mMod4 .swiper-button-next {
-    background: url(../images/btn_slider_next_02.png);
+    background: url(../images/slider_next.svg);
     top: 105px;
     width: 64px;
     height: 46px;
     right: 0;
     z-index: 999;
+    background-repeat: no-repeat;
 }
 
 .mMod4 .swiper-button-prev {
-    background: url(../images/btn_slider_prev_02.png);
+    background: url(../images/slider_prev.svg);
     top: 105px;
     width: 64px;
     left: 0;
     height: 46px;
     z-index: 999;
+    background-repeat: no-repeat;
 }
 
 .linetxt {
@@ -458,8 +420,8 @@ body {
 
 .mMod9 .swiper-container {
     position: absolute;
-    width: 40%;
-    height: 462px;
+    width: 1080px;
+    height: 500px;
     top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -488,34 +450,42 @@ body {
 }
 
 .mMod9 .swiper-pagination {
-    bottom: -140px;
+    bottom: -110px;
 }
 
 .mMod9 .swiper-button-next {
-    background: url(../images/btn_slider_next_02.png);
+    background: url(../images/slider_next.svg);
     width: 64px;
     height: 46px;
-    bottom: -150px;
+    bottom: -120px;
     top: auto;
     z-index: 999;
+    background-repeat: no-repeat;
 }
 
 .mMod9 .swiper-button-prev {
-    background: url(../images/btn_slider_prev_02.png);
+    background: url(../images/slider_prev.svg);
     width: 64px;
     left: 0;
     height: 46px;
-    bottom: -150px;
+    bottom: -120px;
     top: auto;
     z-index: 999;
+    background-repeat: no-repeat;
 }
 
 .mag {
     position: absolute;
-    bottom: -90px;
+    top: 76px;
+    right: 20px;
     color: rgba(255, 255, 255, 0.726);
-    font-size: 18px;
     z-index: 999;
+    background-image: url(../images/mag.svg);
+    font-size: 0px;
+    text-indent: -9999px;
+    width: 46px;
+    height: 46px;
+    background-size: 100% 100%;
 }
 
 .mag::after {
@@ -537,8 +507,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1200px;
-    height: 620px;
+    width: 1080px;
+    height: 600px;
 }
 
 iframe {
@@ -573,12 +543,12 @@ iframe {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1200px;
+    width: 1080px;
 }
 
 .gMap {
     width: 50%;
-    height: 580px;
+    height: 500px;
 }
 
 .map {
@@ -591,6 +561,7 @@ iframe {
 .txtbx2 {
     width: 40%;
     margin-left: 40px;
+    margin-bottom: 20px;
 }
 
 .mMod5 .ti {
@@ -601,27 +572,32 @@ iframe {
 }
 
 .mMod5 .t {
-    border-right: 2px solid #3f3f3f;
+    position: absolute;
+    top: 20px;
     font-size: 30px;
-    padding-right: 10px;
 }
 
-.mMod5 .ti a {
-    position: absolute;
-    top: 22px;
-    right: 42px;
+.mMod5 .navi {
     color: #fff;
     font-size: 18px;
+    font-weight: 600;
 }
 
-.mMod5 .ti a::after {
-    content: url(../images/arrow_white.png);
+.mMod5 .navi::after {
+    content: url(../images/arrow_white.svg);
     margin-left: 10px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    vertical-align: 5px;
 }
 
 .mMod5 .ti span {
-    margin-left: 15px;
     font-weight: 200;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .mMod5 .txt {
@@ -653,86 +629,134 @@ footer {
 
 .flex {
     display: flex;
-    width: 1200px;
-    justify-content: space-between;
-    margin: 0 auto;
-
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.flex .mMod7 {
-    position: relative;
-    width: 50%;
-    height: 320px;
-    backdrop-filter: unset;
-    -webkit-backdrop-filter: unset;
-    background-color: unset;
-    border: 1px solid #fff;
-    border-radius: 35px;
-    transition: none;
-    margin-left: 20px;
-}
-
-
-.link_section_txt {
-    top: -40px;
+    width: 1080px;
+    justify-content: space-between;
     color: #fff;
-    z-index: 999;
 }
 
-
-.flex .mMod7 .swiper-button-prev {
-    right: auto;
+.flex .linetxt {
+    position: static;
+    display: block;
 }
 
-.flex .mMod7 .swiper-button-next {
-    left: 63px;
-    right: auto;
-}
-
-.flex .mMod7 .swiper-container::before {
-    right: 0;
-}
-
-.flex .mMod7 .swiper-pagination {
-    display: none;
-}
-
-
-.mMod10 {
+.flex .mMod6 {
     position: relative;
-    width: 50%;
+    /* margin-right: 400px; */
     padding: 0 40px;
+    width: 500px;
+    height: 300px;
     box-sizing: border-box;
-    height: 320px;
-    border: 1px solid #fff;
+    background-color: #000;
     border-radius: 35px;
+    border: 1px solid #fff;
+}
+
+.flex .mMod6 .tel {
+    position: absolute;
+    bottom: 0;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.flex .mMod6 .tel::before {
+    content: 'NUM';
+    position: absolute;
+    top: -40px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+}
+
+
+
+.mMod7 a {
+    color: rgba(255, 255, 255, 0.5);
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.mMod7 a::after {
+    content: '';
+    background-image: url(../images/arrow_white.svg);
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-left: 10px;
+    vertical-align: 3px;
+    opacity: .5;
 }
 
 .mMod10 a {
-    position: absolute;
-    bottom: 40px;
+    display: block;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.mMod10 a::after {
+    content: '';
+    background-image: url(../images/ico_mod10.svg);
     display: inline-block;
-    font-size: 30px;
-    line-height: 120%;
-    font-weight: bold;
-    color: #fff;
+    width: 12px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-left: 10px;
+    vertical-align: 3px;
+    opacity: .5;
 }
 
-.mMod10::before {
-    content: url(../images/ico_mod10.png);
-    position: absolute;
-    top: 40px;
-    right: 40px;
+
+
+.mMod7 {
+    margin-bottom: 78px;
 }
 
-.attach_section_txt {
-    position: absolute;
-    top: -40px;
-    color: #fff;
+.mMod11 {
+    margin-top: 76px;
+}
+
+.mMod11 a {
+    margin-top: 30px;
+    display: inline-block;
+    font-size: 0;
+    text-indent: -9999px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+
+.mMod11 a+a {
+    margin-left: 10px;
+}
+
+.mMod11 .instagram {
+    background-image: url(../images/instagram.svg);
+}
+
+.mMod11 .facebook {
+    background-image: url(../images/facebook.svg);
+}
+
+.mMod11 .twiter {
+    background-image: url(../images/twitter.svg);
+}
+
+.mMod11 .youtube {
+    background-image: url(../images/youtube.svg);
 }
 
 
@@ -747,21 +771,12 @@ footer {
     width: 100%;
     height: 100%;
     z-index: -1;
+    background-color: #000;
 }
 
 .lMod9.on {
     z-index: 99999;
 
-}
-
-.lMod9::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.411);
 }
 
 .lMod9 .swiper-container {
@@ -770,11 +785,11 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 1400px;
-    height: 800px;
+    height: 756px;
 }
 
 .lMod9 .swiper-slide.swiper-slide-active {
-    max-height: 800px;
+    max-height: 756px;
     overflow-y: auto;
 }
 
@@ -782,6 +797,23 @@ footer {
     width: 100%;
     border-radius: 20px;
 
+}
+
+.lMod9 .swiper-button-next{
+    background: url(../images/slider_next.svg);
+    width: 64px;
+    height: 46px;
+    z-index: 999;
+    background-repeat: no-repeat;
+    right: 50px;
+}
+.lMod9 .swiper-button-prev{
+    background: url(../images/slider_prev.svg);
+    width: 64px;
+    height: 46px;
+    z-index: 999;
+    background-repeat: no-repeat;
+    left: 50px;
 }
 
 .btn_close {
@@ -793,11 +825,38 @@ footer {
     height: 33px;
     background-image: url(../images/btn_close.png);
     background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     z-index: 99999;
-    left: 84%;
-    top: 25px;
+    top: 50px;
+    right: 40px;
+    border-radius: 50%;
+    background-color: #000;
 }
 
 .btn_close.forMobile {
     display: none !important;
 }
+
+
+
+/* 호버 */
+@media only screen and (min-width:1367px) {
+    .btn_tel:hover{
+        color: #fff !important;
+    }
+    
+    .btn_tel:hover::after{
+        opacity: 1;
+    }
+    
+    .mMod7 a:hover, .mMod10 a:hover{
+        color: #fff;
+    }
+    
+    
+    .mMod7 a:hover::after, .mMod10 a:hover::after{
+        opacity: 1;
+    }
+}
+
