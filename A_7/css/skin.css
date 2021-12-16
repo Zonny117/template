@@ -770,13 +770,14 @@ footer {
     bottom: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     background-color: #000;
+    display: none;
+    z-index: 99999;
+
 }
 
 .lMod9.on {
-    z-index: 99999;
-
+    display: block;
 }
 
 .lMod9 .swiper-container {
@@ -799,7 +800,7 @@ footer {
 
 }
 
-.lMod9 .swiper-button-next{
+.lMod9 .swiper-button-next {
     background: url(../images/slider_next.svg);
     width: 64px;
     height: 46px;
@@ -807,7 +808,8 @@ footer {
     background-repeat: no-repeat;
     right: 50px;
 }
-.lMod9 .swiper-button-prev{
+
+.lMod9 .swiper-button-prev {
     background: url(../images/slider_prev.svg);
     width: 64px;
     height: 46px;
@@ -842,21 +844,22 @@ footer {
 
 /* 호버 */
 @media only screen and (min-width:1367px) {
-    .btn_tel:hover{
+    .btn_tel:hover {
         color: #fff !important;
     }
-    
-    .btn_tel:hover::after{
+
+    .btn_tel:hover::after {
         opacity: 1;
     }
-    
-    .mMod7 a:hover, .mMod10 a:hover{
+
+    .mMod7 a:hover,
+    .mMod10 a:hover {
         color: #fff;
     }
-    
-    
-    .mMod7 a:hover::after, .mMod10 a:hover::after{
+
+
+    .mMod7 a:hover::after,
+    .mMod10 a:hover::after {
         opacity: 1;
     }
 }
-
