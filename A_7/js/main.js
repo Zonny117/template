@@ -4,31 +4,60 @@ $(function () {
     history.scrollRestoration = "manual"
 
 
-    // 푸터 영역 자식 요소 감지
-    let child = $(".mMod10, footer .mMod7").length;
 
-    // console.log(child)
 
-    // 모듈 없으면 푸터 삭제 및 플렉스 박스 클래스 제거
-    if (child === 0) {
+    // 모듈 제어
+    let modbg = $(".modBg .dn").filter(function () {
+        return $(this).css("display") === "none"
+    })
 
-        $("footer").css({
+
+    if (modbg.length === 2) {
+        $(".mMod2").css({
             display: "none"
-        });
-
-        $(".flex").removeClass("page");
+        })
     }
 
-    if (child === 1) {
-        $("footer .mMod7").css({
-            marginLeft: 1
+    let mod = [
+        $(".mMod2"),
+        $(".mMod4"),
+        $(".mMod9"),
+        $(".mMod8"),
+        $(".mMod5"),
+        $("footer")
+    ]
+
+    for (let x of mod) {
+        // console.log(x)
+        if (x.css("display") === "none") {
+            x.removeClass("page")
+        }
+    }
+
+    let lbx = $(".lbx .dn").filter(function () {
+        return $(this).css("display") === "none"
+    })
+
+    if (lbx.length === 3) {
+        $(".lbx").css({
+            display: "none"
+        })
+    }
+
+    let footer = $("footer .dn").filter(function () {
+
+        return $(this).css("display") === "none"
+    })
+
+    if (footer.length === 4) {
+        $("footer").css({
+            display: "none"
         })
     }
 
 
 
-
-    $(".mMod4 .swiper-slide").on('mousemove', function () {
+    $(".mMod4.forWeb .swiper-slide").on('mousemove', function () {
 
 
         let tit = $(".tit", this).outerHeight(true);
@@ -38,7 +67,7 @@ $(function () {
 
         // console.log(height);
 
-        if (height >= 360) {
+        if (height >= 538) {
             $("html,body").on('mousewheel DOMMouseScroll', function (e) {
                 e.preventDefault();
                 e.stopPropagation();
@@ -212,30 +241,30 @@ $(function () {
 
 
     // 상단 메뉴 블러 모바일
-    let ts, te;
+    // let ts, te;
 
-    $(document).on("touchstart", function (e) {
-
-
-        ts = e.originalEvent.touches[0].screenY;
-
-    });
-
-    $(document).on("touchend", function (e) {
-
-        te = e.originalEvent.changedTouches[0].screenY;
-
-        let touch = ts - te;
-
-        // console.log(touch)
+    // $(document).on("touchstart", function (e) {
 
 
-        if (touch > 30) {
-            $(".titlebx").addClass("on");
-        } else if (touch < -30) {
-            $(".titlebx").removeClass("on");
-        }
-    });
+    //     ts = e.originalEvent.touches[0].screenY;
+
+    // });
+
+    // $(document).on("touchend", function (e) {
+
+    //     te = e.originalEvent.changedTouches[0].screenY;
+
+    //     let touch = ts - te;
+
+    //     // console.log(touch)
+
+
+    //     if (touch > 30) {
+    //         $(".titlebx").addClass("on");
+    //     } else if (touch < -30) {
+    //         $(".titlebx").removeClass("on");
+    //     }
+    // });
 
 
 }); ////////////////

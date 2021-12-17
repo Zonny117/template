@@ -252,6 +252,11 @@
         font-weight: 200;
     }
 
+    .content{
+        padding-top: 103px;
+        box-sizing: border-box;
+    }
+
 
     .mMod4 {
         position: unset;
