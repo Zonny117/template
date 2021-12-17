@@ -23,14 +23,18 @@ $(function () {
         });
     };
 
-    let content = $(".content .page").filter(function () {
-        return $(this).css("display") === "none"
-    });
 
-    // console.log(content.length)
+    let mod = [
+        $(".mMod8"),
+        $(".mMod4"),
+        $(".mMod9"),
+        $(".mMod5")
+    ]
 
-    if (content.length >= 4) {
-        $(".page").removeClass(".page");
+    for (let x of mod) {
+        if (x.css("display") === "none") {
+            x.removeClass("page")
+        }
     }
 
 
@@ -38,7 +42,7 @@ $(function () {
         return $(this).css("display") === "none"
     })
 
-    console.log(mobile.length)
+    // console.log(mobile.length)
 
     if (mobile.length === 4) {
         $(".gnb.forMobile").css({
@@ -166,7 +170,6 @@ $(function () {
     }); /////////
 
 
-
     let prot = 0;
     let pnum = 0;
     let page = $(".page").length;
@@ -228,6 +231,31 @@ $(function () {
 
     });
 
+    let sns = $(".mMod11 a")
+
+    if (sns.length === 0) {
+        return;
+    }
+
+    for (let i = 0; i <= 3; i++) {
+
+        // console.log(sns[i].text);
+
+        switch (sns[i].text) {
+            case "facebook":
+                $(".facebook").text("페이스북")
+                break;
+            case "twitter":
+                $(".twitter").text("트위터")
+                break;
+            case "instagram":
+                $(".instagram").text("인스타그램")
+                break;
+            case "youtube":
+                $(".youtube").text("유튜브")
+                break;
+        }
+    }
 
 
 }); /////////////////////

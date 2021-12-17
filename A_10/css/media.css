@@ -64,9 +64,6 @@
     } */
 
 
-    .background {
-        height: 50%;
-    }
 
     .mMod2 {
         height: calc(100% - 50px);
@@ -194,6 +191,7 @@
     .content {
         padding: 0 20px;
         padding-top: 148px;
+        padding-bottom: 50px;
         box-sizing: border-box;
     }
 

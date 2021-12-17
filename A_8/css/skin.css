@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 
 
+
 .btnbx.forWeb,
 .mag.forWeb,
 .map_section_txt.forWeb,
@@ -14,6 +15,10 @@
 .mag.forMobile,
 .map_section_txt.forMobile,
 .btn_close.forMobile {
+    display: none !important;
+}
+
+.forMobile{
     display: none !important;
 }
 
@@ -305,7 +310,7 @@ body {
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center 10%;
+    background-position: center 30%;
 }
 
 /* 모듈 0, 3 박스 */
@@ -667,10 +672,10 @@ iframe {
     display: flex;
     width: 100%;
     height: 100%;
-    padding-top: 80px;
     box-sizing: border-box;
     background-color: #252525;
     align-items: center;
+    padding-top: 67px;
 }
 
 .flex .mMod0 {
@@ -690,7 +695,7 @@ iframe {
     top: 50%;
     transform: translateY(-50%);
     right: 0;
-    height: 780px;
+    height: 700px;
 }
 
 

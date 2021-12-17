@@ -246,4 +246,32 @@ $(function () {
         })
 
     }
+
+
+    let sns = $(".mMod11 a")
+
+    if (sns.length === 0) {
+        return;
+    }
+
+    for (let i = 0; i <= 3; i++) {
+
+        // console.log(sns[i].text);
+
+        // sns 치환코드는 소문자로만 받아오기 때문에 toLowerCase 함수 사용
+        switch (sns[i].text.toLowerCase()) {
+            case "facebook":
+                $(".facebook").text("Facebook")
+                break;
+            case "twitter":
+                $(".twitter").text("Twitter")
+                break;
+            case "instagram":
+                $(".instagram").text("Instagram")
+                break;
+            case "youtube":
+                $(".youtube").text("Youtube")
+                break;
+        }
+    }
 })

@@ -3,11 +3,11 @@
 @media only screen and (max-width:1366px) {
 
     .forWeb {
-        display: none;
+        display: none !important;
     }
 
     .forMobile {
-        display: block;
+        display: block !important;
     }
 
     .btnbx.forWeb,
@@ -55,6 +55,10 @@
         overflow-y: auto;
     }
 
+    .content{
+        height: auto;
+    }
+
     .gnb {
         height: 65px;
         position: sticky;
@@ -96,7 +100,7 @@
     }
 
     .background {
-        background-position: center 20%;
+        background-position: center 30%;
     }
 
     .maintitle {

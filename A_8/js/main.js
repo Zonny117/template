@@ -2,38 +2,41 @@ $(function () {
 
     history.scrollRestoration = "manual"
 
-    let child = $("footer .mMod6, footer .mMod11, footer .mMod0").length;
-    let openchild = $(".openTitle .mMod0, .openTitle .mMod3").length;
-    let rbx = $(".rbx .mMod6, .rbx .mMod11").length;
 
-    let mod1 = $(".gnb .mMod1").length;
+    // 모듈제어
+    let mod1 = $(".gnb .mMod1").css("display");
 
-    if (mod1 === 0) {
+    if (mod1 === "none") {
         $(".gnb").css({
             justifyContent: "flex-end"
         })
     }
 
-    console.log(child)
 
-    if (child === 0) {
+    let footer = $("footer .dn, footer .dn, footer .dn").filter(function(){
+        return $(this).css("display") === "none"
+    });
+    
+    // console.log(footer.length)
+
+    if (footer.length === 3) {
 
         $("footer").css({
             display: "none"
         }).removeClass("page");
     } ///////////////////
 
-    if (openchild === 0) {
+
+    let openchild = $(".openTitle .dn, .openTitle .dn").filter(function(){
+        return $(this).css("display") === "none"
+    })
+
+
+    if (openchild.length === 2) {
         $(".openTitle").css({
             display: "none"
         });
     } /////////////////////
-
-    if (rbx === 0) {
-        $(".rbx").css({
-            display: "none"
-        });
-    } ////////////////////
 
 
     $(".mMod4 .swiper-slide").on('mousemove', function () {
@@ -66,6 +69,17 @@ $(function () {
         $("html,body").off("mousewheel DOMMouseScroll");
     })
 
+    $(".mMod5 .map").on('mousemove mouseenter', function () {
+        $("html,body").on('mousewheel DOMMouseScroll', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        });
+    });
+
+    $(".mMod5 .map").on('mouseleave', function () {
+        $("html,body").off("mousewheel DOMMouseScroll");
+    });
 
 
     $(".mag.forWeb").click(function () {
@@ -210,22 +224,13 @@ $(function () {
 
 
 
+    let maintitle = $(".maintitle").height()
 
-    let first = $(".content").find("div").first();
-
-    let maintitle = $(".maintitle").height() - 81;
-
-
-
-    // console.log(maintitle)
-
-    if ($(window).innerWidth() <= 1366) {
-
-        first.css({
-            paddingTop: maintitle + 50
+    if($(window).innerWidth() <= 1366){
+        $(".content").css({
+            paddingTop: maintitle - 44 + "px"
         })
-
-    }
+    }  
 
 
 

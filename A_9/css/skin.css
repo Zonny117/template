@@ -84,6 +84,25 @@ body {
     background-color: rgba(0, 0, 0, 0.199);
 }
 
+.default {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 30%;
+}
+
+.default::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.199);
+}
+
 .modBg {
     position: absolute;
     top: 0;
@@ -629,9 +648,9 @@ body .hiddenbx {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -35px;
+    bottom: -40px;
     width: 100%;
-    height: 35px;
+    height: 40px;
     /* outline: 2px dotted red; */
 }
 
@@ -758,7 +777,6 @@ body .hiddenbx {
 }
 
 
-
 a.facebook::before {
     background-image: url(../images/facebook.svg);
 }
@@ -767,7 +785,7 @@ a.instagram::before {
     background-image: url(../images/instagram.svg);
 }
 
-a.twiter::before {
+a.twitter::before {
     background-image: url(../images/twitter.svg);
 }
 
@@ -954,7 +972,7 @@ a.youtube::before {
         background-image: url(../images/instagram_hover.svg);
     }
 
-    .mMod11 a.twiter:hover::before {
+    .mMod11 a.twitter:hover::before {
         background-image: url(../images/twitter_hover.svg);
     }
 

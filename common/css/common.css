@@ -250,6 +250,10 @@ body.hiddenScroll {
 	background-image: url(../images/ico_top.png);
 }
 
+.mSky .iAlarm{
+	margin-top: 12px;
+}
+
 .mSky .iAlarm .ico {
 	background-image: url(../images/ico_allimon.png);
 }
@@ -330,7 +334,7 @@ body.hiddenScroll {
 		position: fixed;
 		top: auto;
 		bottom: 10px;
-		right: 20px;
+		right: 10px;
 		transform: translateY(0);
 		width: 55px;
 		text-align: center;
