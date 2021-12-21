@@ -125,6 +125,7 @@ body::before {
 
 /* 모듈 3 - 메인 타이틀 */
 .mMod3 {
+    width: 400px;
     margin-top: 40px;
 }
 
@@ -192,7 +193,7 @@ body::before {
     margin-left: 35px;
 }
 
-.mMod11 a.twiter {
+.mMod11 a.twitter {
     background-image: url(../../common/images/ico_twitter.png);
 }
 

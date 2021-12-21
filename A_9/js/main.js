@@ -50,6 +50,8 @@ $(function () {
         })
     }
 
+
+
     $(".mMod4 .swiper-slide").on('mousemove', function () {
 
 
@@ -170,6 +172,8 @@ $(function () {
     }); /////////
 
 
+   
+
     let prot = 0;
     let pnum = 0;
     let page = $(".page").length;
@@ -231,13 +235,21 @@ $(function () {
 
     });
 
-    let sns = $(".mMod11 a")
 
+    
+    let sns = $(".mMod11 a")
+    
+    // 초기상태 리턴
     if (sns.length === 0) {
+        $(".mMod11, .link2").css({
+            display:"none"
+        })
         return;
     }
 
     for (let i = 0; i <= 3; i++) {
+
+        
 
         // console.log(sns[i].text);
 

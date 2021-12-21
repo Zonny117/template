@@ -12,6 +12,13 @@ $(function () {
         })
     }
 
+    let sns = $(".mMod11 a").length;
+
+    if(sns === 0){
+        $(".mMod11").css({
+            display:"none"
+        })
+    }
 
     let footer = $("footer .dn, footer .dn, footer .dn").filter(function(){
         return $(this).css("display") === "none"

@@ -44,6 +44,16 @@ $(function () {
         })
     }
 
+    let sns = $(".mMod11 a").length;
+
+    if(sns === 0){
+        $(".mMod11").css({
+            display:"none"
+        })
+    }
+
+    // console.log(sns)
+
     let footer = $("footer .dn").filter(function () {
 
         return $(this).css("display") === "none"
@@ -89,8 +99,18 @@ $(function () {
 
 
 
+    // 지도
+    $(".mMod5 .map").on('mousemove mouseenter', function () {
+        $("html,body").on('mousewheel DOMMouseScroll', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        });
+    });
 
-
+    $(".mMod5 .map").on('mouseleave', function () {
+        $("html,body").off("mousewheel DOMMouseScroll");
+    });
 
 
 

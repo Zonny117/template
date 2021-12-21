@@ -4,6 +4,30 @@ $(function () {
         iNoBounce.enable()
     });
 
+
+
+    let contweb = $(".content.forWeb .dn").filter(function(){
+        return $(this).css("display") === "none"
+    });
+
+    if(contweb.length === 6){
+        $(".btn_menu_slide.forWeb").css({
+            display:"none"
+        })
+    }
+
+    let contmobile = $(".content.forMobile .dn").filter(function(){
+        return $(this).css("display") === "none"
+    });
+
+    if(contmobile.length === 7){
+        $(".btn_menu_slide_white").css({
+            display:"none"
+        })
+    }
+
+
+
     $(".btn_menu_slide").click(function () {
 
         $(".content").toggleClass("on");
@@ -14,7 +38,7 @@ $(function () {
 
     // 아이프레임 일시정지
     $(".btn_menu_slide.on").click(function () {
-        if ($(".mMod8.forWeb").length === 1) {
+        if ($(".mMod8.forWeb").css("display") != "none") {
             $(".mMod8.forWeb iframe")[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
         }
     });
@@ -67,7 +91,7 @@ $(function () {
     $(".btn_menu_slide_m").click(function () {
 
 
-        if ($(".mMod8.forMoblie").length === 1) {
+        if ($(".mMod8.forMoblie").css("display") != "none") {
             $(".mMod8.forMoblie iframe")[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
         }
 

@@ -11,6 +11,14 @@ $(function () {
 
     // console.log(content.length)
 
+    let sns = $(".mMod11 a").length;
+
+    if(sns === 0){
+        $(".mMod11").css({
+            display:"none"
+        })
+    }
+
     let footer = $(".fdn").filter(function () {
         return $(this).css("display") === "none"
     })
@@ -200,5 +208,6 @@ $(function () {
         });
     }
 
+    
 
 })

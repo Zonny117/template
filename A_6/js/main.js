@@ -1,25 +1,29 @@
 $(function () {
 
+    let img = $(".background img").height();
 
+    // console.log(img)
 
-    let mod5 = $(".mMod5").length;
+    if(img <=840){
+        $(".btn_fold").css({
+            display:"none"
+        });
+    }
 
-    if (mod5 === 0) {
-        $("footer").css({
-            display: "none"
-        })
+    let top_menu = $(".top_menu .dn").filter(function(){
+        return $(this).css("display") === "none"
+    })
+
+    // console.log(top_menu.length)
+
+    if(top_menu.length === 5){
+        $(".top_menu, .open").css({
+            display:"none"
+        });
     }
 
 
-    let mag = $(".mMod9 .swiper-slide>img").length;
-
-    console.log(mag)
-
-    if (mag >= 1) {
-        $(".mMod9 .swiper-slide img").after('<a href="###" class="mag">크게 보기</a>');
-    } //////////////////
-
-    $(window).on('DOMMouseScroll mousewheel keydown keyup', function () {
+    $(window).on('scroll DOMMouseScroll mousewheel', function () {
 
         let scT = $("body").scrollTop();
 
@@ -81,18 +85,24 @@ $(function () {
 
     $(".btn_close").click(function () {
         $(".lMod9").css({
-            opacity: 0,
-            zIndex: -9
+           display:"none"
         })
 
         $("body").removeClass("on");
     });
 
-    $(".mag").click(function () {
-        $(".lMod9").css({
-            opacity: 1,
-            zIndex: 9999999
-        })
+    $(".mMod9.forWeb .mag").click(function () {
+        $(".lMod9.forWeb").css({
+            display:"block"
+        });
+        $("body").addClass("on");
+
+    })
+
+    $(".mMod9.forMobile .mag").click(function () {
+        $(".lMod9.forMobile").css({
+            display:"block"
+        });
         $("body").addClass("on");
 
     })
@@ -103,7 +113,6 @@ $(function () {
 
         $("body").toggleClass("on");
 
-        $("iframe")[1].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
 
         let txt2 = $("a", this).text();
 
