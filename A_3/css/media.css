@@ -61,11 +61,8 @@
     }
 
     .mMod2{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100% !important;
-        height: 100vh !important;
+        height: auto;
+        background-attachment: unset;
     }
 
     .lSky {
@@ -128,7 +125,6 @@
 
 
     .content {
-        margin-top: 100vh;
         padding: 30px;
 
         /* firefox */
