@@ -43,9 +43,11 @@ body {
 /*/////////////////////////////////////////// 메인섹션 ///////////////////////////////*/
 .mMod2 {
     position: relative;
-    /* background-color: #faedc9; */
     width: 100%;
     height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .modbg {
@@ -180,7 +182,7 @@ body {
     background: url(../../common/images/ico_facebook.png);
 }
 
-.mMod11 a.twiter {
+.mMod11 a.twitter {
     background: url(../../common/images/ico_twitter.png);
 }
 
@@ -277,10 +279,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.mMod9 .swiper-wrapper {
-    justify-content: center;
 }
 
 .mMod9 .swiper-button-next {
@@ -384,10 +382,17 @@ footer {
     color: #fff;
 }
 
+footer .pbx{
+    position: relative;
+    width: 1200px;
+    padding: 50px 30px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
 .mMod6 {
     font-size: 14px;
     position: relative;
-    padding: 50px 30px;
     box-sizing: border-box;
 }
 
@@ -410,7 +415,7 @@ footer {
 .mMod10 {
     position: absolute;
     top: 50%;
-    left: 69%;
+    right: 0;
     transform: translateY(-50%);
 }
 

@@ -1,17 +1,15 @@
 $(function () {
 
-    let mod8 = $(".mMod8").length;
 
-    if (mod8 === 0) {
+    let content = $(".content .dn").filter(function () {
+        return $(this).css("display") === "none"
+    })
 
-        $(".youtubePlay").css({
-            display: "none"
-        })
-    }
+    let contmobile = $(".content .mdn").filter(function () {
+        return $(this).css("display") === "none"
+    })
 
-    let content = $(".mMod4, .mMod8, .mMod9, .mMod5, .mMod10").length;
-
-    if (content === 0) {
+    if (content.length === 4 || contmobile.length === 5) {
         $(".content").css({
             display: "none"
         })
@@ -20,17 +18,17 @@ $(function () {
 
     document.getElementsByClassName("vid").controls = false;
 
-    var slides = $(".mMod9 .swiper-slide").length;
+    let slides = $(".mMod9 .swiper-slide").length;
     // 슬라이더 중앙 정렬
-    if (slides >= 3) {
-        $(".mMod9 .swiper-wrapper").css({
-            justifyContent: "unset"
-        })
-    } else {
-        $(".mMod9 .swiper-wrapper").css({
-            justifyContent: "center"
-        })
-    }
+    // if (slides >= 3) {
+    //     $(".mMod9 .swiper-wrapper").css({
+    //         justifyContent: "unset"
+    //     })
+    // } else {
+    //     $(".mMod9 .swiper-wrapper").css({
+    //         justifyContent: "center"
+    //     })
+    // }
     ////////////////////////////////
 
 
@@ -39,7 +37,7 @@ $(function () {
 
         $(".mMod8").fadeIn();
 
-        $("video").get(0).pause();
+        // $("video").get(0).pause();
 
     }); //////////////////////////////////
 
@@ -47,10 +45,10 @@ $(function () {
 
         $(".mMod8").hide();
 
-        $("video").get(0).play();
+        // $("video").get(0).play();
 
-        // 아이프레임 정지
-        $("iframe")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+        // // 아이프레임 정지
+        // $("iframe")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
 
 
     }); ///////////////////////////////
@@ -74,8 +72,8 @@ $(function () {
         });
     } else {
         var mMod9 = new Swiper(".mMod9 .swiper-container", {
-            loop:"true",
-            slidesPerView: 3,
+            loop: "true",
+            slidesPerView: slides,
             spaceBetween: 30,
             pagination: {
                 el: ".swiper-pagination",
