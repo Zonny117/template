@@ -14,32 +14,28 @@ $(function () {
 
 
 
-    let menu = [
-        $(".sub .mMod4, .sub .mMod10").length,
-        $(".mMod7.forMobile").length,
-        $(".mMod8.forMobile, .mMod9.forMobile").length,
-        $(".mMod5.forMobile").length,
-        $(".mMod6.forMobile").length
-    ]
 
-    for (i = 0; i <= 4; i++) {
+    let link1 = $(".link1_dn").filter(function () {
+        return $(this).css("display") === "none"
+    })
 
+    let link3 = $(".link3_dn").filter(function () {
+        return $(this).css("display") === "none"
+    })
 
-
-        // console.log(menu[i])
-
-        if (menu[i] === 0) {
-
-
-
-            $(".link" + (i + 1) + "_li").css({
-                display: "none"
-            });
-
-        }
-        // console.log(".link" + (i + 1) + "_li")
+    if (link1.length === 2) {
+        $(".link1_li, .sub").css({
+            display: "none"
+        })
     }
 
+    if (link3.length === 2) {
+        $(".link3_li, VI_wrap").css({
+            display: "none"
+        })
+    }
+
+    console.log(link3.length)
 
 
     $(".menu ul li").click(function () {

@@ -5,6 +5,16 @@ body {
 	background-color: #ececec;
 }
 
+
+
+.mMod0{
+	position: relative;
+	color: #fff;
+	display: inline-block;
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+
 .mMod1 {
 	position: relative;
 	color: #fff;
@@ -93,14 +103,18 @@ body {
 }
 
 .mMod3 h2 {
+	width: 500px;
+	margin: 0 auto;
 	font-size: 35px;
 	line-height: 130%;
 }
 
 .mMod3 .txt {
+	width: 500px;
+	margin: 0 auto;
+	margin-top: 15px;
 	font-size: 22px;
 	line-height: 140%;
-	margin: 15px 0 0;
 }
 
 .mMod4 {
@@ -108,15 +122,16 @@ body {
 	width: 1200px;
 }
 
-.mMod4 li {
+.mMod4 .swiper-slide {
 	position: relative;
 	background-color: #fff;
 	box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.05);
 	margin: 0 0 13px;
 	padding: 40px;
+	box-sizing: border-box;
 }
 
-.mMod4 li:before {
+.mMod4 .swiper-slide:before {
 	content: "";
 	position: absolute;
 	top: 42px;
@@ -126,26 +141,27 @@ body {
 	height: calc(100% - 84px);
 }
 
-.mMod4 li .tit {
+.mMod4 .swiper-slide .tit {
+	line-height: 120%;
 	font-size: 25px;
 	font-weight: bold;
 }
 
-.mMod4 li .txt {
+.mMod4 .swiper-slide .txt {
 	font-size: 18px;
 	line-height: 150%;
 	font-weight: 300;
 	margin: 22px 0 0;
 }
 
-.mMod4 li .dot {
+.mMod4 .swiper-slide .dot {
 	position: absolute;
 	top: 50%;
 	right: 40px;
 	transform: translateY(-50%);
 }
 
-.mMod4 li .dot span {
+.mMod4 .swiper-slide .dot span {
 	display: block;
 	background-color: #e3e3e3;
 	border-radius: 50%;
@@ -154,7 +170,7 @@ body {
 	height: 10px;
 }
 
-.mMod4 li .dot span.selected {
+.mMod4 .swiper-slide .dot span.selected {
 	background-color: #000;
 }
 
@@ -337,7 +353,7 @@ body {
 	height: 46px;
 }
 
-.mMod11 a.twiter {
+.mMod11 a.twitter {
 	background-image: url(../../common/images/ico_twitter.png);
 }
 
@@ -370,17 +386,18 @@ body {
 
 
 /* screen resolutions higher than 768px */
-@media all and (min-width:769px) {
+@media all and (min-width:1025px) {
 	.mMod2 {
-		height: 612px !important;
+		height: 612px;
 	}
 }
 
 /* screen resolutions lower than 768px */
-@media all and (max-width:768px) {
+@media all and (max-width:1024px) {
 
 	html,
 	body {
+		overflow-x: hidden;
 		background-color: #fff;
 	}
 
@@ -478,11 +495,13 @@ body {
 	}
 
 	.mMod3 h2 {
+		width: auto;
 		font-size: 28px;
 		line-height: 120%;
 	}
 
 	.mMod3 .txt {
+		width: auto;
 		font-size: 16px;
 		line-height: 140%;
 		margin: 15px 0 0;
@@ -747,13 +766,14 @@ body {
 	}
 
 	.lMod9 .swiper-container {
-		margin: 0 20px 20px;
-		padding: 75px 0 0;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 
 	.lMod9 .swiper-pagination {
 		position: absolute;
-		top: 0;
+		top: 0px;
 		left: 0;
 		width: 100%;
 		line-height: 75px;
@@ -764,6 +784,7 @@ body {
 		background-color: #fff;
 		width: 12px;
 		height: 12px;
+		margin: 2px;
 	}
 
 	.lMod9 .swiper-slide img {
