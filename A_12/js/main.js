@@ -27,43 +27,43 @@ $(function () {
 
     })
 
-    let ts, te;
+    // let ts, te;
 
-    $(document).on("touchstart", function (e) {
-        ts = e.originalEvent.touches[0].screenY;
+    // $(document).on("touchstart", function (e) {
+    //     // ts = e.originalEvent.touches[0].screenY;
 
-        // console.log(ts)
-    });
+    //     // console.log(ts)
+    // });
 
-    $(document).on("touchend", function (e) {
-        te = e.originalEvent.changedTouches[0].screenY;
+    let winw = $(window).innerWidth();
 
-        let touch = ts - te;
+    if (winw <= 1366) {
+        $(document).on("scroll", function (e) {
 
-        // console.log(touch)
-
-
-        // console.log(sct)
-
-        $(document).on("scroll", function () {
 
             let sct = $(document).scrollTop();
 
-            if (touch > 0 && sct > 0) {
+            // console.log(sct)
+
+
+
+            if (sct > 0) {
                 $(".gnb").addClass("on")
             }
 
-            if (touch < 0 && sct <= 500) {
+            if (sct === 0) {
                 $(".gnb").removeClass("on")
 
             }
+
+
         })
+    }
+
+    
 
 
-    })
 
-
-    let winw = $(window).innerWidth();
 
     $(".contact").click(function () {
         $(".topmenu").addClass("on");
@@ -126,6 +126,7 @@ $(function () {
         });
     }
 
+   
 
     let iOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
