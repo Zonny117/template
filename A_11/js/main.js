@@ -251,9 +251,6 @@ $(function () {
     let sns = $(".mMod11 a")
 
     if (sns.length === 0) {
-        $(".mMod11").css({
-            display:"none"
-        })
         return;
     }
 
