@@ -619,6 +619,18 @@ footer {
     overflow-y: auto;
 }
 
+.lMod9 .swiper-slide::-webkit-scrollbar{
+    width: 5px;
+}
+
+.lMod9 .swiper-slide::-webkit-scrollbar-thumb{
+    background-color: #000;
+}
+
+.lMod9 .swiper-slide::-webkit-scrollbar-track{
+    background-color: #fff;
+}
+
 .lMod9 img {
     width: 100%;
 }
@@ -632,6 +644,12 @@ footer {
     position: absolute;
     top: 30px;
     right: 30px;
+}
+
+@media only screen and (max-width:1317px) {
+    .mag{
+        left: 0;
+    }
 }
 
 @media only screen and (min-width:851px) {
