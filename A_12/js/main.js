@@ -45,21 +45,21 @@ $(function () {
 
         // console.log(sct)
 
-        $(document).on("scroll", function(){
-            
+        $(document).on("scroll", function () {
+
             let sct = $(document).scrollTop();
 
             if (touch > 0 && sct > 0) {
                 $(".gnb").addClass("on")
             }
-    
-            if (touch < 0 && sct <= 200) {
+
+            if (touch < 0 && sct <= 0) {
                 $(".gnb").removeClass("on")
-    
+
             }
         })
 
-       
+
     })
 
 
@@ -126,6 +126,39 @@ $(function () {
         });
     }
 
+
+    let iOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+
+    const body = document.querySelector('body');
+    let ios_scroll = 0;
+
+    function enable() {
+        ios_scroll = window.pageYOffset;
+        body.style.overflow = 'hidden';
+        body.style.position = 'fixed';
+        body.style.top = `-${ios_scroll}px`;
+        body.style.width = '100%';
+    }
+
+    function disable() {
+        body.style.removeProperty('overflow');
+        body.style.removeProperty('position');
+        body.style.removeProperty('top');
+        body.style.removeProperty('width');
+        window.scrollTo(0, ios_scroll);
+    }
+
+
+    if (iOS) {
+        $(".contact, .mMod9 .swiper-slide").click(function () {
+            enable();
+        });
+
+        $(".btn_close, .btn_close2").click(function () {
+            disable();
+        });
+    }
 
     let sns = $(".mMod11 a")
 
