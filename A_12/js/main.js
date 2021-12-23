@@ -35,7 +35,7 @@ $(function () {
         // console.log(ts)
     });
 
-    $(document).on("touchmove touchend", function (e) {
+    $(document).on("touchend", function (e) {
         te = e.originalEvent.changedTouches[0].screenY;
 
         let touch = ts - te;
