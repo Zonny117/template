@@ -317,12 +317,16 @@ body.on {
 }
 
 .mMod3 h2 {
+    width: 500px;
     font-size: 55px;
     line-height: 140%;
+    margin: 0 auto;
     margin-bottom: 42px;
 }
 
 .mMod3 .txt {
+    width: 500px;
+    margin: 0 auto;
     font-size: 18px;
     font-weight: 400;
 }

@@ -2,7 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 
-
+.forMobile{
+    display: none !important;
+}
 
 .btnbx.forWeb,
 .mag.forWeb,
@@ -341,6 +343,7 @@ body {
 }
 
 .mMod3 h2 {
+    width: 200px;
     font-size: 30px;
     line-height: 130%;
     font-weight: 600;
@@ -781,7 +784,7 @@ iframe {
     content: url(../images/instagram.png);
 }
 
-.mMod11 .twiter {
+.mMod11 .twitter {
     content: url(../images/twitter.png);
 }
 
