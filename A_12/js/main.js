@@ -53,7 +53,7 @@ $(function () {
                 $(".gnb").addClass("on")
             }
 
-            if (touch < 0 && sct <= 0) {
+            if (touch < 0 && sct <= 500) {
                 $(".gnb").removeClass("on")
 
             }
