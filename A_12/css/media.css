@@ -275,6 +275,20 @@
         top: 50%;
         transform: translateY(-50%);
     }
+
+
+    .lMod9 .swiper-container{
+        top: auto;
+        left: auto;
+        transform: none;
+        max-width: unset;
+        height: 100vh;
+        line-height: 100vh;
+    }
+
+    .btn_close2{
+        z-index: 999999;
+    }
 }
 
 

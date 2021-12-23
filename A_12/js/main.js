@@ -27,6 +27,42 @@ $(function () {
 
     })
 
+    let ts, te;
+
+    $(document).on("touchstart", function (e) {
+        ts = e.originalEvent.touches[0].screenY;
+
+        // console.log(ts)
+    });
+
+    $(document).on("touchmove touchend", function (e) {
+        te = e.originalEvent.changedTouches[0].screenY;
+
+        let touch = ts - te;
+
+        // console.log(touch)
+
+
+        // console.log(sct)
+
+        $(document).on("scroll", function(){
+            
+            let sct = $(document).scrollTop();
+
+            if (touch > 0 && sct > 0) {
+                $(".gnb").addClass("on")
+            }
+    
+            if (touch < 0 && sct <= 200) {
+                $(".gnb").removeClass("on")
+    
+            }
+        })
+
+       
+    })
+
+
     let winw = $(window).innerWidth();
 
     $(".contact").click(function () {
@@ -81,6 +117,14 @@ $(function () {
         $(".lMod9").removeClass("on");
         $("html, body").removeClass("on");
     })
+
+    if (winw <= 850) {
+        $(".mMod9 .swiper-slide").click(function () {
+            $(".lMod9").addClass("on");
+            $("html, body").addClass("on");
+
+        });
+    }
 
 
     let sns = $(".mMod11 a")
