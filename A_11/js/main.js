@@ -58,16 +58,16 @@ $(function () {
 
 
     if (winw <= 850) {
-        let ts, te;
+        // let ts, te;
 
 
-        $(document).on("touchstart", function (e) {
-            ts = e.originalEvent.touches[0].screenY;
+        // $(document).on("touchstart", function (e) {
+        //     ts = e.originalEvent.touches[0].screenY;
 
-            // console.log(ts)
-        })
+        //     // console.log(ts)
+        // })
 
-        $(document).on("touchmove touchend", function (e) {
+        $(document).on("scroll", function (e) {
 
 
             let topmenu = $(".gnb").hasClass("top");
@@ -76,26 +76,26 @@ $(function () {
 
             if (topmenu) return;
 
-            te = e.originalEvent.changedTouches[0].screenY;
+            // te = e.originalEvent.changedTouches[0].screenY;
 
-            let touch = ts - te;
+            // let touch = ts - te;
 
             // console.log(touch)
 
 
+            let sct = $(this).scrollTop();
+
+            // console.log(sct)
+
+            if (sct > 0) {
+                $(".gnb").addClass("on")
+            } else if (sct === 0 && mod3 != "none" && tel != "none") {
+                $(".gnb").removeClass("on")
+            }
             // 스크롤 값 실시간으로 받아오려면 scroll 이벤트 사용
-            $(document).on("scroll", function () {
+            // $(document).on("scroll", function () {
 
-                let sct = $(this).scrollTop();
-
-                // console.log(sct)
-
-                if (touch > 0) {
-                    $(".gnb").addClass("on")
-                } else if (touch < 0 && sct <= 300 && mod3 != "none" && tel != "none") {
-                    $(".gnb").removeClass("on")
-                }
-            })
+            // })
 
 
         })
