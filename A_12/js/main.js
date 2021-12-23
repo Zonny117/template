@@ -155,7 +155,7 @@ $(function () {
             enable();
         });
 
-        $(".btn_close, .btn_close2").click(function () {
+        $(".btn_close1, .btn_close2").click(function () {
             disable();
         });
     }
