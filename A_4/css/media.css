@@ -26,7 +26,7 @@
     }
 
     .mSky .forWeb {
-        display: none;
+        display: none !important;
     }
 
     .mSky .forMobile {
@@ -128,9 +128,16 @@
 
     /* 로고 */
 
+    .flex2 {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 20px;
+        padding-left: 20px;
+    }
+
     .mMod1 {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         display: block !important;
         position: relative;
         font-size: 18px;
@@ -139,6 +146,9 @@
         border-bottom: unset;
         margin-bottom: 20px;
         text-align: left;
+        z-index: 9999;
+        margin-right: 15px;
+        transition: .6s;
     }
 
     .mMod0 {
@@ -157,6 +167,11 @@
         color: #fff;
         background-color: unset;
         padding: unset;
+        transform: none;
+        border-radius: unset;
+        overflow: unset;
+        transition: none;
+        max-height: unset;
     }
 
     .modbg {
@@ -305,7 +320,7 @@
         width: 100%;
         padding: 30px;
         overflow-y: auto;
-        max-height: calc(90%);
+        max-height: calc(96%);
 
         transition: bottom .5s ease-in-out;
 
@@ -345,6 +360,11 @@
 
 
     /* 메뉴1 - 다운로드 */
+    .mMod10{
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
     .mMod10.forMobile {
         display: block;
     }
@@ -428,7 +448,7 @@
         width: 100%;
     }
 
-    .mMod9 .swiper-slide{
+    .mMod9 .swiper-slide {
         padding: 0;
     }
 
@@ -461,7 +481,8 @@
 
     .gMap {
         position: relative;
-        height: 300px;
+        height: 0;
+        padding-top: 90%;
     }
 
     .map {
@@ -480,7 +501,6 @@
         top: 0;
         right: 0;
         text-align: center;
-        z-index: 99999;
     }
 
     .tx {
@@ -552,22 +572,38 @@
         display: none !important;
     }
 
-}
 
-@media only screen and (max-width:768px) and (min-height:420px) {
+    .btn_slide{
+        display: none;
+    }
+
+    .lbxwrap{
+        position: unset;
+        top: unset;
+        left: unset;
+        transform: unset;
+        padding: unset;
+        width:auto;
+        background-color: unset;
+        border-radius: unset;
+        transition: none;
+    }
+    
+    .lbxwrap.on{
+        left: auto;
+    }
 
     /* 상단 아이콘 */
     .btn_top,
     .btn_tel {
         display: block;
-        position: absolute;
         z-index: 9999;
-        top: 20px;
         transition: .5s;
     }
 
     .btn_top.on,
-    .btn_tel.on {
+    .btn_tel.on,
+    .mMod1.on {
         opacity: 0;
         z-index: 0;
     }
@@ -582,22 +618,11 @@
         font-size: 0;
     }
 
-    .btn_top {
-        left: 20px;
-    }
-
-    .btn_top a {
-        background: url(../images/star_ico.png) no-repeat center/50px 50px;
-    }
-
-    .btn_tel {
-        left: 20px;
-    }
-
     .btn_tel a {
         background: url(../images/tel_ico.png) no-repeat center/50px 50px;
     }
 }
+
 
 
 @media only screen and (max-width:320px) {

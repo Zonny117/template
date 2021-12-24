@@ -30,8 +30,13 @@
         <!-- <div class="btn_top">
             <a href="###">즐겨찾기</a>
         </div> -->
-        <div class="btn_tel">
-            <a href="tel:010-1587-2587">연락하기</a>
+        <div class="flex2">
+            <h1 class="mMod1 forMobile">
+                <img src="images/img_mod1.jpg" alt="">
+            </h1>
+            <div class="btn_tel">
+                <a href="tel:010-1587-2587">연락하기</a>
+            </div>
         </div>
 
         <!-- 배경 -->
@@ -64,164 +69,152 @@
             </div>
         </div>
 
-        <div class="lbx">
-            <div class="modbg">
-
-                <!-- 연락처 -->
-
-                <div class="flex">
-                    <!-- 링크 -->
-                    <div class="mMod7 forWeb">
-                        <a href="###">아우디코리아 공식홈페이지</a>
-                        <a href="###">시승신청 바로가기</a>
-                        <a href="###">블로그 링크</a>
+        <div class="lbxwrap on">
+            <a href="###" class="btn_slide on">슬라이드 버튼</a>
+            <div class="lbx">
+                <div class="modbg">
+                    <!-- 연락처 -->
+                    <div class="flex">
+                        <!-- 링크 -->
+                        <div class="mMod7 forWeb dn">
+                            <a href="###">아우디코리아 공식홈페이지</a>
+                            <a href="###">시승신청 바로가기</a>
+                            <a href="###">블로그 링크</a>
+                        </div>
+                        <!-- sns -->
+                        <div class="mMod11 forWeb dn">
+                            <a href="###" class="facebook">facebook</a>
+                            <a href="###" class="twitter">twiter</a>
+                            <a href="###" class="instagram">instagram</a>
+                            <a href="###" class="youtube">youtube</a>
+                        </div>
                     </div>
-                    <!-- sns -->
-                    <div class="mMod11 forWeb">
-                        <a href="###" class="facebook">facebook</a>
-                        <a href="###" class="twitter">twiter</a>
-                        <a href="###" class="instagram">instagram</a>
-                        <a href="###" class="youtube">youtube</a>
+                    <!-- 메인문구 -->
+                    <div class="maintitle">
+                        <span class="mMod0 forMobile">아우디 강남점</span>
+                        <div class="mMod3 dn">
+                            <h2>아우디 강남점<br>유정현 대리입니다.</h2>
+                            <p class="txt">
+                                고객님의 만족을 위해 최선을 다합니다.<br>
+                                010-1234-5978<br>
+                                아우디 강남점 유정현 대리
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 다운로드 -->
+                    <div class="mMod10 forWeb dn">
+                        <a href="###"><span>카탈로그 다운로드</span></a>
                     </div>
                 </div>
-
-                <!-- 메인문구 -->
-                <div class="maintitle">
-                    <h1 class="mMod1 forMobile">
-                        <img src="images/img_mod1.jpg" alt="">
-                    </h1>
-                    <span class="mMod0 forMobile">아우디 강남점</span>
-                    <div class="mMod3">
-                        <h2>아우디 강남점<br>유정현 대리입니다.</h2>
-                        <p class="txt">
-                            고객님의 만족을 위해 최선을 다합니다.<br>
-                            010-1234-5978<br>
-                            아우디 강남점 유정현 대리
-                        </p>
+                <div class="mMod9 forWeb dn">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="images/xmod1.jpg" alt="수입차량 할인정보"></div>
+                            <div class="swiper-slide"><img src="images/xmod2.jpg" alt="수입차량 할인정보"></div>
+                            <div class="swiper-slide"><img src="images/xmod3.jpg" alt="수입차량 할인정보"></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
                     </div>
-                </div>
-
-                <!-- 다운로드 -->
-                <div class="mMod10 forWeb">
-                    <a href="###"><span>카탈로그 다운로드</span></a>
-                </div>
-            </div>
-
-            <div class="mMod9 forWeb">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/xmod1.jpg" alt="수입차량 할인정보"></div>
-                        <div class="swiper-slide"><img src="images/xmod2.jpg" alt="수입차량 할인정보"></div>
-                        <div class="swiper-slide"><img src="images/xmod3.jpg" alt="수입차량 할인정보"></div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                </div>
-                <script>
-                    $(function () {
-
-                        let sldnum = $(".mMod9.forWeb .swiper-slide").length;
-
-
-                        // console.log(sldnum);
-
-                        var mMod9 = new Swiper(".mMod9 .swiper-container", {
-                            slidesPerView: sldnum,
-                            navigation: {
-                                nextEl: ".mMod9 .swiper-button-next"
-                            },
-
-                            loop: true
+                    <script>
+                        $(function () {
+                            let sldnum = $(".mMod9.forWeb .swiper-slide").length;
+                            // console.log(sldnum);
+                            var mMod9 = new Swiper(".mMod9 .swiper-container", {
+                                slidesPerView: sldnum,
+                                navigation: {
+                                    nextEl: ".mMod9 .swiper-button-next"
+                                },
+                                loop: true
+                            });
                         });
-
-                    });
-                </script>
-            </div>
-            <!-- 컨텐츠 내용 -->
-            <div class="mMod4 forWeb">
-                <div>
-                    <div class="swiper-slide">
-                        <div class="tit">아우디, [2021 겨울철 서비스 캠페인] 실시</div>
-                        <div class="txt">
-                            -7월 5일부터 7월 30일까지 전국 아우디 공식 서비스 센터에서 에어컨, 냉각 시스템, 엔진 및 배터리 등
-                            여름철 필수 점검 항목에 대해 무상 점검 실시<br>
-                            -캠페인 기간 중 ‘서비스 연장 패키지’ 구매 고객 아우디 싱글 프레임 차량용 방향제 및 리필팩 증정
+                    </script>
+                </div>
+                <!-- 컨텐츠 내용 -->
+                <div class="mMod4 forWeb dn">
+                    <div>
+                        <div class="swiper-slide">
+                            <div class="tit">아우디, [2021 겨울철 서비스 캠페인] 실시</div>
+                            <div class="txt">
+                                -7월 5일부터 7월 30일까지 전국 아우디 공식 서비스 센터에서 에어컨, 냉각 시스템, 엔진 및 배터리 등
+                                여름철 필수 점검 항목에 대해 무상 점검 실시<br>
+                                -캠페인 기간 중 ‘서비스 연장 패키지’ 구매 고객 아우디 싱글 프레임 차량용 방향제 및 리필팩 증정
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="tit">자동차 교환∙환불 제도 안내</div>
+                            <div class="txt">
+                                아우디코리아는 9월 2일부터 자동차 교환∙환불 제도(한국형 레몬법)를 전격 시행합니다.
+                                <br><br>
+                                한국형 레몬법은 자동차가 소유자에게 인도된 날로부터 1년 이내 또는 주행거리 2만 킬로미터 이내에 중대하자로 2회,
+                                일반하자로 3회 이상 수리 후 동일 하자가 재발할 경우, 차주는 자동차를 인도받은 날로부터 2년 이내에 제조사에게
+                                신차 교환이나 환불을 요구할 수 있는 제도입니다.
+                                <br><br>
+                                아우디코리아가 9월 2일부터 레몬법을 전격 시행함에 따라, 전국 아우디 공식 판매딜러사들은 신차 매매계약 시
+                                교환,환불중재 규정에 대해 구매자에게 설명해야 합니다.<br>
+                                이에 대해 구매자가 이해하고 동의한다는 서명을 했을 경우에 레몬법에 의거, 하자가 있는 차량에 대한 요건을 충족할 시
+                                신차로 교환 또는 환불을 요구할 수 있습니다.<br>
+                                정부가 레몬법을 시행한 2019년 1월 1일부터 9월 1일까지 인도 받은 신차들에 대해선 소급하여 적용합니다.
+                            </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="tit">자동차 교환∙환불 제도 안내</div>
-                        <div class="txt">
-                            아우디코리아는 9월 2일부터 자동차 교환∙환불 제도(한국형 레몬법)를 전격 시행합니다.
-                            <br><br>
-                            한국형 레몬법은 자동차가 소유자에게 인도된 날로부터 1년 이내 또는 주행거리 2만 킬로미터 이내에 중대하자로 2회,
-                            일반하자로 3회 이상 수리 후 동일 하자가 재발할 경우, 차주는 자동차를 인도받은 날로부터 2년 이내에 제조사에게
-                            신차 교환이나 환불을 요구할 수 있는 제도입니다.
-                            <br><br>
-                            아우디코리아가 9월 2일부터 레몬법을 전격 시행함에 따라, 전국 아우디 공식 판매딜러사들은 신차 매매계약 시
-                            교환,환불중재 규정에 대해 구매자에게 설명해야 합니다.<br>
-                            이에 대해 구매자가 이해하고 동의한다는 서명을 했을 경우에 레몬법에 의거, 하자가 있는 차량에 대한 요건을 충족할 시
-                            신차로 교환 또는 환불을 요구할 수 있습니다.<br>
-                            정부가 레몬법을 시행한 2019년 1월 1일부터 9월 1일까지 인도 받은 신차들에 대해선 소급하여 적용합니다.
+                </div>
+                <!-- 동영상 -->
+                <div class="mMod8 forWeb dn">
+                    <iframe src="https://www.youtube.com/embed/YqQaBKTiU8o" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <!-- 주소 및 맵 API -->
+                <div class="mMod5 forWeb dn">
+                    <div class="txt forWeb">
+                        <div class="ti">
+                            <strong class="t">아우디 강남점</strong> <br>
+                            경기 하남시 미사강변동로 72 SB비즈타워 1003호
                         </div>
+                        <a href="###" class="navi forWeb">네비게이션연결</a>
+                    </div>
+                    <div class="gMap forWeb">
+                        <div class="map" style="background-image: url(images/img_mod5.png);"></div>
+                        <a href="###" class="navi forMobile">네비게이션연결</a>
+                    </div>
+                    <div class="tx forWeb">
+                        &lt;대중교통이용시&gt;<br>
+                        시청역(1호선/2호선)에서 하차, 6번 출구에서 도보 1-2분 거리<br>
+                        &lt;자가이용시&gt;<br>
+                        시청역(1호선/2호선)에서 하차, 6번 출구에서 도보 1-2분 거리
                     </div>
                 </div>
-            </div>
-            <!-- 동영상 -->
-            <div class="mMod8 forWeb">
-                <iframe src="https://www.youtube.com/embed/YqQaBKTiU8o" title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-            </div>
-            <!-- 주소 및 맵 API -->
-            <div class="mMod5 forWeb">
-                <div class="txt forWeb">
-                    <div class="ti">
-                        <strong class="t">아우디 강남점</strong> <br>
-                        경기 하남시 미사강변동로 72 SB비즈타워 1003호
+                <div class="content forMobile">
+                    <div class="menu">
+                        <ul>
+                            <li class="link1_li">
+                                <a href="###" class="link1">
+                                    컨텐츠 내용
+                                </a>
+                            </li>
+                            <li class="link2_li">
+                                <a href="###" class="link2">
+                                    링크
+                                </a>
+                            </li>
+                            <li class="link3_li">
+                                <a href="###" class="link3">
+                                    영상 및 슬라이드
+                                </a>
+                            </li>
+                            <li class="link4_li">
+                                <a href="###" class="link4">
+                                    주소
+                                </a>
+                            </li>
+                            <li class="link5_li">
+                                <a href="###" class="link5">
+                                    연락처
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-
-                    <a href="###" class="navi forWeb">네비게이션연결</a>
-                </div>
-                <div class="gMap forWeb">
-                    <div class="map" style="background-image: url(images/img_mod5.png);"></div>
-                    <a href="###" class="navi forMobile">네비게이션연결</a>
-                </div>
-                <div class="tx forWeb">
-                    &lt;대중교통이용시&gt;<br>
-                    시청역(1호선/2호선)에서 하차, 6번 출구에서 도보 1-2분 거리<br>
-                    &lt;자가이용시&gt;<br>
-                    시청역(1호선/2호선)에서 하차, 6번 출구에서 도보 1-2분 거리
-                </div>
-            </div>
-            <div class="content forMobile">
-                <div class="menu">
-                    <ul>
-                        <li class="link1_li">
-                            <a href="###" class="link1">
-                                컨텐츠 내용
-                            </a>
-                        </li>
-                        <li class="link2_li">
-                            <a href="###" class="link2">
-                                링크
-                            </a>
-                        </li>
-                        <li class="link3_li">
-                            <a href="###" class="link3">
-                                영상 및 슬라이드
-                            </a>
-                        </li>
-                        <li class="link4_li">
-                            <a href="###" class="link4">
-                                주소
-                            </a>
-                        </li>
-                        <li class="link5_li">
-                            <a href="###" class="link5">
-                                연락처
-                            </a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -230,6 +223,9 @@
         <div class="hidden_wrap">
             <!-- 모바일 메뉴 1 - 컨텐츠 내용 -->
             <div class="sub forMobile hidden_sbx">
+                <div class="mMod10 link1_dn">
+                    <a href="###">카탈로그 다운로드</a>
+                </div>
                 <div class="mMod4 link1_dn">
                     <div>
                         <div class="swiper-slide">
@@ -258,9 +254,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mMod10 link1_dn">
-                    <a href="###">카탈로그 다운로드</a>
-                </div>
+              
             </div>
 
             <!-- 모바일 메뉴 2 - 링크 -->

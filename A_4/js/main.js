@@ -15,6 +15,7 @@ $(function () {
 
 
 
+
     let link1 = $(".link1_dn").filter(function () {
         return $(this).css("display") === "none"
     })
@@ -35,7 +36,26 @@ $(function () {
         })
     }
 
-    console.log(link3.length)
+    let lbx = $(".lbx .dn").filter(function(){
+        return $(this).css("display") === "none"
+    })
+
+    if(lbx.length === 8){
+        $(".lbx").unwrap();
+        $(".btn_slide").css({
+            display:"none"
+        })
+    }
+
+    // console.log(link3.length)
+
+
+    $(".btn_slide").click(function () {
+        $(".lbxwrap").toggleClass("on")
+        $(this).toggleClass("on")
+    })
+
+
 
 
     $(".menu ul li").click(function () {
@@ -69,9 +89,9 @@ $(function () {
         // console.log(tf)
 
         if (tf) {
-            $(".btn_tel, .mSky").addClass("on");
+            $(".btn_tel, .mSky, .mMod1").addClass("on");
         } else {
-            $(".btn_tel, .mSky").removeClass("on");
+            $(".btn_tel, .mSky, .mMod1").removeClass("on");
         }
 
 
