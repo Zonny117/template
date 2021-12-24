@@ -218,11 +218,12 @@ body.hiddenScroll {
 
 .mSky {
 	position: fixed;
-	top: 50%;
+	/* top: 50%; */
+	bottom: 30px;
 	right: 30px;
-	transform: translateY(-50%);
+	/* transform: translateY(-50%); */
 	width: 64px;
-	z-index: 1000;
+	z-index: 9999;
 }
 
 .mSky .ls {
@@ -256,6 +257,7 @@ body.hiddenScroll {
 
 .mSky .iAlarm .ico {
 	background-image: url(../images/ico_allimon.png);
+	white-space: nowrap;
 }
 
 .mSky .iAlarm .ico:hover+.txt {
@@ -369,11 +371,11 @@ body.hiddenScroll {
 		text-indent: 0;
 		background-color: rgba(0, 0, 0, 0.21);
 		font-size: 12px;
-		letter-spacing: -1px;
 		color: #fff;
-		margin: 8px 0;
-		padding: 2px 0;
+		margin: 12px -5px;
+		padding: 2px 5px;
 		height: auto;
+		text-align: center;
 	}
 
 	.mSky .iAlarm .ico:hover+.txt {
