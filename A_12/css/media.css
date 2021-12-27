@@ -182,6 +182,10 @@
         font-size: 14px;
     }
 
+    .btn_tel a::after{
+        margin-left: 10px;
+    }
+
     .flex {
         flex-direction: column;
         padding: 85px 0 100px 20px;

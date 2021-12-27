@@ -5,15 +5,16 @@ body {
     width: 100%;
 }
 
-html.on, body.on{
+html.on,
+body.on {
     overflow: hidden;
 }
 
-.default{
+.default {
     background-image: url(../images/default.png);
 }
 
-.mobile{
+.mobile {
     display: none;
 }
 
@@ -144,11 +145,11 @@ html.on, body.on{
     opacity: 1;
 }
 
-.topmenu::-webkit-scrollbar{
+.topmenu::-webkit-scrollbar {
     width: 0px;
 }
 
-.top_btnbx{
+.top_btnbx {
     margin-top: 80px;
     margin-left: 80px;
 }
@@ -157,11 +158,11 @@ html.on, body.on{
     margin-right: 40px;
 }
 
-.mod6bx{
+.mod6bx {
     display: none;
 }
 
-.mod6bx.on{
+.mod6bx.on {
     display: block;
 }
 
@@ -187,7 +188,7 @@ html.on, body.on{
     margin-bottom: 40px;
 }
 
-.mod5bx{
+.mod5bx {
     display: none;
     margin-top: 69px;
     min-height: calc(100vh - 173px);
@@ -195,7 +196,7 @@ html.on, body.on{
     justify-content: flex-end;
 }
 
-.mod5bx.on{
+.mod5bx.on {
     display: flex;
 }
 
@@ -207,7 +208,7 @@ html.on, body.on{
     height: 100%;
 }
 
-.txtbx{
+.txtbx {
     padding: 0 80px;
     box-sizing: border-box;
 }
@@ -359,12 +360,12 @@ html.on, body.on{
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.418);
     margin-top: 40px;
+    text-align: center;
 }
 
 .btn_tel a {
     position: relative;
     display: inline-block;
-    padding-left: 40px;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
@@ -374,10 +375,8 @@ html.on, body.on{
 .btn_tel a::after {
     content: '';
     background-image: url(../images/arrow_white.svg);
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 40px;
+    display: inline-block;
+    margin-left: 20px;
     width: 20px;
     height: 12px;
     background-size: 100% 100%;
@@ -642,7 +641,7 @@ footer {
     display: none;
 }
 
-.lMod9.on{
+.lMod9.on {
     display: block;
 }
 
@@ -662,15 +661,15 @@ footer {
     overflow-y: auto;
 }
 
-.lMod9 .swiper-slide::-webkit-scrollbar{
+.lMod9 .swiper-slide::-webkit-scrollbar {
     width: 5px;
 }
 
-.lMod9 .swiper-slide::-webkit-scrollbar-thumb{
+.lMod9 .swiper-slide::-webkit-scrollbar-thumb {
     background-color: #000;
 }
 
-.lMod9 .swiper-slide::-webkit-scrollbar-track{
+.lMod9 .swiper-slide::-webkit-scrollbar-track {
     background-color: #fff;
 }
 
@@ -678,7 +677,7 @@ footer {
     width: 100%;
 }
 
-.btn_close2{
+.btn_close2 {
     font-size: 0;
     text-indent: -9999px;
     width: 20px;
@@ -690,7 +689,7 @@ footer {
 }
 
 @media only screen and (max-width:1317px) {
-    .mag{
+    .mag {
         left: 0;
     }
 }
