@@ -9,6 +9,10 @@ html.on, body.on{
     overflow: hidden;
 }
 
+.default{
+    background-image: url(../images/default.png);
+}
+
 .mobile{
     display: none;
 }

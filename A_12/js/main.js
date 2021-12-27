@@ -1,39 +1,51 @@
 $(function () {
 
-    // $(document).on("DOMMouseScroll mousewheel", function (e) {
 
-    //     e = window.event || e;
+    // 모듈 제어
+    let mod5 = $(".mMod5").css("display")
+    let mod6 = $(".mMod6").css("display")
 
-    //     let E = e.detail ? e.detail : e.wheelDelta;
+    if (mod6 === "none") {
+        $(".btn_contact").css({
+            display: "none"
+        }).removeClass("on");
 
-    //     // console.log(E)
+        $(".mMod6").addClass("on");
+    }
 
-    //     if (/Firefox/i.test(navigator.userAgent)) {
-    //         E = -E;
-    //     }
+    if (mod5 === "none") {
+        $(".btn_address").css({
+            display: "none"
+        });
+    }
+
+    if (mod5 === "none" && mod6 === "none") {
+        $(".topmenu, .dim, .contact").css({
+            display: "none"
+        });
+    }
+
+    let flex = $(".flex .dn").filter(function () {
+        return $(this).css("display") === "none"
+    })
+
+    if (flex.length === 2) {
+        $(".flex").css({
+            display: "none"
+        });
+    }
+
+    let footer = $("footer .dn").filter(function () {
+        return $(this).css("display") === "none"
+    })
+
+    if (footer === 3) {
+        $("footer").css({
+            display: "none"
+        });
+    }
 
 
-    //     let sct = $(document).scrollTop();
-
-    //     // console.log(sct)
-
-    //     if (E < 0 && sct > 0) {
-    //         $(".gnb").addClass("on")
-    //     }
-
-    //     if (E > 0 && sct <= 200) {
-    //         $(".gnb").removeClass("on")
-    //     }
-
-    // })
-
-    // let ts, te;
-
-    // $(document).on("touchstart", function (e) {
-    //     // ts = e.originalEvent.touches[0].screenY;
-
-    //     // console.log(ts)
-    // });
 
 
     $(document).on("scroll", function () {
