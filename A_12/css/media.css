@@ -1,0 +1,329 @@
+@charset "utf-8";
+
+@media only screen and (max-width:850px) {
+
+
+    .dim {
+        display: none !important;
+    }
+
+    .dim.on {
+        display: none !important;
+    }
+
+    .web {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .maintitle,
+    .flex,
+    .flex2 {
+        width: 100%;
+        max-width: unset;
+        padding: 0 20px;
+    }
+
+
+    .section_txt {
+        font-size: 16px;
+    }
+
+
+    .maintitle {
+        padding-top: 280px;
+        padding-bottom: 10%;
+    }
+
+    .gnb {
+        position: fixed;
+        /* position: -webkit-sticky; */
+        padding: 12px 10px;
+
+        /* fixed ios js delay fix */
+        -webkit-transform: translateZ(0);
+        -webkit-transform: translateZ(0px, 0px, 0px);
+    }
+
+    .mMod1 {
+        margin-right: 10px;
+    }
+
+    .contact {
+        font-size: 20px;
+        width: 46px;
+        height: 46px;
+        text-align: center;
+        line-height: 46px;
+        background-color: rgba(221, 221, 221, 0.486);
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .contact::before {
+        display: none;
+    }
+
+    .topmenu {
+        width: 100%;
+        min-height: 100vh;
+        overflow-y: auto;
+        padding: 0;
+    }
+
+    .top_btnbx {
+        padding-top: 20px;
+        padding-left: 20px;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .btn_contact {
+        margin-right: 20px;
+    }
+
+    .btn_close1 {
+        top: 25px;
+        right: 20px;
+    }
+
+    .mMod6 {
+        position: static;
+        margin-top: 80px;
+        padding: 0 20px;
+        padding-bottom: 20px;
+        box-sizing: border-box;
+    }
+
+    .mMod6 .tit {
+        font-size: 30px;
+        margin-bottom: 28px;
+    }
+
+    .mMod6 .txt {
+        font-size: 15px;
+        margin-bottom: 29px;
+    }
+
+    .btn_tel2 {
+        width: 100%;
+    }
+
+    .mMod5 {
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: calc(100vh - 50px);
+        margin-top: 63px;
+    }
+
+    .mMod5.on {
+        display: flex;
+    }
+
+    .txtbx {
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .t {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    .ti,
+    .tx {
+        font-size: 15px;
+    }
+
+    .navi {
+        left: 20px;
+        height: 52px;
+        line-height: 52px;
+        font-size: 14px;
+    }
+
+
+    .gMap {
+        position: relative;
+        height: 300px;
+        margin-top: 50px;
+    }
+
+    .mMod0 {
+        font-size: 15px;
+    }
+
+    .mMod3 h2 {
+        width: 80%;
+        font-size: 30px;
+    }
+
+    .mMod3 .txt {
+        width: 100%;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+
+    .btn_tel {
+        width: 190px;
+        height: 52px;
+        line-height: 52px;
+    }
+
+    .btn_tel a {
+        font-size: 14px;
+    }
+
+    .btn_tel a::after{
+        margin-left: 10px;
+    }
+
+    .flex {
+        flex-direction: column;
+        padding: 85px 0 100px 20px;
+    }
+
+    .lbx,
+    .rbx {
+        width: 100%;
+    }
+
+    .mMod9 {
+        position: static;
+    }
+
+    .mag {
+        display: none;
+    }
+
+    .mMod9 .swiper-button-next,
+    .mMod9 .swiper-button-prev {
+        display: none;
+    }
+
+    .mMod9 .swiper-pagination {
+        left: 0;
+        right: auto;
+        text-align: left;
+        width: 100%;
+    }
+
+    .mMod4 {
+        margin-top: 83px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+
+    .mMod4 .tit {
+        font-size: 20px;
+        margin-top: 35px;
+        margin-bottom: 20px;
+    }
+
+    .mMod4 .txt {
+        font-size: 14px;
+    }
+
+    .gray {
+        padding-top: 80px;
+        padding-bottom: 100px;
+        box-sizing: border-box;
+    }
+
+    .mMod8 {
+        position: relative;
+        width: 100%;
+        max-width: unset;
+        height: 0;
+        padding-top: 56.66%;
+        padding-bottom: unset;
+    }
+
+    .youtubetxt {
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .flex2 {
+        flex-direction: column;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .mMod11 {
+        display: none;
+    }
+
+    .mMod10 {
+        position: relative;
+        width: 100%;
+        right: auto;
+        margin-top: 40px;
+        text-align: left;
+        padding-left: 38px;
+        box-sizing: border-box;
+    }
+
+    .f_txt {
+        margin-bottom: 20px;
+    }
+
+    .mMod7 a {
+        opacity: 1;
+    }
+
+    .mMod7 a+a {
+        margin-top: 20px;
+    }
+
+    .mMod10 a::after {
+        position: absolute;
+        margin-left: 0;
+        right: 38px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+
+    .lMod9 .swiper-container {
+        top: auto;
+        left: auto;
+        transform: none;
+        max-width: unset;
+        height: 100vh;
+        line-height: 100vh;
+    }
+
+    .btn_close2 {
+        z-index: 999999;
+    }
+}
+
+
+
+@media only screen and (max-width:320px) {
+    .maintitle {
+        padding-top: 150px;
+    }
+}
