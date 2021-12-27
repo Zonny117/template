@@ -189,10 +189,13 @@ html.on, body.on{
 
 .mod5bx{
     display: none;
+    min-height: calc(100vh - 104px);
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .mod5bx.on{
-    display: block;
+    display: flex;
 }
 
 
@@ -200,8 +203,7 @@ html.on, body.on{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 136px;
-    min-height: calc(100% - 163px);
+    height: 100%;
 }
 
 .txtbx{
@@ -261,6 +263,8 @@ html.on, body.on{
     height: 12px;
     display: inline-block;
     margin-left: 40px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .btn_close1 {

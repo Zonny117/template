@@ -12,7 +12,7 @@ $(function () {
 
     if (mod6 === "none") {
 
-        $(".btn_contact").removeClass("on");
+        $(".btn_contact, .mod6bx").removeClass("on");
         $(".btn_address, .mod5bx").addClass("on");
     }
     // console.log(mod5)
@@ -41,7 +41,7 @@ $(function () {
         return $(this).css("display") === "none"
     })
 
-    if (footer === 3) {
+    if (footer.length === 3) {
         $("footer").css({
             display: "none"
         });
