@@ -2,28 +2,30 @@ $(function () {
 
 
     // 모듈 제어
-    let mod5 = $(".mMod5").css("display")
     let mod6 = $(".mMod6").css("display")
+    let topmenu = $(".topmenu .dn").filter(function () {
+        return $(this).css("display") === "none"
+    })
+
+
+    // console.log(topmenu.length)
 
     if (mod6 === "none") {
-        $(".btn_contact").css({
-            display: "none"
-        }).removeClass("on");
 
-        $(".mMod6").addClass("on");
+        $(".btn_contact").removeClass("on");
+        $(".btn_address, .mod5bx").addClass("on");
     }
+    // console.log(mod5)
 
-    if (mod5 === "none") {
-        $(".btn_address").css({
-            display: "none"
-        });
-    }
+    if (topmenu.length === 2) {
 
-    if (mod5 === "none" && mod6 === "none") {
+
         $(".topmenu, .dim, .contact").css({
             display: "none"
         });
     }
+
+
 
     let flex = $(".flex .dn").filter(function () {
         return $(this).css("display") === "none"
@@ -107,10 +109,10 @@ $(function () {
 
         switch (split[0]) {
             case "btn_contact":
-                $(".mMod6").addClass("on").siblings().removeClass("on");
+                $(".mod6bx").addClass("on").siblings().removeClass("on");
                 break;
             case "btn_address":
-                $(".mMod5").addClass("on").siblings().removeClass("on");
+                $(".mod5bx").addClass("on").siblings().removeClass("on");
                 break;
 
         }
@@ -196,4 +198,6 @@ $(function () {
                 break;
         }
     }
+
+    
 })

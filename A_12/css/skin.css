@@ -157,10 +157,17 @@ html.on, body.on{
     margin-right: 40px;
 }
 
+.mod6bx{
+    display: none;
+}
+
+.mod6bx.on{
+    display: block;
+}
+
 .mMod6 {
     position: absolute;
     bottom: 80px;
-    display: none;
     padding: 80px;
     box-sizing: border-box;
 }
@@ -180,22 +187,26 @@ html.on, body.on{
     margin-bottom: 40px;
 }
 
+.mod5bx{
+    display: none;
+}
+
+.mod5bx.on{
+    display: block;
+}
+
+
 .mMod5 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 59px;
-    display: none;
+    margin-top: 136px;
     min-height: calc(100% - 163px);
 }
 
 .txtbx{
     padding: 0 80px;
     box-sizing: border-box;
-}
-
-.mMod5.on {
-    display: flex;
 }
 
 .t {
