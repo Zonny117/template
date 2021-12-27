@@ -1,31 +1,31 @@
 $(function () {
 
-    $(document).on("DOMMouseScroll mousewheel", function (e) {
+    // $(document).on("DOMMouseScroll mousewheel", function (e) {
 
-        e = window.event || e;
+    //     e = window.event || e;
 
-        let E = e.detail ? e.detail : e.wheelDelta;
+    //     let E = e.detail ? e.detail : e.wheelDelta;
 
-        // console.log(E)
+    //     // console.log(E)
 
-        if (/Firefox/i.test(navigator.userAgent)) {
-            E = -E;
-        }
+    //     if (/Firefox/i.test(navigator.userAgent)) {
+    //         E = -E;
+    //     }
 
 
-        let sct = $(document).scrollTop();
+    //     let sct = $(document).scrollTop();
 
-        // console.log(sct)
+    //     // console.log(sct)
 
-        if (E < 0 && sct > 0) {
-            $(".gnb").addClass("on")
-        }
+    //     if (E < 0 && sct > 0) {
+    //         $(".gnb").addClass("on")
+    //     }
 
-        if (E > 0 && sct <= 200) {
-            $(".gnb").removeClass("on")
-        }
+    //     if (E > 0 && sct <= 200) {
+    //         $(".gnb").removeClass("on")
+    //     }
 
-    })
+    // })
 
     // let ts, te;
 
@@ -35,34 +35,31 @@ $(function () {
     //     // console.log(ts)
     // });
 
+
+    $(document).on("scroll", function () {
+
+
+        let sct = $(document).scrollTop();
+
+        // console.log(sct)
+
+
+
+        if (sct > 0) {
+            $(".gnb").addClass("on")
+        }
+
+        if (sct <= 100) {
+            $(".gnb").removeClass("on")
+
+        }
+
+
+    })
+
+
+
     let winw = $(window).innerWidth();
-
-    if (winw <= 1366) {
-        $(document).on("scroll", function (e) {
-
-
-            let sct = $(document).scrollTop();
-
-            // console.log(sct)
-
-
-
-            if (sct > 0) {
-                $(".gnb").addClass("on")
-            }
-
-            if (sct === 0) {
-                $(".gnb").removeClass("on")
-
-            }
-
-
-        })
-    }
-
-    
-
-
 
 
     $(".contact").click(function () {
@@ -126,7 +123,7 @@ $(function () {
         });
     }
 
-   
+
 
     let iOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
