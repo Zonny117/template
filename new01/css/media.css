@@ -1,0 +1,319 @@
+@charset "utf-8";
+
+@media only screen and (max-width:850px) {
+    .web {
+        display: none !important;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .maintitlebx {
+        position: relative;
+        transform: none;
+        max-width: unset;
+        width: 100%;
+        height: 100vh;
+        text-align: left;
+        top: auto;
+        left: auto;
+    }
+
+    .mMod2 {
+        padding: 30px 20px;
+        box-sizing: border-box;
+    }
+
+    .mMod0 {
+        font-size: 15px;
+    }
+
+    .mMod3 {
+        margin-top: 23px;
+    }
+
+    .mMod3 h2 {
+        width: auto;
+        font-size: 25px;
+    }
+
+    .mMod3 .txt {
+        width: auto;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    .mMod1 {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        bottom: 80px;
+        margin-top: 0;
+    }
+
+    .scroll {
+        position: absolute;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0px;
+        text-indent: -9999px;
+        background-image: url(../images/scroll.png);
+        width: 12px;
+        height: 16px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .content {
+        border-radius: 20px 20px 0 0;
+        margin-top: 110vh;
+    }
+
+    .slidedown {
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0;
+        text-indent: -9999px;
+        background-image: url(../images/slide.png);
+        width: 60px;
+        height: 60px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 22px 14px;
+        border-radius: 50%;
+        box-shadow: 0px 3px 7px 0px rgb(163 163 163);
+        background-color: #fff;
+    }
+
+    .mMod7 {
+        margin-top: unset;
+        width: 100%;
+        padding: 0 20px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        box-sizing: border-box;
+    }
+
+    .mMod7 a+a {
+        margin-left: unset;
+        margin-top: 10px;
+    }
+
+    .mMod7 a {
+        padding: 0;
+        color: #000;
+        font-weight: 400;
+        height: auto;
+        line-height: unset;
+        margin-left: 20px !important;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        text-align: left;
+    }
+
+
+    .mMod7 a::before {
+        content: '';
+        background-image: url(../images/ico_mod7m.png);
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        left: -30px;
+        vertical-align: -7px;
+        margin-right: 10px;
+    }
+
+    .mMod9 {
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+        max-width: unset;
+        background-color: #fff;
+    }
+
+    .mMod9 .swiper-container {
+        position: static;
+        height: auto;
+        width: 100%;
+        transform: none;
+        background-color: #fff;
+    }
+
+    .mMod4 {
+        padding: 20px;
+        width: 100%;
+        max-width: unset;
+    }
+
+    .mMod4 .tit {
+        font-size: 18px;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .mMod4 .txt {
+        padding: 0 10px;
+        box-sizing: border-box;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .mMod4 .swiper-slide+.swiper-slide {
+        margin-top: 20px;
+        border-top: 1px solid #000;
+        padding-top: 20px;
+        box-sizing: border-box;
+    }
+
+    .mMod10 {
+        max-width: unset;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .mMod10 a {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 10px;
+        font-size: 16px;
+        text-align: left;
+        padding: 0 20px;
+    }
+
+    .mMod10 a::before {
+        display: none;
+    }
+
+    .mMod10 a::after {
+        content: '';
+        background-image: url(../images/ico_mod10.png);
+        width: 10px;
+        height: 12px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .mMod8 {
+        position: relative;
+        max-width: unset;
+        padding: 20px;
+    }
+
+    .iframebx {
+        position: relative;
+        height: 0;
+        padding-top: 56%;
+        border-radius: 10px;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .mMod5 {
+        max-width: unset;
+        padding: 20px;
+    }
+
+    .gMap {
+        height: 200px;
+        border: 1px solid #afafaf;
+    }
+
+    .navi {
+        position: static;
+        display: block;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        margin-top: 20px;
+        font-size: 15px;
+        border-radius: 10px;
+    }
+
+    .navi::before {
+        width: 14px;
+        height: 20px;
+        vertical-align: -3px;
+    }
+
+    .txtbx {
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .t {
+        font-size: 18px;
+    }
+
+    .ti {
+        margin-top: 10px;
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+
+    .tx {
+        border: none;
+        padding-top: 15px;
+        font-size: 14px;
+    }
+
+    .mMod6 {
+        max-width: unset;
+        width: 100%;
+        padding: 20px;
+        padding-bottom: 50px;
+    }
+
+    .mMod6 .tit {
+        position: relative;
+        font-size: 18px;
+        background-color: #000;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 10px;
+    }
+
+    .mMod6 .tit::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 30px;
+        background-image: url(../images/btn_tel.png);
+        width: 16px;
+        height: 21px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        vertical-align: -3px;
+    }
+
+    .tel {
+        color: #fff;
+    }
+
+    .mMod6 .txt {
+        margin-top: 15px;
+        text-align: left;
+    }
+}

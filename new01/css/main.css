@@ -1,0 +1,435 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'noonnu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+#wrap {
+    width: 100%;
+}
+
+.txt {
+    line-height: 150%;
+}
+
+.mobile{
+    display: none;
+}
+
+.mMod2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.377);
+}
+
+.maintitlebx {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1200px;
+    text-align: center;
+}
+
+.mMod0 {
+    font-size: 25px;
+    color: #fff;
+}
+
+.mMod3 {
+    color: #fff;
+    margin-top: 63px;
+}
+
+.mMod3 h2 {
+    font-size: 45px;
+    line-height: 120%;
+    width: 470px;
+    margin: 0 auto;
+    font-family: 'noonnu';
+
+}
+
+.mMod3 .txt {
+    width: 674px;
+    margin: 0 auto;
+    font-size: 25px;
+    margin-top: 48px;
+}
+
+.mMod7 {
+    margin-top: 85px;
+}
+
+.mMod7 a {
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid #fff;
+    padding-left: 21px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+.mMod7 a::after {
+    content: '';
+    background-image: url(../images/ico_mod7.png);
+    display: inline-block;
+    width: 6px;
+    height: 11px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-left: 50px;
+}
+
+.mMod7 a+a {
+    margin-left: 20px;
+}
+
+.mMod1 {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 150px;
+    background-color: #fff;
+}
+
+.mMod1 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    margin-top: 100vh;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.mMod6 {
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 69px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+}
+
+
+.mMod6 .tit {
+    font-size: 26px;
+}
+
+.mMod6 .txt {
+    margin-top: 22px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.gray {
+    background-color: #e5e5e5;
+    width: 100%;
+}
+
+.mMod10 {
+    padding-top: 15px;
+    padding-bottom: 70px;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mMod10 a {
+    height: 57px;
+    line-height: 57px;
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 0 44px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.mMod10 a::before {
+    content: '';
+    background-image: url(../images/ico_mod10.png);
+    display: inline-block;
+    width: 20px;
+    height: 22px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-right: 17px;
+    vertical-align: -2px;
+}
+
+.mMod4 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 28px;
+    padding-top: 83px;
+    padding-bottom: 45px;
+    box-sizing: border-box;
+}
+
+.mMod4 .swiper-slide+.swiper-slide {
+    margin-top: 60px;
+}
+
+.mMod4 .tit {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.mMod4 .txt {
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.mMod8 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 45px;
+    padding-bottom: 70px;
+    box-sizing: border-box;
+}
+
+.iframebx {
+    overflow: hidden;
+    border-radius: 30px;
+    width: 100%;
+    height: 600px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.mod9bx {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 70px;
+    padding-bottom: 25px;
+    box-sizing: border-box;
+}
+
+.mMod9 {
+    position: relative;
+    box-sizing: border-box;
+    height: 780px;
+    background-color: #f6f6f6;
+    border-radius: 30px;
+}
+
+.mMod9 .swiper-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 700px;
+}
+
+.mMod9 .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 12px;
+    height: 21px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: -45px;
+}
+
+.swiper-button-next {
+    right: 50px;
+    background-image: url(../images/btn_slide_next.png);
+}
+
+.swiper-button-prev {
+    left: auto;
+    right: 90px;
+    background-image: url(../images/btn_slide_prev.png);
+}
+
+.swiper-pagination {
+    width: 100%;
+    top: -72px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #000;
+}
+
+.swiper-pagination-bullet {
+    width: 13px;
+    height: 13px;
+    margin: 10px;
+}
+
+.mMod5 {
+    padding-top: 25px;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gMap {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 30px;
+    width: 100%;
+}
+
+.navi {
+    position: absolute;
+    top: 40px;
+    right: 28px;
+    width: 164px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+}
+
+.navi::before {
+    content: '';
+    display: inline-block;
+    background-image: url(../images/navi.png);
+    width: 16px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-right: 10px;
+    vertical-align: -2px;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+}
+
+
+.txtbx {
+    margin-top: 38px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.t {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.ti {
+    margin-top: 16px;
+    font-size: 16px;
+    margin-bottom: 27px;
+}
+
+
+
+.tx {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 28px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.mMod11 {
+    padding-top: 60px;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.mMod11 a{
+    font-size: 0;
+    text-indent: -9999px;
+    width: 46px;
+    height: 46px;
+    display: inline-block;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.mMod11 a+a {
+    margin-left: 10px;
+}
+
+a.facebook{
+    background-image: url(../../common/images/ico_facebook.png);
+}
+a.twitter{
+    background-image: url(../../common/images/ico_twitter.png);
+}
+a.instagram{
+    background-image: url(../../common/images/ico_instagram.png);
+}
+a.youtube{
+    background-image: url(../../common/images/ico_youtube.png);
+}
