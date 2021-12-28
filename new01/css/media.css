@@ -1,6 +1,11 @@
 @charset "utf-8";
 
 @media only screen and (max-width:850px) {
+
+    *{
+        -webkit-tap-highlight-color: transparent;
+    }
+
     .web {
         display: none !important;
     }
@@ -9,10 +14,28 @@
         display: block;
     }
 
-    body{
+    /* body {
         overflow-x: hidden;
         overflow-y: auto;
-        background-color: #fff;
+    } */
+
+    html,
+    body {
+        position: fixed;
+        overflow: hidden;
+    }
+
+    .cover {
+        position: relative;
+        width: 100%;
+        height: 110vh;
+    }
+
+    #wrap {
+        width: 100%;
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+        overflow-y: scroll;
     }
 
     .maintitlebx {
@@ -29,6 +52,7 @@
     .mMod2 {
         padding: 30px 20px;
         box-sizing: border-box;
+        height: calc(var(--vh, 1vh) * 100);
     }
 
     .mMod0 {
@@ -54,13 +78,14 @@
         position: absolute;
         width: 60px;
         height: 60px;
-        bottom: 80px;
         margin-top: 0;
+        bottom: 40px;
+        z-index: 1;
     }
 
     .scroll {
         position: absolute;
-        bottom: 60px;
+        bottom: 50px;
         left: 50%;
         transform: translateX(-50%);
         font-size: 0px;
@@ -74,7 +99,8 @@
 
     .content {
         border-radius: 20px 20px 0 0;
-        margin-top: 110vh;
+        padding-bottom: 5%;
+        margin-top: unset;
     }
 
     .slidedown {
@@ -322,4 +348,5 @@
         margin-top: 15px;
         text-align: left;
     }
+
 }
