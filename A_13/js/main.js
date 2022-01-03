@@ -1,7 +1,6 @@
 $(function () {
 
 
-    let winw = $(window).innerWidth();
 
 
     //모듈 제어
@@ -79,94 +78,109 @@ $(function () {
         });
     }
 
+    let winw = $(window).innerWidth();
 
+    // winw는 리사이즈 이벤트에서 실시간으로 값을 받을 수 있다.
+    // dom ready > window load
+    $(window).on('resize', function () {
 
+        winw = $(window).innerWidth();
 
+        mod9pt();
 
+        // console.log(winw)
+    })
 
-    let mod6 = $(".mMod6").css("display");
-    let tel = $(".mMod6").outerHeight(true);
+    mod9pt();
 
     function mod9pt() {
 
-        let height = tel - 80;
+        let mod6 = $(".mMod6").css("display");
+        let tel = $(".mMod6").outerHeight(true);
+
+        if (winw > 850) {
+            let height = tel - 80;
 
 
-        // console.log(tel)
-        // console.log(height)
+            // console.log(tel)
+            // console.log(height)
 
-        if (mod6 !== "none") {
-            $(".mMod9").css({
-                paddingTop: (150 + height) + "px"
-            })
-        } else(
-            $(".mMod9").css({
-                paddingTop: "246px"
-            })
-        )
-    }
+            if (mod6 !== "none") {
+                $(".mMod9").css({
+                    paddingTop: (150 + height) + "px"
+                })
+            } else(
+                $(".mMod9").css({
+                    paddingTop: "246px"
+                })
+            )
+        } else if (winw <= 850) {
 
+            let height = tel - 60;
 
-    function mod9pt_mobile() {
-        let height = tel - 60;
+            if (mod9 === "none") {
+                $(".blue").css({
+                    paddingTop: tel + "px"
+                });
 
-        if (mod9 === "none") {
-            $(".blue").css({
-                paddingTop: tel + "px"
-            });
-
-            $(".blue .ani").css({
-                display: "none"
-            });
-        } //////
-        else if (mod6 !== "none") {
-            $(".mMod9").css({
-                paddingTop: (80 + height) + "px"
-            })
+                $(".blue .ani").css({
+                    display: "none"
+                });
+            } //////
+            else if (mod6 !== "none") {
+                $(".mMod9").css({
+                    paddingTop: (80 + height) + "px"
+                })
 
 
-        } ////
-        else(
-            $(".mMod9").css({
-                paddingTop: "139px"
-            })
-        )
-    }
+            } ////
+            else(
+                $(".mMod9").css({
+                    paddingTop: "139px"
+                })
+            )
+        }
 
-
-
-    if (winw <= 850) {
-        mod9pt_mobile();
-
-        $(window).resize(function () {
-            mod9pt_mobile();
-        })
-
-        gnb();
-    } else {
-        mod9pt();
-
-        $(window).resize(function () {
-            mod9pt();
-        })
     }
 
 
     function gnb() {
-        $(document).on("scroll", function () {
 
-            let sct = $(window).scrollTop();
+        $(window).on('scroll resize', function () {
 
-            // console.log(sct);
+            winw = $(window).innerWidth();
+            // console.log(winw)
 
-            if (sct >= 50) {
-                $(".gnb").addClass("on");
+            if (winw <= 850) {
+
+
+                let sct = $(window).scrollTop();
+
+                // console.log(sct);
+
+                if (sct >= 50) {
+                    $(".gnb").addClass("on");
+                } else {
+                    $(".gnb").removeClass("on");
+                }
+
             } else {
                 $(".gnb").removeClass("on");
             }
-
         })
+
+
     }
+
+    gnb();
+
+
+
+
+
+
+
+
 
     $(".btn_dot").click(function () {
 
