@@ -255,6 +255,7 @@ a.instagram {
     color: #fff;
     font-size: 15px;
     border-radius: 5px;
+    font-weight: 600;
 }
 
 .btn_tel::after {
@@ -362,14 +363,10 @@ a.instagram {
     width: 100%;
 }
 
-.mMod4 .swiper-wrapper {
-    align-items: center;
-}
 
 .mMod4 .swiper-slide {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .mMod4 .tit {
@@ -395,6 +392,7 @@ a.instagram {
 .mMod4 .txt {
     width: 600px;
     font-size: 16px;
+    margin-top: 46px;
 }
 
 .mMod4 .swiper-pagination {
@@ -519,6 +517,7 @@ iframe {
     border-radius: 5px;
     font-size: 15px;
     margin-top: 50px;
+    font-weight: bold;
 }
 
 .navi::after {
@@ -583,6 +582,7 @@ footer .youtube {
     background-color: #1296c9;
     border-radius: 5px;
     font-size: 15px;
+    font-weight: bold;
 }
 
 .mMod10::after {
