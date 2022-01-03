@@ -26,12 +26,10 @@ body {
 }
 
 
-.mobile{
-    display: none;
-}
 
 #wrap {
     width: 100%;
+    min-height: 100vh;
 }
 
 .mMod0,
@@ -137,7 +135,7 @@ a.instagram {
     position: relative;
     box-sizing: border-box;
     height: 663px;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 .maintitlebx {
@@ -146,6 +144,20 @@ a.instagram {
     height: 100%;
     margin: 0 auto;
     align-items: center;
+}
+
+.default {
+    display: none;
+    width: 560px;
+    /* height: 560px; */
+    height: 0;
+    padding-top: 46.67%;
+    border-radius: 50%;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 84px;
 }
 
 .background {
@@ -205,7 +217,7 @@ a.instagram {
     min-height: 294px;
     padding: 50px;
     box-sizing: border-box;
-    z-index: 1;
+    z-index: 2;
     border-radius: 5px;
 }
 
@@ -262,8 +274,8 @@ a.instagram {
     position: relative;
     width: 100%;
     background-color: #1296c9;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-bottom: 246px;
     box-sizing: border-box;
 }
@@ -340,7 +352,7 @@ a.instagram {
 .mMod4 {
     position: relative;
     width: 100%;
-    padding: 230px 10px;
+    padding: 230px 20px;
     box-sizing: border-box;
     z-index: 1;
 }
@@ -411,7 +423,7 @@ a.instagram {
 .mMod8 {
     position: relative;
     width: 100%;
-    padding: 148px 10px 180px 10px;
+    padding: 148px 20px 180px 20px;
     box-sizing: border-box;
     background-color: #e9e3e2;
 }
@@ -423,6 +435,11 @@ a.instagram {
     margin: 0 auto;
     border-radius: 5px;
     overflow: hidden;
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
 }
 
 iframe {
@@ -433,7 +450,7 @@ iframe {
 .mMod5 {
     position: relative;
     width: 100%;
-    padding: 149px 10px 180px 10px;
+    padding: 149px 20px 180px 20px;
     box-sizing: border-box;
 }
 
@@ -517,7 +534,7 @@ iframe {
 }
 
 footer {
-    padding: 60px 10px;
+    padding: 60px 20px;
     box-sizing: border-box;
     width: 100%;
     background-color: #000;
@@ -855,4 +872,8 @@ footer .youtube {
     to {
         top: 100px;
     }
+}
+
+.mobile {
+    display: none;
 }

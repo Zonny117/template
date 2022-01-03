@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../common/plugins/swiper/swiper.min.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <link rel="stylesheet" href="css/media.css" type="text/css">
-    <link rel="shortcut icon" href="/common/images/favicon.ico" type="images/x-icon">
+    <link class="favicon" rel="shortcut icon" href="/common/images/favicon.ico" type="images/x-icon">
 
     <script src="../common/js/jquery-1.11.3.min.js"></script>
     <script src="../common/js/jquery-ui.js"></script>
@@ -21,6 +21,20 @@
     <script src="js/main.js"></script>
 
     <title>우리아이 소아청소년클리닉</title>
+
+    <script>
+        $(function () {
+
+            let mod1 = $(".mMod1").css('display');
+
+            if (mod1 === "none") {
+                $(".favicon").attr('href', "/common/images/favicon.ico")
+            } else(
+                $(".favicon").attr('href', "images/logo.png")
+            )
+
+        })
+    </script>
 </head>
 
 <body>
@@ -45,6 +59,17 @@
             </div>
             <a href="###" class="btn_dot mobile">메뉴 버튼</a>
         </div>
+        <div class="topmenu">
+            <a href="###" class="btn_close mobile">메뉴 닫기</a>
+            <div class="mMod7 mobile dn">
+                <a href="###">공식 홈페이지</a>
+                <a href="###">블로그 바로가기</a>
+                <a href="###">상담신청 바로가기</a>
+            </div>
+            <div class="mMod10 mobile dn">
+                <a href="###">첨부파일 다운로드</a>
+            </div>
+        </div>
         <div class="mainbx">
             <img class="white_circle_left ani" src="images/main_ani/white_circle_left.svg" alt="img">
             <img src="images/main_ani/pink_bar_left.svg" class="pink_bar_left ani" alt="img">
@@ -54,8 +79,7 @@
 
             <div class="mMod2">
                 <div class="maintitlebx">
-                    <div class="background web" style="background-image: url(../A_13/images/background.png);"></div>
-                    <div class="mMod3">
+                    <div class="mMod3 mobile dn">
                         <h2>우리아이 소아청소년클리닉
                             이가은 원장입니다.</h2>
                         <p class="txt">
@@ -64,7 +88,17 @@
                             언제든 연락주시면 친절한 상담을 약속합니다.
                         </p>
                     </div>
-                    <div class="background mobile" style="background-image: url(../A_13/images/background.png);"></div>
+                    <div class="default" style="background-image: url(../A_13/images/background.png);"></div>
+                    <div class="background dn" style="background-image: url(../A_13/images/background.png);"></div>
+                    <div class="mMod3 web dn">
+                        <h2>우리아이 소아청소년클리닉
+                            이가은 원장입니다.</h2>
+                        <p class="txt">
+                            우리 아이들의 몸과 마음을 건강하고 아름답게! <br>
+                            소중한 우리아이들이 보다 건강한 삶을 누릴 수 있도록 항상 노력합니다. <br>
+                            언제든 연락주시면 친절한 상담을 약속합니다.
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="white">
@@ -127,18 +161,18 @@
                             소아청소년클리닉
                             이가은 소장</div>
                         <div class="txt">
-                            AAMFT(미국결혼과가족치료협회)의 Clinical Fellow(전문가회원)
-                            한국소아청소년 상담 수련감독
-                            DMFT 미국 미네소타 임상수련 및 수퍼바이저 수련
-                            연세대학교 임상심리학 박사과정 수료
-                            PREPARE-ENRICH 소아청소년 심리검사와 상담법, 대화의 기술 프로그램 및 상담
+                            AAMFT(미국결혼과가족치료협회)의 Clinical Fellow(전문가회원) <br>
+                            한국소아청소년 상담 수련감독 <br>
+                            DMFT 미국 미네소타 임상수련 및 수퍼바이저 수련 <br>
+                            연세대학교 임상심리학 박사과정 수료 <br>
+                            PREPARE-ENRICH 소아청소년 심리검사와 상담법, 대화의 기술 프로그램 및 상담 <br>
                             도구들을 연구, 보급하고 있습니다.
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="tit">어린이 스마트폰 중독, 치료가 시급합니다.</div>
                         <div class="txt">
-                            15일 보건복지부의 ‘2018년 아동 종합실태조사’ 보고서에 따르면 9~17세 아동·청소년의 5.8%가 스마트폰 과의존(중독) 고위험군으로, 27.9%는 잠재적
+                            보건복지부의 ‘2018년 아동 종합실태조사’ 보고서에 따르면 9~17세 아동·청소년의 5.8%가 스마트폰 과의존(중독) 고위험군으로, 27.9%는 잠재적
                             위험군으로 나타났습니다. 스마트폰 과의존은 학업, 친구, 가족과의 관계에 어려움을 겪거나 건강에 이상이 생길 정도로 이용 시간을 조절하지 못하는 중독 상태에
                             이릅니다. <br>
                             특히 어린이들의 뇌건강에 영향을 미쳐 ADHD 증후군으로 이어질 수 있습니다. <br><br>
@@ -167,7 +201,7 @@
             <img src="images/mod8_ani/white_circle_left.svg" class="white_circle_left2 ani" alt="img">
             <img src="images/mod8_ani/blue_bar_right.svg" class="blue_bar_right ani" alt="img">
             <div class="iframebx">
-                <iframe src="https://www.youtube.com/embed/HHBsvKnCkwI?enablejsapi=1&version=3&playerapiid=ytplayer"
+                <iframe src="https://www.youtube.com/embed/9v8gtslNBP4?enablejsapi=1&version=3&playerapiid=ytplayer"
                     title="YouTube video player" frameborder="0" marginwidth="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
@@ -212,23 +246,42 @@
         <footer class="web">
             <div class="pbx2">
                 <div class="lbx">
-                    <div class="mMod7">
+                    <div class="mMod7 dn">
                         <a href="###">공식 홈페이지</a>
                         <a href="###">블로그 바로가기</a>
                         <a href="###">상담신청 바로가기</a>
                     </div>
-                    <div class="mMod11">
+                    <div class="mMod11 dn">
                         <a href="###" class="facebook">facebook</a>
                         <a href="###" class="instagram">instagram</a>
                         <a href="###" class="twitter">twitter</a>
                         <a href="###" class="youtube">youtube</a>
                     </div>
                 </div>
-                <div class="mMod10">
+                <div class="mMod10 dn">
                     <a href="###">첨부파일 다운로드</a>
                 </div>
             </div>
         </footer>
+    </div>
+    <div class="mSky">
+        <span class="ls iTop forWeb"><a href="###" class="ico">페이지 상단으로</a></span>
+        <div class="forMobile">
+            <span class="ls iSns"><a href="#jsSky" class="ico jsBtnShow1">Sns 레이어열기</a></span>
+            <div id="jsSky" class="lSky">
+                <a href="###" class="youtube">youtube</a>
+                <a href="###" class="instagram">instagram</a>
+                <a href="###" class="twitter">twitter</a>
+                <a href="###" class="fackbook">facebook</a>
+                <a href="#jsSky" class="close jsBtnClose1">Sns 레이어닫기</a>
+            </div>
+        </div>
+        <span class="ls iKakao"><a href="###" class="ico">카카오톡</a></span>
+        <span class="banner"></span>
+        <span class="ls iAlarm">
+            <a href="https://www.hifactory.co.kr/index.asp" class="ico">하이팩토리</a>
+            <span class="txt forWeb">하이팩토리 초대공유플랫폼으로 제작된 사이트입니다</span>
+        </span>
     </div>
 </body>
 
