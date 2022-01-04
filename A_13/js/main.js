@@ -158,6 +158,12 @@ $(function () {
 
                 // console.log(sct);
 
+                if (sct > 0) {
+                    $(".gnb").addClass("fixed")
+                } else if (sct <= 100) {
+                    $(".gnb").removeClass("fixed")
+                }
+
                 if (sct >= 50) {
                     $(".gnb").addClass("on");
                 } else {
