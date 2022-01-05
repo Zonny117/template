@@ -223,16 +223,18 @@ h2,
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    padding: 350px 20px 156px 20px;
+    padding: 15% 20px 156px 20px;
     box-sizing: border-box;
     max-width: 1220px;
     margin: 0 auto;
     z-index: 1;
+    -webkit-transform: translateZ(0);
+    -webkit-transform: translateZ(0px, 0px, 0px);
 }
 
-.maintitlebx.on {
+/* .maintitlebx.on {
     margin-bottom: 250px;
-}
+} */
 
 .default {
     display: none;

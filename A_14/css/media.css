@@ -3,7 +3,7 @@
 @media only screen and (max-width:850px) {
 
 
-    *{
+    * {
         -webkit-tap-highlight-color: transparent;
     }
 
@@ -19,6 +19,10 @@
     .mMod1 {
         width: 50px;
         height: 50px;
+    }
+
+    .mMod2 {
+        min-height: calc(var(--vh, 1vh) * 100);
     }
 
     .mMod3 h2 {
@@ -138,8 +142,8 @@
 
     .lMod9 .swiper-container {
         width: 100%;
-        height: 100vh;
-        line-height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+        line-height: calc(var(--vh, 1vh) * 100);
         margin-top: 0;
     }
 
@@ -174,43 +178,44 @@
         border-radius: 26px;
     }
 
-    .contact{
+    .contact {
         margin-bottom: 30px;
     }
 
-    .mMod5{
+    .mMod5 {
         width: 100%;
     }
 
-    .gMap{
+    .gMap {
         max-width: unset;
         width: 100%;
         height: 250px;
     }
 
-    .address{
+    .address {
         padding: 0 20px;
         box-sizing: border-box;
     }
 
-    .txtbx{
+    .txtbx {
         padding: 0 20px;
         box-sizing: border-box;
     }
 
-    .t{
+    .t {
         font-size: 24px;
     }
 
-    .ti{
+    .ti {
         font-size: 16px;
         margin-top: 25px;
     }
 
-    .tx{
+    .tx {
         font-size: 15px;
     }
-    .navi{
+
+    .navi {
         height: 52px;
         line-height: 52px;
         margin-top: 25px;

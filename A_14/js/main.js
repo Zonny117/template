@@ -1,6 +1,13 @@
 $(window).on('load', function () {
 
 
+    function vh() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+
+    vh();
+
     let back = $(".back1").css('display');
 
     if (back === "none") {
@@ -12,7 +19,13 @@ $(window).on('load', function () {
     }
 
 
+    let paddingtop = $(".maintitlebx").css('padding-top');
 
+    // console.log(paddingtop)
+
+    let split = paddingtop.split(".")[0];
+
+    // console.log(split)
 
     let winw = $(window).innerWidth();
 
@@ -25,7 +38,7 @@ $(window).on('load', function () {
         if (winw > 850) {
 
             // 리사이즈시 무한대로 더해지기 때문에 pureHieght = pureHeight + 350(pureHeight += 350)은 쓸 수 없다.
-            pureHeight = $(".maintitlebx").height() + 350;
+            pureHeight = $(".maintitlebx").height() + split;
 
             // console.log(pureHeight)
 
@@ -58,9 +71,13 @@ $(window).on('load', function () {
 
         winw = $(window).innerWidth();
         // console.log(winw)
+        paddingtop = $(".maintitlebx").css('padding-top');
+
+        split = paddingtop.split(".")[0];
 
         heightCalc();
 
+        vh();
 
     })
 
