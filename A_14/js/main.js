@@ -1,12 +1,16 @@
 $(window).on('load', function () {
 
+    //모듈 제어
 
-    function vh() {
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    let topmenu = $(".topmenu .dn").filter(function () {
+        return $(this).css("display") === "none"
+    });
+
+    if (topmenu.length === 2) {
+        $(".topmenu, .btn_dot").css({
+            display: "none"
+        });
     }
-
-    vh();
 
     let back = $(".back1").css('display');
 
@@ -18,14 +22,42 @@ $(window).on('load', function () {
         $(".default").remove();
     }
 
+    let maintitle = $(".maintitlebx .dn").filter(function () {
+        return $(this).css('display') === "none"
+    });
+
+    if (maintitle.length === 2) {
+        $(".maintitlebx").css({
+            display: "none"
+        });
+    }
+
+    let footer = $("footer .dn").filter(function () {
+        return $(this).css('display') === "none"
+    });
+
+    if (footer.length === 2) {
+        $("footer").css({
+            display: "none"
+        });
+    }
+
+
+
+    function vh() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+
+    vh();
+
 
     let paddingtop = $(".maintitlebx").css('padding-top');
 
     // console.log(paddingtop)
 
-    let split = paddingtop.split(".")[0];
+    let ptnum = Math.round(paddingtop.split("px")[0]);
 
-    // console.log(split)
 
     let winw = $(window).innerWidth();
 
@@ -35,10 +67,13 @@ $(window).on('load', function () {
     heightCalc();
 
     function heightCalc() {
+        // console.log(ptnum)
+
         if (winw > 850) {
 
-            // 리사이즈시 무한대로 더해지기 때문에 pureHieght = pureHeight + 350(pureHeight += 350)은 쓸 수 없다.
-            pureHeight = $(".maintitlebx").height() + split;
+            // 리사이즈시 무한대로 수치가 더해지기 때문에 pureHieght = pureHeight + 350(pureHeight += 350)은 쓸 수 없다. (고정 수치 사용)
+            // 태블릿 가로모드에서 잘려보이기 때문에 패딩 퍼센트 값 (내용 길어져서 잘리는 건 어쩔 수 없음)
+            pureHeight = $(".maintitlebx").height() + ptnum;
 
             // console.log(pureHeight)
 
@@ -73,7 +108,8 @@ $(window).on('load', function () {
         // console.log(winw)
         paddingtop = $(".maintitlebx").css('padding-top');
 
-        split = paddingtop.split(".")[0];
+        ptnum = Math.round(paddingtop.split("px")[0]);
+
 
         heightCalc();
 
@@ -84,35 +120,9 @@ $(window).on('load', function () {
 
 
 
-    $(window).on("DOMMouseScroll mousewheel", function (e) {
-
-        if ($(".topmenu").hasClass("on")) return;
 
 
-        e = window.event || e;
-
-        let E = e.detail ? e.detail : e.wheelDelta;
-
-        // console.log(E)
-
-        if (/Firefox/i.test(navigator.userAgent)) {
-            E = -E;
-        }
-
-
-
-        if (E > 0) {
-            $(".gnb").css({
-                top: 0
-            })
-        } else if (E < 0) {
-            $(".gnb").css({
-                top: "-80px"
-            })
-        }
-
-    })
-
+    //maintitle
     $(window).on('scroll', function () {
 
 
@@ -136,7 +146,7 @@ $(window).on('load', function () {
             }
 
 
-            $(".maintitlebx").addClass("on");
+            // $(".maintitlebx").addClass("on");
 
             $(".mMod3").addClass("on");
 
@@ -157,7 +167,7 @@ $(window).on('load', function () {
             }
 
         } else {
-            $(".maintitlebx").removeClass("on");
+            // $(".maintitlebx").removeClass("on");
 
 
             $(".mMod3").removeClass("on");
@@ -237,5 +247,104 @@ $(window).on('load', function () {
             disable();
         })
     }
+
+
+    //gnb
+    // $(window).on("DOMMouseScroll mousewheel", function (e) {
+
+    //     if ($(".topmenu").hasClass("on")) return;
+
+
+    //     e = window.event || e;
+
+    //     let E = e.detail ? e.detail : e.wheelDelta;
+
+    //     // console.log(E)
+
+    //     if (/Firefox/i.test(navigator.userAgent)) {
+    //         E = -E;
+    //     }
+
+
+
+    //     if (E > 0) {
+    //         $(".gnb").stop().animate({
+    //             top: "0px"
+    //         }, 400, "easeOutCubic")
+    //     } else if (E < 0) {
+    //         $(".gnb").stop().animate({
+    //             top: "-80px"
+    //         }, 400, "easeOutCubic")
+    //     }
+
+    // })
+
+    // let ts, te, touch;
+
+    // $(window).on("touchstart", function (e) {
+    //     ts = e.originalEvent.touches[0].screenY;
+    // })
+
+    // $(window).on("touchstart", function (e) {
+
+    //     te = e.originalEvent.changedTouches[0].screenY;
+
+    //     touch = ts - te;
+
+    //     // console.log(touch)
+    //     if ($(".topmenu").hasClass("on")) return;
+
+
+    //     if (touch > 0) {
+    //         $(".gnb").stop().animate({
+    //             top: "-80px"
+    //         }, 300, "easeOutCubic")
+    //     } else if (touch < 0) {
+    //         $(".gnb").stop().animate({
+    //             top: "0px"
+    //         }, 300, "easeOutCubic")
+    //     }
+
+    // })
+
+
+    // gnb
+
+    // 초기 스크롤값
+    let old = 0;
+
+    $(window).on('scroll', function () {
+
+        if ($(".topmenu").hasClass("on")) return;
+
+        // 현재 스크롤값
+        let newvalue = $(this).scrollTop();
+
+        // 페이지 상단에서 네비게이션 고정
+        if (newvalue <= 200) {
+            $(".gnb").stop().animate({
+                top: "0px"
+            }, 300, "easeOutCubic")
+            return;
+        }
+
+        //스크롤 다운 감지
+        if (newvalue > old) {
+            $(".gnb").stop().animate({
+                top: "-80px"
+            }, 300, "easeOutCubic")
+            // alert("down");
+        }
+        //스크롤 업 감지
+        else {
+            // alert("up");
+            $(".gnb").stop().animate({
+                top: "0px"
+            }, 300, "easeOutCubic")
+        }
+
+        // 초기 스크롤값 현재 값으로 업데이트
+        old = newvalue;
+    })
 
 })

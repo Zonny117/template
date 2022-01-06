@@ -40,7 +40,10 @@ h2,
     align-items: center;
     background-color: #fff;
     z-index: 99999;
-    transition: top .4s ease-in-out;
+    /* transition: top .4s; */
+
+    -webkit-transform: translateZ(0);
+    -webkit-transform: translateZ(0px, 0px, 0px);
 }
 
 .mMod0 {
@@ -103,7 +106,7 @@ h2,
 }
 
 .btn_close {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     font-size: 0;
@@ -113,6 +116,7 @@ h2,
     height: 17px;
     background-size: 100%;
     background-repeat: no-repeat;
+    z-index: 99999;
 }
 
 
@@ -133,7 +137,7 @@ h2,
 .mMod6 .txt {
     font-size: 16px;
     font-weight: 400;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .btn_tel {
@@ -143,7 +147,7 @@ h2,
     line-height: 62px;
     background-color: #000;
     color: #fff;
-    border-radius: 31px;
+    border-radius: 34px;
     font-size: 15px;
     font-weight: 600;
     text-align: center;
@@ -187,7 +191,7 @@ h2,
 .ti {
     font-size: 17px;
     font-weight: 600;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .tx {
@@ -201,7 +205,7 @@ h2,
     height: 62px;
     line-height: 62px;
     font-weight: 600;
-    border-radius: 31px;
+    border-radius: 34px;
     font-size: 15px;
     background-color: #ececec;
     text-align: center;
@@ -286,7 +290,7 @@ h2,
 .mMod7 a {
     display: inline-block;
     background-color: #fff;
-    border-radius: 31px;
+    border-radius: 34px;
     font-size: 15px;
     font-weight: 600;
     padding: 24px 29px;
@@ -369,7 +373,7 @@ h2,
 .mMod4 .txt {
     font-size: 16px;
     font-weight: 400;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .num {
@@ -490,7 +494,7 @@ a.youtube {
     padding: 24px 30px;
     box-sizing: border-box;
     background-color: #ececec;
-    border-radius: 31px;
+    border-radius: 34px;
 }
 
 .mMod10 a {
@@ -553,7 +557,7 @@ a.youtube {
 }
 
 .btn_close2 {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     font-size: 0;
