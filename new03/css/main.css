@@ -123,7 +123,8 @@ h2,
     width: 28%;
     left: 50%;
     transform: translateX(-50%) translateY(-215%);
-    animation: sunrise 11s ease-in-out 0.1s infinite forwards;
+    animation: sunrise 11s ease-in-out 1s infinite forwards;
+    opacity: 0;
 }
 
 
@@ -131,6 +132,10 @@ h2,
 @keyframes sunrise {
     0% {
         transform: translateX(-50%) translateY(-215%);
+    }
+
+    1%{
+        opacity: 1;
     }
 
     50% {
