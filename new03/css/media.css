@@ -1,0 +1,345 @@
+@charset "utf-8";
+
+
+@media only screen and (max-width:850px) {
+
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    html.on,
+    body.on {
+        overflow: hidden;
+    }
+
+    #wrap {
+        overflow-x: hidden;
+        padding: 20px;
+    }
+
+    .pbx {
+        width: 90%;
+        padding-top: 90px;
+        padding-bottom: 82%;
+        min-height: 280px;
+    }
+
+    .main {
+        padding: 0;
+        border-radius: 0 0 25px 25px;
+
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+    }
+
+    /* .maintitlebx {
+        min-height: calc((var(--vh, 1vh) * 100) - 40px);
+    } */
+
+    .mMod0 {
+        font-size: 18px;
+    }
+
+    .mMod3 h2 {
+        font-size: 24px;
+    }
+
+    .mMod3 .txt {
+        font-size: 14px;
+    }
+
+
+
+    .mMod1 {
+        width: 50px;
+        height: 50px;
+        left: 20px;
+        bottom: 20px;
+        transform: none;
+    }
+
+    .mMod7.mobile {
+        display: flex;
+        margin-top: 30px;
+        text-align: left;
+        padding-left: 20px;
+        align-items: flex-start;
+    }
+
+    .mMod7 a+a {
+        margin-top: 10px;
+    }
+
+    .mMod7 a {
+        padding: 0;
+        color: #000;
+        font-weight: 400;
+        height: auto;
+        line-height: unset;
+        text-align: left;
+        margin-bottom: 0;
+        display: block;
+    }
+
+
+    .mMod7 a::before {
+        content: '';
+        background-image: url(../images/ico_mod7m.png);
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        left: -30px;
+        vertical-align: -7px;
+        margin-right: 10px;
+    }
+
+    .mMod7 a::after {
+        display: none;
+    }
+
+    .mMod9 {
+        position: relative;
+        height: 250px;
+        box-sizing: border-box;
+        background-color: unset;
+    }
+
+    .mMod9 .swiper-container {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 90%;
+        height: 100%;
+        transform: none;
+        overflow: unset;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .mMod9 img {
+        border-radius: 20px;
+        box-shadow: 0 0 7px rgba(0, 0, 0, 0.267);
+    }
+
+    .mag {
+        position: absolute;
+        font-size: 0px;
+        text-indent: -9999px;
+        width: 30px;
+        height: 30px;
+        background-image: url(../images/mag.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 9999;
+        right: 10px;
+        bottom: 10px;
+    }
+
+
+    .mMod4 {
+        padding: 0;
+        background-color: unset;
+        margin-top: 35px;
+    }
+
+    .mMod4 .tit {
+        font-size: 18px;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .mMod4 .txt {
+        margin-top: 20px;
+        font-size: 14px;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .mMod4 .swiper-slide+.swiper-slide {
+        margin-top: 20px;
+        border-top: 1px solid #000;
+        padding-top: 20px;
+        box-sizing: border-box;
+    }
+
+    .mMod10 {
+        margin: 30px 0;
+    }
+
+    .mMod10 a {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 10px;
+        font-size: 15px;
+        text-align: left;
+        padding: 0 20px;
+    }
+
+    .mMod10 a::before {
+        display: none;
+    }
+
+    .mMod10 a::after {
+        content: '';
+        background-image: url(../images/ico_mod10.png);
+        width: 15px;
+        height: 17px;
+        position: absolute;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+    }
+
+    .mMod8 {
+        padding: 0px;
+    }
+
+    .iframebx {
+        position: relative;
+        height: 0;
+        padding-top: 56%;
+        border-radius: 10px;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .mMod5 {
+        padding: 0px;
+    }
+
+    .gMap {
+        height: 250px;
+        border-radius: 10px;
+    }
+
+    .txtbx {
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+
+    .t {
+        font-size: 18px;
+    }
+
+    .tx {
+        padding-top: unset;
+        border: none;
+        font-size: 14px;
+    }
+
+    .ti {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .navi {
+        position: static;
+        width: 100%;
+        margin: 20px 0;
+        border-radius: 10px;
+    }
+
+    .mMod6 {
+        padding: 0px;
+        box-sizing: border-box;
+        text-align: left;
+    }
+
+    .tel {
+        position: relative;
+        display: block;
+        background-color: #000;
+        color: #fff;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .tel::before {
+        content: '';
+        position: absolute;
+        background-image: url(../images/btn_tel.png);
+        background-size: 100% 100%;
+        width: 15px;
+        height: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 30px;
+    }
+
+    .mMod6 .txt {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .lMod9 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(var(--vh, 1vh) * 100);
+        z-index: 99999;
+        background-color: #fff;
+        display: none;
+    }
+
+    .lMod9.on {
+        display: block;
+    }
+
+    .lMod9 .swiper-container {
+        width: 100%;
+        max-height: calc(var(--vh, 1vh) * 100);
+        line-height: calc(var(--vh, 1vh) * 100);
+    }
+
+    .lMod9 .swiper-slide {
+        width: 100%;
+        max-height: 100%;
+        overflow-y: auto;
+    }
+
+    .lMod9 img {
+        width: 100%;
+
+    }
+
+    .btn_close {
+        font-size: 0;
+        text-indent: -9999px;
+        position: fixed;
+        background-image: url(../images/btn_close.png);
+        width: 30px;
+        height: 30px;
+        top: 20px;
+        right: 20px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 99999;
+    }
+
+    .web {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+}
