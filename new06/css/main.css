@@ -26,6 +26,11 @@ body,
     overflow-x: hidden;
 }
 
+html.on,
+body.on {
+    overflow: hidden;
+}
+
 .mMod0,
 h2,
 .tit,
@@ -84,11 +89,11 @@ h2,
     border-radius: 50%;
 }
 
-.default{
+.default {
     display: none;
 }
 
-.modbg{
+.modbg {
     display: none;
 }
 
@@ -465,4 +470,67 @@ footer {
     background-repeat: no-repeat;
     background-size: 100%;
     margin-right: 15px;
+}
+
+.lMod9 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 99999;
+    box-sizing: border-box;
+}
+
+.lMod9.on {
+    display: block;
+}
+
+.lMod9 .swiper-container {
+    max-width: 1200px;
+    height: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lMod9 .swiper-slide {
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.lMod9 .swiper-slide::-webkit-scrollbar {
+    width: 3px;
+}
+
+.lMod9 .swiper-slide::-webkit-scrollbar-thumb {
+    background-color: #000;
+}
+
+.swiper-slide::-webkit-scrollbar-track {
+    background-color: #ccc;
+}
+
+.btn_close {
+    position: fixed;
+    font-size: 0;
+    text-indent: -9999px;
+    top: 30px;
+    right: 40px;
+    background-image: url(../images/btn_close.png);
+    width: 40px;
+    height: 40px;
+    background-size: 21px 21px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 99999;
+}
+
+.lMod9 img {
+    width: 100%;
 }

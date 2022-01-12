@@ -160,4 +160,18 @@
         display: none;
     }
 
+
+    .lMod9 .swiper-container {
+        position: relative;
+        width: 100%;
+        height: calc(var(--vh, 1vh) * 100);
+        line-height: calc(var(--vh, 1vh) * 100);
+    }
+
+
+    .btn_close {
+        top: 20px;
+        right: 20px;
+    }
+
 }
