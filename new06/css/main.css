@@ -1,0 +1,468 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+
+@font-face {
+    font-family: 'classic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Noto Serif KR', serif;
+    background-color: #f0f0f0;
+}
+
+
+h2 {
+    font-family: 'classic';
+}
+
+html,
+body,
+#wrap {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.mMod0,
+h2,
+.tit,
+.ti,
+.t {
+    line-height: 120%;
+}
+
+.txt,
+.tx {
+    line-height: 160%;
+}
+
+.mMod2 {
+    width: 100%;
+    background-image: url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 120px 30px 200px 30px;
+    box-sizing: border-box;
+}
+
+.mainbx {
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.mMod0 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 83px;
+}
+
+.mMod0::before {
+    content: '';
+    border: 1px solid #64646488;
+    margin-right: 25px;
+}
+
+.mMod0::after {
+    content: '';
+    border: 1px solid #64646488;
+    margin-left: 25px;
+}
+
+.background {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 100px;
+    border-radius: 50%;
+}
+
+.default{
+    display: none;
+}
+
+.modbg{
+    display: none;
+}
+
+.cloudR {
+    width: 35%;
+    position: absolute;
+    right: -7%;
+    top: 8%;
+    animation: cloudR 4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
+}
+
+@keyframes cloudR {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes cloudL {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+.cloudL {
+    width: 35%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    animation: cloudL 3.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
+}
+
+
+.mMod3 h2 {
+    font-size: 50px;
+    margin-bottom: 35px;
+}
+
+.mMod3 .txt {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.mMod3 {
+    margin-bottom: 100px;
+}
+
+.mMod7 {
+    margin-bottom: 65px;
+}
+
+.mMod7 a {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 19px 24px;
+    box-sizing: border-box;
+    border: 1px solid #797979;
+    background-color: rgba(255, 255, 255, 0.473);
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+
+.mMod7 a:last-child {
+    margin-right: 0;
+}
+
+.mMod7 a::after {
+    content: '';
+    background-image: url(../images/mod7.png);
+    width: 6px;
+    height: 11px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    margin-left: 45px;
+}
+
+.mMod11 a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    font-size: 0;
+    text-indent: -9999px;
+}
+
+a.facebook {
+    background-image: url(../images/facebook.png);
+}
+
+a.instagram {
+    background-image: url(../images/instagram.png);
+}
+
+a.twitter {
+    background-image: url(../images/twitter.png);
+}
+
+a.youtube {
+    background-image: url(../images/youtube.png);
+}
+
+
+.mMod11 a+a {
+    margin-left: 15px;
+}
+
+.content {
+    position: relative;
+    padding: 141px 30px 148px 30px;
+    box-sizing: border-box;
+}
+
+.mMod1 {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(116, 116, 116, 0.486);
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translateX(-50%) translate3d(0, 0, 0);
+    -moz-transform: translateX(-50%) translate3d(0, 0, 0);
+}
+
+.mMod1 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+}
+
+.mMod4 {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.mMod4 .tit {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.mMod4 .txt {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.mMod4 .swiper-slide+.swiper-slide {
+    margin-top: 100px;
+}
+
+.mMod8 {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 150px;
+}
+
+.iframebx {
+    overflow: hidden;
+    border-radius: 8px;
+    width: 100%;
+    height: 600px;
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.mMod9 {
+    position: relative;
+    max-width: 1200px;
+    height: 750px;
+    margin: 0 auto;
+    margin-bottom: 150px;
+}
+
+.mMod9 .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.mMod9 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.btnbx {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 28px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    transform: translateY(-50%);
+    margin: 0;
+    width: 17px;
+    height: 13px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.swiper-button-prev {
+    background-image: url(../images/btn_slide_prev.png);
+    left: -40px;
+}
+
+.swiper-button-next {
+    right: -40px;
+    background-image: url(../images/btn_slide_next.png);
+}
+
+.swiper-pagination {
+    position: static;
+    color: rgb(124, 124, 124);
+
+}
+
+.swiper-pagination-current {
+    color: #000;
+    font-weight: bold;
+}
+
+.swiper-pagination-current::before {
+    content: '0';
+}
+
+.swiper-pagination-total::before {
+    content: '0';
+}
+
+.mMod5 {
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.gMap {
+    width: 100%;
+    height: 471px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+}
+
+.map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.t {
+    font-size: 26px;
+    margin-top: 53px;
+    display: block;
+}
+
+.ti {
+    margin-top: 28px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.tx {
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.navi {
+    width: 224px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    border: 1px solid #ccc;
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.navi::after {
+    content: '';
+    display: inline-block;
+    background-image: url(../images/navi.png);
+    width: 6px;
+    height: 11px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-left: 50px;
+}
+
+footer {
+    width: 100%;
+    padding: 98px 30px;
+    box-sizing: border-box;
+    background-color: #ebebeb;
+}
+
+.mMod6 {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mMod6 .tit {
+    font-size: 30px;
+}
+
+.mMod6 .txt {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.mMod10 {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.mMod10 a {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #000;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+.mMod10 a::before {
+    content: '';
+    background-image: url(../images/mod10.png);
+    width: 11px;
+    height: 14px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-right: 15px;
+}
