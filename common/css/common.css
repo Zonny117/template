@@ -224,6 +224,7 @@ body.hiddenScroll {
 	/* transform: translateY(-50%); */
 	width: 64px;
 	z-index: 9999;
+	font-family: 'Noto Sans KR', sans-serif, Dotum, "돋움", Gulim, "굴림", Helvetica, Apple-Gothic !important;
 }
 
 .mSky .ls {

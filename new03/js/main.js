@@ -1,6 +1,9 @@
 $(function () {
 
 
+
+    
+
     // 영역 새로고침
     function reload() {
 

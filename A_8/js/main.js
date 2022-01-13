@@ -12,18 +12,10 @@ $(function () {
         })
     }
 
-    let sns = $(".mMod11 a").length;
-
-    if(sns === 0){
-        $(".mMod11").css({
-            display:"none"
-        })
-    }
-
-    let footer = $("footer .dn, footer .dn, footer .dn").filter(function(){
+    let footer = $("footer .dn, footer .dn, footer .dn").filter(function () {
         return $(this).css("display") === "none"
     });
-    
+
     // console.log(footer.length)
 
     if (footer.length === 3) {
@@ -34,7 +26,7 @@ $(function () {
     } ///////////////////
 
 
-    let openchild = $(".openTitle .dn, .openTitle .dn").filter(function(){
+    let openchild = $(".openTitle .dn, .openTitle .dn").filter(function () {
         return $(this).css("display") === "none"
     })
 
@@ -44,6 +36,27 @@ $(function () {
             display: "none"
         });
     } /////////////////////
+
+    
+    function pagenumber(){
+        let mod = [
+            $(".mMod4"),
+            $(".mMod5"),
+            $(".mMod8"),
+            $(".mMod9"),
+            $(".flex")
+        ]
+    
+        for (let x of mod) {
+            if (x.css("display") === "none" && $(window).innerWidth() > 1366) {
+                x.removeClass("page")
+            }
+        }
+    
+    }
+
+    pagenumber();
+    
 
 
     $(".mMod4 .swiper-slide").on('mousemove', function () {
@@ -231,13 +244,28 @@ $(function () {
 
 
 
-    let maintitle = $(".maintitle").height()
+    function padding() {
+        let maintitle = $(".maintitle").height()
 
-    if($(window).innerWidth() <= 1366){
-        $(".content").css({
-            paddingTop: maintitle - 44 + "px"
-        })
-    }  
+        if ($(window).innerWidth() <= 1366) {
+            $(".content").css({
+                paddingTop: maintitle - 44 + "px"
+            })
+        } else {
+            $(".content").css({
+                paddingTop: 0
+            })
+        }
+    }
+
+    padding();
+
+    $(window).resize(function () {
+
+        padding();
+
+        pagenumber();
+    })
 
 
 

@@ -63,7 +63,6 @@ h2,
     background-repeat: no-repeat;
 }
 
-
 .mainbx {
     position: relative;
     max-width: 1080px;
@@ -194,9 +193,9 @@ a.youtube {
 }
 
 .top {
-    padding-bottom: 620px;
+    padding-bottom: 593px;
     box-sizing: border-box;
-    min-height: 300px;
+    min-height: 800px;
 }
 
 .sun {

@@ -613,6 +613,7 @@ footer {
 }
 
 .mMod10 a {
+    display: block;
     color: #fff;
     font-size: 15px;
     font-weight: 600;

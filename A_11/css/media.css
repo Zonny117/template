@@ -242,6 +242,8 @@
 
     .mMod4 .swiper-pagination {
         margin: 0;
+        width: 100%;
+        text-align: left;
     }
 
     .mMod4 .swiper-container {

@@ -56,9 +56,16 @@ h2,
     border-radius: 50%;
     overflow: hidden;
 
+    background-color: #fff;
+
     left: 50%;
     transform: translateX(-50%);
     bottom: 45px;
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform:  translateX(-50%) translate3d(0, 0, 0);
+    -moz-transform:  translateX(-50%) translate3d(0, 0, 0);
 }
 
 .mMod1 img {
@@ -123,7 +130,7 @@ h2,
     width: 28%;
     left: 50%;
     transform: translateX(-50%) translateY(-215%);
-    animation: sunrise 11s ease-in-out 1s infinite forwards;
+    animation: sunrise 11s ease-in-out 0.1s infinite forwards;
     opacity: 0;
 }
 
@@ -134,7 +141,7 @@ h2,
         transform: translateX(-50%) translateY(-215%);
     }
 
-    1%{
+    1% {
         opacity: 1;
     }
 
@@ -475,10 +482,10 @@ a.youtube {
     background-image: url(../../common/images/ico_youtube.png);
 }
 
-.lMod9{
+.lMod9 {
     display: none;
 }
 
-.mobile{
+.mobile {
     display: none;
 }

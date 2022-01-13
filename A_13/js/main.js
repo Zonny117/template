@@ -1,5 +1,6 @@
 $(function () {
 
+    let winw = $(window).innerWidth();
 
 
 
@@ -33,7 +34,7 @@ $(function () {
         return $(this).css("display") === "none"
     });
 
-    if (topmenu.length === 2) {
+    if (topmenu.length === 2 && winw <= 850) {
         $(".topmenu, .btn_dot").css({
             display: "none"
         });
@@ -78,7 +79,6 @@ $(function () {
         });
     }
 
-    let winw = $(window).innerWidth();
 
     // winw는 리사이즈 이벤트에서 실시간으로 값을 받을 수 있다.
     // dom ready > window load

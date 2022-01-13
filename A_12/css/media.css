@@ -297,6 +297,14 @@
         margin-top: 20px;
     }
 
+    .mMod10{
+        padding-left: unset;
+    }
+
+    .mMod10 a{
+        padding-left: 38px;
+    }
+
     .mMod10 a::after {
         position: absolute;
         margin-left: 0;

@@ -2,6 +2,10 @@
 
 @media only screen and (max-width: 850px) {
 
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
     html,
     body {
         overflow-x: hidden;
@@ -15,7 +19,7 @@
 
     .mainbx {
         padding: 0px 30px;
-        padding-top: 47%;
+        padding-top: 27%;
     }
 
     .cakebx {
@@ -29,15 +33,15 @@
     }
 
     .hat {
-        width: 29%;
-        top: -36%;
-        right: 24%;
+        width: 23%;
+        top: -28%;
+        right: 27%;
     }
 
     .happy {
         width: 61%;
         left: -12%;
-        top: -55%;
+        top: -36%;
     }
 
 
@@ -103,8 +107,8 @@
     }
 
     .maintitlebx {
-        margin-top: 100px;
-        padding-bottom: 38%;
+        margin-top: 25%;
+        padding-bottom: 30%;
     }
 
     .mMod0 {
@@ -119,6 +123,10 @@
     .mMod3 .txt {
         margin-top: 15px;
         font-size: 16px;
+    }
+
+    .mMod2{
+        min-height: unset;
     }
 
     .mMod1 {
@@ -166,11 +174,7 @@
 
     .mMod9 .swiper-container {
         height: 300px;
-    }
-
-
-    .web {
-        display: none;
+        overflow: unset;
     }
 
     .mMod5 {
@@ -277,6 +281,7 @@
     .mMod10 {
         background-color: unset;
         text-align: left;
+        margin-bottom: 15px;
     }
 
     .mMod10 a {
@@ -307,15 +312,15 @@
         background-size: 100%;
     }
 
-    .mMod6{
+    .mMod6 {
         text-align: left;
     }
 
-    .mMod6 .tit{
+    .mMod6 .tit {
         width: 100%;
     }
 
-    .mMod6 a{
+    .mMod6 a {
         position: relative;
         display: block;
         border: 2px solid #000;
@@ -326,7 +331,7 @@
         background-color: #f8df00;
     }
 
-    .mMod6 a::after{
+    .mMod6 a::after {
         content: '';
         background-image: url(../images/tel.png);
         position: absolute;
@@ -339,8 +344,42 @@
         background-size: 100%;
     }
 
-    .mMod6 .txt{
+    .mMod6 .txt {
         padding: 0 10px;
         box-sizing: border-box;
+    }
+
+
+    .web {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+
+    .lMod9 .swiper-container {
+        width: 100%;
+        height: calc(var(--vh, 1vh) * 100);
+        line-height: calc(var(--vh, 1vh) * 100);
+    }
+
+    .btn_close {
+        top: 20px;
+        right: 20px;
+    }
+}
+
+
+/* 태블릿/가로회전 및 일부 디바이스*/
+@media only screen and (min-width:512px) and (max-width:850px) {
+    .background {
+        width: 83%;
+        padding-top: 83%;
+    }
+
+    .maintitlebx {
+        padding-bottom: 15%;
     }
 }

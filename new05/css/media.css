@@ -29,6 +29,7 @@
 
     .top{
         padding-bottom: 85%;
+        min-height: unset;
     }
 
     .mMod1 {

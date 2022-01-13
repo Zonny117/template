@@ -5,6 +5,11 @@ body {
     width: 100%;
 }
 
+html.on,
+body.on {
+    overflow: hidden;
+}
+
 h2,
 .tit,
 .t {
@@ -182,7 +187,7 @@ h2,
     position: absolute;
     top: -17px;
     left: 153px;
-    animation: light 1s linear infinite;
+    animation: light .5s linear infinite alternate;
 }
 
 
@@ -190,7 +195,7 @@ h2,
     position: absolute;
     top: -51px;
     left: 276px;
-    animation: light 1s linear .4s infinite;
+    animation: light .5s linear .4s infinite alternate;
 
 }
 
@@ -198,7 +203,7 @@ h2,
     position: absolute;
     top: -88px;
     left: 191px;
-    animation: light 1s linear .7s infinite;
+    animation: light .5s linear .7s infinite alternate;
 
 }
 
@@ -206,13 +211,13 @@ h2,
     position: absolute;
     top: 19px;
     left: 270px;
-    animation: light 1s linear .9s infinite;
+    animation: light .5s linear .9s infinite alternate;
 
 }
 
 @keyframes light {
     0% {
-        transform: scale(.0);
+        transform: scale(.3);
     }
 
 
@@ -509,7 +514,7 @@ iframe {
     margin-bottom: 40px;
 }
 
-.mMod11 a+a{
+.mMod11 a+a {
     margin-left: 10px;
 }
 
@@ -529,13 +534,13 @@ a.youtube {
     background-image: url(../../common/images/ico_youtube.png);
 }
 
-.mMod7{
+.mMod7 {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
 }
 
-.mMod7 a{
+.mMod7 a {
     display: inline-block;
     font-size: 16px;
     padding: 15px;
@@ -545,11 +550,11 @@ a.youtube {
     margin-bottom: 10px;
 }
 
-.mMod7 a:last-child{
+.mMod7 a:last-child {
     margin-right: 0;
 }
 
-.mMod7 a::after{
+.mMod7 a::after {
     content: '';
     background-image: url(../images/link.png);
     width: 6px;
@@ -558,4 +563,68 @@ a.youtube {
     background-repeat: no-repeat;
     background-size: 100%;
     margin-left: 70px;
+}
+
+.lMod9 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #edeaf0;
+    z-index: 99999;
+    display: none;
+}
+
+.lMod9.on {
+    display: block;
+}
+
+.lMod9 .swiper-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1200px;
+    height: 800px;
+}
+
+.lMod9 .swiper-slide {
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.lMod9 .swiper-slide::-webkit-scrollbar{
+    width: 4px;
+}
+.lMod9 .swiper-slide::-webkit-scrollbar-thumb{
+    background-color: #f8df00;
+}
+.lMod9 .swiper-slide::-webkit-scrollbar{
+    background-color: #000;
+}
+
+.lMod9 img {
+    width: 100%;
+}
+
+.btn_close {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    font-size: 0;
+    text-indent: -9999px;
+    background-image: url(../images/btn_close.png);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #000;
+    background-size: 20px 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 99999;
+}
+
+.mobile {
+    display: none;
 }
