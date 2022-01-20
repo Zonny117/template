@@ -1,6 +1,7 @@
 $(function () {
 
-
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
     let winW = $(window).innerWidth();
@@ -32,7 +33,8 @@ $(function () {
     });
 
 
-
+    let scrollbx = $(".scrollbxw").height();
+    let maintitlebx = $(".maintitlebx").height();
 
 
     // 페이지액션
@@ -46,8 +48,6 @@ $(function () {
             setTimeout(function () {
                 prot = 0;
             }, 800)
-
-
 
             e = window.event || e;
 
@@ -121,6 +121,14 @@ $(function () {
             let active;
             let tit = e.currentTarget.querySelector(".mMod4 .tit");
             let txt = e.currentTarget.querySelector(".mMod4 .txt");
+            let h2 = e.currentTarget.querySelector(".mMod3 h2");
+            let txt2 = e.currentTarget.querySelector(".mMod3 .txt");
+
+            if (e.target === h2 || e.target === txt2) {
+                
+                if (scrollbx < maintitlebx) return;
+
+            }
 
             if (e.target === tit || e.target === txt) {
 
@@ -129,9 +137,10 @@ $(function () {
                 // console.log(active)
 
                 if ($(".mMod4 .swiper-slide-active").height() < active) return;
-            }
+            };
 
-            // console.log(e.currentTarget.querySelector(".mMod4"))
+            // console.log(h2)
+            // console.log(txt2)
 
             // console.log(touch)  
 
@@ -148,7 +157,7 @@ $(function () {
                 if (pnum === -1) {
                     pnum = 0;
                 }
-            }
+            };
 
             $(".iTop").click(function (e) {
                 e.preventDefault();
@@ -167,6 +176,8 @@ $(function () {
     };
 
 
+
+    //스크롤 제어
     function prohibit_pageaction() {
         $("html,body").on('DOMMouseScroll mousewheel', function (e) {
             e.preventDefault();
@@ -179,6 +190,14 @@ $(function () {
         $("html,body").off('DOMMouseScroll mousewheel');
     };
 
+
+
+    $(".scrollbxw").on("DOMMouseScroll mousewheel", function () {
+
+        if (scrollbx < maintitlebx) {
+            prohibit_pageaction();
+        };
+    });
 
     $(".mMod4 .swiper-slide").on("DOMMouseScroll mousewheel", function () {
 
@@ -198,7 +217,7 @@ $(function () {
 
     });
 
-    $(".mMod4 .swiper-slide").on("mouseleave", function () {
+    $(".scrollbxw, .mMod4 .swiper-slide").on("mouseleave", function () {
         allow_pageaction();
     });
 
@@ -241,6 +260,43 @@ $(function () {
     if (winW <= 850) {
         $(".mMod9 .swiper-slide").click(function () {
             $(".lMod9").addClass("on");
+        });
+    }
+
+
+
+    // iOS safari 모바일 컨텐츠 메뉴 스크롤 방지
+    let iOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+
+    const body = document.querySelector('.scrollbx');
+    let ios_scroll = 0;
+
+    function enable() {
+        ios_scroll = window.pageYOffset;
+        body.style.overflow = 'hidden';
+        body.style.position = 'fixed';
+        body.style.top = `-${ios_scroll}px`;
+        body.style.width = '100%';
+    }
+
+    function disable() {
+        body.style.removeProperty('overflow');
+        body.style.removeProperty('position');
+        body.style.removeProperty('top');
+        body.style.removeProperty('width');
+        window.scrollTo(0, ios_scroll);
+    }
+
+    if (iOS) {
+
+        $(".btn_link, .mMod9 .swiper-slide").click(function () {
+            enable();
+        });
+
+
+        $(".btn_close, .btn_close2").click(function () {
+            disable();
         });
     }
 

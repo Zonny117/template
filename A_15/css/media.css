@@ -70,7 +70,7 @@
         width: 100%;
         height: 100%;
         overflow-y: auto;
-
+        -webkit-overflow-scrolling: touch;
     }
 
     .open {
@@ -228,14 +228,14 @@
 
 
     .lMod9{
-        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
         padding: 0;
     }
 
     .lMod9 .swiper-container{
         max-width: unset;
-        height: 100vh;
-        line-height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+        line-height: calc(var(--vh, 1vh) * 100);
     }
 
     .btn_close2{
@@ -248,7 +248,7 @@
     .menu{
         width: 100%;
         max-width: unset;
-        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
         right: auto;
         display: none;
     }
@@ -270,6 +270,7 @@
 
     .paddingbx{
         padding: 100px 30px;
+        justify-content: center;
     }
 
     .btn_close.web{

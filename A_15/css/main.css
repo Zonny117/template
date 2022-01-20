@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /* font-family: 'Montserrat', sans-serif; */
 
-*{
+* {
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -73,7 +73,7 @@ h2,
     align-items: center;
     max-width: 1280px;
     padding: 0 40px;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     box-sizing: border-box;
     margin: 0 auto;
 }
@@ -81,7 +81,7 @@ h2,
 .lbx {
     position: relative;
     width: 30%;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 .fixed {
@@ -196,7 +196,7 @@ h2,
 
 .rbx {
     width: 50%;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 .slide1,
@@ -211,11 +211,18 @@ h2,
     box-sizing: border-box;
 }
 
+.scrollbxw{
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
 .maintitlebx {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    min-height: 100%;
 }
 
 
@@ -571,11 +578,11 @@ iframe {
     overflow-y: auto;
 }
 
-.lMod9 .swiper-slide::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 5px;
 }
 
-.lMod9 .swiper-slide::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: rgb(129, 129, 129);
 }
 
@@ -583,16 +590,35 @@ iframe {
     width: 100%;
 }
 
-.btn_close.mobile{
+.btn_close.mobile {
     display: none;
 }
 
 
-/* 태블릿 팝업 메뉴 */
-@media only screen and (max-width:1024px) {
-    .paddingbx{
+/* 태블릿*/
+@media only screen and (min-width:851px) and (max-width:1366px) {
+    .paddingbx {
         padding: 50px;
     }
+
+    .fixed,
+    .page {
+        padding: 20px 0;
+    }
+
+    .navi {
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .section_txt {
+        margin-bottom: 10px;
+    }
+
+    .ti {
+        margin-top: 10px;
+    }
+
 }
 
 
