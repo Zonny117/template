@@ -1,7 +1,55 @@
 $(function () {
 
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+
+    //모듈제어
+    let maintitle = $(".maintitlebx.web .dn").filter(function () {
+        return $(this).css('display') === "none"
+    });
+
+    if (maintitle.length === 2) {
+        $(".slide1").css({
+            display: "none"
+        });
+    };
+
+
+    let contentm = $(".contentm .dn").filter(function () {
+        return $(this).css('display') === "none"
+    });
+
+    if (contentm.length === 6) {
+        $(".contentm").css({
+            display: "none"
+        });
+    };
+
+    for (let n = 1; n < 6; n++) {
+        let slide = $(".slide" + n);
+
+        if (slide.css('display') === "none") {
+            slide.removeClass("page")
+        };
+    };
+
+    let menu = $(".menu .dn").filter(function () {
+        return $(this).css('display') === "none"
+    });
+
+    if (menu.length === 2) {
+        $(".menu, .btn_link").css({
+            display: "none"
+        });
+    };
+
+
+
+    function vh() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+
+    vh();
 
 
     let winW = $(window).innerWidth();
@@ -16,25 +64,42 @@ $(function () {
     });
 
 
-    // 리사이즈 이벤트 마지막에 한번 실행
-    let timer = null;
-    $(window).on("resize", function () {
+    $(window).resize(function () {
 
-        clearTimeout(timer);
-        timer = setTimeout(resize, 300);
+        vh();
 
-        function resize() {
-            if (winW <= 850) {
-                location.reload();
-            } else {
-                location.reload();
-            }
-        };
+        if ($(this).innerWidth() <= 850) {
+            convert();
+        } else {
+            $(".maintitle").removeClass("on");
+        }
+
+    });
+
+    // pc에서 모바일 전환시 스크롤 초기화 및 스크롤 이벤트 종료
+    function convert() {
+        $(".maintitle").addClass("on");
+        $("html,body").scrollTop(0);
+        pnum = 0;
+    };
+
+    //모바일 회전시 새로고침
+    $(window).on("orientationchange", function (e) {
+
+        var orientation = window.orientation;
+
+        if (orientation == 90 || orientation == -90) {
+            location.reload();
+        } else {
+            location.reload();
+        }
+
     });
 
 
     let scrollbx = $(".scrollbxw").height();
     let maintitlebx = $(".maintitlebx").height();
+    let mapchild = $(".address").outerHeight(true) + $(".gMap").outerHeight(true) + $(".txtbx").outerHeight(true);
 
 
     // 페이지액션
@@ -42,6 +107,8 @@ $(function () {
 
         // 스크롤 액션
         $(document).on("DOMMouseScroll mousewheel", function (e) {
+
+            if ($(".maintitle, .lMod9, .menu").hasClass("on")) return;
 
             if (prot) return;
             prot = 1;
@@ -91,6 +158,10 @@ $(function () {
 
         });
 
+        //제이쿼리 사용자 정의 메소드 (스크롤바 생성 감지)
+        $.fn.hasScrollBar = function () {
+            return (this.prop("scrollHeight") == 0 && this.prop("clientHeight") == 0) || (this.prop("scrollHeight") > this.prop("clientHeight"));
+        };
 
         //터치 액션
         $(document).on('touchstart', function (e) {
@@ -116,16 +187,14 @@ $(function () {
 
             if ($(".menu, .lMod9").hasClass("on")) return;
 
-
-
-            let active;
             let tit = e.currentTarget.querySelector(".mMod4 .tit");
             let txt = e.currentTarget.querySelector(".mMod4 .txt");
             let h2 = e.currentTarget.querySelector(".mMod3 h2");
             let txt2 = e.currentTarget.querySelector(".mMod3 .txt");
+            let map = e.currentTarget.querySelectorAll(".maptarget");
 
             if (e.target === h2 || e.target === txt2) {
-                
+
                 if (scrollbx < maintitlebx) return;
 
             }
@@ -133,11 +202,25 @@ $(function () {
             if (e.target === tit || e.target === txt) {
 
 
-                active = $(".mMod4 .swiper-slide-active .txt").outerHeight(true) + $(".mMod4 .swiper-slide-active .tit").outerHeight(true);
+                // active = $(".mMod4 .swiper-slide-active .txt").outerHeight(true) + $(".mMod4 .swiper-slide-active .tit").outerHeight(true);
+
                 // console.log(active)
 
-                if ($(".mMod4 .swiper-slide-active").height() < active) return;
+                if ($(".mMod4 .swiper-slide-active").hasScrollBar()) return;
             };
+
+            // console.log(e.target)
+            // console.log(map[3])
+            for (let x of map) {
+                // console.log(x)
+
+                if (e.target === x) {
+                    if ($(".mMod5").hasScrollBar()) return;
+                } else if (e.target === map[3]) {
+                    return;
+                }
+            }
+
 
             // console.log(h2)
             // console.log(txt2)
@@ -199,6 +282,16 @@ $(function () {
         };
     });
 
+    $(".mMod5").on("DOMMouseScroll mousewheel", function () {
+        if ($(".mMod5").height() < mapchild) {
+            prohibit_pageaction();
+        }
+    });
+    $(".gMap").on("DOMMouseScroll mousewheel", function () {
+        prohibit_pageaction();
+    });
+
+
     $(".mMod4 .swiper-slide").on("DOMMouseScroll mousewheel", function () {
 
         let mod4_height = $(".tit", this).outerHeight(true) + $(".txt", this).outerHeight(true);
@@ -217,29 +310,25 @@ $(function () {
 
     });
 
-    $(".scrollbxw, .mMod4 .swiper-slide").on("mouseleave", function () {
+    $(".scrollbxw, .mMod4 .swiper-slide, .mMod5").on("mouseleave", function () {
         allow_pageaction();
     });
 
 
     $(".btn_link").click(function () {
         $(".menu").addClass("on");
-        prohibit_pageaction();
     });
 
     $(".btn_close").click(function () {
         $(".menu").removeClass("on");
-        allow_pageaction();
     });
 
     $(".mag").click(function () {
         $(".lMod9").addClass("on");
-        prohibit_pageaction();
     });
 
     $(".btn_close2").click(function () {
         $(".lMod9").removeClass("on");
-        allow_pageaction();
     });
 
 
@@ -290,7 +379,7 @@ $(function () {
 
     if (iOS) {
 
-        $(".btn_link, .mMod9 .swiper-slide").click(function () {
+        $(".btn_link.mobile, .mMod9 .swiper-slide").click(function () {
             enable();
         });
 
