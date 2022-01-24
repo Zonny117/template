@@ -5,6 +5,11 @@ body {
     width: 100%;
 }
 
+html.on,
+body.on {
+    overflow: hidden;
+}
+
 .txt,
 .tx {
     line-height: 160%;
@@ -67,6 +72,11 @@ h2,
     background-color: rgba(0, 0, 0, 0.151);
 }
 
+.pbx{
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
 .mMod1 {
     position: absolute;
     top: -60px;
@@ -74,10 +84,14 @@ h2,
     transform: translateX(-50%);
     border-radius: 50%;
     overflow: hidden;
-    background-color: #d5a962;
+    background-color: #fff;
     border: 5px solid #fff;
     width: 100px;
     height: 100px;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translateX(-50%) translate3d(0, 0, 0);
+    -moz-transform: translateX(-50%) translate3d(0, 0, 0);
 }
 
 .mMod1 img {
@@ -92,7 +106,7 @@ h2,
     font-size: 30px;
     font-weight: bold;
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .birth {
@@ -149,7 +163,7 @@ h2,
     margin-bottom: 30px;
 }
 
-.deco{
+.deco {
     width: 30%;
 }
 
@@ -177,6 +191,7 @@ h2,
 .mMod9 .swiper-slide {
     width: 100%;
     margin-bottom: 40px;
+    cursor: pointer;
 }
 
 .mMod9 img {
@@ -203,6 +218,10 @@ h2,
     height: 0;
     padding-top: 60%;
     box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
 }
 
 iframe {
@@ -249,6 +268,10 @@ iframe {
     overflow: hidden;
     box-sizing: border-box;
     border: 5px solid #fff;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
 }
 
 .map {
@@ -299,11 +322,11 @@ iframe {
 
 .btn_tel {
     background-image: url(../images/btn_tel.png);
-    margin-right: 15px;
 }
 
 .btn_sms {
     background-image: url(../images/btn_sms.png);
+    display: none;
 }
 
 .mMod7 {
@@ -392,4 +415,64 @@ a.twitter {
 
 a.youtube {
     background-image: url(../../common/images/ico_youtube.png);
+}
+
+
+.lMod9 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+    background-color: rgba(0, 0, 0, 0.699);
+    z-index: 99999;
+    display: none;
+}
+
+.lMod9 .swiper-container {
+    max-width: 1200px;
+    height: calc(var(--vh, 1vh) * 100);
+    line-height: calc(var(--vh, 1vh) * 100);
+}
+
+.lMod9 .swiper-slide {
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d5a962;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+.lMod9 img {
+    width: 100%;
+}
+
+.lMod9.on {
+    display: block;
+}
+
+.btn_close {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    z-index: 99999;
+    font-size: 0;
+    text-indent: -9999px;
+    background-image: url(../images/btn_close.png);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    background-size: 30px 30px;
+    background-position: center;
 }
