@@ -30,7 +30,7 @@
   
 
     .wedding {
-        font-size: 40px;
+        width: 80%;
         margin-bottom: 22px;
     }
 
@@ -178,15 +178,15 @@
 
     .mMod10 {
         border-top: 3px solid #fff;
-        padding: 20px 30px;
-        padding-right: 40px;
     }
 
     .mMod10 a {
+        padding: 20px 30px;
+        padding-right: 40px;
         font-size: 15px;
     }
 
-    .mMod10::before{
+    .mMod10 a::before{
         content: '';
         background-image: url(../images/down_m.png);
         width: 12px;
@@ -198,7 +198,7 @@
         margin-right: 10px;
     }
 
-    .mMod10::after {
+    .mMod10 a::after {
         display: none;
     }
 
