@@ -1,0 +1,269 @@
+@charset "utf-8";
+
+@media only screen and (max-width:850px) {
+
+    *{
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .gnb {
+        padding: 12px;
+        height: 70px;
+    }
+
+    .mMod1 {
+        width: 46px;
+        height: 46px;
+    }
+
+    .mMod0 {
+        font-size: 16px;
+    }
+
+    .contact {
+        right: 12px;
+        font-size: 0;
+        text-indent: -9999px;
+        width: 46px;
+        height: 46px;
+        background-image: url(../images/mag.png);
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        vertical-align: middle;
+    }
+
+    .contact::after {
+        display: none;
+    }
+
+    .paddingbx{
+        min-height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        padding: 100px 25px;
+    }
+
+    .mMod6{
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .btn_close, .btn_close2{
+        width: 46px;
+        height: 46px;
+        right: 15px;
+    }
+
+    .tel{
+        font-size: 32px;
+    }
+
+    .mMod6 .txt{
+        font-size: 15px;
+    }
+
+    .btn_tel{
+        width: 100%;
+    }
+
+    .btn_sms.mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 120px;
+        border: 2px solid rgba(255, 255, 255, 0.363);
+        padding: 20px;
+        box-sizing: border-box;
+        font-size: 19px;
+        font-weight: 700;
+        color: #fff;
+        margin-top: 10px;
+    }
+
+    .btn_sms::before {
+        content: '';
+        display: block;
+        background-image: url(../images/arrow_white.svg);
+        width: 13px;
+        height: 13px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        text-align: right;
+        margin-left: auto;
+    }
+
+    .maintitlebx {
+        padding-top: 50%;
+        padding-bottom: 50%;
+        min-height: calc(100vh - 50px);
+    }
+
+
+
+    .mMod3 h2 {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    .mMod3 .txt {
+        font-size: 16px;
+    }
+
+    .section_txt {
+        display: block;
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .mMod7 {
+        margin-bottom: 30px;
+    }
+
+    .mMod7 a {
+        width: 100%;
+        height: 130px;
+        margin-bottom: 10px;
+    }
+
+    .mMod10 {
+        margin-bottom: 80px;
+    }
+
+    .mMod10 a {
+        width: 100%;
+        height: 130px;
+    }
+
+    .section1 {
+        padding-top: 80px;
+    }
+
+
+    .section2 {
+        padding-top: 80px;
+    }
+
+    .mMod9 {
+        flex-direction: column;
+        padding: 0;
+        padding-bottom: 100px;
+    }
+
+
+    .lbx {
+        width: 100%;
+        padding: 0 25px;
+        box-sizing: border-box;
+    }
+
+    .rbx {
+        width: 100%;
+        padding-top: 90%;
+        margin-top: 20px;
+    }
+
+    .btnbx {
+        position: relative;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev,
+    .mag {
+        display: none;
+    }
+
+    .mMod8 {
+        flex-direction: column;
+        padding: 0;
+        padding-bottom: 100px;
+    }
+
+    .video {
+        padding: 0 25px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .iframebx {
+        width: 100%;
+        padding-top: 56.66%;
+    }
+
+
+    .mMod4 {
+        margin-top: 100px;
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+
+    .lbx2 {
+        width: 100%;
+    }
+
+    .rbx2 {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .mMod4 .tit {
+        font-size: 25px;
+    }
+
+    .mMod4 .txt {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .mMod11 {
+        display: none;
+    }
+
+
+    .mMod5 {
+        position: relative;
+        width: 100%;
+        color:#fff;
+        margin-bottom: 130px;
+    }
+
+    .address, .txtbx{
+        padding: 0 25px;
+        box-sizing: border-box;
+    }
+
+
+    .t{
+        font-size: 25px;
+        margin-top: 20px;
+    }
+
+    .ti{
+        font-size: 15px;
+        margin-top: 15px;
+    }
+    .tx{
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    .navi{
+        width: 100%;
+        height: 130px;
+    }
+
+
+    .ani5m{
+        top: 100px;
+        opacity: 0;
+    }
+
+    .web {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+}
