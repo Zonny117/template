@@ -1,4 +1,46 @@
 $(function () {
+
+    //모듈제어
+    let bg = $(".back").css('display');
+
+    if (bg === "none") {
+        $(".default").css({
+            display: "block"
+        });
+    }
+
+    let section1 = $(".section1 .dn").filter(function () {
+        return $(this).css('display') === "none"
+    });
+    let section2 = $(".section2 .dn").filter(function () {
+        return $(this).css('display') === "none"
+    });
+
+    if (section1.length === 2) {
+        $(".section1").css({
+            display: "none"
+        });
+    }
+
+    if (section2.length === 2) {
+        $(".section2").css({
+            display: "none"
+        });
+    }
+
+    let contact = $(".topmenu .dn").filter(function () {
+        return $(this).css('display') === "none"
+    });
+
+    if (contact.length === 2) {
+        $(".topmenu, .contact").css({
+            display: "none"
+        });
+    }
+
+
+
+
     // 초기 스크롤값
     let old = 0;
     let prot = 0;
@@ -21,6 +63,24 @@ $(function () {
             $("html").removeClass("ismobile")
         )
 
+        if ($(".mMod3").css('display') === "none") {
+
+            if ($("html").hasClass("ismobile")) {
+                $(".maintitlebx").css({
+                    paddingTop: '0px',
+                    paddingBottom: '0',
+                    minHeight: '0'
+                });
+            } else {
+                $(".maintitlebx").css({
+                    paddingTop: '80px',
+                    paddingBottom: '0',
+                });
+            }
+
+
+
+        }
     });
 
 
@@ -102,7 +162,9 @@ $(function () {
                 opacity: 1,
             }, 800, 'easeOutCirc');
         }
-        if (sct + $(window).height() === $(document).height()) {
+
+        //스크롤 하단
+        if (sct >= $(".mMod11").offset().top - 900) {
             $(".sns").animate({
                 top: 0,
                 opacity: 1,

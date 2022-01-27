@@ -39,7 +39,7 @@
         <div class="topmenu">
             <a href="###" class="btn_close">메뉴 닫기</a>
             <div class="paddingbx">
-                <div class="mMod6">
+                <div class="mMod6 dn">
                     <div class="section_txt contac ani6">CONTACT</div>
                     <div class="tit ani6">
                         <strong><a href="tel:010-0000-0000" class="tel">010-0000-0000</a></strong>
@@ -51,7 +51,7 @@
                     <a href="tel:010-0000-0000" class="btn_tel ani6">전화 연결</a>
                     <a href="sms:010-0000-0000" class="btn_sms ani6 mobile">문자 전송</a>
                 </div>
-                <div class="mMod5 web">
+                <div class="mMod5 web dn">
                     <div class="section_txt address ani5">ADDRESS</div>
                     <div class="gMap ani5">
                         <div id="mapweb" class="map" style="background-image:url(images/map.png);"></div>
@@ -68,14 +68,15 @@
                                 미사역 6번 출구에서 신한은행 방향 5분
                             </div>
                         </div>
-                        <a href="###" class="navi ani5">내비게이션 연결</a>
+                        <a href="javascript:void(0)" class="navi ani5" onclick="navi()">내비게이션 연결</a>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="mMod2">
-            <div class="background" style="background-image: url(images/bg.jpg);"></div>
+            <div class="background default" style="background-image: url(images/default.jpg);"></div>
+            <div class="background back" style="background-image: url(images/bac.jpg);"></div>
         </div>
         <div class="maintitlebx">
             <div class="mMod3">
@@ -88,7 +89,7 @@
             </div>
         </div>
         <div class="section1 ovh">
-            <div class="mMod7">
+            <div class="mMod7 dn">
                 <div class="section_txt link">LINK</div>
                 <a href="###">프로필</a>
                 <a href="###">블로그 바로가기</a>
@@ -96,13 +97,13 @@
                 <a href="###">블로그 바로가기</a>
                 <a href="###">블로그 바로가기</a>
             </div>
-            <div class="mMod10">
+            <div class="mMod10 dn">
                 <div class="section_txt download">DOWNLOAD</div>
                 <a href="###">첨부파일 다운로드</a>
             </div>
         </div>
         <div class="section2 ovh">
-            <div class="mMod9">
+            <div class="mMod9 dn">
                 <div class="lbx">
                     <span class="section_txt pic">PICTURE</span>
                     <div class="btnbx">
@@ -135,7 +136,7 @@
                     });
                 </script>
             </div>
-            <div class="mMod8 ovh">
+            <div class="mMod8 dn">
                 <div class="section_txt video">VIDEO</div>
                 <div class="iframebx">
                     <iframe src="https://www.youtube.com/embed/CmCIZ_aUAeQ?enablejsapi=1&version=3&playerapiid=ytplayer"
@@ -236,7 +237,7 @@
                         미사역 6번 출구에서 신한은행 방향 5분
                     </div>
                 </div>
-                <a href="###" class="navi ani5m">내비게이션 연결</a>
+                <a href="javascript:void(0)" class="navi ani5m" onclick="navi()">내비게이션 연결</a>
             </div>
         </div>
         <div class="mMod11 ovh">
@@ -250,6 +251,26 @@
                 <a href="###" class="youtube">youtube</a>
             </div>
         </div>
+    </div>
+
+    <div class="mSky">
+        <span class="ls iTop forWeb"><a href="###" class="ico">페이지 상단으로</a></span>
+        <div class="forMobile">
+            <span class="ls iSns"><a href="#jsSky" class="ico jsBtnShow1">Sns 레이어열기</a></span>
+            <div id="jsSky" class="lSky">
+                <a href="###" class="youtube">youtube</a>
+                <a href="###" class="instagram">instagram</a>
+                <a href="###" class="twitter">twitter</a>
+                <a href="###" class="fackbook">facebook</a>
+                <a href="#jsSky" class="close jsBtnClose1">Sns 레이어닫기</a>
+            </div>
+        </div>
+        <span class="ls iKakao"><a href="javascript:void(0)" class="ico" id="kakao-link-btn">카카오톡</a></span>
+        <span class="banner"></span>
+        <span class="ls iAlarm">
+            <a href="https://www.hifactory.co.kr/index.asp" class="ico">하이팩토리</a>
+            <span class="txt forWeb">하이팩토리 초대공유플랫폼으로 제작된 사이트입니다</span>
+        </span>
     </div>
 
     <div id="jsMod9" class="lMod9">

@@ -50,6 +50,7 @@ h2,
 .logobx {
     display: flex;
     align-items: center;
+    height: 100%;
 }
 
 .mMod1 {
@@ -74,6 +75,7 @@ h2,
     color: #fff;
     font-weight: 600;
     font-size: 18px;
+    max-width: 50%;
 }
 
 .contact {
@@ -106,6 +108,7 @@ h2,
     height: 100%;
     background-color: #000;
     z-index: 99999;
+    overflow-x: hidden;
     overflow-y: auto;
     display: none;
 }
@@ -272,7 +275,7 @@ h2,
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.37)
+    background-color: rgba(0, 0, 0, 0.192);
 }
 
 
@@ -723,15 +726,23 @@ a.twitter {
     overflow: hidden;
 }
 
-.ani6, .ani5{
+.ani6,
+.ani5 {
     position: relative;
     left: 100px;
     opacity: 0;
 }
 
-.mobile{
+.mobile {
     display: none;
 }
+
+.default{
+    display: none;
+}
+
+
+
 
 /* hover */
 @media only screen and (min-width:851px) {
