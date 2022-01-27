@@ -266,6 +266,7 @@ h2,
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .background::before {
@@ -660,19 +661,19 @@ iframe {
     margin-left: 20px;
 }
 
-a.facebook {
+.mMod11 a.facebook {
     background-image: url(../images/facebook.svg);
 }
 
-a.instagram {
+.mMod11 a.instagram {
     background-image: url(../images/instagram.svg);
 }
 
-a.youtube {
+.mMod11 a.youtube {
     background-image: url(../images/youtube.svg);
 }
 
-a.twitter {
+.mMod11 a.twitter {
     background-image: url(../images/twitter.svg);
 }
 

@@ -1,5 +1,14 @@
 $(function () {
 
+    //새로고침 위로
+    window.onload = function() {
+        setTimeout (function () {
+            scrollTo(0,0);
+
+        },100);
+
+    }
+
     //모듈제어
     let bg = $(".back").css('display');
 

@@ -231,7 +231,10 @@
         position: relative;
         width: 100%;
         color:#fff;
-        margin-bottom: 130px;
+        background-color: #000;
+        padding-top: 50px;
+        padding-bottom: 130px;
+        box-sizing: border-box;
     }
 
     .address, .txtbx{
