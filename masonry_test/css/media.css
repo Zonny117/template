@@ -108,24 +108,28 @@
         border: none;
     }
 
-    .mMod11{
+    .mMod11 {
         display: none;
     }
 
-    .btn_tel{
+    .btn_tel {
         background-size: 20px 18px;
         vertical-align: -1px;
     }
 
-    .btn_sms{
+    .btn_sms {
         display: inline-block;
         font-size: 0;
         text-indent: -9999px;
         background-image: url(../images/sms.svg);
         width: 20px;
-        height: 20px;  
+        height: 20px;
         background-size: 100%;
         background-repeat: no-repeat;
         margin-left: 10px;
-      }
+    }
+
+    .qrflex {
+        width: 80%;
+    }
 }

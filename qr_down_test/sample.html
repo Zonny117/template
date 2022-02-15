@@ -1,0 +1,145 @@
+<HTML>
+
+<HEAD>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="jquery-qrcode-0.18.0.min.js"></script> -->
+	<script type="text/javascript" src="qrcode.min.js"></script>
+
+
+
+	<script>
+		$(window).on('load', function () {
+
+			// var option = {
+			// 	// render method: 'canvas', 'image' or 'div'
+			// 	render: 'image',
+
+			// 	// version range somewhere in 1 .. 40
+			// 	minVersion: 6,
+			// 	maxVersion: 40,
+
+			// 	// error correction level: 'L', 'M', 'Q' or 'H'
+			// 	ecLevel: 'H',
+
+			// 	// offset in pixel if drawn onto existing canvas
+			// 	left: 0,
+			// 	top: 0,
+
+			// 	// size in pixel
+			// 	size: 300,
+
+			// 	// code color or image element
+			// 	fill: '#000',
+
+			// 	// background color or image element, null for transparent background
+			// 	background: '#fff',
+
+			// 	// content
+			// 	text: 'https://www.hifactory.co.kr/index.asp',
+
+			// 	// corner radius relative to module width: 0.0 .. 0.5
+			// 	radius: 0,
+
+			// 	// quiet zone in modules
+			// 	quiet: 1,
+
+			// 	// modes
+			// 	// 0: normal
+			// 	// 1: label strip
+			// 	// 2: label box
+			// 	// 3: image strip
+			// 	// 4: image box
+			// 	mode: 4,
+
+			// 	mSize: 0.15,
+			// 	mPosX: 0.5,
+			// 	mPosY: 0.5,
+
+			// 	label: 'no label',
+			// 	fontname: 'sans',
+			// 	fontcolor: '#000',
+
+			// 	image: $(".qrimg")[0]
+			// }
+
+			// var canvas = document.getElementById("canvas");
+			// var ctx = canvas.getContext("2d");
+
+
+
+
+			// $("#qrcode").qrcode(option);
+
+			let qr = $("#qrcode img").attr('src');
+
+
+
+			// console.log(qr);
+
+			$(".down").attr('href', qr);
+		});
+	</script>
+
+	<style>
+		.qrimg {
+			display: none;
+		}
+
+		.down {
+			display: inline-block;
+			color: #5c47fd;
+			background-color: #f8f6ff;
+			border: 1px solid #5c47fd;
+			text-decoration: none;
+			border-radius: 4px;
+			padding: 5px;
+			box-sizing: border-box;
+			margin: 10px;
+		}
+
+		#qrcode {
+			position: relative;
+		}
+
+		#qrcode::before {
+			content: '';
+			background-image: url(../logo_qr.jpg);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 200px;
+			height: 48px;
+			background-repeat: no-repeat;
+			background-size: 100%;
+		}
+	</style>
+</HEAD>
+
+<BODY>
+	<img class="qrimg" src="logo_qr.jpg" alt="QR로고">
+
+	<div style="border: 2px solid #000; width: 250px;">
+		<div id="qrcode">
+		</div>
+		<a href="###" class="down" download>QR 다운로드</a>
+	</div>
+</BODY>
+
+
+<script type="text/javascript">
+	var qrcode = new QRCode(document.getElementById("qrcode"), {
+		text: 'https://www.hifactory.co.kr/index.asp',
+		width: 250,
+		height: 250,
+		colorDark: "#000000",
+		colorLight: "#ffffff",
+		correctLevel: QRCode.CorrectLevel.H
+	});
+
+	$("#qrcode > img").css({
+		"margin": "auto"
+	});
+</script>
+
+</HTML>

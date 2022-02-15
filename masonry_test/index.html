@@ -20,6 +20,7 @@
     <script src="../common/plugins/swiper/swiper.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/qrcode.min.js"></script>
     <script src="js/main.js"></script>
 
 
@@ -27,6 +28,7 @@
 </head>
 
 <body>
+
     <div id="wrap">
         <div class="mMod2">
             <div class="background" style="background-image: url(images/bg3.jpg);"></div>
@@ -61,7 +63,6 @@
                             <a href="tel:010-0000-0000" class="btn_tel">전화 연결</a>
                             <a href="tel:010-0000-0000" class="btn_sms">문자보내기</a>
                         </div>
-
                     </div>
 
                     <div class="linkbx">
@@ -73,11 +74,14 @@
                         <div class="mMod10">
                             <a href="###">연주회 일정 다운로드</a>
                         </div>
-                        <div class="mMod11">
-                            <a href="###" class="facebook">facebook</a>
-                            <a href="###" class="instagram">instagram</a>
-                            <a href="###" class="twitter">twitter</a>
-                            <a href="###" class="youtube">youtube</a>
+                        <div class="sns">
+                            <div class="mMod11">
+                                <a href="###" class="facebook">facebook</a>
+                                <a href="###" class="instagram">instagram</a>
+                                <a href="###" class="twitter">twitter</a>
+                                <a href="###" class="youtube">youtube</a>
+                            </div>
+                            <a href="###" class="qrcode">QR 코드</a>
                         </div>
                     </div>
                 </div>
@@ -174,6 +178,34 @@
                 <div class="swiper-slide"><img src="images/xmod3.jpg" alt="사진"></div>
                 <div class="swiper-slide"><img src="images/xmod1.jpg" alt="사진"></div>
             </div>
+        </div>
+    </div>
+    <div class="mSky">
+        <span class="ls iTop forWeb"><a href="###" class="ico">페이지 상단으로</a></span>
+        <div class="forMobile">
+            <span class="ls iSns"><a href="#jsSky" class="ico jsBtnShow1">Sns 레이어열기</a></span>
+            <div id="jsSky" class="lSky">
+                <a href="###" class="youtube">youtube</a>
+                <a href="###" class="instagram">instagram</a>
+                <a href="###" class="twitter">twitter</a>
+                <a href="###" class="fackbook">facebook</a>
+                <a href="#jsSky" class="close jsBtnClose1">Sns 레이어닫기</a>
+            </div>
+        </div>
+        <span class="ls iKakao"><a href="javascript:void(0)" class="ico" id="kakao-link-btn">카카오톡</a></span>
+        <span class="banner"></span>
+        <span class="ls iAlarm">
+            <a href="https://www.hifactory.co.kr/index.asp" target="_blank" class="ico">하이팩토리</a>
+            <span class="txt forWeb">하이팩토리 초대공유플랫폼으로 제작된 사이트입니다</span>
+        </span>
+    </div>
+
+    <div class="qrbx">
+        <div class="qrflex">
+            <a href="###" class="btn_close"></a>
+            <div id="qr">
+            </div>
+            <a href="###" class="qrdown" download>QR 다운로드</a>
         </div>
     </div>
 </body>

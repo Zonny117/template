@@ -195,13 +195,20 @@ h2,
     border: 3px solid #000;
 }
 
-.mMod11 {
+.sns {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 20px;
 }
 
-.mMod11 a {
+.mMod11 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sns a {
     display: inline-block;
     margin: 0 5px;
     font-size: 0;
@@ -227,6 +234,10 @@ h2,
 
 .mMod11 .youtube {
     background-image: url(../images/youtube.svg);
+}
+
+.qrcode {
+    background-image: url(../images/qrcode.svg);
 }
 
 .mMod4 .swiper-slide {
@@ -450,20 +461,91 @@ iframe {
     border: 1px solid #000;
 }
 
-.btn_sms{
+.btn_sms {
     display: none;
+}
+
+.qrbx {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.507);
+    z-index: 9999;
+}
+
+.qrbx.on{
+    display: block;
+}
+
+.qrflex {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: auto;
+    height: auto;
+    padding: 45px;
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+
+.qrdown {
+    display: inline-block;
+    margin-top: 30px;
+    color: #fff;
+    background-color: #000;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+.qrflex .btn_close {
+    top: 15px;
+    right: 15px;
+    width: 25px;
+    height: 25px;
+    border: none;
+}
+
+#qr {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    box-sizing: border-box;
+}
+
+#qr img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 @media only screen and (min-width:851px) {
 
     .mMod7 a:hover,
-    .mMod10 a:hover, .navi:hover {
+    .mMod10 a:hover,
+    .navi:hover {
         background-color: #fff;
         color: #000;
         border: 3px solid #000;
     }
 
-    .navi:hover::before{
+    .navi:hover::before {
         background-image: url(../images/navigate_hover.svg);
     }
 
@@ -476,7 +558,8 @@ iframe {
         transform: scale(1.2);
     }
 
-    .mMod11 a:hover {
+    .mMod11 a:hover,
+    .qrcode:hover {
         transform: scale(1.2);
     }
 }
