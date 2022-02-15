@@ -46,11 +46,15 @@ $(function () {
     });
 
 
-    $(".map").on('touchmove touchstart mouseenter', function () {
+    $(".map").on('touchmove touchstart mouseenter mousemove', function () {
         mainslide.allowTouchMove = false;
     });
 
-    $("body").on('touchstart click', function (e) {
+    $(".map").on('mouseleave', function () {
+        mainslide.allowTouchMove = true;
+    });
+
+    $("body").on('touchstart touchmove', function (e) {
         let tg = e.target;
 
         // console.log(tg);
