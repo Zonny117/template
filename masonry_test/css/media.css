@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+@media only screen and (max-width:850px) {
+
+
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .content {
+        width: 100%;
+        padding: 25px 20px 50px 20px;
+    }
+
+    .pbx {
+        flex-direction: column;
+    }
+
+    .lbx,
+    .rbx {
+        width: 100%;
+    }
+
+    .grid-item {
+        width: 100% !important;
+    }
+
+
+    .rbx {
+        margin-top: 25px;
+    }
+
+
+    .mMod4 {
+        width: 100%;
+    }
+
+    .mMod0 {
+        font-size: 16px;
+    }
+
+    .mMod3 h2 {
+        font-size: 18px;
+    }
+
+    .mMod3 .txt {
+        font-size: 16px;
+    }
+
+    .mMod6 .txt {
+        font-size: 14px;
+    }
+
+    .mMod7 a,
+    .mMod10 a {
+        font-size: 14px;
+        border: none;
+    }
+
+    .mMod4 .tit {
+        font-size: 20px;
+    }
+
+    .mMod4 .txt {
+        font-size: 16px;
+    }
+
+
+    .mag {
+        font-size: 16px;
+    }
+
+    .mag::before {
+        width: 20px;
+        height: 20px;
+    }
+
+
+
+    .t {
+        font-size: 20px;
+    }
+
+
+    .ti,
+    .tx {
+        font-size: 14px;
+    }
+
+    .gMap {
+        height: 300px;
+    }
+
+    .navi {
+        font-size: 14px;
+        border: none;
+        padding: 15px;
+    }
+
+    .navi::before {
+        width: 20px;
+        height: 20px;
+    }
+
+    .btn_close {
+        width: 25px;
+        height: 25px;
+        border: none;
+    }
+
+    .mMod11{
+        display: none;
+    }
+
+    .btn_tel{
+        background-size: 20px 18px;
+        vertical-align: -1px;
+    }
+
+    .btn_sms{
+        display: inline-block;
+        font-size: 0;
+        text-indent: -9999px;
+        background-image: url(../images/sms.svg);
+        width: 20px;
+        height: 20px;  
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin-left: 10px;
+      }
+}

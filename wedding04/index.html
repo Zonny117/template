@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="../common/css/common.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/media.css" type="text/css">
+
+    <script src="../common/js/jquery-1.11.3.min.js"></script>
+    <script src="../common/js/jquery-ui.js"></script>
+    <script src="../common/js/common.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <div class="background" style="background-image: url();"></div>
+        <div class="content">
+            <div class="main">
+                <div class="swiper-wrapper">
+                    <div class="mMod3 swiper-slide">
+                        <div class="padding">
+                            <img src="images/mod3.png" class="mainimg" alt="잎">
+                            <h2>박서준 & 이소진</h2>
+                            <p class="txt">
+                                2022년 5월 5일(일요일) 오전 11시 <br>
+                                서울시 강남구 논현로 12-12 패밀리뷔페 <br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mMod4 swiper-slide">
+                        <div class="padding">
+                            <img src="images/mod4.png" class="subimg" alt="잎">
+                            <div class="swiper-slide">
+                                <div class="tit">결혼합니다</div>
+                                <div class="txt">
+                                    소중한 인연으로 만난 <br>
+                                    저희 두 사람이 이제 부부가 되어<br>
+                                    새로운 시작을 맞이하려 합니다.<br><br>
+                                    아버지·어머니의 장남 진남 <br>
+                                    아버지·어머니의 차녀 쁜녀
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mMod9 swiper-slide">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="images/xmod1.png" alt="사진"></div>
+                                <div class="swiper-slide"><img src="images/xmod2.png" alt="사진"></div>
+                                <div class="swiper-slide"><img src="images/xmod3.png" alt="사진"></div>
+                            </div>
+                        </div>
+                        <div class="btnbx">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <script>
+                            var mMod9 = new Swiper(".mMod9 .swiper-container", {
+                                allowTouchMove: false,
+                                slidesPerView: 1,
+                                pagination: {
+                                    el: ".mMod9 .swiper-pagination",
+                                    type: "fraction",
+                                },
+                                navigation: {
+                                    nextEl: ".mMod9 .swiper-button-next",
+                                    prevEl: ".mMod9 .swiper-button-prev",
+                                }
+                            });
+                        </script>
+                    </div>
+                    <div class="mMod8 swiper-slide">
+                        <div class="iframebx">
+                            <iframe
+                                src="https://www.youtube.com/embed/aYbUY6JGpbM?enablejsapi=1&version=3&playerapiid=ytplayer"
+                                title="YouTube video player" frameborder="0" marginwidth="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="mMod5 swiper-slide">
+                        <div class="gMap">
+                            <a href="###" class="navi">내비</a>
+                            <div id="map" class="map" style="background-image:url(images/map.png);"></div>
+                        </div>
+                        <div class="txtbx">
+                            <div class="scrollbx">
+                                <strong class="t">청담웨딩컨벤션 블루홀</strong>
+                                <div class="ti">
+                                    <span>경기 하남시 미사강변동로 72</span>
+                                </div>
+                                <div class="txt">
+                                    <div class="tx">
+                                        상세안내 <br>
+                                        청담웨딩컨벤션 블루홀<br>
+                                        2022년 5월 14일 오후 2시<br><br>
+                                        지하철안내<br>
+                                        7호선 시청역 7번출구에서 15분거리<br><br>
+                                        버스안내<br>
+                                        간선버스 - 100, 300, 500 시청역 하차<br>
+                                        지선버스 - 1000 시청역 하차<br>
+                                        마을버스 - 10 시청역 하차
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mMod6 swiper-slide">
+                        <div class="padding">
+                            <div class="tit">
+                                <a href="tel:010-0000-0000" class="tel">010-0000-0000</a>
+                            </div>
+                            <div class="txt">
+                                신랑 : 010-1234-5678 <br>
+                                신부 : 010-1234-9852
+                            </div>
+                            <a href="sms:010-0000-0000" class="sms">문자하기</a>
+                        </div>
+                    </div>
+                    <div class="lastslide swiper-slide">
+                        <div class="padding">
+                            <h1 class="mMod1 dn">
+                                <img src="images/logo.png" alt="로고">
+                            </h1>
+                            <div class="mMod7 dn">
+                                <a href="###">하이팩토리 웨딩홀</a>
+                                <a href="###">블로그 바로가기</a>
+                            </div>
+                            <div class="mMod10 dn">
+                                <a href="###">예식장 약도 다운로드</a>
+                            </div>
+                            <div class="mMod11 dn">
+                                <a href="###" class="facebook">facebook</a>
+                                <a href="###" class="instagram">instagram</a>
+                                <a href="###" class="twitter">twitter</a>
+                                <a href="###" class="youtube">youtube</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btnbx2">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mSky">
+        <span class="ls iTop forWeb"><a href="###" class="ico">페이지 상단으로</a></span>
+        <div class="forMobile">
+            <span class="ls iSns"><a href="#jsSky" class="ico jsBtnShow1">Sns 레이어열기</a></span>
+            <div id="jsSky" class="lSky">
+                <a href="###" class="youtube">youtube</a>
+                <a href="###" class="instagram">instagram</a>
+                <a href="###" class="twitter">twitter</a>
+                <a href="###" class="fackbook">facebook</a>
+                <a href="#jsSky" class="close jsBtnClose1">Sns 레이어닫기</a>
+            </div>
+        </div>
+        <span class="ls iKakao"><a href="javascript:void(0)" class="ico" id="kakao-link-btn">카카오톡</a></span>
+        <span class="banner"></span>
+        <span class="ls iAlarm">
+            <a href="https://www.hifactory.co.kr/index.asp" target="_blank" class="ico">하이팩토리</a>
+            <span class="txt forWeb">하이팩토리 초대공유플랫폼으로 제작된 사이트입니다</span>
+        </span>
+    </div>
+
+</body>
+
+</html>

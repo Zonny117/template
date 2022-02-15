@@ -1,0 +1,416 @@
+@charset "utf-8";
+
+@media only screen and (max-width:850px) {
+
+    *{
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    html,
+    body,
+    #wrap {
+        height: auto;
+
+    }
+
+    .wrapmobile {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        min-height: 100vh;
+        justify-content: space-between;
+    }
+
+    .mainslide {
+        display: none;
+    }
+
+
+    .mMod2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin: unset;
+        max-height: unset;
+        border-radius: unset;
+        overflow: unset;
+        box-shadow: unset;
+        background-color: unset;
+        text-align: center;
+        padding: 20% 30px;
+        box-sizing: border-box;
+        flex: 1;
+    }
+
+
+    .background {
+        position: absolute;
+        width: 100%;
+        height: 120%;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .mMod0 {
+        display: inline-block;
+        width: 60%;
+        font-size: 16px;
+        font-weight: 400;
+        position: relative;
+        color: #fff;
+    }
+
+    .content {
+        position: relative;
+        width: 100%;
+        padding: 50px 30px 30px 30px;
+        box-sizing: border-box;
+        border-radius: 20px 20px 0 0;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .mMod1 {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-right: 0px;
+        box-shadow: 0 0 8px rgba(116, 116, 116, 0.466);
+    }
+    
+
+    .mMod3 {
+        margin-bottom: 20px;
+    }
+
+    .mMod3::after {
+        content: '';
+        display: inline-block;
+        width: 10%;
+        height: 5px;
+        border-bottom: 3px solid #000;
+        margin-top: 20px;
+    }
+
+
+    .mMod3 h2 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .mMod3 .txt {
+        font-size: 14px;
+    }
+
+    .mMod6 {
+        margin-bottom: 20px;
+    }
+
+    .mMod6 .tit {
+        margin-bottom: 10px;
+    }
+
+    .mMod6 .txt {
+        font-size: 14px;
+    }
+
+    .btn_tel {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-image: url(../images/btn_tel.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        border-radius: 50%;
+        font-size: 0;
+        text-indent: -9999px;
+        margin-right: 10px;
+        margin-bottom: 30px;
+    }
+
+    .btn_map {
+        width: 50px;
+        height: 50px;
+        background-image: url(../images/btn_map_m.png);
+        margin-bottom: 30px;
+    }
+
+
+    .mMod7 a {
+        font-size: 15px;
+        font-weight: 400;
+        color: #000;
+    }
+
+    .mMod9 {
+        position: static;
+        width: 100%;
+        height: auto;
+        background-color: unset;
+        border-radius: unset;
+        padding: 30px 0;
+        box-sizing: border-box;
+        box-shadow: unset;
+        margin-bottom: 25px;
+    }
+
+
+    .mMod9 .swiper-container {
+        position: relative;
+        width: 90%;
+        height: 0%;
+        padding-top: 70%;
+        overflow: unset;
+    }
+
+    .mMod9 .swiper-slide {
+        position: relative;
+        border-radius: 30px;
+        padding: 30px;
+        height: 100%;
+        box-sizing: border-box;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.164);
+        background-color: #fff;
+    }
+
+    .mMod9 .swiper-wrapper{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .mag {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        font-size: 0;
+        text-indent: -9999px;
+        background-image: url(../images/mag.png);
+        width: 30px;
+        height: 30px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .mMod9 .swiper-pagination {
+        position: static;
+        width: 100%;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .mMod9 .swiper-pagination-bullet {
+        width: 30px;
+        border-radius: 0;
+        height: 5px;
+        background-color: #000;
+        margin: 5px;
+    }
+
+    .mMod4 {
+        padding: 0;
+        margin-bottom: 50px;
+    }
+
+    .mMod4 .tit {
+        font-size: 18px;
+    }
+
+    .mMod4 .txt {
+        font-size: 14px;
+    }
+
+    .mMod4 .swiper-slide+.swiper-slide {
+        margin-top: 30px;
+    }
+
+    .wrapmobile .mMod8 {
+        position: static;
+        max-width: unset;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        box-sizing: border-box;
+        top: auto;
+        left: auto;
+        transform: none;
+        background-color: unset;
+        border-radius: unset;
+        z-index: unset;
+        margin-bottom: 40px;
+    }
+
+    .iframebx {
+        position: relative;
+        max-width: unset;
+        width: 100%;
+        height: 0;
+        border-radius: 20px;
+        overflow: hidden;
+        padding-top: 56%;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+
+    .mMod5 {
+        display: block;
+        width: 100%;
+        height: auto;
+        background-color: unset;
+        border-radius: unset;
+        overflow: unset;
+        box-shadow: unset;
+    }
+
+    .gMap {
+        position: relative;
+        width: 100%;
+        height: 250px;
+
+        /* overflow: hidden; */
+    }
+
+    .map {
+        border-radius: 20px;
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.164);
+    }
+
+    .navi {
+        position: absolute;
+        bottom: -25px;
+        margin: 0;
+        width: 50px;
+        height: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .txtbx {
+        margin-top: 40px;
+        width: 100%;
+        padding: 0;
+    }
+
+    .t {
+        font-size: 18px;
+    }
+
+    .ti {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .tx {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    .mMod10 {
+        width: 100%;
+        margin-top: 30px;
+        max-width: unset;
+    }
+
+    .mMod10 a::before {
+        content: '';
+        display: block;
+        background-image: url(../images/download.png);
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin: 10px auto;
+    }
+
+    .mMod10 a {
+        display: inline-block;
+        padding: 0;
+        font-size: 14px;
+        color: #000;
+        font-weight: 400;
+    }
+
+
+    #mapweb{
+        display: none;
+    }
+    
+    #mapmobile{
+        display: block;
+    }
+}
+
+@media only screen and (max-width:1366px) {
+    .lMod9 {
+        position: fixed;
+        max-width: unset;
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        box-sizing: border-box;
+        top: 0;
+        left: 0;
+        transform: none;
+        background-color: #fff;
+        border-radius: unset;
+        z-index: 99999;
+        display: none;
+    }
+
+    .btn_close2 {
+        position: fixed;
+        top: 20px;
+        left: auto;
+        right: 20px;
+        transform: none;
+        width: 38px;
+        height: 38px;
+        z-index: 99999;
+    }
+
+    .lMod9 .swiper-container {
+        max-width: unset;
+        width: 100%;
+        height: calc(var(--vh, 1vh) * 100);
+        line-height: calc(var(--vh, 1vh) * 100);
+    }
+
+
+    .lMod9 .swiper-slide {
+        max-height: 100vh;
+    }
+
+
+    .btn_sms{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-image: url(../images/btn_sms.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        border-radius: 50%;
+        font-size: 0;
+        text-indent: -9999px;
+        margin-right: 10px;
+        margin-bottom: 30px;
+    }
+
+   
+
+}
+

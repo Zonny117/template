@@ -1,0 +1,482 @@
+@charset "utf-8";
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+html.on,
+body.on {
+    overflow: hidden;
+}
+
+#wrap {
+    width: 100%;
+}
+
+h2,
+.tit,
+.t,
+.ti {
+    line-height: 120%;
+}
+
+.txt,
+.tx {
+    line-height: 160%;
+}
+
+.mMod2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.308);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+
+.content {
+    position: relative;
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.pbx {
+    max-width: 1600px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.lbx {
+    width: 23%;
+}
+
+.rbx {
+    width: 75%;
+}
+
+.logobx {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.mMod1 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.mMod1 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+}
+
+.mMod0 {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.profile {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 0px 9px 3px rgba(85, 85, 85, 0.342);
+}
+
+
+.mainpic {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.pic {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.mMod3 {
+    margin-bottom: 10px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.mMod3 h2 {
+    font-size: 20px;
+}
+
+.mMod3 .txt {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.mMod6 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.btn_tel {
+    margin-top: 20px;
+    font-size: 0;
+    display: inline-block;
+    text-indent: -9999px;
+    background-image: url(../images/btn_tel.svg);
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+
+.linkbx {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 9px 3px rgba(85, 85, 85, 0.342);
+}
+
+.mMod7 a,
+.mMod10 a {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    border: 3px solid #000;
+}
+
+.mMod11 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.mMod11 a {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 0;
+    text-indent: -9999px;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+}
+
+.mMod11 .facebook {
+    background-image: url(../images/facebook.svg);
+}
+
+.mMod11 .twitter {
+    background-image: url(../images/twitter.svg);
+}
+
+.mMod11 .instagram {
+    background-image: url(../images/instagram.svg);
+}
+
+.mMod11 .youtube {
+    background-image: url(../images/youtube.svg);
+}
+
+.mMod4 .swiper-slide {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mMod4 .tit {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.mMod4 .txt {
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.grid-sizer {
+    width: 10%;
+}
+
+.grid-item {
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 9px 3px rgba(85, 85, 85, 0.342);
+}
+
+.mMod4 .grid-item {
+    width: 50%;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000;
+}
+
+
+.mMod8 {
+    width: 50%;
+    height: 400px;
+}
+
+.section_txt {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+
+iframe {
+    width: 100%;
+    height: calc(100% - 60.99px);
+    border-radius: 0 0 10px 10px;
+}
+
+.mMod5 {
+    width: 40%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.gMap {
+    width: 100%;
+    height: 400px;
+}
+
+.map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.txtbx {
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.t {
+    font-size: 25px;
+}
+
+.ti {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.tx {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.navi {
+    width: 100%;
+    padding: 20px;
+    display: block;
+    box-sizing: border-box;
+    background-color: #000;
+    border: 3px solid #000;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.navi::before {
+    content: '';
+    background-image: url(../images/navigate.svg);
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.swiper-slide {
+    height: auto;
+}
+
+.mMod9 .swiper-slide {
+    cursor: pointer;
+    transition: scale .8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.mMod9 .swiper-slide:nth-child(odd) {
+    width: 40%;
+}
+
+.mMod9 .swiper-slide:nth-child(even) {
+    width: 50%;
+}
+
+.mMod9 img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.mag {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.mag::before {
+    content: '';
+    background-image: url(../images/mag.svg);
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.lMod9 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: #fff;
+    display: none;
+}
+
+.lMod9.on {
+    display: block;
+}
+
+.lMod9 .swiper-container {
+    max-width: 1400px;
+    height: 100vh;
+    line-height: 100vh;
+}
+
+.lMod9 .swiper-slide {
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.lMod9 img {
+    width: 100%;
+}
+
+.btn_close {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 99999;
+    font-size: 0;
+    text-indent: -9999px;
+    background-image: url(../images/btn_close.svg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+
+.btn_sms{
+    display: none;
+}
+
+@media only screen and (min-width:851px) {
+
+    .mMod7 a:hover,
+    .mMod10 a:hover, .navi:hover {
+        background-color: #fff;
+        color: #000;
+        border: 3px solid #000;
+    }
+
+    .navi:hover::before{
+        background-image: url(../images/navigate_hover.svg);
+    }
+
+    .mMod9 .swiper-slide:hover {
+        transform: scale(1.1);
+        z-index: 1;
+    }
+
+    .btn_tel:hover {
+        transform: scale(1.2);
+    }
+
+    .mMod11 a:hover {
+        transform: scale(1.2);
+    }
+}
