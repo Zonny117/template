@@ -1,0 +1,273 @@
+@charset "utf-8";
+
+@media only screen and (max-width:850px) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+
+    #wrap {
+        padding: 30px 20px;
+        padding-bottom: 100px;
+    }
+
+    .logobx {
+        margin-bottom: 30px;
+    }
+
+    .mMod1 {
+        width: 60px;
+        height: 60px;
+    }
+
+    .mMod0 {
+        font-size: 20px;
+        margin-left: 15px;
+    }
+
+    .line {
+        margin-left: 30px;
+        padding-left: 40px;
+    }
+
+    .mMod3 {
+        padding-bottom: 43px;
+    }
+
+    .mMod3 h2 {
+        font-size: 28px;
+    }
+
+    .mMod3 .txt {
+        font-size: 18px;
+    }
+
+    .mod3img {
+        position: absolute;
+        top: -2px;
+        left: -21px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .mMod6 {
+        padding-bottom: 60px;
+    }
+
+    .tel {
+        font-size: 20px;
+    }
+
+    .tel::before {
+        top: -4px;
+        left: -61px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .mMod6 .txt {
+        position: relative;
+        font-size: 16px;
+        margin-top: 20px;
+        padding-top: 15px;
+        box-sizing: border-box;
+    }
+
+    .sms {
+        display: block;
+        position: absolute;
+        top: 51px;
+        left: -20px;
+        background-image: url(../image/sms.png);
+        width: 40px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        font-size: 0;
+        text-indent: -9999px;
+    }
+
+    .mMod7 {
+        padding-bottom: 39px;
+    }
+
+    .mMod7 a {
+        font-size: 18px;
+    }
+
+    .mMod7 a::before {
+        top: -7px;
+        left: -60px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .mMod7 a+a {
+        margin-top: 34px;
+    }
+
+    .media {
+        margin-left: 12px;
+    }
+
+    .flex a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .btn_pic {
+        margin-right: 14px;
+    }
+
+    .mMod9 .swiper-container {
+        width: 90%;
+        height: 220px;
+    }
+
+    .picbx,
+    .mMod8 {
+        margin-top: 20px;
+    }
+
+    .iframebx {
+        width: 100%;
+        height: 0;
+        padding-top: 56%;
+        box-sizing: border-box;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .mMod4 {
+        padding-bottom: 48px;
+    }
+
+    .mMod4 .tit {
+        font-size: 20px;
+    }
+
+    .mMod4::before {
+        top: -9px;
+        left: -23px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .mMod4 .txt {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    .mMod4 .swiper-slide+.swiper-slide {
+        margin-top: 30px;
+    }
+
+    .mMod5 {
+        padding-bottom: 50px;
+    }
+
+    .navi {
+        font-size: 18px;
+    }
+
+    .navi::before {
+        top: -7px;
+        left: -61px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .gMap {
+        margin: 25px 0;
+        width: 100%;
+        height: 240px;
+    }
+
+    .t {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .ti {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .tx {
+        font-size: 16px;
+    }
+
+    .mMod10 a {
+        font-size: 18px;
+    }
+
+    .mMod10 a::before {
+        top: -8px;
+        left: -61px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .lMod9 {
+        background-color: rgba(0, 0, 0, 0.705);
+    }
+
+    .lMod9.on {
+        display: block;
+    }
+
+    .lMod9 .swiper-container {
+        padding: 0;
+        height: calc(var(--vh, 1vh) * 100);
+        line-height: calc(var(--vh, 1vh) * 100);
+        background-color: unset;
+        border-radius: 0;
+    }
+
+    .swiper-zoom-container {
+        height: 100%;
+
+    }
+
+    .lMod9 .swiper-slide {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .lMod9 .swiper-slide::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        /* Remove scrollbar space */
+        height: 0;
+        background: transparent;
+        /* Optional: just make scrollbar invisible */
+        -webkit-appearance: none;
+    }
+
+
+
+    .btn_close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 99999;
+        width: 30px;
+        height: 30px;
+        margin: 0;
+    }
+
+
+
+    .mag {
+        bottom: 15px;
+        left: 15px;
+        width: 30px;
+        height: 30px;
+    }
+}
