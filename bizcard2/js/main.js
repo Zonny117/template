@@ -1,6 +1,54 @@
 $(function () {
 
 
+    //모듈제어
+    let media = $(".media .dn").filter(function () {
+        return $(this).css("display") === "none";
+    });
+
+    if (media.length === 2) {
+        $(".media").css({
+            display: "none"
+        });
+    }
+
+
+    let mod9 = $(".mMod9").css("display");
+
+    if (mod9 === "none") {
+        $(".btn_vid").addClass("on").siblings().removeClass("on");
+        $(".vidbx").addClass("on").siblings().removeClass("on");
+    }
+
+    let content = $(".content>.dn").filter(function () {
+        return $(this).css("display") === "none";
+    });
+
+    if (content.length === 8) {
+        $(".content").css({
+            display: "none"
+        });
+    }
+
+
+    function resize_content() {
+
+        let wrap_pt = $("#wrap").css("paddingTop").split("px")[0];
+        let logobx_height = $(".logobx").outerHeight(true);
+
+        let height = parseInt(wrap_pt) + logobx_height
+
+        // console.log(height)
+
+        $(".content").css({
+            minHeight: $(window).innerHeight() - height
+        });
+
+    }
+
+    resize_content();
+
+
     function vh() {
         let vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -10,6 +58,7 @@ $(function () {
 
     $(window).resize(function () {
         vh();
+        resize_content();
     });
 
     // 사진 확대용 컨테이너 추가
@@ -34,6 +83,8 @@ $(function () {
     $(".flex a").click(function () {
 
         let cl = $(this).attr("class");
+
+        $(this).addClass("on").siblings().removeClass("on");
 
         // console.log(cl)
 
