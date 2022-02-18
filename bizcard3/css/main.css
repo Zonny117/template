@@ -58,6 +58,13 @@ h2,
     margin-top: 10%;
 }
 
+.bovh {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+}
+
 .mMod1 {
     position: relative;
     width: 90px;
@@ -377,7 +384,7 @@ iframe {
     z-index: 99999;
 }
 
-.lMod9.on{
+.lMod9.on {
     display: block;
 }
 
@@ -416,6 +423,6 @@ iframe {
     width: 100%;
 }
 
-.sms{
+.sms {
     display: none;
 }
