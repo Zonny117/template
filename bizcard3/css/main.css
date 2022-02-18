@@ -1,0 +1,420 @@
+@charset "utf-8";
+
+html,
+body {
+    width: 100%;
+}
+
+h2,
+.mMod0,
+.t,
+.ti,
+.tit,
+.tel {
+    line-height: 120%;
+}
+
+.txt,
+.tx {
+    line-height: 160%;
+}
+
+#wrap {
+    width: 100%;
+}
+
+.mMod2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.315);
+}
+
+.logobx {
+    position: relative;
+    text-align: center;
+    margin-top: 8%;
+}
+
+.mMod1 {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.mMod1 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+}
+
+.mMod0 {
+    color: #fff;
+    font-size: 25px;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 100vh;
+    padding: 30px;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+
+.maintitlebx {
+    position: absolute;
+    top: -21%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 570px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 18px;
+    padding: 50px;
+    box-sizing: border-box;
+    border: 1px solid #959ba2;
+}
+
+.lineclamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+h2 {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 50%;
+}
+
+.mMod3 .txt {
+    font-size: 20px;
+}
+
+.bar {
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+    margin: 20px 0;
+}
+
+.tel {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.mMod6 .txt {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.telbx {
+    display: flex;
+    position: absolute;
+    top: 40px;
+    right: 50px;
+}
+
+.btn_tel {
+    font-size: 0;
+    text-indent: -999px;
+    background-image: url(../image/tel.png);
+    width: 60px;
+    height: 60px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.maintitlebx::after {
+    content: '';
+    position: absolute;
+    bottom: -39px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 17px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(../image/scrolldown.png);
+}
+
+.guide {
+    max-width: 570px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.mMod7 {
+    margin-bottom: 30px;
+}
+
+.mMod7 a {
+    display: block;
+    width: 100%;
+    padding: 25px 50px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 1px solid #959ba2;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.mMod7 a::before {
+    content: '';
+    display: inline-block;
+    vertical-align: 0px;
+    margin-right: 20px;
+    background-image: url(../image/mod7.png);
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.mMod7 a+a {
+    margin-top: 15px;
+}
+
+.mMod9 {
+    width: 100%;
+    height: 355px;
+    margin-bottom: 30px;
+}
+
+.mMod9 .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.mMod9 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.mMod9 .swiper-slide {
+    position: relative;
+}
+
+.mag {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    font-size: 0;
+    text-indent: -9999px;
+    background-image: url(../image/mag.png);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.mMod4 {
+    margin-bottom: 30px;
+}
+
+.mMod4 .swiper-slide {
+    border-radius: 18px;
+    border: 1px solid #959ba2;
+    padding: 40px 50px;
+    box-sizing: border-box;
+}
+
+.mMod4 .swiper-slide+.swiper-slide {
+    margin-top: 15px;
+}
+
+.mMod4 .tit {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.mMod4 .txt {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.mMod8 {
+    margin-bottom: 30px;
+}
+
+.iframebx {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    height: 0;
+    padding-top: 55%;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.mMod5 {
+    border: 1px solid #959ba2;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.gMap {
+    position: relative;
+    height: 350px;
+}
+
+.map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.navi {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: #3ab88a;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 18px;
+    z-index: 9999;
+}
+
+.txtbx {
+    padding: 40px 50px;
+    box-sizing: border-box;
+}
+
+.t {
+    font-size: 25px;
+}
+
+.ti {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.tx {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.mMod10 a {
+    display: block;
+    width: 100%;
+    padding: 25px 50px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 1px solid #959ba2;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.mMod10 a::before {
+    content: '';
+    display: inline-block;
+    vertical-align: -10px;
+    margin-right: 20px;
+    background-image: url(../image/down.png);
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.lMod9 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 99999;
+}
+
+.lMod9.on{
+    display: block;
+}
+
+.lMod9 .swiper-container {
+    max-width: 1200px;
+    width: 100%;
+    height: 100vh;
+    line-height: 100vh;
+}
+
+.lMod9 .swiper-slide {
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.swiper-zoom-container {
+    height: auto;
+}
+
+.btn_close {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    z-index: 99999;
+    font-size: 0;
+    text-indent: -9999px;
+    background-image: url(../image/close.png);
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.lMod9 img {
+    width: 100%;
+}
+
+.sms{
+    display: none;
+}

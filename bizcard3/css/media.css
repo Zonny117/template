@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+@media only screen and (max-width:850px) {
+
+    *{
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .mMod1 {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .mMod2 {
+        height: 85vh;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .background {
+        height: 85vh;
+    }
+
+    .logobx {
+        margin-top: 40%;
+    }
+
+    .mMod0 {
+        display: block;
+        font-size: 18px;
+    }
+
+    .maintitlebx {
+        width: 90%;
+        padding: 25px;
+        top: -315px;
+    }
+
+    .maintitlebx::after {
+        background-image: url(../image/scrolldown_m.png);
+        width: 16px;
+        height: 15px;
+        bottom: -10%;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .mMod3 .txt {
+        font-size: 16px;
+    }
+
+    .bar {
+        width: 30px;
+        height: 3px;
+        margin: 15px 0;
+    }
+
+
+    .tel {
+        font-size: 20px;
+    }
+
+    .mMod6 .txt {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    .telbx {
+        top: 25px;
+        right: 25px;
+    }
+
+    .btn_tel {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .sms {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+
+        font-size: 0;
+        text-indent: -9999px;
+        background-image: url(../image/sms.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .mMod7 a {
+        padding: 15px 25px;
+        font-size: 16px;
+        border-radius: 10px;
+    }
+
+    .mMod7 a::before {
+        width: 13px;
+        height: 13px;
+    }
+
+    .mMod9 {
+        height: 250px;
+    }
+
+    .mMod4 .swiper-slide {
+        padding: 25px;
+    }
+
+    .mMod4 .tit {
+        font-size: 18px;
+    }
+
+    .mMod4 .txt {
+        margin-top: 10px;
+        font-size: 15px;
+        border-radius: 15px;
+    }
+
+    .gMap{
+        height: 250px;
+    }
+
+    .txtbx{
+        padding: 20px;
+    }
+
+    .t{
+        font-size: 18px;
+    }
+
+    .ti{
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    .tx{
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .navi{
+        font-size: 15px;
+        width: 140px;
+        height: 45px;
+        line-height: 45px;
+        border-radius: 10px;
+    }
+
+    .mMod10 a{
+        font-size: 16px;
+        padding: 15px 25px;
+        border-radius: 10px;
+    }
+
+    .mMod10 a::before{
+        margin-right: 10px;
+        width: 25px;
+        height: 25px;
+        vertical-align: -7px;
+    }
+}
