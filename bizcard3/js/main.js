@@ -10,6 +10,16 @@ $(function () {
         return $(this).css("display") === "none";
     });
 
+    // // .dn 찾는 메소드
+    // $.fn.dn_finder = function () {
+    //     return $(this).find(".dn").filter(function () {
+    //         return $(this).css("display") === "none"
+    //     }).length;
+    // };
+
+    // let maintit = $(".maintitlebx").dn_finder();
+
+
     if (guide.length === 6) {
         $(".content").css({
             padding: 0
@@ -34,7 +44,8 @@ $(function () {
         $(".mMod2").css({
             display: "flex",
             justifyContent: "center",
-            alignItems: "center"
+            alignItems: "center",
+            height: "calc(var(--vh, 1vh) * 100)"
         });
 
         $(".logobx").css({
