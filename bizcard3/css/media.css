@@ -6,7 +6,34 @@
         -webkit-tap-highlight-color: transparent;
     }
 
-    .hiddenbg{
+    html,
+    body,
+    #wrap {
+        height: calc(var(--vh, 1vh) * 100);
+        overflow: hidden;
+    }
+
+    #wrap {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+
+    }
+
+    .gnb {
+        padding: 10px 15px;
+    }
+
+    .gnb .mMod1 {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .gnb .mMod0 {
+        font-size: 14px;
+    }
+
+    .hiddenbg {
         position: fixed;
         top: 0;
         left: 0;
@@ -15,6 +42,10 @@
         z-index: 1;
         background-color: #fff;
         opacity: 0;
+    }
+
+    .logobx {
+        margin-bottom: 80px;
     }
 
     .mMod1 {
@@ -33,13 +64,14 @@
         height: calc(var(--vh, 1vh) * 100);
     }
 
-    .logobx {
-        margin-top: 40%;
-    }
 
     .mMod0 {
         display: block;
         font-size: 18px;
+    }
+
+    .white {
+        position: relative;
     }
 
     .whitebg {
@@ -52,21 +84,21 @@
     }
 
     .maintitlebx {
-        width: 90%;
+        width: 100%;
         padding: 25px;
-        top: -315px;
+        z-index: 1;
     }
 
-    .maintitlebx::after {
+    /* .maintitlebx::after {
         background-image: url(../image/scrolldown_m.png);
         width: 16px;
         height: 15px;
         bottom: -10%;
     }
 
-    .maintitlebx.on::after{
+    .maintitlebx.on::after {
         display: none;
-    }
+    } */
 
     h2 {
         font-size: 25px;
@@ -115,9 +147,15 @@
         background-size: 100%;
     }
 
-    .content{
-        padding-top: 10px;
+    .content {
         z-index: 2;
+        padding: 0px 30px 100px 30px;
+        padding-top: calc(var(--vh, 1vh) * 25);
+        box-sizing: border-box;
+    }
+
+    .white {
+        padding: 0;
     }
 
     .mMod7 a {
@@ -203,17 +241,22 @@
         height: 100%;
     }
 
-    @media (orientation:landscape) {
-        .mMod2 {
-            position: unset;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        .logobx {
-            margin-top: 0;
-        }
+    .mMod11 {
+        display: none;
     }
+
 }
+
+/* @media only screen and (max-width:1024px) and (orientation:landscape) {
+    .mMod2 {
+        position: unset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .logobx {
+        margin-top: 0;
+    }
+} */

@@ -20,36 +20,38 @@ $(function () {
     // let maintit = $(".maintitlebx").dn_finder();
 
 
-    if (guide.length === 6) {
-        $(".content").css({
-            padding: 0
-        });
+    // if (guide.length === 6) {
+    //     // $(".content").css({
+    //     //     padding: 0
+    //     // });
 
-        $(".whitebg").css({
-            display: "none"
-        });
 
-        $(".maintitlebx").addClass("on");
-    }
+    //     // $(".maintitlebx").addClass("on");
+    // }
 
     if (main.length === 2) {
         $(".maintitlebx").css({
             display: "none"
         });
 
-        $(".whitebg").css({
-            display: "none"
-        });
 
-        $(".mMod2").css({
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "calc(var(--vh, 1vh) * 100)"
-        });
+        // $(".mMod2").css({
+        //     display: "flex",
+        //     justifyContent: "center",
+        //     alignItems: "center",
+        //     height: "calc(var(--vh, 1vh) * 100)"
+        // });
+
+        // $(".logobx").css({
+        //     marginTop: 0
+        // });
+    }
+
+    if (main.length === 2 && guide.length === 7) {
+        $(".content").addClass("on");
 
         $(".logobx").css({
-            marginTop: 0
+            marginBottom: 0
         });
     }
 
@@ -138,25 +140,55 @@ $(function () {
     });
 
 
-    function getScrollPosition() {
-        return Math.floor(($(window).scrollTop() / ($(document).height() - $(window).height())) * 100);
-    }
+    // function getScrollPosition() {
+    //     return Math.floor(($(window).scrollTop() / ($(document).height() - $(window).height())) * 100);
+    // }
 
 
+    // 특정 요소 스크롤 값 퍼센트 출력
+    // function wrapscroll() {
+    //     return Math.floor(($("#wrap").scrollTop() /
+    //         ($("#wrap").prop("scrollHeight") - $("#wrap").prop("clientHeight"))
+    //     ) * 100);
+    // }
 
-    // 스크롤 바운스 배경처리
-    $(window).scroll(function () {
+    $("#wrap").scroll(function () {
 
-        let sct = 0.01 * getScrollPosition()
+        let sct = $(this).scrollTop();
 
+        let top = $(".logobx").position().top;
+        let logo = $(".logobx").height();
 
-        if ($(".content").innerHeight() > $(window).innerHeight() && iOS) {
-            $(".hiddenbg").css({
-                opacity: sct.toFixed(2)
-            });
+        // console.log(sct)
+        // console.log(offset + logo)
+
+        if (sct > (top + logo)) {
+            $(".gnb").addClass("on");
+        } else {
+            $(".gnb").removeClass("on");
         }
+
+
 
 
         // console.log(sct.toFixed(2))
     });
+
+    // DT 스크롤 gnb
+    $(window).on("scroll", function () {
+        let sct = $(this).scrollTop();
+
+        let top = $(".logobx").position().top;
+        let logo = $(".logobx").height();
+
+        // console.log(sct)
+        // console.log(offset + logo)
+
+        if (sct > (top + logo)) {
+            $(".gnb").addClass("on");
+        } else {
+            $(".gnb").removeClass("on");
+        }
+    });
+
 });
