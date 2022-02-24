@@ -1,5 +1,13 @@
 $(function () {
 
+    // 사진 확대용 컨테이너 추가
+    let lmod9 = $(".lMod9 .swiper-slide");
+    // console.log(lmod9.length)
+
+    if (lmod9.length >= 1) {
+        lmod9.wrapInner('<div class="swiper-zoom-container"></div>')
+    };
+
     function vh() {
         let vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -46,6 +54,7 @@ $(function () {
 
         var lMod9 = new Swiper(".lMod9 .swiper-container", {
             initialSlide: idx,
+            zoom:true,
             slidesPerView: 1,
             spaceBetween: 30,
             observer: true,

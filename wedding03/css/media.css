@@ -1,0 +1,354 @@
+@charset "utf-8";
+
+@media only screen and (max-width: 850px) {
+
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+
+
+    .background {
+        width: 80%;
+        height: 0;
+        padding-top: 80%;
+        margin-bottom: 60px;
+    }
+
+
+    .invite {
+        font-size: 16px;
+        padding: 50px 0;
+    }
+
+
+    .maintitlebx {
+        margin-top: 0;
+        padding-bottom: 30%;
+    }
+
+    .mMod0 {
+        font-size: 16px;
+    }
+
+    .mMod3 h2 {
+        margin-top: 20px;
+        font-size: 25px;
+    }
+
+    .mMod3 .txt {
+        margin-top: 15px;
+        font-size: 16px;
+    }
+
+    .mMod2 {
+        min-height: unset;
+    }
+
+    .mMod1 {
+        width: 80px;
+        height: 80px;
+        top: -42px;
+    }
+
+    .content {
+        padding: 60px 30px;
+    }
+
+    .swiper-pagination {
+        text-align: left;
+    }
+
+    .mMod4 {
+        text-align: left;
+        margin-bottom: 55px;
+    }
+
+    .mMod4 .tit {
+        margin-top: 15px;
+        font-size: 20px;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .mMod4 .txt {
+        margin-top: 15px;
+        font-size: 14px;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .mMod9 {
+        margin-bottom: 55px;
+    }
+
+    .mMod9 .swiper-pagination {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+
+    .mMod9 .swiper-container {
+        height: 300px;
+        overflow: unset;
+    }
+
+    .mMod5 {
+        flex-direction: column;
+        border: none;
+    }
+
+    .txtbx {
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    .t {
+        font-size: 18px;
+    }
+
+    .ti {
+        margin-bottom: 20px;
+    }
+
+    .ti::after {
+        display: none;
+    }
+
+    .navi {
+        position: relative;
+        background-color: unset;
+        color: #62838c;
+        width: 100%;
+        bottom: auto;
+        text-align: left;
+        padding: 0 10px;
+        border-bottom: 2px solid #62838c;
+        border-radius: 0;
+    }
+
+    .navi::after {
+        content: '';
+        background-image: url(../images/navi_m.png);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        width: 16px;
+        height: 23px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .navi::before {
+        display: none;
+    }
+
+    .gMap {
+        width: 100%;
+        height: 300px;
+        border: 3px solid #62838c;
+    }
+
+    .tx {
+        padding: 0 10px;
+        box-sizing: border-box;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .mMod8 {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 56%;
+        margin-bottom: 55px;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+
+    .mMod7 {
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .mMod7 a {
+        position: relative;
+        width: 100%;
+        padding: 15px 10px;
+        border: none;
+        border-bottom: 2px solid #62838c;
+    }
+
+    .mMod7 a::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        background-image: url(../images/link.png);
+    }
+
+    .mMod10 {
+        background-color: unset;
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    .mMod10 a {
+        position: relative;
+        padding: 15px 20px;
+        box-sizing: border-box;
+        font-size: 16px;
+        width: 100%;
+        color: #62838c;
+        background-color: unset;
+        border: 2px solid #62838c;
+    }
+
+    .mMod10 a::before {
+        display: none;
+    }
+
+    .mMod10 a::after {
+        content: '';
+        background-image: url(../images/download_m.png);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        width: 12px;
+        height: 15px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .mMod6 {
+        text-align: left;
+    }
+
+    .mMod6 .tit {
+        width: 100%;
+    }
+
+    .mMod6 .txt {
+        font-size: 14px;
+    }
+
+    .mMod6 .tel {
+        position: relative;
+        display: block;
+        border: 2px solid #f3b795;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        font-size: 16px;
+        font-weight: normal;
+        background-color: #f3b795;
+        color: #fff;
+    }
+
+    .mMod6 .tel::after {
+        content: '';
+        background-image: url(../images/tel.png);
+        position: absolute;
+        top: 53%;
+        transform: translateY(-50%);
+        right: 20px;
+        width: 14px;
+        height: 25px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .mMod6 .sms {
+        position: relative;
+        display: block;
+        border: 2px solid #f3b795;
+        padding: 15px 20px;
+        box-sizing: border-box;
+        font-size: 16px;
+        font-weight: normal;
+        color: #f3b795;
+        margin-bottom: 20px;
+    }
+
+    .mMod6 .sms::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        background-image: url(../images/sms.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 24px;
+        height: 20px;
+    }
+
+    .mMod6 .txt {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+
+    .web {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+
+    .lMod9 .swiper-container {
+        width: 100%;
+        height: calc(var(--vh, 1vh) * 100);
+        line-height: calc(var(--vh, 1vh) * 100);
+    }
+
+    .lMod9 .swiper-slide {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .lMod9 .swiper-slide::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        /* Remove scrollbar space */
+        height: 0;
+        background: transparent;
+        /* Optional: just make scrollbar invisible */
+        -webkit-appearance: none;
+
+    }
+
+    .btn_close {
+        top: 20px;
+        right: 20px;
+    }
+}
+
+
+/* 태블릿/가로회전 및 일부 디바이스 */
+@media only screen and (min-width:512px) and (max-width:850px) {
+    .background {
+        width: 50%;
+        padding-top: 50%;
+    }
+
+    .maintitlebx {
+        padding-bottom: 15%;
+    }
+}

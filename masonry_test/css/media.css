@@ -132,4 +132,40 @@
     .qrflex {
         width: 80%;
     }
+
+    .sns{
+        margin-top: 10px;
+    }
+
+    .sns .qrcode {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        background-color: #000;
+        color: #fff;
+        border-radius: 10px;
+        margin: 0;
+        text-align: center;
+        font-weight: 500;
+        font-size: 14px;
+        text-indent: unset;
+        background-image: unset;
+        height: auto;
+    }
+
+    #qr img{
+        display: block !important;
+    }
+
+    .qrdown{
+        font-size: 15px;
+        padding: 15px;
+    }
+
+    @media (orientation:landscape) {
+        .qrflex{
+            max-width: 230px;
+        }
+    }
 }

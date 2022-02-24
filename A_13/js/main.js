@@ -63,6 +63,8 @@ $(function () {
         return $(this).css("display") === "none"
     });
 
+    console.log(ani.length);
+
     if (ani.length === 3) {
         $(".mMod4").css({
             overflow: "hidden"

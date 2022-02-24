@@ -59,16 +59,12 @@
     .mMod7 a+a {
         margin-top: 30px;
     }
-
-    .mMod10.mobile {
-        background-color: #000;
-        height: 74px;
+    
+    .mMod10 a {
         padding-top: 43px;
         margin-top: 50px;
-    }
-
-    .mMod10 a {
         color: #fff;
+        background-color: #000;
     }
 
     .btn_close {

@@ -1,11 +1,11 @@
 @charset "utf-8";
 
 
-.forWeb{
+.forWeb {
     display: block;
 }
 
-.forMobile{
+.forMobile {
     display: none;
 }
 
@@ -50,6 +50,38 @@ body {
     background-attachment: fixed;
 }
 
+.top {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    top: 12px;
+    left: 20px;
+}
+
+.logobx {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    margin-right: 15px;
+}
+
+.logobx img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+}
+
+.mMod0 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
 .modbg {
     position: fixed;
     width: 1200px;
@@ -58,8 +90,6 @@ body {
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     text-align: center;
-    max-height: 100%;
-    overflow-y: auto;
 }
 
 /* 사진 */
@@ -107,10 +137,10 @@ body {
 
 .mMod1 img {
     position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
 }
 
 .mMod1 video {
@@ -384,7 +414,7 @@ footer {
     color: #fff;
 }
 
-footer .pbx{
+footer .pbx {
     position: relative;
     width: 1200px;
     padding: 50px 30px;

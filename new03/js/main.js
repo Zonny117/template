@@ -1,5 +1,15 @@
 $(function () {
 
+    // 모듈제어
+    let content = $(".content .dn").filter(function () {
+        return $(this).css("display") === "none"
+    });
+
+    if (content.length === 8) {
+        $(".content, .scroll").css({
+            display: "none"
+        })
+    };
 
 
     
@@ -47,17 +57,13 @@ $(function () {
         let winw = $(window).innerWidth();
         let winh = $(window).innerHeight();
 
-        let module = $("#wrap .dn").filter(function () {
-            return $(this).css('display') === "none"
-        });
-
         // console.log(winw)
 
-        if (winw <= 850 && module.length === 7) {
+        if (winw <= 850 && content.length === 8) {
 
-            $(".maintitlebx").css({
-                minHeight: "calc((var(--vh, 1vh) * 100) - 40px)"
-            });
+            // $(".maintitlebx").css({
+            //     minHeight: "calc((var(--vh, 1vh) * 100) - 40px)"
+            // });
 
             let minH = Math.round($(".maintitlebx").css('min-height').split("px")[0]);
             let paddingtop = Math.round($(".pbx").css('padding-top').split("px")[0]);
@@ -81,7 +87,7 @@ $(function () {
                 });
             }
 
-        } else if (winw <= 850 && module.length !== 7) {
+        } else if (winw <= 850 && content.length !== 7) {
 
             $(".pbx").css({
                 paddingBottom: 82 + "%"
@@ -111,7 +117,7 @@ $(function () {
     })
 
 
-    $(".mag").click(function () {
+    $(".mMod9 .swiper-slide").click(function () {
 
         $(".lMod9, html, body").addClass("on");
     })
@@ -148,7 +154,7 @@ $(function () {
 
     if (iOS) {
 
-        $(".mag").click(function () {
+        $(".mMod9 .swiper-slide").click(function () {
             enable();
         });
 

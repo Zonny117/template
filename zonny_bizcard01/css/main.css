@@ -50,24 +50,107 @@ h2,
     width: 100%;
     height: 100%;
     box-shadow: 0 0 4px 1px rgba(155, 155, 155, 0.425);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .top {
     width: 100%;
     height: 70px;
-    background-color: #5c47fd;
+    background-image: url(../image/navbar.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.top li {
+    display: none;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    line-height: 70px;
+    font-weight: bold;
+}
+
+.top li.on {
+    display: block;
 }
 
 .bottom {
     width: 100%;
-    background-color: rgb(71, 71, 71);
+    background-color: rgb(236, 236, 236);
     height: 70px;
+}
+
+.bottom ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    box-sizing: border-box;
+}
+
+.bottom ul li a {
+    font-size: 0;
+    display: inline-block;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.home {
+    background-image: url(../image/home.svg);
+}
+
+.home.on {
+    background-image: url(../image/home_hover.svg);
+}
+
+.text {
+    background-image: url(../image/text.svg);
+}
+
+.text.on {
+    background-image: url(../image/text_hover.svg);
+}
+
+.media {
+    background-image: url(../image/camera.svg);
+}
+
+.media.on {
+    background-image: url(../image/camera_hover.svg);
+}
+
+.address {
+    background-image: url(../image/map.svg);
+}
+
+.address.on {
+    background-image: url(../image/map_hover.svg);
+}
+
+.about {
+    background-image: url(../image/about.svg);
+}
+
+.about.on {
+    background-image: url(../image/about_hover.svg);
 }
 
 .mainslide {
     flex: 1;
     overflow: hidden;
+}
+
+.mainslide>.swiper-wrapper>.swiper-slide {
     background-color: #fff;
+
 }
 
 
@@ -258,33 +341,30 @@ h2,
     justify-content: center;
     width: 100%;
     height: 100%;
-    overflow-y: auto;
 }
 
 .padding {
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
+    overflow-y: auto;
 }
 
-.grid-sizer{
-    width: 30%;
-}
-
-.grid-item {
-    margin-bottom: 5px;
-}
 
 .mMod9 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .mMod9 .swiper-slide {
     position: relative;
-    width: 30%;
-    height: auto;
+    width: 32%;
+    height: 150px;
     display: inline-block;
+    margin-bottom: 10px;
 }
 
 .mMod9 .swiper-slide::before {
@@ -311,6 +391,8 @@ h2,
 
 .mMod9 img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .mMod8 {
@@ -485,6 +567,6 @@ iframe {
     background-image: url(../image/youtube.svg);
 }
 
-.mMod11 a+a{
+.mMod11 a+a {
     margin-left: 5px;
 }

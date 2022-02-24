@@ -312,8 +312,19 @@ $(window).on('load', function () {
 
     // 초기 스크롤값
     let old = 0;
+    let prot = 0;
 
     $(window).on('scroll', function () {
+
+
+
+        if (prot) return;
+        prot = 1;
+        setTimeout(function () {
+            prot = 0;
+        }, 100);
+
+
 
         if ($(".topmenu").hasClass("on")) return;
 

@@ -169,6 +169,7 @@ $(function () {
 
             // console.log(ts)
         });
+        
 
 
         $(document).on('touchend', function (e) {

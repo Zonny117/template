@@ -11,6 +11,10 @@ body.on {
     overflow: hidden;
 }
 
+.qrlogo{
+    display: none;
+}
+
 #wrap {
     width: 100%;
 }
@@ -471,7 +475,7 @@ iframe {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.507);
     z-index: 9999;
 }
@@ -505,10 +509,11 @@ iframe {
     margin-top: 30px;
     color: #fff;
     background-color: #000;
-    padding: 15px;
+    padding: 20px;
     box-sizing: border-box;
     border-radius: 10px;
     white-space: nowrap;
+    font-size: 18px;
 }
 
 .qrflex .btn_close {

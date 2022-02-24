@@ -26,4 +26,17 @@ $(document).ready(function () {
 		})
 	}
 
+	$(".more").click(function(){
+
+		$("html,body").css({
+			overflow:"hidden"
+		});
+	});
+
+	$(".close").click(function(){
+		$("html,body").css({
+			overflow:"unset"
+		});
+	});
+
 });

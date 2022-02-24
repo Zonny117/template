@@ -5,6 +5,15 @@
 
 @media only screen and (max-width:1366px) {
 
+    .logobx{
+        width: 55px;
+        height: 55px;
+    }
+
+    .mMod0{
+        font-size: 14px;
+    }
+
     .forWeb{
         display: none;
     }
@@ -110,6 +119,7 @@
     }
 
     #wrap {
+        height: auto;
         min-width: unset;
     }
 
@@ -161,6 +171,8 @@
         top: 0;
         left: 0;
 
+        overflow-y: unset;
+        max-height: unset;
         transform: unset;
         width: 100%;
         padding: 100px 30px;
@@ -468,16 +480,15 @@
     .modBg .swiper-container {
         width: 100%;
         height: 100vh;
+        line-height: 100vh;
     }
 
     .modBg .swiper-slide {
         height: auto;
-        line-height: 100vh;
-    }
-
-    .modBg .swiper-slide.swiper-slide-active {
-        max-height: 100vh;
         overflow-y: auto;
+    }
+    .modBg .swiper-slide.swiper-slide-active{
+        max-height: unset;
     }
 
     .slide-exit {
@@ -508,6 +519,13 @@
         padding: unset;
         width: 100%;
     }
+
+    #jsMod9{
+        height: 100%;
+        background-color: #fff;
+    }
+
+    
 }
 
 /* 모바일 가로회전 */

@@ -173,7 +173,16 @@ $(function () {
         }
 
         //스크롤 하단
-        if (sct >= $(".mMod11").offset().top - 900) {
+        // console.log(sct + "스크롤")
+        let winh = $(window).innerHeight();
+        let domh = $(document).height();
+        
+        let vw = sct + winh;
+        console.log(vw + "윈도우")
+        console.log(domh + "도큐먼트")
+
+
+        if (vw >= domh) {
             $(".sns").animate({
                 top: 0,
                 opacity: 1,

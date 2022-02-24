@@ -353,20 +353,21 @@ iframe {
 }
 
 .mMod10 {
-    position: relative;
-    padding: 45px 40px;
-    box-sizing: border-box;
-    text-align: left;
     border-top: 5px solid #fff;
 }
 
 .mMod10 a {
+    display: block;
+    position: relative;
+    padding: 45px 40px;
+    box-sizing: border-box;
+    text-align: left;
     color: #fff;
     font-size: 20px;
 }
 
 
-.mMod10::after {
+.mMod10 a::after {
     content: '';
     position: absolute;
     width: 80px;
@@ -378,6 +379,7 @@ iframe {
     background-repeat: no-repeat;
     background-size: 100%;
 }
+
 
 .mMod11 {
     position: relative;
@@ -437,6 +439,7 @@ a.youtube {
 
 .lMod9 .swiper-slide {
     max-height: 100%;
+    overflow-x: hidden;
     overflow-y: auto;
 }
 

@@ -18,7 +18,7 @@
     display: none !important;
 }
 
-.forMobile{
+.forMobile {
     display: none !important;
 }
 
@@ -252,14 +252,6 @@ body {
     right: 30px;
 }
 
-.mMod7 a:first-of-type {
-    background-color: #000;
-    color: #fff;
-}
-
-.mMod7 a:first-of-type::after {
-    content: url(../images/arrow_right.png);
-}
 
 .mMod7 a+a {
     margin-top: 15px;
@@ -862,4 +854,22 @@ iframe {
     width: 23px;
     height: 23px;
     background-position: 100% 100%;
+}
+
+@media only screen and (min-width:1367px) {
+
+    .mMod6 a:hover, .mMod7 a:hover, .mMod10 a:hover {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .mMod7 a:hover::after {
+        content: url(../images/arrow_right.png);
+    }
+    .mMod6 a:hover::after {
+        content: url(../images/white_arrow.png);
+    }
+    .mMod10 a:hover::after {
+        content: url(../images/save.png);
+    }
 }

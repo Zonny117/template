@@ -1,19 +1,33 @@
 $(function () {
 
-    var msnry = new Masonry('.mMod9', {
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-sizer',
-        gutter: 5,
-        percentPosition: true,
+
+    var main = new Swiper(".mainslide", {
+        effect: "creative",
+        creativeEffect: {
+            prev: {
+                shadow: true,
+                translate: [0, 0, -400],
+            },
+            next: {
+                translate: ["100%", 0, 0],
+            },
+        },
+        allowTouchMove: false
     });
 
-    imagesLoaded('.mMod9').on('progress', function () {
-        msnry.layout();
-    });
+    let idx = main.activeIndex;
 
-    var swiper = new Swiper(".mainslide", {
-        grabCursor: true,
-    });
 
+
+    $(".bottom ul li").click(function () {
+
+        let idx = $(this).index();
+        // console.log(idx);
+
+        $(this).find('a').addClass("on").parents("li").siblings().find('a').removeClass("on");
+
+        main.slideTo(idx, 1000);
+
+    });
 
 });

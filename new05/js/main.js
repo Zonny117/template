@@ -12,19 +12,8 @@ $(function () {
         return $(this).css("display") === "none"
     });
 
-    if (content.length === 5) {
+    if (content.length === 8) {
         $(".content").css({
-            display: "none"
-        });
-    }
-
-    let footer = $("footer .dn").filter(function () {
-        return $(this).css("display") === "none"
-    });
-
-
-    if (footer.length === 2) {
-        $("footer").css({
             display: "none"
         });
     }
