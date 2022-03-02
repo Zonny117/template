@@ -1,6 +1,11 @@
 @charset "utf-8";
 
-@import url(//font.elice.io/EliceDigitalBaeum.css);
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 
 ::-webkit-scrollbar {
     width: 0px;
@@ -16,7 +21,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    font-family: "Elice Digital Baeum", sans-serif;
+    font-family: "Pretendard-Regular", sans-serif;
 }
 
 h2,
@@ -282,7 +287,7 @@ h2,
 
 .mMod7 a {
     font-size: 14px;
-    color: #001aff;
+    color: #5162ff;
 }
 
 .mMod7 a::before {
@@ -305,8 +310,8 @@ h2,
     align-items: center;
 }
 
-.mMod4 .scroll{
-    padding: 50px 30px;
+.mMod4 .scroll {
+    padding: 50px 30px 50px 50px;
     box-sizing: border-box;
     overflow-x: hidden;
 }
@@ -319,13 +324,13 @@ h2,
     opacity: 0;
 }
 
-.mMod4 .swiper-slide:nth-child(even){
+.mMod4 .swiper-slide:nth-child(even) {
     transform: translateX(-50%);
     opacity: 0;
 }
 
 .mMod4 .tit {
-    display: inline;
+    display: inline-block;
     position: relative;
     font-size: 20px;
     font-weight: 600;
@@ -346,7 +351,7 @@ h2,
     border-radius: 50%;
     background-color: #a53232;
     text-align: center;
-    line-height: 60px;
+    line-height: 65px;
     font-size: 32px;
 }
 
@@ -360,7 +365,7 @@ h2,
 }
 
 .mMod4 .swiper-slide+.swiper-slide {
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 
@@ -377,9 +382,10 @@ h2,
     height: 100%;
 }
 
+
 .padding {
     width: 100%;
-    padding: 30px;
+    padding: 20px 30px;
     box-sizing: border-box;
     overflow-x: hidden;
     overflow-y: auto;
@@ -401,10 +407,9 @@ h2,
     display: inline-block;
     margin-bottom: 10px;
     cursor: pointer;
-    /* transform: translateY(50%); */
-    /* visibility: hidden; */
-    
+    transform: scale(0.5);
 }
+
 
 .mMod9 .swiper-slide::before {
     content: '사진 확대';
@@ -439,8 +444,7 @@ h2,
     width: 100%;
     height: 0;
     padding-top: 50%;
-    /* transform: translateY(50%); */
-    /* visibility: hidden; */
+    transform: scale(0.5);
 }
 
 iframe {
@@ -631,4 +635,19 @@ iframe {
     width: 0;
     height: 0;
     overflow: hidden;
+}
+
+.loading {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    
 }
