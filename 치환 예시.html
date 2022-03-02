@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <!-- google analytics -->
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-138416897-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138416897-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="format-detection" content="telephone=no">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="@@BackgroundCode@@" />
+    <meta property="og:title" content="@@ServiceName@@" />
+    <meta property="og:description" content="@@TitleSubject@@" />
+
+    <link rel="stylesheet" href="/template/common/css/common.css" type="text/css">
+    <link rel="stylesheet" href="/template/common/plugins/swiper/swiper.min.css" type="text/css">
+    <link rel="stylesheet" href="/template/A_9/css/skin.css" type="text/css">
+    <link rel="stylesheet" href="/template/A_9/css/media.css" type="text/css">
+    <link rel="stylesheet" href="/template/A_9/css/msky.css" type="text/css">
+
+    <!-- favicon -->
+    <link class="favicon" rel="shortcut icon" href="/template/common/images/favicon.ico" type="images/x-icon">
+    <link class="favicon" rel="icon" href="/template/common/images/favicon.ico" type="images/x-icon">
+
+    <!-- higher than iOS 2.0 && Android 2.1 -->
+    <link class="favicon" rel="apple-touch-icon-precomposed" href="/template/common/images/favicon.ico">
+
+    <script src="/template/common/js/jquery-1.11.3.min.js"></script>
+    <script src="/template/common/js/jquery-ui.js"></script>
+    <script src="/template/common/js/common.js"></script>
+    <script src="/template/common/plugins/swiper/swiper.min.js"></script>
+    <script src="/template/A_9/js/main.js"></script>
+
+    <script type="text/javascript" src="/__Common/Scripts/global-default.js"></script>
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f756c31eaab61432f56c95420ca49f4f&libraries=services"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+    <title>@@ServiceName@@</title>
+
+
+    <!-- 일반 지도 -->
+    <script type="text/javascript">
+        $(function () {
+            $(".lyd_title").html("@@ServiceName@@");
+            $(".lyd_address").html("@@Address@@");
+            $(".lyd_addressMemo").html(`@@AddressMemo@@`);
+
+            var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                mapOption = {
+                    center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                    level: 3 // 지도의 확대 레벨
+                };
+
+            // 지도를 생성합니다    
+            var map = new kakao.maps.Map(mapContainer, mapOption);
+
+            // 주소-좌표 변환 객체를 생성합니다
+            var geocoder = new kakao.maps.services.Geocoder();
+
+            // 주소로 좌표를 검색합니다
+            geocoder.addressSearch("@@Address@@", function (result, status) {
+
+                // 정상적으로 검색이 완료됐으면 
+                if (status === kakao.maps.services.Status.OK) {
+                    $("#naviX").val(result[0].x);
+                    $("#naviY").val(result[0].y);
+
+                    var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+                    //console.log("map() => X="+result[0].x+", Y="+result[0].y);
+
+                    // 결과값으로 받은 위치를 마커로 표시합니다
+                    var marker = new kakao.maps.Marker({
+                        map: map,
+                        position: coords
+                    });
+
+                    // 인포윈도우로 장소에 대한 설명을 표시합니다
+                    var infowindow = new kakao.maps.InfoWindow({
+                        content: '<div class="infowindow">@@ServiceName@@</div>'
+                    });
+                    infowindow.open(map, marker);
+
+                    // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+                    map.setCenter(coords);
+                }
+            });
+
+            $(function () {
+
+                let mod1 = $(".mMod1").css('display');
+
+                if (mod1 === "none") {
+                    $(".favicon").attr('href', "/template/common/images/favicon.ico")
+                } else(
+                    $(".favicon").attr('href', "@@ServiceLogo@@")
+                )
+
+            })
+        });
+    </script>
+
+
+    <!-- 팝업용 지도 코드-->
+    <script type="text/javascript">
+        var coords = null;
+        $(function () {
+            $(".lyd_title").html("@@ServiceName@@");
+            $(".lyd_address").html("@@Address@@");
+            $(".lyd_addressMemo").html(`@@AddressMemo@@`);
+
+            var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                mapOption = {
+                    center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                    level: 3 // 지도의 확대 레벨
+                };
+
+            // 지도를 생성합니다    
+            var map = new kakao.maps.Map(mapContainer, mapOption);
+
+            // 주소-좌표 변환 객체를 생성합니다
+            var geocoder = new kakao.maps.services.Geocoder();
+
+
+
+
+
+            // 주소로 좌표를 검색합니다
+            geocoder.addressSearch("@@Address@@", function (result, status) {
+
+                // 정상적으로 검색이 완료됐으면 
+                if (status === kakao.maps.services.Status.OK) {
+                    $("#naviX").val(result[0].x);
+                    $("#naviY").val(result[0].y);
+
+                    //var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+                    coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+                    //console.log("map() => X="+result[0].x+", Y="+result[0].y);
+
+                    // 결과값으로 받은 위치를 마커로 표시합니다
+                    var marker = new kakao.maps.Marker({
+                        map: map,
+                        position: coords
+                    });
+
+                    // 인포윈도우로 장소에 대한 설명을 표시합니다
+                    var infowindow = new kakao.maps.InfoWindow({
+                        content: '<div class="infowindow">@@ServiceName@@</div>'
+                    });
+
+                    // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+                    map.setCenter(coords);
+
+
+                    // 팝업시 레이아웃 재설정 / 팝업시 인포윈도우 디자인이 깨지기 때문에 커스텀 오버레이 설정 및 relayout 함수에서 호출
+                    function relayout() {
+                        map.relayout();
+                        map.setCenter(coords);
+                        infowindow.open(map, marker);
+                    }
+
+                    $(".btn_dot").click(function () {
+                        setTimeout(function () {
+                            relayout();
+                        }, 100)
+                    })
+                }
+            });
+
+
+
+            $(function () {
+
+                let mod1 = $(".mMod1").css('display');
+
+                if (mod1 === "none") {
+                    $(".favicon").attr('href', "/template/common/images/favicon.ico")
+                } else(
+                    $(".favicon").attr('href', "@@ServiceLogo@@")
+                )
+
+            })
+        });
+    </script>
+
+    <style>
+        /* 인포윈도우 커스텀 오버레이 */
+        .infowindow {
+            width: 150px;
+            height: auto;
+            text-align: center;
+            background-color: #fff;
+            color: #000;
+            font-weight: 600;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="hidden" id="naviTargetName" value="@@ServiceName@@">
+    <input type="hidden" id="naviX" value="">
+    <input type="hidden" id="naviY" value="">
+
+    <div id="wrap">
+
+        <div class="mMod2 page">
+            <span class="scrollDown forWeb">스크롤 다운</span>
+            <!--[시작] 2021-12-16일 변경한 내용-->
+            <div class="background" style="@@DB_BackgroundYN@@; background-image:url(@@BackgroundCode@@);"></div>
+            <!--[시작] 2021-12-16일 변경한 내용-->
+            <div class="modBg">
+                <h1 class="mMod1" @@DB_RadioLogologo@@>
+                    <img src="@@ServiceLogo@@" alt="">
+                </h1>
+                <div class="maintitle">
+                    <div class="mMod0" @@DB_RadioLogotitle@@>
+                        <span>@@ServiceName@@</span>
+                    </div>
+                    <div class="mMod3" @@DB_TitleYN@@>
+                        <h2>@@TitleSubject@@</h2>
+                        <p class="txt">
+                            @@TitleContents@@
+                        </p>
+                    </div>
+                    <div class="mMod6" @@DB_DelegateYN@@>
+                        <div class="tit">
+                            <strong class="telbx"><a href="tel:@@DirectCall@@" class="tel">@@DirectCall@@</a></strong>
+                            <!-- <strong class="savebx"><a href="###" class="iAdd save">번호 저장</a></strong> -->
+                        </div>
+                        <div class="txt">
+                            @@EtcTel@@
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gnb forWeb">
+                <div class="sbx">
+                    <div class="link link1 ml" @@DB_DelegateYN@@>
+                        <a href="###">연락처</a>
+                        <div class="mMod6 hiddenbx" @@DB_DelegateYN@@>
+                            <div class="tit">
+                                <strong><a href="tel:@@DirectCall@@" class="tel">@@DirectCall@@</a></strong>
+                            </div>
+                            <div class="txt">
+                                @@EtcTel@@
+                            </div>
+                            <div class="tit">
+                                <strong class="telbx"><a href="tel:@@DirectCall@@" class="tel">전화 걸기</a></strong>
+                                <!-- <strong class="savebx"><a href="###" class="iAdd save">번호 저장</a></strong> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="link link2 ml" @DB_SnsLinkYN@@>
+                        <a href="###">SNS</a>
+                        <div class="mMod11 hiddenbx" @DB_SnsLinkYN@@>
+                            @@SnsLinkUrl@@
+                        </div>
+                    </div>
+                    <div class="link link3 ml" @@DB_LinkBtnYN@@>
+                        <a href="###">링크연결</a>
+                        <div class="mMod7 hiddenbx" @@DB_LinkBtnYN@@>
+                            @@LinkList@@
+                        </div>
+                    </div>
+                    <div class="link link4 mMod10 ml" @@DB_AttrYN@@>
+                        <a href="@@AttrFile@@">@@AttrLinkBtn@@</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="mMod8 page" @@DB_YoutubeYN@@>
+                <video autoplay muted playsinline loop class="vid" src="/template/A_9/images/default.mp4"></video>
+                <div class="iframebx">
+                    <iframe src="@@YoutubeUrl@@" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="mMod4 forWeb page" @@DB_SubYN@@>
+                <div class="pbx">
+                    <div class="top"></div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            @@SubList@@
+                        </div>
+                    </div>
+                    <div class="btnbx">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <script>
+                        var mMod4 = new Swiper(".mMod4.forWeb .swiper-container", {
+                            slidesPerView: 1,
+                            spaceBetween: 80,
+                            pagination: {
+                                el: ".mMod4.forWeb .swiper-pagination",
+                            },
+                            navigation: {
+                                nextEl: ".mMod4.forWeb .swiper-button-next",
+                                prevEl: ".mMod4.forWeb .swiper-button-prev",
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="mMod4 forMobile" @@DB_SubYN@@>
+                <div class="pbx">
+                    <div class="top">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            @@SubList@@
+                        </div>
+                    </div>
+
+                    <div class="btnbx">
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <script>
+                        var mMod4 = new Swiper(".mMod4.forMobile .swiper-container", {
+                            slidesPerView: 1,
+                            spaceBetween: 30,
+                            autoHeight: "true",
+                            pagination: {
+                                el: ".mMod4.forMobile .swiper-pagination",
+                            },
+                            navigation: {
+                                nextEl: ".mMod4.forMobile .swiper-button-next",
+                                prevEl: ".mMod4.forMobile .swiper-button-prev",
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="mMod9 forWeb page" @@DB_PhotoYN@@>
+                <div class="pbx">
+                    <a href="###" class="mag forWeb">크게보기</a>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            @@PhotoList@@
+                        </div>
+                    </div>
+                    <div class="btnbx">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <script>
+                        var mMod9 = new Swiper(".mMod9.forWeb .swiper-container", {
+                            spaceBetween: 30,
+                            slidesPerView: "auto",
+                            pagination: {
+                                el: ".mMod9.forWeb .swiper-pagination",
+                            },
+                            navigation: {
+                                nextEl: ".mMod9.forWeb .swiper-button-next",
+                                prevEl: ".mMod9.forWeb .swiper-button-prev",
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="mMod9 forMobile" @@DB_PhotoYN@@>
+                <div class="pbx">
+                    <div class="swiper-container">
+                        <a href="###" class="mag forMobile">크게보기</a>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-wrapper">
+                            @@PhotoList@@
+                        </div>
+                    </div>
+                    <div class="btnbx">
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <script>
+                        var mMod9 = new Swiper(".mMod9.forMobile .swiper-container", {
+                            spaceBetween: 30,
+                            slidesPerView: "auto",
+                            pagination: {
+                                el: ".mMod9.forMobile .swiper-pagination",
+                            },
+                            navigation: {
+                                nextEl: ".mMod9.forMobile .swiper-button-next",
+                                prevEl: ".mMod9.forMobile .swiper-button-prev",
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="mMod5 page" @@DB_LocalYN@@>
+
+                <div class="pbx">
+                    <div class="top"></div>
+                    <div class="flex">
+                        <div class="gMap">
+                            <div id="map" class="map"></div>
+                        </div>
+                        <div class="txtbx">
+                            <div class="ti">
+                                <strong class="t">@@TitleSubject@@</strong>
+                                <span>@@Address@@</span>
+                            </div>
+                            <div class="txt">
+                                <div class="tx">
+                                    @@AddressMemo@@
+                                </div>
+                            </div>
+                            <div class="navibx">
+                                <a href="javascript:void(0)" class="navi" onclick="navi()">네비게이션연결</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="jsMod9" class="lMod9" @@DB_PhotoYN@@>
+            <a href="###" class="btn_close forWeb">닫기</a>
+            <div class="swiper-container">
+                <a href="###" class="btn_close forMobile">닫기</a>
+                <div class="swiper-wrapper">
+                    @@PhotoList@@
+                </div>
+            </div>
+            <script>
+                var lMod9 = new Swiper(".lMod9 .swiper-container", {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    observer: true,
+                    observeParents: true
+                });
+            </script>
+        </div>
+        <div class="hiddenMobile">
+            <h1 class="mMod1 dn" @@DB_RadioLogologo@@>
+                <img src="@@ServiceLogo@@" alt="">
+            </h1>
+            <div class="mMod6 dn" @@DB_DelegateYN@@>
+                <div class="tit">
+                    <strong><a href="tel:@@DirectCall@@" class="tel">@@DirectCall@@</a></strong>
+                </div>
+                <div class="txt">
+                    @@EtcTel@@
+                </div>
+                <div class="tit">
+                    <strong class="telbx"><a href="tel:@@DirectCall@@" class="tel">전화 걸기</a></strong>
+                    <!-- <strong class="savebx"><a href="###" class="iAdd save">번호 저장</a></strong> -->
+                </div>
+            </div>
+            <div class="mMod7 dn" @@DB_LinkBtnYN@@>
+                @@LinkList@@
+            </div>
+            <div class="mMod10 dn" @@DB_AttrYN@@>
+                <a href="@@AttrFile@@">@@AttrLinkBtn@@</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="mSky">
+        <span class="ls iTop forWeb"><a href="###" class="ico">페이지 상단으로</a></span>
+        <div class="forMobile" @@DB_SnsLinkYN@@>
+            <span class="ls iSns"><a href="#jsSky" class="ico jsBtnShow1">Sns 레이어열기</a></span>
+            <div id="jsSky" class="lSky">
+                @@SnsLinkUrl@@
+                <a href="#jsSky" class="close jsBtnClose1">Sns 레이어닫기</a>
+            </div>
+        </div>
+        <span class="ls iKakao"><a href="javascript:void(0)" class="ico" id="kakao-link-btn">카카오톡</a></span>
+        <span class="banner"></span>
+        <span class="ls iAlarm">
+            <a href="###" class="ico">알림온</a>
+            <span class="txt">알림온 초대공유플랫폼으로 제작된 사이트입니다</span>
+        </span>
+    </div>
+    <div class="gnb forMobile">
+        <a href="###" class="open">열기</a>
+    </div>
+    <script type='text/javascript'>
+        // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+        Kakao.init('f756c31eaab61432f56c95420ca49f4f');
+        // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+        Kakao.Link.createDefaultButton({
+            container: '#kakao-link-btn',
+            objectType: 'feed',
+            content: {
+                title: '@@ServiceName@@',
+                description: `@@TitleSubject@@`,
+                imageUrl: '$$GC_SERVERIPSSL$$@@BackgroundCode@@',
+                link: {
+                    mobileWebUrl: '@@KakaoLikeUrl@@',
+                    webUrl: '@@KakaoLikeUrl@@'
+                }
+            },
+        });
+
+        //[시작] 2021-12-16 Ver:2 추가한 내용
+        function navi() {
+            console.log("navi() => naviX=" + $("#naviX").val() + ", naviY=" + $("#naviY").val());
+            var option = {
+                name: $("#naviTargetName").val(),
+                x: parseFloat($("#naviX").val()),
+                y: parseFloat($("#naviY").val()),
+                coordType: 'wgs84',
+            };
+
+            Kakao.Navi.start(option);
+        }
+        // SDK 초기화 여부를 판단합니다.
+        console.log(Kakao.isInitialized());
+    </script>
+
+    <script type='text/javascript'>
+        $.ajax({
+            async: true,
+            type: 'post',
+            url: '/API/banner.asp',
+            data: {
+                "guid": $("#guid").val()
+            },
+            beforeSend: function () {
+                //$('.wrap-loading').removeClass('display-none');
+                console.log("배너로딩");
+            },
+            complete: function () {
+                //$('.wrap-loading').addClass('display-none');
+                console.log("배너로딩 완료");
+                //$(".gInviation1").show();
+            },
+            success: function (data) {
+                var datas = JSON.parse(data);
+                $(".banner").empty();
+                $(".banner").append(``);
+            },
+            error: function (xhr, status, error) {
+                alert("error=" + error);
+            }
+        });
+    </script>
+</body>
+
+</html>

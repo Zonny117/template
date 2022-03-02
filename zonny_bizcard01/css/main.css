@@ -3,7 +3,7 @@
 @import url(//font.elice.io/EliceDigitalBaeum.css);
 
 ::-webkit-scrollbar {
-    width: 2px;
+    width: 0px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -55,11 +55,13 @@ h2,
 }
 
 .top {
+    position: relative;
     width: 100%;
     height: 70px;
-    background-image: url(../image/navbar.png);
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
+    background-color: #000;
 }
 
 .top li {
@@ -69,15 +71,25 @@ h2,
     text-align: center;
     line-height: 70px;
     font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.top li span {
+    display: inline-block;
+    transform: translateY(80%);
 }
 
 .top li.on {
     display: block;
 }
 
+
 .bottom {
     width: 100%;
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(247, 247, 247);
     height: 70px;
 }
 
@@ -109,6 +121,10 @@ h2,
 
 .home.on {
     background-image: url(../image/home_hover.svg);
+}
+
+.top .first span {
+    transform: translateY(0%);
 }
 
 .text {
@@ -198,13 +214,13 @@ h2,
 
 .background {
     width: 100%;
-    background-color: rgba(177, 177, 177, 0.178);
+    background-color: rgba(233, 233, 233, 0.192);
 }
 
 .background img {
     width: 100%;
     object-fit: contain;
-    max-height: 450px;
+    max-height: 400px;
 }
 
 
@@ -213,7 +229,7 @@ h2,
     width: 90%;
     margin: 0 auto;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px;
     box-sizing: border-box;
     border-bottom: 1px solid rgb(224, 224, 224);
     background-color: #fff;
@@ -254,7 +270,7 @@ h2,
 
 .mMod3 .txt {
     font-size: 16px;
-    margin-top: 10px;
+    margin-top: 5px;
     font-weight: normal;
 }
 
@@ -266,7 +282,7 @@ h2,
 
 .mMod7 a {
     font-size: 14px;
-    color: #5c47fd;
+    color: #001aff;
 }
 
 .mMod7 a::before {
@@ -281,18 +297,31 @@ h2,
 
 /* 2nd slide */
 .mMod4 {
-    padding: 30px;
-    box-sizing: border-box;
     width: 100%;
     height: 100%;
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mMod4 .scroll{
+    padding: 50px 30px;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .mMod4 .swiper-slide {
     height: auto;
     width: 80%;
-    padding: 20px;
-    box-sizing: border-box;
+    margin: 0 auto;
+    transform: translateX(50%);
+    opacity: 0;
+}
+
+.mMod4 .swiper-slide:nth-child(even){
+    transform: translateX(-50%);
+    opacity: 0;
 }
 
 .mMod4 .tit {
@@ -300,35 +329,40 @@ h2,
     position: relative;
     font-size: 20px;
     font-weight: 600;
+    background-color: #000;
+    color: #fff;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    border-radius: 0 10px 10px 0;
 }
 
-.mMod4 .tit::after {
-    content: '';
+.number {
     position: absolute;
-    top: 18px;
-    left: 13px;
-    width: 100%;
-    height: 10px;
-    background-color: rgba(61, 113, 255, 0.329);
+    top: 50%;
+    transform: translateY(-50%);
+    left: -49px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: #a53232;
+    text-align: center;
+    line-height: 60px;
+    font-size: 32px;
 }
 
 .mMod4 .txt {
-    margin-top: 20px;
     font-size: 18px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid rgb(190, 190, 190);
+    box-shadow: 10px 11px 8px 1px rgb(168 168 168 / 46%);
+    border-radius: 10px;
 }
 
 .mMod4 .swiper-slide+.swiper-slide {
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
-.mMod4 .swiper-slide:nth-child(even) {
-    text-align: right;
-    margin-left: auto;
-}
-
-.mMod4 .swiper-slide:nth-child(even) .tit::after {
-    background-color: rgba(255, 55, 165, 0.322);
-}
 
 
 
@@ -345,8 +379,9 @@ h2,
 
 .padding {
     width: 100%;
-    padding: 20px;
+    padding: 30px;
     box-sizing: border-box;
+    overflow-x: hidden;
     overflow-y: auto;
 }
 
@@ -365,6 +400,10 @@ h2,
     height: 150px;
     display: inline-block;
     margin-bottom: 10px;
+    cursor: pointer;
+    /* transform: translateY(50%); */
+    /* visibility: hidden; */
+    
 }
 
 .mMod9 .swiper-slide::before {
@@ -400,6 +439,8 @@ h2,
     width: 100%;
     height: 0;
     padding-top: 50%;
+    /* transform: translateY(50%); */
+    /* visibility: hidden; */
 }
 
 iframe {
@@ -470,7 +511,7 @@ iframe {
     padding: 15px 20px;
     box-sizing: border-box;
     width: 200px;
-    background-color: rgb(0, 0, 0);
+    background-color: #a53232;
     color: #fff;
     border-radius: 10px;
 }
@@ -489,23 +530,36 @@ iframe {
 
 
 /* last slide */
-.last {
+#wrap .mainslide .last {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow-y: auto;
     text-align: center;
+    /* background-color: #000; */
+    background-image: linear-gradient(to bottom, #000 70%, #a53232 100%);
+    color: #fff;
+}
+
+.scroll {
+    overflow-y: auto;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.last a {
+    color: #fff;
 }
 
 .last .mMod1 {
     width: 80px;
     height: 80px;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .last .mMod0 {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .mMod6 {
@@ -524,9 +578,10 @@ iframe {
 .mMod10 {
     margin-top: 20px;
     font-size: 16px;
+    font-weight: bold;
 }
 
-.mMod10::before {
+.mMod10 a::before {
     content: '';
     display: inline-block;
     width: 20px;
@@ -535,6 +590,7 @@ iframe {
     background-size: 100%;
     background-repeat: no-repeat;
     vertical-align: -3px;
+    margin-right: 5px;
 }
 
 .mMod11 {
@@ -569,4 +625,10 @@ iframe {
 
 .mMod11 a+a {
     margin-left: 5px;
+}
+
+.preload {
+    width: 0;
+    height: 0;
+    overflow: hidden;
 }
