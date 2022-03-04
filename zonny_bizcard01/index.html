@@ -18,6 +18,7 @@
     <script src="js/jquery.transform2d.js"></script>
     <script src="../common/js/common.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/jquery-qrcode-0.18.0.min.js"></script>
     <script src="js/main.js"></script>
 
 
@@ -81,10 +82,11 @@
                             <span class="mMod0">하이팩토리</span>
                         </div>
                         <div class="background">
-                            <img src="image/bg.jpeg" alt="배경사진">
+                            <img src="image/bailey-zindel-NRQV-hBF10M-unsplash.jpg" alt="배경사진">
                         </div>
                         <div class="iconbx">
-                            <img src="image/heart.svg" class="heart" alt="좋아요">
+                            <!-- <img src="image/heart.svg" class="heart" alt="좋아요"> -->
+                            <a href="javascript:void(0)" class="heart createQR">연락처 등록</a>
                             <a href="sms:010-0000-0000" class="btn_sms">문자하기</a>
                             <a href="tel:010-0000-0000" class="btn_tel">전화걸기</a>
                         </div>
@@ -217,6 +219,18 @@
                     </li>
                 </ul>
             </div>
+            <div class="qrpopup">
+                <a href="###" class="btn_close close2">닫기</a>
+                <div class="qrbx">
+                    <div class="scrollbx">
+                        <img src="image/scan.svg" class="scan" alt="일러스트">
+                        <div id="qr"></div>
+                    </div>
+                </div>
+                <div class="scanme">SCAN ME!</div>
+
+            </div>
+
         </div>
     </div>
 
@@ -243,6 +257,7 @@
             </li>
         </ul>
     </div>
+
 
     <div class="mSky">
         <span class="ls iTop forWeb"><a href="###" class="ico">페이지 상단으로</a></span>
