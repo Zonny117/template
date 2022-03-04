@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="common/js/jquery-1.11.3.min.js"></script>
+    <script src="common/js/jquery-ui.js"></script>
+    <script src="masonry_test/js/jquery-qrcode-0.18.0.min.js"></script>
+
+    <title>Document</title>
+
+    <script>
+  
+
+        $(function () {
+            function generateQRCode() {
+                var startNode = "BEGIN:VCARD" + "\n" + "VERSION:3.0" + "\n";
+                var endNode = "END:VCARD";
+                startNode += "N:" + "정원중" + "\n";
+                startNode += "FN:" + "정원중" + "\n";
+                // startNode += "EMAIL:" + email.value.trim() + "\n";
+                startNode += "ORG:" + "디바이언스" + "\n";
+                // startNode += "TITLE:" + title.value.trim() + "\n";
+                startNode += "NOTE:" + "나야나" + "\n";
+                startNode += "URL:" + window.location.href + "\n";
+                startNode += "TEL;TYPE=CELL:" + "01035550958" + "\n";
+                startNode += "ADR;TYPE=WORK:" + "미사 비즈타워 1003호" + "\n";
+
+                // ";" + address2.value.trim() + ";" + city.value
+                //     .trim() + ";" +
+                //     state.value.trim() + ";" + country.value.trim() + ";" + zipCode.value.trim() + "\n";
+                startNode += endNode;
+                // this.qrImage.style.display = 'none';
+                // this.qrImage.src = "https://chart.googleapis.com/chart?cht=qr&choe=UTF-8&chs=200x200&chl=" +
+                //     encodeURIComponent(startNode);
+                // this.qrImage.style.display = 'inline';
+                // this.vcard.value = startNode;
+                // this.vcard.style.display = 'inline';
+                // this.vcardDiv.style.display = 'inline';
+                // this.sampleQR.style.display = 'none';
+
+                var option = {
+                    // render method: 'canvas', 'image' or 'div'
+                    render: 'image',
+
+                    // version range somewhere in 1 .. 40
+                    minVersion: 6,
+                    maxVersion: 40,
+
+                    // error correction level: 'L', 'M', 'Q' or 'H'
+                    ecLevel: 'H',
+
+                    // offset in pixel if drawn onto existing canvas
+                    left: 0,
+                    top: 0,
+
+                    // size in pixel
+                    size: 300,
+
+                    // code color or image element
+                    fill: '#000',
+
+                    // background color or image element, null for transparent background
+                    background: "#fff",
+
+                    // content
+                    text: startNode,
+
+                    // corner radius relative to module width: 0.0 .. 0.5
+                    radius: 0,
+
+                    // quiet zone in modules
+                    quiet: 3,
+
+                    // modes
+                    // 0: normal
+                    // 1: label strip
+                    // 2: label box
+                    // 3: image strip
+                    // 4: image box
+                    mode: 4,
+
+                    mSize: 0.09,
+                    mPosX: 0.95,
+                    mPosY: 0.96,
+
+                    label: 'no label',
+                    fontname: 'sans',
+                    fontcolor: '#000',
+
+                    image: $(".qrlogo")[0]
+                }
+                $("#qr").qrcode(option);
+
+            }
+
+            $(".create").click(function () {
+                // $("#url").attr('value', window.location.href);
+                generateQRCode()
+
+            });
+
+
+        });
+    </script>
+    <style>
+        html,
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* DIV {
+            color: royalblue;
+        }
+
+        H3 {
+            color: PURPLE;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            font-size: 0.929em;
+        } */
+    </style>
+</head>
+
+<body>
+    <img style="display: none;" src="logo_qr.png" class="qrlogo" alt="qr로고">
+    <form method="post">
+        <!-- <center>
+            <h2> Tips and Tricks from Officetricks.com</h2>
+            <h2>Generate QR Code for your Business VCARD using Google Chart API</h2>
+        </center> -->
+        <div style="display: none;">
+            <!-- 
+            <label for="firstName">First Name : </label>
+            <input type="text" id="firstName" value="정원중" size="40"> <br>
+
+            <label for="lastName">Last Name : </label>
+            <input type="text" id="lastName" value="" size="40"> <br>
+
+            <label for="lastName">Phone No :</label>
+            <input type="text" id="phoneNo" value="01035550958" size="40"> <br>
+
+            <label for="org">Organisation or Business:</label>
+            <input type="text" id="org" value="디바이언스" size="40"> <br>
+
+            <label for="org">Job Title:</label>
+            <input type="text" id="title" value="프론트엔드 개발자" size="20"> <br>
+
+            <label for="org">Website:</label>
+            <input type="text" id="url" value="" size="40"> <br>
+
+            <label for="org">Email:</label>
+            <input type="text" id="email" value="" size="40"> <br>
+
+            <label for="org">Address Line1:</label>
+            <input type="text" id="address1" value="미사강변동로 어쩌구저쩌구" size="40">
+
+            <label for="org">Address Line2:</label>
+            <input type="text" id="address2" value="" size="40"> <br>
+
+            <label for="org">City:</label>
+            <input type="text" id="city" value="" size="40"> <br>
+
+            <label for="org">State:</label>
+            <input type="text" id="state" value="" size="40"> <br>
+
+            <label for="org">Country:</label>
+            <input type="text" id="country" value="" size="40"> <br>
+
+            <label for="org">Zip Code: </label>
+            <input type="text" id="zipCode" value="" size="40"> <br> -->
+
+            <!-- <input type="button" value="Embed VCARD in QRCode Format" onclick="javascript:generateQRCode();"><br> -->
+        </div>
+        <a href="javascript:void(0)" class="create">연락처 QR 코드 생성하기</a>
+        <!-- <div style="float:right;width:40%;padding-right:10%;">
+            <div style="display:none;" id="vcardDiv">
+                <h3>VCARD Created Successfully !!!!!! </h3>
+                <textarea rows="13" cols="40" style='display:none;' id="vcard" border="2">
+        </textarea><BR>
+                <H3>VCARD Embedded QR Code Image</H3>
+            </div>
+            <div style="display:inline;" id="sampleQR">
+                <H3>Sample QR Code Image for Officetricks.com Website URL</H3>
+            </div>
+            <img id='qrImage' style='display:inline;' src='' />
+            <h3>
+                For more Tips and Queries, logon to <a href="http://officetricks.com" target="blank">
+                    http://officetricks.com<a> or email to <a
+                            href="mailto:officetricks123@gmail.com">officetricks123@gmail.com</a>.</h3>
+        </div> -->
+    </form>
+
+    <div id="qr"></div>
+</body>
+
+</html>
