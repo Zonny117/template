@@ -2,10 +2,6 @@
 
 @media only screen and (max-width:850px) {
 
-    /* body{
-        touch-action: none;
-    } */
-
     .btn_sms{
         display: block;
     }
@@ -99,7 +95,7 @@
     }
 
     .mMod4 .scroll {
-        padding: 30px 20px 30px 50px;
+        padding: 50px 20px 50px 50px;
     }
 
     .mMod4 .swiper-slide+.swiper-slide{
@@ -152,4 +148,8 @@
         width: 75%;
     }
 
+
+    .swiper-zoom-container{
+        height: 100%;
+    }
 }
