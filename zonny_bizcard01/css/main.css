@@ -22,7 +22,7 @@ body {
     height: 100%;
     overflow: hidden;
     font-family: "Pretendard-Regular", sans-serif;
-    background-color: rgb(206, 206, 206);
+    background: url(../image/body.jpg) no-repeat center/cover;
 }
 
 h2,
