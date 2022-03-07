@@ -1,1 +1,155 @@
 @charset "utf-8";
+
+@media only screen and (max-width:850px) {
+
+    /* body{
+        touch-action: none;
+    } */
+
+    .btn_sms{
+        display: block;
+    }
+
+    .lMod9 .swiper-slide {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .lMod9 .swiper-slide::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        /* Remove scrollbar space */
+        height: 0;
+        background: transparent;
+        /* Optional: just make scrollbar invisible */
+        -webkit-appearance: none;
+    }
+
+
+
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    #wrap {
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .top, .bottom{
+        height: 60px;
+    }
+
+    .content {
+        max-width: unset;
+        border-radius: 0;
+        max-height: unset;
+    }
+
+    .top li {
+        font-size: 21px;
+    }
+
+    .mMod1 {
+        width: 40px;
+        height: 40px;
+    }
+
+    .mMod0 {
+        font-size: 16px;
+    }
+
+    .background img {
+        max-height: 300px;
+    }
+
+    .mMod3{
+        padding: 5px 30px;
+    }
+
+    .mMod3 h2 {
+        font-size: 18px;
+    }
+
+    .mMod3 .txt {
+        font-size: 14px;
+    }
+
+    .mSky {
+        bottom: 66px;
+    }
+
+    .bottom ul {
+        padding: 20px 40px;
+    }
+
+    .bottom ul li a {
+        width: 20px;
+        height: 20px;
+    }
+
+    .mMod4 .tit {
+        font-size: 18px;
+    }
+
+    .mMod4 .txt {
+        font-size: 16px;
+    }
+
+    .mMod4 .scroll {
+        padding: 30px 20px 30px 50px;
+    }
+
+    .mMod4 .swiper-slide+.swiper-slide{
+        margin-top: 50px;
+    }
+
+    .padding {
+        padding: 20px;
+    }
+
+    .txtbx {
+        padding: 20px;
+    }
+
+    .t {
+        font-size: 20px;
+    }
+
+    .ti,
+    .tx {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .navi {
+        margin-top: 15px;
+    }
+
+    .btn_close {
+        top: 20px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .close1 {
+        right: 20px;
+    }
+
+
+    .qrpopup {
+        padding: 40px 20px;
+    }
+
+    #qr {
+        width: 80%;
+        padding-top: 80%;
+    }
+
+    .scan {
+        width: 75%;
+    }
+
+}
