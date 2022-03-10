@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+@media only screen and (max-width:850px) {
+
+    #wrap {
+        padding: 0;
+    }
+
+    .content {
+        max-width: unset;
+        max-height: unset;
+        border-radius: 0;
+    }
+
+
+    .btn_sms {
+        display: block;
+    }
+
+    .lMod9 .swiper-slide {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .lMod9 .swiper-slide::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        /* Remove scrollbar space */
+        height: 0;
+        background: transparent;
+        /* Optional: just make scrollbar invisible */
+        -webkit-appearance: none;
+    }
+
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+
+    .swiper-zoom-container {
+        height: 100%;
+    }
+
+    .mSky {
+        bottom: 66px;
+    }
+
+
+    .top li {
+        font-size: 18px;
+    }
+
+    .logobx {
+        height: 300px;
+    }
+
+    .mMod1 {
+        width: 50px;
+        height: 50px;
+    }
+
+    .mMod0 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .iconbx a {
+        width: 25px;
+        height: 25px;
+    }
+
+    .btn_tel {
+        margin-right: 10px;
+
+    }
+
+    .mMod3 h2 {
+        font-size: 20px;
+    }
+
+    .mMod3 .txt {
+        font-size: 15px;
+    }
+
+    .mMod7 a {
+        font-size: 15px;
+    }
+
+    .bottom ul {
+        padding: 0 30px;
+    }
+
+    .bottom ul li a {
+        width: 20px;
+        height: 20px;
+        background-size: 20px auto;
+    }
+
+    .bottom .address {
+        background-size: 14px auto;
+    }
+
+    .bottom .about {
+        background-size: 18px auto;
+    }
+
+    .mMod4 {
+        padding: 30px;
+    }
+
+    .mMod4 .swiper-slide {
+        padding-bottom: 30px;
+    }
+
+    .mMod4 .swiper-slide+.swiper-slide {
+        padding-top: 30px;
+    }
+
+    .mMod4 .tit {
+        font-size: 18px;
+    }
+
+    .mMod4 .txt {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .number {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        vertical-align: -1px;
+    }
+
+    .mMod9 .swiper-slide {
+        height: 200px;
+    }
+
+    .t {
+        font-size: 20px;
+    }
+
+    .ti,
+    .tx {
+        font-size: 15px;
+    }
+
+    .navi {
+        width: 170px;
+        font-size: 15px;
+    }
+
+    .last .mMod1 {
+        width: 50px;
+        height: 50px;
+    }
+
+    .last .mMod0 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .mMod6 .tit {
+        font-size: 20px;
+    }
+
+    .mMod6 .txt {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .mMod10 {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .mMod11 {
+        display: none;
+    }
+
+    #qr {
+        width: 75%;
+        padding-top: 75%;
+    }
+
+    .info {
+        margin-top: 10px;
+    }
+
+    .info1 {
+        font-size: 20px;
+    }
+
+    .info2 {
+        font-size: 14px;
+    }
+
+    .btn_close{
+        width: 35px;
+        height: 35px;
+    }
+}
