@@ -9,7 +9,7 @@ $(window).load(function () {
         // startNode += "EMAIL:" + email.value.trim() + "\n";
         startNode += "ORG:" + $(".mMod0.qr").text() + "\n";
         // startNode += "TITLE:" + title.value.trim() + "\n";
-        startNode += "NOTE:" + $(".txt.qr").text().trim() + "\n";
+        // startNode += "NOTE:" + $(".txt.qr").text().trim() + "\n";
         startNode += "URL:" + window.location.href + "\n";
         startNode += "TEL;TYPE=CELL:" + $(".tel.qr").text() + "\n";
         startNode += "ADR;TYPE=WORK:" + $(".ti.qr").text() + "\n";
@@ -68,8 +68,14 @@ $(window).load(function () {
 
         }
         $("#qr").qrcode(option);
+        
+        let img = $("#qr img").attr('src');
 
+        $(".save").attr('href', img);
+
+       
     }
+
 
     $(".btn_QR").click(function () {
         generateQRCode()

@@ -2,11 +2,13 @@
 
 @media only screen and (max-width:850px) {
 
+
     #wrap {
         padding: 0;
     }
 
     .content {
+        position: fixed;
         max-width: unset;
         max-height: unset;
         border-radius: 0;
@@ -185,7 +187,7 @@
         margin-top: 10px;
     }
 
-    .info1 {
+    .save {
         font-size: 20px;
     }
 
@@ -193,8 +195,13 @@
         font-size: 14px;
     }
 
-    .btn_close{
+    .btn_close {
         width: 35px;
         height: 35px;
     }
+
+    .gMap{
+        min-height: 250px;
+    }
+
 }
