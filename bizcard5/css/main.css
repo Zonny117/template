@@ -306,6 +306,7 @@ h2,
     height: 90px;
     background-image: url(../image/orange.png);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .mMod4 {
@@ -383,7 +384,7 @@ h2,
 }
 
 
-.contents{
+.contents {
     margin-bottom: 85px;
 }
 
@@ -490,6 +491,7 @@ iframe {
     height: 90px;
     background-image: url(../image/black.png);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .blackbg .content {
@@ -622,9 +624,14 @@ iframe {
     overflow: hidden;
 }
 
+.swiper-zoom-container {
+    height: auto;
+}
+
 .lMod9 .swiper-slide {
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
     overflow-y: auto;
 }
 
@@ -651,7 +658,7 @@ iframe {
     display: flex;
 }
 
-.qrsbx{
+.qrsbx {
     text-align: center;
 }
 
@@ -684,13 +691,13 @@ iframe {
     height: 100%;
 }
 
-.qrtxt{
+.qrtxt {
     font-size: 16px;
     margin-top: 10px;
 }
 
 
-.save{
+.save {
     display: inline-block;
     width: 60px;
     height: 60px;
@@ -702,6 +709,6 @@ iframe {
     margin-top: 20px;
 }
 
-body .btn_sms{
+body .btn_sms {
     display: none;
 }
