@@ -1,5 +1,179 @@
 @charset "utf-8";
 
 @media only screen and (max-width:850px) {
-    
+
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        /* Remove scrollbar space */
+        height: 0;
+        background: transparent;
+        /* Optional: just make scrollbar invisible */
+        -webkit-appearance: none;
+    }
+
+    body .btn_sms {
+        display: inline-block;
+        background-image: url(../image/btn_sms.svg);
+    }
+
+    .mMod0 {
+        font-size: 15px;
+        margin-bottom: 80px;
+    }
+
+
+    .background {
+        height: 348px;
+    }
+
+    .background::before {
+        top: -43px;
+        font-size: 60px;
+    }
+
+    .mMod3 h2 {
+        font-size: 40px;
+    }
+
+    .mMod3 .txt {
+        font-size: 15px;
+    }
+
+    .mMod3 {
+        margin-bottom: 70px;
+    }
+
+    .section_txt {
+        font-size: 50px;
+        margin-bottom: 25px;
+    }
+
+    .btn_menu {
+        margin-bottom: 20px;
+    }
+
+    .btn_menu a {
+        width: 77px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 16px;
+    }
+
+    .tel {
+        font-size: 26px;
+    }
+
+    .mMod6 .txt {
+        font-size: 14px;
+    }
+
+    .btn_mod6 a+a {
+        margin-left: 10px;
+    }
+
+    .contact {
+        margin-bottom: 60px;
+    }
+
+    .gMap {
+        height: 332px;
+        margin-bottom: 35px;
+    }
+
+    .t {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .ti {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .tx {
+        font-size: 14px;
+    }
+
+    .orangebg .content,
+    .blackbg .content {
+        padding: 20px 20px 120px 20px;
+    }
+
+    .mMod4 {
+        padding-bottom: 55px;
+    }
+
+    .mMod4 .swiper-container {
+        margin-bottom: 20px;
+    }
+
+    .mMod4 .tit {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .mMod4 .txt {
+        font-size: 14px;
+    }
+
+    .mMod9 .swiper-container {
+        height: 348px;
+        margin-bottom: 15px;
+    }
+
+    .mag {
+        display: none;
+    }
+
+    .contents {
+        margin-bottom: 65px;
+    }
+
+    .mMod7,
+    .mMod10 {
+        margin-bottom: 70px;
+    }
+
+    .mMod7 a::before,
+    .mMod10 a::before {
+        width: 38px;
+        height: 38px;
+    }
+
+    .mMod7 a,
+    .mMod10 a {
+        font-size: 18px;
+    }
+
+    .mMod11 {
+        display: none;
+    }
+
+    .lMod9 .swiper-container {
+        height: 100vh;
+        line-height: 100vh;
+    }
+
+
+    .qrsbx {
+        padding: 100px 20px;
+        overflow-y: auto;
+        box-sizing: border-box;
+    }
+
+    .qrbx {
+        width: 100%;
+        margin: 0 auto;
+        max-height: 343px;
+        padding: 40px;
+    }
+
+    .qrtxt {
+        font-size: 14px;
+    }
 }

@@ -1,4 +1,18 @@
 $(function () {
+
+
+    $(window).on('resize load', function () {
+        let ismobile = $(window).innerWidth() <= 850 ? true : false;
+
+        if (ismobile) {
+            $("html").addClass("ismobile");
+        } else {
+            $("html").removeClass("ismobile");
+        }
+        // console.log(ismobile);
+
+    });
+
     var mMod9 = new Swiper(".mMod9 .swiper-container", {
         slidesPerView: 1,
         loop: "true",
@@ -56,6 +70,25 @@ $(function () {
             observeParents: true
         });
     });
+
+
+    if ($("html").hasClass("ismobile") || $(window).innerWidth() <= 850) {
+        // console.log("모바일");
+
+        $(".mMod9 .swiper-slide").click(function () {
+            $(".lMod9, html, body").addClass("on");
+
+
+            var lMod9 = new Swiper(".lMod9 .swiper-container", {
+                initialSlide: mMod9.realIndex,
+                loop: "true",
+                slidesPerView: 1,
+                spaceBetween: 30,
+                observer: true,
+                observeParents: true
+            });
+        });
+    }
 
     $(".close1").click(function () {
         $(".lMod9, html, body").removeClass("on");
