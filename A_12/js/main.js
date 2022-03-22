@@ -172,6 +172,29 @@ $(function () {
         });
     }
 
+
+    $(".btn_QR").click(function () {
+
+
+        if (iOS || $(window).innerWidth() <= 850) {
+            enable();
+        }
+
+        $(".qrpopup").addClass("on");
+
+    });
+
+    $(".close2").click(function () {
+
+        if (iOS || $(window).innerWidth() <= 850) {
+            disable();
+        }
+
+        $(".qrpopup").removeClass("on");
+
+    });
+
+
     let sns = $(".mMod11 a")
 
     if (sns.length === 0) {

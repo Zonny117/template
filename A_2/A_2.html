@@ -20,7 +20,10 @@
 	<script type="text/javascript" src="../common/plugins/swiper/swiper.min.js"></script>
 	<script type="text/javascript" src="../common/js/jquery-ui.js"></script>
 	<script type="text/javascript" src="../common/js/common.js"></script>
+	<script src="../common/js/jquery-qrcode-0.18.0.min.js"></script>
+	<script src="../common/js/vcardQR.js"></script>
 	<script type="text/javascript" src="js/ui.js"></script>
+
 
 	<title>메르세데스 벤츠 강남점</title>
 
@@ -60,7 +63,7 @@
 				<!-- tel-forMobile -->
 				<div class="mTel forMobile">
 					<a href="tel:@@DirectCall@@">전화걸기</a>
-					<!-- <a href="###">연락처 정보 저장하기</a> -->
+					<a href="javascript:void(0)" class="btn_QR">연락처 QR코드</a>
 				</div>
 				<!-- //tel-forMobile -->
 
@@ -70,6 +73,7 @@
 					<a href="###">시승신청 바로가기</a>
 				</div>
 				<!-- //module7-링크  -->
+				<a href="javascript:void(0)" class="btn_QR web">연락처 QR코드</a>
 
 				<!-- module11-SNS -->
 				<div class="mMod11">
@@ -300,6 +304,21 @@
 		sendMsgToParent($(document).height());
 	</script>
 	<!-- //resize iframe height -->
+
+
+	<div class="qrpopup">
+		<div class="qrbx">
+			<div class="w100">
+				<div id="qr"></div>
+				<span class="info">
+					<a href="###" class="save" download="Hifactory_QRcode.png">정보 저장하기</a> 
+					<p class="info2">핸드폰 카메라를 켜고 <br> QR 코드에 대보세요.</p>
+				</span>
+			</div>
+			<a href="###" class="btn_close close2">닫기</a>
+		</div>
+	</div>
+
 
 </body>
 

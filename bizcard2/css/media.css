@@ -60,7 +60,7 @@
     }
 
     .mMod6 {
-        padding-bottom: 60px;
+        padding-bottom: 113px;
     }
 
     .tel {
@@ -88,6 +88,19 @@
         top: 51px;
         left: -20px;
         background-image: url(../image/sms.png);
+        width: 40px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        font-size: 0;
+        text-indent: -9999px;
+    }
+    .btn_QR {
+        display: block;
+        position: absolute;
+        top: 111px;
+        left: -20px;
+        background-image: url(../image/star.png);
         width: 40px;
         height: 40px;
         background-repeat: no-repeat;
@@ -284,5 +297,38 @@
         left: 15px;
         width: 30px;
         height: 30px;
+    }
+
+    .qrpopup{
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+ 
+    .qrbx{
+        width: 70%;
+        padding: 20px 0;
+        box-sizing: border-box;
+        max-height: 100%;
+    }
+ 
+    .qrbx .mMod3 h2{
+        font-size: 25px;
+    }
+ 
+    .qrbx .mMod3::after{
+        display: none;
+    }
+ 
+    .close2{
+        top: 30px;
+        left: auto;
+        right: 30px;
+        transform: none;
+        width: 40px;
+        height: 40px;
     }
 }

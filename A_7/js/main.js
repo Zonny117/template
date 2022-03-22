@@ -46,9 +46,9 @@ $(function () {
 
     let sns = $(".mMod11 a").length;
 
-    if(sns === 0){
+    if (sns === 0) {
         $(".mMod11").css({
-            display:"none"
+            display: "none"
         })
     }
 
@@ -158,6 +158,51 @@ $(function () {
         });
     });
 
+
+    let iOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+
+    const body = document.querySelector('body');
+    let ios_scroll = 0;
+
+    function enable() {
+        ios_scroll = window.pageYOffset;
+        body.style.overflow = 'hidden';
+        body.style.position = 'fixed';
+        body.style.top = `-${ios_scroll}px`;
+        body.style.width = '100%';
+    }
+
+    function disable() {
+        body.style.removeProperty('overflow');
+        body.style.removeProperty('position');
+        body.style.removeProperty('top');
+        body.style.removeProperty('width');
+        window.scrollTo(0, ios_scroll);
+    }
+
+
+
+    $(".btn_QR").click(function () {
+
+
+        if (iOS || $(window).innerWidth() <= 1366) {
+            enable();
+        }
+
+        $(".qrpopup").addClass("on");
+
+    });
+
+    $(".close2").click(function () {
+
+        if (iOS || $(window).innerWidth() <= 1366) {
+            disable();
+        }
+
+        $(".qrpopup").removeClass("on");
+
+    });
 
 
     let pnum = 0;

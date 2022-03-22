@@ -18,6 +18,8 @@
     <script src="../common/js/jquery-ui.js"></script>
     <script src="../common/js/common.js"></script>
     <script src="../common/plugins/swiper/swiper.min.js"></script>
+    <script src="../common/js/jquery-qrcode-0.18.0.min.js"></script>
+    <script src="../common/js/vcardQR.js"></script>
     <script src="js/main.js"></script>
 
     <title>블루보틀 성수점</title>
@@ -30,16 +32,16 @@
                 <img src="images/logo.png" alt="로고">
             </h1>
             <span class="mMod0">블루보틀 성수점</span>
-            <a href="###" class="contact web">CONTACT</a>
-            <a href="###" class="contact mobile">C</a>
+            <a href="javascript:void(0)" class="contact web">CONTACT</a>
+            <a href="javascript:void(0)" class="contact mobile">C</a>
         </div>
         <div class="dim"></div>
 
         <div class="topmenu">
-            <a href="###" class="btn_close1">닫기</a>
+            <a href="javascript:void(0)" class="btn_close1">닫기</a>
             <div class="top_btnbx">
-                <a href="###" class="btn_contact section_txt on"># CONTACT</a>
-                <a href="###" class="btn_address section_txt"># ADDRESS</a>
+                <a href="javascript:void(0)" class="btn_contact section_txt on"># CONTACT</a>
+                <a href="javascript:void(0)" class="btn_address section_txt"># ADDRESS</a>
             </div>
             <div class="mod6bx on">
                 <div class="mMod6 dn">
@@ -51,6 +53,7 @@
                         평일 10:00 ~ 17:00
                     </div>
                     <a href="tel:010-0000-0000" class="btn_tel2">전화걸기</a>
+                    <a href="javascript:void(0)" class="btn_QR">연락처 QR코드</a>
                 </div>
             </div>
 
@@ -259,6 +262,22 @@
                 <a href="###" class="ico">하이팩토리</a>
                 <span class="txt forWeb">하이팩토리 초대공유플랫폼으로 제작된 사이트입니다</span>
             </span>
+        </div>
+
+        <div class="qrpopup">
+            <div class="qrsbx">
+                <div class="qrbx">
+                    <div class="w100">
+                        <div id="qr"></div>
+                        <span class="info">
+                            <div class="info1">하대리</div>
+                            <a href="###" class="save" download="Hifactory_QRcode.png">정보 저장하기</a>
+                            <p class="info2">핸드폰 카메라를 켜고 <br> QR 코드에 대보세요.</p>
+                        </span>
+                    </div>
+                    <a href="###" class="close2">닫기</a>
+                </div>
+            </div>
         </div>
     </div>
 </body>

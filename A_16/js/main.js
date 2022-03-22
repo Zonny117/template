@@ -1,14 +1,5 @@
 $(function () {
 
-    //새로고침 위로
-    window.onload = function() {
-        setTimeout (function () {
-            scrollTo(0,0);
-
-        },100);
-
-    }
-
     //모듈제어
     let bg = $(".back").css('display');
 
@@ -96,108 +87,125 @@ $(function () {
 
     $(window).on('scroll', function () {
 
+
+
         if ($(".topmenu").hasClass("on")) return;
-
-
-
-        //animation
-        let sct = $(window).scrollTop();
-        let section1 = Math.floor($(".section1").offset().top - 500);
-        let section2 = Math.floor($(".section2").offset().top - 500);
-        // console.log(sct)
-        // console.log(section1)
-        if (sct >= section1) {
-
-            $(".link").animate({
-                top: 0,
-                opacity: 1,
-            }, 800, 'easeOutCirc');
-
-            $(".mMod7 a").each(function (index) {
-                $(this).delay(index * 100).animate({
-                    top: 0,
-                    opacity: 1,
-                }, 800, 'easeOutCirc').delay(index * 100).animate({
-                    top: 0,
-                    opacity: 1,
-                }, 800, 'easeOutCirc')
-            });
-
-        }
-
-        if (sct >= $(".mMod10").offset().top - 500) {
-            $(".download").animate({
-                top: 0,
-                opacity: 1,
-            }, 800, 'easeOutCirc');
-
-            $(".mMod10 a").delay(400).animate({
-                top: 0,
-                opacity: 1,
-            }, 800, 'easeOutCirc');
-        }
-
-        if (sct >= section2) {
-            $(".lbx").animate({
-                top: 0,
-                opacity: 1,
-            }, 800, 'easeOutCirc');
-
-            $(".rbx").delay(400).animate({
-                top: 0,
-                opacity: 1,
-            }, 800, 'easeOutCirc');
-        }
-
-        if (sct >= $(".mMod8").offset().top - 500) {
-            $(".video").animate({
-                top: 0,
-                opacity: 1,
-            }, 800, 'easeOutCirc');
-
-            $(".iframebx").delay(400).animate({
-                top: 0,
-                opacity: 1,
-            }, 800, 'easeOutCirc');
-        }
-        if (sct >= $(".mMod4").offset().top - 500) {
-            $(".lbx2").animate({
-                top: 0,
-                opacity: 1,
-            }, 800, 'easeOutCirc');
-
-            $(".rbx2").delay(400).animate({
-                top: 0,
-                opacity: 1,
-            }, 800, 'easeOutCirc');
-        }
 
         //스크롤 하단
         // console.log(sct + "스크롤")
+        let sct = $(window).scrollTop();
+
         let winh = $(window).innerHeight();
-        let domh = $(document).height();
-        
+        // let domh = $(document).height();
+
         let vw = sct + winh;
         console.log(vw + "윈도우")
-        console.log(domh + "도큐먼트")
+        // console.log(domh + "도큐먼트")
+
+        let mod7 = Math.floor($(".mMod7").offset().top);
+
+        // console.log(mod7 + "모듈7");
 
 
-        if (vw >= domh) {
-            $(".sns").animate({
-                top: 0,
-                opacity: 1,
-            }, 800, 'easeOutCirc');
+        //animation
+        // let section1 = Math.floor($(".section1").offset().top - 500);
+        // console.log(sct)
+        // console.log(section1)
+        if (vw >= mod7) {
 
-
-            $(".mMod11 a").each(function (index) {
-                $(this).delay(index * 100).animate({
+            setTimeout(function () {
+                $(".link").animate({
                     top: 0,
                     opacity: 1,
-                }, 800, 'easeOutCirc').delay(index * 100).animate({
+                }, 800, 'easeOutCirc');
+
+                $(".mMod7 a").each(function (index) {
+                    $(this).delay(index * 100).animate({
+                        top: 0,
+                        opacity: 1,
+                    }, 800, 'easeOutCirc')
+                });
+            }, 500)
+
+        }
+
+        if (vw > $(".mMod10").offset().top) {
+            setTimeout(function () {
+                $(".download").animate({
                     top: 0,
                     opacity: 1,
-                }, 800, 'easeOutCirc')
-            });
+                }, 800, 'easeOutCirc');
+
+                $(".mMod10 a").delay(400).animate({
+                    top: 0,
+                    opacity: 1,
+                }, 800, 'easeOutCirc');
+            }, 500);
+
+
+        }
+
+        if (vw > $(".mMod9").offset().top) {
+            setTimeout(function () {
+                $(".lbx").animate({
+                    top: 0,
+                    opacity: 1,
+                }, 800, 'easeOutCirc');
+
+                $(".rbx").delay(400).animate({
+                    top: 0,
+                    opacity: 1,
+                }, 800, 'easeOutCirc');
+            }, 500);
+        }
+
+        if (vw > $(".mMod8").offset().top) {
+            setTimeout(function () {
+                $(".video").animate({
+                    top: 0,
+                    opacity: 1,
+                }, 800, 'easeOutCirc');
+
+                $(".iframebx").delay(400).animate({
+                    top: 0,
+                    opacity: 1,
+                }, 800, 'easeOutCirc');
+            }, 500)
+
+        }
+        if (vw > $(".mMod4").offset().top) {
+            setTimeout(function () {
+                $(".lbx2").animate({
+                    top: 0,
+                    opacity: 1,
+                }, 800, 'easeOutCirc');
+
+                $(".rbx2").delay(400).animate({
+                    top: 0,
+                    opacity: 1,
+                }, 800, 'easeOutCirc');
+            }, 500)
+
+        }
+
+
+
+        if (vw > $(".mMod11").offset().top) {
+            setTimeout(function () {
+                $(".sns").animate({
+                    top: 0,
+                    opacity: 1,
+                }, 800, 'easeOutCirc');
+
+
+                $(".mMod11 a").each(function (index) {
+                    $(this).delay(index * 100).animate({
+                        top: 0,
+                        opacity: 1,
+                    }, 800, 'easeOutCirc')
+                });
+            }, 500)
+
         }
 
 
@@ -230,12 +238,9 @@ $(function () {
         //모바일 지도 애니메이션
         if (!$("html").hasClass("ismobile")) return;
 
-        if (sct >= $(".mMod5.mobile").offset().top - 500) {
+        if (vw >= $(".mMod5.mobile").offset().top) {
             $(".ani5m").each(function (index) {
                 $(this).delay(index * 100).animate({
-                    top: 0,
-                    opacity: 1,
-                }, 800, 'easeOutCirc').delay(index * 100).animate({
                     top: 0,
                     opacity: 1,
                 }, 800, 'easeOutCirc')

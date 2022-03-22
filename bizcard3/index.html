@@ -18,6 +18,8 @@
     <script src="../common/js/jquery-ui.js"></script>
     <script src="../common/js/common.js"></script>
     <script src="../common/plugins/swiper/swiper.min.js"></script>
+    <script src="../common/js/jquery-qrcode-0.18.0.min.js"></script>
+    <script src="../common/js/vcardQR.js"></script>
     <script src="js/main.js"></script>
 
     <title>Document</title>
@@ -37,6 +39,7 @@
             <div class="background" style="background-image: url(image/bg.jpg);"></div>
         </div>
         <div class="content">
+            <a href="javascript:void(0)" class="btn_QR">QR코드 보기</a>
             <div class="logobx">
                 <h1 class="mMod1 bovh">
                     <img src="image/logo.png" alt="로고">
@@ -152,6 +155,20 @@
                 <div class="swiper-slide"><img src="image/xmod1.png" alt="사진"></div>
                 <div class="swiper-slide"><img src="image/xmod1.png" alt="사진"></div>
             </div>
+        </div>
+    </div>
+
+    <div class="qrpopup">
+        <div class="qrbx">
+            <div id="qr"></div>
+            <div class="mMod3">
+                <h2>[하대표]</h2>
+            </div>
+            <span class="info">
+                <a href="###" class="save" download="Hifactory_QRcode.png">정보 저장하기</a>
+                <p class="info2">핸드폰 카메라를 켜고 <br> QR 코드에 대보세요.</p>
+            </span>
+            <a href="###" class="btn_close close2">닫기</a>
         </div>
     </div>
 </body>

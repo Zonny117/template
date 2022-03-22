@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .maskwrap {
+            width: 500px;
+            height: 500px;
+     
+        }
+
+        .mask{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            mask: url(mask.png);
+            mask-size: cover;
+            mask-position: center;
+
+            /* 접두어 필수 */
+            -webkit-mask: url(mask.png);
+            -webkit-mask-size: cover;
+            -webkit-mask-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="maskwrap">
+            <img class="mask" src="2.png">
+        </div>
+    </div>
+</body>
+
+</html>

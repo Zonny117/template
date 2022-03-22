@@ -182,7 +182,7 @@ $(function () {
         let logo = $(".logobx").height();
 
         // console.log(sct)
-        // console.log(offset + logo)
+        // console.log(top )
 
         if (sct > (top + logo)) {
             $(".gnb").addClass("on");
@@ -191,4 +191,20 @@ $(function () {
         }
     });
 
+
+    $(".btn_QR").click(function () {
+        $("html, body, .qrpopup").addClass("on");
+
+        if (iOS) {
+            enable();
+        }
+    });
+
+    $(".close2").click(function () {
+        $(".qrpopup, html, body").removeClass("on");
+
+        if (iOS) {
+            disable();
+        }
+    });
 });

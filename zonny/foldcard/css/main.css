@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'MaruBuri-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mMod0,
+h2,
+.tit,
+.t,
+.ti,
+.tel {
+    line-height: 120%;
+}
+
+
+.txt, .tx{
+    line-height: 160%;
+}
+
+html,
+body {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#wrap {
+    position: relative;
+    width: 450px;
+    height: 650px;
+    transform-style: preserve-3d;
+    transition: perspective(1000px);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, .25);
+    transition: 1s;
+    border-radius: 10px;
+}
+
+#wrap .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.imgbx {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform-origin: left;
+    transform-style: preserve-3d;
+
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0);
+
+    transition: 1s;
+    border-radius: 10px;
+}
+
+#wrap:hover {
+    transform: translateX(50%);
+    box-shadow: -15px 20px 20px rgba(0, 0, 0, .25);
+}
+
+#wrap:hover .imgbx {
+    transform: rotateY(-180deg);
+    box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.imgbx .logobx {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/black.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mMod1 {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border: 2px solid #fff ;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, .15);
+}
+
+.mMod1 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+}
+
+.mMod0 {
+    font-size: 22px;
+    font-weight: bold;
+    color: transparent;
+
+    /* background-image: url(../images/gold.jpg); */
+    background-image: url(../images/silver.jpg);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    font-family: 'MaruBuri-Regular';
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    transform: translateY(180deg);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+
+.innerbx{
+    border: 5px solid rgba(165, 165, 165, 0.555);
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.mMod3{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    background-image: linear-gradient(135deg, rgb(206, 65, 0) 22%, transparent 10%);
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.mMod3::after{
+    content: '';
+    position: absolute;
+    border-top: 2px dashed rgb(196, 196, 196);
+    left: 0;
+    bottom: -10px;
+    display: block;
+    width: 100%;
+}
+
+.mMod3 h2{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.mMod3 .txt{
+    font-size: 16px;
+    font-weight: 500;
+}

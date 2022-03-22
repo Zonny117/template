@@ -18,6 +18,8 @@
     <script src="../common/js/jquery-ui.js"></script>
     <script src="../common/plugins/swiper/swiper.min.js"></script>
     <script src="../common/js/common.js"></script>
+    <script src="../common/js/jquery-qrcode-0.18.0.min.js"></script>
+    <script src="../common/js/vcardQR.js"></script>
     <script src="js/main.js"></script>
 
     <title>BMW 강남점</title>
@@ -29,12 +31,12 @@
             <h1 class="mMod1">
                 <img src="images/ico_mod1.png" alt="메인로고">
             </h1>
-            <span class="mMod0">BMW 강남점</span>
-            <a href="###" class="btn_dot">dot</a>
+            <span class="mMod0 qr">BMW 강남점</span>
+            <a href="javascript:void(0)" class="btn_dot">dot</a>
             <div class="topmenu">
                 <div class="mMod6">
                     <div class="tit">
-                        <strong><a href="tel:010-1587-2587" class="tel">010-1587-2587</a></strong> <br>
+                        <strong><a href="tel:010-1587-2587" class="tel qr">010-1587-2587</a></strong> <br>
                         <div class="txt">
                             언제든 연락주시면 <br>
                             자세한 상담을 해드리겠습니다.<br>
@@ -42,7 +44,7 @@
                             FAX : 02-1548-8972
                         </div>
                         <strong><a href="tel:010-1587-2587" class="tel2">전화 걸기</a></strong>
-                        <!-- <strong><a href="###" class="save">번호 저장</a></strong> -->
+                        <strong><a href="javascript:void(0)" class="save2 btn_QR">연락처 QR</a></strong>
                     </div>
 
                 </div>
@@ -410,7 +412,23 @@
         </script>
     </div>
 
+    <div class="qrpopup">
+        <div class="qrsbx">
+            <div class="qrbx">
+                <div class="w100">
+                    <div id="qr"></div>
+                    <span class="info">
+                        <div class="info1">하대리</div>
+                        <a href="###" class="save" download="Hifactory_QRcode.png">정보 저장하기</a>
+                        <p class="info2">핸드폰 카메라를 켜고 <br> QR 코드에 대보세요.</p>
+                    </span>
+                </div>
+                <a href="###" class="close2">닫기</a>
+            </div>
+        </div>
     </div>
+
+
 </body>
 
 </html>

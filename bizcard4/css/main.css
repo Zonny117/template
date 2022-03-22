@@ -723,6 +723,10 @@ iframe {
     display: inline-block;
     font-size: 25px;
     font-weight: 600;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    border: 1px solid #000;
 }
 
 .info2{

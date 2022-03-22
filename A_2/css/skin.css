@@ -1,5 +1,99 @@
 @charset "UTF-8";
 
+.btn_QR.web {
+	display: block;
+	background: url(../images/ico_mod9_1.png) calc(100% - 15px) 50%/8px 13px no-repeat;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 10px;
+	color: #000;
+	background-color: #fff;
+	font-size: 16px;
+	/* margin: 0 0 10px; */
+	padding: 0 45px 0 20px;
+	text-align: left;
+	line-height: 48px;
+	height: 48px;
+	width: 235px;
+	margin: 0 auto 0;
+}
+
+.qrpopup {
+	position: fixed;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	top: 50%;
+	left: 50%;
+	width: 500px;
+	height: 500px;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	z-index: 99999;
+	border-radius: 10px;
+	box-shadow: 0 0 4px 2px rgba(160, 160, 160, 0.486);
+}
+
+.btn_close {
+	display: inline-block;
+	background-image: url(../images/btn_close.png);
+	width: 40px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	font-size: 0;
+	text-indent: -9999px;
+	z-index: 9999;
+	margin-top: 20px;
+
+}
+
+.qrpopup.on {
+	display: flex;
+}
+
+.qrbx {
+	width: 50%;
+	text-align: center;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.qrbx::-webkit-scrollbar {
+	width: 0;
+}
+
+.save {
+	display: inline-block;
+	font-size: 24px;
+	font-weight: 600;
+	margin: 20px 0;
+	border-radius: 30px;
+	border: 1px solid #000;
+	padding: 5px 20px;
+	box-sizing: border-box;
+	line-height: 160%;
+}
+
+.info2 {
+	font-size: 16px;
+}
+
+#qr {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-top: 100%;
+	box-sizing: border-box;
+}
+
+#qr img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 html,
 body {
 	background-color: #fff;
@@ -530,7 +624,7 @@ body {
 		padding: 0 0 20px;
 	}
 
-	.padding{
+	.padding {
 		padding: 0 10px;
 		box-sizing: border-box;
 	}
@@ -740,7 +834,8 @@ body {
 		height: 90%;
 	}
 
-	.mMod9 .swiper-wrapper, .mMod9 .swiper-slide{
+	.mMod9 .swiper-wrapper,
+	.mMod9 .swiper-slide {
 		height: 100% !important;
 	}
 
@@ -834,7 +929,7 @@ body {
 		height: 12px;
 	}
 
-	.lMod9 .swiper-slide{
+	.lMod9 .swiper-slide {
 		overflow-y: auto;
 	}
 
@@ -927,4 +1022,36 @@ body {
 	#footer .bg {
 		width: auto;
 	}
+
+
+	.qrpopup {
+		top: 0;
+		left: 0;
+		transform: none;
+		width: 100%;
+		height: 100%;
+		border-radius: 0;
+	}
+
+	.qrbx {
+		width: 70%;
+		padding: 20px 0;
+		box-sizing: border-box;
+		max-height: 100%;
+	}
+
+
+	.btn_close {
+		position: absolute;
+		top: 30px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 40px;
+		height: 40px;
+	}
+
+	.btn_QR.web {
+		display: none;
+	}
+
 }

@@ -160,7 +160,6 @@ $(function () {
 
     $(".btn_close").click(function () {
         $(".mod8bx").removeClass("on");
-        $("iframe")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
     });
 
 
@@ -213,5 +212,21 @@ $(function () {
             disable();
         });
     }
+
+    $(".btn_QR").click(function () {
+        $("html, body, .qrpopup").addClass("on");
+
+        if (iOS) {
+            enable();
+        }
+    });
+
+    $(".close2").click(function () {
+        $(".qrpopup, html, body").removeClass("on");
+
+        if (iOS) {
+            disable();
+        }
+    });
 
 });

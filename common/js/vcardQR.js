@@ -68,17 +68,28 @@ $(window).load(function () {
 
         }
         $("#qr").qrcode(option);
-        
+
         let img = $("#qr img").attr('src');
+
+        let kakao = /kakaotalk/i.test(navigator.userAgent);
+
+        if (kakao) {
+            $(".save").css({
+                display: "none"
+            });
+        }
+
 
         $(".save").attr('href', img);
 
-       
+
     }
 
 
     $(".btn_QR").click(function () {
-        generateQRCode()
+        if ($("#qr img").length === 1) return;
+
+        generateQRCode();
 
     });
 

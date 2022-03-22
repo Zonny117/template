@@ -715,6 +715,11 @@ iframe {
     max-height: unset;
 }
 
+html{
+    scrollbar-color: red, white;
+    scrollbar-width: thin;
+}
+
 ::-webkit-scrollbar {
     width: 4px;
 }
