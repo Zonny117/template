@@ -5,7 +5,7 @@
 
 @media only screen and (max-width:1366px) {
 
-    .logobx{
+    .mMod1{
         width: 55px;
         height: 55px;
     }
@@ -630,7 +630,7 @@
         height: auto;
     }
 
-    .mMod1 {
+    .logobx {
         position: absolute;
         top: 50%;
         left: 50%;
