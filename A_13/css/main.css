@@ -544,6 +544,7 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 footer a {
@@ -873,9 +874,5 @@ footer .youtube {
 }
 
 .mobile {
-    display: none;
-}
-
-.mMod8, .mMod5, footer{
     display: none;
 }

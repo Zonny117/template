@@ -198,7 +198,7 @@
     }
 
     .mMod3 {
-        display: unset;
+        display: block;
         font-size: unset;
         margin-top: unset;
         -webkit-line-clamp: unset;

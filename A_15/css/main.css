@@ -91,7 +91,7 @@ h2,
     position: fixed;
     padding: 100px 0;
     box-sizing: border-box;
-    width: 30%;
+    width: 21%;
     height: 100%;
 }
 
@@ -607,9 +607,13 @@ iframe {
 
 
 /* 태블릿*/
-@media only screen and (min-width:851px) and (max-width:1366px) {
+@media only screen and (min-width:851px) and (max-width:1367px) {
     .paddingbx {
         padding: 50px;
+    }
+
+    .fixed{
+        width: 30%;
     }
 
     .fixed,

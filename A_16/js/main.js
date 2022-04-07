@@ -99,7 +99,7 @@ $(function () {
         // let domh = $(document).height();
 
         let vw = sct + winh;
-        console.log(vw + "윈도우")
+        // console.log(vw + "윈도우")
         // console.log(domh + "도큐먼트")
 
         let mod7 = Math.floor($(".mMod7").offset().top);

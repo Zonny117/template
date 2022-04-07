@@ -95,6 +95,7 @@
     }
 
     .mMod6 {
+        bottom: 0;
         position: static;
         margin-top: 80px;
         padding: 0 20px;
