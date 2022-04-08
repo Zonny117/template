@@ -77,6 +77,7 @@ h2,
     -moz-backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
+    z-index: 1;
 }
 
 .maintitlebx {
@@ -146,6 +147,7 @@ h2,
     -moz-backface-visibility: hidden;
     -webkit-transform: translateX(-50%) translate3d(0, 0, 0);
     -moz-transform: translateX(-50%) translate3d(0, 0, 0);
+    z-index: 1;
 }
 
 .mMod1 img {

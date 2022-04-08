@@ -110,6 +110,7 @@ body {
     transform: translateX(-50%);
     width: 1200px;
     height: 100%;
+    z-index: 1;
 }
 
 .mMod1 {

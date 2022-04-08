@@ -315,6 +315,7 @@ body {
     top: 55%;
     left: 200px;
     transform: translateY(-50%);
+    z-index: 1;
 }
 
 /* 모듈 0 - 서비스명 */

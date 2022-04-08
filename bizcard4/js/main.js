@@ -59,6 +59,7 @@ $(function () {
 
     $(".mMod9 .swiper-slide").click(function () {
 
+
         let idx = $(this).index();
 
         $(".lMod9").fadeIn(600);
@@ -74,12 +75,14 @@ $(function () {
             observer: true,
             observeParents: true,
         });
-    });
 
+
+
+
+    });
     $(".close1").click(function () {
         $(".lMod9").fadeOut(600);
     });
-
 
 
 

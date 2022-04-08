@@ -82,6 +82,7 @@ h2,
     -moz-backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
+    z-index: 1;
 }
 
 
@@ -153,6 +154,7 @@ h2,
     -moz-backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
+    z-index: 1;
 }
 
 .mMod1 img {

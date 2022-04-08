@@ -99,7 +99,8 @@ body {
 	position: relative;
 	color: #fff;
 	font-size: 32px;
-	margin: 49px 0 0;
+	margin: 57px auto 0;
+	max-width: 1200px;
 }
 
 .mMod3 h2 {
@@ -249,7 +250,8 @@ body {
 
 .mMod7 {
 	position: relative;
-	margin: 57px 0 0;
+	margin: 57px auto 0;
+	max-width: 1200px;
 }
 
 .mMod7 a {

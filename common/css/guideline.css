@@ -50,12 +50,17 @@
         1px 1px 0 #fff;
     padding: 5px 10px;
     box-sizing: border-box;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 120%;
     font-weight: 800;
     z-index: 1;
     text-align: left;
     font-family: 'Noto Sans KR', serif;
+    cursor: pointer;
+}
+
+.helptxt:hover{
+    background-color: rgba(252, 84, 176, 0.548);
 }
 
 .relative {
@@ -66,6 +71,11 @@
 .background .helptxt{
     align-items: flex-start;
     justify-content: center;
+}
+
+.helptxt:hover::before{
+    background-color: #5c47fd;
+    color: #f00;
 }
 
 .helptxt::before{
@@ -119,6 +129,15 @@
 
 .mMod11 .helptxt::before {
     content: 'SNS 링크연결';
+}
+
+
+/* 알림창 */
+.swal-overlay{
+    z-index: 9999999999999999999;
+}
+.swal-text{
+    word-break: normal;
 }
 
 @media only screen and (max-width:850px) {
