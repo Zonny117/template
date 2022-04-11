@@ -58,7 +58,7 @@ $(function () {
     let prot = 0;
 
     $(".mMod9 .swiper-slide").click(function () {
-
+        if(!$(".btn_help").hasClass("on")) return;
 
         let idx = $(this).index();
 

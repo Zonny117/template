@@ -180,6 +180,7 @@ $(window).on('load', function () {
                 if($(".btn_help").hasClass("on")) return;
 
                 $(".lMod9, html, body").removeClass("on");
+                $("body, .scrollbx").removeAttr('style');
 
                 let modtxt = $(this).attr('class');
 
