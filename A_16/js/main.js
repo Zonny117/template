@@ -338,7 +338,6 @@ $(function () {
 
     $(".mMod9 .swiper-slide").click(function () {
 
-
         let idx = $(this).index();
 
 

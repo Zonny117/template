@@ -1,7 +1,7 @@
 /* 
 [하이팩토리 템플릿 제어 JS]
 2022.04.01 - init
-2022.04.07 - last update
+2022.04.11 - last update
 
 
 code arranged by 정원중
@@ -164,7 +164,7 @@ $(window).on('load', function () {
         $(this).toggleClass("on");
         if ($(this).hasClass("on")) {
             $(this).text(txt.replace(/끄기/, '표시'));
-            $(`${modarr}`).removeClass("help relative").off('click');
+            $(`${modarr}`).removeClass("help relative");
             $(".helptxt").remove();
         } else {
             $(this).text(txt.replace(/표시/, '끄기'));
@@ -177,6 +177,9 @@ $(window).on('load', function () {
             });
 
             $(`${modarr}`).click(function () {
+                if($(".btn_help").hasClass("on")) return;
+
+                $(".lMod9, html, body").removeClass("on");
 
                 let modtxt = $(this).attr('class');
 
@@ -186,7 +189,7 @@ $(window).on('load', function () {
                     reg[0] = $(this).parents(".mMod9")[0] === undefined ? "mMod4" : "mMod9";
                 }
 
-                console.log(reg[0]);
+                // console.log(reg[0]);
 
                 switch (reg[0]) {
                     case "mMod0":
