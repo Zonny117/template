@@ -10,16 +10,19 @@ https://github.com/Zonny117/template2022.03-/blob/main/common/js/control_templat
 문제 발생시 제게 알려주세요.
 
 */
+
 // 모듈제어 메소드
 const control = {
     popup: function (scrollBox, btnClick, btnClose) {
         const scroll_container = document.querySelector(scrollBox);
-        let scrollVal = 0;
         let click = document.querySelectorAll(btnClick);
         let close = document.querySelectorAll(btnClose);
+        let btn_help = document.querySelector(".btn_help");
+        let scrollVal = 0;
 
         click.forEach(function (item) {
             item.addEventListener('click', function () {
+                if (!btn_help.classList.contains("on")) return;
                 scrollVal = window.pageYOffset;
                 scroll_container.style.overflow = 'hidden';
                 scroll_container.style.position = 'fixed';
@@ -98,6 +101,7 @@ function checkMobile(val) {
         }
     });
 };
+
 // 스크롤 제어
 let onePageWrap = document.querySelectorAll('html, body');
 let preventScroll = function (e) {
@@ -146,7 +150,7 @@ function stopKakaoScroll(target, option) {
     });
 };
 // 수정페이지 가이드라인
-$(window).on('load', function () {
+$(function () {
 
     let check = /iframePreview/i.test(window.location.href);
     // if (check) {
@@ -177,7 +181,7 @@ $(window).on('load', function () {
             });
 
             $(`${modarr}`).click(function () {
-                if($(".btn_help").hasClass("on")) return;
+                if ($(".btn_help").hasClass("on")) return;
 
                 $(".lMod9, html, body").removeClass("on");
                 $("body, .scrollbx").removeAttr('style');
