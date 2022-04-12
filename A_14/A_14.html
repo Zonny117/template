@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="../common/css/common.css" type="text/css">
     <link rel="stylesheet" href="../common/plugins/swiper/swiper.min.css" type="text/css">
+    <link rel="stylesheet" href="../common/css/guideline.css">
     <link class="favicon" rel="shortcut icon" href="/common/images/favicon.ico" type="images/x-icon">
 
     <link rel="stylesheet" href="css/main.css" type="text/css">
@@ -19,11 +20,10 @@
     <script src="../common/js/jquery-ui.js"></script>
     <script src="../common/js/common.js"></script>
     <script src="../common/plugins/swiper/swiper.min.js"></script>
+    <script src="../common/js/control_template.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="js/jquery.easeScroll.js"></script>
     <script src="js/main.js"></script>
-	<link rel="stylesheet" href="../common/css/guideline.css">
-	<script src="../common/js/control_template.js"></script>
 
     <title>ARRI STUDIO</title>
 
@@ -223,10 +223,11 @@
             </div>
             <script>
                 $(function () {
+
                     let sld = $(".mMod9 .swiper-slide");
 
                     $(sld).click(function () {
-                        // const idx = $(this).index();
+                        const idx = $(this).index();
                         // console.log(idx);
 
                         $(".lMod9, html, body").addClass("on");
@@ -241,8 +242,6 @@
 
                     });
                 })
-
-                
             </script>
         </div>
         <div class="mSky">
