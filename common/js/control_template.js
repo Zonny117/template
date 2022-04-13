@@ -1,7 +1,7 @@
 /* 
 [하이팩토리 템플릿 제어 JS]
 2022.04.01 - init
-2022.04.11 - last update
+2022.04.12 - last update
 
 
 code arranged by 정원중
@@ -149,94 +149,132 @@ function stopKakaoScroll(target, option) {
         }
     });
 };
+
 // 수정페이지 가이드라인
 $(function () {
 
     let check = /iframePreview/i.test(window.location.href);
-    // if (check) {
-    if ($("#help").length === 0) {
-        $('body').append(`<div id="help"><a href="javascript:void(0)" class="btn_help on">도움말 표시</a></div>`);
-    }
-    let modarr = [".background", ".mMod0", ".mMod1", ".mMod3", ".mMod4 .swiper-slide", ".mMod5", ".mMod6", ".mMod7", ".mMod8", ".mMod9 .swiper-slide", ".mMod10", ".mMod11"];
-    $(".btn_help").click(function () {
-        if ($(".background").hasClass("thumb") && $(this).hasClass("on")) {
-            swal("배경사진이 안보여요!", "선택하신 배경사진은 외부 공유시 썸네일로 활용됩니다.", '../common/images/thumb_guide.PNG');
+    if (check) {
+        if ($("#help").length === 0) {
+            $('body').append(`<div id="help"><a href="javascript:void(0)" class="btn_help on">도움말 표시</a></div>`);
         }
+        let modarr = [".background", ".mMod0", ".mMod1", ".mMod3", ".mMod4 .swiper-slide", ".mMod5", ".mMod6", ".mMod7", ".mMod8", ".mMod9 .swiper-slide", ".mMod10", ".mMod11"];
+        $(".btn_help").click(function () {
+            if ($(".background").hasClass("thumb") && $(this).hasClass("on")) {
+                swal("배경사진이 안보여요!", "선택하신 배경사진은 외부 공유시 썸네일로 활용됩니다.", '../common/images/thumb_guide.PNG');
+            }
 
-        let txt = $(this).text();
+            let txt = $(this).text();
 
-        $(this).toggleClass("on");
-        if ($(this).hasClass("on")) {
-            $(this).text(txt.replace(/끄기/, '표시'));
-            $(`${modarr}`).removeClass("help relative");
-            $(".helptxt").remove();
-        } else {
-            $(this).text(txt.replace(/표시/, '끄기'));
-            $(`${modarr}`).filter(function () {
-                if ($(this).css('position') !== "absolute" && $(this).css('position') !== "fixed" && $(this).css('position') !== "sticky") {
-                    $(this).addClass('help relative').append(`<div class="helptxt">`);
-                } else {
-                    $(this).addClass('help').append(`<div class="helptxt">`);
-                }
-            });
+            $(this).toggleClass("on");
+            if ($(this).hasClass("on")) {
+                $(this).text(txt.replace(/끄기/, '표시'));
+                $(`${modarr}`).removeClass("help relative");
+                $(".helptxt").remove();
+                window.parent.postMessage('helpOff', '*');
 
-            $(`${modarr}`).click(function () {
-                if ($(".btn_help").hasClass("on")) return;
+            } else {
+                $(this).text(txt.replace(/표시/, '끄기'));
+                $(`${modarr}`).filter(function () {
+                    if ($(this).css('position') !== "absolute" && $(this).css('position') !== "fixed" && $(this).css('position') !== "sticky") {
+                        $(this).addClass('help relative').append(`<div class="helptxt">`);
+                    } else {
+                        $(this).addClass('help').append(`<div class="helptxt">`);
+                    }
+                });
 
-                $(".lMod9, html, body").removeClass("on");
-                $("body, .scrollbx").removeAttr('style');
+                $(`${modarr}`).click(function () {
+                    if ($(".btn_help").hasClass("on")) return;
 
-                let modtxt = $(this).attr('class');
+                    $(".lMod9, html, body").removeClass("on");
+                    $("body, .scrollbx").removeAttr('style');
 
-                let reg = /mMod[0-9]{1,2}|background|swiper-slide/.exec(modtxt);
+                    let modtxt = $(this).attr('class');
 
-                if (reg[0] === 'swiper-slide') {
-                    reg[0] = $(this).parents(".mMod9")[0] === undefined ? "mMod4" : "mMod9";
-                }
+                    let reg = /mMod[0-9]{1,2}|background|swiper-slide/.exec(modtxt);
 
-                // console.log(reg[0]);
+                    if (reg[0] === 'swiper-slide') {
+                        reg[0] = $(this).parents(".mMod9")[0] === undefined ? "mMod4" : "mMod9";
+                    }
 
-                switch (reg[0]) {
-                    case "mMod0":
-                        swal('서비스명을 입력해주세요.', '회사명, 자신의 이름 등 자신을 어필할 문구를 짧게 입력해주세요. \n\n※필수 입력 사항입니다!', '../common/images/uhmat.PNG');
-                        break;
-                    case "mMod1":
-                        swal('로고를 넣어주세요.', '로고는 선택하신 템플릿에 따라 디자인이 다릅니다. \n최대한 배경색이 없는 투명한 로고 이미지일 수록 좋아요!');
-                        break;
-                    case "mMod3":
-                        swal('타이틀 제목과 내용 영역입니다.', '사이트의 대표 문구를 입력할 시간이에요. \n 자신이 전하고자 하는 주제를 명확하게 전달하면 좋겠죠?');
-                        break;
-                    case "mMod4":
-                        swal('보조내용 영역입니다.', '사이트의 본문에 해당하는 역할을 합니다. 사람들에게 전하고 싶은 내용을 담아주세요. \n\n※원하는 만큼 추가할 수 있어요!');
-                        break;
-                    case "mMod5":
-                        swal('주소를 입력해주세요!', '회사의 주소나 행사장 위치 등을 안내할 수 있습니다. \n주변 교통을 이용해 찾아오는 방법도 메모해주시면 받는 분들에게 더 도움이 되겠죠?');
-                        break;
-                    case "mMod6":
-                        swal('연락처 정보를 입력해주세요.', '대표 연락처는 하나만! 필요에 따라 이메일 주소나 팩스, 기타 번호등 자유롭게 적어주세요!');
-                        break;
-                    case "mMod7":
-                        swal('링크 주소를 연결할 수 있어요.', '자신을 어필하는데 도움이 되는 유용한 외부 주소를 연결할 수 있어요.');
-                        break;
-                    case "mMod8":
-                        swal('유튜브 주소를 입력하세요.', '원하는 유튜브 영상 주소를 입력하면 사이트에 첨부할 수 있어요!');
-                        break;
-                    case "mMod9":
-                        swal('사진을 넣어주세요.', '사진은 원하는 만큼 넣을 수 있어요.');
-                        break;
-                    case "mMod10":
-                        swal('첨부파일을 넣어주세요.', '받는 사람이 유용한 자료를 볼 수 있도록 파일 선정을 해봅시다! \n\n예) 안내 팜플렛, 약도, 프로모션 포스터 등');
-                        break;
-                    case "mMod11":
-                        swal('SNS가 있나요?', '페이스북, 인스타그램, 유튜브, 트위터 중 선택해 자신의 계정과 연결해보세요. \n없어요? 그럼 당신은 인싸가 아님');
-                        break;
-                }
+                    // console.log(reg[0]);
 
-            });
+                    switch (reg[0]) {
+                        case "mMod0":
+                            swal('서비스명을 입력해주세요.', '회사명, 자신의 이름 등 자신을 어필할 문구를 짧게 입력해주세요. \n\n※필수 입력 사항입니다!');
+                            break;
+                        case "mMod1":
+                            swal('로고를 넣어주세요.', '로고는 선택하신 템플릿에 따라 디자인이 다릅니다. \n최대한 배경색이 없는 투명한 로고 이미지일 수록 좋아요!');
+                            break;
+                        case "mMod3":
+                            swal('타이틀 제목과 내용 영역입니다.', '사이트의 대표 문구를 입력할 시간이에요. \n 자신이 전하고자 하는 주제를 명확하게 전달하면 좋겠죠?');
+                            break;
+                        case "mMod4":
+                            swal('보조내용 영역입니다.', '사이트의 본문에 해당하는 역할을 합니다. 사람들에게 전하고 싶은 내용을 담아주세요. \n\n※원하는 만큼 추가할 수 있어요!');
+                            break;
+                        case "mMod5":
+                            swal('주소를 입력해주세요!', '회사의 주소나 행사장 위치 등을 안내할 수 있습니다. \n주변 교통을 이용해 찾아오는 방법도 메모해주시면 받는 분들에게 더 도움이 되겠죠?');
+                            break;
+                        case "mMod6":
+                            swal('연락처 정보를 입력해주세요.', '대표 연락처는 하나만! 필요에 따라 이메일 주소나 팩스, 기타 번호등 자유롭게 적어주세요!');
+                            break;
+                        case "mMod7":
+                            swal('링크 주소를 연결할 수 있어요.', '자신을 어필하는데 도움이 되는 유용한 외부 주소를 연결할 수 있어요.');
+                            break;
+                        case "mMod8":
+                            swal('유튜브 주소를 입력하세요.', '원하는 유튜브 영상 주소를 입력하면 사이트에 첨부할 수 있어요!');
+                            break;
+                        case "mMod9":
+                            swal('사진을 넣어주세요.', '사진은 원하는 만큼 넣을 수 있어요.');
+                            break;
+                        case "mMod10":
+                            swal('첨부파일을 넣어주세요.', '받는 사람이 유용한 자료를 볼 수 있도록 파일 선정을 해봅시다! \n\n예) 안내 팜플렛, 약도, 프로모션 포스터 등');
+                            break;
+                        case "mMod11":
+                            swal('SNS가 있나요?', '페이스북, 인스타그램, 유튜브, 트위터 중 선택해 자신의 계정과 연결해보세요. \n없어요? 그럼 당신은 인싸가 아님');
+                            break;
+                    }
 
-        }
+                    window.parent.postMessage(reg[0], '*');
+
+                });
+
+            }
 
 
-    });
-    // } else return;
+        });
+    } else return;
+
 });
+
+// window.addEventListener('message', function (e) {
+
+//     let split = e.data.split(":")[0];
+//     let txt = e.data.split(":")[1];
+
+//     // console.log(split + "메시지 수신");
+//     switch (/mMod[0-9]{1,2}(_[a-z]{1,3})?/g.exec(split)[0]) {
+//         case 'mMod0':
+//             document.querySelector(".mMod0 h2").innerText = txt;
+//             break;
+//         case 'mMod3_tit':
+//             document.querySelector(".mMod3 span").innerText = txt;
+//             break;
+//         case 'mMod3_txt':
+//             document.querySelector(".mMod3 .txt").innerText = txt;
+//             break;
+//         case 'mMod5_tx':
+//             document.querySelector(".mMod5 .tx").innerText = txt;
+//             break;
+//         case 'mMod6_tel':
+//             document.querySelector(".mMod6 .tel").innerText = txt;
+//             break;
+//         case 'mMod6_txt':
+//             document.querySelector(".mMod6 .txt").innerText = txt;
+//             break;
+//         case 'mMod10':
+//             document.querySelector(".mMod10 a").innerText = txt;
+//             break;
+//     };
+
+// });
