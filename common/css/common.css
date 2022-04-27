@@ -291,6 +291,13 @@ body.hiddenScroll {
 	display: block !important;
 }
 
+.mMod9 .swiper-slide p{
+	text-align: center;
+	font-size: 14px;
+	line-height: 160%;
+	margin-top: 5px;
+}
+
 /* screen resolutions lower than 768px */
 @media all and (max-width:768px) {
 

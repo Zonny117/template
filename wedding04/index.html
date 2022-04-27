@@ -18,10 +18,11 @@
     <script src="../common/js/common.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+    <script src="../common/js/jquery-qrcode-0.18.0.min.js"></script>
+    <script src="../common/js/vcardQR.js"></script>
     <script src="js/main.js"></script>
-	<link rel="stylesheet" href="../common/css/guideline.css">
-	<script src="../common/js/control_template.js"></script>
+    <link rel="stylesheet" href="../common/css/guideline.css">
+    <script src="../common/js/control_template.js"></script>
 
     <title>Document</title>
 </head>
@@ -35,7 +36,7 @@
                     <div class="mMod3 swiper-slide">
                         <div class="padding">
                             <img src="images/mod3.png" class="mainimg" alt="잎">
-                            <h2>박서준 & 이소진</h2>
+                            <h2 class="qr">박서준 & 이소진</h2>
                             <p class="txt">
                                 2022년 5월 5일(일요일) 오전 11시 <br>
                                 서울시 강남구 논현로 12-12 패밀리뷔페 <br>
@@ -60,9 +61,15 @@
                     <div class="mMod9 swiper-slide">
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="images/xmod1.png" alt="사진"></div>
-                                <div class="swiper-slide"><img src="images/xmod2.png" alt="사진"></div>
-                                <div class="swiper-slide"><img src="images/xmod3.png" alt="사진"></div>
+                                <div class="swiper-slide"><img src="images/xmod1.png" alt="사진">
+                                    <p>테스트입니다.</p>
+                                </div>
+                                <div class="swiper-slide"><img src="images/xmod2.png" alt="사진">
+                                    <p>테스트입니다.</p>
+                                </div>
+                                <div class="swiper-slide"><img src="images/xmod3.png" alt="사진">
+                                    <p>테스트입니다.</p>
+                                </div>
                             </div>
                         </div>
                         <div class="btnbx">
@@ -146,6 +153,9 @@
                             <div class="mMod10 dn">
                                 <a href="###">예식장 약도 다운로드</a>
                             </div>
+                            <div>
+                                <a href="javascript:void(0)" class="btn_QR">QR코드 확인하기</a>
+                            </div>
                             <div class="mMod11 dn">
                                 <a href="###" class="facebook">facebook</a>
                                 <a href="###" class="instagram">instagram</a>
@@ -181,6 +191,20 @@
             <a href="https://www.hifactory.co.kr/index.asp" target="_blank" class="ico">하이팩토리</a>
             <span class="txt forWeb">하이팩토리 초대공유플랫폼으로 제작된 사이트입니다</span>
         </span>
+    </div>
+
+    <div class="qrpopup">
+        <div class="qrbx">
+            <div id="qr"></div>
+            <div class="mMod3">
+                <h2>[하대표]</h2>
+            </div>
+            <span class="info">
+                <a href="###" class="save" download="Hifactory_QRcode.png">정보 저장하기</a>
+                <p class="info2">핸드폰 카메라를 켜고 <br> QR 코드에 대보세요.</p>
+            </span>
+            <a href="###" class="btn_close close2">닫기</a>
+        </div>
     </div>
 
 </body>
