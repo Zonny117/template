@@ -319,11 +319,11 @@ iframe {
     margin-bottom: 15px;
 }
 
-.tel{
+.tel {
     color: #62838c;
 }
 
-.mMod6 .txt{
+.mMod6 .txt {
     font-size: 18px;
 }
 
@@ -334,7 +334,8 @@ iframe {
     margin-bottom: 40px;
 }
 
-.mMod10 a, .btn_QR {
+.mMod10 a,
+.btn_QR {
     display: inline-block;
     padding: 20px 40px;
     background-color: #62838c;
@@ -343,14 +344,15 @@ iframe {
 }
 
 
-.center{
+.center {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.mMod10 a::before, .btn_QR::before {
+.mMod10 a::before,
+.btn_QR::before {
     content: '';
     background-image: url(../images/download.png);
     width: 20px;
@@ -403,7 +405,7 @@ a.youtube {
     text-align: center;
 }
 
-.mMod7 a{
+.mMod7 a {
     color: #62838c;
     display: inline-block;
     font-size: 16px;
@@ -512,7 +514,7 @@ a.youtube {
     box-shadow: 0 0 4px 2px rgba(160, 160, 160, 0.486);
 }
 
-.qrpopup.on{
+.qrpopup.on {
     display: flex;
 }
 
@@ -527,11 +529,11 @@ a.youtube {
     width: 0;
 }
 
-.qrbx .mMod3{
+.qrbx .mMod3 {
     margin-bottom: 0px;
 }
 
-.qrbx .mMod3 h2{
+.qrbx .mMod3 h2 {
     margin-top: 0;
     margin-bottom: 0px;
     font-size: 24px;
@@ -567,4 +569,14 @@ a.youtube {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }

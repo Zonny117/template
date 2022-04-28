@@ -87,7 +87,7 @@ $(function () {
 
 
     $(".mMod4 .swiper-slide").each(function (index) {
-        $(".tit", this).prepend("<span class='number'>" + (index + 1) + "</span>")
+        $(this).prepend("<span class='number'>" + (index + 1) + "</span>")
     });
 
 
@@ -131,5 +131,6 @@ $(function () {
 
     });
 
+    stopKakaoScroll('body');
 
 });

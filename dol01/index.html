@@ -22,8 +22,10 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <script src="js/main.js"></script>
-	<link rel="stylesheet" href="../common/css/guideline.css">
-	<script src="../common/js/control_template.js"></script>
+    <link rel="stylesheet" href="../common/css/guideline.css">
+    <script src="../common/js/control_template.js"></script>
+    <script src="../common/js/jquery-qrcode-0.18.0.min.js"></script>
+    <script src="../common/js/vcardQR.js"></script>
 
     <title>대승이의 돌잔치에 초대합니다.</title>
 </head>
@@ -33,6 +35,7 @@
         <div class="mMod2">
             <div class="mainbx">
                 <div class="background" style="background-image: url(../dol01/images/bg.png);">
+                    <video src="images/video.mp4" autoplay muted loop playsinline></video>
                     <img src="images/happy.png" class="happy" alt="해피">
                     <img src="images/bubble1.png" class="bubble1" alt="방울">
                     <img src="images/bubble2.png" class="bubble2" alt="방울">
@@ -107,9 +110,15 @@
             <div class="mMod9 web dn">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/xmod1.jpg" alt="사진"></div>
-                        <div class="swiper-slide"><img src="images/xmod2.jpg" alt="사진"></div>
-                        <div class="swiper-slide"><img src="images/xmod3.jpg" alt="사진"></div>
+                        <div class="swiper-slide"><img src="images/xmod1.jpg" alt="사진">
+                            <p>테스트입니다.</p>
+                        </div>
+                        <div class="swiper-slide"><img src="images/xmod2.jpg" alt="사진">
+                            <p>테스트입니다.</p>
+                        </div>
+                        <div class="swiper-slide"><img src="images/xmod3.jpg" alt="사진">
+                            <p>테스트입니다.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="btnbx">
@@ -119,8 +128,7 @@
                 </div>
                 <script>
                     var mMod9 = new Swiper(".mMod9.web .swiper-container", {
-                        loop: true,
-                        slidesPerView: 3,
+                        slidesPerView: 'auto',
                         spaceBetween: 30,
                         pagination: {
                             el: ".mMod9.web .swiper-pagination",
@@ -139,14 +147,19 @@
                 </div>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/xmod1.jpg" alt="사진"></div>
-                        <div class="swiper-slide"><img src="images/xmod2.jpg" alt="사진"></div>
-                        <div class="swiper-slide"><img src="images/xmod3.jpg" alt="사진"></div>
+                        <div class="swiper-slide"><img src="images/xmod1.jpg" alt="사진">
+                            <p>테스트입니다.</p>
+                        </div>
+                        <div class="swiper-slide"><img src="images/xmod2.jpg" alt="사진">
+                            <p>테스트입니다.</p>
+                        </div>
+                        <div class="swiper-slide"><img src="images/xmod3.jpg" alt="사진">
+                            <p>테스트입니다.</p>
+                        </div>
                     </div>
                 </div>
                 <script>
                     var mMod9 = new Swiper(".mMod9.mobile .swiper-container", {
-                        loop: true,
                         slidesPerView: 1,
                         spaceBetween: 30,
                         pagination: {
@@ -198,6 +211,9 @@
                 <a href="###">대승이 유튜브</a>
                 <a href="###">블로그 바로가기</a>
             </div>
+            <div class="qrbox mobile">
+                <a href="###" class="btn_QR">QR 코드</a>
+            </div>
             <div class="mMod10 mobile dn">
                 <a href="###">대승이 사진 모음</a>
             </div>
@@ -212,6 +228,9 @@
                     엄마 : 010-1234-5678 <br>
                     아빠 : 010-1234-9852
                 </div>
+            </div>
+            <div class="qrbox web">
+                <a href="###" class="btn_QR">QR 코드</a>
             </div>
             <div class="mMod10 web dn">
                 <a href="###">대승이 사진 모음</a>
@@ -228,7 +247,7 @@
             </div>
         </div>
 
-        
+
         <div id="jsMod9" class="lMod9">
             <a href="###" class="btn_close">레이어 닫기</a>
             <div class="swiper-container">
@@ -266,6 +285,20 @@
                 <a href="https://www.hifactory.co.kr/index.asp" class="ico">하이팩토리</a>
                 <span class="txt forWeb">하이팩토리 초대공유플랫폼으로 제작된 사이트입니다</span>
             </span>
+        </div>
+
+        <div class="qrpopup" @@DB_DelegateYN@@>
+            <div class="qrbx">
+                <div id="qr"></div>
+                <div class="mMod3">
+                    <h2>@@TitleSubject@@</h2>
+                </div>
+                <span class="info">
+                    <a href="###" class="save" download="Hifactory_QRcode.png">정보 저장하기</a>
+                    <p class="info2">핸드폰 카메라를 켜고 <br> QR 코드에 대보세요.</p>
+                </span>
+                <a href="###" class="btn_close close2">닫기</a>
+            </div>
         </div>
     </div>
 </body>

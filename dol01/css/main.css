@@ -329,17 +329,17 @@ h2,
 }
 
 .mMod9 .swiper-container {
-    height: 350px;
+    height: auto;
 }
 
 .mMod9 .swiper-slide {
-    border: 3px solid #000;
     box-sizing: border-box;
 }
 
 .mMod9 img {
+    border: 3px solid #000;
     width: 100%;
-    height: 100%;
+    height: 350px;
     object-fit: cover;
 }
 
@@ -472,14 +472,14 @@ iframe {
     margin-bottom: 15px;
 }
 
-.mMod10 {
+.mMod10, .qrbox {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 40px;
 }
 
-.mMod10 a {
+.mMod10 a, .qrbox a{
     display: inline-block;
     padding: 20px 40px;
     background-color: #000;
@@ -487,7 +487,7 @@ iframe {
     font-size: 20px;
 }
 
-.mMod10 a::before {
+.mMod10 a::before, .qrbox a::before{
     content: '';
     background-image: url(../images/download.png);
     width: 20px;
@@ -627,4 +627,88 @@ a.youtube {
 
 .mobile {
     display: none;
+}
+
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.qrpopup {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 99999;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 2px rgba(160, 160, 160, 0.486);
+}
+
+.qrpopup.on{
+    display: flex;
+}
+
+.qrbx {
+    width: 50%;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.qrbx::-webkit-scrollbar {
+    width: 0;
+}
+
+.qrbx .mMod3{
+    margin-bottom: 0px;
+}
+
+.qrbx .mMod3 h2{
+    margin:0;
+    font-family: 'Noto Sans KR', serif;
+    font-size:22px;
+}
+
+.save {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 20px 0;
+    border-radius: 30px;
+    border: 1px solid #000;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    line-height: 160%;
+}
+
+.info2 {
+    font-size: 16px;
+}
+
+#qr {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    box-sizing: border-box;
+}
+
+#qr img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

@@ -66,7 +66,6 @@ $(function () {
 
     var mMod9 = new Swiper(".mMod9 .swiper-container", {
         slidesPerView: 1,
-        loop: "true",
         spaceBetween: 50,
         pagination: {
             el: ".mMod9 .swiper-pagination",

@@ -1,11 +1,11 @@
 @charset "utf-8";
 
 @media only screen and (max-width:850px) {
-    *{
+    * {
         -webkit-tap-highlight-color: transparent;
     }
 
-    ::-webkit-scrollbar{
+    ::-webkit-scrollbar {
         width: 0;
     }
 
@@ -27,7 +27,7 @@
         margin-bottom: 80px;
     }
 
-  
+
 
     .wedding {
         width: 80%;
@@ -155,14 +155,14 @@
         width: 50px;
         height: 50px;
         margin-bottom: 25px;
-        
+
     }
 
-    .btn_tel{
+    .btn_tel {
         margin-right: 10px;
     }
 
-    .btn_sms{
+    .btn_sms {
         display: inline-block;
     }
 
@@ -176,17 +176,20 @@
         margin-bottom: 10px;
     }
 
-    .mMod10 {
+    .mMod10,
+    .qrbox {
         border-top: 3px solid #fff;
     }
 
-    .mMod10 a {
+    .mMod10 a,
+    .qrbox a {
         padding: 20px 30px;
         padding-right: 40px;
         font-size: 15px;
     }
 
-    .mMod10 a::before{
+    .mMod10 a::before,
+    .qrbox a::before {
         content: '';
         background-image: url(../images/down_m.png);
         width: 12px;
@@ -198,19 +201,59 @@
         margin-right: 10px;
     }
 
-    .mMod10 a::after {
+    .mMod10 a::after,
+    .qrbox a::after {
         display: none;
     }
 
-    .mMod11{
+    .mMod11 {
         display: none;
     }
 
-    .btn_close{
+    .btn_close {
         top: 20px;
         right: 20px;
         width: 30px;
         height: 30px;
         background-size: 20px 20px;
     }
+
+    .mMod9 .swiper-slide p {
+        font-size: 14px;
+        color: #fff;
+    }
+
+    .qrpopup{
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+ 
+    .qrbx{
+        width: 70%;
+        padding: 20px 0;
+        box-sizing: border-box;
+        max-height: 100%;
+    }
+ 
+    .qrbx .mMod3 h2{
+        font-size: 25px;
+    }
+ 
+    .qrbx .mMod3::after{
+        display: none;
+    }
+ 
+    .close2{
+        top: 30px;
+        left: auto;
+        right: 30px;
+        transform: none;
+        width: 40px;
+        height: 40px;
+    }
+    
 }

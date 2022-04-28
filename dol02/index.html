@@ -23,6 +23,9 @@
 	<link rel="stylesheet" href="../common/css/guideline.css">
 	<script src="../common/js/control_template.js"></script>
 
+    <script src="../common/js/jquery-qrcode-0.18.0.min.js"></script>
+    <script src="../common/js/vcardQR.js"></script>
+
     <title>주아의 돌잔치에 초대합니다.</title>
 </head>
 
@@ -42,10 +45,11 @@
                 </div>
                 <img src="images/birthday.png" class="birth" alt="happy birthday">
                 <div class="background" style="background-image: url(images/bg.png);">
+                    <video class="bgvid" src="images/video.mp4" autoplay muted playsinline loop></video>
                     <img src="images/invite.png" class="invite" alt="초대합니다">
                 </div>
                 <div class="mMod3">
-                    <h2>민주아</h2>
+                    <h2 class="qr">민주아</h2>
                     <p class="txt">
                         2022년 5월 5일(일요일) 오전 11시 <br>
                         서울시 강남구 논현로 12-12 패밀리뷔페 <br>
@@ -92,9 +96,15 @@
                     </script>
                 </div>
                 <div class="mMod9">
-                    <div class="swiper-slide"><img src="images/xmod1.png" alt="사진"></div>
-                    <div class="swiper-slide"><img src="images/xmod2.jpg" alt="사진"></div>
-                    <div class="swiper-slide"><img src="images/xmod3.jpg" alt="사진"></div>
+                    <div class="swiper-slide"><img src="images/xmod1.png" alt="사진">
+                    <p>테스트입니다.</p>
+                    </div>
+                    <div class="swiper-slide"><img src="images/xmod2.jpg" alt="사진">
+                    <p>테스트입니다.</p>
+                    </div>
+                    <div class="swiper-slide"><img src="images/xmod3.jpg" alt="사진">
+                    <p>테스트입니다.</p>
+                    </div>
                 </div>
                 <div class="mMod8">
                     <div class="iframebx">
@@ -151,6 +161,9 @@
             <div class="mMod10 web dn">
                 <a href="###">주아 사진 모음</a>
             </div>
+            <div class="qrbox">
+                <a href="javascript:void(0)" class="btn_QR">QR코드</a>
+            </div>
         </div>
         <div class="mMod11">
             <a href="###" class="facebook">facebook</a>
@@ -191,6 +204,20 @@
             <a href="https://www.hifactory.co.kr/index.asp" class="ico">하이팩토리</a>
             <span class="txt forWeb">하이팩토리 초대공유플랫폼으로 제작된 사이트입니다</span>
         </span>
+    </div>
+
+    <div class="qrpopup" @@DB_DelegateYN@@>
+        <div class="qrbx">
+            <div id="qr"></div>
+            <div class="mMod3">
+                <h2>@@TitleSubject@@</h2>
+            </div>
+            <span class="info">
+                <a href="###" class="save" download="Hifactory_QRcode.png">정보 저장하기</a>
+                <p class="info2">핸드폰 카메라를 켜고 <br> QR 코드에 대보세요.</p>
+            </span>
+            <a href="###" class="btn_close close2">닫기</a>
+        </div>
     </div>
 </body>
 

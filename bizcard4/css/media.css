@@ -132,8 +132,19 @@
         vertical-align: -1px;
     }
 
-    .mMod9 .swiper-slide {
+    .mMod9 .swiper-slide{
+        margin-bottom: 10px;
+    }
+    .mMod9 .swiper-slide::after {
+        top: 75px;
+    }
+
+    .mMod9 .swiper-slide img{
         height: 200px;
+    }
+
+    .mMod9 .swiper-slide p{
+        margin-top: 10px;
     }
 
     .t {

@@ -126,8 +126,17 @@
     }
 
     .mMod9 .swiper-container {
-        height: 348px;
+        height: auto;
         margin-bottom: 15px;
+    }
+
+    .mMod9 .swiper-slide img{
+        height: 348px;
+    }
+
+    .mMod9 .swiper-slide p{
+        margin-top: 10px;
+        font-size: 15px;
     }
 
     .mag {

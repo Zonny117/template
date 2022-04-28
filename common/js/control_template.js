@@ -1,7 +1,7 @@
 /* 
 [하이팩토리 템플릿 제어 JS]
 2022.04.01 - init
-2022.04.20 - last update
+2022.04.22 - last update
 
 
 code arranged by 정원중
@@ -153,9 +153,21 @@ function stopKakaoScroll(target, option) {
 // 수정페이지 가이드라인
 window.onload = function () {
 
+    let background = document.querySelectorAll(".background");
+
+    background.forEach(function (item) {
+        // let cover = document.createElement("div");
+        // cover.className = "bg_cover";
+        // item.append(cover);
+        setTimeout(function () {
+            item.style.opacity = 1
+        }, 100);
+    });
+
+
     // 레이아웃 표시 기능
     let check = /iframePreview/i.test(window.location.href);
-    if (check) {
+    // if (check) {
         const helpBox = document.createElement('div');
         const btn_help = document.createElement('a');
         helpBox.id = "help";
@@ -184,13 +196,9 @@ window.onload = function () {
                 Array.prototype.slice.call(modarrNode).filter(function (el) {
                     let position_check = window.getComputedStyle(el).position;
                     if (position_check !== 'absolute' && position_check !== 'fixed' && position_check !== 'sticky') {
-                        modarrNode.forEach(function (item) {
-                            item.classList.add('help', 'relative');
-                        });
+                        el.classList.add("help", "relative");
                     } else {
-                        modarrNode.forEach(function (item) {
-                            item.classList.add('help');
-                        });
+                        el.classList.add("help");
                     }
                 });
                 modarrNode.forEach(function (item) {
@@ -215,6 +223,8 @@ window.onload = function () {
                         } else if (item.closest(".mMod9")) {
                             reg[0] = "mMod9";
                         }
+
+                        // console.log(reg[0]);
 
                         window.parent.postMessage(reg[0], '*');
 
@@ -257,12 +267,10 @@ window.onload = function () {
                 });
             }
         });
-    }
+    // }
 
     // 아이프레임 실시간 타이핑
     window.addEventListener('message', function (e) {
-        // let split = e.data.split(":")[0];
-        // let txt = e.data.split(":")[1];
         let mod = /mMod[0-9]{1,2}(_[a-z]{1,3}(\d{1,})?)?/g.exec(e.data);
         let txt = /(?<=@@+)(.|\n)*/g.exec(e.data);
         let length;
@@ -271,35 +279,65 @@ window.onload = function () {
 
         switch (mod[0]) {
             case 'mMod0':
-                document.querySelectorAll(".mMod0 h2, .infowindow, .mMod5 .t, .qrbx .mMod0").forEach(function (item) {
+                document.querySelectorAll(".mMod0 h2, .infowindow, .mMod5 .t, .qrbx .mMod0, .mMod0 span, span.mMod0").forEach(function (item) {
                     item.innerText = txt[0];
                 });
-                // document.querySelector(".mMod0 h2").innerText = txt[0], document.querySelector(".infowindow").innerText = txt[0];
                 break;
             case 'mMod3_tit':
-                document.querySelector(".mMod3 span").innerText = txt[0];
+                document.querySelectorAll(".mMod3 span, .mMod3 h2").forEach(function (item) {
+                    item.innerText = txt[0];
+                });
                 break;
             case 'mMod3_txt':
-                document.querySelector(".mMod3 .txt").innerText = txt[0];
+                document.querySelectorAll(".mMod3 .txt").forEach(function (item) {
+                    item.innerText = txt[0];
+                });
                 break;
             case 'mMod5_tx':
-                document.querySelector(".mMod5 .tx").innerText = txt[0];
+                document.querySelectorAll(".mMod5 .tx").forEach(function (item) {
+                    item.innerText = txt[0];
+                });
                 break;
             case 'mMod6_tel':
-                document.querySelector(".mMod6 .tel").innerText = txt[0];
+                document.querySelectorAll(".mMod6 .tel").forEach(function (item) {
+                    item.innerText = txt[0];
+                });
                 break;
             case 'mMod6_txt':
-                document.querySelector(".mMod6 .txt").innerText = txt[0];
+                document.querySelectorAll(".mMod6 .txt").forEach(function (item) {
+                    item.innerText = txt[0];
+                });
                 break;
             case 'mMod10':
-                document.querySelector(".mMod10 a").innerText = txt[0];
+                document.querySelectorAll(".mMod10 a").forEach(function (item) {
+                    item.innerText = txt[0];
+                });
                 break;
         };
+
+        let mod7_Link = [...document.querySelectorAll(".mMod7 a")];
+
+
+        let targetLink = mod7_Link.filter(function (el) {
+            let target = el.getAttribute('target');
+            let display = window.getComputedStyle(el.closest(".mMod7")).display;
+
+            return target === '_blank' && display !== "none";
+        });
+
+        if (document.querySelectorAll(".mMod7 a p").length >= 1) {
+            targetLink = document.querySelectorAll(".mMod7 a p");
+        }
+
+
+        // console.log(targetLink);
 
         if (/mMod4/g.test(mod[0])) {
             length = document.querySelectorAll(".mMod4 .swiper-slide").length;
         } else if (/mMod7/g.test(mod[0])) {
-            length = document.querySelectorAll(".mMod7 a").length;
+            length = targetLink.length;
+        } else if (/mMod9/g.test(mod[0])) {
+            length = document.querySelectorAll(".mMod9 .swiper-slide p").length;
         }
 
         for (let i = 0; i < length; i++) {
@@ -311,9 +349,24 @@ window.onload = function () {
                     document.querySelectorAll(".mMod4 .txt")[i].innerText = txt[0];
                     break;
                 case `mMod7_a${[i]}`:
-                    document.querySelectorAll(".mMod7 a")[i].innerText = txt[0];
+                    targetLink[i].innerText = txt[0];
+                    break;
+                case `mMod9_txt${[i]}`:
+                    document.querySelectorAll(".mMod9 .swiper-slide p")[i].innerText = txt[0];
                     break;
             }
+
+
+
+            //단구조 외 템플릿
+            if (document.querySelectorAll(".lbx .mMod7 a").length >= 1 && mod[0] === `mMod7_a${[i]}`) {
+                document.querySelectorAll(".lbx .mMod7 a")[i].innerText = txt[0];
+            }
+            if (document.querySelectorAll(".mMod9.mobile .swiper-slide p").length >= 1 && mod[0] === `mMod9_txt${[i]}`) {
+                document.querySelectorAll(".mMod9.mobile .swiper-slide p")[i].innerText = txt[0];
+            }
+
+
         }
 
     });

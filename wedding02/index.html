@@ -46,6 +46,7 @@
                 </div>
                 <img src="images/wedding.svg" class="wedding" alt="웨딩 데이">
                 <div class="background" style="background-image: url(images/bg.png);">
+                    <video class="bgvid" src="images/video.mp4" autoplay muted playsinline loop></video>
                     <img src="images/invite.png" class="invite" alt="초대합니다">
                 </div>
                 <div class="mMod3">
@@ -95,9 +96,9 @@
                     </script>
                 </div>
                 <div class="mMod9">
-                    <div class="swiper-slide"><img src="images/xmod1.jpg" alt="사진"></div>
-                    <div class="swiper-slide"><img src="images/xmod2.jpg" alt="사진"></div>
-                    <div class="swiper-slide"><img src="images/xmod3.jpg" alt="사진"></div>
+                    <div class="swiper-slide"><img src="images/xmod1.jpg" alt="사진"><p>테스트</p></div>
+                    <div class="swiper-slide"><img src="images/xmod2.jpg" alt="사진"><p>테스트</p></div>
+                    <div class="swiper-slide"><img src="images/xmod3.jpg" alt="사진"><p>테스트</p></div>
                 </div>
                 <div class="mMod8">
                     <div class="iframebx">
@@ -154,6 +155,9 @@
             <div class="mMod10 web dn">
                 <a href="###">예식장 약도</a>
             </div>
+            <div class="qrbox">
+                <a href="javascript:void(0)" class="btn_QR">QR코드</a>
+            </div>
         </div>
         <div class="mMod11">
             <a href="###" class="facebook">facebook</a>
@@ -194,6 +198,20 @@
             <a href="https://www.hifactory.co.kr/index.asp" class="ico">하이팩토리</a>
             <span class="txt forWeb">하이팩토리 초대공유플랫폼으로 제작된 사이트입니다</span>
         </span>
+    </div>
+
+    <div class="qrpopup" @@DB_DelegateYN@@>
+        <div class="qrbx">
+            <div id="qr"></div>
+            <div class="mMod3">
+                <h2>@@TitleSubject@@</h2>
+            </div>
+            <span class="info">
+                <a href="###" class="save" download="Hifactory_QRcode.png">정보 저장하기</a>
+                <p class="info2">핸드폰 카메라를 켜고 <br> QR 코드에 대보세요.</p>
+            </span>
+            <a href="###" class="btn_close close2">닫기</a>
+        </div>
     </div>
 </body>
 
