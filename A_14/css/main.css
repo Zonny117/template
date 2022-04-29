@@ -140,7 +140,9 @@ h2,
     margin-top: 20px;
 }
 
-.btn_tel {
+.btn_tel,
+.btn_sms,
+.btn_QR {
     display: block;
     width: 210px;
     height: 62px;
@@ -154,7 +156,9 @@ h2,
     margin-top: 30px;
 }
 
-.btn_tel::after {
+.btn_tel::after,
+.btn_QR::after,
+.btn_sms::after {
     content: '';
     display: inline-block;
     background-image: url(../images/arrow_white.svg);
@@ -163,6 +167,10 @@ h2,
     background-size: 100%;
     background-repeat: no-repeat;
     margin-left: 77px;
+}
+
+.btn_sms, .btn_QR{
+    margin-top: 10px;
 }
 
 .mMod5 {
@@ -259,6 +267,7 @@ h2,
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.137);
+    z-index: 1;
 }
 
 .mMod3 h2 {
@@ -398,7 +407,6 @@ h2,
 
 .mMod9 .swiper-container {
     max-width: 1080px;
-    height: 770px;
     overflow: visible;
     margin: 0;
     margin-top: 70px;
@@ -406,8 +414,12 @@ h2,
 
 .mMod9 img {
     width: 100%;
-    height: 100%;
+    height: 770px;
     object-fit: cover;
+}
+
+.mMod9 .swiper-slide p {
+    font-size: 18px;
 }
 
 .pic {
@@ -493,7 +505,7 @@ a.youtube {
     background-image: url(../images/youtube.svg);
 }
 
-.mMod10{
+.mMod10 {
     margin-top: 24px;
 }
 
@@ -580,4 +592,87 @@ a.youtube {
 
 .mMod7 a.hover {
     opacity: 1 !important;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.qrpopup {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 99999;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 2px rgba(160, 160, 160, 0.486);
+}
+
+.qrpopup.on{
+    display: flex;
+}
+
+.qrbx {
+    width: 50%;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.qrbx::-webkit-scrollbar {
+    width: 0;
+}
+
+.qrbx .mMod3{
+    margin-bottom: 0px;
+}
+
+.qrbx .mMod3 h2{
+    margin:0;
+    font-family: 'Noto Sans KR', serif;
+    font-size:22px;
+    width: 100%;
+}
+
+.save {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 20px 0;
+    border-radius: 30px;
+    border: 1px solid #000;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    line-height: 160%;
+}
+
+.info2 {
+    font-size: 16px;
+}
+
+#qr {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    box-sizing: border-box;
+}
+
+#qr img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

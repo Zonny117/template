@@ -20,8 +20,11 @@
     <script src="../common/js/common.js"></script>
     <script src="../common/plugins/swiper/swiper.min.js"></script>
     <script src="js/main.js"></script>
-	<link rel="stylesheet" href="../common/css/guideline.css">
-	<script src="../common/js/control_template.js"></script>
+    <link rel="stylesheet" href="../common/css/guideline.css">
+    <script src="../common/js/control_template.js"></script>
+    <script src="../common/js/jquery-qrcode-0.18.0.min.js"></script>
+    <script src="../common/js/vcardQR.js"></script>
+
 
     <title>우리아이 소아청소년클리닉</title>
 
@@ -92,7 +95,9 @@
                         </p>
                     </div>
                     <div class="default" style="background-image: url(../A_13/images/background.png);"></div>
-                    <div class="background dn" style="background-image: url(../A_13/images/background.png);"></div>
+                    <div class="background dn" style="background-image: url(../A_13/images/background.png);">
+                        <video src="images/video.mp4" loop autoplay muted playsinline></video>
+                    </div>
                     <div class="mMod3 web dn">
                         <h2>우리아이 소아청소년클리닉
                             이가은 원장입니다.</h2>
@@ -115,6 +120,7 @@
                         Email. lge0108@aabbcc.com
                     </div>
                     <a href="tel:010-0000-0000" class="btn_tel">전화 걸기</a>
+                    <a href="javascript:void(0)" class="btn_QR">QR 코드</a>
                 </div>
             </div>
         </div>
@@ -124,9 +130,15 @@
             <div class="mMod9">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/xmod1.png" alt="사진"></div>
-                        <div class="swiper-slide"><img src="images/xmod2.png" alt="사진"></div>
-                        <div class="swiper-slide"><img src="images/xmod3.png" alt="사진"></div>
+                        <div class="swiper-slide"><img src="images/xmod1.png" alt="사진">
+                            <p>테스트입니다.</p>
+                        </div>
+                        <div class="swiper-slide"><img src="images/xmod2.png" alt="사진">
+                            <p>테스트입니다.</p>
+                        </div>
+                        <div class="swiper-slide"><img src="images/xmod3.png" alt="사진">
+                            <p>테스트입니다.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="btnbx">
@@ -286,6 +298,20 @@
             <span class="txt forWeb">하이팩토리 초대공유플랫폼으로 제작된 사이트입니다</span>
         </span>
     </div>
+    <div class="qrpopup" @@DB_DelegateYN@@>
+        <div class="qrbx">
+            <div id="qr"></div>
+            <div class="mMod3">
+                <h2>@@TitleSubject@@</h2>
+            </div>
+            <span class="info">
+                <a href="###" class="save" download="Hifactory_QRcode.png">정보 저장하기</a>
+                <p class="info2">핸드폰 카메라를 켜고 <br> QR 코드에 대보세요.</p>
+            </span>
+            <a href="###" class="btn_close close2">닫기</a>
+        </div>
+    </div>
+
 </body>
 
 </html>

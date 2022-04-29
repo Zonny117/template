@@ -63,12 +63,7 @@ $(function () {
 
     $(".mMod9.web .swiper-slide").click(function () {
 
-
-        // loop 모드 순번 읽어오기 텍스트로 반환됨
-        let idx = $(this).attr("data-swiper-slide-index");
-
-        // 반환된 텍스트 정수로 전환
-        let idx2 = parseInt(idx);
+        let idx = $(this).index();
 
         // console.log(idx)
 
@@ -76,7 +71,7 @@ $(function () {
         let lMod9 = new Swiper(".lMod9 .swiper-container", {
             loop: "true",
             slidesPerView: 1,
-            initialSlide: idx2,
+            initialSlide: idx,
             spaceBetween: 30,
             observer: true,
             observeParents: true

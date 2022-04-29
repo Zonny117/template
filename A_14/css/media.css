@@ -102,7 +102,14 @@
 
     .mMod9 .swiper-container {
         width: 90%;
+    }
+
+    .mMod9 img{
         height: 230px;
+    }
+
+    .mMod9 .swiper-slide p{
+        font-size: 15px;
     }
 
     .btnbx2 {
@@ -167,12 +174,16 @@
         margin-top: 20px;
     }
 
-    .btn_tel {
+    .btn_tel, .btn_QR, .btn_sms {
         width: 200px;
         height: 52px;
         line-height: 52px;
         margin-top: 20px;
         border-radius: 26px;
+    }
+
+    .btn_QR, .btn_sms{
+        margin-top: 10px;
     }
 
     .contact {
@@ -217,5 +228,38 @@
         line-height: 52px;
         margin-top: 25px;
         border-radius: 26px;
+    }
+
+    .qrpopup{
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+ 
+    .qrbx{
+        width: 70%;
+        padding: 20px 0;
+        box-sizing: border-box;
+        max-height: 100%;
+    }
+ 
+    .qrbx .mMod3 h2{
+        font-size: 25px;
+    }
+ 
+    .qrbx .mMod3::after{
+        display: none;
+    }
+ 
+    .close2{
+        top: 30px;
+        left: auto;
+        right: 30px;
+        transform: none;
+        width: 20px;
+        height: 20px;
     }
 }

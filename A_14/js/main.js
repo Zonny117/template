@@ -18,9 +18,10 @@ $(window).on('load', function () {
         $(".default").css({
             display: "block"
         })
-    } else {
-        $(".default").remove();
-    }
+    } 
+    // else {
+    //     $(".default").remove();
+    // }
 
     let maintitle = $(".maintitlebx .dn").filter(function () {
         return $(this).css('display') === "none"
@@ -206,7 +207,7 @@ $(window).on('load', function () {
         $(".topmenu, html, body").addClass("on");
     });
 
-    $(".btn_close").click(function () {
+    $(".close1").click(function () {
         $(".topmenu, html, body").removeClass("on");
     });
 
@@ -243,10 +244,19 @@ $(window).on('load', function () {
             enable();
         })
 
-        $(".btn_close, .btn_close2").click(function () {
+        $(".close1, .btn_close2").click(function () {
             disable();
         })
     }
+
+
+    $(".btn_QR").click(function () {
+        $(".qrpopup").addClass("on");
+    });
+
+    $(".close2").click(function () {
+        $(".qrpopup").removeClass("on");
+    });
 
 
     //gnb

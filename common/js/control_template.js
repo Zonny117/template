@@ -153,16 +153,16 @@ function stopKakaoScroll(target, option) {
 // 수정페이지 가이드라인
 window.onload = function () {
 
-    let background = document.querySelectorAll(".background");
+    // let background = document.querySelectorAll(".background");
 
-    background.forEach(function (item) {
-        // let cover = document.createElement("div");
-        // cover.className = "bg_cover";
-        // item.append(cover);
-        setTimeout(function () {
-            item.style.opacity = 1
-        }, 100);
-    });
+    // background.forEach(function (item) {
+    //     // let cover = document.createElement("div");
+    //     // cover.className = "bg_cover";
+    //     // item.append(cover);
+    //     setTimeout(function () {
+    //         item.style.opacity = 1
+    //     }, 100);
+    // });
 
 
     // 레이아웃 표시 기능
@@ -359,13 +359,33 @@ window.onload = function () {
 
 
             //단구조 외 템플릿
+            if (document.querySelectorAll(".wrapmobile").length >= 1) {
+                switch (mod[0]) {
+                    case `mMod4_tit${[i]}`:
+                        document.querySelectorAll(".wrapmobile .mMod4 .tit")[i].innerText = txt[0];
+                        break;
+                    case `mMod4_txt${[i]}`:
+                        document.querySelectorAll(".wrapmobile .mMod4 .txt")[i].innerText = txt[0];
+                        break;
+                    case `mMod7_a${[i]}`:
+                        document.querySelectorAll(".wrapmobile .mMod7 a")[i].innerText = txt[0];
+                        break;
+                }
+            }
+
             if (document.querySelectorAll(".lbx .mMod7 a").length >= 1 && mod[0] === `mMod7_a${[i]}`) {
                 document.querySelectorAll(".lbx .mMod7 a")[i].innerText = txt[0];
             }
             if (document.querySelectorAll(".mMod9.mobile .swiper-slide p").length >= 1 && mod[0] === `mMod9_txt${[i]}`) {
                 document.querySelectorAll(".mMod9.mobile .swiper-slide p")[i].innerText = txt[0];
             }
-
+            if (document.querySelectorAll(".mMod4.mobile .swiper-slide").length >= 1) {
+                if (mod[0] === `mMod4_tit${[i]}`) {
+                    document.querySelectorAll(".mMod4.mobile .tit")[i].innerText = txt[0];
+                } else if (mod[0] === `mMod4_txt${[i]}`) {
+                    document.querySelectorAll(".mMod4.mobile .txt")[i].innerText = txt[0];
+                }
+            }
 
         }
 

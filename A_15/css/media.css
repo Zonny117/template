@@ -19,6 +19,7 @@
         color: #fff;
         padding: 40px;
         box-sizing: border-box;
+        z-index: 1;
     }
 
     .mMod1 {
@@ -47,10 +48,8 @@
     .btn_tel,
     .btn_sms {
         margin-top: 15px;
-    }
-
-    .btn_tel {
         margin-right: 10px;
+
     }
 
     .contentm {
@@ -147,18 +146,15 @@
         box-sizing: border-box;
     }
 
-    .mMod9 .swiper-container {
-        height: 0;
-        padding-top: 100%;
+
+    .mMod9 img{
+        height: 300px;
     }
 
-    .mMod9 .swiper-wrapper {
-        position: absolute;
-        top: 0;
-        left: 0;
+    .mMod9 .swiper-slide p{
+        color: #fff;
+        -webkit-line-clamp: unset;
     }
-
-
 
     .mag {
         display: none;
@@ -303,6 +299,40 @@
 
     ::-webkit-scrollbar{
         width: 0;
+    }
+
+
+    .qrpopup{
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+ 
+    .qrbx{
+        width: 70%;
+        padding: 20px 0;
+        box-sizing: border-box;
+        max-height: 100%;
+    }
+ 
+    .qrbx .mMod3 h2{
+        font-size: 25px;
+    }
+ 
+    .qrbx .mMod3::after{
+        display: none;
+    }
+ 
+    .close2{
+        top: 30px;
+        left: auto;
+        right: 30px;
+        transform: none;
+        width: 40px;
+        height: 40px;
     }
 
 }

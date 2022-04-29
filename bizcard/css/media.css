@@ -64,6 +64,7 @@
         font-weight: 400;
         position: relative;
         color: #fff;
+        z-index: 1;
     }
 
     .content {
@@ -74,6 +75,7 @@
         border-radius: 20px 20px 0 0;
         background-color: #fff;
         text-align: center;
+        z-index: 1;
     }
 
     .mMod1 {
@@ -167,8 +169,6 @@
     .mMod9 .swiper-container {
         position: relative;
         width: 90%;
-        height: 0%;
-        padding-top: 70%;
         overflow: unset;
     }
 
@@ -181,17 +181,19 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.164);
         background-color: #fff;
     }
+    
+    .mMod9 .swiper-slide img{
+        height: 300px;
+    }
 
-    .mMod9 .swiper-wrapper{
-        position: absolute;
-        top: 0;
-        left: 0;
+    .mMod9 .swiper-slide p{
+        font-size: 15px;
     }
 
     .mag {
         position: absolute;
         right: 20px;
-        bottom: 20px;
+        top: 300px;
         font-size: 0;
         text-indent: -9999px;
         background-image: url(../images/mag.png);

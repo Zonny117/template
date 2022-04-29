@@ -143,8 +143,17 @@
 
     .mMod9 .swiper-container {
         width: 90%;
+    }
+
+    .mMod9 img{
         height: 220px;
     }
+
+    .mMod9 .swiper-slide p{
+        padding: 10px;
+        font-size: 14px;
+    }
+    
 
     .picbx,
     .mMod8 {
@@ -293,7 +302,7 @@
 
 
     .mag {
-        bottom: 15px;
+        top: 178px;
         left: 15px;
         width: 30px;
         height: 30px;

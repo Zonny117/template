@@ -240,6 +240,7 @@ a.youtube {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.274);
+    z-index: 1;
 }
 
 .linkbx {
@@ -345,7 +346,6 @@ a.youtube {
 .mMod9 {
     position: relative;
     width: 700px;
-    height: 400px;
     background-color: #fff;
     border-radius: 30px;
     padding: 40px 0;
@@ -360,9 +360,14 @@ a.youtube {
 
 .mMod9 img {
     width: 100%;
-    height: 100%;
+    height: 400px;
     object-fit: cover;
     border-radius: 20px;
+}
+
+.mMod9 .swiper-slide p{
+    margin-top: 20px;
+    font-size: 20px;
 }
 
 
@@ -584,7 +589,7 @@ iframe {
     box-shadow: 0 0 4px 2px rgba(160, 160, 160, 0.486);
 }
 
-.qrpopup.on{
+.qrpopup.on {
     display: flex;
 }
 
@@ -599,11 +604,11 @@ iframe {
     width: 0;
 }
 
-.qrbx .mMod3{
+.qrbx .mMod3 {
     margin-bottom: 0px;
 }
 
-.qrbx .mMod3 h2{
+.qrbx .mMod3 h2 {
     margin-bottom: 0px;
 }
 
@@ -637,4 +642,13 @@ iframe {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

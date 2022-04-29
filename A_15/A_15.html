@@ -18,9 +18,11 @@
     <script src="../common/js/common.js"></script>
     <script src="../common/plugins/swiper/swiper.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	<link rel="stylesheet" href="../common/css/guideline.css">
-	<script src="../common/js/control_template.js"></script>
+    <link rel="stylesheet" href="../common/css/guideline.css">
+    <script src="../common/js/control_template.js"></script>
     <script src="js/main.js"></script>
+    <script src="../common/js/jquery-qrcode-0.18.0.min.js"></script>
+    <script src="../common/js/vcardQR.js"></script>
 
     <title>Document</title>
 </head>
@@ -28,7 +30,9 @@
 <body>
     <div id="wrap">
         <div class="mMod2">
-            <div class="background" style="background-image: url(images/bg.jpg);"></div>
+            <div class="background" style="background-image: url(images/bg.jpg);">
+                <video src="images/video.mp4" loop autoplay muted playsinline></video>
+            </div>
         </div>
 
         <div class="content web">
@@ -49,6 +53,7 @@
                                     EMAIL. kim0308@google.com
                                 </div>
                                 <a href="tel:010-0000-0000" class="btn_tel">전화 연결</a>
+                                <a href="javascript:void(0)" class="btn_QR">QR 코드</a>
                             </div>
                         </div>
                         <div class="mMod11">
@@ -86,9 +91,15 @@
                             </div>
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img src="images/xmod1.png" alt="사진"></div>
-                                    <div class="swiper-slide"><img src="images/xmod2.png" alt="사진"></div>
-                                    <div class="swiper-slide"><img src="images/xmod3.png" alt="사진"></div>
+                                    <div class="swiper-slide"><img src="images/xmod1.png" alt="사진">
+                                        <p>테스트입니다. <br> 테스트입니다. 테스트입니다. <br> 테스트입니다. <br> 테스트입니다.</p>
+                                    </div>
+                                    <div class="swiper-slide"><img src="images/xmod2.png" alt="사진">
+                                        <p>테스트입니다.</p>
+                                    </div>
+                                    <div class="swiper-slide"><img src="images/xmod3.png" alt="사진">
+                                        <p>테스트입니다.</p>
+                                    </div>
                                 </div>
                             </div>
                             <a href="###" class="mag">크게 보기</a>
@@ -196,7 +207,8 @@
                         <div class="mMod5 maptarget">
                             <div class="section_txt address maptarget">ADDRESS.</div>
                             <div class="gMap maptarget">
-                                <div id="mapweb" class="map maptarget" style="background-image:url(images/map.png);"></div>
+                                <div id="mapweb" class="map maptarget" style="background-image:url(images/map.png);">
+                                </div>
                             </div>
                             <div class="txtbx maptarget">
                                 <strong class="t maptarget">ARRI STUDIO</strong>
@@ -207,7 +219,7 @@
                                     <div class="tx maptarget">
                                         서울 강동구 강일동 677 포스코포디움1동 1021호 <br>
                                         [오시는 길] <br>
-                     
+
                                         미사역 6번 출구에서 신한은행 방향 5분
                                     </div>
                                 </div>
@@ -237,6 +249,7 @@
                 </div>
                 <a href="tel:010-0000-0000" class="btn_tel">전화 연결</a>
                 <a href="sms:010-0000-0000" class="btn_sms">문자 보내기</a>
+                <a href="javascript:void(0)" class="btn_QR">QR 코드</a>
             </div>
         </div>
         <div class="contentm">
@@ -264,9 +277,15 @@
                     </div>
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="images/xmod1.png" alt="사진"></div>
-                            <div class="swiper-slide"><img src="images/xmod2.png" alt="사진"></div>
-                            <div class="swiper-slide"><img src="images/xmod3.png" alt="사진"></div>
+                            <div class="swiper-slide"><img src="images/xmod1.png" alt="사진">
+                                <p>테스트입니다.</p>
+                            </div>
+                            <div class="swiper-slide"><img src="images/xmod2.png" alt="사진">
+                                <p>테스트입니다.</p>
+                            </div>
+                            <div class="swiper-slide"><img src="images/xmod3.png" alt="사진">
+                                <p>테스트입니다.</p>
+                            </div>
                         </div>
                     </div>
                     <a href="###" class="mag">크게 보기</a>
@@ -430,6 +449,20 @@
                 });
             });
         </script>
+    </div>
+
+    <div class="qrpopup" @@DB_DelegateYN@@>
+        <div class="qrbx">
+            <div id="qr"></div>
+            <div class="mMod3">
+                <h2>@@TitleSubject@@</h2>
+            </div>
+            <span class="info">
+                <a href="###" class="save" download="Hifactory_QRcode.png">정보 저장하기</a>
+                <p class="info2">핸드폰 카메라를 켜고 <br> QR 코드에 대보세요.</p>
+            </span>
+            <a href="###" class="btn_close close2">닫기</a>
+        </div>
     </div>
 </body>
 

@@ -59,7 +59,7 @@
     .mMod7 a+a {
         margin-top: 30px;
     }
-    
+
     .mMod10 a {
         padding-top: 43px;
         margin-top: 50px;
@@ -198,7 +198,8 @@
         font-size: 14px;
     }
 
-    .btn_tel {
+    .btn_tel,
+    .btn_QR {
         font-size: 13px;
         width: 60px;
         height: 60px;
@@ -208,11 +209,16 @@
         right: 20px;
     }
 
-    .btn_tel::after {
+    .btn_tel::after,
+    .btn_QR::after {
         width: 10px;
         height: 10px;
         top: 9px;
         right: 9px;
+    }
+
+    .btn_QR {
+        right: 90px;
     }
 
     .white {
@@ -223,8 +229,12 @@
         padding-bottom: 139px;
     }
 
-    .mMod9 .swiper-container {
+    .mMod9 img {
         height: 355px;
+    }
+
+    .mMod9 .swiper-slide p{
+        font-size: 15px;
     }
 
     .mMod4 {
@@ -612,10 +622,42 @@
         display: block;
     }
 
-    .gnb.fixed{
+    .gnb.fixed {
         position: fixed;
     }
 
+    .qrpopup{
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+ 
+    .qrbx{
+        width: 70%;
+        padding: 20px 0;
+        box-sizing: border-box;
+        max-height: 100%;
+    }
+ 
+    .qrbx .mMod3 h2{
+        font-size: 25px;
+    }
+ 
+    .qrbx .mMod3::after{
+        display: none;
+    }
+ 
+    .close2{
+        top: 30px;
+        left: auto;
+        right: 30px;
+        transform: none;
+        width: 40px;
+        height: 40px;
+    }
 }
 
 @media only screen and (max-width:540px) {

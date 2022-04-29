@@ -327,7 +327,7 @@ $(function () {
 
     });
 
-    $(".btn_close").click(function () {
+    $(".close1").click(function () {
         $(".topmenu, html, body").removeClass("on");
 
         if (iOS) {
@@ -368,4 +368,13 @@ $(function () {
             disable();
         }
     });
+
+    $(".btn_QR").click(function () {
+        $(".qrpopup").addClass("on");
+    });
+
+    $(".close2").click(function () {
+        $(".qrpopup").removeClass("on");
+    });
+
 });
