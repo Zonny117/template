@@ -20,8 +20,10 @@
     <script src="../common/js/common.js"></script>
     <script src="../common/plugins/swiper/swiper.min.js"></script>
     <script src="js/main.js"></script>
-	<link rel="stylesheet" href="../common/css/guideline.css">
-	<script src="../common/js/control_template.js"></script>
+    <link rel="stylesheet" href="../common/css/guideline.css">
+    <script src="../common/js/control_template.js"></script>
+    <script src="../common/js/jquery-qrcode-0.18.0.min.js"></script>
+    <script src="../common/js/vcardQR.js"></script>
 
     <title>북하우스 정유경 팀장</title>
 </head>
@@ -61,8 +63,8 @@
                 <div class="mMod6">
                     <span class="contact_section_txt linetxt">contact</span>
                     <div class="tit">
-                        <strong><a href="tel:010-1587-2587" class="tel">010-1587-2587</a></strong> <br>
-                        <!-- <strong><a href="###" class="save">번호 저장</a></strong> -->
+                        <strong><a href="tel:010-1587-2587" class="tel">010-1587-2587</a></strong> 
+                        <a href="javascript:void(0)" class="btn_QR">QR 코드</a>
                     </div>
                     <div class="txt">jyk1234@book.com</div>
                 </div>
@@ -83,6 +85,7 @@
         <div class="mMod2 page">
             <a href="###" class="scrollDown">스크롤 다운</a>
             <div class="background" style="background-image: url(../A_8/images/background.jpg);">
+                <video src="images/video.mp4" loop autoplay playsinline muted></video>
             </div>
             <div class="maintitle">
                 <div class="mMod0">
@@ -248,15 +251,22 @@
                 <a href="###" class="mag forMobile">크게 보기</a>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/xmod01.jpg" alt="플로리스트"></div>
-                        <div class="swiper-slide"><img src="images/xmod02.jpg" alt="플로리스트"></div>
-                        <div class="swiper-slide"><img src="images/xmod03.jpg" alt="플로리스트"></div>
+                        <div class="swiper-slide"><img src="images/xmod01.jpg" alt="플로리스트">
+                            <p>테스트입니다. <br>테스트입니다. <br>테스트입니다. <br>테스트입니다. <br>테스트입니다. <br></p>
+                        </div>
+                        <div class="swiper-slide"><img src="images/xmod02.jpg" alt="플로리스트">
+                            <p>테스트입니다.</p>
+                        </div>
+                        <div class="swiper-slide"><img src="images/xmod03.jpg" alt="플로리스트">
+                            <p>테스트입니다.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="swiper-scrollbar"></div>
 
                 <script>
                     var mMod9 = new Swiper(".mMod9 .swiper-container", {
+                        autoHeight: true,
                         slidesPerView: 1,
                         scrollbar: {
                             el: ".mMod9 .swiper-scrollbar",
@@ -275,7 +285,8 @@
                             prevEl: ".mMod9 .swiper-button-prev",
                         },
                         observer: true,
-                        observeParents: true
+                        observeParents: true,
+                        spaceBetween: 30,
                     });
                 </script>
             </div>
@@ -374,6 +385,19 @@
                     observeParents: true
                 });
             </script>
+        </div>
+        <div class="qrpopup" @@DB_DelegateYN@@>
+            <div class="qrbx">
+                <div id="qr"></div>
+                <div class="mMod3">
+                    <h2>@@TitleSubject@@</h2>
+                </div>
+                <span class="info">
+                    <a href="###" class="save" download="Hifactory_QRcode.png">정보 저장하기</a>
+                    <p class="info2">핸드폰 카메라를 켜고 <br> QR 코드에 대보세요.</p>
+                </span>
+                <a href="###" class="btn_close close2">닫기</a>
+            </div>
         </div>
     </div>
 </body>

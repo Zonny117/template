@@ -2,7 +2,7 @@
 
 @media only screen and (max-width:850px) {
 
-    .mMod5.on{
+    .mMod5.on {
         display: none !important;
     }
 
@@ -66,12 +66,6 @@
         position: sticky;
         position: -webkit-sticky;
     } */
-
-
-
-    .mMod2 {
-        height: calc(100% - 50px);
-    }
 
     .mMod1 {
         width: 36px;
@@ -168,7 +162,9 @@
         font-size: 15px;
     }
 
-    .btn_tel {
+    .btn_tel,
+    .btn_QR {
+        display: inline-block;
         width: 46px;
         height: 46px;
         font-size: 0;
@@ -179,8 +175,14 @@
         background-repeat: no-repeat;
     }
 
-    .btn_tel::before {
+    .btn_tel::before,
+    .btn_QR::before {
         display: none;
+    }
+
+    .btn_QR {
+        background-image: url(../images/btn_QR.svg);
+        margin-left: 10px;
     }
 
     .contact {
@@ -234,22 +236,13 @@
         height: 100%;
     }
 
-    .mMod9 {
-        height: 0;
-        padding-top: 100%;
-        margin-top: 10px;
+    .mMod9 .swiper-slide img {
+        height: 300px;
     }
 
-    .mMod9 .swiper-container {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
+    .mMod9 .swiper-slide p {
+        font-size: 14px;
     }
-
 
     .mMod4 .tit {
         font-size: 20px;
@@ -366,5 +359,38 @@
 
     .lMod9 .btn_close {
         left: 88%;
+    }
+
+    .qrpopup {
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .qrbx {
+        width: 70%;
+        padding: 20px 0;
+        box-sizing: border-box;
+        max-height: 100%;
+    }
+
+    .qrbx .mMod3 h2 {
+        font-size: 25px;
+    }
+
+    .qrbx .mMod3::after {
+        display: none;
+    }
+
+    .close2 {
+        top: 30px;
+        left: auto;
+        right: 30px;
+        transform: none;
+        width: 40px;
+        height: 40px;
     }
 }

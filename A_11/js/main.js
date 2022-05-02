@@ -274,4 +274,21 @@ $(function () {
                 break;
         }
     }
+
+
+    $(".btn_QR").click(function () {
+        $("html, body, .qrpopup").addClass("on");
+
+        if (iOS) {
+            enable();
+        }
+    });
+
+    $(".close2").click(function () {
+        $(".qrpopup, html, body").removeClass("on");
+
+        if (iOS) {
+            disable();
+        }
+    });
 })

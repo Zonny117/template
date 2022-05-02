@@ -160,7 +160,7 @@
     /* 메인 타이틀 박스 */
     .lbx {
         position: absolute;
-        bottom: 0;
+        bottom: 60px;
         top: unset;
         left: unset;
         width: 100%;
@@ -172,6 +172,7 @@
         overflow: unset;
         transition: none;
         max-height: unset;
+        z-index: 1000;
     }
 
     .modbg {
@@ -199,8 +200,8 @@
 
     /* 하단 메뉴바///////////////////////////////////////// */
     .content {
-        /* position: absolute; */
-        /* bottom: 0; */
+        position: absolute;
+        bottom: 0;
         padding: unset;
         border-radius: 15px 15px 0 0;
         width: 100%;
@@ -309,6 +310,10 @@
         z-index: 999;
     }
 
+    .hidden_wrap.on {
+        z-index: 1000;
+    }
+
     .hidden_sbx {
         position: absolute;
         border-radius: 15px 15px 0 0 !important;
@@ -360,7 +365,7 @@
 
 
     /* 메뉴1 - 다운로드 */
-    .mMod10{
+    .mMod10 {
         margin: 0;
         margin-bottom: 30px;
     }
@@ -573,29 +578,30 @@
     }
 
 
-    .btn_slide{
+    .btn_slide {
         display: none;
     }
 
-    .lbxwrap{
+    .lbxwrap {
         position: unset;
         top: unset;
         left: unset;
         transform: unset;
         padding: unset;
-        width:auto;
+        width: auto;
         background-color: unset;
         border-radius: unset;
         transition: none;
     }
-    
-    .lbxwrap.on{
+
+    .lbxwrap.on {
         left: auto;
     }
 
     /* 상단 아이콘 */
     .btn_top,
-    .btn_tel {
+    .btn_tel,
+    .btn_QR.forMobile {
         display: block;
         z-index: 9999;
         transition: .5s;
@@ -603,7 +609,8 @@
 
     .btn_top.on,
     .btn_tel.on,
-    .mMod1.on {
+    .mMod1.on,
+    .btn_QR.forMobile.on {
         opacity: 0;
         z-index: 0;
     }
@@ -620,6 +627,60 @@
 
     .btn_tel a {
         background: url(../images/tel_ico.png) no-repeat center/50px 50px;
+    }
+
+
+    .btn_QR {
+        z-index: 9999;
+        font-size: 0;
+        text-indent: -9999px;
+        background-color: unset;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        background: url(../images/btn_QR.svg) no-repeat center/50%;
+        margin-left: 15px;
+    }
+
+    .btn_QR::before {
+        display: none;
+    }
+
+    .qrpopup {
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .qrbx {
+        width: 70%;
+        padding: 20px 0;
+        box-sizing: border-box;
+        max-height: 100%;
+    }
+
+    .qrbx .mMod3 h2 {
+        font-size: 25px;
+        color: #000;
+        width: 100%;
+    }
+
+    .qrbx .mMod3::after {
+        display: none;
+    }
+
+    .close2 {
+        top: 30px;
+        left: auto;
+        right: 30px;
+        transform: none;
+        width: 40px;
+        height: 40px;
     }
 }
 

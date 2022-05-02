@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/skin.css" type="text/css">
     <link rel="stylesheet" href="css/media.css" type="text/css">
     <link rel="shortcut icon" href="/common/images/favicon.ico" type="images/x-icon">
-    
+
 
 
     <script src="../common/js/jquery-1.11.3.min.js"></script>
@@ -24,9 +24,10 @@
     <script src="../common/js/common.js"></script>
     <script src="js/main.js"></script>
 
-	<link rel="stylesheet" href="../common/css/guideline.css">
-	<script src="../common/js/control_template.js"></script>
-
+    <link rel="stylesheet" href="../common/css/guideline.css">
+    <script src="../common/js/control_template.js"></script>
+    <script src="../common/js/jquery-qrcode-0.18.0.min.js"></script>
+    <script src="../common/js/vcardQR.js"></script>
 
     <title>랜드로버</title>
 </head>
@@ -63,6 +64,7 @@
                     <div class="tit">
                         <strong><a href="tel:010-1587-2587" class="tel">010-1587-2587</a></strong> <br>
                         <strong><a href="tel:010-1587-2587" class="tel2">전화 걸기</a></strong> <br>
+                        <a href="javascript:void(0)" class="btn_QR">QR 코드</a>
                         <!-- <strong><a href="###" class="save">전화번호 저장</a></strong> -->
                     </div>
                     <div class="txt">
@@ -92,6 +94,7 @@
                 <div class="tit">
                     <strong><a href="tel:010-1587-2587" class="tel">010-1587-2587</a></strong> <br>
                     <strong><a href="tel:010-1587-2587" class="tel2">전화 걸기</a></strong>
+                    <a href="javascript:void(0)" class="btn_QR">QR 코드</a>
                     <!-- <strong><a href="###" class="save">전화번호 저장</a></strong> -->
                 </div>
                 <div class="txt">
@@ -146,6 +149,7 @@
             <div class="mMod2">
                 <div class="background">
                     <img src="images/background.png" alt="배경사진">
+                    <video src="images/video.mp4" autoplay loop muted playsinline></video>
                     <a href="###" class="btn_fold forWeb">사진 펼치기</a>
                 </div>
             </div>
@@ -225,7 +229,6 @@
                 <script>
                     var mMod4 = new Swiper(".mMod4.forWeb .swiper-container", {
                         autoHeight: true,
-                        loop: true,
                         pagination: {
                             el: ".swiper-pagination",
                             type: "fraction",
@@ -238,7 +241,7 @@
                 </script>
             </div>
 
-            <div class="mMod4 forMobile">
+            <div class="mMod4 forMobile mobile">
                 <span class="sub_section_txt linetxt">sub</span>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
@@ -312,7 +315,6 @@
                 <script>
                     var mMod4 = new Swiper(".mMod4.forMobile .swiper-container", {
                         autoHeight: true,
-                        loop: true,
                         slidesPerView: 1,
                         spaceBetween: 30,
                         pagination: {
@@ -334,12 +336,15 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="images/x_mod9_01.png" alt="랜드로버">
+                            <p>테스트입니다.</p>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/x_mod9_02.png" alt="랜드로버">
+                            <p>테스트입니다.</p>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/x_mod9_03.png" alt="랜드로버">
+                            <p>테스트입니다.</p>
                         </div>
                     </div>
                 </div>
@@ -349,7 +354,6 @@
                         let num = $(".mMod9.forWeb .swiper-slide").length;
 
                         var mMod9 = new Swiper(".mMod9.forWeb .swiper-container", {
-                            loop: true,
                             // autoplay: {
                             //     delay: 3500,
                             //     disableOnInteraction: false,
@@ -361,19 +365,22 @@
                     })
                 </script>
             </div>
-            <div class="mMod9 forMobile">
+            <div class="mMod9 forMobile mobile">
                 <a href="###" class="mag">크게 보기</a>
                 <span class="pic_section_txt linetxt">pic</span>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="images/x_mod9_01.png" alt="랜드로버">
+                            <p>테스트입니다.</p>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/x_mod9_02.png" alt="랜드로버">
+                            <p>테스트입니다.</p>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/x_mod9_03.png" alt="랜드로버">
+                            <p>테스트입니다.</p>
                         </div>
                     </div>
                     <div class="swiper-button-next"></div>
@@ -382,7 +389,6 @@
                 </div>
                 <script>
                     var mMod9 = new Swiper(".mMod9.forMobile .swiper-container", {
-                        loop: true,
                         // autoplay: {
                         //     delay: 3500,
                         //     disableOnInteraction: false,
@@ -425,7 +431,7 @@
         </div>
     </div>
     <div id="jsMod9" class="lMod9 forWeb">
-        <a href="###" class="btn_close">레이어 닫기</a>
+        <a href="###" class="btn_close close1">레이어 닫기</a>
         <div class="modBg">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
@@ -446,7 +452,7 @@
         </div>
     </div>
     <div id="jsMod9" class="lMod9 forMobile">
-        <a href="###" class="btn_close">레이어 닫기</a>
+        <a href="###" class="btn_close close1">레이어 닫기</a>
         <div class="modBg">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
@@ -510,6 +516,19 @@
             <span class="txt">하이팩토리 초대공유플랫폼으로 제작된 사이트입니다</span>
         </span>
     </div>
+
+    <div class="qrpopup" @@DB_DelegateYN@@>
+        <div class="qrbx">
+            <div id="qr"></div>
+            <div class="mMod3">
+                <h2>@@TitleSubject@@</h2>
+            </div>
+            <span class="info">
+                <a href="###" class="save" download="Hifactory_QRcode.png">정보 저장하기</a>
+                <p class="info2">핸드폰 카메라를 켜고 <br> QR 코드에 대보세요.</p>
+            </span>
+            <a href="###" class="btn_close close2">닫기</a>
+        </div>
     </div>
 </body>
 

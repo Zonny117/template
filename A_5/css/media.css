@@ -3,11 +3,11 @@
 @import url(../css/msky.css);
 
 @media only screen and (max-width:850px) {
-    .forWeb{
+    .forWeb {
         display: none;
     }
 
-    .forMobile{
+    .forMobile {
         display: block;
     }
 
@@ -43,6 +43,7 @@
         left: unset;
         padding: 20px;
         box-sizing: border-box;
+        z-index: 2;
     }
 
     /* 로고 */
@@ -55,7 +56,7 @@
         margin-bottom: 20px;
     }
 
-    .mMod1 img{
+    .mMod1 img {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -75,7 +76,7 @@
 
     }
 
-    .mMod3.forMobile{
+    .mMod3.forMobile {
         display: -webkit-box;
         -webkit-line-clamp: 7;
         -webkit-box-orient: vertical;
@@ -118,7 +119,7 @@
         left: 20px;
     } */
 
-    .flex{
+    .flex {
         bottom: 20px;
         left: 20px;
     }
@@ -166,7 +167,7 @@
         text-indent: -9999px;
         width: 80px;
         height: 80px;
-        z-index: 2;
+        z-index: 5;
         transition: opacity .6s;
 
         animation: menu_slide 1s ease-in-out infinite alternate;
@@ -368,18 +369,21 @@
 
 
     /* 다운로드 */
-    .mMod10 a {
+    .mMod10 a,
+    .qrbox a {
         text-align: left;
         padding-left: 20px;
         font-size: 16px;
         font-weight: 300;
     }
 
-    .mMod10 a::before {
+    .mMod10 a::before,
+    .qrbox a::before {
         display: none;
     }
 
-    .mMod10 a::after {
+    .mMod10 a::after,
+    .qrbox a::after {
         content: url(../images/ico_mod10.png);
         position: absolute;
         right: 20px;
@@ -389,7 +393,7 @@
     /* 사진 */
     .btn_more_m {
         position: absolute;
-        bottom: 10px;
+        top: 160px;
         right: 10px;
         width: 55px;
         z-index: 99;
@@ -495,7 +499,7 @@
 
     .mMod6 a {
         display: block;
-        font-size: 18px;
+        font-size: 16px;
         color: #fff;
     }
 
@@ -541,8 +545,12 @@
 
     }
 
-    .mMod9{
+    .mMod9 {
         margin: 40px 0;
+    }
+
+    .mMod9 .swiper-slide p {
+        color: #fff;
     }
 
 
@@ -582,6 +590,43 @@
         border-radius: unset !important;
     }
 
+    .qrpopup{
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+ 
+    .qrbx{
+        width: 70%;
+        padding: 20px 0;
+        box-sizing: border-box;
+        max-height: 100%;
+    }
+
+    .qrbx .mMod3{
+        position: static;
+    }
+ 
+    .qrbx .mMod3 h2{
+        font-size: 25px;
+    }
+ 
+    .qrbx .mMod3::after{
+        display: none;
+    }
+ 
+    .close2{
+        top: 30px;
+        left: auto;
+        right: 30px;
+        transform: none;
+        width: 40px;
+        height: 40px;
+    }
+
 }
 
 @media only screen and (max-height:375px) {
@@ -603,19 +648,19 @@
 }
 
 @media (orientation: landscape) and (max-width:850px) {
-    .mMod2 .modBg{
+    .mMod2 .modBg {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
     }
 
-    .mMod3{
+    .mMod3 {
         position: static;
         margin-top: unset;
     }
 
 
-    .connectbx{
+    .connectbx {
         display: none;
     }
 }

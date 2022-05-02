@@ -11,11 +11,11 @@
 @media only screen and (max-width:1366px) {
 
 
-    .forWeb{
+    .forWeb {
         display: none;
     }
 
-    .forMobile{
+    .forMobile {
         display: block;
     }
 
@@ -121,8 +121,8 @@
 
 
 
-    
-    .btn_close{
+
+    .btn_close {
         background-size: 20px 20px;
     }
 
@@ -175,7 +175,7 @@
         line-height: 160%;
     }
 
-    .btn_tel.forMobile{
+    .btn_tel.forMobile {
         position: static;
         width: 60px;
         height: 60px;
@@ -252,7 +252,7 @@
         font-weight: 200;
     }
 
-    .content{
+    .content {
         padding-top: 103px;
         box-sizing: border-box;
     }
@@ -272,7 +272,7 @@
         font-size: 24px;
     }
 
-    .mMod4 .txt{
+    .mMod4 .txt {
         margin-top: 40px;
     }
 
@@ -306,7 +306,8 @@
         overflow-y: unset;
     }
 
-    .mMod4 .swiper-button-next,.mMod4 .swiper-button-prev{
+    .mMod4 .swiper-button-next,
+    .mMod4 .swiper-button-prev {
         top: 80px;
     }
 
@@ -314,7 +315,7 @@
 
 
     .mMod9 {
-        position: unset;
+        position: relative;
         height: auto;
         padding: 40px 20px;
         box-sizing: border-box;
@@ -325,25 +326,22 @@
     .mMod9 .swiper-container {
         position: relative;
         width: 100%;
-        height: 0;
         top: auto;
         left: auto;
         transform: none;
-        padding-top: 90%;
     }
 
-    .mMod9 .swiper-wrapper {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-
-    }
 
     .mMod9 .swiper-slide {
-        height: 100%;
         width: 100% !important;
+    }
+
+    .mMod9 .swiper-slide img {
+        height: 300px;
+    }
+
+    .mMod9 .swiper-slide p {
+        -webkit-line-clamp: unset;
     }
 
     .mag {
@@ -468,31 +466,33 @@
         box-sizing: border-box;
     }
 
-    .flex{
+    .flex {
         width: 100%;
         position: static;
         transform: none;
         flex-direction: column;
     }
 
-    .flex .linetxt{
+    .flex .linetxt {
         font-size: 16px;
     }
-    
-    .mMod7{
+
+    .mMod7 {
         margin-bottom: 58px;
     }
 
-    .mMod7 a, .mMod10 a{
+    .mMod7 a,
+    .mMod10 a {
         color: #fff;
         font-size: 16px;
     }
 
-    .mMod7 a::after, .mMod10 a::after{
+    .mMod7 a::after,
+    .mMod10 a::after {
         opacity: 1;
     }
 
-    .flex .btn_tel{
+    .flex .btn_tel {
         position: static;
         display: inline-block;
         width: 60px;
@@ -536,30 +536,30 @@
 
 
     .qrpopup {
-		top: 0;
-		left: 0;
-		transform: none;
-		width: 100%;
-		height: 100%;
-		border-radius: 0;
-	}
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
 
-	.qrbx {
-		width: 70%;
-		padding: 20px 0;
-		box-sizing: border-box;
-		max-height: 100%;
-	}
+    .qrbx {
+        width: 70%;
+        padding: 20px 0;
+        box-sizing: border-box;
+        max-height: 100%;
+    }
 
-    .info1{
+    .info1 {
         font-size: 25px;
     }
-    
-    .save{
+
+    .save {
         font-size: 16px;
     }
 
-    .info2{
+    .info2 {
         font-size: 14px;
     }
 

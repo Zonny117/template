@@ -36,14 +36,14 @@ $(function () {
         })
     }
 
-    let lbx = $(".lbx .dn").filter(function(){
+    let lbx = $(".lbx .dn").filter(function () {
         return $(this).css("display") === "none"
     })
 
-    if(lbx.length === 8){
+    if (lbx.length === 8) {
         $(".lbx").unwrap();
         $(".btn_slide").css({
-            display:"none"
+            display: "none"
         })
     }
 
@@ -89,14 +89,32 @@ $(function () {
         // console.log(tf)
 
         if (tf) {
-            $(".btn_tel, .mSky, .mMod1").addClass("on");
+            $(".btn_tel, .mSky, .mMod1, .btn_QR, .hidden_wrap").addClass("on");
         } else {
-            $(".btn_tel, .mSky, .mMod1").removeClass("on");
+            $(".btn_tel, .mSky, .mMod1, .btn_QR").removeClass("on");
+
+            setTimeout(function () {
+                $(".hidden_wrap").removeClass("on");
+            }, 600);
+
         }
 
 
         $(this).toggleClass("hover").siblings().removeClass("hover");
 
+
     }); //////////////
+
+
+    $(".btn_QR").click(function () {
+        $(".qrpopup").addClass("on");
+    });
+
+    $(".close2").click(function () {
+        $(".qrpopup").removeClass("on");
+
+    });
+
+
 
 }); ////////////////////////

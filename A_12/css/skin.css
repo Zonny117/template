@@ -280,7 +280,8 @@ body.on {
     right: 30px;
 }
 
-.btn_tel2, .btn_QR {
+.btn_tel2,
+.btn_QR {
     position: relative;
     display: block;
     width: 320px;
@@ -293,7 +294,7 @@ body.on {
     font-weight: 500;
 }
 
-.btn_QR{
+.btn_QR {
     margin-top: 10px;
     background-color: #fff;
     color: #000;
@@ -345,6 +346,7 @@ body.on {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.349);
+    z-index: 1;
 }
 
 .maintitle {
@@ -355,6 +357,7 @@ body.on {
     padding-top: 340px;
     padding-bottom: 150px;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 .mMod3 {
@@ -449,8 +452,12 @@ body.on {
 
 .mMod9 .swiper-slide img {
     width: 100%;
-    height: 100%;
+    height: 448px;
     object-fit: cover;
+}
+
+.mMod9 .swiper-slide p{
+    font-size: 16px;
 }
 
 .mMod9 .swiper-button-next,
@@ -710,26 +717,26 @@ footer {
 }
 
 .qrpopup {
-	position: fixed;
-	display: none;
-	justify-content: center;
-	align-items: center;
-	top: 50%;
-	left: 50%;
-	width: 500px;
-	height: 500px;
-	transform: translate(-50%, -50%);
-	background-color: #fff;
-	z-index: 99999999999;
-	border-radius: 10px;
-	box-shadow: 0 0 4px 2px rgba(160, 160, 160, 0.486);
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 99999999999;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 2px rgba(160, 160, 160, 0.486);
 }
 
 .qrpopup.on {
-	display: flex;
+    display: flex;
 }
 
-.qrsbx{
+.qrsbx {
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
@@ -740,27 +747,27 @@ footer {
 
 .qrbx {
     margin: 0 auto;
-	width: 50%;
+    width: 50%;
     text-align: center;
 }
 
 .qrsbx::-webkit-scrollbar {
-	width: 0;
+    width: 0;
 }
 
 .save {
-	display: inline-block;
-	font-size: 18px;
-	font-weight: 600;
-	margin: 15px 0;
-	border-radius: 30px;
-	border: 1px solid #000;
-	padding: 5px 20px;
-	box-sizing: border-box;
-	line-height: 160%;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 15px 0;
+    border-radius: 30px;
+    border: 1px solid #000;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    line-height: 160%;
 }
 
-.close2{
+.close2 {
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -775,30 +782,39 @@ footer {
     margin-top: 20px;
 }
 
-.info1{
+.info1 {
     font-size: 30px;
     line-height: 120%;
     font-weight: bold;
 }
 
 .info2 {
-	font-size: 16px;
+    font-size: 16px;
 }
 
 #qr {
-	position: relative;
-	width: 100%;
-	height: 0;
-	padding-top: 100%;
-	box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    box-sizing: border-box;
 }
 
 #qr img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 @media only screen and (max-width:1317px) {

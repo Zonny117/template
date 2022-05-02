@@ -25,6 +25,8 @@
     <script src="js/main.js"></script>
 	<link rel="stylesheet" href="../common/css/guideline.css">
 	<script src="../common/js/control_template.js"></script>
+    <script src="../common/js/jquery-qrcode-0.18.0.min.js"></script>
+    <script src="../common/js/vcardQR.js"></script>
 
 
     <title>폭스바겐 강남점</title>
@@ -36,7 +38,7 @@
         <!-- 모듈2 -->
         <div class="mMod2">
             <div class="background" style="background-image: url(./images/ico_mod2.jpg);">
-                <!-- <video autoplay muted loop playsinline src="video/background.mp4"></video> -->
+                <video autoplay muted loop playsinline src="video/background.mp4"></video>
             </div>
             <div class="modBg">
 
@@ -84,7 +86,7 @@
                 <!-- <div class="tel forWeb">
                     <strong><a href="tel:010-1587-2587">010-1587-2587</a></strong>
                 </div> -->
-                <div class=".mMod6 forMobile connectbx">
+                <div class="mMod6 forMobile connectbx">
                     <a href="tel:010-1587-2587" class="connect">전화연결</a>
                 </div>
                 <div class="mMod11 forWeb">
@@ -135,7 +137,7 @@
 
                 <!-- 모듈 8 - 동영상 -->
                 <div class="mMod8 forWeb dn">
-                    <iframe src="https://www.youtube.com/embed/uTNxbjazqkI" title="YouTube video player" frameborder="0"
+                    <iframe src="https://www.youtube.com/embed/uTNxbjazqkI?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                     </iframe>
@@ -166,25 +168,29 @@
                 <div class="mMod10 dn">
                     <a href="###"><span>카탈로그 다운로드</span></a>
                 </div>
+                <div class="qrbox dn">
+                    <a href="javascript:void(0)" class="btn_QR">QR 코드</a>
+                </div>
 
                 <!-- 모듈 9 - 슬라이드 -->
                 <div class="mMod9 forWeb dn">
                     <img src="images/ico_mod9.png" class="btn_more" alt="사진 확대 버튼">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="images/xmod1.jpg" alt="수입차량 할인정보"></div>
-                            <div class="swiper-slide"><img src="images/xmod2.jpg" alt="수입차량 할인정보"></div>
-                            <div class="swiper-slide"><img src="images/xmod3.jpg" alt="수입차량 할인정보"></div>
+                            <div class="swiper-slide"><img src="images/xmod1.jpg" alt="수입차량 할인정보">
+                                <p>테스트입니다.</p>
+                            </div>
+                            <div class="swiper-slide"><img src="images/xmod2.jpg" alt="수입차량 할인정보">
+                                <p>테스트입니다.</p>
+                            </div>
+                            <div class="swiper-slide"><img src="images/xmod3.jpg" alt="수입차량 할인정보">
+                                <p>테스트입니다.</p>
+                            </div>
                         </div>
                     </div>
                     <script>
                         var mMod9 = new Swiper(".mMod9.forWeb .swiper-container", {
                             spaceBetween: 30,
-                            autoplay: {
-                                delay: 2500,
-                                disableOnInteraction: false,
-                            },
-                            loop: true,
                             pagination: {
                                 el: ".swiper-pagination"
                             }
@@ -250,7 +256,7 @@
 
                 <!-- 모듈 8 - 모바일용 동영상 -->
                 <div class="mMod8 forMobile dn">
-                    <iframe src="https://www.youtube.com/embed/uTNxbjazqkI" title="YouTube video player" frameborder="0"
+                    <iframe src="https://www.youtube.com/embed/uTNxbjazqkI?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                     </iframe>
@@ -261,25 +267,30 @@
                     <a href="###"><span>카탈로그 다운로드</span></a>
                 </div>
 
+                <div class="qrbox dn">
+                    <a href="javascript:void(0)" class="btn_QR">QR 코드</a>
+                </div>
+
                 <!-- 모듈 9 - 슬라이드 -->
-                <div class="mMod9 forMobile dn">
+                <div class="mMod9 forMobile mobile dn">
                     <img src="images/ico_mod9.png" class="btn_more_m" alt="사진 확대 버튼">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="images/xmod1.jpg" alt="수입차량 할인정보"></div>
-                            <div class="swiper-slide"><img src="images/xmod2.jpg" alt="수입차량 할인정보"></div>
-                            <div class="swiper-slide"><img src="images/xmod3.jpg" alt="수입차량 할인정보"></div>
+                            <div class="swiper-slide"><img src="images/xmod1.jpg" alt="수입차량 할인정보">
+                                <p>테스트입니다.</p>
+                            </div>
+                            <div class="swiper-slide"><img src="images/xmod2.jpg" alt="수입차량 할인정보">
+                                <p>테스트입니다.</p>
+                            </div>
+                            <div class="swiper-slide"><img src="images/xmod3.jpg" alt="수입차량 할인정보">
+                                <p>테스트입니다.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
                     <script>
                         var mMod9 = new Swiper(".mMod9.forMobile .swiper-container", {
                             spaceBetween: 30,
-                            autoplay: {
-                                delay: 2500,
-                                disableOnInteraction: false,
-                            },
-                            loop: true,
                             pagination: {
                                 el: ".swiper-pagination"
                             }
@@ -361,6 +372,20 @@
                         spaceBetween: 30
                     });
                 </script>
+            </div>
+        </div>
+
+        <div class="qrpopup" @@DB_DelegateYN@@>
+            <div class="qrbx">
+                <div id="qr"></div>
+                <div class="mMod3">
+                    <h2>@@TitleSubject@@</h2>
+                </div>
+                <span class="info">
+                    <a href="###" class="save" download="Hifactory_QRcode.png">정보 저장하기</a>
+                    <p class="info2">핸드폰 카메라를 켜고 <br> QR 코드에 대보세요.</p>
+                </span>
+                <a href="###" class="btn_close close2">닫기</a>
             </div>
         </div>
     </div>

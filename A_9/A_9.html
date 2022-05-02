@@ -24,6 +24,10 @@
     <script src="js/main.js"></script>
 	<link rel="stylesheet" href="../common/css/guideline.css">
 	<script src="../common/js/control_template.js"></script>
+    <script src="../common/js/jquery-qrcode-0.18.0.min.js"></script>
+    <script src="../common/js/vcardQR.js"></script>
+
+
     <title>YTN 이기현 기자</title>
 </head>
 
@@ -32,7 +36,9 @@
 
         <div class="mMod2 page">
             <span class="scrollDown forWeb">스크롤 다운</span>
-            <div class="background" style="background-image: url(images/background.png);"></div>
+            <div class="background" style="background-image: url(images/background.png);">
+                <video src="images/video.mp4" autoplay playsinline loop muted></video>
+            </div>
             <div class="default" style="background-image: url(images/default.jpg);"></div>
             <div class="modBg">
                 <h1 class="mMod1">
@@ -53,11 +59,13 @@
                     <div class="mMod6 forWeb">
                         <div class="tit">
                             <strong class="telbx"><a href="tel:010-0000-0000" class="tel">010-0000-0000</a></strong>
+                            <a href="javascript:void(0)" class="btn_QR">QR 코드</a>
                             <!-- <strong class="savebx"><a href="###" class="iAdd save">번호 저장</a></strong> -->
                         </div>
                     </div>
                 </div>
                 <a href="tel:000-0000-0000" class="btn_tel forMobile">전화걸기</a>
+                <a href="javascript:void(0)" class="btn_QR forMobile">QR 코드</a>
             </div>
 
             <div class="gnb forWeb">
@@ -191,7 +199,7 @@
                     </script>
                 </div>
             </div>
-            <div class="mMod4 forMobile">
+            <div class="mMod4 forMobile mobile">
                 <div class="pbx">
                     <div class="top">
                         <div class="swiper-button-next"></div>
@@ -277,9 +285,15 @@
                     <a href="###" class="mag forWeb">크게보기</a>
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="images/xmod1.png" alt="press"></div>
-                            <div class="swiper-slide"><img src="images/xmod2.png" alt="press"></div>
-                            <div class="swiper-slide"><img src="images/xmod3.png" alt="press"></div>
+                            <div class="swiper-slide"><img src="images/xmod1.png" alt="press">
+                                <p>테스트입니다. </p>
+                            </div>
+                            <div class="swiper-slide"><img src="images/xmod2.png" alt="press">
+                                <p>테스트입니다.</p>
+                            </div>
+                            <div class="swiper-slide"><img src="images/xmod3.png" alt="press">
+                                <p>테스트입니다.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="btnbx">
@@ -302,16 +316,22 @@
                     </script>
                 </div>
             </div>
-            <div class="mMod9 forMobile">
+            <div class="mMod9 forMobile mobile">
                 <div class="pbx">
                     <div class="swiper-container">
                         <a href="###" class="mag forMobile">크게보기</a>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="images/xmod1.png" alt="press"></div>
-                            <div class="swiper-slide"><img src="images/xmod2.png" alt="press"></div>
-                            <div class="swiper-slide"><img src="images/xmod3.png" alt="press"></div>
+                            <div class="swiper-slide"><img src="images/xmod1.png" alt="press">
+                                <p>테스트입니다.</p>
+                            </div>
+                            <div class="swiper-slide"><img src="images/xmod2.png" alt="press">
+                                <p>테스트입니다.</p>
+                            </div>
+                            <div class="swiper-slide"><img src="images/xmod3.png" alt="press">
+                                <p>테스트입니다.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="btnbx">
@@ -426,6 +446,20 @@
             <span class="txt">하이팩토리 초대공유플랫폼으로 제작된 사이트입니다</span>
         </span>
     </div>
+    <div class="qrpopup" @@DB_DelegateYN@@>
+        <div class="qrbx">
+            <div id="qr"></div>
+            <div class="mMod3">
+                <h2>@@TitleSubject@@</h2>
+            </div>
+            <span class="info">
+                <a href="###" class="save" download="Hifactory_QRcode.png">정보 저장하기</a>
+                <p class="info2">핸드폰 카메라를 켜고 <br> QR 코드에 대보세요.</p>
+            </span>
+            <a href="###" class="btn_close close2">닫기</a>
+        </div>
+    </div>
+
     <div class="gnb forMobile">
         <a href="###" class="open">열기</a>
     </div>

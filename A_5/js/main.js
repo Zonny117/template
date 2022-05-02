@@ -6,23 +6,23 @@ $(function () {
 
 
 
-    let contweb = $(".content.forWeb .dn").filter(function(){
+    let contweb = $(".content.forWeb .dn").filter(function () {
         return $(this).css("display") === "none"
     });
 
-    if(contweb.length === 6){
+    if (contweb.length === 7) {
         $(".btn_menu_slide.forWeb").css({
-            display:"none"
+            display: "none"
         })
     }
 
-    let contmobile = $(".content.forMobile .dn").filter(function(){
+    let contmobile = $(".content.forMobile .dn").filter(function () {
         return $(this).css("display") === "none"
     });
 
-    if(contmobile.length === 7){
+    if (contmobile.length === 8) {
         $(".btn_menu_slide_white").css({
-            display:"none"
+            display: "none"
         })
     }
 
@@ -71,6 +71,11 @@ $(function () {
         //     zIndex: 999
         // });
 
+
+        $(".content.forMobile").css({
+            zIndex: 3
+        });
+
         $(".content.forMobile .module").stop().animate({
             top: 0
         }, 1000, 'easeOutQuart')
@@ -91,15 +96,16 @@ $(function () {
     $(".btn_menu_slide_m").click(function () {
 
 
-        if ($(".mMod8.forMoblie").css("display") != "none") {
-            $(".mMod8.forMoblie iframe")[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-        }
+        // if ($(".mMod8.forMoblie").css("display") != "none") {
+        //     $(".mMod8.forMoblie iframe")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+        // }
 
 
         $(".content.forMobile .module").stop().animate({
             top: "100%"
         }, 1000, 'easeOutCubic')
 
+        
         $(".content.forMobile").css({
             zIndex: 0
         });
@@ -129,6 +135,19 @@ $(function () {
             opacity: 0,
             zIndex: -1
         });
+
+    });
+
+
+    $(".btn_QR").click(function () {
+        $(".qrpopup").addClass("on");
+
+
+    });
+
+    $(".close2").click(function () {
+        $(".qrpopup").removeClass("on");
+
 
     });
 

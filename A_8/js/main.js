@@ -37,8 +37,8 @@ $(function () {
         });
     } /////////////////////
 
-    
-    function pagenumber(){
+
+    function pagenumber() {
         let mod = [
             $(".mMod4"),
             $(".mMod5"),
@@ -46,17 +46,17 @@ $(function () {
             $(".mMod9"),
             $(".flex")
         ]
-    
+
         for (let x of mod) {
             if (x.css("display") === "none" && $(window).innerWidth() > 1366) {
                 x.removeClass("page")
             }
         }
-    
+
     }
 
     pagenumber();
-    
+
 
 
     $(".mMod4 .swiper-slide").on('mousemove', function () {
@@ -267,6 +267,51 @@ $(function () {
         pagenumber();
     })
 
+
+    let iOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    const body = document.querySelector('body');
+    let ios_scroll = 0;
+
+    function enable() {
+        ios_scroll = window.pageYOffset;
+        body.style.overflow = 'hidden';
+        body.style.position = 'fixed';
+        body.style.top = `-${ios_scroll}px`;
+        body.style.width = '100%';
+    }
+
+    function disable() {
+        body.style.removeProperty('overflow');
+        body.style.removeProperty('position');
+        body.style.removeProperty('top');
+        body.style.removeProperty('width');
+        window.scrollTo(0, ios_scroll);
+    }
+
+    $(".btn_QR").click(function () {
+        $("html, body, .qrpopup").addClass("on");
+
+        if (iOS) {
+            enable();
+        }
+
+        $("html,body").on('mousewheel DOMMouseScroll', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        });
+    });
+
+    $(".close2").click(function () {
+        $(".qrpopup, html, body").removeClass("on");
+
+        if (iOS) {
+            disable();
+        }
+
+        $("html,body").off("mousewheel DOMMouseScroll");
+    });
 
 
 });

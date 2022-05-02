@@ -25,8 +25,10 @@
     <script src="../common/js/common.js"></script>
     <script src="js/main.js"></script>
 
-	<link rel="stylesheet" href="../common/css/guideline.css">
-	<script src="../common/js/control_template.js"></script>
+    <link rel="stylesheet" href="../common/css/guideline.css">
+    <script src="../common/js/control_template.js"></script>
+    <script src="../common/js/jquery-qrcode-0.18.0.min.js"></script>
+    <script src="../common/js/vcardQR.js"></script>
 
 </head>
 
@@ -43,152 +45,155 @@
             <div class="btn_tel">
                 <a href="tel:010-1587-2587">연락하기</a>
             </div>
+            <a href="javascript:void(0)" class="btn_QR forMobile">QR 코드</a>
         </div>
 
         <!-- 배경 -->
         <div class="mMod2">
-            <div class="background" style="background-image: url(images/default.jpg);">
             <div class="background" style="background-image: url(images/img_mod2.png);">
-                <!-- 이미지 배경 -->
-                <!-- <img src="images/img_mod2.png" alt="배경"> -->
-                <!-- 동영상 배경 -->
-                <!-- <video autoplay muted loop playsinline class="vid">
-                    <source src="video/back.mp4">
-                </video> -->
+                <video autoplay muted loop playsinline class="vid" src="video/background.mp4">
+                </video>
             </div>
-        </div>
-        <div class="titlebx forWeb">
-            <div class="mMod1">
-                <img src="images/img_mod1.jpg" alt="">
-            </div>
-            <span class="mMod0">아우디 강남점</span>
-            <div class="mMod6">
-                <div class="tit">
-                    <span>대표연락처</span>
-                    <strong><a href="tel:010-1587-2587">010-1587-2587</a></strong>
+            <div class="titlebx forWeb">
+                <div class="mMod1">
+                    <img src="images/img_mod1.jpg" alt="">
                 </div>
-                <div class="txt">
-                    언제든 연락주시면 자세한 상담을 해드리겠습니다.<br>
-                    내선 : 02-1548-8972<br>
-                    FAX : 02-1548-8972
+                <span class="mMod0">아우디 강남점</span>
+                <div class="mMod6">
+                    <div class="tit">
+                        <span>대표연락처</span>
+                        <strong><a href="tel:010-1587-2587">010-1587-2587</a></strong>
+                    </div>
+                    <div class="txt">
+                        언제든 연락주시면 자세한 상담을 해드리겠습니다.<br>
+                        내선 : 02-1548-8972<br>
+                        FAX : 02-1548-8972
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="lbxwrap on">
-            <a href="###" class="btn_slide on">슬라이드 버튼</a>
-            <div class="lbx">
-                <div class="modbg">
-                    <!-- 연락처 -->
-                    <div class="flex">
-                        <!-- 링크 -->
-                        <div class="mMod7 forWeb dn">
-                            <a href="###">아우디코리아 공식홈페이지</a>
-                            <a href="###">시승신청 바로가기</a>
-                            <a href="###">블로그 링크</a>
+            <div class="lbxwrap on">
+                <a href="###" class="btn_slide on">슬라이드 버튼</a>
+                <div class="lbx">
+                    <div class="modbg">
+                        <!-- 연락처 -->
+                        <div class="flex">
+                            <!-- 링크 -->
+                            <div class="mMod7 forWeb dn">
+                                <a href="###">아우디코리아 공식홈페이지</a>
+                                <a href="###">시승신청 바로가기</a>
+                                <a href="###">블로그 링크</a>
+                            </div>
+                            <!-- sns -->
+                            <div class="mMod11 forWeb dn">
+                                <a href="###" class="facebook">facebook</a>
+                                <a href="###" class="twitter">twiter</a>
+                                <a href="###" class="instagram">instagram</a>
+                                <a href="###" class="youtube">youtube</a>
+                            </div>
                         </div>
-                        <!-- sns -->
-                        <div class="mMod11 forWeb dn">
-                            <a href="###" class="facebook">facebook</a>
-                            <a href="###" class="twitter">twiter</a>
-                            <a href="###" class="instagram">instagram</a>
-                            <a href="###" class="youtube">youtube</a>
+                        <!-- 메인문구 -->
+                        <div class="maintitle">
+                            <span class="mMod0 forMobile">아우디 강남점</span>
+                            <div class="mMod3 dn">
+                                <h2>아우디 강남점<br>유정현 대리입니다.</h2>
+                                <p class="txt">
+                                    고객님의 만족을 위해 최선을 다합니다.<br>
+                                    010-1234-5978<br>
+                                    아우디 강남점 유정현 대리
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <!-- 메인문구 -->
-                    <div class="maintitle">
-                        <span class="mMod0 forMobile">아우디 강남점</span>
-                        <div class="mMod3 dn">
-                            <h2>아우디 강남점<br>유정현 대리입니다.</h2>
-                            <p class="txt">
-                                고객님의 만족을 위해 최선을 다합니다.<br>
-                                010-1234-5978<br>
-                                아우디 강남점 유정현 대리
-                            </p>
+                        <!-- 다운로드 -->
+                        <div class="mMod10 forWeb dn">
+                            <a href="###"><span>카탈로그 다운로드</span></a>
                         </div>
+                        <a href="javascript:void(0)" class="btn_QR forWeb">QR 코드</a>
                     </div>
-                    <!-- 다운로드 -->
-                    <div class="mMod10 forWeb dn">
-                        <a href="###"><span>카탈로그 다운로드</span></a>
-                    </div>
-                </div>
-                <div class="mMod9 forWeb dn">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="images/xmod1.jpg" alt="수입차량 할인정보"></div>
-                            <div class="swiper-slide"><img src="images/xmod2.jpg" alt="수입차량 할인정보"></div>
-                            <div class="swiper-slide"><img src="images/xmod3.jpg" alt="수입차량 할인정보"></div>
+                    <div class="mMod9 forWeb dn">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="images/xmod1.jpg" alt="수입차량 할인정보">
+                                    <p>테스트입니다.</p>
+                                </div>
+                                <div class="swiper-slide"><img src="images/xmod2.jpg" alt="수입차량 할인정보">
+                                    <p>테스트입니다.</p>
+                                </div>
+                                <div class="swiper-slide"><img src="images/xmod3.jpg" alt="수입차량 할인정보">
+                                    <p>테스트입니다.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
                         </div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                    <script>
-                        $(function () {
-                            let sldnum = $(".mMod9.forWeb .swiper-slide").length;
-                            // console.log(sldnum);
-                            var mMod9 = new Swiper(".mMod9 .swiper-container", {
-                                slidesPerView: sldnum,
-                                navigation: {
-                                    nextEl: ".mMod9 .swiper-button-next"
-                                },
-                                loop: true
+                        <script>
+                            $(function () {
+                                let sldnum = $(".mMod9.forWeb .swiper-slide").length;
+                                // console.log(sldnum);
+                                var mMod9 = new Swiper(".mMod9 .swiper-container", {
+                                    slidesPerView: sldnum,
+                                    navigation: {
+                                        nextEl: ".mMod9 .swiper-button-next"
+                                    },
+                                });
                             });
-                        });
-                    </script>
-                </div>
-                <!-- 컨텐츠 내용 -->
-                <div class="mMod4 forWeb dn">
-                    <div>
-                        <div class="swiper-slide">
-                            <div class="tit">아우디, [2021 겨울철 서비스 캠페인] 실시</div>
-                            <div class="txt">
-                                -7월 5일부터 7월 30일까지 전국 아우디 공식 서비스 센터에서 에어컨, 냉각 시스템, 엔진 및 배터리 등
-                                여름철 필수 점검 항목에 대해 무상 점검 실시<br>
-                                -캠페인 기간 중 ‘서비스 연장 패키지’ 구매 고객 아우디 싱글 프레임 차량용 방향제 및 리필팩 증정
+                        </script>
+                    </div>
+                    <!-- 컨텐츠 내용 -->
+                    <div class="mMod4 forWeb dn">
+                        <div>
+                            <div class="swiper-slide">
+                                <div class="tit">아우디, [2021 겨울철 서비스 캠페인] 실시</div>
+                                <div class="txt">
+                                    -7월 5일부터 7월 30일까지 전국 아우디 공식 서비스 센터에서 에어컨, 냉각 시스템, 엔진 및 배터리 등
+                                    여름철 필수 점검 항목에 대해 무상 점검 실시<br>
+                                    -캠페인 기간 중 ‘서비스 연장 패키지’ 구매 고객 아우디 싱글 프레임 차량용 방향제 및 리필팩 증정
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tit">자동차 교환∙환불 제도 안내</div>
+                                <div class="txt">
+                                    아우디코리아는 9월 2일부터 자동차 교환∙환불 제도(한국형 레몬법)를 전격 시행합니다.
+                                    <br><br>
+                                    한국형 레몬법은 자동차가 소유자에게 인도된 날로부터 1년 이내 또는 주행거리 2만 킬로미터 이내에 중대하자로 2회,
+                                    일반하자로 3회 이상 수리 후 동일 하자가 재발할 경우, 차주는 자동차를 인도받은 날로부터 2년 이내에 제조사에게
+                                    신차 교환이나 환불을 요구할 수 있는 제도입니다.
+                                    <br><br>
+                                    아우디코리아가 9월 2일부터 레몬법을 전격 시행함에 따라, 전국 아우디 공식 판매딜러사들은 신차 매매계약 시
+                                    교환,환불중재 규정에 대해 구매자에게 설명해야 합니다.<br>
+                                    이에 대해 구매자가 이해하고 동의한다는 서명을 했을 경우에 레몬법에 의거, 하자가 있는 차량에 대한 요건을 충족할 시
+                                    신차로 교환 또는 환불을 요구할 수 있습니다.<br>
+                                    정부가 레몬법을 시행한 2019년 1월 1일부터 9월 1일까지 인도 받은 신차들에 대해선 소급하여 적용합니다.
+                                </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="tit">자동차 교환∙환불 제도 안내</div>
-                            <div class="txt">
-                                아우디코리아는 9월 2일부터 자동차 교환∙환불 제도(한국형 레몬법)를 전격 시행합니다.
-                                <br><br>
-                                한국형 레몬법은 자동차가 소유자에게 인도된 날로부터 1년 이내 또는 주행거리 2만 킬로미터 이내에 중대하자로 2회,
-                                일반하자로 3회 이상 수리 후 동일 하자가 재발할 경우, 차주는 자동차를 인도받은 날로부터 2년 이내에 제조사에게
-                                신차 교환이나 환불을 요구할 수 있는 제도입니다.
-                                <br><br>
-                                아우디코리아가 9월 2일부터 레몬법을 전격 시행함에 따라, 전국 아우디 공식 판매딜러사들은 신차 매매계약 시
-                                교환,환불중재 규정에 대해 구매자에게 설명해야 합니다.<br>
-                                이에 대해 구매자가 이해하고 동의한다는 서명을 했을 경우에 레몬법에 의거, 하자가 있는 차량에 대한 요건을 충족할 시
-                                신차로 교환 또는 환불을 요구할 수 있습니다.<br>
-                                정부가 레몬법을 시행한 2019년 1월 1일부터 9월 1일까지 인도 받은 신차들에 대해선 소급하여 적용합니다.
+                    </div>
+                    <!-- 동영상 -->
+                    <div class="mMod8 forWeb dn">
+                        <iframe src="https://www.youtube.com/embed/YqQaBKTiU8o" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <!-- 주소 및 맵 API -->
+                    <div class="mMod5 forWeb dn">
+                        <div class="txt forWeb">
+                            <div class="tt">
+                                <strong class="t">아우디 강남점</strong> <br>
+                                <span class="ti">경기 하남시 미사강변동로 72 SB비즈타워 1003호</span>
                             </div>
+                            <a href="###" class="navi forWeb">네비게이션연결</a>
                         </div>
-                    </div>
-                </div>
-                <!-- 동영상 -->
-                <div class="mMod8 forWeb dn">
-                    <iframe src="https://www.youtube.com/embed/YqQaBKTiU8o" title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <!-- 주소 및 맵 API -->
-                <div class="mMod5 forWeb dn">
-                    <div class="txt forWeb">
-                        <div class="ti">
-                            <strong class="t">아우디 강남점</strong> <br>
-                            경기 하남시 미사강변동로 72 SB비즈타워 1003호
+                        <div class="gMap forWeb">
+                            <div class="map" style="background-image: url(images/img_mod5.png);"></div>
+                            <a href="###" class="navi forMobile">네비게이션연결</a>
                         </div>
-                        <a href="###" class="navi forWeb">네비게이션연결</a>
-                    </div>
-                    <div class="gMap forWeb">
-                        <div class="map" style="background-image: url(images/img_mod5.png);"></div>
-                        <a href="###" class="navi forMobile">네비게이션연결</a>
-                    </div>
-                    <div class="tx forWeb">
-                        &lt;대중교통이용시&gt;<br>
-                        시청역(1호선/2호선)에서 하차, 6번 출구에서 도보 1-2분 거리<br>
-                        &lt;자가이용시&gt;<br>
-                        시청역(1호선/2호선)에서 하차, 6번 출구에서 도보 1-2분 거리
+                        <div class="tx forWeb">
+                            &lt;대중교통이용시&gt;<br>
+                            시청역(1호선/2호선)에서 하차, 6번 출구에서 도보 1-2분 거리<br>
+                            &lt;자가이용시&gt;<br>
+                            시청역(1호선/2호선)에서 하차, 6번 출구에서 도보 1-2분 거리
+                        </div>
                     </div>
                 </div>
                 <div class="content forMobile">
@@ -223,147 +228,167 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- 모바일 컨텐츠 내용 -->
-        <div class="hidden_wrap">
-            <!-- 모바일 메뉴 1 - 컨텐츠 내용 -->
-            <div class="sub forMobile hidden_sbx">
-                <div class="mMod10 link1_dn">
-                    <a href="###">카탈로그 다운로드</a>
-                </div>
-                <div class="mMod4 link1_dn">
-                    <div>
-                        <div class="swiper-slide">
-                            <div class="tit">아우디, [2021 겨울철 서비스 캠페인] 실시</div>
-                            <div class="txt">
-                                -7월 5일부터 7월 30일까지 전국 아우디 공식 서비스 센터에서 에어컨, 냉각 시스템, 엔진 및 배터리 등
-                                여름철 필수 점검 항목에 대해 무상 점검 실시<br>
-                                -캠페인 기간 중 ‘서비스 연장 패키지’ 구매 고객 아우디 싱글 프레임 차량용 방향제 및 리필팩 증정
+            <!-- 모바일 컨텐츠 내용 -->
+            <div class="hidden_wrap">
+                <!-- 모바일 메뉴 1 - 컨텐츠 내용 -->
+                <div class="sub forMobile hidden_sbx">
+                    <div class="mMod10 link1_dn">
+                        <a href="###">카탈로그 다운로드</a>
+                    </div>
+                    <div class="mMod4 mobile link1_dn">
+                        <div>
+                            <div class="swiper-slide">
+                                <div class="tit">아우디, [2021 겨울철 서비스 캠페인] 실시</div>
+                                <div class="txt">
+                                    -7월 5일부터 7월 30일까지 전국 아우디 공식 서비스 센터에서 에어컨, 냉각 시스템, 엔진 및 배터리 등
+                                    여름철 필수 점검 항목에 대해 무상 점검 실시<br>
+                                    -캠페인 기간 중 ‘서비스 연장 패키지’ 구매 고객 아우디 싱글 프레임 차량용 방향제 및 리필팩 증정
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tit">자동차 교환∙환불 제도 안내</div>
+                                <div class="txt">
+                                    아우디코리아는 9월 2일부터 자동차 교환∙환불 제도(한국형 레몬법)를 전격 시행합니다.
+                                    <br><br>
+                                    한국형 레몬법은 자동차가 소유자에게 인도된 날로부터 1년 이내 또는 주행거리 2만 킬로미터 이내에 중대하자로 2회,
+                                    일반하자로 3회 이상 수리 후 동일 하자가 재발할 경우, 차주는 자동차를 인도받은 날로부터 2년 이내에 제조사에게
+                                    신차 교환이나 환불을 요구할 수 있는 제도입니다.
+                                    <br><br>
+                                    아우디코리아가 9월 2일부터 레몬법을 전격 시행함에 따라, 전국 아우디 공식 판매딜러사들은 신차 매매계약 시
+                                    교환,환불중재 규정에 대해 구매자에게 설명해야 합니다.<br>
+                                    이에 대해 구매자가 이해하고 동의한다는 서명을 했을 경우에 레몬법에 의거, 하자가 있는 차량에 대한 요건을 충족할 시
+                                    신차로 교환 또는 환불을 요구할 수 있습니다.<br>
+                                    정부가 레몬법을 시행한 2019년 1월 1일부터 9월 1일까지 인도 받은 신차들에 대해선 소급하여 적용합니다..
+                                </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="tit">자동차 교환∙환불 제도 안내</div>
-                            <div class="txt">
-                                아우디코리아는 9월 2일부터 자동차 교환∙환불 제도(한국형 레몬법)를 전격 시행합니다.
-                                <br><br>
-                                한국형 레몬법은 자동차가 소유자에게 인도된 날로부터 1년 이내 또는 주행거리 2만 킬로미터 이내에 중대하자로 2회,
-                                일반하자로 3회 이상 수리 후 동일 하자가 재발할 경우, 차주는 자동차를 인도받은 날로부터 2년 이내에 제조사에게
-                                신차 교환이나 환불을 요구할 수 있는 제도입니다.
-                                <br><br>
-                                아우디코리아가 9월 2일부터 레몬법을 전격 시행함에 따라, 전국 아우디 공식 판매딜러사들은 신차 매매계약 시
-                                교환,환불중재 규정에 대해 구매자에게 설명해야 합니다.<br>
-                                이에 대해 구매자가 이해하고 동의한다는 서명을 했을 경우에 레몬법에 의거, 하자가 있는 차량에 대한 요건을 충족할 시
-                                신차로 교환 또는 환불을 요구할 수 있습니다.<br>
-                                정부가 레몬법을 시행한 2019년 1월 1일부터 9월 1일까지 인도 받은 신차들에 대해선 소급하여 적용합니다..
-                            </div>
+                    </div>
+
+                </div>
+
+                <!-- 모바일 메뉴 2 - 링크 -->
+                <div class="mMod7 forMobile mobile hidden_sbx">
+                    <a href="###">아우디코리아 공식홈페이지</a>
+                    <a href="###">시승신청 바로가기</a>
+                    <a href="###">블로그바로가기</a>
+                </div>
+
+                <!-- 모바일 메뉴 3 - 영상 및 이미지 -->
+                <div class="VI_wrap forMobile hidden_sbx">
+
+                    <!-- 동영상 모듈 -->
+                    <div class="mMod8 link3_dn">
+                        <iframe src="https://www.youtube.com/embed/YqQaBKTiU8o" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <!-- 이미지 모듈 -->
+                    <div class="mMod9 mobile link3_dn">
+                        <div class="swiper-slide"><img src="images/xmod1.jpg" alt="수입차량 할인정보">
+                            <p>테스트입니다.</p>
+                        </div>
+                        <div class="swiper-slide"><img src="images/xmod2.jpg" alt="수입차량 할인정보">
+                            <p>테스트입니다.</p>
+                        </div>
+                        <div class="swiper-slide"><img src="images/xmod3.jpg" alt="수입차량 할인정보">
+                            <p>테스트입니다.</p>
                         </div>
                     </div>
                 </div>
-              
-            </div>
 
-            <!-- 모바일 메뉴 2 - 링크 -->
-            <div class="mMod7 forMobile hidden_sbx">
-                <a href="###">아우디코리아 공식홈페이지</a>
-                <a href="###">시승신청 바로가기</a>
-                <a href="###">블로그바로가기</a>
-            </div>
+                <!-- 모바일 메뉴 4 - 지도 및 주소 -->
+                <div class="mMod5 forMobile hidden_sbx">
+                    <div class="txt forMobile">
+                        <div class="ti">
+                            <strong class="t">아우디 강남점</strong> <br>
+                            경기 하남시 미사강변동로 72 SB비즈타워 1003호
+                        </div>
 
-            <!-- 모바일 메뉴 3 - 영상 및 이미지 -->
-            <div class="VI_wrap forMobile hidden_sbx">
-
-                <!-- 동영상 모듈 -->
-                <div class="mMod8 link3_dn">
-                    <iframe src="https://www.youtube.com/embed/YqQaBKTiU8o" title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-
-                <!-- 이미지 모듈 -->
-                <div class="mMod9 link3_dn">
-                    <div class="swiper-slide"><img src="images/xmod1.jpg" alt="수입차량 할인정보"></div>
-                    <div class="swiper-slide"><img src="images/xmod2.jpg" alt="수입차량 할인정보"></div>
-                    <div class="swiper-slide"><img src="images/xmod3.jpg" alt="수입차량 할인정보"></div>
-                </div>
-            </div>
-
-            <!-- 모바일 메뉴 4 - 지도 및 주소 -->
-            <div class="mMod5 forMobile hidden_sbx">
-                <div class="txt forMobile">
-                    <div class="ti">
-                        <strong class="t">아우디 강남점</strong> <br>
-                        경기 하남시 미사강변동로 72 SB비즈타워 1003호
+                        <a href="###" class="navi forWeb">네비게이션연결</a>
                     </div>
 
-                    <a href="###" class="navi forWeb">네비게이션연결</a>
-                </div>
+
+                    <div class="gMap forMobile">
+                        <a href="###" class="navi forMobile">네비게이션연결</a>
+                        <div class="map" style="background-image: url(images/img_mod5.png);">
+                        </div>
+                    </div>
 
 
-                <div class="gMap forMobile">
-                    <a href="###" class="navi forMobile">네비게이션연결</a>
-                    <div class="map" style="background-image: url(images/img_mod5.png);">
+                    <div class="tx forMobile">
+                        &lt;대중교통이용시&gt;<br>
+                        시청역(1호선/2호선)에서 하차, 6번 출구에서 도보 1-2분 거리<br>
+                        &lt;자가이용시&gt;<br>
+                        시청역(1호선/2호선)에서 하차, 6번 출구에서 도보 1-2분 거리
                     </div>
                 </div>
 
-
-                <div class="tx forMobile">
-                    &lt;대중교통이용시&gt;<br>
-                    시청역(1호선/2호선)에서 하차, 6번 출구에서 도보 1-2분 거리<br>
-                    &lt;자가이용시&gt;<br>
-                    시청역(1호선/2호선)에서 하차, 6번 출구에서 도보 1-2분 거리
+                <!-- 모바일 메뉴 5 - 연락처 -->
+                <div class="mMod6 forMobile hidden_sbx">
+                    <div class="tit">
+                        <span>대표연락처</span>
+                        <strong><a href="tel:010-1587-2587">010-1587-2587</a></strong>
+                    </div>
+                    <div class="txt">
+                        언제든 연락주시면 자세한 상담을 해드리겠습니다.<br>
+                        내선 : 02-1548-8972<br>
+                        FAX : 02-1548-8972
+                    </div>
                 </div>
             </div>
 
-            <!-- 모바일 메뉴 5 - 연락처 -->
-            <div class="mMod6 forMobile hidden_sbx">
-                <div class="tit">
-                    <span>대표연락처</span>
-                    <strong><a href="tel:010-1587-2587">010-1587-2587</a></strong>
+            <!-- 알림온 -->
+            <div class="mSky">
+                <span class="ls iTop forWeb"><a href="#wrap" class="ico">페이지 상단으로</a></span>
+                <div class="forMobile">
+                    <span class="ls iSns"><a href="#jsSky" class="ico jsBtnShow1">Sns 레이어열기</a></span>
+                    <div id="jsSky" class="lSky">
+                        <a href="###" class="youtube">youtube</a>
+                        <a href="###" class="instagram">instagram</a>
+                        <a href="###" class="twitter">twiter</a>
+                        <a href="###" class="facebook">facebook</a>
+                        <a href="#jsSky" class="close jsBtnClose1">Sns 레이어닫기</a>
+                    </div>
                 </div>
-                <div class="txt">
-                    언제든 연락주시면 자세한 상담을 해드리겠습니다.<br>
-                    내선 : 02-1548-8972<br>
-                    FAX : 02-1548-8972
-                </div>
+                <span class="ls iKakao"><a href="###" class="ico">카카오톡</a></span>
+                <span class="banner"></span>
+                <span class="ls iAlarm">
+                    <a href="https://www.hifactory.co.kr/index.asp" target="_blank" class="ico">하이팩토리</a>
+                    <span class="txt">하이팩토리 초대공유플랫폼으로 제작된 사이트입니다</span>
+                </span>
             </div>
+
+
         </div>
 
-        <!-- 알림온 -->
-        <div class="mSky">
-            <span class="ls iTop forWeb"><a href="#wrap" class="ico">페이지 상단으로</a></span>
-            <div class="forMobile">
-                <span class="ls iSns"><a href="#jsSky" class="ico jsBtnShow1">Sns 레이어열기</a></span>
-                <div id="jsSky" class="lSky">
-                    <a href="###" class="youtube">youtube</a>
-                    <a href="###" class="instagram">instagram</a>
-                    <a href="###" class="twitter">twiter</a>
-                    <a href="###" class="facebook">facebook</a>
-                    <a href="#jsSky" class="close jsBtnClose1">Sns 레이어닫기</a>
-                </div>
-            </div>
-            <span class="ls iKakao"><a href="###" class="ico">카카오톡</a></span>
-            <span class="banner"></span>
-            <span class="ls iAlarm">
-                <a href="https://www.hifactory.co.kr/index.asp" target="_blank" class="ico">하이팩토리</a>
-                <span class="txt">하이팩토리 초대공유플랫폼으로 제작된 사이트입니다</span>
-            </span>
+        <!-- 모바일 메뉴 호버 이미지 로드 -->
+        <div id="preload">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
 
-
-    </div>
-
-    <!-- 모바일 메뉴 호버 이미지 로드 -->
-    <div id="preload">
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
+        <div class="qrpopup" @@DB_DelegateYN@@>
+            <div class="qrbx">
+                <div id="qr"></div>
+                <div class="mMod3">
+                    <h2>@@TitleSubject@@</h2>
+                </div>
+                <span class="info">
+                    <a href="###" class="save" download="Hifactory_QRcode.png">정보 저장하기</a>
+                    <p class="info2">핸드폰 카메라를 켜고 <br> QR 코드에 대보세요.</p>
+                </span>
+                <a href="###" class="btn_close close2">닫기</a>
+            </div>
+        </div>
 </body>
 
 </html>

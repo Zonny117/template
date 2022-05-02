@@ -107,11 +107,11 @@ body::before {
     overflow: hidden;
 }
 
-.mMod1 img{
+.mMod1 img {
     position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     max-width: 70%;
 }
 
@@ -346,12 +346,14 @@ body::before {
 
 /* 모듈10 - 다운로드 */
 
-.mMod10 {
+.mMod10,
+.qrbox {
     margin: 25px 0;
     width: 100%;
 }
 
-.mMod10 a {
+.mMod10 a,
+.qrbox a {
     position: relative;
     display: inline-block;
     font-size: 18px;
@@ -364,7 +366,8 @@ body::before {
     box-sizing: border-box;
 }
 
-.mMod10 a::before {
+.mMod10 a::before,
+.qrbox a::before {
     content: url(../images/ico_mod10.png);
     position: absolute;
     left: 35px;
@@ -381,13 +384,12 @@ body::before {
 
 .mMod9 .swiper-slide {
     width: 100%;
-    height: 230px;
     box-sizing: border-box;
 }
 
 .mMod9 .swiper-slide img {
     width: 100%;
-    height: 100%;
+    height: 230px;
     object-fit: cover;
     border-radius: 10px;
 
@@ -395,7 +397,7 @@ body::before {
 
 .btn_more {
     position: absolute;
-    bottom: 10px;
+    top: 180px;
     left: 10px;
     z-index: 2;
     cursor: pointer;
@@ -522,4 +524,92 @@ body::before {
     height: 50px;
     cursor: pointer;
     z-index: 9999;
+}
+
+.qrpopup {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 99999;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 2px rgba(160, 160, 160, 0.486);
+}
+
+.qrpopup.on{
+    display: flex;
+}
+
+.qrbx {
+    width: 50%;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.qrbx::-webkit-scrollbar {
+    width: 0;
+}
+
+.qrbx .mMod3{
+    margin-top: 0;
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+.qrbx .mMod3 h2{
+    margin:0;
+    font-family: 'Noto Sans KR', serif;
+    font-size:22px;
+}
+
+.save {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 20px 0;
+    border-radius: 30px;
+    border: 1px solid #000;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    line-height: 160%;
+}
+
+.info2 {
+    font-size: 16px;
+}
+
+#qr {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    box-sizing: border-box;
+}
+
+#qr img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.close2{
+    background-image: url(../images/btn_close.png);
+    left: auto;
+    top: 20px;
+    right: 20px;
+    font-size: 0;
+    text-indent: -9999px;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }

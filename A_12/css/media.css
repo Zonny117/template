@@ -217,6 +217,15 @@
         width: 100%;
     }
 
+
+    .mMod9 .swiper-slide img{
+        height: 300px;
+    }
+
+    .mMod9 .swiper-slide p{
+        font-size: 14px;
+    }
+
     .mMod4 {
         margin-top: 83px;
         padding-right: 20px;

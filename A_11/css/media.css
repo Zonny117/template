@@ -208,16 +208,17 @@
         left: 0;
     }
 
-    .mMod9 {
-        height: 0;
-        padding-top: 80%;
-    }
 
     .mMod9 .swiper-container {
-        position: absolute;
         width: 100%;
-        top: 0;
-        left: 0;
+    }
+
+    .mMod9 .swiper-slide img{
+        height: 300px;
+    }
+
+    .mMod9 .swiper-slide p{
+        font-size: 14px;
     }
 
     .mMod9 .swiper-pagination {
@@ -283,12 +284,16 @@
         margin-bottom: 30px;
     }
 
-    .mMod10 {
+    .mMod10, .qrbox {
         display: block;
         position: static;
         width: 100%;
         height: 52px;
         line-height: 52px;
+    }
+
+    .qrbox{
+        margin-top: 10px;
     }
 
     .lMod9 .swiper-container {
@@ -304,6 +309,39 @@
 
     .lMod9 img {
         border-radius: 0px;
+    }
+
+    .qrpopup{
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+ 
+    .qrbx{
+        width: 70%;
+        padding: 20px 0;
+        box-sizing: border-box;
+        max-height: 100%;
+    }
+ 
+    .qrbx .mMod3 h2{
+        font-size: 25px;
+    }
+ 
+    .qrbx .mMod3::after{
+        display: none;
+    }
+ 
+    .close2{
+        top: 30px;
+        left: auto;
+        right: 30px;
+        transform: none;
+        width: 40px;
+        height: 40px;
     }
 }
 

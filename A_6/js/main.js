@@ -4,21 +4,21 @@ $(function () {
 
     // console.log(img)
 
-    if(img <=840){
+    if (img <= 840) {
         $(".btn_fold").css({
-            display:"none"
+            display: "none"
         });
     }
 
-    let top_menu = $(".top_menu .dn").filter(function(){
+    let top_menu = $(".top_menu .dn").filter(function () {
         return $(this).css("display") === "none"
     })
 
     // console.log(top_menu.length)
 
-    if(top_menu.length === 5){
+    if (top_menu.length === 5) {
         $(".top_menu, .open").css({
-            display:"none"
+            display: "none"
         });
     }
 
@@ -83,9 +83,9 @@ $(function () {
         $(".background").toggleClass("on");
     });
 
-    $(".btn_close").click(function () {
+    $(".close1").click(function () {
         $(".lMod9").css({
-           display:"none"
+            display: "none"
         })
 
         $("body").removeClass("on");
@@ -93,7 +93,7 @@ $(function () {
 
     $(".mMod9.forWeb .mag").click(function () {
         $(".lMod9.forWeb").css({
-            display:"block"
+            display: "block"
         });
         $("body").addClass("on");
 
@@ -101,7 +101,7 @@ $(function () {
 
     $(".mMod9.forMobile .mag").click(function () {
         $(".lMod9.forMobile").css({
-            display:"block"
+            display: "block"
         });
         $("body").addClass("on");
 
@@ -122,6 +122,44 @@ $(function () {
             $("a", this).text(txt2.replace(txt2, "close"))
         } else if (txt2 === "close") {
             $("a", this).text(txt2.replace(txt2, "open"))
+        }
+    });
+
+
+    let iOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    const body = document.querySelector('body');
+    let ios_scroll = 0;
+
+    function enable() {
+        ios_scroll = window.pageYOffset;
+        body.style.overflow = 'hidden';
+        body.style.position = 'fixed';
+        body.style.top = `-${ios_scroll}px`;
+        body.style.width = '100%';
+    }
+
+    function disable() {
+        body.style.removeProperty('overflow');
+        body.style.removeProperty('position');
+        body.style.removeProperty('top');
+        body.style.removeProperty('width');
+        window.scrollTo(0, ios_scroll);
+    }
+
+    $(".btn_QR").click(function () {
+        $(".qrpopup").addClass("on");
+
+        if (iOS) {
+            enable();
+        }
+    });
+
+    $(".close2").click(function () {
+        $(".qrpopup").removeClass("on");
+
+        if (iOS) {
+            disable();
         }
     });
 

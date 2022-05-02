@@ -47,7 +47,7 @@
 
     .btn_tel {
         position: absolute;
-        right: 20px;
+        right: 90px;
         font-size: 0px;
         text-indent: -9999;
         background-image: url(../images/ico_mod6.png);
@@ -197,19 +197,14 @@
         box-sizing: border-box;
     }
 
-
-    .mMod9 .swiper-container {
-        padding-top: 90%;
-        height: 0;
+    .mMod9 .swiper-slide img {
+        height: 300px;
     }
 
-    .mMod9 .swiper-wrapper {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+    .mMod9 .swiper-slide p {
+        -webkit-line-clamp: unset;
     }
+
 
     .mMod9 .swiper-button-prev {
         background-image: url(../images/btn_slide_prev02.png);
@@ -477,6 +472,45 @@
     .mSky.on {
         display: none;
     }
+
+    .btn_QR {
+        position: absolute;
+        right: 20px;
+        background-image: url(../images/btn_QR_m.png);
+    }
+
+    .qrpopup {
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .qrbx {
+        width: 70%;
+        padding: 20px 0;
+        box-sizing: border-box;
+        max-height: 100%;
+    }
+
+    .qrbx .mMod3 h2 {
+        font-size: 25px;
+    }
+
+    .qrbx .mMod3::after {
+        display: none;
+    }
+
+    .close2 {
+        top: 30px;
+        left: auto;
+        right: 30px;
+        transform: none;
+        width: 40px;
+        height: 40px;
+    }
 }
 
 @media only screen and (max-width:320px) {
@@ -529,6 +563,8 @@
     .modBg .mMod6 .tit {
         margin-bottom: 15px;
     }
+
+
 }
 
 
