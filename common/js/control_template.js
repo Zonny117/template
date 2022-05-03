@@ -1,7 +1,7 @@
 /* 
 [하이팩토리 템플릿 제어 JS]
 2022.04.01 - init
-2022.04.22 - last update
+2022.05.03 - last update
 
 
 code arranged by 정원중
@@ -167,7 +167,7 @@ window.onload = function () {
 
     // 레이아웃 표시 기능
     let check = /iframePreview/i.test(window.location.href);
-    // if (check) {
+    if (check) {
         const helpBox = document.createElement('div');
         const btn_help = document.createElement('a');
         helpBox.id = "help";
@@ -267,7 +267,7 @@ window.onload = function () {
                 });
             }
         });
-    // }
+    }
 
     // 아이프레임 실시간 타이핑
     window.addEventListener('message', function (e) {
@@ -376,6 +376,9 @@ window.onload = function () {
             if (document.querySelectorAll(".lbx .mMod7 a").length >= 1 && mod[0] === `mMod7_a${[i]}`) {
                 document.querySelectorAll(".lbx .mMod7 a")[i].innerText = txt[0];
             }
+            if (document.querySelectorAll(".mMod7.mobile a").length >= 1 && mod[0] === `mMod7_a${[i]}`) {
+                document.querySelectorAll(".mMod7.mobile a")[i].innerText = txt[0];
+            }
             if (document.querySelectorAll(".mMod9.mobile .swiper-slide p").length >= 1 && mod[0] === `mMod9_txt${[i]}`) {
                 document.querySelectorAll(".mMod9.mobile .swiper-slide p")[i].innerText = txt[0];
             }
@@ -389,5 +392,23 @@ window.onload = function () {
 
         }
 
+        mod9txt();
     });
+
+    mod9txt();
+
 };
+
+// 사진 모듈 빈 텍스트 여백 제거
+function mod9txt() {
+    let mod9_txt = [...document.querySelectorAll(".mMod9 .swiper-slide p")];
+
+    mod9_txt.filter(function (el) {
+        if (el.innerText === "") {
+            el.style.padding = 0;
+            el.style.margin = 0;
+        } else {
+            el.removeAttribute('style');
+        }
+    });
+}

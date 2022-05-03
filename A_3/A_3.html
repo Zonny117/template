@@ -23,8 +23,11 @@
     <script src="../common/js/common.js"></script>
     <script src="js/main.js"></script>
 
-	<link rel="stylesheet" href="../common/css/guideline.css">
-	<script src="../common/js/control_template.js"></script>
+    <link rel="stylesheet" href="../common/css/guideline.css">
+    <script src="../common/js/control_template.js"></script>
+    <script src="../common/js/jquery-qrcode-0.18.0.min.js"></script>
+    <script src="../common/js/vcardQR.js"></script>
+
 
 </head>
 
@@ -34,14 +37,13 @@
         <div class="mMod2">
             <!-- 메인 속박스 -->
             <div class="modbg">
-                <div class="background">
-                    <div class="image_box">
+                <div class="imgbox">
+                    <div class="background">
                         <!-- 모듈1 이미지 공간 박스 -->
                         <h1 class="logobx">
                             <img src="images/img_mod2.jpg" alt="로고">
-                            <!-- <video autoplay loop muted playsinline class="vid">
-                                <source src="video/mod2.mp4" type="video/mp4">
-                                브라우저에서 지원되지 않는 포맷입니다.
+                            <!-- <video autoplay loop muted playsinline class="vid" src="video/mod2.mp4">
+
                             </video> -->
                         </h1>
                         <img src="images/logo_frame.png" alt="로고프레임" class="frame">
@@ -143,9 +145,15 @@
             <div class="mMod9 dn mdn">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/x_mod11.jpg" alt="네이처컬렉션"></div>
-                        <div class="swiper-slide"><img src="images/x_mod12.jpg" alt="네이처컬렉션"></div>
-                        <div class="swiper-slide"><img src="images/x_mod13.jpg" alt="네이처컬렉션"></div>
+                        <div class="swiper-slide"><img src="images/x_mod11.jpg" alt="네이처컬렉션">
+                            <p>테스트입니다.</p>
+                        </div>
+                        <div class="swiper-slide"><img src="images/x_mod12.jpg" alt="네이처컬렉션">
+                            <p>테스트입니다.</p>
+                        </div>
+                        <div class="swiper-slide"><img src="images/x_mod13.jpg" alt="네이처컬렉션">
+                            <p>테스트입니다.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -197,8 +205,8 @@
                 <div class="mMod6">
                     <div class="tit">
                         <span>대표연락처</span> <br>
-                        <strong><a href="tel:010-1587-2587">010-1587-2587</a></strong>
-                        <!-- <strong class="forMobile"><a href="###">연락처 정보 저장하기</a></strong> -->
+                        <strong><a href="tel:010-1587-2587" class="tel">010-1587-2587</a></strong>
+                        <strong ><a href="javascript:void(0)" class="btn_QR">QR 코드</a></strong>
                     </div>
                     <div class="txt">
                         언제든 연락주시면 자세한 상담을 해드리겠습니다.<br>
@@ -257,8 +265,23 @@
                             nextEl: ".lMod9 .swiper-button-next",
                             prevEl: ".lMod9 .swiper-button-prev",
                         },
+                        spaceBetween: 30,
                     });
                 </script>
+            </div>
+        </div>
+
+        <div class="qrpopup" @@DB_DelegateYN@@>
+            <div class="qrbx">
+                <div id="qr"></div>
+                <div class="mMod3">
+                    <h2>@@TitleSubject@@</h2>
+                </div>
+                <span class="info">
+                    <a href="###" class="save" download="Hifactory_QRcode.png">정보 저장하기</a>
+                    <p class="info2">핸드폰 카메라를 켜고 <br> QR 코드에 대보세요.</p>
+                </span>
+                <a href="###" class="btn_close close2">닫기</a>
             </div>
         </div>
     </div>

@@ -58,7 +58,7 @@ body {
     left: 20px;
 }
 
-.mMod1{
+.mMod1 {
     position: relative;
     display: inline-block;
     border-radius: 50%;
@@ -93,13 +93,13 @@ body {
 }
 
 /* 사진 */
-.background {
+.imgbox {
     position: relative;
     margin-bottom: 30px;
 }
 
 
-.image_box {
+.background {
     position: relative;
     width: 350px;
     height: 350px;
@@ -143,7 +143,10 @@ body {
     width: 100%;
 }
 
-.mMod1 video {
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -304,12 +307,11 @@ body {
 
 .mMod9 .swiper-container {
     width: 100%;
-    height: 400px;
 }
 
 .mMod9 .swiper-container img {
     width: 100%;
-    height: 100%;
+    height: 400px;
     object-fit: cover;
 }
 
@@ -433,10 +435,38 @@ footer .pbx {
     font-weight: 300;
 }
 
-.mMod6 .tit a {
-    font-size: 1.2rem;
+.mMod6 .tit{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.mMod6 .tel {
+    font-size: 18px;
     color: #e56254;
 }
+
+.btn_QR{
+    display: inline-block;
+    background-color: #e56254;
+    color: #fff;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.btn_QR::before{
+    content: '';
+    background-image: url(../images/btn_QR.svg);
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
 
 .mMod6 .txt {
     line-height: 170%;
@@ -565,4 +595,89 @@ iframe {
 /* 알림온 */
 .mSky {
     z-index: 99999;
+}
+
+.qrpopup {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 99999;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 2px rgba(160, 160, 160, 0.486);
+}
+
+.qrpopup.on{
+    display: flex;
+}
+
+.qrbx {
+    width: 50%;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.qrbx::-webkit-scrollbar {
+    width: 0;
+}
+
+.qrbx .mMod3{
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+.qrbx .mMod3 h2{
+    margin:0;
+    font-family: 'Noto Sans KR', serif;
+    font-size:22px;
+}
+
+.save {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 20px 0;
+    border-radius: 30px;
+    border: 1px solid #000;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    line-height: 160%;
+}
+
+.info2 {
+    font-size: 16px;
+}
+
+#qr {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    box-sizing: border-box;
+}
+
+#qr img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.close2{
+    background-image: url(../images/vid_exit.png);
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 0;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }

@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="../common/plugins/swiper/swiper.min.css">
 	<link rel="stylesheet" href="../common/css/common.css">
 	<link rel="stylesheet" href="css/skin.css">
-    <link rel="shortcut icon" href="/common/images/favicon.ico" type="images/x-icon">
+	<link rel="shortcut icon" href="/common/images/favicon.ico" type="images/x-icon">
 
 
 
@@ -40,7 +40,9 @@
 		<!-- module2-배경 -->
 		<div class="mMod2">
 			<div class="background" style="background-image:url(images/default.png);"></div>
-			<div class="background" style="background-image:url(images/mod2.jpg);"></div>
+			<div class="background" style="background-image:url(images/mod2.jpg);">
+				<video src="images/video.mp4" loop autoplay muted playsinline></video>
+			</div>
 			<div class="modBg">
 
 				<!-- module1-로고 -->
@@ -173,9 +175,15 @@
 			<div class="mMod9 dn">
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide"><img src="images/xmod1.jpg" alt="수입차량 할인정보"></div>
-						<div class="swiper-slide"><img src="images/xmod2.jpg" alt="수입차량 할인정보"></div>
-						<div class="swiper-slide"><img src="images/xmod3.jpg" alt="수입차량 할인정보"></div>
+						<div class="swiper-slide"><img src="images/xmod1.jpg" alt="수입차량 할인정보">
+							<p>테스트입니다.</p>
+						</div>
+						<div class="swiper-slide"><img src="images/xmod2.jpg" alt="수입차량 할인정보">
+							<p>테스트입니다.</p>
+						</div>
+						<div class="swiper-slide"><img src="images/xmod3.jpg" alt="수입차량 할인정보">
+							<p>테스트입니다.</p>
+						</div>
 					</div>
 					<div class="swiper-pagination"></div>
 					<div class="swiper-button-next"></div>
@@ -184,7 +192,7 @@
 				<span class="forMobile"><a href="#jsMod9" class="more">사진보기</a></span>
 				<script>
 					var mMod9 = new Swiper(".mMod9 .swiper-container", {
-						autoHeight:true,
+						autoHeight: true,
 						pagination: {
 							el: ".swiper-pagination",
 						},
@@ -192,6 +200,7 @@
 							nextEl: ".mMod9 .swiper-button-next",
 							prevEl: ".mMod9 .swiper-button-prev",
 						},
+						spaceBetween: 30,
 					});
 				</script>
 			</div>
@@ -314,7 +323,7 @@
 			<div class="w100">
 				<div id="qr"></div>
 				<span class="info">
-					<a href="###" class="save" download="Hifactory_QRcode.png">정보 저장하기</a> 
+					<a href="###" class="save" download="Hifactory_QRcode.png">정보 저장하기</a>
 					<p class="info2">핸드폰 카메라를 켜고 <br> QR 코드에 대보세요.</p>
 				</span>
 			</div>

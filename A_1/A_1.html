@@ -21,6 +21,9 @@
 
 	<link rel="stylesheet" href="../common/css/guideline.css">
 	<script src="../common/js/control_template.js"></script>
+
+	<script src="../common/js/jquery-qrcode-0.18.0.min.js"></script>
+    <script src="../common/js/vcardQR.js"></script>
 </head>
 
 <body>
@@ -31,7 +34,9 @@
 		<!-- module2-배경 -->
 		<div class="mMod2">
 			<div class="background" style="background-image:url(images/default.png);"></div>
-			<div class="background" style="background-image:url(images/bg.jpg);"></div>
+			<div class="background" style="background-image:url(images/bg.jpg);">
+				<video src="images/video.mp4" loop autoplay playsinline muted></video>
+			</div>
 			<div class="modBg">
 
 				<!-- module1-로고 -->
@@ -164,9 +169,15 @@
 		<div class="mMod9 dn">
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide"><img src="images/xmod1.jpg" alt="수입차량 할인정보"></div>
-					<div class="swiper-slide"><img src="images/xmod2.jpg" alt="수입차량 할인정보"></div>
-					<div class="swiper-slide"><img src="images/xmod3.jpg" alt="수입차량 할인정보"></div>
+					<div class="swiper-slide"><img src="images/xmod1.jpg" alt="수입차량 할인정보">
+						<p>테스트입니다.</p>
+					</div>
+					<div class="swiper-slide"><img src="images/xmod2.jpg" alt="수입차량 할인정보">
+						<p>테스트입니다.</p>
+					</div>
+					<div class="swiper-slide"><img src="images/xmod3.jpg" alt="수입차량 할인정보">
+						<p></p>
+					</div>
 				</div>
 				<div class="swiper-pagination"></div>
 				<div class="swiper-button-next"></div>
@@ -175,6 +186,7 @@
 			<span class="forMobile"><a href="#jsMod9" class="more">사진보기</a></span>
 			<script>
 				var mMod9 = new Swiper(".mMod9 .swiper-container", {
+					autoHeight: true,
 					pagination: {
 						el: ".swiper-pagination",
 					},
@@ -189,18 +201,18 @@
 
 		<!-- module5-주소 -->
 		<div class="mMod5 dn">
-			<div class="ti forMobile">
+			<div class="tt forMobile">
 				<strong class="t">아우디 강남AUDI점</strong>
-				서울 강남구 강남동 234-45
+				<span class="ti">서울 강남구 강남동 234-45</span>
 			</div>
 			<div class="gMap">
 				<div class="map" style="background-image:url(images/img_mod5.png);"></div>
 				<a href="###" class="navi">네비게이션연결</a>
 			</div>
 			<div class="txt">
-				<div class="ti forWeb">
+				<div class="tt forWeb">
 					<strong class="t">BMW 강남점</strong>
-					경기 하남시 미사강변동로 72 SB비즈타워 1003호
+					<span class="ti">경기 하남시 미사강변동로 72 SB비즈타워 1003호</span>
 					<div class="tx">
 						&lt;대중교통이용시&gt;<br>
 						시청역(1호선/2호선)에서 하차, 6번 출구에서 도보 1-2분 거리<br>
@@ -213,6 +225,9 @@
 		</div>
 
 		<!-- module10-다운로드 -->
+		<div class="qrbox dn">
+			<a href="javascript:void(0)" class="btn_QR"><span>QR 코드</span></a>
+		</div>
 		<div class="mMod10 dn">
 			<a href="###"><span>카탈로그 다운로드</span></a>
 		</div>
@@ -297,6 +312,21 @@
 		</script>
 		<!-- //resize iframe height -->
 
+
+		<div class="qrpopup" @@DB_DelegateYN@@>
+			<div class="qrbx">
+				<div id="qr"></div>
+				<div class="mMod3">
+					<h2>@@TitleSubject@@</h2>
+				</div>
+				<span class="info">
+					<a href="###" class="save" download="Hifactory_QRcode.png">정보 저장하기</a>
+					<p class="info2">핸드폰 카메라를 켜고 <br> QR 코드에 대보세요.</p>
+				</span>
+				<a href="###" class="btn_close close2">닫기</a>
+			</div>
+		</div>
+	
 </body>
 
 </html>

@@ -5,20 +5,20 @@
 
 @media only screen and (max-width:1366px) {
 
-    .mMod1{
+    .mMod1 {
         width: 55px;
         height: 55px;
     }
 
-    .mMod0{
+    .mMod0 {
         font-size: 14px;
     }
 
-    .forWeb{
+    .forWeb {
         display: none;
     }
 
-    .forMobile{
+    .forMobile {
         display: block;
     }
 
@@ -69,7 +69,7 @@
         text-align: center;
     }
 
-    .mMod2{
+    .mMod2 {
         height: auto;
         background-attachment: unset;
     }
@@ -304,6 +304,7 @@
 
     .mMod9 .swiper-container img {
         width: 100%;
+        height: 300px;
     }
 
     .swiper-slide,
@@ -434,7 +435,11 @@
         line-height: unset;
     }
 
-    .mMod6 .tit a {
+    .mMod6 .tit {
+        display: block;
+    }
+
+    .mMod6 .tit .tel {
         position: relative;
         display: block;
         color: unset;
@@ -446,7 +451,7 @@
         font-size: unset;
     }
 
-    .mMod6 .tit a::before {
+    .mMod6 .tit .tel::before {
         position: absolute;
         transform: scale(.4);
         top: 0;
@@ -459,12 +464,18 @@
         left: 3%;
     }
 
-    .mMod6 .tit strong:nth-of-type(2) a::before {
-        content: url(../images/ico_mod6_2_m.png);
-        top: 5px;
-        left: 3%;
+    .btn_QR {
+        position: relative;
+        width: 100%;
+        border-radius: 20px;
     }
 
+    .btn_QR::before {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 
     /* 슬라이드 사진 레이어 */
     .modBg {
@@ -487,7 +498,8 @@
         height: auto;
         overflow-y: auto;
     }
-    .modBg .swiper-slide.swiper-slide-active{
+
+    .modBg .swiper-slide.swiper-slide-active {
         max-height: unset;
     }
 
@@ -515,23 +527,56 @@
         padding-bottom: 80px;
     }
 
-    footer .pbx{
+    footer .pbx {
         padding: unset;
         width: 100%;
     }
 
-    #jsMod9{
+    #jsMod9 {
         height: 100%;
         background-color: #fff;
     }
 
-    
+    .qrpopup{
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+ 
+    .qrbx{
+        width: 70%;
+        padding: 20px 0;
+        box-sizing: border-box;
+        max-height: 100%;
+    }
+ 
+    .qrbx .mMod3 h2{
+        font-size: 25px;
+    }
+ 
+    .qrbx .mMod3::after{
+        display: none;
+    }
+ 
+    .close2{
+        top: 30px;
+        left: auto;
+        right: 30px;
+        transform: none;
+        width: 40px;
+        height: 40px;
+    }
+
+
 }
 
 /* 모바일 가로회전 */
 @media only screen and (max-height:540px) and (max-width:850px) {
 
-    .mMod2{
+    .mMod2 {
         height: auto;
     }
 
@@ -626,7 +671,7 @@
 
 
 @media only screen and (max-width:850px) {
-    .mMod2{
+    .mMod2 {
         height: auto;
     }
 
