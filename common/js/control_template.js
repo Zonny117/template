@@ -167,7 +167,7 @@ window.onload = function () {
 
     // 레이아웃 표시 기능
     let check = /iframePreview/i.test(window.location.href);
-    if (check) {
+    // if (check) {
         const helpBox = document.createElement('div');
         const btn_help = document.createElement('a');
         helpBox.id = "help";
@@ -267,7 +267,7 @@ window.onload = function () {
                 });
             }
         });
-    }
+    // }
 
     // 아이프레임 실시간 타이핑
     window.addEventListener('message', function (e) {
