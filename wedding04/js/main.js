@@ -85,7 +85,7 @@ $(function () {
             disable();
         }
     });
-    
+
     const body = document.querySelector('body');
     let ios_scroll = 0;
 

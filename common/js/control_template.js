@@ -1,7 +1,7 @@
 /* 
 [하이팩토리 템플릿 제어 JS]
 2022.04.01 - init
-2022.05.03 - last update
+2022.05.09 - last update
 
 
 code arranged by 정원중
@@ -414,7 +414,7 @@ function resize_mod9txt(status) {
 
 
         mod9img.filter(function (img) {
-            if (window.getComputedStyle(img).borderRadius !== "0px") {
+            if (window.getComputedStyle(img).borderRadius !== "0px" && status !== false) {
                 mod9_txt.filter(function (el) {
                     // console.log('레디우스가 있어요')
                     if (el.innerText === "") {
@@ -428,10 +428,10 @@ function resize_mod9txt(status) {
                         el.previousElementSibling.style.borderBottomRightRadius = 0;
                     }
                 });
-            } else {
+            } else if (status === false) {
                 mod9_txt.filter(function (el) {
                     // console.log("레디우스가 없어요")
-                    if (el.innerText === "" && status === false) {
+                    if (el.innerText === "") {
                         el.style.padding = 0;
                         el.style.margin = 0;
 
@@ -442,6 +442,7 @@ function resize_mod9txt(status) {
             }
         });
     }
+
 
     relayout();
 
