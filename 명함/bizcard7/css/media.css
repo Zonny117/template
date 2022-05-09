@@ -1,0 +1,392 @@
+@charset "utf-8";
+
+@media only screen and (max-width:850px) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    * {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        /* Remove scrollbar space */
+        height: 0;
+        background: transparent;
+        /* Optional: just make scrollbar invisible */
+        -webkit-appearance: none;
+    }
+
+
+
+    .gnb {
+        height: 72px;
+        padding: 10px 20px;
+    }
+
+    .mMod0 {
+        font-size: 16px;
+    }
+
+    .gnb .btn_tel {
+        display: none;
+    }
+
+    .content {
+        flex-direction: column;
+        padding-top: 92px;
+        padding-bottom: 70px;
+    }
+
+    .lbx,
+    .rbx {
+        width: 100%;
+    }
+
+    .background {
+        height: 0px;
+        padding-top: 100%;
+        box-sizing: border-box;
+    }
+
+    .mMod11 {
+        display: none;
+    }
+
+    .rbx .mMod3 {
+        border-top: none;
+        padding: 20px 0;
+    }
+
+
+    .rbx .mMod3 h2 {
+        font-size: 50px;
+    }
+
+
+    .teladbx {
+        padding-top: 20px;
+    }
+
+    .teladbx a {
+        height: 54px;
+        line-height: 54px;
+    }
+
+    .mod6bx {
+        padding-bottom: 20px;
+    }
+
+    .tel {
+        height: 60px;
+        line-height: 60px;
+        font-size: 26px;
+        padding: 0 23px;
+        margin-bottom: 15px;
+    }
+
+
+    .tel::after {
+        display: none;
+    }
+
+    .tel::before {
+        content: '';
+        display: inline-block;
+        position: relative;
+        top: 5px;
+        background: url(../image/tel.svg) no-repeat center/100%;
+        width: 44px;
+        height: 60px;
+        vertical-align: middle;
+        margin-right: 20px;
+    }
+
+    .mMod6 .txt {
+        font-size: 15px;
+    }
+
+    .gMap {
+        height: 230px;
+    }
+
+    .t {
+        font-size: 20px;
+    }
+
+    .ti {
+        font-size: 14px;
+    }
+
+    .tx {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .navi {
+        height: 60px;
+        line-height: 60px;
+        font-size: 28px;
+        padding: 0 25px;
+        margin-top: 15px;
+    }
+
+    .navi::before {
+        content: '';
+        display: inline-block;
+        width: 50px;
+        height: 60px;
+        background: url(../image/navi.svg) no-repeat center/100%;
+        vertical-align: middle;
+        position: relative;
+        top: 5px;
+        margin-right: 30px;
+    }
+
+    .navi::after {
+        display: none;
+    }
+
+
+    .mMod4 {
+        padding-top: 20px;
+    }
+
+    .topflex {
+        padding-bottom: 20px;
+    }
+
+    .topflex.on {
+        padding-bottom: 0;
+    }
+
+    .topflex_info {
+        margin-bottom: 30px;
+        border-bottom: 2px solid #c7c7c7;
+        box-sizing: border-box;
+    }
+
+    .topflex_info.on {
+        margin-bottom: 0;
+        border-bottom: none;
+    }
+
+    .section_txt {
+        font-size: 22px;
+        margin-bottom: 0;
+    }
+
+    .info {
+        display: inline-block;
+    }
+
+    .btn_open {
+        display: inline-block;
+        font-size: 0;
+        text-indent: -9999px;
+        background: url(../image/btn_open.svg) no-repeat center/100%;
+        width: 19px;
+        height: 20px;
+    }
+
+    .btn_open.on {
+        background-image: url(../image/btn_open_reversed.svg);
+        opacity: .4;
+    }
+
+    .hiddenbx {
+        overflow: hidden;
+        height: 0;
+    }
+
+    .hiddenbx.on {
+        height: auto;
+    }
+
+    .mMod4 .tit {
+        font-size: 18px;
+    }
+
+    .mMod4 .txt {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .mMod4 .swiper-slide:last-child .txt {
+        margin-bottom: 0;
+    }
+
+    .mMod9,
+    .mMod8,
+    .mMod7,
+    .mMod10 {
+        padding: 25px 0;
+    }
+
+    .number {
+        font-size: 16px;
+    }
+
+    .btnbx {
+        display: none;
+    }
+
+
+    .mMod9 .swiper-slide {
+        width: 130px;
+    }
+
+    .mMod9 img{
+        height: 130px;
+    }
+
+
+    .mMod9 .swiper-slide p{
+        font-size: 13px;
+    }
+
+    .iframebx {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 56.66%;
+        box-sizing: border-box;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .mMod7 .hiddenbx a {
+        height: 46px;
+        line-height: 46px;
+        padding: 0 15px;
+        font-size: 15px;
+    }
+
+    .mMod7 a::before {
+        width: 24px;
+        height: 45px;
+    }
+
+    .mMod10 a {
+        height: 60px;
+        line-height: 60px;
+        font-size: 20px;
+        text-align: center;
+        padding: 0 30px;
+    }
+
+    .mMod10 a::after {
+        display: none;
+    }
+
+    .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 70px;
+        z-index: 9999;
+        background-color: #000;
+    }
+
+    .bottom a {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .bar {
+        font-size: 0;
+        width: 2px;
+        height: 17px;
+        background-color: #494949;
+        text-indent: -9999px;
+    }
+
+    .lMod9 {
+        padding: 64px 20px 0px;
+        box-sizing: border-box;
+    }
+
+    .lMod9 .topflex {
+        padding-bottom: 5px;
+    }
+
+    .lMod9 .swiper-container {
+        height: calc(100vh - 97px);
+    }
+
+    .btn_close {
+        width: 40px;
+        height: 40px;
+    }
+
+    .scrollbx {
+        padding: 64px 20px;
+    }
+
+    .qrbx {
+        padding: 40px;
+        width: 100%;
+        height: auto;
+    }
+
+    .qrflex {
+        display: none;
+    }
+
+    #qr {
+        width: 100%;
+        padding-top: 100%;
+        margin: 0 auto;
+    }
+
+    .guide {
+        font-size: 14px;
+        padding: 0px 0 20px;
+        box-sizing: border-box;
+    }
+
+    .save {
+        display: block;
+        margin: 0 auto;
+        width: 93%;
+        text-align: center;
+        height: 52px;
+        line-height: 52px;
+        font-size: 18px;
+    }
+
+    .save::after {
+        display: none;
+    }
+
+    .save::before {
+        content: '';
+        position: relative;
+        top: 5px;
+        display: inline-block;
+        width: 29px;
+        height: 52px;
+        background: url(../image/link.svg) no-repeat center/100%;
+        vertical-align: middle;
+        margin-right: 20px;
+    }
+
+    .mSky {
+        bottom: 63px;
+    }
+}

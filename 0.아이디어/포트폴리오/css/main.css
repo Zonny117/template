@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+
+html,body{
+    overflow-y: hidden;
+}
+
+#wrap{
+    display: flex;
+}
+
+.sidebar{
+    width: 300px;
+    height: 100vh;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+}
+
+
+.logobx{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.mMod1{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+}
+
+.mMod1 img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+}
+
+.mMod0{
+    font-size: 18px;
+    font-weight: 600;
+}

@@ -1,0 +1,384 @@
+@charset "utf-8";
+
+@media only screen and (max-width:850px) {
+
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    #wrap {
+        padding: 0;
+        padding-bottom: 62px;
+    }
+
+    .main {
+        flex-direction: column;
+        border-bottom: 8px solid #eaeaea;
+        padding-bottom: 30px;
+    }
+
+    .gnb {
+        align-items: center;
+        height: 60px;
+        padding: 10px;
+    }
+
+    .btn_tel,
+    .btn_tel2 {
+        display: none;
+    }
+
+    .mMod0.web {
+        display: none;
+    }
+
+    .mMod0.mobile {
+        display: block;
+    }
+
+    .mMod1 {
+        width: 42px;
+        height: 42px;
+    }
+
+    .btn_QR {
+        border: none;
+        width: 42px;
+        height: 42px;
+        border-radius: 0;
+        background-size: 16px 26px;
+        margin: 0;
+    }
+
+    .content {
+        margin-top: 60px;
+    }
+
+    .lbx,
+    .rbx {
+        width: 100%;
+    }
+
+    .sticky {
+        position: static;
+    }
+
+    .background {
+        height: 375px;
+        margin-bottom: 20px;
+    }
+
+    .lbxflex {
+        display: none;
+    }
+
+    .padding {
+        padding: 0 15px;
+    }
+
+    .margin {
+        margin: 0 15px;
+    }
+
+    .main .mMod3 {
+        border-bottom: 8px solid #eaeaea;
+        padding-bottom: 20px;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+    }
+
+    .mMod3 h2 {
+        font-size: 24px;
+    }
+
+    .mMod3 .txt {
+        font-size: 14px;
+        margin-top: 2px;
+    }
+
+    .btn_white {
+        left: 1.5%;
+        width: 47.5%;
+    }
+
+    .count {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        box-sizing: border-box;
+        border-bottom: 8px solid #eaeaea;
+    }
+
+    .mod6bx,
+    .mod5bx {
+        margin-bottom: 0;
+    }
+
+    .mMod6 span {
+        font-size: 12px;
+    }
+
+    .mMod6 .tit {
+        margin-bottom: 10px;
+    }
+
+    .mMod6 .tel {
+        font-size: 20px;
+    }
+
+    .mMod6 .txt {
+        padding-top: 10px;
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+
+    .gMap {
+        height: 260px;
+        margin-bottom: 10px;
+    }
+
+    .ti {
+        margin-top: 8px;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .tx {
+        font-size: 14px;
+        padding-top: 10px;
+    }
+
+    .navi {
+        margin-top: 10px;
+        height: 48px;
+        line-height: 48px;
+    }
+
+    .mMod7 {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        box-sizing: border-box;
+        border-bottom: 8px solid #eaeaea;
+    }
+
+    .link {
+        margin-left: 15px;
+        margin-bottom: 15px;
+    }
+
+    .mMod7 .swiper-container {
+        width: 90%;
+        overflow: unset;
+        margin: 0 auto;
+        /* box-sizing: border-box; */
+    }
+
+    .mMod7 .swiper-button-next {
+        display: none;
+    }
+
+    .mMod7 .swiper-slide {
+        width: 130px;
+    }
+
+    .mMod4 {
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .mMod4 .tit {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .mMod4 .txt {
+        font-size: 14px;
+    }
+
+    .mMod4 .swiper-slide+.swiper-slide {
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+
+    .mMod9 {
+        margin-top: 30px;
+        padding-bottom: 25px;
+        box-sizing: border-box;
+        border-bottom: 8px solid #eaeaea;
+    }
+
+    .pic {
+        padding-left: 15px;
+        margin-bottom: 18px;
+        box-sizing: border-box;
+    }
+
+    .grid-item,
+    .grid-sizer {
+        width: 32.8%;
+    }
+
+    .mMod9 .swiper-slide {
+        margin-bottom: 0.8%;
+    }
+
+
+    .masonry img {
+        height: 123px;
+        object-fit: cover;
+        border-radius: 0;
+    }
+
+    .mMod9 .swiper-slide p{
+        margin: 10px 0;
+        font-size: 14px;
+    }
+
+    .gutter {
+        width: 0.8%;
+    }
+
+    .mag {
+        margin-top: 10px;
+        width: 90%;
+        height: 48px;
+        line-height: 48px;
+    }
+
+    .mMod8 {
+        margin-top: 25px;
+        padding-bottom: 25px;
+        box-sizing: border-box;
+        border-bottom: 8px solid #eaeaea;
+    }
+
+    .iframebx {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        height: 0;
+        padding-top: 50%;
+        box-sizing: border-box;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+
+    .mMod10.mobile {
+        display: block;
+        padding: 30px 15px;
+        margin-bottom: 8px;
+        box-sizing: border-box;
+    }
+
+    .mMod10 a {
+        width: 100%;
+        padding: 14px 20px;
+        text-align: center;
+        max-width: unset;
+    }
+
+    .navi_bottom.mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        border-top: 1px solid #e2e2e2;
+        z-index: 999;
+
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+
+    .navi_bottom a {
+        display: inline-block;
+        height: 48px;
+        line-height: 48px;
+        background-color: #000;
+        color: #fff;
+        border-radius: 8px;
+        width: 49%;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+
+    }
+
+    .btn_close {
+        top: 10px;
+        right: 15px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .lMod9 {
+        padding: 0;
+    }
+
+    .lMod9 .swiper-container {
+        padding: 70px 0;
+        height: calc(var(--vh, 1vh) * 100);
+    }
+
+    .lMod9 img {
+        border-radius: 0;
+    }
+
+    .qrbx {
+        width: 100%;
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .scrollbx {
+        padding: 42px 15px;
+    }
+
+    .titlebx {
+        margin-bottom: 24px;
+        align-items: center;
+    }
+
+    .qrbx .mMod3 {
+        margin-left: 20px;
+    }
+
+    #qr {
+        width: 70%;
+        padding-top: 70%;
+    }
+
+    .guide {
+        width: 43%;
+        margin: 0 auto;
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    .save {
+        width: 42px;
+        height: 42px;
+        margin-right: 20px;
+    }
+
+
+    .mSky {
+        bottom: 65px;
+    }
+
+}

@@ -1,0 +1,264 @@
+@charset "utf-8";
+
+@media only screen and (max-width:850px) {
+
+    *{
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .title {
+        width: 35%;
+    }
+
+    .content{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    .char {
+        width: 60%;
+    }
+
+
+    .whitebox {
+        padding: 50px 20px;
+        border-radius: 15px;
+    }
+
+    .whitebox::after {
+        width: 88px;
+        right: -10px;
+    }
+
+    .background {
+        width: 50%;
+        padding-top: 50%;
+        margin-bottom: 30px;
+    }
+
+    .whitebox .mMod3 {
+        padding-bottom: 20px;
+    }
+
+    .whitebox .mMod3 span {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .whitebox .mMod3 .txt {
+        font-size: 14px;
+    }
+
+    .mMod4 {
+        padding-top: 0;
+        padding-bottom: 25px;
+    }
+
+    .mMod4 .swiper-slide+.swiper-slide {
+        margin-top: 10px;
+    }
+
+    .mMod4 .tit {
+        max-width: 65%;
+        font-size: 18px;
+        padding: 10px 22px;
+        top: 22px;
+    }
+
+    .mMod4 .txt {
+        max-width: 93%;
+        padding: 30px 20px;
+        font-size: 14px;
+    }
+
+    .mMod4 .txt::before {
+        top: -21px;
+        left: -21px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .mMod6 {
+        padding: 20px 0;
+    }
+
+    .mMod6 .txt {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .mMod6 span {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .mMod6 .tel {
+        font-size: 20px;
+    }
+
+
+    .btnbx a {
+        width: 45px;
+        height: 45px;
+    }
+
+    .btnbx a+a {
+        margin-left: 5px;
+    }
+
+    body .btn_sms{
+        display: inline-block;
+        background-image: url(../image/btn_sms.svg);
+    }
+
+    .mMod1 {
+        max-width: 90%;
+        height: 45px;
+    }
+
+
+    .whitebox+.whitebox {
+        margin-top: 55px;
+    }
+
+    .whitebox2>div {
+        margin-bottom: 25px;
+    }
+
+    .whitebox2 .bdt {
+        padding-top: 25px;
+    }
+
+    .whitebox2 .mMod5 {
+        padding-top: 0;
+    }
+
+    .section_txt {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .section_txt::before {
+        width: 25px;
+        height: 25px;
+        vertical-align: -5px;
+    }
+
+    .gMap {
+        height: 250px;
+    }
+
+    .t {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .ti {
+        margin-bottom: 10px;
+    }
+
+    .ti,
+    .tx {
+        font-size: 14px;
+    }
+
+    .navi {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .mMod7 a,
+    .mMod10 a {
+        width: 100%;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .mMod7 a+a {
+        margin-top: 10px;
+    }
+
+
+    .mMod9 .swiper-container {
+        height: 200px;
+    }
+
+    .mMod9 img {
+        border-radius: 10px;
+    }
+
+
+    .iframebx {
+        position: relative;
+        height: 0px;
+        padding-top: 55.66%;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .mMod11 {
+        display: none;
+    }
+
+    .qrbx {
+        width: 100%;
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .scrollbx {
+        padding: 42px 15px;
+    }
+
+    .titlebx {
+        margin-bottom: 24px;
+        align-items: center;
+    }
+
+    #qr {
+        width: 70%;
+        padding-top: 70%;
+    }
+
+    .guide {
+        width: 43%;
+        margin: 0 auto;
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    .save {
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+    }
+
+    .titlebx .mMod0{
+        font-size: 18px;
+        margin-left: 20px;
+    }
+
+
+    .btn_close{
+        top: 15px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+    }
+
+
+    @media only screen and (orientation:landscape) {
+        .whitebox{
+            padding: 80px 30px;
+        }
+    }
+}
