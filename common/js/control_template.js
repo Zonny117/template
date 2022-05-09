@@ -408,39 +408,37 @@ function resize_mod9txt(status) {
 
     function relayout() {
 
-
-        let mod9img = [...document.querySelectorAll(".mMod9 .swiper-slide img")];
+        // let mod9img = [...document.querySelectorAll(".mMod9 .swiper-slide img")];
         let mod9_txt = [...document.querySelectorAll(".mMod9 .swiper-slide p")];
 
+        // mod9img.filter(function () {
+        if (status !== false) {
+            mod9_txt.filter(function (el) {
+                // console.log('레디우스가 있어요')
+                if (el.innerText === "") {
 
-        mod9img.filter(function (img) {
-            if (window.getComputedStyle(img).borderRadius !== "0px" && status !== false) {
-                mod9_txt.filter(function (el) {
-                    // console.log('레디우스가 있어요')
-                    if (el.innerText === "") {
+                    el.previousElementSibling.removeAttribute('style');
+                    el.style.padding = 0;
+                    el.style.margin = 0;
+                } else if (el.innerText !== "" && status === 'bottom') {
+                    el.removeAttribute('style');
+                    el.previousElementSibling.style.borderBottomLeftRadius = 0;
+                    el.previousElementSibling.style.borderBottomRightRadius = 0;
+                }
+            });
+        } else if (status === false) {
+            mod9_txt.filter(function (el) {
+                // console.log("레디우스가 없어요")
+                if (el.innerText === "") {
+                    el.style.padding = 0;
+                    el.style.margin = 0;
 
-                        el.previousElementSibling.removeAttribute('style');
-                        el.style.padding = 0;
-                        el.style.margin = 0;
-                    } else if (el.innerText !== "" && status === 'bottom') {
-                        el.removeAttribute('style');
-                        el.previousElementSibling.style.borderBottomLeftRadius = 0;
-                        el.previousElementSibling.style.borderBottomRightRadius = 0;
-                    }
-                });
-            } else if (status === false) {
-                mod9_txt.filter(function (el) {
-                    // console.log("레디우스가 없어요")
-                    if (el.innerText === "") {
-                        el.style.padding = 0;
-                        el.style.margin = 0;
-
-                    } else if (el.innerText !== "") {
-                        el.removeAttribute('style');
-                    }
-                });
-            }
-        });
+                } else if (el.innerText !== "") {
+                    el.removeAttribute('style');
+                }
+            });
+        }
+        // });
     }
 
 
