@@ -368,4 +368,6 @@ $(window).on('load', function () {
         old = newvalue;
     })
 
+
+    resize_mod9txt(false);
 })

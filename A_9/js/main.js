@@ -307,5 +307,6 @@ $(function () {
     });
 
 
+	resize_mod9txt(false);
 
 }); /////////////////////

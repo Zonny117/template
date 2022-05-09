@@ -223,5 +223,6 @@ $(function () {
             disable();
         }
     });
+	resize_mod9txt(false);
 
 });

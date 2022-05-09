@@ -226,5 +226,6 @@ $(function () {
         }
     });
     
+	resize_mod9txt('bottom');
 
 })

@@ -72,12 +72,24 @@ $(function () {
     let mag = $(".mMod9 .swiper-slide");
 
     if (mag.length >= 1) {
-        mag.find("img").after("<a href='###' class='mag'>크게 보기</a>")
+        mag.find("img").before("<a href='###' class='mag'>크게 보기</a>")
     }
 
     var mMod9 = new Swiper(".mMod9 .swiper-container", {
+        autoHeight: true,
         spaceBetween: 30,
         grabCursor: true
+    });
+
+    window.addEventListener('message', function (e) {
+        let mod = /mMod[0-9]{1,2}(_[a-z]{1,3}(\d{1,})?)?/g.exec(e.data);
+        // console.log(mod[0]);
+
+
+        if (/mMod9/.test(mod[0])) {
+            // console.log("true")
+            mMod9.updateAutoHeight(600);
+        }
     });
 
     $(".flex a").click(function () {
@@ -170,4 +182,6 @@ $(function () {
             disable();
         }
     })
+
+    resize_mod9txt('bottom');
 });

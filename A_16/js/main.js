@@ -377,4 +377,6 @@ $(function () {
         $(".qrpopup").removeClass("on");
     });
 
+	resize_mod9txt(false);
+
 });

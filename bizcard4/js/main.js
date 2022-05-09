@@ -133,4 +133,6 @@ $(function () {
 
     stopKakaoScroll('body');
 
+    resize_mod9txt(false);
+
 });

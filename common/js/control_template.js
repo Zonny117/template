@@ -168,105 +168,105 @@ window.onload = function () {
     // 레이아웃 표시 기능
     let check = /iframePreview/i.test(window.location.href);
     // if (check) {
-        const helpBox = document.createElement('div');
-        const btn_help = document.createElement('a');
-        helpBox.id = "help";
-        btn_help.setAttribute('href', 'javascript:void(0)');
-        btn_help.classList.add('btn_help', 'on');
-        btn_help.innerText = "도움말 표시";
-        document.querySelector('body').append(helpBox);
-        helpBox.append(btn_help);
+    const helpBox = document.createElement('div');
+    const btn_help = document.createElement('a');
+    helpBox.id = "help";
+    btn_help.setAttribute('href', 'javascript:void(0)');
+    btn_help.classList.add('btn_help', 'on');
+    btn_help.innerText = "도움말 표시";
+    document.querySelector('body').append(helpBox);
+    helpBox.append(btn_help);
 
-        const modarr = [".background", ".mMod0", ".mMod1", ".mMod3", ".mMod4 .swiper-slide", ".mMod5", ".mMod6", ".mMod7", ".mMod8", ".mMod9 .swiper-slide", ".mMod10", ".mMod11"];
-        const modarrNode = document.querySelectorAll(modarr);
+    const modarr = [".background", ".mMod0", ".mMod1", ".mMod3", ".mMod4 .swiper-slide", ".mMod5", ".mMod6", ".mMod7", ".mMod8", ".mMod9 .swiper-slide", ".mMod10", ".mMod11"];
+    const modarrNode = document.querySelectorAll(modarr);
 
-        btn_help.addEventListener('click', function () {
-            let txt = this.innerText;
-            this.classList.toggle("on");
+    btn_help.addEventListener('click', function () {
+        let txt = this.innerText;
+        this.classList.toggle("on");
 
-            if (this.classList.contains("on")) {
-                this.innerText = txt.replace(/끄기/, '표시');
-                modarrNode.forEach(function (item) {
-                    item.classList.remove('help', 'relative');
-                    item.removeChild(document.querySelector(".helptxt"));
-                });
-                window.parent.postMessage('helpOff', '*');
-            } else {
-                this.innerText = txt.replace(/표시/, '끄기');
-                Array.prototype.slice.call(modarrNode).filter(function (el) {
-                    let position_check = window.getComputedStyle(el).position;
-                    if (position_check !== 'absolute' && position_check !== 'fixed' && position_check !== 'sticky') {
-                        el.classList.add("help", "relative");
-                    } else {
-                        el.classList.add("help");
-                    }
-                });
-                modarrNode.forEach(function (item) {
-                    const helpTxt = document.createElement('div');
-                    helpTxt.className = "helptxt";
-                    item.append(helpTxt);
+        if (this.classList.contains("on")) {
+            this.innerText = txt.replace(/끄기/, '표시');
+            modarrNode.forEach(function (item) {
+                item.classList.remove('help', 'relative');
+                item.removeChild(document.querySelector(".helptxt"));
+            });
+            window.parent.postMessage('helpOff', '*');
+        } else {
+            this.innerText = txt.replace(/표시/, '끄기');
+            Array.prototype.slice.call(modarrNode).filter(function (el) {
+                let position_check = window.getComputedStyle(el).position;
+                if (position_check !== 'absolute' && position_check !== 'fixed' && position_check !== 'sticky') {
+                    el.classList.add("help", "relative");
+                } else {
+                    el.classList.add("help");
+                }
+            });
+            modarrNode.forEach(function (item) {
+                const helpTxt = document.createElement('div');
+                helpTxt.className = "helptxt";
+                item.append(helpTxt);
 
-                    item.addEventListener('click', function () {
-                        if (btn_help.classList.contains('on')) return;
-                        document.querySelectorAll('.lMod9, html, body').forEach(function (item) {
-                            item.classList.remove('on');
-                        });
-                        document.querySelectorAll('body, .scrollbx').forEach(function (item) {
-                            item.removeAttribute('style');
-                        });
-
-                        let modtxt = item.getAttribute('class');
-                        let reg = /mMod[0-9]{1,2}|background|swiper-slide/.exec(modtxt);
-
-                        if (item.closest(".mMod4")) {
-                            reg[0] = "mMod4";
-                        } else if (item.closest(".mMod9")) {
-                            reg[0] = "mMod9";
-                        }
-
-                        // console.log(reg[0]);
-
-                        window.parent.postMessage(reg[0], '*');
-
-                        // switch (reg[0]) {
-                        //     case "mMod0":
-                        //         swal('서비스명을 입력해주세요.', '회사명, 자신의 이름 등 자신을 어필할 문구를 짧게 입력해주세요. \n\n※필수 입력 사항입니다!');
-                        //         break;
-                        //     case "mMod1":
-                        //         swal('로고를 넣어주세요.', '로고는 선택하신 템플릿에 따라 디자인이 다릅니다. \n최대한 배경색이 없는 투명한 로고 이미지일 수록 좋아요!');
-                        //         break;
-                        //     case "mMod3":
-                        //         swal('타이틀 제목과 내용 영역입니다.', '사이트의 대표 문구를 입력할 시간이에요. \n 자신이 전하고자 하는 주제를 명확하게 전달하면 좋겠죠?');
-                        //         break;
-                        //     case "mMod4":
-                        //         swal('보조내용 영역입니다.', '사이트의 본문에 해당하는 역할을 합니다. 사람들에게 전하고 싶은 내용을 담아주세요. \n\n※원하는 만큼 추가할 수 있어요!');
-                        //         break;
-                        //     case "mMod5":
-                        //         swal('주소를 입력해주세요!', '회사의 주소나 행사장 위치 등을 안내할 수 있습니다. \n주변 교통을 이용해 찾아오는 방법도 메모해주시면 받는 분들에게 더 도움이 되겠죠?');
-                        //         break;
-                        //     case "mMod6":
-                        //         swal('연락처 정보를 입력해주세요.', '대표 연락처는 하나만! 필요에 따라 이메일 주소나 팩스, 기타 번호등 자유롭게 적어주세요!');
-                        //         break;
-                        //     case "mMod7":
-                        //         swal('링크 주소를 연결할 수 있어요.', '자신을 어필하는데 도움이 되는 유용한 외부 주소를 연결할 수 있어요.');
-                        //         break;
-                        //     case "mMod8":
-                        //         swal('유튜브 주소를 입력하세요.', '원하는 유튜브 영상 주소를 입력하면 사이트에 첨부할 수 있어요!');
-                        //         break;
-                        //     case "mMod9":
-                        //         swal('사진을 넣어주세요.', '사진은 원하는 만큼 넣을 수 있어요.');
-                        //         break;
-                        //     case "mMod10":
-                        //         swal('첨부파일을 넣어주세요.', '받는 사람이 유용한 자료를 볼 수 있도록 파일 선정을 해봅시다! \n\n예) 안내 팜플렛, 약도, 프로모션 포스터 등');
-                        //         break;
-                        //     case "mMod11":
-                        //         swal('SNS가 있나요?', '페이스북, 인스타그램, 유튜브, 트위터 중 선택해 자신의 계정과 연결해보세요. \n없어요? 그럼 당신은 인싸가 아님');
-                        //         break;
-                        // }
+                item.addEventListener('click', function () {
+                    if (btn_help.classList.contains('on')) return;
+                    document.querySelectorAll('.lMod9, html, body').forEach(function (item) {
+                        item.classList.remove('on');
                     });
+                    document.querySelectorAll('body, .scrollbx').forEach(function (item) {
+                        item.removeAttribute('style');
+                    });
+
+                    let modtxt = item.getAttribute('class');
+                    let reg = /mMod[0-9]{1,2}|background|swiper-slide/.exec(modtxt);
+
+                    if (item.closest(".mMod4")) {
+                        reg[0] = "mMod4";
+                    } else if (item.closest(".mMod9")) {
+                        reg[0] = "mMod9";
+                    }
+
+                    // console.log(reg[0]);
+
+                    window.parent.postMessage(reg[0], '*');
+
+                    // switch (reg[0]) {
+                    //     case "mMod0":
+                    //         swal('서비스명을 입력해주세요.', '회사명, 자신의 이름 등 자신을 어필할 문구를 짧게 입력해주세요. \n\n※필수 입력 사항입니다!');
+                    //         break;
+                    //     case "mMod1":
+                    //         swal('로고를 넣어주세요.', '로고는 선택하신 템플릿에 따라 디자인이 다릅니다. \n최대한 배경색이 없는 투명한 로고 이미지일 수록 좋아요!');
+                    //         break;
+                    //     case "mMod3":
+                    //         swal('타이틀 제목과 내용 영역입니다.', '사이트의 대표 문구를 입력할 시간이에요. \n 자신이 전하고자 하는 주제를 명확하게 전달하면 좋겠죠?');
+                    //         break;
+                    //     case "mMod4":
+                    //         swal('보조내용 영역입니다.', '사이트의 본문에 해당하는 역할을 합니다. 사람들에게 전하고 싶은 내용을 담아주세요. \n\n※원하는 만큼 추가할 수 있어요!');
+                    //         break;
+                    //     case "mMod5":
+                    //         swal('주소를 입력해주세요!', '회사의 주소나 행사장 위치 등을 안내할 수 있습니다. \n주변 교통을 이용해 찾아오는 방법도 메모해주시면 받는 분들에게 더 도움이 되겠죠?');
+                    //         break;
+                    //     case "mMod6":
+                    //         swal('연락처 정보를 입력해주세요.', '대표 연락처는 하나만! 필요에 따라 이메일 주소나 팩스, 기타 번호등 자유롭게 적어주세요!');
+                    //         break;
+                    //     case "mMod7":
+                    //         swal('링크 주소를 연결할 수 있어요.', '자신을 어필하는데 도움이 되는 유용한 외부 주소를 연결할 수 있어요.');
+                    //         break;
+                    //     case "mMod8":
+                    //         swal('유튜브 주소를 입력하세요.', '원하는 유튜브 영상 주소를 입력하면 사이트에 첨부할 수 있어요!');
+                    //         break;
+                    //     case "mMod9":
+                    //         swal('사진을 넣어주세요.', '사진은 원하는 만큼 넣을 수 있어요.');
+                    //         break;
+                    //     case "mMod10":
+                    //         swal('첨부파일을 넣어주세요.', '받는 사람이 유용한 자료를 볼 수 있도록 파일 선정을 해봅시다! \n\n예) 안내 팜플렛, 약도, 프로모션 포스터 등');
+                    //         break;
+                    //     case "mMod11":
+                    //         swal('SNS가 있나요?', '페이스북, 인스타그램, 유튜브, 트위터 중 선택해 자신의 계정과 연결해보세요. \n없어요? 그럼 당신은 인싸가 아님');
+                    //         break;
+                    // }
                 });
-            }
-        });
+            });
+        }
+    });
     // }
 
     // 아이프레임 실시간 타이핑
@@ -392,23 +392,62 @@ window.onload = function () {
 
         }
 
-        mod9txt();
     });
 
-    mod9txt();
 
 };
 
-// 사진 모듈 빈 텍스트 여백 제거
-function mod9txt() {
-    let mod9_txt = [...document.querySelectorAll(".mMod9 .swiper-slide p")];
+/* 
+   [사진 모듈 빈 텍스트 여백 제거 및 이미지 하단 레디우스 제거]
 
-    mod9_txt.filter(function (el) {
-        if (el.innerText === "") {
-            el.style.padding = 0;
-            el.style.margin = 0;
-        } else {
-            el.removeAttribute('style');
-        }
+    p 태그 방향에 따라 status 방향 지정 필수
+    레디우스 제거가 필요없을시 status에 false 전달 필수
+*/
+function resize_mod9txt(status) {
+
+
+    function relayout() {
+
+
+        let mod9img = [...document.querySelectorAll(".mMod9 .swiper-slide img")];
+        let mod9_txt = [...document.querySelectorAll(".mMod9 .swiper-slide p")];
+
+
+        mod9img.filter(function (img) {
+            if (window.getComputedStyle(img).borderRadius !== "0px") {
+                mod9_txt.filter(function (el) {
+                    // console.log('레디우스가 있어요')
+                    if (el.innerText === "") {
+
+                        el.previousElementSibling.removeAttribute('style');
+                        el.style.padding = 0;
+                        el.style.margin = 0;
+                    } else if (el.innerText !== "" && status === 'bottom') {
+                        el.removeAttribute('style');
+                        el.previousElementSibling.style.borderBottomLeftRadius = 0;
+                        el.previousElementSibling.style.borderBottomRightRadius = 0;
+                    }
+                });
+            } else {
+                mod9_txt.filter(function (el) {
+                    // console.log("레디우스가 없어요")
+                    if (el.innerText === "" && status === false) {
+                        el.style.padding = 0;
+                        el.style.margin = 0;
+
+                    } else if (el.innerText !== "") {
+                        el.removeAttribute('style');
+                    }
+                });
+            }
+        });
+    }
+
+    relayout();
+
+    window.addEventListener('message', function () {
+        // console.log('메세지 테스트')
+        relayout();
     });
+
 }

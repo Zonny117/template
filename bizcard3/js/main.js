@@ -67,6 +67,7 @@ $(function () {
     });
 
     var mMod9 = new Swiper(".mMod9 .swiper-container", {
+        autoHeight: true,
         spaceBetween: 30,
         grabCursor: true
     });
@@ -74,7 +75,7 @@ $(function () {
     let mag = $(".mMod9 .swiper-slide");
 
     if (mag.length >= 1) {
-        mag.find("img").after("<a href='###' class='mag'>크게 보기</a>")
+        mag.find("img").before("<a href='###' class='mag'>크게 보기</a>")
     }
 
     // 사진 확대용 컨테이너 추가
@@ -207,4 +208,6 @@ $(function () {
             disable();
         }
     });
+
+    resize_mod9txt('bottom');
 });

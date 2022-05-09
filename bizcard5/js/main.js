@@ -65,6 +65,7 @@ $(function () {
     });
 
     var mMod9 = new Swiper(".mMod9 .swiper-container", {
+        autoHeight: true,
         slidesPerView: 1,
         spaceBetween: 50,
         pagination: {
@@ -74,6 +75,17 @@ $(function () {
         navigation: {
             nextEl: ".mMod9 .swiper-button-next",
             prevEl: ".mMod9 .swiper-button-prev",
+        }
+    });
+
+    window.addEventListener('message', function (e) {
+        let mod = /mMod[0-9]{1,2}(_[a-z]{1,3}(\d{1,})?)?/g.exec(e.data);
+        // console.log(mod[0]);
+
+
+        if (/mMod9/.test(mod[0])) {
+            // console.log("true")
+            mMod9.updateAutoHeight(600);
         }
     });
 
@@ -199,4 +211,6 @@ $(function () {
             disable();
         }
     });
+
+    resize_mod9txt(false);
 });

@@ -62,4 +62,6 @@ $(document).ready(function () {
 		}
 	});
 
+
+	resize_mod9txt('bottom');
 });
