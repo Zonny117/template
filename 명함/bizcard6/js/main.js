@@ -169,6 +169,10 @@ $(function () {
             msnry.layout();
         });
 
+        window.addEventListener('message', function () {
+            msnry.layout();
+        });
+
 
         // 6장(mobile) /8장 이상 숨김 (DT)
         let item = $('.grid-item').length;
