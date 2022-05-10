@@ -413,14 +413,17 @@ h2,
 
 .mMod9 .swiper-container {
     width: 100%;
-    height: 450px;
 }
 
 .mMod9 img {
     width: 100%;
-    height: 100%;
+    height: 450px;
     object-fit: cover;
     border-radius: 15px;
+}
+
+.mMod9 .swiper-slide p{
+    font-size: 16px;
 }
 
 .iframebx {

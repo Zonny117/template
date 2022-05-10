@@ -181,15 +181,14 @@
         margin-top: 10px;
     }
 
-
-    .mMod9 .swiper-container {
-        height: 200px;
-    }
-
     .mMod9 img {
+        height: 200px;
         border-radius: 10px;
     }
 
+    .mMod9 .swiper-slide p{
+        font-size: 14px;
+    }
 
     .iframebx {
         position: relative;

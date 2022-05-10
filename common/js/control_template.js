@@ -1,7 +1,7 @@
 /* 
 [하이팩토리 템플릿 제어 JS]
 2022.04.01 - init
-2022.05.09 - last update
+2022.05.10 - last update
 
 
 code arranged by 정원중
@@ -66,6 +66,14 @@ const control = {
             return false;
         }
     },
+    removeDN: function (target) {
+        let bdt = [...document.querySelectorAll(target)];
+        bdt.filter(function (el) {
+            if (el.style.display === "none") {
+                el.remove();
+            }
+        });
+    }
 };
 // 레이아웃 관련 함수
 function vh() {

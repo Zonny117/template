@@ -42,4 +42,19 @@ $(function () {
     //팝업 바디 스크롤 제어
     control.popup('body', '.mMod9 .swiper-slide, .btn_QR', '.btn_close');
 
+    //p 태그 리사이즈
+    resize_mod9txt(false);
+
+
+    // let bdt = [...document.querySelectorAll(".bdt")];
+
+
+    // bdt.filter(function (el) {
+        
+    //     if(el.style.display === "none"){
+    //         el.remove();
+    //     }
+    // });
+
+    control.remove(".bdt");
 });
