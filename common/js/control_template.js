@@ -5,7 +5,7 @@
 
 
 code arranged by 정원중
-https://github.com/Zonny117/template2022.03-/blob/main/common/js/control_template_%EC%84%A4%EB%AA%85.js
+https://github.com/Zonny117/template/blob/main/common/js/control_template.js
 
 문제 발생시 연락주세요.
 
