@@ -9,9 +9,16 @@ https://github.com/Zonny117/template/blob/main/common/js/control_template.js
 
 문제 발생시 연락주세요.
 
-*/
 
-// 모듈제어 메소드
+
+
+    [모듈제어 메소드]
+
+    popup - 레이어 팝업시 z축 하위 요소 스크롤 막기
+    module - 부모요소 내 정보입력 요소들을 전부 사용하지 않을때 부모요소 미출력
+    display - 디스플레이 미출력 여부 확인
+    removeDN - 디스플레이 none 상태의 요소 html상에서 삭제 (module 메서드와 연동 가능)
+*/
 const control = {
     popup: function (scrollBox, btnClick, btnClose) {
         const scroll_container = document.querySelector(scrollBox);
@@ -75,7 +82,14 @@ const control = {
         });
     }
 };
-// 레이아웃 관련 함수
+/* 
+    [레이아웃 관련 함수]
+
+    vh - 뷰포트 높이값 로드, 리사이즈시 재설정, 
+    뷰포트 높이값 반영할 요소에 css 속성 추가 필요 → height: calc(var(--vh, 1vh) * 100);
+
+    checkMobile - 로드, 리사이즈시 가로값 계산 / 데스크탑, 모바일인지 확인할때 필요
+*/
 function vh() {
     window.addEventListener('load', function () {
         let vh = window.innerHeight * 0.01;
@@ -110,7 +124,17 @@ function checkMobile(val) {
     });
 };
 
-// 스크롤 제어
+/* 
+    [스크롤 제어]
+
+    원페이지, 풀페이지 디자인 템플릿에서 스크롤 제어시 필요한 함수들
+    이외 상황에선 거의 사용되지 않음.
+
+    stopEvtScroll - 마우스 스크롤, 터치무브, 마우스 휠 이벤트 막기
+    letEvtScroll - stopEvtScroll 함수 해제
+    hasScroll - 선택한 요소 스크롤 생성 여부 확인 / 해당 요소 내용을 확인하기 위해 스크롤시 페이지가 넘어가는 것을 방지할 때 사용
+    stopKakaoScroll - 카카오 인앱브라우저 스크롤시 url바 고정하기 사용 (아직 테스트 필요/확실하지 않음)
+*/
 let onePageWrap = document.querySelectorAll('html, body');
 let preventScroll = function (e) {
     e.preventDefault();
@@ -158,7 +182,10 @@ function stopKakaoScroll(target, option) {
     });
 };
 
+
+
 // 수정페이지 가이드라인
+// 메세지 수신/발신 invitation_control.js 참조
 window.onload = function () {
 
     // let background = document.querySelectorAll(".background");
