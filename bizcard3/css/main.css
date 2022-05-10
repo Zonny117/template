@@ -138,6 +138,8 @@ h2,
     position: relative;
     z-index: 2;
     width: 100%;
+    max-width: 570px;
+    margin: 0 auto;
     padding-top: 25vh;
     box-sizing: border-box;
 }
