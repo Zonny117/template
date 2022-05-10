@@ -56,5 +56,5 @@ $(function () {
     //     }
     // });
 
-    control.remove(".bdt");
+    control.removeDN(".bdt");
 });
