@@ -537,7 +537,7 @@
         background-color: #fff;
     }
 
-    .qrpopup{
+    .qrpopup {
         top: 0;
         left: 0;
         transform: none;
@@ -545,23 +545,23 @@
         height: 100%;
         border-radius: 0;
     }
- 
-    .qrbx{
+
+    .qrbx {
         width: 70%;
         padding: 20px 0;
         box-sizing: border-box;
         max-height: 100%;
     }
- 
-    .qrbx .mMod3 h2{
+
+    .qrbx .mMod3 h2 {
         font-size: 25px;
     }
- 
-    .qrbx .mMod3::after{
+
+    .qrbx .mMod3::after {
         display: none;
     }
- 
-    .close2{
+
+    .close2 {
         top: 30px;
         left: auto;
         right: 30px;
