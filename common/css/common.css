@@ -251,7 +251,7 @@ body.hiddenScroll {
 	background-image: url(../images/ico_top.png);
 }
 
-.mSky .iAlarm{
+.mSky .iAlarm {
 	margin-top: 12px;
 }
 
@@ -287,11 +287,11 @@ body.hiddenScroll {
 	display: none;
 }
 
-.swiper-zoom-container{
+.swiper-zoom-container {
 	display: block !important;
 }
 
-.mMod9 .swiper-slide p{
+.mMod9 .swiper-slide p {
 	text-align: center;
 	font-size: 14px;
 	line-height: 160%;
@@ -439,4 +439,30 @@ body.hiddenScroll {
 
 
 
+
+}
+
+
+
+.banner{
+	display: block;
+}
+
+.banner a {
+	display: inline-block;
+	border-radius: 50%;
+	width: 64px;
+	height: 64px;
+	margin-top: 15px;
+	background-image: url(../images/디바이언스.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@media only screen and (max-width:768px) {
+	.banner a {
+		width: 55px;
+		height: 55px;
+		margin-top: 12px;
+	}
 }

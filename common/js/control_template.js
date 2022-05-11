@@ -225,7 +225,7 @@ window.onload = function () {
                 item.classList.remove('help', 'relative');
                 item.removeChild(document.querySelector(".helptxt"));
             });
-            window.parent.postMessage('helpOff', '*');
+            window.parent.postMessage('helpOff', 'http://dev.hifactory.co.kr');
         } else {
             this.innerText = txt.replace(/표시/, '끄기');
             Array.prototype.slice.call(modarrNode).filter(function (el) {
@@ -261,7 +261,7 @@ window.onload = function () {
 
                     // console.log(reg[0]);
 
-                    window.parent.postMessage(reg[0], '*');
+                    window.parent.postMessage(reg[0], 'http://dev.hifactory.co.kr');
 
                     // switch (reg[0]) {
                     //     case "mMod0":
@@ -306,6 +306,8 @@ window.onload = function () {
 
     // 아이프레임 실시간 타이핑
     window.addEventListener('message', function (e) {
+        if (e.origin !== "http://dev.hifactory.co.kr") return;
+
         let mod = /mMod[0-9]{1,2}(_[a-z]{1,3}(\d{1,})?)?/g.exec(e.data);
         let txt = /(?<=@@+)(.|\n)*/g.exec(e.data);
         let length;
@@ -479,7 +481,9 @@ function resize_mod9txt(status) {
 
     relayout();
 
-    window.addEventListener('message', function () {
+    window.addEventListener('message', function (e) {
+        if (e.origin !== "http://dev.hifactory.co.kr") return;
+
         // console.log('메세지 테스트')
         relayout();
     });

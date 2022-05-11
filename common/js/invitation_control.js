@@ -1,7 +1,7 @@
 /* 
     [템플릿 가이드라인 및 실시간 텍스트 입력 미리보기 JS]
     
-    last update 05/02
+    last update 05/11
 
     code arranged by 정원중
 
@@ -53,7 +53,7 @@ setTimeout(function () {
     for (let x = 0; x < inputArr.length; x++) {
         document.querySelector(inputArr[x]).addEventListener('keyup', function () {
             let val = this.value;
-            iframe.postMessage(inputTitle[x] + "@@" + val, '*');
+            iframe.postMessage(inputTitle[x] + "@@" + val, 'http://dev.hifactory.co.kr');
         });
     }
 
@@ -65,7 +65,7 @@ setTimeout(function () {
         document.querySelectorAll(infinite[x]).forEach(function (item, index) {
             item.addEventListener('keyup', function () {
                 let val = this.value;
-                iframe.postMessage(infiniteTxt[x] + index + "@@" + val, '*');
+                iframe.postMessage(infiniteTxt[x] + index + "@@" + val, 'http://dev.hifactory.co.kr');
                 // console.log(infiniteTxt[x] + index);
             });
         });
@@ -75,6 +75,9 @@ setTimeout(function () {
 
     // 메시지 수신 (사용자 정보입력 각 영역 색상 하이라이트)
     window.addEventListener('message', function (e) {
+        // console.log(e.origin + " 윈도우 오리진")
+        if (e.origin !== 'http://dev.hifactory.co.kr') return;
+
         // console.log(e.data + "자식 메시지 수신");
 
         let inputList, plus;
@@ -99,36 +102,37 @@ setTimeout(function () {
             // console.log(siblings(inputList[i]));
             switch (e.data) {
                 case `mMod${i}`:
-                    inputList[i + plus].style.backgroundColor = "red", siblings(inputList[i + plus]).forEach(function (item) {
+                    inputList[i + plus].style.backgroundColor = "#fff7fa", siblings(inputList[i + plus]).forEach(function (item) {
                         item.removeAttribute("style");
+                        $(".mIList4 .list li").removeClass("selected");
                     });
-                    if ( $(".mIList4 .list li:eq(" + (i+plus) + ") .box").css("display") == "none" )
-                    {
+                    $(".mIList4 .list li:eq(" + (i + plus) + ")").addClass("selected");
+                    if ($(".mIList4 .list li:eq(" + (i + plus) + ") .box").css("display") == "none") {
                         $(".mILnb").addClass("selected");
-                        $(".mIList4 .list").scrollTop( 80 * i );
+                        $(".mIList4 .list").scrollTop(80 * i);
                         $(".mIList4 .list li .tit .gRt input[type='checkbox']").prop("checked", false);
                         $(".mIList4 .list li .box").slideUp();
                         $("#labelInvitation" + i + "_1").prop("checked", true);
                         //$("#labelInvitation" + i + "_1").parent().parent().parent().siblings(".box").slideDown();
-                        $(".mIList4 .list li:eq(" + (i+plus) + ") .box").slideDown();
-                        $("#jsBackground").removeClass("selected");
+                        $(".mIList4 .list li:eq(" + (i + plus) + ") .box").slideDown();
+                        //$("#jsBackground").removeClass("selected");
                     }
                     break;
                 case "background":
-                    inputList[2 + plus].style.backgroundColor = "red", siblings(inputList[2 + plus]).forEach(function (item) {
+                    inputList[2 + plus].style.backgroundColor = "#fff7fa", siblings(inputList[2 + plus]).forEach(function (item) {
                         item.removeAttribute("style");
+                        $(".mIList4 .list li").removeClass("selected");
                     });
-                    if ( $(".mIList4 .list li:eq(" + (2+plus) + ") .box").css("display") == "none" )
-                    {
-                        if ( !( $("#jsBackground").hasClass("selected") ) )
-                        {
+                    $(".mIList4 .list li:eq(" + (2 + plus) + ")").addClass("selected");
+                    if ($(".mIList4 .list li:eq(" + (2 + plus) + ") .box").css("display") == "none") {
+                        if (!($("#jsBackground").hasClass("selected"))) {
                             $(".mILnb").addClass("selected");
-                            $(".mIList4 .list").scrollTop( 80 * (1+plus) );
+                            $(".mIList4 .list").scrollTop(80 * (1 + plus));
                             $(".mIList4 .list li .tit .gRt input[type='checkbox']").prop("checked", false);
                             $(".mIList4 .list li .box").slideUp();
-                            $("#labelInvitation" + (1+plus) + "_1").prop("checked", true);
-                            $(".mIList4 .list li:eq(" + (2+plus) + ") .box").slideDown();
-                            $("#jsBackground").addClass("selected");
+                            $("#labelInvitation" + (1 + plus) + "_1").prop("checked", true);
+                            $(".mIList4 .list li:eq(" + (2 + plus) + ") .box").slideDown();
+                            //$("#jsBackground").addClass("selected");
                         }
                     }
                     break;
