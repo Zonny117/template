@@ -1,7 +1,7 @@
 /* 
 [하이팩토리 템플릿 제어 JS]
 2022.04.01 - init
-2022.05.17 - last update
+2022.05.16 - last update
 
 
 code arranged by 정원중
@@ -9,16 +9,9 @@ https://github.com/Zonny117/template/blob/main/common/js/control_template.js
 
 문제 발생시 연락주세요.
 
-
-
-
-    [모듈제어 메소드]
-
-    popup - 레이어 팝업시 z축 하위 요소 스크롤 막기
-    module - 부모요소 내 정보입력 요소들을 전부 사용하지 않을때 부모요소 미출력
-    display - 디스플레이 미출력 여부 확인
-    removeDN - 디스플레이 none 상태의 요소 html상에서 삭제 (module 메서드와 연동 가능)
 */
+
+// 모듈제어 메소드
 const control = {
     popup: function (scrollBox, btnClick, btnClose) {
         const scroll_container = document.querySelector(scrollBox);
@@ -29,7 +22,6 @@ const control = {
 
         click.forEach(function (item) {
             item.addEventListener('click', function () {
-                if (!document.querySelector('.btn_help').classList.contains("on")) return;
                 scrollVal = window.pageYOffset;
                 scroll_container.style.overflow = 'hidden';
                 scroll_container.style.position = 'fixed';
@@ -82,14 +74,7 @@ const control = {
         });
     }
 };
-/* 
-    [레이아웃 관련 함수]
-
-    vh - 뷰포트 높이값 로드, 리사이즈시 재설정, 
-    뷰포트 높이값 반영할 요소에 css 속성 추가 필요 → height: calc(var(--vh, 1vh) * 100);
-
-    checkMobile - 로드, 리사이즈시 가로값 계산 / 데스크탑, 모바일인지 확인할때 필요
-*/
+// 레이아웃 관련 함수
 function vh() {
     window.addEventListener('load', function () {
         let vh = window.innerHeight * 0.01;
@@ -124,17 +109,7 @@ function checkMobile(val) {
     });
 };
 
-/* 
-    [스크롤 제어]
-
-    원페이지, 풀페이지 디자인 템플릿에서 스크롤 제어시 필요한 함수들
-    이외 상황에선 거의 사용되지 않음.
-
-    stopEvtScroll - 마우스 스크롤, 터치무브, 마우스 휠 이벤트 막기
-    letEvtScroll - stopEvtScroll 함수 해제
-    hasScroll - 선택한 요소 스크롤 생성 여부 확인 / 해당 요소 내용을 확인하기 위해 스크롤시 페이지가 넘어가는 것을 방지할 때 사용
-    stopKakaoScroll - 카카오 인앱브라우저 스크롤시 url바 고정하기 사용 (아직 테스트 필요/확실하지 않음)
-*/
+// 스크롤 제어
 let onePageWrap = document.querySelectorAll('html, body');
 let preventScroll = function (e) {
     e.preventDefault();
@@ -182,130 +157,86 @@ function stopKakaoScroll(target, option) {
     });
 };
 
-
-
 // 수정페이지 가이드라인
-// 메세지 수신/발신 invitation_control.js 참조
 window.onload = function () {
 
-    // let background = document.querySelectorAll(".background");
-
-    // background.forEach(function (item) {
-    //     // let cover = document.createElement("div");
-    //     // cover.className = "bg_cover";
-    //     // item.append(cover);
-    //     setTimeout(function () {
-    //         item.style.opacity = 1
-    //     }, 100);
-    // });
-
-
     // 레이아웃 표시 기능
-    // let check = /iframePreview/i.test(window.location.href);
-    // if (check) {
-    const helpBox = document.createElement('div');
-    const btn_help = document.createElement('a');
-    helpBox.id = "help";
-    btn_help.setAttribute('href', 'javascript:void(0)');
-    btn_help.classList.add('btn_help', 'on');
-    btn_help.innerText = "도움말 표시";
-    document.querySelector('body').append(helpBox);
-    helpBox.append(btn_help);
+    let guideTrigger = document.createElement('div');
+
+    guideTrigger.classList.add("guideOn");
+    guideTrigger.style.display = "none";
+    document.querySelector("body").append(guideTrigger);
 
     const modarr = [".background", ".mMod0", ".mMod1", ".mMod3", ".mMod4 .swiper-slide", ".mMod5", ".mMod6", ".mMod7", ".mMod8", ".mMod9 .swiper-slide", ".mMod10", ".mMod11"];
     const modarrNode = document.querySelectorAll(modarr);
 
-    btn_help.addEventListener('click', function () {
-        let txt = this.innerText;
-        this.classList.toggle("on");
 
-        if (this.classList.contains("on")) {
-            this.innerText = txt.replace(/끄기/, '표시');
+    if (/iframePreview/i.test(window.location.href)) {
+        guideOn();
+    }
+
+    function guideOn() {
+        Array.prototype.slice.call(modarrNode).filter(function (el) {
+            let position_check = window.getComputedStyle(el).position;
+            if (position_check !== 'absolute' && position_check !== 'fixed' && position_check !== 'sticky') {
+                el.classList.add("help", "relative");
+            } else {
+                el.classList.add("help");
+            }
+        });
+        modarrNode.forEach(function (item) {
+            const helpTxt = document.createElement('div');
+            helpTxt.className = "helptxt";
+            item.append(helpTxt);
+
+            item.addEventListener('click', function () {
+                if(document.querySelector(".helptxt") === null) return;
+                document.querySelectorAll('.lMod9, html, body').forEach(function (item) {
+                    item.classList.remove('on');
+                });
+                document.querySelectorAll('body, .scrollbx').forEach(function (item) {
+                    item.removeAttribute('style');
+                });
+
+                let modtxt = item.getAttribute('class');
+                let reg = /mMod[0-9]{1,2}|background|swiper-slide/.exec(modtxt);
+
+                if (item.closest(".mMod4")) {
+                    reg[0] = "mMod4";
+                } else if (item.closest(".mMod9")) {
+                    reg[0] = "mMod9";
+                }
+
+                // console.log(reg[0]);
+
+                window.parent.postMessage(reg[0], 'http://dev.hifactory.co.kr');
+            });
+        });
+    }
+
+
+
+    window.addEventListener('message', function (e) {
+
+
+        // console.log(e.origin + " 아이프레임 오리진");
+        if (e.origin !== "http://dev.hifactory.co.kr") return;
+
+        // 수정영역 Off
+        if (e.data === "guideOff") {
             modarrNode.forEach(function (item) {
                 item.classList.remove('help', 'relative');
                 item.removeChild(document.querySelector(".helptxt"));
             });
-        } else {
-            this.innerText = txt.replace(/표시/, '끄기');
-            Array.prototype.slice.call(modarrNode).filter(function (el) {
-                let position_check = window.getComputedStyle(el).position;
-                if (position_check !== 'absolute' && position_check !== 'fixed' && position_check !== 'sticky') {
-                    el.classList.add("help", "relative");
-                } else {
-                    el.classList.add("help");
-                }
-            });
-            modarrNode.forEach(function (item) {
-
-                const helpTxt = document.createElement('div');
-                helpTxt.className = "helptxt";
-                item.append(helpTxt);
-
-                item.addEventListener('click', function () {
-
-                    if (btn_help.classList.contains('on')) return;
-                    document.querySelectorAll('.lMod9, html, body').forEach(function (item) {
-                        item.classList.remove('on');
-                    });
-                    document.querySelectorAll('body, .scrollbx').forEach(function (item) {
-                        item.removeAttribute('style');
-                    });
-
-                    let modtxt = item.getAttribute('class');
-                    let reg = /mMod[0-9]{1,2}|background|swiper-slide/.exec(modtxt);
-
-                    if (item.closest(".mMod4")) {
-                        reg[0] = "mMod4";
-                    } else if (item.closest(".mMod9")) {
-                        reg[0] = "mMod9";
-                    }
-                });
-            });
-
-
-            for (let i = 0; i < modarr.length; i++) {
-                document.querySelectorAll(modarr[i]).forEach(function (item) {
-                    let brad = window.getComputedStyle(item).borderRadius;
-
-                    document.querySelectorAll(`${modarr[i]} .helptxt`).forEach(function (item2) {
-                        item2.style.borderRadius = brad;
-                    });
-                });
-                
-                let swiper;
-
-                [...document.querySelectorAll('.helptxt')].filter(function (el) {
-                    document.querySelectorAll(`${modarr[i]} .helptxt`).forEach(function (t) {
-                        t.addEventListener('click', function () {
-                            swiper = this.closest(".mMod4") ? ".mMod4" : ".mMod9";
-
-                            if (this.closest(swiper)) {
-                                // console.log("true")
-                                document.querySelectorAll(`${swiper} .helptxt`).forEach(function (item) {
-                                    item.classList.add("on");
-                                    if (item != el) {
-                                        el.classList.remove("on");
-                                    }
-                                });
-                            } else {
-                                if (this !== el) {
-                                    el.classList.remove("on");
-                                } else {
-                                    el.classList.add("on");
-                                }
-                            }
-                        });
-                    });
-                });
-            }
         }
-    });
-    // }
+        // 수정영역 On
+        else if (e.data === "guideOn") {
+            guideOn();
+        }
 
-    // 아이프레임 실시간 타이핑
-    window.addEventListener('message', function (e) {
-        if (e.origin !== "http://dev.hifactory.co.kr") return;
 
+        // 아이프레임 실시간 타이핑
+        if (e.data === "guideOn" || e.data === "guideOff") return;
         let mod = /mMod[0-9]{1,2}(_[a-z]{1,3}(\d{1,})?)?/g.exec(e.data);
         let txt = /(?<=@@+)(.|\n)*/g.exec(e.data);
         let length;
@@ -481,7 +412,6 @@ function resize_mod9txt(status) {
 
     window.addEventListener('message', function (e) {
         if (e.origin !== "http://dev.hifactory.co.kr") return;
-
         // console.log('메세지 테스트')
         relayout();
     });

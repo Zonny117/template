@@ -13,9 +13,6 @@
     width: 44px;
     padding: 5px;
     box-sizing: border-box;
-    /* background: url(../image/ico_help.svg) no-repeat center/100%;
-    font-size: 0;
-    text-indent: -9999px; */
     z-index: 1;
     background-color: #f45897;
     color: #fff;
@@ -26,77 +23,82 @@
     font-family: 'Noto Sans KR', serif;
 }
 
-.help {
-    outline: 2px solid red !important;
-    border: 2px solid red !important;
+/* .help {
     box-sizing: border-box;
-}
+} */
+
+
 
 .helptxt {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+
     background-color: rgba(41, 41, 41, 0.425);
-    color: #5c47fd;
-    text-shadow:
-        -1px -1px 0 #fff,
-        1px -1px 0 #fff,
-        -1px 1px 0 #fff,
-        1px 1px 0 #fff;
-    padding: 5px 10px;
+    color: #fff;
     box-sizing: border-box;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 120%;
-    font-weight: 800;
+    font-weight: 500;
     z-index: 1;
     text-align: left;
     font-family: 'Noto Sans KR', serif;
     cursor: pointer;
+    border: 3px dashed #5c47fd;
+    /* outline: 4px dashed #5c47fd; */
 }
 
-.helptxt:hover{
-    background-color: rgba(252, 84, 176, 0.548);
+.helptxt:hover {
+    background-color: #f4589669;
+    border-color: #f45897;
 }
+
+.helptxt:hover::before {
+    background-color: #f45897;
+}
+
 
 .relative {
     position: relative !important;
 }
 
 
-.background .helptxt{
+/* .background .helptxt{
     align-items: flex-start;
     justify-content: center;
-}
+} */
 
-.helptxt:hover::before{
+
+.helptxt::before {
+    position: relative;
+    top: -3px;
     background-color: #5c47fd;
-    color: #f00;
+    box-sizing: border-box;
+    padding: 5px 15px;
 }
 
-.helptxt::before{
-    background-color: #fff;
+.mMod0 .helptxt::before {
+    content: '서비스명';
+    padding: 0 5px;
 }
 
 .background .helptxt::before {
     content: '배경사진/동영상';
 }
 
-.mMod0 .helptxt::before {
-    content: '서비스명';
-}
-
-
 .mMod1 .helptxt::before {
     content: '로고';
+    padding: 0 5px;
 }
 
 .mMod3 .helptxt::before {
-    content: '타이틀 제목 및 내용';
+    content: '타이틀';
 }
 
 .mMod4 .helptxt::before {
@@ -104,19 +106,19 @@
 }
 
 .mMod5 .helptxt::before {
-    content: '위치선택';
+    content: '위치(지도)';
 }
 
 .mMod6 .helptxt::before {
-    content: '대표/기타 연락처';
+    content: '연락처';
 }
 
 .mMod7 .helptxt::before {
-    content: '링크연결';
+    content: '링크';
 }
 
 .mMod8 .helptxt::before {
-    content: '유튜브연결';
+    content: '유튜브';
 }
 
 .mMod9 .helptxt::before {
@@ -128,21 +130,35 @@
 }
 
 .mMod11 .helptxt::before {
-    content: 'SNS 링크연결';
+    content: 'SNS';
+}
+
+.helptxt.on {
+    background-color: #f4589669;
+    border-color: #f45897;
+}
+
+.helptxt.on::before {
+    background-color: #f45897;
 }
 
 
 /* 알림창 */
-.swal-overlay{
+.swal-overlay {
     z-index: 9999999999999999999;
 }
-.swal-text{
+
+.swal-text {
     word-break: normal;
 }
 
 @media only screen and (max-width:850px) {
 
-    .helptxt{
-        font-size: 18px;
+    .helptxt {
+        font-size: 13px;
+    }
+
+    .helptxt::before {
+        padding: 3px 10px;
     }
 }
