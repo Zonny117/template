@@ -1,7 +1,7 @@
 /* 
     [템플릿 가이드라인 및 실시간 텍스트 입력 미리보기 JS]
     
-    last update 05/11
+    last update 05/18
 
     code arranged by 정원중
 
@@ -72,6 +72,31 @@ setTimeout(function () {
 
     }
 
+    // 내부 iframe 전달 (수정영역 버튼)
+    let guide = document.querySelectorAll(".jsBtnToggle4");
+    let inputList = document.querySelectorAll(".mIList4 li");
+
+    setTimeout(function () {
+        if (/invitation_user/i.test(window.location.href)) {
+            // console.log('유저페이지')
+            iframe.postMessage('userPage', 'http://dev.hifactory.co.kr');
+        }
+    }, 100);
+
+
+    guide.forEach(function (item) {
+        item.addEventListener('click', function () {
+            if (this.classList.contains("selected")) {
+                //수정영역 on;
+                iframe.postMessage("guideOn", 'http://dev.hifactory.co.kr');
+            } else {
+                //수정영역 off;
+                iframe.postMessage("guideOff", 'http://dev.hifactory.co.kr');
+            }
+        });
+
+    })
+
 
     // 메시지 수신 (사용자 정보입력 각 영역 색상 하이라이트)
     window.addEventListener('message', function (e) {
@@ -80,7 +105,7 @@ setTimeout(function () {
 
         // console.log(e.data + "자식 메시지 수신");
 
-        let inputList, plus;
+
 
         function siblings(el) {
             let newArr = [...el.parentElement.children];
@@ -90,56 +115,68 @@ setTimeout(function () {
         }
 
 
-        if (/invitation_ai/i.test(window.location.href)) {
-            inputList = document.querySelectorAll("#mCSB_3 .mIList2>li");
-            plus = 0;
-        } else {
-            inputList = document.querySelectorAll(".mIList4 li");
-            plus = 1;
-        }
+        if (/invitation_user/i.test(window.location.href)) {
 
-        for (let i = 0; i < inputList.length; i++) {
-            // console.log(siblings(inputList[i]));
-            switch (e.data) {
-                case `mMod${i}`:
-                    inputList[i + plus].style.backgroundColor = "#fff7fa", siblings(inputList[i + plus]).forEach(function (item) {
-                        item.removeAttribute("style");
-                        $(".mIList4 .list li").removeClass("selected");
-                    });
-                    $(".mIList4 .list li:eq(" + (i + plus) + ")").addClass("selected");
-                    if ($(".mIList4 .list li:eq(" + (i + plus) + ") .box").css("display") == "none") {
-                        $(".mILnb").addClass("selected");
-                        $(".mIList4 .list").scrollTop(80 * i);
-                        $(".mIList4 .list li .tit .gRt input[type='checkbox']").prop("checked", false);
-                        $(".mIList4 .list li .box").slideUp();
-                        $("#labelInvitation" + i + "_1").prop("checked", true);
-                        //$("#labelInvitation" + i + "_1").parent().parent().parent().siblings(".box").slideDown();
-                        $(".mIList4 .list li:eq(" + (i + plus) + ") .box").slideDown();
-                        //$("#jsBackground").removeClass("selected");
-                    }
-                    break;
-                case "background":
-                    inputList[2 + plus].style.backgroundColor = "#fff7fa", siblings(inputList[2 + plus]).forEach(function (item) {
-                        item.removeAttribute("style");
-                        $(".mIList4 .list li").removeClass("selected");
-                    });
-                    $(".mIList4 .list li:eq(" + (2 + plus) + ")").addClass("selected");
-                    if ($(".mIList4 .list li:eq(" + (2 + plus) + ") .box").css("display") == "none") {
-                        if (!($("#jsBackground").hasClass("selected"))) {
+            for (let i = 1; i < inputList.length; i++) {
+                // console.log(siblings(inputList[i]));
+                switch (e.data) {
+                    case `mMod${i - 1}`:
+                        inputList[i].style.backgroundColor = "#fff7fa", siblings(inputList[i]).forEach(function (item) {
+                            item.removeAttribute("style");
+                            $(".mIList4 .list li").removeClass("selected");
+                        });
+                        $(".mIList4 .list li").eq(i).addClass("selected");
+                        if ($(".mIList4 .list li:eq(" + i + ") .box").css("display") == "none") {
                             $(".mILnb").addClass("selected");
-                            $(".mIList4 .list").scrollTop(80 * (1 + plus));
-                            $(".mIList4 .list li .tit .gRt input[type='checkbox']").prop("checked", false);
+                            $(".mIList4 .list").scrollTop(80 * i);
                             $(".mIList4 .list li .box").slideUp();
-                            $("#labelInvitation" + (1 + plus) + "_1").prop("checked", true);
-                            $(".mIList4 .list li:eq(" + (2 + plus) + ") .box").slideDown();
-                            //$("#jsBackground").addClass("selected");
+                            $(".mIList4 .list li:eq(" + i + ") .box").slideDown();
                         }
-                    }
-                    break;
-                case "helpOff":
-                    inputList[i].removeAttribute('style');
-                    break;
+                        break;
+                    case "background":
+                        inputList[3].style.backgroundColor = "#fff7fa", siblings(inputList[3]).forEach(function (item) {
+                            item.removeAttribute("style");
+                            $(".mIList4 .list li").removeClass("selected");
+                        });
+                        $(".mIList4 .list li:eq(3)").addClass("selected");
+                        if ($(".mIList4 .list li:eq(3) .box").css("display") == "none") {
+                            if (!($("#jsBackground").hasClass("selected"))) {
+                                $(".mILnb").addClass("selected");
+                                $(".mIList4 .list").scrollTop(80 * 1);
+                                $(".mIList4 .list li .box").slideUp();
+                                $(".mIList4 .list li:eq(3) .box").slideDown();
+                            }
+                        }
+                        break;
+                }
             }
         }
+
+
     });
 }, 1000);
+
+// 사용자 패널 클릭 열고 닫기 및 수정영역 토글
+$(function () {
+    //.ti 클릭 이벤트 설정 이유 - li에 클릭 이벤트를 넣으면 li>input 박스 클릭할때도 발생함
+    $(".mIList4 .list li .ti").click(function () {
+        let box = $(this).parent().siblings(".box");
+
+        if (box.css("display") == "none") {
+            $(this).parent().parent().addClass("selected");
+            box.slideDown();
+        } else {
+            $(this).parent().parent().removeClass("selected").removeAttr("style");
+            box.slideUp();
+        }
+    });
+
+    // 수정영역 off시 사용자 패널 닫기 및 스타일 제거
+    // $(".jsBtnToggle4").click(function () {
+    //     if (!$(this).hasClass("selected")) {
+    //         $(".mIList4 .list li").removeAttr("style").removeClass("selected").find(".box").slideUp();
+    //     }
+    // });
+
+
+});

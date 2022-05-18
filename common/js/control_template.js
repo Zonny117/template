@@ -271,7 +271,7 @@ window.onload = function () {
                         item2.style.borderRadius = brad;
                     });
                 });
-                
+
                 let swiper;
 
                 [...document.querySelectorAll('.helptxt')].filter(function (el) {
@@ -486,4 +486,20 @@ function resize_mod9txt(status) {
         relayout();
     });
 
+}
+
+// 텍스트 입력시 swiper-slide autoHeight 자동 조정 반드시
+// el은 swiper의 변수명을 넣는다. 반드시 변수가 정의되어있어야함.
+function autoHeight(el) {
+    window.addEventListener('message', function (e) {
+        if (e.data === "guideOn" || e.data === "guideOff" || e.data === "userPage") return;
+        let mod = /mMod[0-9]{1,2}(_[a-z]{1,3}(\d{1,})?)?/g.exec(e.data);
+        // console.log(mod[0]);
+
+
+        if (`/${el}/`.test(mod[0])) {
+            // console.log("true")
+            el.updateAutoHeight(600);
+        }
+    });
 }

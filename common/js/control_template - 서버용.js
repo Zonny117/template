@@ -1,7 +1,7 @@
 /* 
 [하이팩토리 템플릿 제어 JS]
 2022.04.01 - init
-2022.05.16 - last update
+2022.05.18 - last update
 
 
 code arranged by 정원중
@@ -161,19 +161,14 @@ function stopKakaoScroll(target, option) {
 window.onload = function () {
 
     // 레이아웃 표시 기능
-    let guideTrigger = document.createElement('div');
-
-    guideTrigger.classList.add("guideOn");
-    guideTrigger.style.display = "none";
-    document.querySelector("body").append(guideTrigger);
-
     const modarr = [".background", ".mMod0", ".mMod1", ".mMod3", ".mMod4 .swiper-slide", ".mMod5", ".mMod6", ".mMod7", ".mMod8", ".mMod9 .swiper-slide", ".mMod10", ".mMod11"];
     const modarrNode = document.querySelectorAll(modarr);
 
 
-    if (/iframePreview/i.test(window.location.href)) {
-        guideOn();
-    }
+    // if (/iframepreview/i.test(window.location.href)) {
+    //     guideOn();
+    // }
+
 
     function guideOn() {
         Array.prototype.slice.call(modarrNode).filter(function (el) {
@@ -190,13 +185,16 @@ window.onload = function () {
             item.append(helpTxt);
 
             item.addEventListener('click', function () {
-                if(document.querySelector(".helptxt") === null) return;
-                document.querySelectorAll('.lMod9, html, body').forEach(function (item) {
-                    item.classList.remove('on');
-                });
-                document.querySelectorAll('body, .scrollbx').forEach(function (item) {
-                    item.removeAttribute('style');
-                });
+                if (document.querySelector(".helptxt") === null) return;
+
+                if (item.closest(".mMod9")) {
+                    document.querySelectorAll('.lMod9, html, body').forEach(function (item) {
+                        item.classList.remove('on');
+                    });
+                    document.querySelectorAll('body, .scrollbx').forEach(function (item) {
+                        item.removeAttribute('style');
+                    });
+                }
 
                 let modtxt = item.getAttribute('class');
                 let reg = /mMod[0-9]{1,2}|background|swiper-slide/.exec(modtxt);
@@ -212,15 +210,53 @@ window.onload = function () {
                 window.parent.postMessage(reg[0], 'http://dev.hifactory.co.kr');
             });
         });
+
+        for (let i = 0; i < modarr.length; i++) {
+            document.querySelectorAll(modarr[i]).forEach(function (item) {
+                let brad = window.getComputedStyle(item).borderRadius;
+
+                document.querySelectorAll(`${modarr[i]} .helptxt`).forEach(function (item2) {
+                    item2.style.borderRadius = brad;
+                });
+            });
+
+            let swiper;
+
+            [...document.querySelectorAll('.helptxt')].filter(function (el) {
+                document.querySelectorAll(`${modarr[i]} .helptxt`).forEach(function (t) {
+                    t.addEventListener('click', function () {
+                        swiper = this.closest(".mMod4") ? ".mMod4" : ".mMod9";
+
+                        if (this.closest(swiper)) {
+                            // console.log("true")
+                            document.querySelectorAll(`${swiper} .helptxt`).forEach(function (item) {
+                                item.classList.add("on");
+                                if (item != el) {
+                                    el.classList.remove("on");
+                                }
+                            });
+                        } else {
+                            if (this !== el) {
+                                el.classList.remove("on");
+                            } else {
+                                el.classList.add("on");
+                            }
+                        }
+                    });
+                });
+            });
+        }
     }
 
 
 
     window.addEventListener('message', function (e) {
 
+        // console.log(e.data);
 
         // console.log(e.origin + " 아이프레임 오리진");
         if (e.origin !== "http://dev.hifactory.co.kr") return;
+
 
         // 수정영역 Off
         if (e.data === "guideOff") {
@@ -232,135 +268,133 @@ window.onload = function () {
         // 수정영역 On
         else if (e.data === "guideOn") {
             guideOn();
+        } else if (e.data === "userPage") {
+            guideOn();
         }
 
 
         // 아이프레임 실시간 타이핑
         if (e.data === "guideOn" || e.data === "guideOff") return;
-        let mod = /mMod[0-9]{1,2}(_[a-z]{1,3}(\d{1,})?)?/g.exec(e.data);
-        let txt = /(?<=@@+)(.|\n)*/g.exec(e.data);
-        let length;
 
-        // console.log(txt[0])
+        if (e.data !== "userPage") {
+            let mod = /mMod[0-9]{1,2}(_[a-z]{1,3}(\d{1,})?)?/g.exec(e.data);
+            let txt = /(?<=@@+)(.|\n)*/g.exec(e.data);
+            let length;
+            // console.log(txt[0])
 
-        switch (mod[0]) {
-            case 'mMod0':
-                document.querySelectorAll(".mMod0 h2, .infowindow, .mMod5 .t, .qrbx .mMod0, .mMod0 span, span.mMod0").forEach(function (item) {
-                    item.innerText = txt[0];
-                });
-                break;
-            case 'mMod3_tit':
-                document.querySelectorAll(".mMod3 span, .mMod3 h2").forEach(function (item) {
-                    item.innerText = txt[0];
-                });
-                break;
-            case 'mMod3_txt':
-                document.querySelectorAll(".mMod3 .txt").forEach(function (item) {
-                    item.innerText = txt[0];
-                });
-                break;
-            case 'mMod5_tx':
-                document.querySelectorAll(".mMod5 .tx").forEach(function (item) {
-                    item.innerText = txt[0];
-                });
-                break;
-            case 'mMod6_tel':
-                document.querySelectorAll(".mMod6 .tel").forEach(function (item) {
-                    item.innerText = txt[0];
-                });
-                break;
-            case 'mMod6_txt':
-                document.querySelectorAll(".mMod6 .txt").forEach(function (item) {
-                    item.innerText = txt[0];
-                });
-                break;
-            case 'mMod10':
-                document.querySelectorAll(".mMod10 a").forEach(function (item) {
-                    item.innerText = txt[0];
-                });
-                break;
-        };
-
-        let mod7_Link = [...document.querySelectorAll(".mMod7 a")];
-
-
-        let targetLink = mod7_Link.filter(function (el) {
-            let target = el.getAttribute('target');
-            let display = window.getComputedStyle(el.closest(".mMod7")).display;
-
-            return target === '_blank' && display !== "none";
-        });
-
-        if (document.querySelectorAll(".mMod7 a p").length >= 1) {
-            targetLink = document.querySelectorAll(".mMod7 a p");
-        }
-
-
-        // console.log(targetLink);
-
-        if (/mMod4/g.test(mod[0])) {
-            length = document.querySelectorAll(".mMod4 .swiper-slide").length;
-        } else if (/mMod7/g.test(mod[0])) {
-            length = targetLink.length;
-        } else if (/mMod9/g.test(mod[0])) {
-            length = document.querySelectorAll(".mMod9 .swiper-slide p").length;
-        }
-
-        for (let i = 0; i < length; i++) {
             switch (mod[0]) {
-                case `mMod4_tit${[i]}`:
-                    document.querySelectorAll(".mMod4 .tit")[i].innerText = txt[0];
+                case 'mMod0':
+                    document.querySelectorAll(".mMod0 h2, .infowindow, .mMod5 .t, .qrbx .mMod0, .mMod0 span, span.mMod0").forEach(function (item) {
+                        item.innerText = txt[0];
+                    });
                     break;
-                case `mMod4_txt${[i]}`:
-                    document.querySelectorAll(".mMod4 .txt")[i].innerText = txt[0];
+                case 'mMod3_tit':
+                    document.querySelectorAll(".mMod3 span, .mMod3 h2").forEach(function (item) {
+                        item.innerText = txt[0];
+                    });
                     break;
-                case `mMod7_a${[i]}`:
-                    targetLink[i].innerText = txt[0];
+                case 'mMod3_txt':
+                    document.querySelectorAll(".mMod3 .txt").forEach(function (item) {
+                        item.innerText = txt[0];
+                    });
                     break;
-                case `mMod9_txt${[i]}`:
-                    document.querySelectorAll(".mMod9 .swiper-slide p")[i].innerText = txt[0];
+                case 'mMod5_tx':
+                    document.querySelectorAll(".mMod5 .tx").forEach(function (item) {
+                        item.innerText = txt[0];
+                    });
                     break;
+                case 'mMod6_tel':
+                    document.querySelectorAll(".mMod6 .tel").forEach(function (item) {
+                        item.innerText = txt[0];
+                    });
+                    break;
+                case 'mMod6_txt':
+                    document.querySelectorAll(".mMod6 .txt").forEach(function (item) {
+                        item.innerText = txt[0];
+                    });
+                    break;
+                case 'mMod10':
+                    document.querySelectorAll(".mMod10 a").forEach(function (item) {
+                        item.innerText = txt[0];
+                    });
+                    break;
+            };
+
+            let mod7_Link = [...document.querySelectorAll(".mMod7 a")];
+
+
+            let targetLink = mod7_Link.filter(function (el) {
+                let target = el.getAttribute('target');
+                let display = window.getComputedStyle(el.closest(".mMod7")).display;
+
+                return target === '_blank' && display !== "none";
+            });
+
+            if (document.querySelectorAll(".mMod7 a p").length >= 1) {
+                targetLink = document.querySelectorAll(".mMod7 a p");
             }
 
 
+            // console.log(targetLink);
 
-            //단구조 외 템플릿
-            if (document.querySelectorAll(".wrapmobile").length >= 1) {
+            if (/mMod4/g.test(mod[0])) {
+                length = document.querySelectorAll(".mMod4 .swiper-slide").length;
+            } else if (/mMod7/g.test(mod[0])) {
+                length = targetLink.length;
+            } else if (/mMod9/g.test(mod[0])) {
+                length = document.querySelectorAll(".mMod9 .swiper-slide p").length;
+            }
+
+            for (let i = 0; i < length; i++) {
                 switch (mod[0]) {
                     case `mMod4_tit${[i]}`:
-                        document.querySelectorAll(".wrapmobile .mMod4 .tit")[i].innerText = txt[0];
+                        document.querySelectorAll(".mMod4 .tit")[i].innerText = txt[0];
                         break;
                     case `mMod4_txt${[i]}`:
-                        document.querySelectorAll(".wrapmobile .mMod4 .txt")[i].innerText = txt[0];
+                        document.querySelectorAll(".mMod4 .txt")[i].innerText = txt[0];
                         break;
                     case `mMod7_a${[i]}`:
-                        document.querySelectorAll(".wrapmobile .mMod7 a")[i].innerText = txt[0];
+                        targetLink[i].innerText = txt[0];
+                        break;
+                    case `mMod9_txt${[i]}`:
+                        document.querySelectorAll(".mMod9 .swiper-slide p")[i].innerText = txt[0];
                         break;
                 }
-            }
 
-            if (document.querySelectorAll(".lbx .mMod7 a").length >= 1 && mod[0] === `mMod7_a${[i]}`) {
-                document.querySelectorAll(".lbx .mMod7 a")[i].innerText = txt[0];
-            }
-            if (document.querySelectorAll(".mMod7.mobile a").length >= 1 && mod[0] === `mMod7_a${[i]}`) {
-                document.querySelectorAll(".mMod7.mobile a")[i].innerText = txt[0];
-            }
-            if (document.querySelectorAll(".mMod9.mobile .swiper-slide p").length >= 1 && mod[0] === `mMod9_txt${[i]}`) {
-                document.querySelectorAll(".mMod9.mobile .swiper-slide p")[i].innerText = txt[0];
-            }
-            if (document.querySelectorAll(".mMod4.mobile .swiper-slide").length >= 1) {
-                if (mod[0] === `mMod4_tit${[i]}`) {
-                    document.querySelectorAll(".mMod4.mobile .tit")[i].innerText = txt[0];
-                } else if (mod[0] === `mMod4_txt${[i]}`) {
-                    document.querySelectorAll(".mMod4.mobile .txt")[i].innerText = txt[0];
+                //단구조 외 템플릿
+                if (document.querySelectorAll(".wrapmobile").length >= 1) {
+                    switch (mod[0]) {
+                        case `mMod4_tit${[i]}`:
+                            document.querySelectorAll(".wrapmobile .mMod4 .tit")[i].innerText = txt[0];
+                            break;
+                        case `mMod4_txt${[i]}`:
+                            document.querySelectorAll(".wrapmobile .mMod4 .txt")[i].innerText = txt[0];
+                            break;
+                        case `mMod7_a${[i]}`:
+                            document.querySelectorAll(".wrapmobile .mMod7 a")[i].innerText = txt[0];
+                            break;
+                    }
+                }
+
+                if (document.querySelectorAll(".lbx .mMod7 a").length >= 1 && mod[0] === `mMod7_a${[i]}`) {
+                    document.querySelectorAll(".lbx .mMod7 a")[i].innerText = txt[0];
+                }
+                if (document.querySelectorAll(".mMod7.mobile a").length >= 1 && mod[0] === `mMod7_a${[i]}`) {
+                    document.querySelectorAll(".mMod7.mobile a")[i].innerText = txt[0];
+                }
+                if (document.querySelectorAll(".mMod9.mobile .swiper-slide p").length >= 1 && mod[0] === `mMod9_txt${[i]}`) {
+                    document.querySelectorAll(".mMod9.mobile .swiper-slide p")[i].innerText = txt[0];
+                }
+                if (document.querySelectorAll(".mMod4.mobile .swiper-slide").length >= 1) {
+                    if (mod[0] === `mMod4_tit${[i]}`) {
+                        document.querySelectorAll(".mMod4.mobile .tit")[i].innerText = txt[0];
+                    } else if (mod[0] === `mMod4_txt${[i]}`) {
+                        document.querySelectorAll(".mMod4.mobile .txt")[i].innerText = txt[0];
+                    }
                 }
             }
-
         }
-
     });
-
-
 };
 
 /* 
@@ -416,4 +450,20 @@ function resize_mod9txt(status) {
         relayout();
     });
 
+}
+
+// 텍스트 입력시 swiper-slide autoHeight 자동 조정 반드시
+// el은 swiper의 변수명을 넣는다. 반드시 변수가 정의되어있어야함.
+function autoHeight(el) {
+    window.addEventListener('message', function (e) {
+        if (e.data === "guideOn" || e.data === "guideOff" || e.data === "userPage") return;
+        let mod = /mMod[0-9]{1,2}(_[a-z]{1,3}(\d{1,})?)?/g.exec(e.data);
+        // console.log(mod[0]);
+
+
+        if (`/${el}/`.test(mod[0])) {
+            // console.log("true")
+            el.updateAutoHeight(600);
+        }
+    });
 }
