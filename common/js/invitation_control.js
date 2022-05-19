@@ -97,9 +97,9 @@ setTimeout(function () {
             this.classList.toggle("on");
 
             if (this.classList.contains("on")) {
-                iframe.postMessage("guideOff", 'http://dev.hifactory.co.kr');
-            } else {
                 iframe.postMessage("guideOn", 'http://dev.hifactory.co.kr');
+            } else {
+                iframe.postMessage("guideOff", 'http://dev.hifactory.co.kr');
             }
         });
     }

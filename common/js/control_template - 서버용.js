@@ -164,8 +164,7 @@ window.onload = function () {
     const modarr = [".background", ".mMod0", ".mMod1", ".mMod3", ".mMod4 .swiper-slide", ".mMod5", ".mMod6", ".mMod7", ".mMod8", ".mMod9 .swiper-slide", ".mMod10", ".mMod11"];
     const modarrNode = document.querySelectorAll(modarr);
 
-
-    if (/iframepreview/i.test(window.location.href)) {
+    if (/invitation_user/i.test(window.parent.location.href)) {
         guideOn();
     }
 
