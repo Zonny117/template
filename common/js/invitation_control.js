@@ -1,7 +1,7 @@
 /* 
     [템플릿 가이드라인 및 실시간 텍스트 입력 미리보기 JS]
     
-    last update 05/18
+    last update 05/19
 
     code arranged by 정원중
 
@@ -76,14 +76,6 @@ setTimeout(function () {
     let guide = document.querySelectorAll(".jsBtnToggle4");
     let inputList = document.querySelectorAll(".mIList4 li");
 
-    setTimeout(function () {
-        if (/invitation_user/i.test(window.location.href)) {
-            // console.log('유저페이지')
-            iframe.postMessage('userPage', 'http://dev.hifactory.co.kr');
-        }
-    }, 100);
-
-
     guide.forEach(function (item) {
         item.addEventListener('click', function () {
             if (this.classList.contains("selected")) {
@@ -96,6 +88,21 @@ setTimeout(function () {
         });
 
     })
+
+    //관리자 페이지 수정영역
+    if (/invitation_ai/i.test(window.location.href)) {
+        let admin_guide = document.querySelector(".btn_guide");
+
+        admin_guide.addEventListener('click', function () {
+            this.classList.toggle("on");
+
+            if (this.classList.contains("on")) {
+                iframe.postMessage("guideOff", 'http://dev.hifactory.co.kr');
+            } else {
+                iframe.postMessage("guideOn", 'http://dev.hifactory.co.kr');
+            }
+        });
+    }
 
 
     // 메시지 수신 (사용자 정보입력 각 영역 색상 하이라이트)
