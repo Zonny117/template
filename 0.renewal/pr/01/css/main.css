@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+html,
+body {
+    width: 100%;
+    line-height: normal;
+}
+
+.mMod0 span,
+.tit,
+.tel,
+.ti,
+.t,
+.mMod3 h2 {
+    line-height: 120%;
+}
+
+.txt,
+.tx {
+    line-height: 160%;
+}
+
+#wrap {
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.background::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.30);
+}
+
+.gnb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 42px;
+    width: 100%;
+    max-width: 678px;
+    z-index: 9999;
+}
+
+.logobx {
+    display: flex;
+    align-items: center;
+}
+
+.mMod1 {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 38px;
+}
+
+.mMod1 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mMod0 {
+    font-size: 26px;
+    color: #fff;
+    font-family: Roboto;
+    font-weight: bold;
+    line-height: 1.62;
+}
+
+.btn_tel {
+    width: 80px;
+    height: 80px;
+    background: url(../images/btn_tel.png) no-repeat center/100%;
+    font-size: 0;
+    text-indent: -9999px;
+}
