@@ -492,7 +492,7 @@ function resize_mod9txt(status) {
 // el은 swiper의 변수명을 넣는다. 반드시 변수가 정의되어있어야함.
 function autoHeight(el) {
     window.addEventListener('message', function (e) {
-        if (e.data === "guideOn" || e.data === "guideOff" || e.data === "userPage") return;
+        if (e.data === "guideOn" || e.data === "guideOff") return;
         let mod = /mMod[0-9]{1,2}(_[a-z]{1,3}(\d{1,})?)?/g.exec(e.data);
         // console.log(mod[0]);
 
