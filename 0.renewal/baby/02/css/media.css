@@ -1,0 +1,235 @@
+@charset "utf-8";
+
+
+@media only screen and (max-width:850px) {
+    .main {
+        width: 100%;
+    }
+
+    .main .sbx {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-bottom: 40px;
+    }
+
+    .background {
+        width: 60%;
+        padding-top: 60%;
+    }
+
+
+    .mMod0 {
+        font-size: 22px;
+    }
+
+    .background {
+        margin: 50px auto;
+    }
+
+    .mMod3 {
+        width: calc(100% - 20px);
+        padding: 0 20px;
+    }
+
+    .mMod3 .txt {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    .mMod3 h2 {
+        font-size: 18px;
+    }
+
+    .section1 {
+        padding: 40px 20px;
+    }
+
+    .section_txt {
+        width: 100%;
+        font-size: 34px;
+        margin-bottom: 20px;
+    }
+
+    .section_txt::after {
+        left: 50%;
+        width: 50%;
+        bottom: -4px;
+        height: 48px;
+        transform: translateX(-50%);
+    }
+
+    .swiper-pagination {
+        width: calc(100% - 20px);
+    }
+
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
+
+    .swiper-pagination-bullet+.swiper-pagination-bullet {
+        margin-left: 10px;
+    }
+
+    .mMod4,
+    .mMod9,
+    .mMod6,
+    .mMod7,
+    .mMod10 {
+        margin-bottom: 40px;
+    }
+
+    .mMod4 .swiper-container,
+    .mMod9 .swiper-container {
+        margin-top: 20px;
+    }
+
+
+    .mMod4 .tit {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .mMod4 .txt {
+        font-size: 16px;
+    }
+
+    .mMod9 .swiper-slide::before {
+        height: 300px;
+    }
+
+    .mMod9 .swiper-slide img {
+        height: 300px;
+    }
+
+    .mMod9 .swiper-slide p {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .mMod8 {
+        margin-top: 40px;
+    }
+
+    .mMod8 .section_txt {
+        margin-bottom: 40px;
+    }
+
+    .iframebx {
+        position: relative;
+        height: 0;
+        padding-top: 56.66%;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .mMod5 {
+        padding: 45px 20px;
+    }
+
+    .mMod5 .t {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    .mMod5 .gMap {
+        height: 250px;
+    }
+
+    .mMod5 .navi {
+        right: 20px;
+        bottom: -25px;
+        width: 50px;
+        height: 50px;
+        background-size: 25px 25px;
+    }
+
+    .mMod5 .txtbx {
+        margin-top: 40px;
+    }
+
+    .mMod5 .ti {
+        font-size: 18px;
+    }
+
+    .mMod5 .txt {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    .section2 {
+        padding: 40px 0px;
+    }
+
+    .section2 .sbx {
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .mMod1 {
+        width: 65px;
+        height: 65px;
+        margin-bottom: 20px;
+    }
+
+    .mMod6 .btnbx .btn_sms {
+        display: inline-block;
+    }
+
+    .mMod6 .btnbx a {
+        width: 60px;
+        height: 60px;
+    }
+
+    .mMod6 .btnbx a+a {
+        margin-left: 10px;
+    }
+
+    .mMod6 .tit {
+        margin-bottom: 15px;
+        font-size: 25px;
+    }
+
+    .mMod6 .txt {
+        font-size: 15px;
+    }
+
+    .mMod7 a {
+        font-size: 18px;
+    }
+
+    .mMod7 a+a {
+        margin-top: 20px;
+    }
+
+    .mMod7 a::before {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .mMod10 {
+        padding: 20px;
+    }
+
+    .mMod10 a {
+        font-size: 18px;
+    }
+
+    .mMod10 a::after {
+        width: 25px;
+        height: 25px;
+        margin-left: 10px;
+    }
+
+    .mMod11 {
+        display: none;
+    }
+
+}

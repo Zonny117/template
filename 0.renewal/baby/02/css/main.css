@@ -1,0 +1,499 @@
+@charset "utf-8";
+
+:root {
+    --mainColor: #ee7264;
+}
+
+@font-face {
+    font-family: 'gyobo';
+    src: url(../font/KyoboHandwriting2020pdy.woff) format('woff');
+    font-style: normal;
+}
+
+html,
+body {
+    width: 100%;
+    line-height: normal;
+    color: #29282d;
+}
+
+body {
+    background: url(../images/body.png) no-repeat center/cover;
+}
+
+#wrap {
+    width: 100%;
+}
+
+.mMod0,
+.tit,
+.ti,
+.t,
+.mMod3 h2,
+.tel {
+    line-height: 1.2;
+}
+
+.tx,
+.txt {
+    line-height: 1.6;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    background: #fcf2f0 url(../images/main_bg.svg) no-repeat center/cover;
+}
+
+.main .sbx {
+    max-width: 750px;
+    min-height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 118px;
+    box-sizing: border-box;
+}
+
+
+.main_top {
+    width: calc(100% - 20px);
+}
+
+.mMod0 {
+    font-family: 'gyobo';
+    font-size: 38px;
+    letter-spacing: 0.76px;
+    color: var(--mainColor);
+}
+
+.background {
+    position: relative;
+    margin: 81px auto 68px;
+    width: 50%;
+    height: 0;
+    padding-top: 50%;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.frame {
+    position: absolute;
+    top: -6%;
+    left: -10%;
+    width: 126%;
+    height: 114%;
+    z-index: 1;
+}
+
+.mMod3 {
+    width: 100%;
+    padding: 0 76px;
+    box-sizing: border-box;
+
+    background: url(../images/main_bottom.svg) no-repeat bottom/100%;
+}
+
+.mMod3 .txt {
+    font-size: 26px;
+    color: #666;
+    letter-spacing: -0.52px;
+    margin-bottom: 63px;
+}
+
+.mMod3 h2 {
+    font-size: 32px;
+    letter-spacing: -0.64px;
+}
+
+.section1 {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 100px 0;
+    box-sizing: border-box;
+}
+
+.section_txt {
+    position: relative;
+    width: 313.7px;
+    margin: 0 auto 50px;
+    text-align: center;
+    font-family: 'gyobo';
+    font-size: 44px;
+    color: var(--mainColor);
+    line-height: 80px;
+}
+
+.section_txt::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 100%;
+    height: 70px;
+    background: url(../images/line.svg) no-repeat center/100%;
+}
+
+.swiper-pagination {
+    display: block;
+    position: static;
+    text-align: right;
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--mainColor);
+    opacity: 1;
+    background-color: transparent;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--mainColor);
+}
+
+.swiper-pagination-bullet+.swiper-pagination-bullet {
+    margin-left: 20px;
+}
+
+.mMod4 {
+    margin-bottom: 100px;
+}
+
+.mMod4 .swiper-container {
+    margin-top: 40px;
+}
+
+.mMod4 .tit {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.mMod4 .txt {
+    font-size: 22px;
+
+}
+
+
+.mMod9 .swiper-container {
+    margin-top: 40px;
+}
+
+.mMod9 .swiper-slide {
+    position: relative;
+}
+
+.mMod9 .swiper-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 481px;
+    background: var(--mainColor);
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity .6s;
+    cursor: pointer;
+}
+
+.mMod9 .swiper-slide img {
+    width: 100%;
+    height: 481px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.mMod9 .swiper-slide p {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.mMod9 .mag {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 79px;
+    height: 79px;
+    transform: translate(-50%, -50%);
+    font-size: 0;
+    background: url(../images/mag.svg) no-repeat center/100%;
+    z-index: 1;
+    transition: opacity .6s;
+}
+
+
+
+.mMod8 {
+    margin-top: 100px;
+}
+
+.mMod8 .section_txt {
+    margin-bottom: 80px;
+}
+
+.iframebx {
+    width: 100%;
+    height: 422px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.mMod5 {
+    width: 100%;
+    background-color: var(--mainColor);
+    padding: 100px 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.mMod5 .sbx {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.mMod5 .section_txt {
+    color: #fff;
+}
+
+.mMod5 .section_txt::after {
+    background-image: url(../images/line2.svg);
+}
+
+.mMod5 .t {
+    font-size: 38px;
+    letter-spacing: 0.76px;
+    text-align: center;
+    font-family: 'gyobo';
+    margin-bottom: 60px;
+}
+
+
+.mMod5 .gMap {
+    position: relative;
+    width: 100%;
+    height: 436px;
+    border-radius: 20px;
+}
+
+.mMod5 .map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.mMod5 .navi {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 40px;
+    bottom: -40px;
+    font-size: 0;
+    background: #ffe600 url(../images/navi.svg) no-repeat center/42px 42px;
+    z-index: 9999;
+}
+
+.mMod5 .txtbx {
+    margin-top: 60px;
+}
+
+.mMod5 .ti {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.mMod5 .txt {
+    margin-top: 20px;
+    font-size: 22px;
+    letter-spacing: -0.44px;
+}
+
+.section2 {
+    padding: 100px 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.section2 .sbx,
+.section2 .sbx2 {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.mMod1 {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid var(--mainColor);
+}
+
+.mMod1 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.mMod6 {
+    margin-bottom: 100px;
+}
+
+.mMod6 .btnbx a {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    font-size: 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    vertical-align: middle;
+}
+
+.mMod6 .btnbx a+a {
+    margin-left: 20px;
+}
+
+.mMod6 .btnbx .btn_tel {
+    background-image: url(../images/btn_tel.svg);
+}
+
+.mMod6 .btnbx .btn_QR {
+    background-image: url(../images/btn_qr.svg);
+}
+
+.mMod6 .btnbx .btn_sms {
+    display: none;
+    background-image: url(../images/btn_sms.svg);
+}
+
+
+.mMod6 .tit {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.mMod6 .txt {
+    font-size: 22px;
+}
+
+.mMod7 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.mMod7 a {
+    position: relative;
+    font-size: 28px;
+}
+
+.mMod7 a+a {
+    margin-top: 40px;
+}
+
+.mMod7 a::before {
+    content: '';
+    display: inline-block;
+    margin-right: 20px;
+    width: 38px;
+    height: 39px;
+    background: url(../images/flower.svg) no-repeat center/100%;
+    vertical-align: -8px;
+}
+
+.mMod10 {
+    width: 100%;
+    background-color: var(--mainColor);
+    padding: 37px 190px;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+}
+
+.mMod10 a {
+    position: relative;
+    font-size: 32px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.mMod10 a::after {
+    content: '';
+    display: inline-block;
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    background: url(../images/down.svg) no-repeat center/100%;
+    vertical-align: -7px;
+}
+
+
+.mMod11 a {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 4px solid var(--mainColor);
+    border-radius: 50%;
+    font-size: 0;
+}
+
+.mMod11 a+a {
+    margin-left: 20px;
+}
+
+.mMod11 .facebook {
+    background-image: url(../images/facebook.svg);
+}
+
+.mMod11 .instagram {
+    background-image: url(../images/instagram.svg);
+}
+
+.mMod11 .twitter {
+    background-image: url(../images/twitter.svg);
+}
+
+.mMod11 .youtube {
+    background-image: url(../images/youtube.svg);
+}
+
+
+@media only screen and (min-width:751px) {
+    .mMod9 .swiper-slide:hover::before {
+        opacity: .3;
+    }
+
+    .mMod9 .swiper-slide:hover .mag {
+        opacity: 1;
+    }
+}

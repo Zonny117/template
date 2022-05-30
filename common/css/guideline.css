@@ -52,6 +52,7 @@
     cursor: pointer;
     border: 3px dashed #5c47fd;
     /* outline: 4px dashed #5c47fd; */
+    z-index: 999999;
 }
 
 .helptxt:hover {

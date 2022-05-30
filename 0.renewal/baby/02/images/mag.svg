@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="79.213" height="79.213" viewBox="0 0 79.213 79.213">
+    <circle cx="32" cy="32" r="32" transform="translate(15.213)" style="fill:#ee7264"/>
+    <g transform="translate(30.209 14.996)">
+        <rect data-name="모서리가 둥근 직사각형 4" width="6" height="35" rx="3" transform="translate(14.5)" style="fill:#fff"/>
+        <rect data-name="모서리가 둥근 직사각형 4 복사" width="35" height="6" rx="3" transform="translate(0 14.5)" style="fill:#fff"/>
+    </g>
+    <rect data-name="사각형 775" width="20" height="40" rx="10" transform="rotate(45 -30.264 52.535)" style="fill:#ee7264"/>
+</svg>
