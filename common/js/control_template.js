@@ -1,7 +1,7 @@
 /* 
 [하이팩토리 템플릿 제어 JS]
 2022.04.01 - init
-2022.05.17 - last update
+2022.06.07 - last update
 
 
 code arranged by 정원중
@@ -18,6 +18,7 @@ https://github.com/Zonny117/template/blob/main/common/js/control_template.js
     module - 부모요소 내 정보입력 요소들을 전부 사용하지 않을때 부모요소 미출력
     display - 디스플레이 미출력 여부 확인
     removeDN - 디스플레이 none 상태의 요소 html상에서 삭제 (module 메서드와 연동 가능)
+    popupQR - QR 코드용 팝업창 제어 (.btn_QR, .qrpopup, .btn_close 필수)
 */
 const control = {
     popup: function (scrollBox, btnClick, btnClose) {
@@ -79,6 +80,14 @@ const control = {
             if (el.style.display === "none") {
                 el.remove();
             }
+        });
+    },
+    popupQR: function () {
+        document.querySelector('.btn_QR').addEventListener('click', function () {
+            document.querySelector(".qrpopup").classList.add("on");
+        });
+        document.querySelector(".qrpopup .btn_close").addEventListener('click', function () {
+            document.querySelector(".qrpopup").classList.remove("on");
         });
     }
 };
