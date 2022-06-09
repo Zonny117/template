@@ -1,5 +1,4 @@
 $(function () {
-
     var mMod4 = new Swiper(".mMod4 .swiper-container", {
         autoHeight: "true",
         slidesPerView: 1,
@@ -12,6 +11,7 @@ $(function () {
 
     var mMod9 = new Swiper(".mMod9 .swiper-container", {
         autoHeight: "true",
+        grabCursor: true,
         slidesPerView: 1,
         spaceBetween: 50,
         pagination: {
@@ -20,30 +20,34 @@ $(function () {
         },
     });
 
-    $(".mMod9 .swiper-slide").on('click', function () {
 
-        $(".lMod9").addClass("on");
+    $(".mMod9 .swiper-slide").on('click', function () {
 
         let idx = mMod9.realIndex;
 
         var lMod9 = new Swiper(".lMod9 .swiper-container", {
             initialSlide: idx,
+            grabCursor: true,
             slidesPerView: 1,
             spaceBetween: 50,
+            observer: true,
+            observeParents: true
         });
+
+        $(".lMod9").addClass("on");
+
 
         $(".btn_close").on('click', function () {
-            $(".lMod9").removeClass("on");
             lMod9.destroy();
+            $(".lMod9").removeClass("on");
         });
+
     });
 
+
+
     vh();
-    control.module('.section1');
-    control.module('.section2');
-    control.popup("body", '.mMod9 .swiper-slide, .btn_QR', ".btn_close");
     control.popupQR();
-    autoHeight(mMod4);
-    autoHeight(mMod9);
-    resize_mod9txt(false);
+    control.popup('body', '.btn_QR, .mMod9 .swiper-slide', '.btn_close');
+    control.module('.linkbx');
 });

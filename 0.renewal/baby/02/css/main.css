@@ -539,6 +539,7 @@ iframe {
     height: 64px;
     background: url(../images/btn_close.svg) no-repeat center/100%;
     font-size: 0;
+    z-index: 99999;
 }
 
 .qrpopup {

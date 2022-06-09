@@ -1,0 +1,369 @@
+@charset "utf-8";
+
+
+@media only screen and (max-width:850px) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .mMod5 .block_deco::after {
+        right: 0;
+    }
+
+    .gnb {
+        width: 100%;
+        padding: 15px 20px;
+    }
+
+    .mMod1 {
+        width: 50px;
+        height: 50px;
+    }
+
+    .mMod0 {
+        margin-left: 10px;
+        font-size: 16px;
+    }
+
+    .mMod2 {
+        margin-top: 30px;
+        padding-top: 25px;
+    }
+
+    .background {
+        width: 90%;
+        height: 250px;
+    }
+
+    .block_deco::before {
+        width: 70px;
+        height: 70px;
+    }
+
+    .block_deco::after {
+        bottom: -25px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .mMod3 {
+        padding: 25px;
+    }
+
+    .mMod3 h2 {
+        font-size: 22px;
+    }
+
+    .mMod3 .txt {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    .mMod6 {
+        padding: 30px 20px 50px;
+    }
+
+    .mMod6 .tel {
+        font-size: 25px;
+    }
+
+    .mMod6 .txt {
+        margin-top: 5px;
+        font-size: 16px;
+    }
+
+    .mMod6 .btnbx {
+        margin-top: 30px;
+    }
+
+    .mMod6 .btnbx a {
+        width: 50px;
+        height: 50px;
+    }
+
+    .mMod6 .btnbx a+a {
+        margin-left: 15px;
+    }
+
+    .mMod6 .btn_tel {
+        background-size: 26px 26px;
+    }
+
+    .mMod6 .btnbx .btn_sms {
+        display: inline-block;
+        background-size: 31px 33px;
+    }
+
+    .mMod6 .btnbx .btn_QR {
+        font-size: 25px;
+        line-height: 48px;
+    }
+
+    .mMod6::after {
+        width: calc(100% - 248px);
+        height: 12px;
+        bottom: 50px;
+        right: 0;
+    }
+
+    .mMod9 {
+        padding: 25px 20px 50px;
+    }
+
+    .mMod9 .titleTxt {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .mMod9 .swiper-slide::before {
+        height: 300px;
+    }
+
+    .mMod9 .swiper-slide::after {
+        top: 128px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .mMod9 .swiper-slide img {
+        height: 300px;
+    }
+
+    .mMod9 .swiper-pagination {
+        top: 330px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet+.swiper-pagination-bullet {
+        margin-left: 10px;
+    }
+
+    .mMod9 .swiper-slide p {
+        margin-top: 70px;
+        font-size: 16px;
+    }
+
+    .mod4bx {
+        padding: 80px 0;
+    }
+
+    .mMod4 {
+        width: 90%;
+        padding: 30px 20px 63px;
+    }
+
+    .mMod4 .quotes {
+        width: 28px;
+        height: 14px;
+        margin-bottom: 10px;
+    }
+
+    .mMod4 .tit {
+        font-size: 20px;
+    }
+
+    .mMod4 .txt {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    .mMod4 .swiper-pagination {
+        bottom: 20px;
+    }
+
+    .mMod4 .swiper-pagination-bullet+.swiper-pagination-bullet {
+        margin-left: 10px;
+    }
+
+    .mod4bx.block_deco::before {
+        top: 50px;
+    }
+
+    .mod4bx.block_deco::after {
+        bottom: 50px;
+    }
+
+
+    .mMod8 {
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    .iframebx {
+        position: relative;
+        padding-top: 56.66%;
+        height: 0;
+        box-sizing: border-box;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+
+
+    .mMod5 {
+        padding: 30px 0;
+    }
+
+    .section_txt {
+        font-size: 24px;
+        margin-bottom: 35px;
+        margin-left: 20px;
+    }
+
+    .mMod5 .sbx::before {
+        width: 55%;
+        left: 0;
+    }
+
+    .mMod5 .block_deco {
+        margin: 0 auto;
+    }
+
+
+    .mMod5 .gMap {
+        width: 90%;
+        margin: 0 auto;
+        height: 250px;
+    }
+
+
+    .mMod5 .navi {
+        font-size: 16px;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 25px;
+    }
+
+    .mMod5 .navi::before {
+        width: 16px;
+        height: 23px;
+        margin-right: 10px;
+    }
+
+    .mMod5 .txtbx {
+        margin-top: 50px;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .mMod5 .ti {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .mMod5 .txt {
+        font-size: 15px;
+    }
+
+    .mMod10 a {
+        padding: 20px 60px 20px 30px;
+        font-size: 16px;
+    }
+
+    .mMod10 a::after {
+        width: 20px;
+        height: 20px;
+        right: 30px;
+    }
+
+    .linkbx{
+        padding-top: 30px;
+    }
+
+    .linkbx a::before {
+        width: 10px;
+        height: 10px;
+        margin-right: 10px;
+    }
+
+
+    .mMod7 {
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .mMod7 a {
+        width: 90%;
+        padding: 15px 40px 15px 30px;
+        font-size: 16px;
+    }
+
+    .mMod7 a::after {
+        width: 20px;
+        height: 20px;
+        right: 30px;
+    }
+
+    .mMod7 a+a {
+        margin-top: 16px;
+    }
+
+    .mMod11 {
+        display: none;
+    }
+
+    .lMod9 .swiper-container {
+        line-height: calc(var(--vh, 1vh) * 100);
+        height: 100vh;
+        margin: 0;
+    }
+
+    .btn_close {
+        top: 20px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .qrbx {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .qrbx .scrollbx {
+        width: 100%;
+        padding: 50px 20px;
+    }
+
+    .qrbx .save {
+        width: 60%;
+        font-size: 15px;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    #qr {
+        margin: 20px 0;
+    }
+
+    #qr img {
+        width: 70%;
+    }
+
+    .guideTxt {
+        font-size: 15px;
+    }
+
+    .qrbx .save::before{
+        width: 10px;
+        height: 10px;
+        margin-right: 10px;
+        vertical-align: 0px;
+    }
+
+    .qrbx .save::after{
+        width: 15px;
+        height: 15px;
+        right: 20px;
+    }
+
+}
