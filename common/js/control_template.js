@@ -188,6 +188,7 @@ function stopKakaoScroll(target, option) {
 // 메세지 수신/발신 invitation_control.js 참조
 window.onload = function () {
 
+    alert("실행");
     // let background = document.querySelectorAll(".background");
 
     // background.forEach(function (item) {
