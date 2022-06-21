@@ -19,6 +19,8 @@ https://github.com/Zonny117/template/blob/main/common/js/control_template.js
     display - 디스플레이 미출력 여부 확인
     removeDN - 디스플레이 none 상태의 요소 html상에서 삭제 (module 메서드와 연동 가능)
 */
+
+
 const control = {
     popup: function (scrollBox, btnClick, btnClose) {
         const scroll_container = document.querySelector(scrollBox);
@@ -188,7 +190,6 @@ function stopKakaoScroll(target, option) {
 // 메세지 수신/발신 invitation_control.js 참조
 window.onload = function () {
 
-    alert("실행");
     // let background = document.querySelectorAll(".background");
 
     // background.forEach(function (item) {
@@ -305,7 +306,7 @@ window.onload = function () {
 
     // 아이프레임 실시간 타이핑
     window.addEventListener('message', function (e) {
-        if (e.origin !== "http://dev.hifactory.co.kr") return;
+        // if (e.origin !== "http://dev.hifactory.co.kr") return;
 
         let mod = /mMod[0-9]{1,2}(_[a-z]{1,3}(\d{1,})?)?/g.exec(e.data);
         let txt = /(?<=@@+)(.|\n)*/g.exec(e.data);
@@ -481,7 +482,7 @@ function resize_mod9txt(status) {
     relayout();
 
     window.addEventListener('message', function (e) {
-        if (e.origin !== "http://dev.hifactory.co.kr") return;
+        // if (e.origin !== "http://dev.hifactory.co.kr") return;
 
         // console.log('메세지 테스트')
         relayout();

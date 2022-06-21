@@ -1,7 +1,7 @@
 /* 
     [템플릿 가이드라인 및 실시간 텍스트 입력 미리보기 JS]
     
-    last update 05/19
+    last update 06/21
 
     code arranged by 정원중
 
@@ -18,9 +18,120 @@
 // 타임아웃 설정 - 사용자 정보입력란 로딩 완료 후 실행
 setTimeout(function () {
     console.log("타임아웃")
-    let tel = document.querySelector("#delegateTel");
-    let span = document.createElement(`span`);
+    // const btnSave = document.querySelector("#frmSave .mButton1 .mBtn1");
+    // const logo = document.querySelector("#file1Name");
+    const tel = document.querySelector("#delegateTel");
+    let span = document.createElement("span");
     let prevent = 1;
+
+
+    // btnSave.removeAttribute('onclick');
+
+    // function checkPic(item, switchBtn) {
+    //     if (document.querySelector(`${switchBtn} .switch-button`).children[0].checked) {
+    //         return /jpg|jpeg|png/i.test(item.value.split(".")[1]);
+    //     } else {
+    //         return true;
+    //     }
+    // }
+
+    // function higlightBox(item) {
+    //     document.querySelector(item).classList.add("selected");
+    //     document.querySelector(`${item} .box`).style.display = "block";
+    // }
+
+    // btnSave.addEventListener("click", function () {
+    //     // 클릭 할때마다 새로 생성
+    //     const picture = [...document.querySelectorAll("#divTemplatePic input:first-child")];
+
+    //     // 사진 이미지 체크
+    //     let newPic = picture.filter(function (el) {
+    //         return !checkPic(el, "#mMod9");
+    //     });
+    //     let okPic = picture.filter(function (el) {
+    //         return checkPic(el, "#mMod9");
+    //     });
+
+
+    //     // 전부 true일 경우, 전송
+    //     if (checkPic(logo, "#mMod1") && newPic.length === 0) {
+    //         btnSave.setAttribute('onclick', 'lwin.pageSave()');
+    //         btnSave.click();
+    //     } else {
+    //         // 로고 이미지 체크
+    //         let isLogoSpan = logo.closest(".mFile1").children[2];
+
+    //         //false 일 경우
+    //         if (!checkPic(logo, "#mMod1")) {
+
+    //             higlightBox(".mIList4 .list #mMod1");
+    //             logo.style.backgroundColor = "#f45897";
+
+    //             let span = document.createElement(`span`);
+    //             span.style.color = "red";
+    //             span.style.fontSize = "18px";
+    //             span.innerText = "이미지 파일을 등록해주세요.";
+
+    //             if (isLogoSpan === undefined) {
+    //                 logo.closest(".mFile1").append(span);
+    //             }
+    //         }
+    //         // true일 경우
+    //         else {
+    //             logo.removeAttribute('style');
+    //             if (isLogoSpan !== undefined) {
+    //                 isLogoSpan.remove();
+    //             }
+    //         }
+
+
+    //         // 사진 이미지 체크
+    //         if (newPic.length >= 1) {
+    //             higlightBox(".mIList4 .list #mMod9");
+
+    //             // false일 경우
+    //             newPic.forEach(function (item) {
+    //                 let isSpan = item.closest(".mFile1").children[2];
+
+    //                 console.log("newpic", item);
+
+    //                 item.style.backgroundColor = "#f45897";
+    //                 let span = document.createElement(`span`);
+    //                 span.style.color = "red";
+    //                 span.style.fontSize = "18px";
+    //                 span.innerText = "이미지 파일을 등록해주세요.";
+
+    //                 if (isSpan === undefined) {
+    //                     item.closest(".mFile1").append(span);
+    //                 }
+
+    //             });
+    //             // true일 경우
+    //             okPic.forEach(function (item) {
+    //                 let isSpan = item.closest(".mFile1").children[2];
+    //                 item.removeAttribute("style");
+
+    //                 if (isSpan !== undefined) {
+    //                     isSpan.remove();
+    //                 }
+    //             });
+    //         }
+    //         // 사진 1개 사용시, true일 경우
+    //         else if (newPic.length === 0) {
+    //             okPic.forEach(function (item) {
+    //                 let isSpan = item.closest(".mFile1").children[2];
+    //                 item.removeAttribute("style");
+
+    //                 if (isSpan !== undefined) {
+    //                     isSpan.remove();
+    //                 }
+    //             });
+    //         }
+
+    //         alert("jpg 혹은 png 파일을 등록해주세요.");
+    //     }
+
+    // });
 
     // 연락처 체크
     tel.addEventListener("change", function () {
@@ -29,13 +140,10 @@ setTimeout(function () {
         // console.log(tel.value.length);
 
         if (!test && prevent === 1) {
-
             span.style.color = "red";
             span.style.fontSize = "18px";
             span.innerText = "전화번호를 입력해주세요.";
-
             tel.parentElement.append(span);
-
             prevent = 0;
 
         } else if (test && tel.parentElement.childNodes.length > 1) {
@@ -53,7 +161,7 @@ setTimeout(function () {
     for (let x = 0; x < inputArr.length; x++) {
         document.querySelector(inputArr[x]).addEventListener('keyup', function () {
             let val = this.value;
-            iframe.postMessage(inputTitle[x] + "@@" + val, 'http://dev.hifactory.co.kr');
+            iframe.postMessage(inputTitle[x] + "@@normal@@" + val, "*");
         });
     }
 
@@ -65,7 +173,7 @@ setTimeout(function () {
         document.querySelectorAll(infinite[x]).forEach(function (item, index) {
             item.addEventListener('keyup', function () {
                 let val = this.value;
-                iframe.postMessage(infiniteTxt[x] + index + "@@" + val, 'http://dev.hifactory.co.kr');
+                iframe.postMessage(infiniteTxt[x] + index + "@@infinite@@" + val, "*");
                 // console.log(infiniteTxt[x] + index);
             });
         });
@@ -75,91 +183,86 @@ setTimeout(function () {
     // 내부 iframe 전달 (수정영역 버튼)
     let guide = document.querySelectorAll(".jsBtnToggle4");
     let inputList = document.querySelectorAll(".mIList4 li");
+    // console.log(inputList);
+
 
     guide.forEach(function (item) {
         item.addEventListener('click', function () {
             if (this.classList.contains("selected")) {
                 //수정영역 on;
-                iframe.postMessage("guideOn", 'http://dev.hifactory.co.kr');
+                iframe.postMessage("guideOn", "*");
             } else {
                 //수정영역 off;
-                iframe.postMessage("guideOff", 'http://dev.hifactory.co.kr');
+                iframe.postMessage("guideOff", "*");
             }
         });
 
     })
 
-    //관리자 페이지 수정영역
-    if (/invitation_ai/i.test(window.location.href)) {
-        let admin_guide = document.querySelector(".btn_guide");
 
-        admin_guide.addEventListener('click', function () {
-            this.classList.toggle("on");
-
-            if (this.classList.contains("on")) {
-                iframe.postMessage("guideOn", 'http://dev.hifactory.co.kr');
-            } else {
-                iframe.postMessage("guideOff", 'http://dev.hifactory.co.kr');
-            }
-        });
-    }
-
-
-    // 메시지 수신 (사용자 정보입력 각 영역 색상 하이라이트)
+    // 메시지 수신 (사용자 정보입력 각 영역 색상 하이라이트 및 선택 영역 제외 나머지 닫힘)
     window.addEventListener('message', function (e) {
         // console.log(e.origin + " 윈도우 오리진")
-        if (e.origin !== 'http://dev.hifactory.co.kr') return;
+        // if (e.origin !== "*") return;
 
         // console.log(e.data + "자식 메시지 수신");
-
-
-
-        function siblings(el) {
-            let newArr = [...el.parentElement.children];
-            return newArr.filter(function (item) {
-                return item != el
-            });
-        }
-
+        let mod = /mMod\d{1,2}|background/i.exec(e.data);
 
         if (/invitation_user/i.test(window.location.href)) {
 
             for (let i = 1; i < inputList.length; i++) {
-                // console.log(siblings(inputList[i]));
-                switch (e.data) {
+                let offset = $(".mIList4 .list li").eq(i).offset().top;
+                let bgOffset = $(".mIList4 .list li").eq(3).offset().top;
+
+                if (mod[0] === "mMod4") {
+                    offset = 225;
+                } else if (mod[0] === "mMod9") {
+                    offset = 515;
+                }
+
+                switch (mod[0]) {
+
                     case `mMod${i - 1}`:
-                        inputList[i].style.backgroundColor = "#fff7fa", siblings(inputList[i]).forEach(function (item) {
-                            item.removeAttribute("style");
-                            $(".mIList4 .list li").removeClass("selected");
+                        inputList[i].style.backgroundColor = "#fff7fa";
+
+                        $(".mIList4 .list li").eq(i).siblings().removeAttr("style").removeClass("selected").find(".box").slideUp(0);
+                        $(".mIList4 .list li").eq(i).addClass("selected").find(".box").slideDown(0, function () {
+                            $(".mIList4 .list").scrollTop(offset - 66);
                         });
-                        $(".mIList4 .list li").eq(i).addClass("selected");
-                        if ($(".mIList4 .list li:eq(" + i + ") .box").css("display") == "none") {
-                            $(".mILnb").addClass("selected");
-                            $(".mIList4 .list").scrollTop(80 * i);
-                            $(".mIList4 .list li .box").slideUp();
-                            $(".mIList4 .list li:eq(" + i + ") .box").slideDown();
-                        }
+                        $(".mILnb").addClass("selected");
+                        // if ($(".mIList4 .list li:eq(" + i + ") .box").css("display") === "none") {
+                        //     $(".mIList4 .list").scrollTop(8'fast' * i);
+                        //     $(".mIList4 .list li .box").slideUp();
+                        //     $(".mIList4 .list li:eq(" + i + ") .box").slideDown();
+                        // }
                         break;
                     case "background":
-                        inputList[3].style.backgroundColor = "#fff7fa", siblings(inputList[3]).forEach(function (item) {
-                            item.removeAttribute("style");
-                            $(".mIList4 .list li").removeClass("selected");
+                        inputList[3].style.backgroundColor = "#fff7fa";
+
+                        $(".mIList4 .list li").eq(3).siblings().removeAttr("style").removeClass("selected").find(".box").slideUp(0);
+                        $(".mIList4 .list li:eq(3)").addClass("selected").find(".box").slideDown(0, function () {
+                            $(".mIList4 .list").scrollTop(bgOffset - 66);
                         });
-                        $(".mIList4 .list li:eq(3)").addClass("selected");
-                        if ($(".mIList4 .list li:eq(3) .box").css("display") == "none") {
-                            if (!($("#jsBackground").hasClass("selected"))) {
-                                $(".mILnb").addClass("selected");
-                                $(".mIList4 .list").scrollTop(80 * 1);
-                                $(".mIList4 .list li .box").slideUp();
-                                $(".mIList4 .list li:eq(3) .box").slideDown();
-                            }
-                        }
+                        $(".mILnb").addClass("selected");
+                        // if ($(".mIList4 .list li:eq(3) .box").css("display") === "none") {
+                        //     if (!($("#jsBackground").hasClass("selected"))) {
+                        //         $(".mIList4 .list").scrollTop(80 * 1);
+                        //         $(".mIList4 .list li .box").slideUp();
+                        //         $(".mIList4 .list li:eq(3) .box").slideDown();
+                        //     }
+                        // }
+
                         break;
                 }
+
+                $(".jsBtnCloseUser2").on('click', function () {
+                    $(".mIList4 .list").scrollTop(0);
+                    $(".mIList4 .list li").eq(i).removeAttr("style").removeClass("selected").find(".box").slideUp(0);
+                });
+
             }
+
         }
-
-
     });
 }, 1000);
 
@@ -169,12 +272,12 @@ $(function () {
     $(".mIList4 .list li .ti").click(function () {
         let box = $(this).parent().siblings(".box");
 
-        if (box.css("display") == "none") {
+        if (box.css("display") === "none") {
             $(this).parent().parent().addClass("selected");
-            box.slideDown();
+            box.slideDown(0);
         } else {
             $(this).parent().parent().removeClass("selected").removeAttr("style");
-            box.slideUp();
+            box.slideUp(0);
         }
     });
 
