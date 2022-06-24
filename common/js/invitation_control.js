@@ -1,7 +1,7 @@
 /* 
     [템플릿 가이드라인 및 실시간 텍스트 입력 미리보기 JS]
     
-    last update 06/21
+    last update 06/24
 
     code arranged by 정원중
 
@@ -17,141 +17,124 @@
 
 // 타임아웃 설정 - 사용자 정보입력란 로딩 완료 후 실행
 setTimeout(function () {
-    console.log("타임아웃")
-    // const btnSave = document.querySelector("#frmSave .mButton1 .mBtn1");
-    // const logo = document.querySelector("#file1Name");
+    console.log("컨트롤 로드");
+    const logoInput = document.querySelector("#file1Name");
+    const logo = document.querySelector("#file1");
     const tel = document.querySelector("#delegateTel");
-    let span = document.createElement("span");
-    let prevent = 1;
+    // const btnBlockSave = document.querySelector("#frmSave .mButton1");
 
+    // 이미지 확장자 체크
+    function checkImg(value) {
+        let split = value.split(".")
+        let extension = split[split.length - 1];
+        let regExp = /jpg|jpeg|png/i.test(extension);
 
-    // btnSave.removeAttribute('onclick');
+        if (regExp) {
+            return true;
+        } else {
+            return false;
+        }
+    };
 
-    // function checkPic(item, switchBtn) {
-    //     if (document.querySelector(`${switchBtn} .switch-button`).children[0].checked) {
-    //         return /jpg|jpeg|png/i.test(item.value.split(".")[1]);
-    //     } else {
-    //         return true;
-    //     }
-    // }
+    // 경고 문구 생성
+    function createSpan(txt, target, specify) {
+        let span = document.createElement('span');
+        span.className = "warnSpan";
+        span.style.display = "inline-block";
+        span.style.color = "red";
+        span.style.fontSize = "14px";
+        span.style.marginTop = "10px";
+        span.innerText = txt;
 
-    // function higlightBox(item) {
-    //     document.querySelector(item).classList.add("selected");
-    //     document.querySelector(`${item} .box`).style.display = "block";
-    // }
+        if (specify === undefined) {
+            if (document.querySelectorAll(`${target} .warnSpan`).length >= 1) return;
+            document.querySelector(target).append(span);
+        } else if (target === false && specify.children[2] === undefined) {
+            specify.append(span);
+        }
+    };
 
-    // btnSave.addEventListener("click", function () {
-    //     // 클릭 할때마다 새로 생성
-    //     const picture = [...document.querySelectorAll("#divTemplatePic input:first-child")];
+    // 경고 문구 삭제
+    function removeSpan(target, specify) {
+        let t = document.querySelector(`${target} .warnSpan`);
+        if (t !== null && specify === undefined) {
+            t.remove();
+        } else if (target === false && specify.children[2] !== undefined) {
+            specify.children[2].remove();
+        }
+    };
 
-    //     // 사진 이미지 체크
-    //     let newPic = picture.filter(function (el) {
-    //         return !checkPic(el, "#mMod9");
-    //     });
-    //     let okPic = picture.filter(function (el) {
-    //         return checkPic(el, "#mMod9");
-    //     });
+    // 사진 리스트 오류 체크
+    function warnPicList() {
+        const pictureList = document.querySelectorAll("#photoFile1");
 
+        // 변경 값
+        pictureList.forEach(function (item) {
+            item.addEventListener('change', function () {
+                removeSpan(false, item.closest(".mFile1"));
+                if (!checkImg(item.value)) {
+                    item.previousElementSibling.style.backgroundColor = "#f45897";
+                    if (item.value !== "") {
+                        createSpan("jpg 혹은 png 파일을 등록해주세요.", false, item.closest(".mFile1"));
+                    } else {
+                        createSpan("이미지를 등록해주세요.", false, item.closest(".mFile1"));
+                    }
+                } else {
+                    item.previousElementSibling.removeAttribute('style');
+                    removeSpan(false, item.closest(".mFile1"));
+                }
+            });
+        });
+    }
 
-    //     // 전부 true일 경우, 전송
-    //     if (checkPic(logo, "#mMod1") && newPic.length === 0) {
-    //         btnSave.setAttribute('onclick', 'lwin.pageSave()');
-    //         btnSave.click();
-    //     } else {
-    //         // 로고 이미지 체크
-    //         let isLogoSpan = logo.closest(".mFile1").children[2];
+    // 로고 체크
+    logo.addEventListener('change', function () {
+        removeSpan("#mMod1 .mFile1");
 
-    //         //false 일 경우
-    //         if (!checkPic(logo, "#mMod1")) {
+        if (!checkImg(this.value)) {
+            logoInput.style.backgroundColor = "#f45897";
+            if (this.value !== "") {
+                createSpan("jpg 혹은 png 파일을 등록해주세요.", "#mMod1 .mFile1");
+            } else {
+                createSpan("이미지를 등록해주세요.", "#mMod1 .mFile1");
+            }
+        } else {
+            logoInput.removeAttribute('style');
+            removeSpan("#mMod1 .mFile1");
+        }
+    });
+    /////////////////////
 
-    //             higlightBox(".mIList4 .list #mMod1");
-    //             logo.style.backgroundColor = "#f45897";
+    // 사진 체크
+    warnPicList();
 
-    //             let span = document.createElement(`span`);
-    //             span.style.color = "red";
-    //             span.style.fontSize = "18px";
-    //             span.innerText = "이미지 파일을 등록해주세요.";
+    const observeTarget = document.querySelector("#divTemplatePic");
 
-    //             if (isLogoSpan === undefined) {
-    //                 logo.closest(".mFile1").append(span);
-    //             }
-    //         }
-    //         // true일 경우
-    //         else {
-    //             logo.removeAttribute('style');
-    //             if (isLogoSpan !== undefined) {
-    //                 isLogoSpan.remove();
-    //             }
-    //         }
+    let observer = new MutationObserver(function () {
+        // console.log("변경감지");
+        warnPicList();
+    });
 
+    let config = {
+        attributes: true,
+        childList: true,
+        characterData: true
+    };
 
-    //         // 사진 이미지 체크
-    //         if (newPic.length >= 1) {
-    //             higlightBox(".mIList4 .list #mMod9");
-
-    //             // false일 경우
-    //             newPic.forEach(function (item) {
-    //                 let isSpan = item.closest(".mFile1").children[2];
-
-    //                 console.log("newpic", item);
-
-    //                 item.style.backgroundColor = "#f45897";
-    //                 let span = document.createElement(`span`);
-    //                 span.style.color = "red";
-    //                 span.style.fontSize = "18px";
-    //                 span.innerText = "이미지 파일을 등록해주세요.";
-
-    //                 if (isSpan === undefined) {
-    //                     item.closest(".mFile1").append(span);
-    //                 }
-
-    //             });
-    //             // true일 경우
-    //             okPic.forEach(function (item) {
-    //                 let isSpan = item.closest(".mFile1").children[2];
-    //                 item.removeAttribute("style");
-
-    //                 if (isSpan !== undefined) {
-    //                     isSpan.remove();
-    //                 }
-    //             });
-    //         }
-    //         // 사진 1개 사용시, true일 경우
-    //         else if (newPic.length === 0) {
-    //             okPic.forEach(function (item) {
-    //                 let isSpan = item.closest(".mFile1").children[2];
-    //                 item.removeAttribute("style");
-
-    //                 if (isSpan !== undefined) {
-    //                     isSpan.remove();
-    //                 }
-    //             });
-    //         }
-
-    //         alert("jpg 혹은 png 파일을 등록해주세요.");
-    //     }
-
-    // });
+    observer.observe(observeTarget, config);
+    ////////////////
 
     // 연락처 체크
     tel.addEventListener("change", function () {
         let test = /^\d{2,3}[-\s.]?\d{3,4}[-\s.]?\d{4}$/g.test(tel.value);
-        // console.log(test + "연락처 체크");
-        // console.log(tel.value.length);
 
-        if (!test && prevent === 1) {
-            span.style.color = "red";
-            span.style.fontSize = "18px";
-            span.innerText = "전화번호를 입력해주세요.";
-            tel.parentElement.append(span);
-            prevent = 0;
-
-        } else if (test && tel.parentElement.childNodes.length > 1) {
-            tel.parentElement.removeChild(tel.parentElement.childNodes[1]);
-
-            prevent = 1;
+        if (!test) {
+            createSpan("전화번호를 입력해주세요.", "#mMod6 .gIt");
+        } else {
+            removeSpan("#mMod6 .gIt");
         }
     });
+    ///////////////
 
     // 내부 iframe 전달 (실시간 텍스트 입력)
     let inputArr = ["#serviceName", "#titleSubject", "#titleContents", "#addressMemo", "#delegateTel", "#etcTel", "#attrLinkBtn"];
@@ -177,8 +160,35 @@ setTimeout(function () {
                 // console.log(infiniteTxt[x] + index);
             });
         });
-
     }
+
+    //텍스트 내용삭제
+    let btnReset = [...document.querySelectorAll(".btnResetTxt")];
+
+    btnReset.forEach(function (item) {
+        item.previousElementSibling.addEventListener('input', function () {
+            if (this.value === "") {
+                item.classList.remove("on");
+            } else {
+                item.classList.add("on");
+            }
+        });
+
+        item.addEventListener('click', function () {
+            item.previousElementSibling.value = "";
+            item.classList.remove("on");
+
+            const resetID = item.previousElementSibling.id;
+
+            switch (resetID) {
+                case "serviceName":
+                    iframe.postMessage(inputTitle[0] + "@@normal@@" + "", "*");
+                    break;
+            }
+        });
+    });
+
+    /////////////////
 
     // 내부 iframe 전달 (수정영역 버튼)
     let guide = document.querySelectorAll(".jsBtnToggle4");
@@ -196,8 +206,8 @@ setTimeout(function () {
                 iframe.postMessage("guideOff", "*");
             }
         });
-
     })
+    //////////////////////
 
 
     // 메시지 수신 (사용자 정보입력 각 영역 색상 하이라이트 및 선택 영역 제외 나머지 닫힘)
@@ -264,7 +274,9 @@ setTimeout(function () {
 
         }
     });
+    ////////////////////////
 }, 1000);
+/////////////////
 
 // 사용자 패널 클릭 열고 닫기 및 수정영역 토글
 $(function () {
@@ -287,6 +299,5 @@ $(function () {
     //         $(".mIList4 .list li").removeAttr("style").removeClass("selected").find(".box").slideUp();
     //     }
     // });
-
-
 });
+//////////////////////
