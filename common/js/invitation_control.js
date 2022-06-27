@@ -1,7 +1,7 @@
 /* 
-    [템플릿 가이드라인 및 실시간 텍스트 입력 미리보기 JS]
+    [템플릿 가이드 및 실시간 텍스트 반영 js]
     
-    last update 06/24
+    last update 06/27
 
     code arranged by 정원중
 
@@ -21,11 +21,118 @@ setTimeout(function () {
     const logoInput = document.querySelector("#file1Name");
     const logo = document.querySelector("#file1");
     const tel = document.querySelector("#delegateTel");
-    // const btnBlockSave = document.querySelector("#frmSave .mButton1");
+    const iframe = document.getElementById("iframePreview").contentWindow;
+
+    // 로고 체크
+    logo.addEventListener('change', function () {
+        removeSpan("#mMod1 .mFile1");
+
+        if (!checkImg(this.value)) {
+            logoInput.style.backgroundColor = "#f45897";
+            if (this.value !== "") {
+                createSpan("jpg 혹은 png 파일을 등록해주세요.", "#mMod1 .mFile1");
+            } else {
+                createSpan("이미지를 등록해주세요.", "#mMod1 .mFile1");
+            }
+        } else {
+            logoInput.removeAttribute('style');
+            removeSpan("#mMod1 .mFile1");
+        }
+    });
+    /////////////////////
+
+    // 연락처 체크
+    tel.addEventListener("change", function () {
+        let test = /^\d{2,3}[-\s.]?\d{3,4}[-\s.]?\d{4}$/g.test(tel.value);
+
+        if (!test) {
+            createSpan("전화번호를 입력해주세요.", "#mMod6 .gIt");
+        } else {
+            removeSpan("#mMod6 .gIt");
+        }
+    });
+    ///////////////
+
+    // 사진 체크
+    warnPicList();
+
+    const observePic = document.querySelector("#divTemplatePic");
+
+    let observerPic = new MutationObserver(function () {
+        // console.log("변경감지");
+        warnPicList();
+        operateReset();
+    });
+
+    let config = {
+        attributes: true,
+        childList: true,
+        characterData: true
+    };
+
+    observerPic.observe(observePic, config);
+    ////////////////
+
+    // 내부 iframe 전달 (실시간 텍스트 입력)
+    let inputArr = ["#serviceName", "#titleSubject", "#titleContents", "#addressMemo", "#delegateTel", "#etcTel", "#attrLinkBtn"];
+    let inputTitle = ["mMod0", "mMod3_tit", "mMod3_txt", "mMod5_tx", "mMod6_tel", "mMod6_txt", "mMod10"];
+
+    for (let x = 0; x < inputArr.length; x++) {
+        document.querySelector(inputArr[x]).addEventListener('keyup', function () {
+            let val = this.value;
+            iframe.postMessage(inputTitle[x] + "@@normal@@" + val, "*");
+        });
+    }
+
+    let infinite = ["#addedTemplate4 .it", "#addedTemplate4 .textarea", "#addedTemplate7 input[name='linkBtnName']", "#divTemplatePic .textarea"];
+    let infiniteTxt = ["mMod4_tit", "mMod4_txt", "mMod7_a", "mMod9_txt"];
+
+
+    for (let x = 0; x < infinite.length; x++) {
+        document.querySelectorAll(infinite[x]).forEach(function (item, index) {
+            item.addEventListener('keyup', function () {
+                let val = this.value;
+                iframe.postMessage(infiniteTxt[x] + index + "@@infinite@@" + val, "*");
+                // console.log(infiniteTxt[x] + index);
+            });
+        });
+    }
+
+    // 텍스트 내용 삭제
+    operateReset();
+
+
+    let observerPlus = new MutationObserver(function () {
+        operateReset();
+    });
+
+    observerPlus.observe(document.querySelector("#addedTemplate4"), config);
+    observerPlus.observe(document.querySelector("#addedTemplate7"), config);
+    /////////////////////////
+
+    // 내부 iframe 전달 (수정영역 버튼)
+    let guide = document.querySelectorAll(".jsBtnToggle4");
+    let inputList = document.querySelectorAll(".mIList4 li");
+    // console.log(inputList);
+
+
+    guide.forEach(function (item) {
+        item.addEventListener('click', function () {
+            if (this.classList.contains("selected")) {
+                //수정영역 on;
+                iframe.postMessage("guideOn", "*");
+            } else {
+                //수정영역 off;
+                iframe.postMessage("guideOff", "*");
+            }
+        });
+    })
+    //////////////////////
+
 
     // 이미지 확장자 체크
     function checkImg(value) {
-        let split = value.split(".")
+        let split = value.split(".");
         let extension = split[split.length - 1];
         let regExp = /jpg|jpeg|png/i.test(extension);
 
@@ -87,128 +194,47 @@ setTimeout(function () {
         });
     }
 
-    // 로고 체크
-    logo.addEventListener('change', function () {
-        removeSpan("#mMod1 .mFile1");
+    //텍스트 내용삭제
+    function operateReset() {
 
-        if (!checkImg(this.value)) {
-            logoInput.style.backgroundColor = "#f45897";
-            if (this.value !== "") {
-                createSpan("jpg 혹은 png 파일을 등록해주세요.", "#mMod1 .mFile1");
-            } else {
-                createSpan("이미지를 등록해주세요.", "#mMod1 .mFile1");
-            }
-        } else {
-            logoInput.removeAttribute('style');
-            removeSpan("#mMod1 .mFile1");
-        }
-    });
-    /////////////////////
+        let btnReset = [...document.querySelectorAll(".btnResetTxt")];
 
-    // 사진 체크
-    warnPicList();
+        btnReset.forEach(function (item) {
+            // item.previousElementSibling.addEventListener('input', function () {
+            //     if (this.value === "") {
+            //         item.classList.remove("on");
+            //     } else {
+            //         item.classList.add("on");
+            //     }
+            // });
 
-    const observeTarget = document.querySelector("#divTemplatePic");
+            item.addEventListener('click', function () {
+                item.previousElementSibling.value = "";
+                // item.classList.remove("on");
 
-    let observer = new MutationObserver(function () {
-        // console.log("변경감지");
-        warnPicList();
-    });
+                const resetID = "#" + item.previousElementSibling.id;
 
-    let config = {
-        attributes: true,
-        childList: true,
-        characterData: true
-    };
+                for (let i = 0; i < inputArr.length; i++) {
 
-    observer.observe(observeTarget, config);
-    ////////////////
+                    switch (resetID) {
+                        case inputArr[i]:
+                            iframe.postMessage(inputTitle[i] + "@@normal@@" + "", "*");
+                            break;
+                    }
+                }
 
-    // 연락처 체크
-    tel.addEventListener("change", function () {
-        let test = /^\d{2,3}[-\s.]?\d{3,4}[-\s.]?\d{4}$/g.test(tel.value);
-
-        if (!test) {
-            createSpan("전화번호를 입력해주세요.", "#mMod6 .gIt");
-        } else {
-            removeSpan("#mMod6 .gIt");
-        }
-    });
-    ///////////////
-
-    // 내부 iframe 전달 (실시간 텍스트 입력)
-    let inputArr = ["#serviceName", "#titleSubject", "#titleContents", "#addressMemo", "#delegateTel", "#etcTel", "#attrLinkBtn"];
-    let inputTitle = ["mMod0", "mMod3_tit", "mMod3_txt", "mMod5_tx", "mMod6_tel", "mMod6_txt", "mMod10"];
-    let iframe = document.getElementById("iframePreview").contentWindow;
-
-    for (let x = 0; x < inputArr.length; x++) {
-        document.querySelector(inputArr[x]).addEventListener('keyup', function () {
-            let val = this.value;
-            iframe.postMessage(inputTitle[x] + "@@normal@@" + val, "*");
-        });
-    }
-
-    let infinite = ["#addedTemplate4 .it", "#addedTemplate4 .textarea", "#addedTemplate7 input[name='linkBtnName']", "#divTemplatePic .textarea"];
-    let infiniteTxt = ["mMod4_tit", "mMod4_txt", "mMod7_a", "mMod9_txt"];
-
-
-    for (let x = 0; x < infinite.length; x++) {
-        document.querySelectorAll(infinite[x]).forEach(function (item, index) {
-            item.addEventListener('keyup', function () {
-                let val = this.value;
-                iframe.postMessage(infiniteTxt[x] + index + "@@infinite@@" + val, "*");
-                // console.log(infiniteTxt[x] + index);
             });
         });
+
+        for (let i = 0; i < infinite.length; i++) {
+            document.querySelectorAll(infinite[i]).forEach(function (el, index) {
+                el.nextElementSibling.addEventListener('click', function () {
+                    iframe.postMessage(infiniteTxt[i] + index + "@@infinite@@" + "", "*");
+                });
+            });
+        }
     }
-
-    //텍스트 내용삭제
-    let btnReset = [...document.querySelectorAll(".btnResetTxt")];
-
-    btnReset.forEach(function (item) {
-        item.previousElementSibling.addEventListener('input', function () {
-            if (this.value === "") {
-                item.classList.remove("on");
-            } else {
-                item.classList.add("on");
-            }
-        });
-
-        item.addEventListener('click', function () {
-            item.previousElementSibling.value = "";
-            item.classList.remove("on");
-
-            const resetID = item.previousElementSibling.id;
-
-            switch (resetID) {
-                case "serviceName":
-                    iframe.postMessage(inputTitle[0] + "@@normal@@" + "", "*");
-                    break;
-            }
-        });
-    });
-
-    /////////////////
-
-    // 내부 iframe 전달 (수정영역 버튼)
-    let guide = document.querySelectorAll(".jsBtnToggle4");
-    let inputList = document.querySelectorAll(".mIList4 li");
-    // console.log(inputList);
-
-
-    guide.forEach(function (item) {
-        item.addEventListener('click', function () {
-            if (this.classList.contains("selected")) {
-                //수정영역 on;
-                iframe.postMessage("guideOn", "*");
-            } else {
-                //수정영역 off;
-                iframe.postMessage("guideOff", "*");
-            }
-        });
-    })
     //////////////////////
-
 
     // 메시지 수신 (사용자 정보입력 각 영역 색상 하이라이트 및 선택 영역 제외 나머지 닫힘)
     window.addEventListener('message', function (e) {
@@ -275,6 +301,7 @@ setTimeout(function () {
         }
     });
     ////////////////////////
+
 }, 1000);
 /////////////////
 
