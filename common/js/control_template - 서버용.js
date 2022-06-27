@@ -1,7 +1,7 @@
 /* 
 [하이팩토리 템플릿 제어 JS]
 2022.04.01 - init
-2022.06.21 - last update
+2022.06.27 - last update
 
 
 code arranged by 정원중
@@ -291,7 +291,7 @@ window.onload = function () {
 
         switch (mod[0]) {
             case 'mMod0':
-                document.querySelectorAll(".mMod0 h2, .infowindow, .mMod5 .t, .qrbx .mMod0, .mMod0 span, span.mMod0").forEach(function (item) {
+                document.querySelectorAll(".mMod0 h2, .infowindow, .mMod5 .t, .qrbx .mMod0, .mMod0 span").forEach(function (item) {
                     item.innerText = txt;
                 });
                 break;
