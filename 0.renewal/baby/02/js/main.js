@@ -36,13 +36,22 @@ $(function () {
             $(".lMod9").removeClass("on");
             lMod9.destroy();
         });
+
+
+        $(".btn_QR").on('click', function () {
+            $(".qrpopup").addClass("on");
+        });
+        
+        $(".btn_close").on('click', function () {
+            $(".qrpopup").removeClass("on");
+        });
+
     });
 
     vh();
     control.module('.section1');
     control.module('.section2');
     control.popup("body", '.mMod9 .swiper-slide, .btn_QR', ".btn_close");
-    control.popupQR();
     autoHeight(mMod4);
     autoHeight(mMod9);
     resize_mod9txt(false);

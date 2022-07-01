@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <path style="fill:#38bdbc" d="M0 0h64v64H0z"/>
+    <g transform="translate(-30.504 -13.004)">
+        <rect data-name="모서리가 둥근 직사각형 4" width="6" height="35" rx="3" transform="rotate(45 -.799 103.926)" style="fill:#fff"/>
+        <rect data-name="모서리가 둥근 직사각형 4 복사" width="35" height="6" rx="3" transform="rotate(45 -11.052 79.173)" style="fill:#fff"/>
+    </g>
+</svg>

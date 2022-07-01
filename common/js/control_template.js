@@ -309,7 +309,6 @@ window.onload = function () {
         // if (e.origin !== "http://dev.hifactory.co.kr") return;
 
         let mod = /mMod[0-9]{1,2}(_[a-z]{1,3}(\d{1,})?)?/g.exec(e.data);
-        let txt = /(?<=@@+)(.|\n)*/g.exec(e.data);
         let length;
 
         // console.log(txt[0])
