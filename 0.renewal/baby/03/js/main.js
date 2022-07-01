@@ -7,7 +7,6 @@ $(function () {
             el: ".mainSlideContainer .main-swiper-pagination",
             clickable: true,
         },
-        loop: true,
         shortSwipes: false,
         longSwipesMs: 100,
         autoHeight: true,
@@ -65,7 +64,7 @@ $(function () {
     $(".btn_QR").on('click', function () {
         $(".qrpopup").addClass("on");
     });
-    
+
     $(".btn_close").on('click', function () {
         $(".qrpopup").removeClass("on");
     });
@@ -73,4 +72,5 @@ $(function () {
 
     vh();
     control.popup("body", ".mMod9 .swiper-slide, .btn_QR", ".btn_close");
+    control.module(".lastSlide");
 });
