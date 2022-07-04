@@ -131,6 +131,17 @@ h2,
 }
 
 
+video {
+    position: absolute;
+    top: 11%;
+    left: 11%;
+    z-index: 1;
+    width: 77%;
+    height: 77%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .frame {
     position: absolute;
     top: 0;
@@ -456,6 +467,9 @@ h1 {
     font-weight: bold;
     padding: 0 80px 0 40px;
     box-sizing: border-box;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .mMod10 a::after {
@@ -483,6 +497,11 @@ h1 {
     font-size: 26px;
     color: var(--mainColor);
     line-height: 1.2;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-right: 42px;
+    box-sizing: border-box;
 }
 
 .mMod7 a+a {
@@ -571,6 +590,7 @@ h1 {
     height: 64px;
     background: url(../images/btn_close.svg) no-repeat center/100%;
     font-size: 0;
+    z-index: 99999;
 }
 
 

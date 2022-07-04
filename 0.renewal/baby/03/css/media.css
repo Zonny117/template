@@ -1,1 +1,302 @@
 @charset "utf-8";
+
+
+@media only screen and (max-width:850px) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+        background-attachment: fixed;
+        background-size: auto 85%;
+    }
+
+    .mainSlideContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    .main-swiper-pagination {
+        position: fixed;
+        margin: 0;
+        z-index: 9999;
+    }
+
+    .main-swiper-pagination .swiper-pagination-bullet+.swiper-pagination-bullet {
+        margin-left: 5px;
+    }
+
+    .main-swiper-pagination .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+    }
+
+    .mainContent {
+        width: 100%;
+        padding: 40px 20px 60px;
+    }
+
+    .mainContent.w678,
+    .mainContent.w440 {
+        width: 100%;
+    }
+
+    .mMod0 {
+        margin-bottom: 20px;
+    }
+
+    .mMod0 h2 {
+        font-size: 18px;
+    }
+
+    .mMod0::before,
+    .mMod0::after {
+        width: 15px;
+        height: 15px;
+        vertical-align: -2px;
+    }
+
+    .mMod0::before {
+        margin-right: 5px;
+    }
+
+    .mMod0::after {
+        margin-left: 5px;
+    }
+
+    .background {
+        width: 80%;
+        padding-top: 80%;
+        margin: 0 auto;
+    }
+
+
+    .happy,
+    .decobx .happy {
+        font-size: 45px;
+    }
+
+    .mMod3 .ribbon {
+        width: 100%;
+        padding: 10px 45px;
+        margin-bottom: 20px;
+    }
+
+    .elephant img {
+        width: 80%;
+        height: 80%;
+    }
+
+    .decobx .ribbon {
+        width: 90%;
+        margin: 10px auto 0;
+    }
+
+    .mMod3 span,
+    .decobx .ribbon span {
+        font-size: 18px;
+    }
+
+    .decobx {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 20px;
+    }
+
+    .mMod3 .txt {
+        font-size: 16px;
+    }
+
+    .mMod4 .tit {
+        font-size: 18px;
+    }
+
+    .mMod4 .txt {
+        font-size: 16px;
+    }
+
+    .btnbx {
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 14px;
+        height: 14px;
+    }
+
+    .btnbx .swiper-pagination {
+        font-size: 14px;
+    }
+
+    .mMod9 img {
+        height: 250px;
+    }
+
+    .mMod9 .swiper-slide p {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .mMod8 .iframebx {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 56.66%;
+    }
+
+    .mMod8 iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+
+    .gMap {
+        height: 250px;
+    }
+
+    .navi {
+        width: 50px;
+        height: 50px;
+        background-size: 16px 22px;
+    }
+
+    .mMod5 .ti {
+        font-size: 18px;
+    }
+
+    .mMod5 .txt {
+        font-size: 16px;
+    }
+
+    .mMod1 {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .mMod6 {
+        margin-bottom: 35px;
+    }
+
+    .mMod6 .tel {
+        font-size: 20px;
+    }
+
+    .mMod6 .tel::before {
+        width: 15px;
+        height: 15px;
+        vertical-align: 0px;
+        margin-right: 10px;
+    }
+
+    .mMod6 .txt {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    .mMod6 .telsbx {
+        margin-top: 10px;
+    }
+
+    .mMod6 .telsbx .btn_sms {
+        display: inline-block;
+        background-size: 27px 24px;
+    }
+
+    .mMod6 .telsbx .btn_QR {
+        background-size: 20px 20px;
+    }
+
+    .mMod6 .telsbx a {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .mMod10 {
+        margin: 0 auto;
+        width: 70%;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .mMod10 a {
+        font-size: 15px;
+        padding-right: 40px;
+        padding-left: 20px;
+    }
+
+    .mMod10 a::after {
+        right: 20px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .mMod7 {
+        width: 70%;
+        margin: 15px auto 0;
+    }
+
+    .mMod7 a {
+        font-size: 15px;
+        padding-right: 30px;
+    }
+
+    .mMod7 a+a {
+        margin-top: 10px;
+    }
+
+    .mMod7 a::before {
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+        vertical-align: 0px;
+    }
+
+    .mMod7 a::after {
+        width: 25px;
+        height: 10px;
+    }
+
+    .mMod11 {
+        display: none;
+    }
+
+    #qr {
+        margin: 20px auto;
+    }
+
+    #qr img {
+        width: 80%;
+    }
+
+    .guideTxt {
+        font-size: 16px;
+    }
+
+    .save {
+        margin-top: 20px;
+        font-size: 15px;
+        padding: 15px 53px 15px 30px;
+    }
+
+    .save::after {
+        right: 30px;
+        width: 23px;
+        height: 23px;
+    }
+
+    .lMod9 .btn_close,
+    .qrpopup .btn_close {
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+    }
+}
