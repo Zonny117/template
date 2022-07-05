@@ -1,7 +1,7 @@
 /* 
     [템플릿 가이드 및 실시간 텍스트 반영 js]
     
-    last update 06/27
+    last update 07/05
 
     code arranged by 정원중
 
@@ -17,6 +17,8 @@
 
 // 타임아웃 설정 - 사용자 정보입력란 로딩 완료 후 실행
 setTimeout(function () {
+
+
     console.log("컨트롤 로드");
     const logoInput = document.querySelector("#file1Name");
     const logo = document.querySelector("#file1");
@@ -56,8 +58,6 @@ setTimeout(function () {
     // 사진 체크
     warnPicList();
 
-    const observePic = document.querySelector("#divTemplatePic");
-
     let observerPic = new MutationObserver(function () {
         // console.log("변경감지");
         warnPicList();
@@ -70,7 +70,7 @@ setTimeout(function () {
         characterData: true
     };
 
-    observerPic.observe(observePic, config);
+    observerPic.observe(document.querySelector("#divTemplatePic"), config);
     ////////////////
 
     // 내부 iframe 전달 (실시간 텍스트 입력)
@@ -112,9 +112,6 @@ setTimeout(function () {
 
     // 내부 iframe 전달 (수정영역 버튼)
     let guide = document.querySelectorAll(".jsBtnToggle4");
-    let inputList = document.querySelectorAll(".mIList4 li");
-    // console.log(inputList);
-
 
     guide.forEach(function (item) {
         item.addEventListener('click', function () {
@@ -129,6 +126,38 @@ setTimeout(function () {
     })
     //////////////////////
 
+    // 메시지 수신 (사용자 정보입력 각 영역 색상 하이라이트 및 선택 영역 제외 나머지 닫힘)
+    window.addEventListener('message', function (e) {
+        if (/invitation_user/i.test(window.location.href)) {
+            let menuList = $(".mIList4 .list li");
+            let scrollbx = $(".mIList4 .list .scroll");
+
+            // console.log(e.data + "자식 메시지 수신");
+            let mod = /mMod\d{1,2}|background/i.exec(e.data);
+            $(".mILnb").addClass("selected");
+            scrollbx.scrollTop(0);
+
+            for (let i = 0; i < menuList.length; i++) {
+                switch (mod[0]) {
+                    case `mMod${i}`:
+                        menuList.eq(i + 1).siblings().removeClass("selected").find(".box").slideUp();
+                        menuList.eq(i + 1).addClass("selected").find(".box").slideDown();
+                        scrollbx.scrollTop(menuList.eq(i).offset().top - 66);
+                        break;
+                    case `background`:
+                        menuList.eq(3).siblings().removeClass("selected").find(".box").slideUp();
+                        menuList.eq(3).addClass("selected").find(".box").slideDown();
+                        scrollbx.scrollTop(menuList.eq(3).offset().top - 66);
+                        break;
+                }
+            }
+
+
+        }
+    });
+    ////////////////////////
+
+    //함수 모음
 
     // 이미지 확장자 체크
     function checkImg(value) {
@@ -150,7 +179,7 @@ setTimeout(function () {
         span.style.display = "inline-block";
         span.style.color = "red";
         span.style.fontSize = "14px";
-        span.style.marginTop = "10px";
+        span.style.marginTop = "5px";
         span.innerText = txt;
 
         if (specify === undefined) {
@@ -200,17 +229,8 @@ setTimeout(function () {
         let btnReset = [...document.querySelectorAll(".btnResetTxt")];
 
         btnReset.forEach(function (item) {
-            // item.previousElementSibling.addEventListener('input', function () {
-            //     if (this.value === "") {
-            //         item.classList.remove("on");
-            //     } else {
-            //         item.classList.add("on");
-            //     }
-            // });
-
             item.addEventListener('click', function () {
                 item.previousElementSibling.value = "";
-                // item.classList.remove("on");
 
                 const resetID = "#" + item.previousElementSibling.id;
 
@@ -222,7 +242,6 @@ setTimeout(function () {
                             break;
                     }
                 }
-
             });
         });
 
@@ -235,72 +254,6 @@ setTimeout(function () {
         }
     }
     //////////////////////
-
-    // 메시지 수신 (사용자 정보입력 각 영역 색상 하이라이트 및 선택 영역 제외 나머지 닫힘)
-    window.addEventListener('message', function (e) {
-        // console.log(e.origin + " 윈도우 오리진")
-        // if (e.origin !== "*") return;
-
-        // console.log(e.data + "자식 메시지 수신");
-        let mod = /mMod\d{1,2}|background/i.exec(e.data);
-
-        if (/invitation_user/i.test(window.location.href)) {
-
-            for (let i = 1; i < inputList.length; i++) {
-                let offset = $(".mIList4 .list li").eq(i).offset().top;
-                let bgOffset = $(".mIList4 .list li").eq(3).offset().top;
-
-                if (mod[0] === "mMod4") {
-                    offset = 225;
-                } else if (mod[0] === "mMod9") {
-                    offset = 515;
-                }
-
-                switch (mod[0]) {
-
-                    case `mMod${i - 1}`:
-                        inputList[i].style.backgroundColor = "#fff7fa";
-
-                        $(".mIList4 .list li").eq(i).siblings().removeAttr("style").removeClass("selected").find(".box").slideUp(0);
-                        $(".mIList4 .list li").eq(i).addClass("selected").find(".box").slideDown(0, function () {
-                            $(".mIList4 .list").scrollTop(offset - 66);
-                        });
-                        $(".mILnb").addClass("selected");
-                        // if ($(".mIList4 .list li:eq(" + i + ") .box").css("display") === "none") {
-                        //     $(".mIList4 .list").scrollTop(8'fast' * i);
-                        //     $(".mIList4 .list li .box").slideUp();
-                        //     $(".mIList4 .list li:eq(" + i + ") .box").slideDown();
-                        // }
-                        break;
-                    case "background":
-                        inputList[3].style.backgroundColor = "#fff7fa";
-
-                        $(".mIList4 .list li").eq(3).siblings().removeAttr("style").removeClass("selected").find(".box").slideUp(0);
-                        $(".mIList4 .list li:eq(3)").addClass("selected").find(".box").slideDown(0, function () {
-                            $(".mIList4 .list").scrollTop(bgOffset - 66);
-                        });
-                        $(".mILnb").addClass("selected");
-                        // if ($(".mIList4 .list li:eq(3) .box").css("display") === "none") {
-                        //     if (!($("#jsBackground").hasClass("selected"))) {
-                        //         $(".mIList4 .list").scrollTop(80 * 1);
-                        //         $(".mIList4 .list li .box").slideUp();
-                        //         $(".mIList4 .list li:eq(3) .box").slideDown();
-                        //     }
-                        // }
-
-                        break;
-                }
-
-                $(".jsBtnCloseUser2").on('click', function () {
-                    $(".mIList4 .list").scrollTop(0);
-                    $(".mIList4 .list li").eq(i).removeAttr("style").removeClass("selected").find(".box").slideUp(0);
-                });
-
-            }
-
-        }
-    });
-    ////////////////////////
 
 }, 1000);
 /////////////////
@@ -319,12 +272,5 @@ $(function () {
             box.slideUp(0);
         }
     });
-
-    // 수정영역 off시 사용자 패널 닫기 및 스타일 제거
-    // $(".jsBtnToggle4").click(function () {
-    //     if (!$(this).hasClass("selected")) {
-    //         $(".mIList4 .list li").removeAttr("style").removeClass("selected").find(".box").slideUp();
-    //     }
-    // });
 });
 //////////////////////

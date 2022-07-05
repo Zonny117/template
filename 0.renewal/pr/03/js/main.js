@@ -66,4 +66,7 @@ $(function () {
 
     vh();
     control.popup("body", ".mMod9 .swiper-slide, .btn_QR", ".btn_close");
+    autoHeight(mMod4);
+    autoHeight(mMod9);
+    resize_mod9txt(false);
 });

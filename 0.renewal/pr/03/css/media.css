@@ -1,1 +1,231 @@
 @charset "utf-8";
+
+@media only screen and (max-width:850px) {
+
+    .main .content,
+    .mMod9,
+    .mMod8 .content,
+    .contact {
+        width: 100%;
+    }
+
+    .main {
+        margin-bottom: 40px;
+    }
+
+    .main .content {
+        padding: 20px 20px 0px;
+    }
+
+    .background {
+        border-width: 15px;
+    }
+
+    .mMod1 {
+        width: 50px;
+        height: 50px;
+    }
+
+    .mMod0 {
+        margin-bottom: 30px;
+    }
+
+    .mMod0 span {
+        font-size: 20px;
+    }
+
+
+    .mMod3 {
+        margin-top: 12px;
+    }
+
+    .mMod3 h2 {
+        font-size: 24px;
+    }
+
+    .mMod3 .txt {
+        margin-top: 11px;
+        font-size: 16px;
+    }
+
+    .mMod6 {
+        margin-top: 23px;
+    }
+
+    .mMod6 .tel {
+        font-size: 24px;
+    }
+
+    .mMod6 .txt {
+        margin-top: 8px;
+        font-size: 14px;
+    }
+
+    .telsbx {
+        margin-top: 20px;
+    }
+
+    .telsbx a {
+        width: 41px;
+        height: 41px;
+        background-size: 50%;
+    }
+
+    .telsbx .btn_sms {
+        display: inline-block;
+    }
+
+    .telsbx a+a {
+        margin-left: 13px;
+    }
+
+    .mMod4 {
+        padding: 36px 0;
+        margin-bottom: 40px;
+    }
+
+    .mMod4 .swiper-container {
+        width: 80%;
+        padding: 24px 10px;
+    }
+
+    .mMod4 .tit {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .mMod4 .txt {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    .mMod4 .swiper-pagination {
+        margin-top: 30px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
+
+    .section_txt {
+        padding: 25px 0;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .mMod9 {
+        margin-bottom: 40px;
+    }
+
+    .mMod9 img {
+        height: 250px;
+        margin-bottom: 50px;
+    }
+
+    .mMod9 .swiper-pagination {
+        top: 270px;
+    }
+
+    .mMod9 .swiper-slide p {
+        padding: 0px 20px 40px;
+        box-sizing: border-box;
+        font-size: 15px;
+    }
+
+    .mMod8 {
+        padding: 0 20px 40px;
+    }
+
+    .iframebx {
+        position: relative;
+        width: 100%;
+        padding-top: 56.66%;
+        height: 0;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+
+    .mMod5 {
+        padding: 0 20px;
+        margin-bottom: 40px;
+    }
+
+    .contact {
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+
+    .gMap {
+        height: 250px;
+    }
+
+    .navi {
+        height: 50px;
+        padding: 0 20px;
+        font-size: 16px;
+    }
+
+    .navi::before {
+        width: 16px;
+        height: 23px;
+    }
+
+    .mMod5 .ti {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    .mMod5 .txt {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    .mMod10 {
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+
+    .mMod10 a,
+    .mMod7 a {
+        font-size: 16px;
+        padding: 15px 40px 15px 20px;
+    }
+
+    .mMod10 a::before,
+    .mMod7 a::before {
+        margin-right: 20px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .mMod10 a::after {
+        width: 26px;
+        height: 26px;
+        right: 20px;
+    }
+
+    .mMod7 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .mMod7 a+a {
+        margin-top: 20px;
+    }
+
+    .mMod7 a::after {
+        width: 20px;
+        height: 20px;
+        right: 20px;
+    }
+
+    .mMod11 {
+        display: none;
+    }
+}

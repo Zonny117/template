@@ -1,7 +1,7 @@
 /* 
 [하이팩토리 템플릿 제어 JS]
 2022.04.01 - init
-2022.06.27 - last update
+2022.07.04 - last update
 
 
 code arranged by 정원중
