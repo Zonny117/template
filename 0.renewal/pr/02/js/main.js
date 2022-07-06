@@ -45,9 +45,14 @@ $(function () {
     });
 
 
+    $(".btn_QR").on('click', function () {
+        $(".qrpopup").addClass("on");
+    });
+    $(".btn_close").on('click', function () {
+        $(".qrpopup").removeClass("on");
+    });
 
     vh();
-    control.popupQR();
     control.popup('body', '.btn_QR, .mMod9 .swiper-slide', '.btn_close');
     control.module('.linkbx');
 });

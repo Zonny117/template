@@ -1,53 +1,19 @@
 $(function () {
 
-
     var main = new Swiper(".mainSlideContainer", {
         slidesPerView: 1,
         pagination: {
             el: ".mainSlideContainer .main-swiper-pagination",
             clickable: true,
         },
-        shortSwipes: false,
-        longSwipesMs: 100,
         autoHeight: true,
     });
 
-
-    var mMod4 = new Swiper(".mMod4 .swiper-container", {
-        autoHeight: "true",
-        slidesPerView: 1,
-        spaceBetween: 50,
-        pagination: {
-            el: ".mMod4 .swiper-pagination",
-            type: 'fraction',
-        },
-        navigation: {
-            nextEl: ".mMod4 .swiper-button-next",
-            prevEl: ".mMod4 .swiper-button-prev",
-        },
-        allowTouchMove: false,
-    });
-
-    var mMod9 = new Swiper(".mMod9 .swiper-container", {
-        autoHeight: "true",
-        slidesPerView: 1,
-        spaceBetween: 50,
-        pagination: {
-            el: ".mMod9 .swiper-pagination",
-            type: 'fraction',
-        },
-        navigation: {
-            nextEl: ".mMod9 .swiper-button-next",
-            prevEl: ".mMod9 .swiper-button-prev",
-        },
-        allowTouchMove: false,
-    });
-
-    $(".mMod9 .swiper-slide img").on('click', function () {
+    $(".mMod9 .swiper-slide").on('click', function () {
 
         $(".lMod9").addClass("on");
 
-        let idx = mMod9.realIndex;
+        let idx = $(this).index();
 
         var lMod9 = new Swiper(".lMod9 .swiper-container", {
             initialSlide: idx,
@@ -73,8 +39,6 @@ $(function () {
     control.popup("body", ".mMod9 .swiper-slide, .btn_QR", ".btn_close");
     control.module(".lastSlide");
 
-    autoHeight(mMod4);
-    autoHeight(mMod9);
     resize_mod9txt(false);
 
     $(".btnbx").on('click', function () {
@@ -83,4 +47,19 @@ $(function () {
         }, 300);
     });
 
+
+    // 슬라이드 삭제
+    let slides = $(".slideModule").filter(function () {
+        return $(this).css("display") === "none";
+    });
+
+    slides.remove();
+
+
+    // 슬라이드 1개 일때 업데이트
+    if ($(".mainSlideContainer .swiper-wrapper>.swiper-slide").length === 1) {
+        main.update()
+        main.allowTouchMove = false;
+        $('.main-swiper-pagination').css('display', 'none');
+    }
 });

@@ -21,7 +21,7 @@ $(function () {
         },
     });
 
-    $(".mMod9 .swiper-slide").click(function () {
+    $(".mMod9 .swiper-slide").on('click', function () {
         let idx = mMod9.activeIndex;
 
         var lMod9 = new Swiper(".lMod9 .swiper-container", {
@@ -35,7 +35,7 @@ $(function () {
 
         $(".lMod9").addClass("on");
 
-        $(".btn_close").click(function () {
+        $(".btn_close").on('click', function () {
             lMod9.destroy();
 
             $(".lMod9").removeClass("on");
@@ -43,11 +43,11 @@ $(function () {
 
     });
 
-    $(".btn_QR").click(function () {
+    $(".btn_QR").on('click', function () {
         $(".qrpopup").addClass("on");
     });
 
-    $(".btn_close").click(function () {
+    $(".btn_close").on('click', function () {
         $(".qrpopup").removeClass("on");
     });
 
