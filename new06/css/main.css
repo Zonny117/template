@@ -429,9 +429,10 @@ a.youtube {
 }
 
 
-.mMod9 .swiper-slide p{
+.mMod9 .swiper-slide p {
     font-size: 20px;
 }
+
 .mMod9 .swiper-container {
     width: 100%;
     height: 100%;
@@ -583,6 +584,17 @@ iframe {
 }
 
 
+.imgbx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
 video {
     position: absolute;
     top: 0;
@@ -609,7 +621,7 @@ video {
     box-shadow: 0 0 4px 2px rgba(160, 160, 160, 0.486);
 }
 
-.qrpopup.on{
+.qrpopup.on {
     display: flex;
 }
 
@@ -624,11 +636,11 @@ video {
     width: 0;
 }
 
-.qrbx .mMod3{
+.qrbx .mMod3 {
     margin-bottom: 0px;
 }
 
-.qrbx .mMod3 h2{
+.qrbx .mMod3 h2 {
     margin-bottom: 0px;
     font-size: 22px;
 }

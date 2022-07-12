@@ -139,7 +139,7 @@
     }
 
     .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet+.swiper-pagination-bullet {
-        margin-left: 10px;
+        margin-left: 3px;
     }
 
     .mMod9 .swiper-slide p {
@@ -176,7 +176,7 @@
     }
 
     .mMod4 .swiper-pagination-bullet+.swiper-pagination-bullet {
-        margin-left: 10px;
+        margin-left: 3px;
     }
 
     .mod4bx.block_deco::before {

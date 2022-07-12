@@ -1,0 +1,269 @@
+@charset "utf-8";
+
+@media only screen and (max-width:850px) {
+
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .mMod0 {
+        top: 30px;
+        width: 90%;
+        font-size: 18px;
+    }
+
+    .background {
+        height: calc(var(--vh, 1vh) * 100);
+    }
+
+    .ico_mod::before {
+        right: 20px;
+        width: 50px;
+        height: 57px;
+    }
+
+    .ico_mod::after {
+        left: 20px;
+        width: 50px;
+        height: 57px;
+    }
+
+    .mMod3 {
+        padding: 100px 20px;
+    }
+
+
+    .mMod3 h2 {
+        width: 90%;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .mMod3 .txt {
+        font-size: 16px;
+    }
+
+    .section_txt {
+        width: 157px;
+        height: 81px;
+        font-size: 18px;
+        line-height: 60px;
+    }
+
+    .section_txt.left {
+        left: 25px;
+    }
+
+    .section_txt.right {
+        right: 20px;
+    }
+
+    .mMod4 {
+        padding-bottom: 60px;
+    }
+
+    .mMod4 .swiper-container {
+        margin-top: 20px;
+    }
+
+    .mMod4 .tit {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .mMod4 .txt {
+        font-size: 16px;
+    }
+
+    .swiper-pagination {
+        margin-top: 30px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        margin: 0 2px;
+    }
+
+    .mMod9 {
+        padding-bottom: 60px;
+    }
+
+    .mMod9 .swiper-slide img {
+        height: 300px;
+    }
+
+    .mMod9 .swiper-slide p {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    .mMod8 {
+        padding-bottom: 60px;
+    }
+
+    .iframebx {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 56.66%;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+
+    .mMod5 {
+        padding-bottom: 60px;
+    }
+
+    .gMap {
+        height: 250px;
+    }
+
+    .navi {
+        width: 50px;
+        height: 50px;
+        background-size: 30px 30px;
+    }
+
+    .txtbx {
+        margin-top: 30px;
+    }
+
+    .ti {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .tx {
+        font-size: 16px;
+    }
+
+    .contact {
+        padding-top: 20px;
+    }
+
+
+    .mMod1 {
+        width: 65px;
+        height: 65px;
+    }
+
+    .mMod6 {
+        padding-bottom: 99px;
+    }
+
+    .btnbx {
+        margin-bottom: 20px;
+    }
+
+    .btnbx a {
+        width: 50px;
+        height: 50px;
+    }
+
+    .btnbx .btn_sms {
+        display: inline-block;
+    }
+
+    .btnbx a+a {
+        margin-left: 5px;
+    }
+
+    .tel {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .mMod6 .txt {
+        font-size: 15px;
+    }
+
+    .mMod7 {
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin-top: 10px;
+    }
+
+    .linkbx a {
+        width: 100%;
+        padding: 15px 60px 15px 30px;
+        font-size: 16px;
+    }
+
+    .mMod7 a {
+        background-size: 22px 15px;
+    }
+
+    .mMod7 a+a {
+        margin-top: 20px;
+    }
+
+    .mMod10 {
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .mMod10 a {
+        margin-top: 20px;
+        background-size: 22px 22px;
+    }
+
+
+    .bluebg.last,
+    .mMod11 {
+        display: none;
+    }
+
+
+    #qr {
+        margin: 20px auto;
+    }
+
+    #qr img {
+        width: 80%;
+    }
+
+    .guideTxt {
+        font-size: 16px;
+    }
+
+    .save {
+        margin-top: 20px;
+        font-size: 15px;
+        padding: 15px 53px 15px 30px;
+    }
+
+    .save::after {
+        right: 30px;
+        width: 23px;
+        height: 23px;
+    }
+
+    .lMod9 .btn_close,
+    .qrpopup .btn_close {
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .qrbx .mMod0 {
+        margin-top: 20px;
+    }
+
+    .qrbx .happy {
+        font-size: 30px;
+    }
+
+    @media (orientation:landscape) {
+        .background {
+            height: 1000px;
+        }
+    }
+
+}

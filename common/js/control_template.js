@@ -190,18 +190,6 @@ function stopKakaoScroll(target, option) {
 // 메세지 수신/발신 invitation_control.js 참조
 window.onload = function () {
 
-    // let background = document.querySelectorAll(".background");
-
-    // background.forEach(function (item) {
-    //     // let cover = document.createElement("div");
-    //     // cover.className = "bg_cover";
-    //     // item.append(cover);
-    //     setTimeout(function () {
-    //         item.style.opacity = 1
-    //     }, 100);
-    // });
-
-
     // 레이아웃 표시 기능
     // let check = /iframePreview/i.test(window.location.href);
     // if (check) {

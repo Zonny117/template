@@ -94,8 +94,8 @@
     }
 
     .swiper-pagination-bullet {
-        width: 15px;
-        height: 15px;
+        width: 8px;
+        height: 8px;
     }
 
     .mMod9 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {

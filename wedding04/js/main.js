@@ -29,7 +29,7 @@ $(function () {
         grabCursor: true,
         creativeEffect: {
             prev: {
-                shadow: true,
+                // shadow: true,
                 translate: ["0%", 0, -1],
             },
             next: {

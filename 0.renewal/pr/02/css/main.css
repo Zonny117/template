@@ -274,7 +274,7 @@ video {
 }
 
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet+.swiper-pagination-bullet {
-    margin-left: 20px;
+    margin-left: 5px;
 }
 
 .swiper-pagination-bullet {
@@ -346,7 +346,7 @@ video {
 }
 
 .mMod4 .swiper-pagination-bullet+.swiper-pagination-bullet {
-    margin-left: 20px;
+    margin-left: 5px;
 }
 
 .mMod8 {
