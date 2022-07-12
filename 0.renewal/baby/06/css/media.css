@@ -1,1 +1,305 @@
 @charset "utf-8";
+
+@media screen and (max-width:850px) {
+
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .main {
+        padding: 40px 0 54px;
+    }
+
+    .mMod0 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .mMod0 img {
+        width: 20px;
+        height: 20px;
+        vertical-align: -1px;
+        margin: 0;
+    }
+
+    .mainImgbx {
+        width: 75%;
+        height: 0;
+        padding-top: 67%;
+        box-sizing: border-box;
+    }
+
+    .mainImg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .background {
+        position: relative;
+        width: 80%;
+        height: 0;
+        padding-top: 95%;
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+
+    .background img {
+        top: -5%;
+        right: -7%;
+        width: 8%;
+        height: 8%;
+    }
+
+    .mMod3 .txt {
+        font-size: 16px;
+    }
+
+    .mMod3 h2 {
+        margin-top: 10px;
+        font-size: 22px;
+    }
+
+
+    .mMod3 {
+        margin-top: 20px;
+    }
+
+
+    .subBg {
+        padding: 40px 0px 80px;
+    }
+
+    .section2 .content {
+        padding: 40px 0;
+    }
+
+    .section_txt {
+        position: relative;
+        width: 90%;
+        height: 0px;
+        padding-top: 20%;
+        line-height: unset;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-bottom: 30px;
+        /* padding-right: 97px; */
+    }
+
+    .section_txt span {
+        position: absolute;
+        text-align: center;
+        top: 37%;
+        left: 14%;
+        width: 50%;
+        text-align: center;
+        font-size: 4.5vw;
+    }
+
+    .mMod4 .tit {
+        font-size: 18px;
+        margin-bottom: 10px;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .mMod4 .txt {
+        font-size: 16px;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+
+    .swiper-container {
+        width: 100%;
+    }
+
+    .mMod9,
+    .mMod8 {
+        margin-bottom: 60px;
+    }
+
+    .mMod9 .swiper-slide img {
+        height: 300px;
+    }
+
+    .mMod9 .swiper-slide p {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    .swiper-pagination {
+        margin-top: 30px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        margin: 0 2px;
+    }
+
+    .iframebx {
+        position: relative;
+        height: 0;
+        padding-top: 56.66%;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+
+    .mMod5 {
+        margin-bottom: 40px;
+    }
+
+    .gMap {
+        height: 250px;
+    }
+
+    .navi {
+        right: 10px;
+        bottom: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .txtbx {
+        padding: 30px 20px 60px;
+    }
+
+    .ti {
+        font-size: 18px;
+    }
+
+    .tx {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+
+    .mMod1 {
+        width: 65px;
+        height: 65px;
+        margin-bottom: 20px;
+    }
+
+    .mMod6 {
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin-bottom: 60px;
+    }
+
+    .btnbx {
+        margin-bottom: 20px;
+    }
+
+    .btnbx a {
+        width: 50px;
+        height: 50px;
+    }
+
+    .btnbx a+a {
+        margin-left: 5px;
+    }
+
+    .btnbx .btn_sms {
+        display: inline-block;
+    }
+
+    .tel {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .mMod6 .txt {
+        font-size: 15px;
+    }
+
+    .mMod7 {
+        padding: 0 30px;
+    }
+
+    .mMod7 a {
+        background-size: 28px 17px;
+    }
+
+    .mMod7 a+a {
+        margin-top: 15px;
+    }
+
+    .mMod7 a::before {
+        top: 23%;
+        left: -9px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .linkbx a {
+        line-height: 55px;
+        height: 55px;
+        padding: 0 60px 0 30px;
+        font-size: 16px;
+    }
+
+    .mMod10 {
+        padding: 0 30px;
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+
+    .mMod10 a {
+        background-size: 28px 28px;
+    }
+
+    .mMod11 {
+        display: none;
+    }
+
+    .bottomBg {
+        height: 57px;
+    }
+
+    #qr {
+        margin: 20px auto;
+    }
+
+    #qr img {
+        width: 80%;
+    }
+
+    .guideTxt {
+        font-size: 16px;
+    }
+
+    .save {
+        margin-top: 20px;
+        font-size: 15px;
+        padding: 15px 53px 15px 30px;
+    }
+
+    .save::after {
+        right: 30px;
+        width: 23px;
+        height: 23px;
+    }
+
+    .lMod9 .btn_close,
+    .qrpopup .btn_close {
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .qrbx .mMod0 {
+        margin-top: 20px;
+    }
+}
